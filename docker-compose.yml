@@ -2,11 +2,13 @@ version: '3'
 
 services:
   mock:
-    build: mock
+    image: api-go-tests
+    build: .
+    command: ./mock
 
   tests:
-    build: .
+    image: api-go-tests
     environment:
-      API_ENDPOINT: http://mock:8080
+      TEST_STORAGEIP: http://mock:8080
     depends_on:
       - mock

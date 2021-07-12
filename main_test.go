@@ -20,6 +20,8 @@ func init() {
 	var exists bool
 	settingsfile := ".env"
 
+	// mock.LoadEnv()
+
 	fmt.Printf("Testing setup: logging (%v)\n", *logging)
 
 	if *logging {
@@ -88,7 +90,7 @@ func TestReLoginFailed(t *testing.T) {
 	wrongClient.Password = "wrongpassword"
 	wrongClient.SessionKey = "outdated-session-key"
 
-	_, status, err := wrongClient.FormattedRequest("/status/code/1")
+	_, status, err := wrongClient.FormattedRequest("/bad/request")
 	g.Expect(err).NotTo(BeNil())
 	g.Expect(status.ResponseType).To(Equal("Error"))
 	// This test returns one of three different values based on the  API version.

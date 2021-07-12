@@ -2,12 +2,14 @@ FROM golang:1.15-alpine
 
 RUN apk add --update git curl g++
 
-COPY . /app
-
 WORKDIR /app
 
-ENTRYPOINT [ "/bin/sh" ]
+COPY go.* ./
 
 RUN go mod download
 
-CMD [ "-c", "sleep 1 && go test" ]
+COPY . .
+
+RUN go build -v cmd/mock/mock.go
+
+CMD [ "go", "test", "-v" ]
