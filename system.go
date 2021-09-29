@@ -221,7 +221,7 @@ func (system *SystemInfo) Log() error {
 // GetPoolType: Return the pool type for a given pool
 func (system *SystemInfo) GetPoolType(pool string) (string, error) {
 	if system == nil {
-		return "", fmt.Errorf("system pointer was nil")
+		return "", fmt.Errorf("system pointer is nil")
 	}
 
 	for _, p := range system.Pools {
@@ -232,4 +232,46 @@ func (system *SystemInfo) GetPoolType(pool string) (string, error) {
 	}
 
 	return "", fmt.Errorf("pool (%s) was not found in (%d) system information pools", pool, len(system.Pools))
+}
+
+// GetTargetId: Return the target id value for this storage system
+func (system *SystemInfo) GetTargetId() (string, error) {
+	if system == nil {
+		return "", fmt.Errorf("system pointer is nil")
+	}
+
+	for _, p := range system.Ports {
+		if p.TargetId != "" {
+			klog.V(2).Infof("++ TargetId (%s) for (%s)\n", p.TargetId, system.IPAddress)
+			return p.TargetId, nil
+		}
+	}
+
+	return "", fmt.Errorf("TargetId was not found for system (%s) with (%d) ports", system.IPAddress, len(system.Ports))
+}
+
+// GetPortals: Return a list of iSCSI portals for the storage system
+func (system *SystemInfo) GetPortals() (string, error) {
+	if system == nil {
+		return "", fmt.Errorf("system pointer is nil")
+	}
+
+	portals := ""
+
+	for _, p := range system.Ports {
+		if p.IPAddress != "0.0.0.0" {
+			klog.V(2).Infof("++ Add portal (%s) for (%s)\n", p.IPAddress, system.IPAddress)
+			if portals != "" {
+				portals = portals + "," + p.IPAddress
+			} else {
+				portals = p.IPAddress
+			}
+		}
+	}
+
+	if portals != "" {
+		return portals, nil
+	}
+
+	return "", fmt.Errorf("No portals found for system (%s) with (%d) ports", system.IPAddress, len(system.Ports))
 }
