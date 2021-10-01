@@ -24,6 +24,10 @@ type Client struct {
 	Info       *SystemInfo
 }
 
+const (
+	invalidSessionKey = 2
+)
+
 // NewClient : Creates an API client by setting up its HTTP transport
 func NewClient() *Client {
 	return &Client{
@@ -59,6 +63,7 @@ func (client *Client) FormattedRequest(endpointFormat string, opts ...interface{
 	return resp, status, err
 }
 
+// request: process a storage api request
 func (client *Client) request(req *Request) (*Response, *ResponseStatus, error) {
 	isLoginReq := strings.Contains(req.Endpoint, "login")
 	if !isLoginReq {
@@ -76,15 +81,15 @@ func (client *Client) request(req *Request) (*Response, *ResponseStatus, error) 
 	}
 
 	raw, code, err := req.execute(client)
-	klog.Infof("req.execute: status code %d", code)
+	klog.V(2).Infof("req.execute: status code %d", code)
 
-	if (code == 401 || code == 403) && !isLoginReq {
+	if (code == http.StatusUnauthorized || code == http.StatusForbidden) && !isLoginReq {
 		klog.Info("session key may have expired, trying to re-login")
 		err = client.Login()
 		if err != nil {
 			return nil, NewErrorStatus("re-login failed"), err
 		}
-		klog.Info("re-login succeed, re-trying request")
+		klog.Info("re-login succeeded, re-trying request")
 		raw, _, err = req.execute(client)
 	}
 	if err != nil {
@@ -101,11 +106,39 @@ func (client *Client) request(req *Request) (*Response, *ResponseStatus, error) 
 	}
 
 	status := res.GetStatus()
+
+	// Some API versions return success with an invalid session key response, so log in again
+	if code == http.StatusOK && status.ReturnCode == invalidSessionKey {
+		klog.Info("invalid session key response, trying to re-login")
+		err = client.Login()
+		if err != nil {
+			return nil, NewErrorStatus("re-login failed"), err
+		}
+		klog.Info("re-login succeeded, re-trying request")
+		raw, _, err = req.execute(client)
+
+		if err != nil {
+			return nil, NewErrorStatus("request failed"), err
+		}
+
+		res, err := NewResponse(raw)
+		if err != nil {
+			if res != nil {
+				return res, res.GetStatus(), err
+			}
+
+			return nil, NewErrorStatus("corrupted response"), err
+		}
+
+		status = res.GetStatus()
+	}
+
 	if !isLoginReq {
 		klog.Infof("<- [%d %s] %s", status.ReturnCode, status.ResponseType, status.Response)
 	} else {
 		klog.Infof("<- [%d %s] <hidden>", status.ReturnCode, status.ResponseType)
 	}
+
 	if status.ResponseTypeNumeric != 0 {
 		return res, status, fmt.Errorf("API returned non-zero code %d (%s)", status.ReturnCode, status.Response)
 	}

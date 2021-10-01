@@ -20,7 +20,7 @@ jobs:
       uses: ridedott/release-me-action@master
       with:
         release-branches: '["main"]'
-        disable-changelog: true
+        disable-changelog: false
 
     - name: Output
       run: echo "released version is ${{ steps.build_package.outputs.version }}, type is ${{ steps.build_package.outputs.level }}"
