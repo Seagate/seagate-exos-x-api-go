@@ -2,7 +2,8 @@ name: Release
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
 
@@ -11,18 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '14.17'
-    - name: Install dependencies
-      run: npx ci
-    - name: Install semantic-release extra plugins
-      run: npm install --save-dev @semantic-release/changelog @semantic-release/git      
-    - name: semantic-release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: npx semantic-release
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: ridedott/release-me-action@master
+        with:
+          disable-changelog: true
+
+      - name: Output
+            if: steps.build_package.outputs.released == 'true'
+            run: |
+              echo released version: ${{ steps.build_package.outputs.version }}, type: ${{ steps.build_package.outputs.level }}
