@@ -1,5 +1,0 @@
-repositoryUrl: git@github.com:Seagate/seagate-exos-x-api-go.git
-plugins:
-  - '@semantic-release/commit-analyzer'
-  - '@semantic-release/release-notes-generator'
-  - '@semantic-release/github'
