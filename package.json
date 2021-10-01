@@ -1,14 +1,15 @@
 {
   "name": "seagate-exos-x-api-go",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Seagate EXOS X GO Language Storage Array API Package",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Seagate/seagate-exos-x-api-go.git"
+    "url": "https://github.com/Seagate/seagate-exos-x-api-go.git"
   },
   "author": "Seagate",
   "license": "Apache 2.0",
