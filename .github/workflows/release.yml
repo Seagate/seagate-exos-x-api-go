@@ -7,7 +7,7 @@ on:
 jobs:
 
   release:
-    name: Release job
+    name: Update Release
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: 18.x
+        node-version: '14.17'
     - name: Install dependencies
       run: npx ci
     - name: Install semantic-release extra plugins
@@ -26,31 +26,3 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: npx semantic-release
-
-  changelog:
-    name: Update CHANGELOG.md
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get version from tag
-        env:
-          GITHUB_REF: ${{ github.ref }}
-        run: |
-          export CURRENT_VERSION=${GITHUB_TAG/refs\/tags\/v/}
-          echo "::set-env name=CURRENT_VERSION::$CURRENT_VERSION"
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          ref: main
-      - name: Update Changelog
-        uses: heinrichreimer/github-changelog-generator-action@v2.1.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issues: true
-          issuesWoLabels: true
-          pullRequests: true
-          prWoLabels: true
-          addSections: '{"documentation":{"prefix":"**Documentation:**","labels":["documentation"]}}'
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update Changelog for tag ${{ env.CURRENT_VERSION }}
-          file_pattern: CHANGELOG.md
