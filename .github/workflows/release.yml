@@ -12,12 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: ridedott/release-me-action@master
-        with:
-          disable-changelog: true
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: ridedott/release-me-action@master
+      with:
+        disable-changelog: true
 
-      - name: Output
-        run: echo "released version is ${{ steps.build_package.outputs.version }}, type is ${{ steps.build_package.outputs.level }}"
+    - name: Output
+      run: echo "released version is ${{ steps.build_package.outputs.version }}, type is ${{ steps.build_package.outputs.level }}"

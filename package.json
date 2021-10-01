@@ -2,7 +2,6 @@
   "name": "seagate-exos-x-api-go",
   "version": "0.0.0-development",
   "description": "Seagate EXOS X GO Language Storage Array API Package",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "semantic-release": "semantic-release"
