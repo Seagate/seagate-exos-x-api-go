@@ -449,15 +449,21 @@ func (client *Client) PublishVolume(volumeId string, initiators []string) (strin
 
 	klog.Infof("using LUN %d", lun)
 
+	mappingSuccessful := false
 	for _, initiator := range initiators {
-		//TODO optimize this for fewer API calls
 		if err = client.mapVolumeProcess(volumeId, initiator, lun); err != nil {
-			return "", err
+			klog.Infof("error mapping volume (%s) for initiator (%s) using LUN (%d): %v", volumeId, initiators, lun, err)
+		} else {
+			mappingSuccessful = true
+			klog.Infof("successfully mapped volume (%s) for initiator (%s) using LUN (%d)", volumeId, initiators, lun)
 		}
 	}
 
-	klog.Infof("successfully mapped volume (%s) for initiator (%s) using LUN (%d)", volumeId, initiators, lun)
-	return strconv.Itoa(lun), nil
+	if mappingSuccessful {
+		return strconv.Itoa(lun), nil
+	} else {
+		return "", fmt.Errorf("error mapping volume (%s), no initiators were mapped successfully", volumeId)
+	}
 }
 
 // GetVolumeWwn: Retrieve the WWN for a volume, very useful for host operating system device mapping
