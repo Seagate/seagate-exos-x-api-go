@@ -314,46 +314,49 @@ func (client *Client) nextLUN(maps InitiatorMapInfo) (int, error) {
 }
 
 // chooseLUN: Choose the next available LUN for a given initiator
-func (client *Client) chooseLUN(initiatorName string) (int, error) {
+func (client *Client) chooseLUN(initiators []string) (int, error) {
 	klog.Infof("listing all LUN mappings")
-	volumes, responseStatus, err := client.ShowHostMaps(initiatorName)
-	if err != nil && responseStatus == nil {
-		return -1, err
-	}
-	if responseStatus.ReturnCode == hostMapDoesNotExistsErrorCode {
-		klog.Info("initiator does not exist, assuming there is no LUN mappings yet and using LUN 1")
-		return 1, nil
-	}
-	if err != nil {
-		return -1, err
+
+	var allvolumes []Volume
+	for _, initiatorName := range initiators {
+		volumes, responseStatus, err := client.ShowHostMaps(initiatorName)
+		if err != nil {
+			klog.Infof("error looking for host maps for initiator %s: %s", initiatorName, err)
+		}
+		if responseStatus.ReturnCode == hostMapDoesNotExistsErrorCode {
+			klog.Infof("initiator %s does not exist", initiatorName)
+		}
+		if volumes != nil {
+			allvolumes = append(allvolumes, volumes...)
+		}
 	}
 
-	sort.Sort(Volumes(volumes))
+	sort.Sort(Volumes(allvolumes))
 
 	klog.V(5).Infof("use LUN 1 when volumes slice is empty")
-	if len(volumes) == 0 {
+	if len(allvolumes) == 0 {
 		return 1, nil
 	}
 
 	klog.V(5).Infof("use the next highest LUN number, until the end is reached")
-	if volumes[len(volumes)-1].LUN+1 < MaximumLUN {
-		return volumes[len(volumes)-1].LUN + 1, nil
+	if allvolumes[len(allvolumes)-1].LUN+1 < MaximumLUN {
+		return allvolumes[len(allvolumes)-1].LUN + 1, nil
 	}
 
 	klog.V(5).Infof("use LUN 1 when not in use")
-	if volumes[0].LUN > 1 {
+	if allvolumes[0].LUN > 1 {
 		return 1, nil
 	}
 
 	klog.V(5).Infof("use the next available LUN, searching from LUN 1 towards the maximum")
-	for index := 1; index < len(volumes); index++ {
+	for index := 1; index < len(allvolumes); index++ {
 		// Find a gap between used LUNs
-		if volumes[index].LUN-volumes[index-1].LUN > 1 {
-			return volumes[index-1].LUN + 1, nil
+		if allvolumes[index].LUN-allvolumes[index-1].LUN > 1 {
+			return allvolumes[index-1].LUN + 1, nil
 		}
 	}
 
-	klog.Errorf("no available LUN: [%d] luns=%v", len(volumes), volumes)
+	klog.Errorf("no available LUN: [%d] luns=%v", len(allvolumes), allvolumes)
 
 	return -1, status.Error(codes.ResourceExhausted, "no more available LUNs")
 }
@@ -421,7 +424,7 @@ func (client *Client) CheckVolumeExists(volumeID string, size int64) (bool, erro
 }
 
 // PublishVolume: Attach a volume to an initiator
-func (client *Client) PublishVolume(volumeId string, initiatorName string) (string, error) {
+func (client *Client) PublishVolume(volumeId string, initiators []string) (string, error) {
 
 	hostNames, apistatus, err := client.GetVolumeMapsHostNames(volumeId)
 	if err != nil {
@@ -432,23 +435,28 @@ func (client *Client) PublishVolume(volumeId string, initiatorName string) (stri
 		}
 	}
 	for _, hostName := range hostNames {
-		if hostName != initiatorName {
-			return "", status.Errorf(codes.FailedPrecondition, "volume %s is already attached to another node", volumeId)
+		for _, initiator := range initiators {
+			if hostName == initiator {
+				klog.Infof("volume %s is already mapped to initiator %s", volumeId, initiators)
+			}
 		}
 	}
 
-	lun, err := client.chooseLUN(initiatorName)
+	lun, err := client.chooseLUN(initiators)
 	if err != nil {
 		return "", err
 	}
 
 	klog.Infof("using LUN %d", lun)
 
-	if err = client.mapVolumeProcess(volumeId, initiatorName, lun); err != nil {
-		return "", err
+	for _, initiator := range initiators {
+		//TODO optimize this for fewer API calls
+		if err = client.mapVolumeProcess(volumeId, initiator, lun); err != nil {
+			return "", err
+		}
 	}
 
-	klog.Infof("successfully mapped volume (%s) for initiator (%s) using LUN (%d)", volumeId, initiatorName, lun)
+	klog.Infof("successfully mapped volume (%s) for initiator (%s) using LUN (%d)", volumeId, initiators, lun)
 	return strconv.Itoa(lun), nil
 }
 
