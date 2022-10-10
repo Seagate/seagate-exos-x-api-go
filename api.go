@@ -321,7 +321,7 @@ func (client *Client) chooseLUN(initiators []string) (int, error) {
 	for _, initiatorName := range initiators {
 		volumes, responseStatus, err := client.ShowHostMaps(initiatorName)
 		if err != nil {
-			klog.Infof("error looking for host maps for initiator %s: %s", initiatorName, err)
+			klog.Errorf("error looking for host maps for initiator %s: %s", initiatorName, err)
 		}
 		if responseStatus.ReturnCode == hostMapDoesNotExistsErrorCode {
 			klog.Infof("initiator %s does not exist", initiatorName)
@@ -452,7 +452,7 @@ func (client *Client) PublishVolume(volumeId string, initiators []string) (strin
 	mappingSuccessful := false
 	for _, initiator := range initiators {
 		if err = client.mapVolumeProcess(volumeId, initiator, lun); err != nil {
-			klog.Infof("error mapping volume (%s) for initiator (%s) using LUN (%d): %v", volumeId, initiators, lun, err)
+			klog.Errorf("error mapping volume (%s) for initiator (%s) using LUN (%d): %v", volumeId, initiators, lun, err)
 		} else {
 			mappingSuccessful = true
 			klog.Infof("successfully mapped volume (%s) for initiator (%s) using LUN (%d)", volumeId, initiators, lun)
