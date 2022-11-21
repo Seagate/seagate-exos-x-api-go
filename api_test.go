@@ -20,6 +20,7 @@ package exosx
 
 import (
 	"fmt"
+	"sort"
 	"strconv"
 	"testing"
 
@@ -66,6 +67,7 @@ var snap1 = "snap1"
 var snap2 = "snap2"
 var loginFail = false
 var poolType = ""
+var initiatorNick = "test-nickname"
 
 // ShowVolume: Display useful data from a volume object
 func ShowVolume(t *testing.T, volumeName string) {
@@ -237,6 +239,77 @@ func TestAPIShowInitiators(t *testing.T) {
 	fmt.Printf("\n")
 }
 
+func volumeSlicesEqual(vol1 []Volume, vol2 []Volume) bool {
+	if len(vol1) != len(vol2) {
+		return false
+	}
+	sort.Sort(Volumes(vol1))
+	sort.Sort(Volumes(vol2))
+	for i, vol := range vol1 {
+		if vol.LUN != vol2[i].LUN {
+			return false
+		}
+	}
+	return true
+}
+
+// Test that "show host maps" returns the same set of LUNS with and
+// without an initiator nickname
+func TestAPIShowHostMapsWithNickname(t *testing.T) {
+	ConditionalSkip(t)
+	g := NewWithT(t)
+
+	response, status, err := client.ShowHostMaps(client.Initiator)
+	g.Expect(err).To(BeNil())
+	g.Expect(status.ResponseTypeNumeric).To(Equal(0))
+	fmt.Printf("Show Host Maps Response: %v", response)
+	fmt.Printf("\n")
+
+	// Retrieve initial initiator nickname if it has one
+	resp, status, err := client.FormattedRequest(fmt.Sprintf("/show/initiator/%s", client.Initiator))
+	g.Expect(err).To(BeNil())
+	g.Expect(status.ResponseTypeNumeric).To(Equal(0))
+	originalNickname := resp.ObjectsMap["initiator"].PropertiesMap["nickname"].Data
+
+	client.FormattedRequest(fmt.Sprintf("/set/initiator/id/%s/nickname/%s", client.Initiator, initiatorNick))
+	// If the initiator had a nickname before this test, restore it. If not, delete the test nickname
+	if originalNickname != "" {
+		defer client.FormattedRequest(fmt.Sprintf("/set/initiator/id/%s/nickname/%s", client.Initiator, originalNickname))
+	} else {
+		defer client.FormattedRequest(fmt.Sprintf("/delete/initiator-nickname/%s", initiatorNick))
+	}
+
+	response2, status, err := client.ShowHostMaps(client.Initiator)
+	g.Expect(err).To(BeNil())
+	g.Expect(status.ResponseTypeNumeric).To(Equal(0))
+	g.Expect(volumeSlicesEqual(response, response2)).To(BeTrue())
+	fmt.Printf("Show Host Maps Response: %v", response)
+	fmt.Printf("\n")
+}
+
+// Test that "show host maps" returns the same set of LUNS with and
+// without host groups defined
+func TestAPIShowHostMapsWithHostGroups(t *testing.T) {
+	ConditionalSkip(t)
+	g := NewWithT(t)
+
+	response, status, err := client.ShowHostMaps(client.Initiator)
+	g.Expect(err).To(BeNil())
+	g.Expect(status.ResponseTypeNumeric).To(Equal(0))
+	fmt.Printf("Show Host Maps Response: %v", response)
+	fmt.Printf("\n")
+
+	client.FormattedRequest(fmt.Sprintf("/set/initiator/id/%s/nickname/%s", client.Initiator, initiatorNick))
+	defer client.FormattedRequest(fmt.Sprintf("/delete/initiator-nickname/%s", initiatorNick))
+
+	response2, status, err := client.ShowHostMaps(client.Initiator)
+	g.Expect(err).To(BeNil())
+	g.Expect(status.ResponseTypeNumeric).To(Equal(0))
+	g.Expect(volumeSlicesEqual(response, response2)).To(BeTrue())
+	fmt.Printf("Show Host Maps Response: %v", response)
+	fmt.Printf("\n")
+}
+
 func TestAPIGetMaps(t *testing.T) {
 	ConditionalSkip(t)
 	g := NewWithT(t)
@@ -271,7 +344,7 @@ func TestAPIGetMaps(t *testing.T) {
 func TestAPIMapVolume(t *testing.T) {
 	ConditionalSkip(t)
 	g := NewWithT(t)
-	lun, err := client.PublishVolume(volname1, client.Initiator)
+	lun, err := client.PublishVolume(volname1, []string{client.Initiator})
 	g.Expect(err).To(BeNil())
 	g.Expect(lun).ToNot(Equal(0))
 }
