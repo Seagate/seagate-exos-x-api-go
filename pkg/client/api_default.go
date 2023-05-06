@@ -271,7 +271,11 @@ type ApiCreateVolumePoolSizeTierAffinityNameGetRequest struct {
 	nameOption         string
 }
 
+<<<<<<< HEAD
 func (r ApiCreateVolumePoolSizeTierAffinityNameGetRequest) Execute() (*VolumesObject, *http.Response, error) {
+=======
+func (r ApiCreateVolumePoolSizeTierAffinityNameGetRequest) Execute() (*StatusObject, *http.Response, error) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	return r.ApiService.CreateVolumePoolSizeTierAffinityNameGetExecute(r)
 }
 
@@ -300,13 +304,22 @@ func (a *DefaultApiService) CreateVolumePoolSizeTierAffinityNameGet(ctx context.
 
 // Execute executes the request
 //
+<<<<<<< HEAD
 //	@return VolumesObject
 func (a *DefaultApiService) CreateVolumePoolSizeTierAffinityNameGetExecute(r ApiCreateVolumePoolSizeTierAffinityNameGetRequest) (*VolumesObject, *http.Response, error) {
+=======
+//	@return StatusObject
+func (a *DefaultApiService) CreateVolumePoolSizeTierAffinityNameGetExecute(r ApiCreateVolumePoolSizeTierAffinityNameGetRequest) (*StatusObject, *http.Response, error) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
+<<<<<<< HEAD
 		localVarReturnValue *VolumesObject
+=======
+		localVarReturnValue *StatusObject
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.CreateVolumePoolSizeTierAffinityNameGet")
@@ -962,6 +975,7 @@ func (a *DefaultApiService) ExpandVolumeSizeNameGetExecute(r ApiExpandVolumeSize
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+<<<<<<< HEAD
 type ApiLoginGetRequest struct {
 	ctx        context.Context
 	ApiService *DefaultApiService
@@ -973,23 +987,52 @@ func (r ApiLoginGetRequest) Execute() (*StatusObject, *http.Response, error) {
 
 /*
 LoginGet Method for LoginGet
+=======
+type ApiLoginGetByHashRequest struct {
+	ctx        context.Context
+	ApiService *DefaultApiService
+	loginHash  string
+}
+
+func (r ApiLoginGetByHashRequest) Execute() (*StatusObject, *http.Response, error) {
+	return r.ApiService.LoginGetByHashExecute(r)
+}
+
+/*
+LoginGetByHash Method for LoginGetByHash
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 Log in to the storage array management controller
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+<<<<<<< HEAD
 	@return ApiLoginGetRequest
 */
 func (a *DefaultApiService) LoginGet(ctx context.Context) ApiLoginGetRequest {
 	return ApiLoginGetRequest{
 		ApiService: a,
 		ctx:        ctx,
+=======
+	@param loginHash A SHA256 hash of the 'username_password' string
+	@return ApiLoginGetByHashRequest
+*/
+func (a *DefaultApiService) LoginGetByHash(ctx context.Context, loginHash string) ApiLoginGetByHashRequest {
+	return ApiLoginGetByHashRequest{
+		ApiService: a,
+		ctx:        ctx,
+		loginHash:  loginHash,
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	}
 }
 
 // Execute executes the request
 //
 //	@return StatusObject
+<<<<<<< HEAD
 func (a *DefaultApiService) LoginGetExecute(r ApiLoginGetRequest) (*StatusObject, *http.Response, error) {
+=======
+func (a *DefaultApiService) LoginGetByHashExecute(r ApiLoginGetByHashRequest) (*StatusObject, *http.Response, error) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
@@ -997,16 +1040,31 @@ func (a *DefaultApiService) LoginGetExecute(r ApiLoginGetRequest) (*StatusObject
 		localVarReturnValue *StatusObject
 	)
 
+<<<<<<< HEAD
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.LoginGet")
+=======
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.LoginGetByHash")
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
+<<<<<<< HEAD
 	localVarPath := localBasePath + "/login"
+=======
+	localVarPath := localBasePath + "/login/{loginHash}"
+	localVarPath = strings.Replace(localVarPath, "{"+"loginHash"+"}", url.PathEscape(parameterValueToString(r.loginHash, "loginHash")), -1)
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
+<<<<<<< HEAD
+=======
+	if strlen(r.loginHash) > 64 {
+		return localVarReturnValue, nil, reportError("loginHash must have less than 64 elements")
+	}
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1850,6 +1908,7 @@ func (a *DefaultApiService) ShowControllersGetExecute(r ApiShowControllersGetReq
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+<<<<<<< HEAD
 type ApiShowDiskGroupsGetRequest struct {
 	ctx        context.Context
 	ApiService *DefaultApiService
@@ -1960,6 +2019,8 @@ func (a *DefaultApiService) ShowDiskGroupsGetExecute(r ApiShowDiskGroupsGetReque
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 type ApiShowDisksGetRequest struct {
 	ctx        context.Context
 	ApiService *DefaultApiService
@@ -2624,6 +2685,7 @@ func (a *DefaultApiService) ShowInitiatorsGetExecute(r ApiShowInitiatorsGetReque
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+<<<<<<< HEAD
 type ApiShowMapsAllGetRequest struct {
 	ctx        context.Context
 	ApiService *DefaultApiService
@@ -2734,12 +2796,18 @@ func (a *DefaultApiService) ShowMapsAllGetExecute(r ApiShowMapsAllGetRequest) (*
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 type ApiShowMapsGetRequest struct {
 	ctx        context.Context
 	ApiService *DefaultApiService
 }
 
+<<<<<<< HEAD
 func (r ApiShowMapsGetRequest) Execute() (*VolumeViewObject, *http.Response, error) {
+=======
+func (r ApiShowMapsGetRequest) Execute() (*VolumeGroupViewObject, *http.Response, error) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	return r.ApiService.ShowMapsGetExecute(r)
 }
 
@@ -2760,13 +2828,22 @@ func (a *DefaultApiService) ShowMapsGet(ctx context.Context) ApiShowMapsGetReque
 
 // Execute executes the request
 //
+<<<<<<< HEAD
 //	@return VolumeViewObject
 func (a *DefaultApiService) ShowMapsGetExecute(r ApiShowMapsGetRequest) (*VolumeViewObject, *http.Response, error) {
+=======
+//	@return VolumeGroupViewObject
+func (a *DefaultApiService) ShowMapsGetExecute(r ApiShowMapsGetRequest) (*VolumeGroupViewObject, *http.Response, error) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
+<<<<<<< HEAD
 		localVarReturnValue *VolumeViewObject
+=======
+		localVarReturnValue *VolumeGroupViewObject
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsGet")
@@ -2844,6 +2921,7 @@ func (a *DefaultApiService) ShowMapsGetExecute(r ApiShowMapsGetRequest) (*Volume
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+<<<<<<< HEAD
 type ApiShowMapsInitiatorNamesGetRequest struct {
 	ctx         context.Context
 	ApiService  *DefaultApiService
@@ -2856,10 +2934,24 @@ func (r ApiShowMapsInitiatorNamesGetRequest) Execute() (*HostsViewObject, *http.
 
 /*
 ShowMapsInitiatorNamesGet Method for ShowMapsInitiatorNamesGet
+=======
+type ApiShowMapsInitiatorGetRequest struct {
+	ctx        context.Context
+	ApiService *DefaultApiService
+}
+
+func (r ApiShowMapsInitiatorGetRequest) Execute() (*InitiatorViewObject, *http.Response, error) {
+	return r.ApiService.ShowMapsInitiatorGetExecute(r)
+}
+
+/*
+ShowMapsInitiatorGet Method for ShowMapsInitiatorGet
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 Execute /show/maps/initiator command
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+<<<<<<< HEAD
 	@param namesOption
 	@return ApiShowMapsInitiatorNamesGetRequest
 */
@@ -2868,27 +2960,51 @@ func (a *DefaultApiService) ShowMapsInitiatorNamesGet(ctx context.Context, names
 		ApiService:  a,
 		ctx:         ctx,
 		namesOption: namesOption,
+=======
+	@return ApiShowMapsInitiatorGetRequest
+*/
+func (a *DefaultApiService) ShowMapsInitiatorGet(ctx context.Context) ApiShowMapsInitiatorGetRequest {
+	return ApiShowMapsInitiatorGetRequest{
+		ApiService: a,
+		ctx:        ctx,
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	}
 }
 
 // Execute executes the request
 //
+<<<<<<< HEAD
 //	@return HostsViewObject
 func (a *DefaultApiService) ShowMapsInitiatorNamesGetExecute(r ApiShowMapsInitiatorNamesGetRequest) (*HostsViewObject, *http.Response, error) {
+=======
+//	@return InitiatorViewObject
+func (a *DefaultApiService) ShowMapsInitiatorGetExecute(r ApiShowMapsInitiatorGetRequest) (*InitiatorViewObject, *http.Response, error) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
+<<<<<<< HEAD
 		localVarReturnValue *HostsViewObject
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsInitiatorNamesGet")
+=======
+		localVarReturnValue *InitiatorViewObject
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsInitiatorGet")
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
+<<<<<<< HEAD
 	localVarPath := localBasePath + "/show/maps/initiator/{namesOption}"
 	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
+=======
+	localVarPath := localBasePath + "/show/maps/initiator"
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2964,7 +3080,11 @@ type ApiShowMapsNamesGetRequest struct {
 	namesOption string
 }
 
+<<<<<<< HEAD
 func (r ApiShowMapsNamesGetRequest) Execute() (*VolumeViewObject, *http.Response, error) {
+=======
+func (r ApiShowMapsNamesGetRequest) Execute() (*VolumeGroupViewObject, *http.Response, error) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	return r.ApiService.ShowMapsNamesGetExecute(r)
 }
 
@@ -2987,13 +3107,22 @@ func (a *DefaultApiService) ShowMapsNamesGet(ctx context.Context, namesOption st
 
 // Execute executes the request
 //
+<<<<<<< HEAD
 //	@return VolumeViewObject
 func (a *DefaultApiService) ShowMapsNamesGetExecute(r ApiShowMapsNamesGetRequest) (*VolumeViewObject, *http.Response, error) {
+=======
+//	@return VolumeGroupViewObject
+func (a *DefaultApiService) ShowMapsNamesGetExecute(r ApiShowMapsNamesGetRequest) (*VolumeGroupViewObject, *http.Response, error) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
+<<<<<<< HEAD
 		localVarReturnValue *VolumeViewObject
+=======
+		localVarReturnValue *VolumeGroupViewObject
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsNamesGet")

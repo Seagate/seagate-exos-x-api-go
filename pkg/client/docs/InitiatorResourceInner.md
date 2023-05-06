@@ -9,16 +9,28 @@ Name | Type | Description | Notes
 **Discovered** | Pointer to **string** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **HostBusType** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **HostBusTypeNumeric** | Pointer to **int64** |  | [optional] 
 **HostId** | Pointer to **string** |  | [optional] 
 **HostKey** | Pointer to **string** | Durable ID of a Host | [optional] 
 **HostPortBitsA** | Pointer to **int64** |  | [optional] 
 **HostPortBitsB** | Pointer to **int64** |  | [optional] 
+=======
+**HostBusTypeNumeric** | Pointer to **int32** |  | [optional] 
+**HostId** | Pointer to **string** |  | [optional] 
+**HostKey** | Pointer to **string** | Durable ID of a Host | [optional] 
+**HostPortBitsA** | Pointer to **int32** |  | [optional] 
+**HostPortBitsB** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Id** | Pointer to **string** |  | [optional] 
 **Mapped** | Pointer to **string** |  | [optional] 
 **Nickname** | Pointer to **string** | User-defined alias for the mapped host | [optional] 
 **Profile** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **ProfileNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**ProfileNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Url** | Pointer to **string** | The resource URL | [optional] 
 
 ## Methods
@@ -167,20 +179,32 @@ HasHostBusType returns a boolean if a field has been set.
 
 ### GetHostBusTypeNumeric
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) GetHostBusTypeNumeric() int64`
+=======
+`func (o *InitiatorResourceInner) GetHostBusTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostBusTypeNumeric returns the HostBusTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetHostBusTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) GetHostBusTypeNumericOk() (*int64, bool)`
+=======
+`func (o *InitiatorResourceInner) GetHostBusTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostBusTypeNumericOk returns a tuple with the HostBusTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostBusTypeNumeric
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) SetHostBusTypeNumeric(v int64)`
+=======
+`func (o *InitiatorResourceInner) SetHostBusTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHostBusTypeNumeric sets HostBusTypeNumeric field to given value.
 
@@ -242,20 +266,32 @@ HasHostKey returns a boolean if a field has been set.
 
 ### GetHostPortBitsA
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) GetHostPortBitsA() int64`
+=======
+`func (o *InitiatorResourceInner) GetHostPortBitsA() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostPortBitsA returns the HostPortBitsA field if non-nil, zero value otherwise.
 
 ### GetHostPortBitsAOk
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) GetHostPortBitsAOk() (*int64, bool)`
+=======
+`func (o *InitiatorResourceInner) GetHostPortBitsAOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostPortBitsAOk returns a tuple with the HostPortBitsA field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostPortBitsA
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) SetHostPortBitsA(v int64)`
+=======
+`func (o *InitiatorResourceInner) SetHostPortBitsA(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHostPortBitsA sets HostPortBitsA field to given value.
 
@@ -267,20 +303,32 @@ HasHostPortBitsA returns a boolean if a field has been set.
 
 ### GetHostPortBitsB
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) GetHostPortBitsB() int64`
+=======
+`func (o *InitiatorResourceInner) GetHostPortBitsB() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostPortBitsB returns the HostPortBitsB field if non-nil, zero value otherwise.
 
 ### GetHostPortBitsBOk
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) GetHostPortBitsBOk() (*int64, bool)`
+=======
+`func (o *InitiatorResourceInner) GetHostPortBitsBOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostPortBitsBOk returns a tuple with the HostPortBitsB field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostPortBitsB
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) SetHostPortBitsB(v int64)`
+=======
+`func (o *InitiatorResourceInner) SetHostPortBitsB(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHostPortBitsB sets HostPortBitsB field to given value.
 
@@ -392,20 +440,32 @@ HasProfile returns a boolean if a field has been set.
 
 ### GetProfileNumeric
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) GetProfileNumeric() int64`
+=======
+`func (o *InitiatorResourceInner) GetProfileNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetProfileNumeric returns the ProfileNumeric field if non-nil, zero value otherwise.
 
 ### GetProfileNumericOk
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) GetProfileNumericOk() (*int64, bool)`
+=======
+`func (o *InitiatorResourceInner) GetProfileNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetProfileNumericOk returns a tuple with the ProfileNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProfileNumeric
 
+<<<<<<< HEAD
 `func (o *InitiatorResourceInner) SetProfileNumeric(v int64)`
+=======
+`func (o *InitiatorResourceInner) SetProfileNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetProfileNumeric sets ProfileNumeric field to given value.
 

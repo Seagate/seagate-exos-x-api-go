@@ -7,12 +7,21 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **BoardModel** | Pointer to **string** | IOM Board model | [optional] 
+<<<<<<< HEAD
 **BoardModelNumeric** | Pointer to **int64** | IOM Board model( In numeric form ) | [optional] 
 **Columns** | Pointer to **int64** |  | [optional] 
 **DashLevel** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **DriveOrientation** | Pointer to **string** |  | [optional] 
 **DriveOrientationNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**BoardModelNumeric** | Pointer to **int32** | IOM Board model( In numeric form ) | [optional] 
+**Columns** | Pointer to **int32** |  | [optional] 
+**DashLevel** | Pointer to **string** |  | [optional] 
+**Description** | Pointer to **string** |  | [optional] 
+**DriveOrientation** | Pointer to **string** |  | [optional] 
+**DriveOrientationNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **DurableId** | Pointer to **string** |  | [optional] 
 **EmpA** | Pointer to **string** |  | [optional] 
 **EmpABusid** | Pointer to **string** |  | [optional] 
@@ -25,8 +34,13 @@ Name | Type | Description | Notes
 **EmpBRev** | Pointer to **string** | Enclosure Management Processor | [optional] 
 **EmpBTargetid** | Pointer to **string** |  | [optional] 
 **EnclosureArrangement** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **EnclosureArrangementNumeric** | Pointer to **int64** |  | [optional] 
 **EnclosureId** | Pointer to **int64** |  | [optional] 
+=======
+**EnclosureArrangementNumeric** | Pointer to **int32** |  | [optional] 
+**EnclosureId** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **EnclosurePower** | Pointer to **string** |  | [optional] 
 **EnclosureWwn** | Pointer to **string** | Enclosure World Wide Name | [optional] 
 **ExtendedStatus** | Pointer to **string** | Extended status (bits) | [optional] 
@@ -36,6 +50,7 @@ Name | Type | Description | Notes
 **GemVersionA** | Pointer to **string** |  | [optional] 
 **GemVersionB** | Pointer to **string** |  | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
@@ -70,6 +85,42 @@ Name | Type | Description | Notes
 **StatusNumeric** | Pointer to **int64** |  | [optional] 
 **Type** | Pointer to **string** | Type of component in this enclosure | [optional] 
 **TypeNumeric** | Pointer to **int64** | Type of component in this enclosure( In numeric form ) | [optional] 
+=======
+**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthReason** | Pointer to **string** |  | [optional] 
+**HealthRecommendation** | Pointer to **string** |  | [optional] 
+**IomType** | Pointer to **string** |  | [optional] 
+**IomTypeNumeric** | Pointer to **int32** |  | [optional] 
+**Location** | Pointer to **string** |  | [optional] 
+**LocatorLed** | Pointer to **string** | Indicates whether the locator LED is on | [optional] 
+**LocatorLedNumeric** | Pointer to **int32** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
+**MfgDate** | Pointer to **string** |  | [optional] 
+**MfgDateNumeric** | Pointer to **int32** |  | [optional] 
+**MfgLocation** | Pointer to **string** |  | [optional] 
+**MidplaneRev** | Pointer to **int32** | Revision level of midplane | [optional] 
+**MidplaneSerialNumber** | Pointer to **string** | Serial number of the enclosure | [optional] 
+**MidplaneType** | Pointer to **string** | Type of midplane | [optional] 
+**MidplaneTypeNumeric** | Pointer to **int32** | Type of midplane( In numeric form ) | [optional] 
+**Model** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **string** |  | [optional] 
+**NumberOfCoolingsElements** | Pointer to **int32** | Number of fans in the enclosure | [optional] 
+**NumberOfDisks** | Pointer to **int32** | Number of disks in the enclosure | [optional] 
+**NumberOfPowerSupplies** | Pointer to **int32** | Number of power supplies in the enclosure | [optional] 
+**PartNumber** | Pointer to **string** |  | [optional] 
+**Pcie2Capable** | Pointer to **string** | Enclosure is capable of using PCIe version 2 | [optional] 
+**Pcie2CapableNumeric** | Pointer to **int32** | Enclosure is capable of using PCIe version 2( In numeric form ) | [optional] 
+**PlatformType** | Pointer to **string** | HW Platform Type | [optional] 
+**PlatformTypeNumeric** | Pointer to **int32** | HW Platform Type( In numeric form ) | [optional] 
+**RackNumber** | Pointer to **int32** |  | [optional] 
+**RackPosition** | Pointer to **int32** |  | [optional] 
+**Revision** | Pointer to **string** | Current revision for this FRU | [optional] 
+**Rows** | Pointer to **int32** |  | [optional] 
+**Slots** | Pointer to **int32** | The number of disk slots in this enclosure | [optional] 
+**Status** | Pointer to **string** |  | [optional] 
+**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**Type** | Pointer to **string** | Type of component in this enclosure | [optional] 
+**TypeNumeric** | Pointer to **int32** | Type of component in this enclosure( In numeric form ) | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **Vendor** | Pointer to **string** |  | [optional] 
 **Controllers** | Pointer to [**[]ControllersResourceInner**](ControllersResourceInner.md) |  | [optional] 
@@ -171,20 +222,32 @@ HasBoardModel returns a boolean if a field has been set.
 
 ### GetBoardModelNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetBoardModelNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetBoardModelNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBoardModelNumeric returns the BoardModelNumeric field if non-nil, zero value otherwise.
 
 ### GetBoardModelNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetBoardModelNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetBoardModelNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBoardModelNumericOk returns a tuple with the BoardModelNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBoardModelNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetBoardModelNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetBoardModelNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetBoardModelNumeric sets BoardModelNumeric field to given value.
 
@@ -196,20 +259,32 @@ HasBoardModelNumeric returns a boolean if a field has been set.
 
 ### GetColumns
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetColumns() int64`
+=======
+`func (o *EnclosuresResourceInner) GetColumns() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetColumns returns the Columns field if non-nil, zero value otherwise.
 
 ### GetColumnsOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetColumnsOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetColumnsOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetColumnsOk returns a tuple with the Columns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetColumns
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetColumns(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetColumns(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetColumns sets Columns field to given value.
 
@@ -296,20 +371,32 @@ HasDriveOrientation returns a boolean if a field has been set.
 
 ### GetDriveOrientationNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDriveOrientationNumeric returns the DriveOrientationNumeric field if non-nil, zero value otherwise.
 
 ### GetDriveOrientationNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetDriveOrientationNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetDriveOrientationNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDriveOrientationNumericOk returns a tuple with the DriveOrientationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDriveOrientationNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetDriveOrientationNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetDriveOrientationNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDriveOrientationNumeric sets DriveOrientationNumeric field to given value.
 
@@ -621,20 +708,32 @@ HasEnclosureArrangement returns a boolean if a field has been set.
 
 ### GetEnclosureArrangementNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureArrangementNumeric returns the EnclosureArrangementNumeric field if non-nil, zero value otherwise.
 
 ### GetEnclosureArrangementNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetEnclosureArrangementNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetEnclosureArrangementNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureArrangementNumericOk returns a tuple with the EnclosureArrangementNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureArrangementNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetEnclosureArrangementNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetEnclosureArrangementNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetEnclosureArrangementNumeric sets EnclosureArrangementNumeric field to given value.
 
@@ -646,20 +745,32 @@ HasEnclosureArrangementNumeric returns a boolean if a field has been set.
 
 ### GetEnclosureId
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetEnclosureId() int64`
+=======
+`func (o *EnclosuresResourceInner) GetEnclosureId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureId returns the EnclosureId field if non-nil, zero value otherwise.
 
 ### GetEnclosureIdOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetEnclosureIdOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetEnclosureIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureIdOk returns a tuple with the EnclosureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureId
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetEnclosureId(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetEnclosureId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetEnclosureId sets EnclosureId field to given value.
 
@@ -896,20 +1007,32 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetHealthNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetHealthNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetHealthNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -996,20 +1119,32 @@ HasIomType returns a boolean if a field has been set.
 
 ### GetIomTypeNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetIomTypeNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetIomTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetIomTypeNumeric returns the IomTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetIomTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetIomTypeNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetIomTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetIomTypeNumericOk returns a tuple with the IomTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIomTypeNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetIomTypeNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetIomTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetIomTypeNumeric sets IomTypeNumeric field to given value.
 
@@ -1071,20 +1206,32 @@ HasLocatorLed returns a boolean if a field has been set.
 
 ### GetLocatorLedNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLocatorLedNumeric returns the LocatorLedNumeric field if non-nil, zero value otherwise.
 
 ### GetLocatorLedNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetLocatorLedNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetLocatorLedNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocatorLedNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetLocatorLedNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetLocatorLedNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetLocatorLedNumeric sets LocatorLedNumeric field to given value.
 
@@ -1121,20 +1268,32 @@ HasMfgDate returns a boolean if a field has been set.
 
 ### GetMfgDateNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetMfgDateNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetMfgDateNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMfgDateNumeric returns the MfgDateNumeric field if non-nil, zero value otherwise.
 
 ### GetMfgDateNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetMfgDateNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetMfgDateNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMfgDateNumericOk returns a tuple with the MfgDateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMfgDateNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetMfgDateNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetMfgDateNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMfgDateNumeric sets MfgDateNumeric field to given value.
 
@@ -1171,20 +1330,32 @@ HasMfgLocation returns a boolean if a field has been set.
 
 ### GetMidplaneRev
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetMidplaneRev() int64`
+=======
+`func (o *EnclosuresResourceInner) GetMidplaneRev() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMidplaneRev returns the MidplaneRev field if non-nil, zero value otherwise.
 
 ### GetMidplaneRevOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetMidplaneRevOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetMidplaneRevOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMidplaneRevOk returns a tuple with the MidplaneRev field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMidplaneRev
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetMidplaneRev(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetMidplaneRev(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMidplaneRev sets MidplaneRev field to given value.
 
@@ -1246,20 +1417,32 @@ HasMidplaneType returns a boolean if a field has been set.
 
 ### GetMidplaneTypeNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMidplaneTypeNumeric returns the MidplaneTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetMidplaneTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetMidplaneTypeNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetMidplaneTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMidplaneTypeNumericOk returns a tuple with the MidplaneTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMidplaneTypeNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetMidplaneTypeNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetMidplaneTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMidplaneTypeNumeric sets MidplaneTypeNumeric field to given value.
 
@@ -1321,20 +1504,32 @@ HasName returns a boolean if a field has been set.
 
 ### GetNumberOfCoolingsElements
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int64`
+=======
+`func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumberOfCoolingsElements returns the NumberOfCoolingsElements field if non-nil, zero value otherwise.
 
 ### GetNumberOfCoolingsElementsOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetNumberOfCoolingsElementsOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetNumberOfCoolingsElementsOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumberOfCoolingsElementsOk returns a tuple with the NumberOfCoolingsElements field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumberOfCoolingsElements
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetNumberOfCoolingsElements(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetNumberOfCoolingsElements(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetNumberOfCoolingsElements sets NumberOfCoolingsElements field to given value.
 
@@ -1346,20 +1541,32 @@ HasNumberOfCoolingsElements returns a boolean if a field has been set.
 
 ### GetNumberOfDisks
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetNumberOfDisks() int64`
+=======
+`func (o *EnclosuresResourceInner) GetNumberOfDisks() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumberOfDisks returns the NumberOfDisks field if non-nil, zero value otherwise.
 
 ### GetNumberOfDisksOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetNumberOfDisksOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetNumberOfDisksOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumberOfDisksOk returns a tuple with the NumberOfDisks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumberOfDisks
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetNumberOfDisks(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetNumberOfDisks(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetNumberOfDisks sets NumberOfDisks field to given value.
 
@@ -1371,20 +1578,32 @@ HasNumberOfDisks returns a boolean if a field has been set.
 
 ### GetNumberOfPowerSupplies
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int64`
+=======
+`func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumberOfPowerSupplies returns the NumberOfPowerSupplies field if non-nil, zero value otherwise.
 
 ### GetNumberOfPowerSuppliesOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetNumberOfPowerSuppliesOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetNumberOfPowerSuppliesOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumberOfPowerSuppliesOk returns a tuple with the NumberOfPowerSupplies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumberOfPowerSupplies
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetNumberOfPowerSupplies(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetNumberOfPowerSupplies(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetNumberOfPowerSupplies sets NumberOfPowerSupplies field to given value.
 
@@ -1446,20 +1665,32 @@ HasPcie2Capable returns a boolean if a field has been set.
 
 ### GetPcie2CapableNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPcie2CapableNumeric returns the Pcie2CapableNumeric field if non-nil, zero value otherwise.
 
 ### GetPcie2CapableNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetPcie2CapableNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetPcie2CapableNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPcie2CapableNumericOk returns a tuple with the Pcie2CapableNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPcie2CapableNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetPcie2CapableNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetPcie2CapableNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPcie2CapableNumeric sets Pcie2CapableNumeric field to given value.
 
@@ -1496,20 +1727,32 @@ HasPlatformType returns a boolean if a field has been set.
 
 ### GetPlatformTypeNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPlatformTypeNumeric returns the PlatformTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetPlatformTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetPlatformTypeNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetPlatformTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPlatformTypeNumericOk returns a tuple with the PlatformTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlatformTypeNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetPlatformTypeNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetPlatformTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPlatformTypeNumeric sets PlatformTypeNumeric field to given value.
 
@@ -1521,20 +1764,32 @@ HasPlatformTypeNumeric returns a boolean if a field has been set.
 
 ### GetRackNumber
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetRackNumber() int64`
+=======
+`func (o *EnclosuresResourceInner) GetRackNumber() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRackNumber returns the RackNumber field if non-nil, zero value otherwise.
 
 ### GetRackNumberOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetRackNumberOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetRackNumberOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRackNumberOk returns a tuple with the RackNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRackNumber
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetRackNumber(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetRackNumber(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRackNumber sets RackNumber field to given value.
 
@@ -1546,20 +1801,32 @@ HasRackNumber returns a boolean if a field has been set.
 
 ### GetRackPosition
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetRackPosition() int64`
+=======
+`func (o *EnclosuresResourceInner) GetRackPosition() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRackPosition returns the RackPosition field if non-nil, zero value otherwise.
 
 ### GetRackPositionOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetRackPositionOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetRackPositionOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRackPositionOk returns a tuple with the RackPosition field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRackPosition
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetRackPosition(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetRackPosition(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRackPosition sets RackPosition field to given value.
 
@@ -1596,20 +1863,32 @@ HasRevision returns a boolean if a field has been set.
 
 ### GetRows
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetRows() int64`
+=======
+`func (o *EnclosuresResourceInner) GetRows() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRows returns the Rows field if non-nil, zero value otherwise.
 
 ### GetRowsOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetRowsOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetRowsOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRowsOk returns a tuple with the Rows field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRows
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetRows(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetRows(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRows sets Rows field to given value.
 
@@ -1621,20 +1900,32 @@ HasRows returns a boolean if a field has been set.
 
 ### GetSlots
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetSlots() int64`
+=======
+`func (o *EnclosuresResourceInner) GetSlots() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSlots returns the Slots field if non-nil, zero value otherwise.
 
 ### GetSlotsOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetSlotsOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetSlotsOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSlotsOk returns a tuple with the Slots field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlots
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetSlots(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetSlots(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSlots sets Slots field to given value.
 
@@ -1671,20 +1962,32 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetStatusNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetStatusNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetStatusNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStatusNumeric sets StatusNumeric field to given value.
 
@@ -1721,20 +2024,32 @@ HasType returns a boolean if a field has been set.
 
 ### GetTypeNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetTypeNumeric() int64`
+=======
+`func (o *EnclosuresResourceInner) GetTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTypeNumeric returns the TypeNumeric field if non-nil, zero value otherwise.
 
 ### GetTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) GetTypeNumericOk() (*int64, bool)`
+=======
+`func (o *EnclosuresResourceInner) GetTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTypeNumericOk returns a tuple with the TypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTypeNumeric
 
+<<<<<<< HEAD
 `func (o *EnclosuresResourceInner) SetTypeNumeric(v int64)`
+=======
+`func (o *EnclosuresResourceInner) SetTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetTypeNumeric sets TypeNumeric field to given value.
 

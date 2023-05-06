@@ -86,7 +86,11 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteSnapshotNamesGet**](docs/DefaultApi.md#deletesnapshotnamesget) | **Get** /delete/snapshot/{namesOption} | 
 *DefaultApi* | [**DeleteVolumesNamesGet**](docs/DefaultApi.md#deletevolumesnamesget) | **Get** /delete/volumes/{namesOption} | 
 *DefaultApi* | [**ExpandVolumeSizeNameGet**](docs/DefaultApi.md#expandvolumesizenameget) | **Get** /expand/volume/size/{sizeOption}/{nameOption} | 
+<<<<<<< HEAD
 *DefaultApi* | [**LoginGet**](docs/DefaultApi.md#loginget) | **Get** /login | 
+=======
+*DefaultApi* | [**LoginGetByHash**](docs/DefaultApi.md#logingetbyhash) | **Get** /login/{loginHash} | 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 *DefaultApi* | [**MapVolumeAccessLunInitiatorNamesGet**](docs/DefaultApi.md#mapvolumeaccessluninitiatornamesget) | **Get** /map/volume/access/{accessOption}/lun/{lunOption}/initiator/{initiatorOption}/{namesOption} | 
 *DefaultApi* | [**SchemaGet**](docs/DefaultApi.md#schemaget) | **Get** /meta/{schemaId} | 
 *DefaultApi* | [**SetInitiatorIdNicknameGet**](docs/DefaultApi.md#setinitiatoridnicknameget) | **Get** /set/initiator/id/{idOption}/nickname/{nicknameOption} | 
@@ -94,16 +98,24 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ShowCacheParametersGet**](docs/DefaultApi.md#showcacheparametersget) | **Get** /show/cache-parameters | 
 *DefaultApi* | [**ShowCertificateGet**](docs/DefaultApi.md#showcertificateget) | **Get** /show/certificate | 
 *DefaultApi* | [**ShowControllersGet**](docs/DefaultApi.md#showcontrollersget) | **Get** /show/controllers | 
+<<<<<<< HEAD
 *DefaultApi* | [**ShowDiskGroupsGet**](docs/DefaultApi.md#showdiskgroupsget) | **Get** /show/disk-groups | 
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 *DefaultApi* | [**ShowDisksGet**](docs/DefaultApi.md#showdisksget) | **Get** /show/disks | 
 *DefaultApi* | [**ShowEnclosuresGet**](docs/DefaultApi.md#showenclosuresget) | **Get** /show/enclosures | 
 *DefaultApi* | [**ShowFansGet**](docs/DefaultApi.md#showfansget) | **Get** /show/fans | 
 *DefaultApi* | [**ShowHostGroupsGet**](docs/DefaultApi.md#showhostgroupsget) | **Get** /show/host-groups | 
 *DefaultApi* | [**ShowInitiatorNamesGet**](docs/DefaultApi.md#showinitiatornamesget) | **Get** /show/initiator/{namesOption} | 
 *DefaultApi* | [**ShowInitiatorsGet**](docs/DefaultApi.md#showinitiatorsget) | **Get** /show/initiators | 
+<<<<<<< HEAD
 *DefaultApi* | [**ShowMapsAllGet**](docs/DefaultApi.md#showmapsallget) | **Get** /show/maps/all | 
 *DefaultApi* | [**ShowMapsGet**](docs/DefaultApi.md#showmapsget) | **Get** /show/maps | 
 *DefaultApi* | [**ShowMapsInitiatorNamesGet**](docs/DefaultApi.md#showmapsinitiatornamesget) | **Get** /show/maps/initiator/{namesOption} | 
+=======
+*DefaultApi* | [**ShowMapsGet**](docs/DefaultApi.md#showmapsget) | **Get** /show/maps | 
+*DefaultApi* | [**ShowMapsInitiatorGet**](docs/DefaultApi.md#showmapsinitiatorget) | **Get** /show/maps/initiator | 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 *DefaultApi* | [**ShowMapsNamesGet**](docs/DefaultApi.md#showmapsnamesget) | **Get** /show/maps/{namesOption} | 
 *DefaultApi* | [**ShowPoolsGet**](docs/DefaultApi.md#showpoolsget) | **Get** /show/pools | 
 *DefaultApi* | [**ShowPowerSuppliesGet**](docs/DefaultApi.md#showpowersuppliesget) | **Get** /show/power-supplies | 
@@ -129,7 +141,10 @@ Class | Method | HTTP request | Description
  - [ControllerCacheParametersResourceInner](docs/ControllerCacheParametersResourceInner.md)
  - [ControllersObject](docs/ControllersObject.md)
  - [ControllersResourceInner](docs/ControllersResourceInner.md)
+<<<<<<< HEAD
  - [DiskGroupsObject](docs/DiskGroupsObject.md)
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
  - [DiskGroupsResourceInner](docs/DiskGroupsResourceInner.md)
  - [DrivesObject](docs/DrivesObject.md)
  - [DrivesResourceInner](docs/DrivesResourceInner.md)
@@ -139,6 +154,7 @@ Class | Method | HTTP request | Description
  - [ExpandersResourceInner](docs/ExpandersResourceInner.md)
  - [FanObject](docs/FanObject.md)
  - [FanResourceInner](docs/FanResourceInner.md)
+<<<<<<< HEAD
  - [FcPortResourceInner](docs/FcPortResourceInner.md)
  - [HostGroupObject](docs/HostGroupObject.md)
  - [HostGroupResourceInner](docs/HostGroupResourceInner.md)
@@ -149,6 +165,15 @@ Class | Method | HTTP request | Description
  - [InitiatorObject](docs/InitiatorObject.md)
  - [InitiatorResourceInner](docs/InitiatorResourceInner.md)
  - [IscsiPortResourceInner](docs/IscsiPortResourceInner.md)
+=======
+ - [HostGroupObject](docs/HostGroupObject.md)
+ - [HostGroupResourceInner](docs/HostGroupResourceInner.md)
+ - [HostResourceInner](docs/HostResourceInner.md)
+ - [InitiatorObject](docs/InitiatorObject.md)
+ - [InitiatorResourceInner](docs/InitiatorResourceInner.md)
+ - [InitiatorViewObject](docs/InitiatorViewObject.md)
+ - [InitiatorViewResourceInner](docs/InitiatorViewResourceInner.md)
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
  - [NetworkParametersResourceInner](docs/NetworkParametersResourceInner.md)
  - [PoolsObject](docs/PoolsObject.md)
  - [PoolsResourceInner](docs/PoolsResourceInner.md)
@@ -166,9 +191,15 @@ Class | Method | HTTP request | Description
  - [TiersResourceInner](docs/TiersResourceInner.md)
  - [VersionsObject](docs/VersionsObject.md)
  - [VersionsResourceInner](docs/VersionsResourceInner.md)
+<<<<<<< HEAD
  - [VolumeGroupViewResourceInner](docs/VolumeGroupViewResourceInner.md)
  - [VolumeViewMappingsResourceInner](docs/VolumeViewMappingsResourceInner.md)
  - [VolumeViewObject](docs/VolumeViewObject.md)
+=======
+ - [VolumeGroupViewObject](docs/VolumeGroupViewObject.md)
+ - [VolumeGroupViewResourceInner](docs/VolumeGroupViewResourceInner.md)
+ - [VolumeViewMappingsResourceInner](docs/VolumeViewMappingsResourceInner.md)
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
  - [VolumeViewResourceInner](docs/VolumeViewResourceInner.md)
  - [VolumesObject](docs/VolumesObject.md)
  - [VolumesResourceInner](docs/VolumesResourceInner.md)
@@ -176,6 +207,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
+<<<<<<< HEAD
 
 
 ### basicAuth
@@ -191,6 +223,9 @@ auth := context.WithValue(context.Background(), sw.ContextBasicAuth, sw.BasicAut
 })
 r, err := client.Service.Operation(auth, args)
 ```
+=======
+ Endpoints do not require authorization.
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 
 ## Documentation for Utility Methods

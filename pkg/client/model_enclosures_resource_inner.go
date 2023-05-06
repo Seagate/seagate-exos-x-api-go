@@ -24,12 +24,21 @@ type EnclosuresResourceInner struct {
 	// IOM Board model
 	BoardModel *string `json:"board-model,omitempty"`
 	// IOM Board model( In numeric form )
+<<<<<<< HEAD
 	BoardModelNumeric       *int64  `json:"board-model-numeric,omitempty"`
 	Columns                 *int64  `json:"columns,omitempty"`
 	DashLevel               *string `json:"dash-level,omitempty"`
 	Description             *string `json:"description,omitempty"`
 	DriveOrientation        *string `json:"drive-orientation,omitempty"`
 	DriveOrientationNumeric *int64  `json:"drive-orientation-numeric,omitempty"`
+=======
+	BoardModelNumeric       *int32  `json:"board-model-numeric,omitempty"`
+	Columns                 *int32  `json:"columns,omitempty"`
+	DashLevel               *string `json:"dash-level,omitempty"`
+	Description             *string `json:"description,omitempty"`
+	DriveOrientation        *string `json:"drive-orientation,omitempty"`
+	DriveOrientationNumeric *int32  `json:"drive-orientation-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	DurableId               *string `json:"durable-id,omitempty"`
 	EmpA                    *string `json:"emp-a,omitempty"`
 	EmpABusid               *string `json:"emp-a-busid,omitempty"`
@@ -44,8 +53,13 @@ type EnclosuresResourceInner struct {
 	EmpBRev                     *string `json:"emp-b-rev,omitempty"`
 	EmpBTargetid                *string `json:"emp-b-targetid,omitempty"`
 	EnclosureArrangement        *string `json:"enclosure-arrangement,omitempty"`
+<<<<<<< HEAD
 	EnclosureArrangementNumeric *int64  `json:"enclosure-arrangement-numeric,omitempty"`
 	EnclosureId                 *int64  `json:"enclosure-id,omitempty"`
+=======
+	EnclosureArrangementNumeric *int32  `json:"enclosure-arrangement-numeric,omitempty"`
+	EnclosureId                 *int32  `json:"enclosure-id,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	EnclosurePower              *string `json:"enclosure-power,omitempty"`
 	// Enclosure World Wide Name
 	EnclosureWwn *string `json:"enclosure-wwn,omitempty"`
@@ -57,26 +71,44 @@ type EnclosuresResourceInner struct {
 	GemVersionA          *string `json:"gem-version-a,omitempty"`
 	GemVersionB          *string `json:"gem-version-b,omitempty"`
 	Health               *string `json:"health,omitempty"`
+<<<<<<< HEAD
 	HealthNumeric        *int64  `json:"health-numeric,omitempty"`
 	HealthReason         *string `json:"health-reason,omitempty"`
 	HealthRecommendation *string `json:"health-recommendation,omitempty"`
 	IomType              *string `json:"iom-type,omitempty"`
 	IomTypeNumeric       *int64  `json:"iom-type-numeric,omitempty"`
+=======
+	HealthNumeric        *int32  `json:"health-numeric,omitempty"`
+	HealthReason         *string `json:"health-reason,omitempty"`
+	HealthRecommendation *string `json:"health-recommendation,omitempty"`
+	IomType              *string `json:"iom-type,omitempty"`
+	IomTypeNumeric       *int32  `json:"iom-type-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Location             *string `json:"location,omitempty"`
 	// Indicates whether the locator LED is on
 	LocatorLed *string `json:"locator-led,omitempty"`
 	// Indicates whether the locator LED is on( In numeric form )
+<<<<<<< HEAD
 	LocatorLedNumeric *int64  `json:"locator-led-numeric,omitempty"`
 	MfgDate           *string `json:"mfg-date,omitempty"`
 	MfgDateNumeric    *int64  `json:"mfg-date-numeric,omitempty"`
 	MfgLocation       *string `json:"mfg-location,omitempty"`
 	// Revision level of midplane
 	MidplaneRev *int64 `json:"midplane-rev,omitempty"`
+=======
+	LocatorLedNumeric *int32  `json:"locator-led-numeric,omitempty"`
+	MfgDate           *string `json:"mfg-date,omitempty"`
+	MfgDateNumeric    *int32  `json:"mfg-date-numeric,omitempty"`
+	MfgLocation       *string `json:"mfg-location,omitempty"`
+	// Revision level of midplane
+	MidplaneRev *int32 `json:"midplane-rev,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// Serial number of the enclosure
 	MidplaneSerialNumber *string `json:"midplane-serial-number,omitempty"`
 	// Type of midplane
 	MidplaneType *string `json:"midplane-type,omitempty"`
 	// Type of midplane( In numeric form )
+<<<<<<< HEAD
 	MidplaneTypeNumeric *int64  `json:"midplane-type-numeric,omitempty"`
 	Model               *string `json:"model,omitempty"`
 	Name                *string `json:"name,omitempty"`
@@ -86,10 +118,22 @@ type EnclosuresResourceInner struct {
 	NumberOfDisks *int64 `json:"number-of-disks,omitempty"`
 	// Number of power supplies in the enclosure
 	NumberOfPowerSupplies *int64  `json:"number-of-power-supplies,omitempty"`
+=======
+	MidplaneTypeNumeric *int32  `json:"midplane-type-numeric,omitempty"`
+	Model               *string `json:"model,omitempty"`
+	Name                *string `json:"name,omitempty"`
+	// Number of fans in the enclosure
+	NumberOfCoolingsElements *int32 `json:"number-of-coolings-elements,omitempty"`
+	// Number of disks in the enclosure
+	NumberOfDisks *int32 `json:"number-of-disks,omitempty"`
+	// Number of power supplies in the enclosure
+	NumberOfPowerSupplies *int32  `json:"number-of-power-supplies,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	PartNumber            *string `json:"part-number,omitempty"`
 	// Enclosure is capable of using PCIe version 2
 	Pcie2Capable *string `json:"pcie2-capable,omitempty"`
 	// Enclosure is capable of using PCIe version 2( In numeric form )
+<<<<<<< HEAD
 	Pcie2CapableNumeric *int64 `json:"pcie2-capable-numeric,omitempty"`
 	// HW Platform Type
 	PlatformType *string `json:"platform-type,omitempty"`
@@ -108,6 +152,26 @@ type EnclosuresResourceInner struct {
 	Type *string `json:"type,omitempty"`
 	// Type of component in this enclosure( In numeric form )
 	TypeNumeric *int64 `json:"type-numeric,omitempty"`
+=======
+	Pcie2CapableNumeric *int32 `json:"pcie2-capable-numeric,omitempty"`
+	// HW Platform Type
+	PlatformType *string `json:"platform-type,omitempty"`
+	// HW Platform Type( In numeric form )
+	PlatformTypeNumeric *int32 `json:"platform-type-numeric,omitempty"`
+	RackNumber          *int32 `json:"rack-number,omitempty"`
+	RackPosition        *int32 `json:"rack-position,omitempty"`
+	// Current revision for this FRU
+	Revision *string `json:"revision,omitempty"`
+	Rows     *int32  `json:"rows,omitempty"`
+	// The number of disk slots in this enclosure
+	Slots         *int32  `json:"slots,omitempty"`
+	Status        *string `json:"status,omitempty"`
+	StatusNumeric *int32  `json:"status-numeric,omitempty"`
+	// Type of component in this enclosure
+	Type *string `json:"type,omitempty"`
+	// Type of component in this enclosure( In numeric form )
+	TypeNumeric *int32 `json:"type-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// The resource URL
 	Url           *string                      `json:"url,omitempty"`
 	Vendor        *string                      `json:"vendor,omitempty"`
@@ -229,9 +293,15 @@ func (o *EnclosuresResourceInner) SetBoardModel(v string) {
 }
 
 // GetBoardModelNumeric returns the BoardModelNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetBoardModelNumeric() int64 {
 	if o == nil || IsNil(o.BoardModelNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetBoardModelNumeric() int32 {
+	if o == nil || IsNil(o.BoardModelNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.BoardModelNumeric
@@ -239,7 +309,11 @@ func (o *EnclosuresResourceInner) GetBoardModelNumeric() int64 {
 
 // GetBoardModelNumericOk returns a tuple with the BoardModelNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetBoardModelNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetBoardModelNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.BoardModelNumeric) {
 		return nil, false
 	}
@@ -255,15 +329,26 @@ func (o *EnclosuresResourceInner) HasBoardModelNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBoardModelNumeric gets a reference to the given int64 and assigns it to the BoardModelNumeric field.
 func (o *EnclosuresResourceInner) SetBoardModelNumeric(v int64) {
+=======
+// SetBoardModelNumeric gets a reference to the given int32 and assigns it to the BoardModelNumeric field.
+func (o *EnclosuresResourceInner) SetBoardModelNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.BoardModelNumeric = &v
 }
 
 // GetColumns returns the Columns field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetColumns() int64 {
 	if o == nil || IsNil(o.Columns) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetColumns() int32 {
+	if o == nil || IsNil(o.Columns) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Columns
@@ -271,7 +356,11 @@ func (o *EnclosuresResourceInner) GetColumns() int64 {
 
 // GetColumnsOk returns a tuple with the Columns field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetColumnsOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetColumnsOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Columns) {
 		return nil, false
 	}
@@ -287,8 +376,13 @@ func (o *EnclosuresResourceInner) HasColumns() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetColumns gets a reference to the given int64 and assigns it to the Columns field.
 func (o *EnclosuresResourceInner) SetColumns(v int64) {
+=======
+// SetColumns gets a reference to the given int32 and assigns it to the Columns field.
+func (o *EnclosuresResourceInner) SetColumns(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Columns = &v
 }
 
@@ -389,9 +483,15 @@ func (o *EnclosuresResourceInner) SetDriveOrientation(v string) {
 }
 
 // GetDriveOrientationNumeric returns the DriveOrientationNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int64 {
 	if o == nil || IsNil(o.DriveOrientationNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int32 {
+	if o == nil || IsNil(o.DriveOrientationNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DriveOrientationNumeric
@@ -399,7 +499,11 @@ func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int64 {
 
 // GetDriveOrientationNumericOk returns a tuple with the DriveOrientationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetDriveOrientationNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetDriveOrientationNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DriveOrientationNumeric) {
 		return nil, false
 	}
@@ -415,8 +519,13 @@ func (o *EnclosuresResourceInner) HasDriveOrientationNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDriveOrientationNumeric gets a reference to the given int64 and assigns it to the DriveOrientationNumeric field.
 func (o *EnclosuresResourceInner) SetDriveOrientationNumeric(v int64) {
+=======
+// SetDriveOrientationNumeric gets a reference to the given int32 and assigns it to the DriveOrientationNumeric field.
+func (o *EnclosuresResourceInner) SetDriveOrientationNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DriveOrientationNumeric = &v
 }
 
@@ -805,9 +914,15 @@ func (o *EnclosuresResourceInner) SetEnclosureArrangement(v string) {
 }
 
 // GetEnclosureArrangementNumeric returns the EnclosureArrangementNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int64 {
 	if o == nil || IsNil(o.EnclosureArrangementNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int32 {
+	if o == nil || IsNil(o.EnclosureArrangementNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.EnclosureArrangementNumeric
@@ -815,7 +930,11 @@ func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int64 {
 
 // GetEnclosureArrangementNumericOk returns a tuple with the EnclosureArrangementNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetEnclosureArrangementNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetEnclosureArrangementNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.EnclosureArrangementNumeric) {
 		return nil, false
 	}
@@ -831,15 +950,26 @@ func (o *EnclosuresResourceInner) HasEnclosureArrangementNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetEnclosureArrangementNumeric gets a reference to the given int64 and assigns it to the EnclosureArrangementNumeric field.
 func (o *EnclosuresResourceInner) SetEnclosureArrangementNumeric(v int64) {
+=======
+// SetEnclosureArrangementNumeric gets a reference to the given int32 and assigns it to the EnclosureArrangementNumeric field.
+func (o *EnclosuresResourceInner) SetEnclosureArrangementNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.EnclosureArrangementNumeric = &v
 }
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetEnclosureId() int64 {
 	if o == nil || IsNil(o.EnclosureId) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetEnclosureId() int32 {
+	if o == nil || IsNil(o.EnclosureId) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.EnclosureId
@@ -847,7 +977,11 @@ func (o *EnclosuresResourceInner) GetEnclosureId() int64 {
 
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetEnclosureIdOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetEnclosureIdOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.EnclosureId) {
 		return nil, false
 	}
@@ -863,8 +997,13 @@ func (o *EnclosuresResourceInner) HasEnclosureId() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetEnclosureId gets a reference to the given int64 and assigns it to the EnclosureId field.
 func (o *EnclosuresResourceInner) SetEnclosureId(v int64) {
+=======
+// SetEnclosureId gets a reference to the given int32 and assigns it to the EnclosureId field.
+func (o *EnclosuresResourceInner) SetEnclosureId(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.EnclosureId = &v
 }
 
@@ -1157,9 +1296,15 @@ func (o *EnclosuresResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetHealthNumeric() int32 {
+	if o == nil || IsNil(o.HealthNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthNumeric
@@ -1167,7 +1312,11 @@ func (o *EnclosuresResourceInner) GetHealthNumeric() int64 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetHealthNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetHealthNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -1183,8 +1332,13 @@ func (o *EnclosuresResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
 func (o *EnclosuresResourceInner) SetHealthNumeric(v int64) {
+=======
+// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
+func (o *EnclosuresResourceInner) SetHealthNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthNumeric = &v
 }
 
@@ -1285,9 +1439,15 @@ func (o *EnclosuresResourceInner) SetIomType(v string) {
 }
 
 // GetIomTypeNumeric returns the IomTypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetIomTypeNumeric() int64 {
 	if o == nil || IsNil(o.IomTypeNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetIomTypeNumeric() int32 {
+	if o == nil || IsNil(o.IomTypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.IomTypeNumeric
@@ -1295,7 +1455,11 @@ func (o *EnclosuresResourceInner) GetIomTypeNumeric() int64 {
 
 // GetIomTypeNumericOk returns a tuple with the IomTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetIomTypeNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetIomTypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.IomTypeNumeric) {
 		return nil, false
 	}
@@ -1311,8 +1475,13 @@ func (o *EnclosuresResourceInner) HasIomTypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetIomTypeNumeric gets a reference to the given int64 and assigns it to the IomTypeNumeric field.
 func (o *EnclosuresResourceInner) SetIomTypeNumeric(v int64) {
+=======
+// SetIomTypeNumeric gets a reference to the given int32 and assigns it to the IomTypeNumeric field.
+func (o *EnclosuresResourceInner) SetIomTypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.IomTypeNumeric = &v
 }
 
@@ -1381,9 +1550,15 @@ func (o *EnclosuresResourceInner) SetLocatorLed(v string) {
 }
 
 // GetLocatorLedNumeric returns the LocatorLedNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int64 {
 	if o == nil || IsNil(o.LocatorLedNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int32 {
+	if o == nil || IsNil(o.LocatorLedNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.LocatorLedNumeric
@@ -1391,7 +1566,11 @@ func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int64 {
 
 // GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetLocatorLedNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetLocatorLedNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.LocatorLedNumeric) {
 		return nil, false
 	}
@@ -1407,8 +1586,13 @@ func (o *EnclosuresResourceInner) HasLocatorLedNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetLocatorLedNumeric gets a reference to the given int64 and assigns it to the LocatorLedNumeric field.
 func (o *EnclosuresResourceInner) SetLocatorLedNumeric(v int64) {
+=======
+// SetLocatorLedNumeric gets a reference to the given int32 and assigns it to the LocatorLedNumeric field.
+func (o *EnclosuresResourceInner) SetLocatorLedNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.LocatorLedNumeric = &v
 }
 
@@ -1445,9 +1629,15 @@ func (o *EnclosuresResourceInner) SetMfgDate(v string) {
 }
 
 // GetMfgDateNumeric returns the MfgDateNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetMfgDateNumeric() int64 {
 	if o == nil || IsNil(o.MfgDateNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetMfgDateNumeric() int32 {
+	if o == nil || IsNil(o.MfgDateNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MfgDateNumeric
@@ -1455,7 +1645,11 @@ func (o *EnclosuresResourceInner) GetMfgDateNumeric() int64 {
 
 // GetMfgDateNumericOk returns a tuple with the MfgDateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetMfgDateNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetMfgDateNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MfgDateNumeric) {
 		return nil, false
 	}
@@ -1471,8 +1665,13 @@ func (o *EnclosuresResourceInner) HasMfgDateNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMfgDateNumeric gets a reference to the given int64 and assigns it to the MfgDateNumeric field.
 func (o *EnclosuresResourceInner) SetMfgDateNumeric(v int64) {
+=======
+// SetMfgDateNumeric gets a reference to the given int32 and assigns it to the MfgDateNumeric field.
+func (o *EnclosuresResourceInner) SetMfgDateNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MfgDateNumeric = &v
 }
 
@@ -1509,9 +1708,15 @@ func (o *EnclosuresResourceInner) SetMfgLocation(v string) {
 }
 
 // GetMidplaneRev returns the MidplaneRev field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetMidplaneRev() int64 {
 	if o == nil || IsNil(o.MidplaneRev) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetMidplaneRev() int32 {
+	if o == nil || IsNil(o.MidplaneRev) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MidplaneRev
@@ -1519,7 +1724,11 @@ func (o *EnclosuresResourceInner) GetMidplaneRev() int64 {
 
 // GetMidplaneRevOk returns a tuple with the MidplaneRev field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetMidplaneRevOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetMidplaneRevOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MidplaneRev) {
 		return nil, false
 	}
@@ -1535,8 +1744,13 @@ func (o *EnclosuresResourceInner) HasMidplaneRev() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMidplaneRev gets a reference to the given int64 and assigns it to the MidplaneRev field.
 func (o *EnclosuresResourceInner) SetMidplaneRev(v int64) {
+=======
+// SetMidplaneRev gets a reference to the given int32 and assigns it to the MidplaneRev field.
+func (o *EnclosuresResourceInner) SetMidplaneRev(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MidplaneRev = &v
 }
 
@@ -1605,9 +1819,15 @@ func (o *EnclosuresResourceInner) SetMidplaneType(v string) {
 }
 
 // GetMidplaneTypeNumeric returns the MidplaneTypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int64 {
 	if o == nil || IsNil(o.MidplaneTypeNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int32 {
+	if o == nil || IsNil(o.MidplaneTypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MidplaneTypeNumeric
@@ -1615,7 +1835,11 @@ func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int64 {
 
 // GetMidplaneTypeNumericOk returns a tuple with the MidplaneTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetMidplaneTypeNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetMidplaneTypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MidplaneTypeNumeric) {
 		return nil, false
 	}
@@ -1631,8 +1855,13 @@ func (o *EnclosuresResourceInner) HasMidplaneTypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMidplaneTypeNumeric gets a reference to the given int64 and assigns it to the MidplaneTypeNumeric field.
 func (o *EnclosuresResourceInner) SetMidplaneTypeNumeric(v int64) {
+=======
+// SetMidplaneTypeNumeric gets a reference to the given int32 and assigns it to the MidplaneTypeNumeric field.
+func (o *EnclosuresResourceInner) SetMidplaneTypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MidplaneTypeNumeric = &v
 }
 
@@ -1701,9 +1930,15 @@ func (o *EnclosuresResourceInner) SetName(v string) {
 }
 
 // GetNumberOfCoolingsElements returns the NumberOfCoolingsElements field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int64 {
 	if o == nil || IsNil(o.NumberOfCoolingsElements) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int32 {
+	if o == nil || IsNil(o.NumberOfCoolingsElements) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.NumberOfCoolingsElements
@@ -1711,7 +1946,11 @@ func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int64 {
 
 // GetNumberOfCoolingsElementsOk returns a tuple with the NumberOfCoolingsElements field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetNumberOfCoolingsElementsOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetNumberOfCoolingsElementsOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.NumberOfCoolingsElements) {
 		return nil, false
 	}
@@ -1727,15 +1966,26 @@ func (o *EnclosuresResourceInner) HasNumberOfCoolingsElements() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetNumberOfCoolingsElements gets a reference to the given int64 and assigns it to the NumberOfCoolingsElements field.
 func (o *EnclosuresResourceInner) SetNumberOfCoolingsElements(v int64) {
+=======
+// SetNumberOfCoolingsElements gets a reference to the given int32 and assigns it to the NumberOfCoolingsElements field.
+func (o *EnclosuresResourceInner) SetNumberOfCoolingsElements(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.NumberOfCoolingsElements = &v
 }
 
 // GetNumberOfDisks returns the NumberOfDisks field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetNumberOfDisks() int64 {
 	if o == nil || IsNil(o.NumberOfDisks) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetNumberOfDisks() int32 {
+	if o == nil || IsNil(o.NumberOfDisks) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.NumberOfDisks
@@ -1743,7 +1993,11 @@ func (o *EnclosuresResourceInner) GetNumberOfDisks() int64 {
 
 // GetNumberOfDisksOk returns a tuple with the NumberOfDisks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetNumberOfDisksOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetNumberOfDisksOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.NumberOfDisks) {
 		return nil, false
 	}
@@ -1759,15 +2013,26 @@ func (o *EnclosuresResourceInner) HasNumberOfDisks() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetNumberOfDisks gets a reference to the given int64 and assigns it to the NumberOfDisks field.
 func (o *EnclosuresResourceInner) SetNumberOfDisks(v int64) {
+=======
+// SetNumberOfDisks gets a reference to the given int32 and assigns it to the NumberOfDisks field.
+func (o *EnclosuresResourceInner) SetNumberOfDisks(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.NumberOfDisks = &v
 }
 
 // GetNumberOfPowerSupplies returns the NumberOfPowerSupplies field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int64 {
 	if o == nil || IsNil(o.NumberOfPowerSupplies) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int32 {
+	if o == nil || IsNil(o.NumberOfPowerSupplies) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.NumberOfPowerSupplies
@@ -1775,7 +2040,11 @@ func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int64 {
 
 // GetNumberOfPowerSuppliesOk returns a tuple with the NumberOfPowerSupplies field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetNumberOfPowerSuppliesOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetNumberOfPowerSuppliesOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.NumberOfPowerSupplies) {
 		return nil, false
 	}
@@ -1791,8 +2060,13 @@ func (o *EnclosuresResourceInner) HasNumberOfPowerSupplies() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetNumberOfPowerSupplies gets a reference to the given int64 and assigns it to the NumberOfPowerSupplies field.
 func (o *EnclosuresResourceInner) SetNumberOfPowerSupplies(v int64) {
+=======
+// SetNumberOfPowerSupplies gets a reference to the given int32 and assigns it to the NumberOfPowerSupplies field.
+func (o *EnclosuresResourceInner) SetNumberOfPowerSupplies(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.NumberOfPowerSupplies = &v
 }
 
@@ -1861,9 +2135,15 @@ func (o *EnclosuresResourceInner) SetPcie2Capable(v string) {
 }
 
 // GetPcie2CapableNumeric returns the Pcie2CapableNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int64 {
 	if o == nil || IsNil(o.Pcie2CapableNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int32 {
+	if o == nil || IsNil(o.Pcie2CapableNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Pcie2CapableNumeric
@@ -1871,7 +2151,11 @@ func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int64 {
 
 // GetPcie2CapableNumericOk returns a tuple with the Pcie2CapableNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetPcie2CapableNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetPcie2CapableNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Pcie2CapableNumeric) {
 		return nil, false
 	}
@@ -1887,8 +2171,13 @@ func (o *EnclosuresResourceInner) HasPcie2CapableNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPcie2CapableNumeric gets a reference to the given int64 and assigns it to the Pcie2CapableNumeric field.
 func (o *EnclosuresResourceInner) SetPcie2CapableNumeric(v int64) {
+=======
+// SetPcie2CapableNumeric gets a reference to the given int32 and assigns it to the Pcie2CapableNumeric field.
+func (o *EnclosuresResourceInner) SetPcie2CapableNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Pcie2CapableNumeric = &v
 }
 
@@ -1925,9 +2214,15 @@ func (o *EnclosuresResourceInner) SetPlatformType(v string) {
 }
 
 // GetPlatformTypeNumeric returns the PlatformTypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int64 {
 	if o == nil || IsNil(o.PlatformTypeNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int32 {
+	if o == nil || IsNil(o.PlatformTypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PlatformTypeNumeric
@@ -1935,7 +2230,11 @@ func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int64 {
 
 // GetPlatformTypeNumericOk returns a tuple with the PlatformTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetPlatformTypeNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetPlatformTypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PlatformTypeNumeric) {
 		return nil, false
 	}
@@ -1951,15 +2250,26 @@ func (o *EnclosuresResourceInner) HasPlatformTypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPlatformTypeNumeric gets a reference to the given int64 and assigns it to the PlatformTypeNumeric field.
 func (o *EnclosuresResourceInner) SetPlatformTypeNumeric(v int64) {
+=======
+// SetPlatformTypeNumeric gets a reference to the given int32 and assigns it to the PlatformTypeNumeric field.
+func (o *EnclosuresResourceInner) SetPlatformTypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PlatformTypeNumeric = &v
 }
 
 // GetRackNumber returns the RackNumber field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetRackNumber() int64 {
 	if o == nil || IsNil(o.RackNumber) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetRackNumber() int32 {
+	if o == nil || IsNil(o.RackNumber) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RackNumber
@@ -1967,7 +2277,11 @@ func (o *EnclosuresResourceInner) GetRackNumber() int64 {
 
 // GetRackNumberOk returns a tuple with the RackNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetRackNumberOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetRackNumberOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RackNumber) {
 		return nil, false
 	}
@@ -1983,15 +2297,26 @@ func (o *EnclosuresResourceInner) HasRackNumber() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRackNumber gets a reference to the given int64 and assigns it to the RackNumber field.
 func (o *EnclosuresResourceInner) SetRackNumber(v int64) {
+=======
+// SetRackNumber gets a reference to the given int32 and assigns it to the RackNumber field.
+func (o *EnclosuresResourceInner) SetRackNumber(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RackNumber = &v
 }
 
 // GetRackPosition returns the RackPosition field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetRackPosition() int64 {
 	if o == nil || IsNil(o.RackPosition) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetRackPosition() int32 {
+	if o == nil || IsNil(o.RackPosition) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RackPosition
@@ -1999,7 +2324,11 @@ func (o *EnclosuresResourceInner) GetRackPosition() int64 {
 
 // GetRackPositionOk returns a tuple with the RackPosition field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetRackPositionOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetRackPositionOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RackPosition) {
 		return nil, false
 	}
@@ -2015,8 +2344,13 @@ func (o *EnclosuresResourceInner) HasRackPosition() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRackPosition gets a reference to the given int64 and assigns it to the RackPosition field.
 func (o *EnclosuresResourceInner) SetRackPosition(v int64) {
+=======
+// SetRackPosition gets a reference to the given int32 and assigns it to the RackPosition field.
+func (o *EnclosuresResourceInner) SetRackPosition(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RackPosition = &v
 }
 
@@ -2053,9 +2387,15 @@ func (o *EnclosuresResourceInner) SetRevision(v string) {
 }
 
 // GetRows returns the Rows field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetRows() int64 {
 	if o == nil || IsNil(o.Rows) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetRows() int32 {
+	if o == nil || IsNil(o.Rows) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Rows
@@ -2063,7 +2403,11 @@ func (o *EnclosuresResourceInner) GetRows() int64 {
 
 // GetRowsOk returns a tuple with the Rows field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetRowsOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetRowsOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Rows) {
 		return nil, false
 	}
@@ -2079,15 +2423,26 @@ func (o *EnclosuresResourceInner) HasRows() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRows gets a reference to the given int64 and assigns it to the Rows field.
 func (o *EnclosuresResourceInner) SetRows(v int64) {
+=======
+// SetRows gets a reference to the given int32 and assigns it to the Rows field.
+func (o *EnclosuresResourceInner) SetRows(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Rows = &v
 }
 
 // GetSlots returns the Slots field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetSlots() int64 {
 	if o == nil || IsNil(o.Slots) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetSlots() int32 {
+	if o == nil || IsNil(o.Slots) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Slots
@@ -2095,7 +2450,11 @@ func (o *EnclosuresResourceInner) GetSlots() int64 {
 
 // GetSlotsOk returns a tuple with the Slots field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetSlotsOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetSlotsOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Slots) {
 		return nil, false
 	}
@@ -2111,8 +2470,13 @@ func (o *EnclosuresResourceInner) HasSlots() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSlots gets a reference to the given int64 and assigns it to the Slots field.
 func (o *EnclosuresResourceInner) SetSlots(v int64) {
+=======
+// SetSlots gets a reference to the given int32 and assigns it to the Slots field.
+func (o *EnclosuresResourceInner) SetSlots(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Slots = &v
 }
 
@@ -2149,9 +2513,15 @@ func (o *EnclosuresResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetStatusNumeric() int32 {
+	if o == nil || IsNil(o.StatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.StatusNumeric
@@ -2159,7 +2529,11 @@ func (o *EnclosuresResourceInner) GetStatusNumeric() int64 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetStatusNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -2175,8 +2549,13 @@ func (o *EnclosuresResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
 func (o *EnclosuresResourceInner) SetStatusNumeric(v int64) {
+=======
+// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
+func (o *EnclosuresResourceInner) SetStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.StatusNumeric = &v
 }
 
@@ -2213,9 +2592,15 @@ func (o *EnclosuresResourceInner) SetType(v string) {
 }
 
 // GetTypeNumeric returns the TypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetTypeNumeric() int64 {
 	if o == nil || IsNil(o.TypeNumeric) {
 		var ret int64
+=======
+func (o *EnclosuresResourceInner) GetTypeNumeric() int32 {
+	if o == nil || IsNil(o.TypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TypeNumeric
@@ -2223,7 +2608,11 @@ func (o *EnclosuresResourceInner) GetTypeNumeric() int64 {
 
 // GetTypeNumericOk returns a tuple with the TypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *EnclosuresResourceInner) GetTypeNumericOk() (*int64, bool) {
+=======
+func (o *EnclosuresResourceInner) GetTypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TypeNumeric) {
 		return nil, false
 	}
@@ -2239,8 +2628,13 @@ func (o *EnclosuresResourceInner) HasTypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTypeNumeric gets a reference to the given int64 and assigns it to the TypeNumeric field.
 func (o *EnclosuresResourceInner) SetTypeNumeric(v int64) {
+=======
+// SetTypeNumeric gets a reference to the given int32 and assigns it to the TypeNumeric field.
+func (o *EnclosuresResourceInner) SetTypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TypeNumeric = &v
 }
 

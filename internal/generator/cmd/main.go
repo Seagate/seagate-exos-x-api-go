@@ -4,11 +4,17 @@ package main
 
 import (
 	"context"
+<<<<<<< HEAD
 	"fmt"
 	"os"
 
 	"github.com/Seagate/seagate-exos-x-api-go/internal/generator"
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
+=======
+	"os"
+
+	"github.com/Seagate/seagate-exos-x-api-go/internal/generator"
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 
 	"k8s.io/klog/v2"
@@ -20,6 +26,7 @@ const (
 
 func main() {
 
+<<<<<<< HEAD
 	config, err := common.InitConfig(os.Args)
 	if err != nil {
 		fmt.Printf("unable to init configuration")
@@ -35,6 +42,19 @@ func main() {
 	klog.EnableContextualLogging(true)
 	logger := klog.FromContext(ctx)
 
+=======
+	// Use contextual logging with a default context
+	ctx := context.Background()
+	klog.EnableContextualLogging(true)
+	logger := klog.FromContext(ctx)
+
+	config, err := common.InitConfig(os.Args)
+	if err != nil {
+		logger.Error(err, "unable to init configuration")
+		os.Exit(1)
+	}
+
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// Set verbosity level according to ...
 	var l klog.Level
 	l.Set(config.Verbosity)
@@ -63,11 +83,15 @@ func main() {
 	logger.V(0).Info(">> generate openapi spec...", "commands", len(yamlc.Commands), "exceptions", len(yamlc.Exceptions))
 
 	for _, command := range yamlc.Commands {
+<<<<<<< HEAD
 		err := s.AddCommand(ctx, config, &command, yamlc.Exceptions)
 		if err != nil {
 			logger.Error(err, "add command", "command", command)
 			os.Exit(3)
 		}
+=======
+		s.AddCommand(ctx, config, &command, yamlc.Exceptions)
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	}
 
 	// Save the specification to a file

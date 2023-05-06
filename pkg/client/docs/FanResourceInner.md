@@ -10,12 +10,17 @@ Name | Type | Description | Notes
 **ExtendedStatus** | Pointer to **string** | Extended status (bits) | [optional] 
 **FwRevision** | Pointer to **string** | Firmware version of the FRU | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **HealthNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**HealthNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **HwRevision** | Pointer to **string** | Hardware version of the FRU | [optional] 
 **Location** | Pointer to **string** |  | [optional] 
 **LocatorLed** | Pointer to **string** | Indicates whether the locator LED is on | [optional] 
+<<<<<<< HEAD
 **LocatorLedNumeric** | Pointer to **int64** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **PartNumber** | Pointer to **string** |  | [optional] 
@@ -27,6 +32,19 @@ Name | Type | Description | Notes
 **StatusNumeric** | Pointer to **int64** |  | [optional] 
 **StatusSes** | Pointer to **string** | SES Common status | [optional] 
 **StatusSesNumeric** | Pointer to **int64** | SES Common status( In numeric form ) | [optional] 
+=======
+**LocatorLedNumeric** | Pointer to **int32** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
+**Name** | Pointer to **string** |  | [optional] 
+**PartNumber** | Pointer to **string** |  | [optional] 
+**Position** | Pointer to **string** | Position of the component in the enclosure | [optional] 
+**PositionNumeric** | Pointer to **int32** | Position of the component in the enclosure( In numeric form ) | [optional] 
+**SerialNumber** | Pointer to **string** |  | [optional] 
+**Speed** | Pointer to **int32** |  | [optional] 
+**Status** | Pointer to **string** |  | [optional] 
+**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**StatusSes** | Pointer to **string** | SES Common status | [optional] 
+**StatusSesNumeric** | Pointer to **int32** | SES Common status( In numeric form ) | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Url** | Pointer to **string** | The resource URL | [optional] 
 
 ## Methods
@@ -200,20 +218,32 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetHealthNumeric() int64`
+=======
+`func (o *FanResourceInner) GetHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetHealthNumericOk() (*int64, bool)`
+=======
+`func (o *FanResourceInner) GetHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) SetHealthNumeric(v int64)`
+=======
+`func (o *FanResourceInner) SetHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -350,20 +380,32 @@ HasLocatorLed returns a boolean if a field has been set.
 
 ### GetLocatorLedNumeric
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetLocatorLedNumeric() int64`
+=======
+`func (o *FanResourceInner) GetLocatorLedNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLocatorLedNumeric returns the LocatorLedNumeric field if non-nil, zero value otherwise.
 
 ### GetLocatorLedNumericOk
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetLocatorLedNumericOk() (*int64, bool)`
+=======
+`func (o *FanResourceInner) GetLocatorLedNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocatorLedNumeric
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) SetLocatorLedNumeric(v int64)`
+=======
+`func (o *FanResourceInner) SetLocatorLedNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetLocatorLedNumeric sets LocatorLedNumeric field to given value.
 
@@ -450,20 +492,32 @@ HasPosition returns a boolean if a field has been set.
 
 ### GetPositionNumeric
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetPositionNumeric() int64`
+=======
+`func (o *FanResourceInner) GetPositionNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPositionNumeric returns the PositionNumeric field if non-nil, zero value otherwise.
 
 ### GetPositionNumericOk
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetPositionNumericOk() (*int64, bool)`
+=======
+`func (o *FanResourceInner) GetPositionNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPositionNumericOk returns a tuple with the PositionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPositionNumeric
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) SetPositionNumeric(v int64)`
+=======
+`func (o *FanResourceInner) SetPositionNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPositionNumeric sets PositionNumeric field to given value.
 
@@ -500,20 +554,32 @@ HasSerialNumber returns a boolean if a field has been set.
 
 ### GetSpeed
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetSpeed() int64`
+=======
+`func (o *FanResourceInner) GetSpeed() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSpeed returns the Speed field if non-nil, zero value otherwise.
 
 ### GetSpeedOk
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetSpeedOk() (*int64, bool)`
+=======
+`func (o *FanResourceInner) GetSpeedOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSpeedOk returns a tuple with the Speed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSpeed
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) SetSpeed(v int64)`
+=======
+`func (o *FanResourceInner) SetSpeed(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSpeed sets Speed field to given value.
 
@@ -550,20 +616,32 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetStatusNumeric() int64`
+=======
+`func (o *FanResourceInner) GetStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetStatusNumericOk() (*int64, bool)`
+=======
+`func (o *FanResourceInner) GetStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) SetStatusNumeric(v int64)`
+=======
+`func (o *FanResourceInner) SetStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStatusNumeric sets StatusNumeric field to given value.
 
@@ -600,20 +678,32 @@ HasStatusSes returns a boolean if a field has been set.
 
 ### GetStatusSesNumeric
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetStatusSesNumeric() int64`
+=======
+`func (o *FanResourceInner) GetStatusSesNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusSesNumeric returns the StatusSesNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusSesNumericOk
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) GetStatusSesNumericOk() (*int64, bool)`
+=======
+`func (o *FanResourceInner) GetStatusSesNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusSesNumericOk returns a tuple with the StatusSesNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusSesNumeric
 
+<<<<<<< HEAD
 `func (o *FanResourceInner) SetStatusSesNumeric(v int64)`
+=======
+`func (o *FanResourceInner) SetStatusSesNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStatusSesNumeric sets StatusSesNumeric field to given value.
 

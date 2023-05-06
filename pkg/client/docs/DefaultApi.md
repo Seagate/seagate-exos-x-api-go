@@ -12,7 +12,11 @@ Method | HTTP request | Description
 [**DeleteSnapshotNamesGet**](DefaultApi.md#DeleteSnapshotNamesGet) | **Get** /delete/snapshot/{namesOption} | 
 [**DeleteVolumesNamesGet**](DefaultApi.md#DeleteVolumesNamesGet) | **Get** /delete/volumes/{namesOption} | 
 [**ExpandVolumeSizeNameGet**](DefaultApi.md#ExpandVolumeSizeNameGet) | **Get** /expand/volume/size/{sizeOption}/{nameOption} | 
+<<<<<<< HEAD
 [**LoginGet**](DefaultApi.md#LoginGet) | **Get** /login | 
+=======
+[**LoginGetByHash**](DefaultApi.md#LoginGetByHash) | **Get** /login/{loginHash} | 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 [**MapVolumeAccessLunInitiatorNamesGet**](DefaultApi.md#MapVolumeAccessLunInitiatorNamesGet) | **Get** /map/volume/access/{accessOption}/lun/{lunOption}/initiator/{initiatorOption}/{namesOption} | 
 [**SchemaGet**](DefaultApi.md#SchemaGet) | **Get** /meta/{schemaId} | 
 [**SetInitiatorIdNicknameGet**](DefaultApi.md#SetInitiatorIdNicknameGet) | **Get** /set/initiator/id/{idOption}/nickname/{nicknameOption} | 
@@ -20,16 +24,24 @@ Method | HTTP request | Description
 [**ShowCacheParametersGet**](DefaultApi.md#ShowCacheParametersGet) | **Get** /show/cache-parameters | 
 [**ShowCertificateGet**](DefaultApi.md#ShowCertificateGet) | **Get** /show/certificate | 
 [**ShowControllersGet**](DefaultApi.md#ShowControllersGet) | **Get** /show/controllers | 
+<<<<<<< HEAD
 [**ShowDiskGroupsGet**](DefaultApi.md#ShowDiskGroupsGet) | **Get** /show/disk-groups | 
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 [**ShowDisksGet**](DefaultApi.md#ShowDisksGet) | **Get** /show/disks | 
 [**ShowEnclosuresGet**](DefaultApi.md#ShowEnclosuresGet) | **Get** /show/enclosures | 
 [**ShowFansGet**](DefaultApi.md#ShowFansGet) | **Get** /show/fans | 
 [**ShowHostGroupsGet**](DefaultApi.md#ShowHostGroupsGet) | **Get** /show/host-groups | 
 [**ShowInitiatorNamesGet**](DefaultApi.md#ShowInitiatorNamesGet) | **Get** /show/initiator/{namesOption} | 
 [**ShowInitiatorsGet**](DefaultApi.md#ShowInitiatorsGet) | **Get** /show/initiators | 
+<<<<<<< HEAD
 [**ShowMapsAllGet**](DefaultApi.md#ShowMapsAllGet) | **Get** /show/maps/all | 
 [**ShowMapsGet**](DefaultApi.md#ShowMapsGet) | **Get** /show/maps | 
 [**ShowMapsInitiatorNamesGet**](DefaultApi.md#ShowMapsInitiatorNamesGet) | **Get** /show/maps/initiator/{namesOption} | 
+=======
+[**ShowMapsGet**](DefaultApi.md#ShowMapsGet) | **Get** /show/maps | 
+[**ShowMapsInitiatorGet**](DefaultApi.md#ShowMapsInitiatorGet) | **Get** /show/maps/initiator | 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 [**ShowMapsNamesGet**](DefaultApi.md#ShowMapsNamesGet) | **Get** /show/maps/{namesOption} | 
 [**ShowPoolsGet**](DefaultApi.md#ShowPoolsGet) | **Get** /show/pools | 
 [**ShowPowerSuppliesGet**](DefaultApi.md#ShowPowerSuppliesGet) | **Get** /show/power-supplies | 
@@ -109,7 +121,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -182,7 +198,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -196,7 +216,11 @@ Name | Type | Description  | Notes
 
 ## CreateVolumePoolSizeTierAffinityNameGet
 
+<<<<<<< HEAD
 > VolumesObject CreateVolumePoolSizeTierAffinityNameGet(ctx, poolOption, sizeOption, tierAffinityOption, nameOption).Execute()
+=======
+> StatusObject CreateVolumePoolSizeTierAffinityNameGet(ctx, poolOption, sizeOption, tierAffinityOption, nameOption).Execute()
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 
 
@@ -227,7 +251,11 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateVolumePoolSizeTierAffinityNameGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+<<<<<<< HEAD
     // response from `CreateVolumePoolSizeTierAffinityNameGet`: VolumesObject
+=======
+    // response from `CreateVolumePoolSizeTierAffinityNameGet`: StatusObject
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateVolumePoolSizeTierAffinityNameGet`: %v\n", resp)
 }
 ```
@@ -257,11 +285,19 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+<<<<<<< HEAD
 [**VolumesObject**](VolumesObject.md)
 
 ### Authorization
 
 [basicAuth](../README.md#basicAuth)
+=======
+[**StatusObject**](StatusObject.md)
+
+### Authorization
+
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -331,7 +367,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -401,7 +441,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -471,7 +515,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -541,7 +589,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -614,7 +666,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -626,9 +682,15 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+<<<<<<< HEAD
 ## LoginGet
 
 > StatusObject LoginGet(ctx).Execute()
+=======
+## LoginGetByHash
+
+> StatusObject LoginGetByHash(ctx, loginHash).Execute()
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 
 
@@ -647,6 +709,7 @@ import (
 )
 
 func main() {
+<<<<<<< HEAD
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -657,16 +720,45 @@ func main() {
     }
     // response from `LoginGet`: StatusObject
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.LoginGet`: %v\n", resp)
+=======
+    loginHash := "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824" // string | A SHA256 hash of the 'username_password' string
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.LoginGetByHash(context.Background(), loginHash).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.LoginGetByHash``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `LoginGetByHash`: StatusObject
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.LoginGetByHash`: %v\n", resp)
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 }
 ```
 
 ### Path Parameters
 
+<<<<<<< HEAD
 This endpoint does not need any parameter.
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiLoginGetRequest struct via the builder pattern
+=======
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**loginHash** | **string** | A SHA256 hash of the &#39;username_password&#39; string | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiLoginGetByHashRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 
 ### Return type
@@ -675,7 +767,11 @@ Other parameters are passed through a pointer to a apiLoginGetRequest struct via
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -754,7 +850,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -824,7 +924,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -897,7 +1001,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -958,7 +1066,11 @@ Other parameters are passed through a pointer to a apiShowAdvancedSettingsGetReq
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1019,7 +1131,11 @@ Other parameters are passed through a pointer to a apiShowCacheParametersGetRequ
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1080,7 +1196,11 @@ Other parameters are passed through a pointer to a apiShowCertificateGetRequest 
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1141,6 +1261,7 @@ Other parameters are passed through a pointer to a apiShowControllersGetRequest 
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
@@ -1203,6 +1324,9 @@ Other parameters are passed through a pointer to a apiShowDiskGroupsGetRequest s
 ### Authorization
 
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1263,7 +1387,11 @@ Other parameters are passed through a pointer to a apiShowDisksGetRequest struct
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1324,7 +1452,11 @@ Other parameters are passed through a pointer to a apiShowEnclosuresGetRequest s
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1385,7 +1517,11 @@ Other parameters are passed through a pointer to a apiShowFansGetRequest struct 
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1446,7 +1582,11 @@ Other parameters are passed through a pointer to a apiShowHostGroupsGetRequest s
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1516,7 +1656,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1577,6 +1721,7 @@ Other parameters are passed through a pointer to a apiShowInitiatorsGetRequest s
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
@@ -1639,6 +1784,9 @@ Other parameters are passed through a pointer to a apiShowMapsAllGetRequest stru
 ### Authorization
 
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1652,7 +1800,11 @@ Other parameters are passed through a pointer to a apiShowMapsAllGetRequest stru
 
 ## ShowMapsGet
 
+<<<<<<< HEAD
 > VolumeViewObject ShowMapsGet(ctx).Execute()
+=======
+> VolumeGroupViewObject ShowMapsGet(ctx).Execute()
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 
 
@@ -1679,7 +1831,11 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+<<<<<<< HEAD
     // response from `ShowMapsGet`: VolumeViewObject
+=======
+    // response from `ShowMapsGet`: VolumeGroupViewObject
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsGet`: %v\n", resp)
 }
 ```
@@ -1695,11 +1851,19 @@ Other parameters are passed through a pointer to a apiShowMapsGetRequest struct 
 
 ### Return type
 
+<<<<<<< HEAD
 [**VolumeViewObject**](VolumeViewObject.md)
 
 ### Authorization
 
 [basicAuth](../README.md#basicAuth)
+=======
+[**VolumeGroupViewObject**](VolumeGroupViewObject.md)
+
+### Authorization
+
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1711,9 +1875,15 @@ Other parameters are passed through a pointer to a apiShowMapsGetRequest struct 
 [[Back to README]](../README.md)
 
 
+<<<<<<< HEAD
 ## ShowMapsInitiatorNamesGet
 
 > HostsViewObject ShowMapsInitiatorNamesGet(ctx, namesOption).Execute()
+=======
+## ShowMapsInitiatorGet
+
+> InitiatorViewObject ShowMapsInitiatorGet(ctx).Execute()
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 
 
@@ -1732,6 +1902,7 @@ import (
 )
 
 func main() {
+<<<<<<< HEAD
     namesOption := "namesOption_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
@@ -1743,11 +1914,24 @@ func main() {
     }
     // response from `ShowMapsInitiatorNamesGet`: HostsViewObject
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsInitiatorNamesGet`: %v\n", resp)
+=======
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.ShowMapsInitiatorGet(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsInitiatorGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ShowMapsInitiatorGet`: InitiatorViewObject
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsInitiatorGet`: %v\n", resp)
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 }
 ```
 
 ### Path Parameters
 
+<<<<<<< HEAD
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1761,15 +1945,30 @@ Other parameters are passed through a pointer to a apiShowMapsInitiatorNamesGetR
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+=======
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiShowMapsInitiatorGetRequest struct via the builder pattern
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 
 ### Return type
 
+<<<<<<< HEAD
 [**HostsViewObject**](HostsViewObject.md)
 
 ### Authorization
 
 [basicAuth](../README.md#basicAuth)
+=======
+[**InitiatorViewObject**](InitiatorViewObject.md)
+
+### Authorization
+
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1783,7 +1982,11 @@ Name | Type | Description  | Notes
 
 ## ShowMapsNamesGet
 
+<<<<<<< HEAD
 > VolumeViewObject ShowMapsNamesGet(ctx, namesOption).Execute()
+=======
+> VolumeGroupViewObject ShowMapsNamesGet(ctx, namesOption).Execute()
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 
 
@@ -1811,7 +2014,11 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsNamesGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+<<<<<<< HEAD
     // response from `ShowMapsNamesGet`: VolumeViewObject
+=======
+    // response from `ShowMapsNamesGet`: VolumeGroupViewObject
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsNamesGet`: %v\n", resp)
 }
 ```
@@ -1835,11 +2042,19 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+<<<<<<< HEAD
 [**VolumeViewObject**](VolumeViewObject.md)
 
 ### Authorization
 
 [basicAuth](../README.md#basicAuth)
+=======
+[**VolumeGroupViewObject**](VolumeGroupViewObject.md)
+
+### Authorization
+
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1900,7 +2115,11 @@ Other parameters are passed through a pointer to a apiShowPoolsGetRequest struct
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -1961,7 +2180,11 @@ Other parameters are passed through a pointer to a apiShowPowerSuppliesGetReques
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -2022,7 +2245,11 @@ Other parameters are passed through a pointer to a apiShowSnapshotsGetRequest st
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -2092,7 +2319,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -2162,7 +2393,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -2223,7 +2458,11 @@ Other parameters are passed through a pointer to a apiShowSystemGetRequest struc
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -2284,7 +2523,11 @@ Other parameters are passed through a pointer to a apiShowVersionsDetailGetReque
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -2345,7 +2588,11 @@ Other parameters are passed through a pointer to a apiShowVersionsGetRequest str
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -2415,7 +2662,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -2488,7 +2739,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 
@@ -2558,7 +2813,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
+<<<<<<< HEAD
 [basicAuth](../README.md#basicAuth)
+=======
+No authorization required
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ### HTTP request headers
 

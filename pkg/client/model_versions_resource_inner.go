@@ -21,27 +21,47 @@ var _ MappedNullable = &VersionsResourceInner{}
 type VersionsResourceInner struct {
 	ObjectName          *string `json:"object-name,omitempty"`
 	Meta                *string `json:"meta,omitempty"`
+<<<<<<< HEAD
 	BackplaneType       *int64  `json:"backplane-type,omitempty"`
 	BuildDate           *string `json:"build-date,omitempty"`
 	BundleBaseVersion   *string `json:"bundle-base-version,omitempty"`
 	BundleStatus        *string `json:"bundle-status,omitempty"`
 	BundleStatusNumeric *int64  `json:"bundle-status-numeric,omitempty"`
+=======
+	BackplaneType       *int32  `json:"backplane-type,omitempty"`
+	BuildDate           *string `json:"build-date,omitempty"`
+	BundleBaseVersion   *string `json:"bundle-base-version,omitempty"`
+	BundleStatus        *string `json:"bundle-status,omitempty"`
+	BundleStatusNumeric *int32  `json:"bundle-status-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	BundleVersion       *string `json:"bundle-version,omitempty"`
 	BundleVersionOnly   *string `json:"bundle-version-only,omitempty"`
 	CapiVersion         *string `json:"capi-version,omitempty"`
 	// Customization Toolkit (CTK) Version
 	CtkVersion          *string `json:"ctk-version,omitempty"`
+<<<<<<< HEAD
 	DiskChannelRevision *int64  `json:"disk-channel_revision,omitempty"`
+=======
+	DiskChannelRevision *int32  `json:"disk-channel_revision,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// The Expander Controller firmware version
 	EcFw *string `json:"ec-fw,omitempty"`
 	// Default hardware platform brand of the firmware
 	FwDefaultPlatformBrand *string `json:"fw-default-platform-brand,omitempty"`
 	// Default hardware platform brand of the firmware( In numeric form )
+<<<<<<< HEAD
 	FwDefaultPlatformBrandNumeric *int64  `json:"fw-default-platform-brand-numeric,omitempty"`
 	GemVersion                    *string `json:"gem-version,omitempty"`
 	HimModel                      *string `json:"him-model,omitempty"`
 	HimRev                        *string `json:"him-rev,omitempty"`
 	HostChannelRevision           *int64  `json:"host-channel_revision,omitempty"`
+=======
+	FwDefaultPlatformBrandNumeric *int32  `json:"fw-default-platform-brand-numeric,omitempty"`
+	GemVersion                    *string `json:"gem-version,omitempty"`
+	HimModel                      *string `json:"him-model,omitempty"`
+	HimRev                        *string `json:"him-rev,omitempty"`
+	HostChannelRevision           *int32  `json:"host-channel_revision,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// The main hardware version of the controller
 	HwRev *string `json:"hw-rev,omitempty"`
 	// The Management Controller main ('app') baselevel firmware version
@@ -161,9 +181,15 @@ func (o *VersionsResourceInner) SetMeta(v string) {
 }
 
 // GetBackplaneType returns the BackplaneType field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *VersionsResourceInner) GetBackplaneType() int64 {
 	if o == nil || IsNil(o.BackplaneType) {
 		var ret int64
+=======
+func (o *VersionsResourceInner) GetBackplaneType() int32 {
+	if o == nil || IsNil(o.BackplaneType) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.BackplaneType
@@ -171,7 +197,11 @@ func (o *VersionsResourceInner) GetBackplaneType() int64 {
 
 // GetBackplaneTypeOk returns a tuple with the BackplaneType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *VersionsResourceInner) GetBackplaneTypeOk() (*int64, bool) {
+=======
+func (o *VersionsResourceInner) GetBackplaneTypeOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.BackplaneType) {
 		return nil, false
 	}
@@ -187,8 +217,13 @@ func (o *VersionsResourceInner) HasBackplaneType() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBackplaneType gets a reference to the given int64 and assigns it to the BackplaneType field.
 func (o *VersionsResourceInner) SetBackplaneType(v int64) {
+=======
+// SetBackplaneType gets a reference to the given int32 and assigns it to the BackplaneType field.
+func (o *VersionsResourceInner) SetBackplaneType(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.BackplaneType = &v
 }
 
@@ -289,9 +324,15 @@ func (o *VersionsResourceInner) SetBundleStatus(v string) {
 }
 
 // GetBundleStatusNumeric returns the BundleStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *VersionsResourceInner) GetBundleStatusNumeric() int64 {
 	if o == nil || IsNil(o.BundleStatusNumeric) {
 		var ret int64
+=======
+func (o *VersionsResourceInner) GetBundleStatusNumeric() int32 {
+	if o == nil || IsNil(o.BundleStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.BundleStatusNumeric
@@ -299,7 +340,11 @@ func (o *VersionsResourceInner) GetBundleStatusNumeric() int64 {
 
 // GetBundleStatusNumericOk returns a tuple with the BundleStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *VersionsResourceInner) GetBundleStatusNumericOk() (*int64, bool) {
+=======
+func (o *VersionsResourceInner) GetBundleStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.BundleStatusNumeric) {
 		return nil, false
 	}
@@ -315,8 +360,13 @@ func (o *VersionsResourceInner) HasBundleStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBundleStatusNumeric gets a reference to the given int64 and assigns it to the BundleStatusNumeric field.
 func (o *VersionsResourceInner) SetBundleStatusNumeric(v int64) {
+=======
+// SetBundleStatusNumeric gets a reference to the given int32 and assigns it to the BundleStatusNumeric field.
+func (o *VersionsResourceInner) SetBundleStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.BundleStatusNumeric = &v
 }
 
@@ -449,9 +499,15 @@ func (o *VersionsResourceInner) SetCtkVersion(v string) {
 }
 
 // GetDiskChannelRevision returns the DiskChannelRevision field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *VersionsResourceInner) GetDiskChannelRevision() int64 {
 	if o == nil || IsNil(o.DiskChannelRevision) {
 		var ret int64
+=======
+func (o *VersionsResourceInner) GetDiskChannelRevision() int32 {
+	if o == nil || IsNil(o.DiskChannelRevision) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DiskChannelRevision
@@ -459,7 +515,11 @@ func (o *VersionsResourceInner) GetDiskChannelRevision() int64 {
 
 // GetDiskChannelRevisionOk returns a tuple with the DiskChannelRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *VersionsResourceInner) GetDiskChannelRevisionOk() (*int64, bool) {
+=======
+func (o *VersionsResourceInner) GetDiskChannelRevisionOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DiskChannelRevision) {
 		return nil, false
 	}
@@ -475,8 +535,13 @@ func (o *VersionsResourceInner) HasDiskChannelRevision() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskChannelRevision gets a reference to the given int64 and assigns it to the DiskChannelRevision field.
 func (o *VersionsResourceInner) SetDiskChannelRevision(v int64) {
+=======
+// SetDiskChannelRevision gets a reference to the given int32 and assigns it to the DiskChannelRevision field.
+func (o *VersionsResourceInner) SetDiskChannelRevision(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DiskChannelRevision = &v
 }
 
@@ -545,9 +610,15 @@ func (o *VersionsResourceInner) SetFwDefaultPlatformBrand(v string) {
 }
 
 // GetFwDefaultPlatformBrandNumeric returns the FwDefaultPlatformBrandNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumeric() int64 {
 	if o == nil || IsNil(o.FwDefaultPlatformBrandNumeric) {
 		var ret int64
+=======
+func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumeric() int32 {
+	if o == nil || IsNil(o.FwDefaultPlatformBrandNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FwDefaultPlatformBrandNumeric
@@ -555,7 +626,11 @@ func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumeric() int64 {
 
 // GetFwDefaultPlatformBrandNumericOk returns a tuple with the FwDefaultPlatformBrandNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumericOk() (*int64, bool) {
+=======
+func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FwDefaultPlatformBrandNumeric) {
 		return nil, false
 	}
@@ -571,8 +646,13 @@ func (o *VersionsResourceInner) HasFwDefaultPlatformBrandNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFwDefaultPlatformBrandNumeric gets a reference to the given int64 and assigns it to the FwDefaultPlatformBrandNumeric field.
 func (o *VersionsResourceInner) SetFwDefaultPlatformBrandNumeric(v int64) {
+=======
+// SetFwDefaultPlatformBrandNumeric gets a reference to the given int32 and assigns it to the FwDefaultPlatformBrandNumeric field.
+func (o *VersionsResourceInner) SetFwDefaultPlatformBrandNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FwDefaultPlatformBrandNumeric = &v
 }
 
@@ -673,9 +753,15 @@ func (o *VersionsResourceInner) SetHimRev(v string) {
 }
 
 // GetHostChannelRevision returns the HostChannelRevision field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *VersionsResourceInner) GetHostChannelRevision() int64 {
 	if o == nil || IsNil(o.HostChannelRevision) {
 		var ret int64
+=======
+func (o *VersionsResourceInner) GetHostChannelRevision() int32 {
+	if o == nil || IsNil(o.HostChannelRevision) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HostChannelRevision
@@ -683,7 +769,11 @@ func (o *VersionsResourceInner) GetHostChannelRevision() int64 {
 
 // GetHostChannelRevisionOk returns a tuple with the HostChannelRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *VersionsResourceInner) GetHostChannelRevisionOk() (*int64, bool) {
+=======
+func (o *VersionsResourceInner) GetHostChannelRevisionOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HostChannelRevision) {
 		return nil, false
 	}
@@ -699,8 +789,13 @@ func (o *VersionsResourceInner) HasHostChannelRevision() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHostChannelRevision gets a reference to the given int64 and assigns it to the HostChannelRevision field.
 func (o *VersionsResourceInner) SetHostChannelRevision(v int64) {
+=======
+// SetHostChannelRevision gets a reference to the given int32 and assigns it to the HostChannelRevision field.
+func (o *VersionsResourceInner) SetHostChannelRevision(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HostChannelRevision = &v
 }
 

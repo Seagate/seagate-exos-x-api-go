@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Meta** | Pointer to **string** |  | [optional] 
 **ControllerASerialNumber** | Pointer to **string** |  | [optional] 
 **ControllerAStatus** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **ControllerAStatusNumeric** | Pointer to **int64** |  | [optional] 
 **ControllerBSerialNumber** | Pointer to **string** |  | [optional] 
 **ControllerBStatus** | Pointer to **string** |  | [optional] 
@@ -26,6 +27,26 @@ Name | Type | Description | Notes
 **RedundancyStatusNumeric** | Pointer to **int64** | Current operational state of the controllers( In numeric form ) | [optional] 
 **SystemReady** | Pointer to **string** |  | [optional] 
 **SystemReadyNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**ControllerAStatusNumeric** | Pointer to **int32** |  | [optional] 
+**ControllerBSerialNumber** | Pointer to **string** |  | [optional] 
+**ControllerBStatus** | Pointer to **string** |  | [optional] 
+**ControllerBStatusNumeric** | Pointer to **int32** |  | [optional] 
+**LocalReady** | Pointer to **string** |  | [optional] 
+**LocalReadyNumeric** | Pointer to **int32** |  | [optional] 
+**LocalReason** | Pointer to **string** |  | [optional] 
+**OtherMCStatus** | Pointer to **string** | Identifies the availability of the partner MC | [optional] 
+**OtherMCStatusNumeric** | Pointer to **int32** | Identifies the availability of the partner MC( In numeric form ) | [optional] 
+**OtherReady** | Pointer to **string** |  | [optional] 
+**OtherReadyNumeric** | Pointer to **int32** |  | [optional] 
+**OtherReason** | Pointer to **string** |  | [optional] 
+**RedundancyMode** | Pointer to **string** | Mode in which the controllers are operating | [optional] 
+**RedundancyModeNumeric** | Pointer to **int32** | Mode in which the controllers are operating( In numeric form ) | [optional] 
+**RedundancyStatus** | Pointer to **string** | Current operational state of the controllers | [optional] 
+**RedundancyStatusNumeric** | Pointer to **int32** | Current operational state of the controllers( In numeric form ) | [optional] 
+**SystemReady** | Pointer to **string** |  | [optional] 
+**SystemReadyNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ## Methods
 
@@ -148,20 +169,32 @@ HasControllerAStatus returns a boolean if a field has been set.
 
 ### GetControllerAStatusNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetControllerAStatusNumeric() int64`
+=======
+`func (o *RedundancyResourceInner) GetControllerAStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerAStatusNumeric returns the ControllerAStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerAStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetControllerAStatusNumericOk() (*int64, bool)`
+=======
+`func (o *RedundancyResourceInner) GetControllerAStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerAStatusNumericOk returns a tuple with the ControllerAStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerAStatusNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) SetControllerAStatusNumeric(v int64)`
+=======
+`func (o *RedundancyResourceInner) SetControllerAStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetControllerAStatusNumeric sets ControllerAStatusNumeric field to given value.
 
@@ -223,20 +256,32 @@ HasControllerBStatus returns a boolean if a field has been set.
 
 ### GetControllerBStatusNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetControllerBStatusNumeric() int64`
+=======
+`func (o *RedundancyResourceInner) GetControllerBStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerBStatusNumeric returns the ControllerBStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerBStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetControllerBStatusNumericOk() (*int64, bool)`
+=======
+`func (o *RedundancyResourceInner) GetControllerBStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerBStatusNumericOk returns a tuple with the ControllerBStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerBStatusNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) SetControllerBStatusNumeric(v int64)`
+=======
+`func (o *RedundancyResourceInner) SetControllerBStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetControllerBStatusNumeric sets ControllerBStatusNumeric field to given value.
 
@@ -273,20 +318,32 @@ HasLocalReady returns a boolean if a field has been set.
 
 ### GetLocalReadyNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetLocalReadyNumeric() int64`
+=======
+`func (o *RedundancyResourceInner) GetLocalReadyNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLocalReadyNumeric returns the LocalReadyNumeric field if non-nil, zero value otherwise.
 
 ### GetLocalReadyNumericOk
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetLocalReadyNumericOk() (*int64, bool)`
+=======
+`func (o *RedundancyResourceInner) GetLocalReadyNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLocalReadyNumericOk returns a tuple with the LocalReadyNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocalReadyNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) SetLocalReadyNumeric(v int64)`
+=======
+`func (o *RedundancyResourceInner) SetLocalReadyNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetLocalReadyNumeric sets LocalReadyNumeric field to given value.
 
@@ -348,20 +405,32 @@ HasOtherMCStatus returns a boolean if a field has been set.
 
 ### GetOtherMCStatusNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetOtherMCStatusNumeric() int64`
+=======
+`func (o *RedundancyResourceInner) GetOtherMCStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOtherMCStatusNumeric returns the OtherMCStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetOtherMCStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetOtherMCStatusNumericOk() (*int64, bool)`
+=======
+`func (o *RedundancyResourceInner) GetOtherMCStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOtherMCStatusNumericOk returns a tuple with the OtherMCStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOtherMCStatusNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) SetOtherMCStatusNumeric(v int64)`
+=======
+`func (o *RedundancyResourceInner) SetOtherMCStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetOtherMCStatusNumeric sets OtherMCStatusNumeric field to given value.
 
@@ -398,20 +467,32 @@ HasOtherReady returns a boolean if a field has been set.
 
 ### GetOtherReadyNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetOtherReadyNumeric() int64`
+=======
+`func (o *RedundancyResourceInner) GetOtherReadyNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOtherReadyNumeric returns the OtherReadyNumeric field if non-nil, zero value otherwise.
 
 ### GetOtherReadyNumericOk
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetOtherReadyNumericOk() (*int64, bool)`
+=======
+`func (o *RedundancyResourceInner) GetOtherReadyNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOtherReadyNumericOk returns a tuple with the OtherReadyNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOtherReadyNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) SetOtherReadyNumeric(v int64)`
+=======
+`func (o *RedundancyResourceInner) SetOtherReadyNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetOtherReadyNumeric sets OtherReadyNumeric field to given value.
 
@@ -473,20 +554,32 @@ HasRedundancyMode returns a boolean if a field has been set.
 
 ### GetRedundancyModeNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetRedundancyModeNumeric() int64`
+=======
+`func (o *RedundancyResourceInner) GetRedundancyModeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRedundancyModeNumeric returns the RedundancyModeNumeric field if non-nil, zero value otherwise.
 
 ### GetRedundancyModeNumericOk
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetRedundancyModeNumericOk() (*int64, bool)`
+=======
+`func (o *RedundancyResourceInner) GetRedundancyModeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRedundancyModeNumericOk returns a tuple with the RedundancyModeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRedundancyModeNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) SetRedundancyModeNumeric(v int64)`
+=======
+`func (o *RedundancyResourceInner) SetRedundancyModeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRedundancyModeNumeric sets RedundancyModeNumeric field to given value.
 
@@ -523,20 +616,32 @@ HasRedundancyStatus returns a boolean if a field has been set.
 
 ### GetRedundancyStatusNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetRedundancyStatusNumeric() int64`
+=======
+`func (o *RedundancyResourceInner) GetRedundancyStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRedundancyStatusNumeric returns the RedundancyStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetRedundancyStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetRedundancyStatusNumericOk() (*int64, bool)`
+=======
+`func (o *RedundancyResourceInner) GetRedundancyStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRedundancyStatusNumericOk returns a tuple with the RedundancyStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRedundancyStatusNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) SetRedundancyStatusNumeric(v int64)`
+=======
+`func (o *RedundancyResourceInner) SetRedundancyStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRedundancyStatusNumeric sets RedundancyStatusNumeric field to given value.
 
@@ -573,20 +678,32 @@ HasSystemReady returns a boolean if a field has been set.
 
 ### GetSystemReadyNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetSystemReadyNumeric() int64`
+=======
+`func (o *RedundancyResourceInner) GetSystemReadyNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSystemReadyNumeric returns the SystemReadyNumeric field if non-nil, zero value otherwise.
 
 ### GetSystemReadyNumericOk
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) GetSystemReadyNumericOk() (*int64, bool)`
+=======
+`func (o *RedundancyResourceInner) GetSystemReadyNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSystemReadyNumericOk returns a tuple with the SystemReadyNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSystemReadyNumeric
 
+<<<<<<< HEAD
 `func (o *RedundancyResourceInner) SetSystemReadyNumeric(v int64)`
+=======
+`func (o *RedundancyResourceInner) SetSystemReadyNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSystemReadyNumeric sets SystemReadyNumeric field to given value.
 

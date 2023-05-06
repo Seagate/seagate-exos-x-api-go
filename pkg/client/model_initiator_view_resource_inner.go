@@ -23,7 +23,11 @@ type InitiatorViewResourceInner struct {
 	Meta               *string                   `json:"meta,omitempty"`
 	HbaNickname        *string                   `json:"hba-nickname,omitempty"`
 	HostProfile        *string                   `json:"host-profile,omitempty"`
+<<<<<<< HEAD
 	HostProfileNumeric *int64                    `json:"host-profile-numeric,omitempty"`
+=======
+	HostProfileNumeric *int32                    `json:"host-profile-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Id                 *string                   `json:"id,omitempty"`
 	VolumeView         []VolumeViewResourceInner `json:"volume-view,omitempty"`
 }
@@ -174,9 +178,15 @@ func (o *InitiatorViewResourceInner) SetHostProfile(v string) {
 }
 
 // GetHostProfileNumeric returns the HostProfileNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *InitiatorViewResourceInner) GetHostProfileNumeric() int64 {
 	if o == nil || IsNil(o.HostProfileNumeric) {
 		var ret int64
+=======
+func (o *InitiatorViewResourceInner) GetHostProfileNumeric() int32 {
+	if o == nil || IsNil(o.HostProfileNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HostProfileNumeric
@@ -184,7 +194,11 @@ func (o *InitiatorViewResourceInner) GetHostProfileNumeric() int64 {
 
 // GetHostProfileNumericOk returns a tuple with the HostProfileNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *InitiatorViewResourceInner) GetHostProfileNumericOk() (*int64, bool) {
+=======
+func (o *InitiatorViewResourceInner) GetHostProfileNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HostProfileNumeric) {
 		return nil, false
 	}
@@ -200,8 +214,13 @@ func (o *InitiatorViewResourceInner) HasHostProfileNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHostProfileNumeric gets a reference to the given int64 and assigns it to the HostProfileNumeric field.
 func (o *InitiatorViewResourceInner) SetHostProfileNumeric(v int64) {
+=======
+// SetHostProfileNumeric gets a reference to the given int32 and assigns it to the HostProfileNumeric field.
+func (o *InitiatorViewResourceInner) SetHostProfileNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HostProfileNumeric = &v
 }
 

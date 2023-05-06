@@ -6,15 +6,24 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **BackplaneType** | Pointer to **int64** |  | [optional] 
 **BuildDate** | Pointer to **string** |  | [optional] 
 **BundleBaseVersion** | Pointer to **string** |  | [optional] 
 **BundleStatus** | Pointer to **string** |  | [optional] 
 **BundleStatusNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**BackplaneType** | Pointer to **int32** |  | [optional] 
+**BuildDate** | Pointer to **string** |  | [optional] 
+**BundleBaseVersion** | Pointer to **string** |  | [optional] 
+**BundleStatus** | Pointer to **string** |  | [optional] 
+**BundleStatusNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **BundleVersion** | Pointer to **string** |  | [optional] 
 **BundleVersionOnly** | Pointer to **string** |  | [optional] 
 **CapiVersion** | Pointer to **string** |  | [optional] 
 **CtkVersion** | Pointer to **string** | Customization Toolkit (CTK) Version | [optional] 
+<<<<<<< HEAD
 **DiskChannelRevision** | Pointer to **int64** |  | [optional] 
 **EcFw** | Pointer to **string** | The Expander Controller firmware version | [optional] 
 **FwDefaultPlatformBrand** | Pointer to **string** | Default hardware platform brand of the firmware | [optional] 
@@ -23,6 +32,16 @@ Name | Type | Description | Notes
 **HimModel** | Pointer to **string** |  | [optional] 
 **HimRev** | Pointer to **string** |  | [optional] 
 **HostChannelRevision** | Pointer to **int64** |  | [optional] 
+=======
+**DiskChannelRevision** | Pointer to **int32** |  | [optional] 
+**EcFw** | Pointer to **string** | The Expander Controller firmware version | [optional] 
+**FwDefaultPlatformBrand** | Pointer to **string** | Default hardware platform brand of the firmware | [optional] 
+**FwDefaultPlatformBrandNumeric** | Pointer to **int32** | Default hardware platform brand of the firmware( In numeric form ) | [optional] 
+**GemVersion** | Pointer to **string** |  | [optional] 
+**HimModel** | Pointer to **string** |  | [optional] 
+**HimRev** | Pointer to **string** |  | [optional] 
+**HostChannelRevision** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **HwRev** | Pointer to **string** | The main hardware version of the controller | [optional] 
 **McBaseFw** | Pointer to **string** | The Management Controller main (&#39;app&#39;) baselevel firmware version | [optional] 
 **McFw** | Pointer to **string** | The Management Controller main (&#39;app&#39;) firmware version | [optional] 
@@ -116,20 +135,32 @@ HasMeta returns a boolean if a field has been set.
 
 ### GetBackplaneType
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) GetBackplaneType() int64`
+=======
+`func (o *VersionsResourceInner) GetBackplaneType() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBackplaneType returns the BackplaneType field if non-nil, zero value otherwise.
 
 ### GetBackplaneTypeOk
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) GetBackplaneTypeOk() (*int64, bool)`
+=======
+`func (o *VersionsResourceInner) GetBackplaneTypeOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBackplaneTypeOk returns a tuple with the BackplaneType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBackplaneType
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) SetBackplaneType(v int64)`
+=======
+`func (o *VersionsResourceInner) SetBackplaneType(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetBackplaneType sets BackplaneType field to given value.
 
@@ -216,20 +247,32 @@ HasBundleStatus returns a boolean if a field has been set.
 
 ### GetBundleStatusNumeric
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) GetBundleStatusNumeric() int64`
+=======
+`func (o *VersionsResourceInner) GetBundleStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBundleStatusNumeric returns the BundleStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetBundleStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) GetBundleStatusNumericOk() (*int64, bool)`
+=======
+`func (o *VersionsResourceInner) GetBundleStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBundleStatusNumericOk returns a tuple with the BundleStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBundleStatusNumeric
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) SetBundleStatusNumeric(v int64)`
+=======
+`func (o *VersionsResourceInner) SetBundleStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetBundleStatusNumeric sets BundleStatusNumeric field to given value.
 
@@ -341,20 +384,32 @@ HasCtkVersion returns a boolean if a field has been set.
 
 ### GetDiskChannelRevision
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) GetDiskChannelRevision() int64`
+=======
+`func (o *VersionsResourceInner) GetDiskChannelRevision() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDiskChannelRevision returns the DiskChannelRevision field if non-nil, zero value otherwise.
 
 ### GetDiskChannelRevisionOk
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) GetDiskChannelRevisionOk() (*int64, bool)`
+=======
+`func (o *VersionsResourceInner) GetDiskChannelRevisionOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDiskChannelRevisionOk returns a tuple with the DiskChannelRevision field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskChannelRevision
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) SetDiskChannelRevision(v int64)`
+=======
+`func (o *VersionsResourceInner) SetDiskChannelRevision(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDiskChannelRevision sets DiskChannelRevision field to given value.
 
@@ -416,20 +471,32 @@ HasFwDefaultPlatformBrand returns a boolean if a field has been set.
 
 ### GetFwDefaultPlatformBrandNumeric
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumeric() int64`
+=======
+`func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFwDefaultPlatformBrandNumeric returns the FwDefaultPlatformBrandNumeric field if non-nil, zero value otherwise.
 
 ### GetFwDefaultPlatformBrandNumericOk
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumericOk() (*int64, bool)`
+=======
+`func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFwDefaultPlatformBrandNumericOk returns a tuple with the FwDefaultPlatformBrandNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFwDefaultPlatformBrandNumeric
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) SetFwDefaultPlatformBrandNumeric(v int64)`
+=======
+`func (o *VersionsResourceInner) SetFwDefaultPlatformBrandNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFwDefaultPlatformBrandNumeric sets FwDefaultPlatformBrandNumeric field to given value.
 
@@ -516,20 +583,32 @@ HasHimRev returns a boolean if a field has been set.
 
 ### GetHostChannelRevision
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) GetHostChannelRevision() int64`
+=======
+`func (o *VersionsResourceInner) GetHostChannelRevision() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostChannelRevision returns the HostChannelRevision field if non-nil, zero value otherwise.
 
 ### GetHostChannelRevisionOk
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) GetHostChannelRevisionOk() (*int64, bool)`
+=======
+`func (o *VersionsResourceInner) GetHostChannelRevisionOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostChannelRevisionOk returns a tuple with the HostChannelRevision field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostChannelRevision
 
+<<<<<<< HEAD
 `func (o *VersionsResourceInner) SetHostChannelRevision(v int64)`
+=======
+`func (o *VersionsResourceInner) SetHostChannelRevision(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHostChannelRevision sets HostChannelRevision field to given value.
 

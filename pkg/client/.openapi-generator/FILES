@@ -1,4 +1,8 @@
 .gitignore
+<<<<<<< HEAD
+=======
+.openapi-generator-ignore
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 .travis.yml
 README.md
 api/openapi.yaml
@@ -15,7 +19,10 @@ docs/ControllerCacheParametersResourceInner.md
 docs/ControllersObject.md
 docs/ControllersResourceInner.md
 docs/DefaultApi.md
+<<<<<<< HEAD
 docs/DiskGroupsObject.md
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 docs/DiskGroupsResourceInner.md
 docs/DrivesObject.md
 docs/DrivesResourceInner.md
@@ -25,6 +32,7 @@ docs/ExpanderPortsResourceInner.md
 docs/ExpandersResourceInner.md
 docs/FanObject.md
 docs/FanResourceInner.md
+<<<<<<< HEAD
 docs/FcPortResourceInner.md
 docs/HostGroupObject.md
 docs/HostGroupResourceInner.md
@@ -35,6 +43,15 @@ docs/HostsViewResourceInner.md
 docs/InitiatorObject.md
 docs/InitiatorResourceInner.md
 docs/IscsiPortResourceInner.md
+=======
+docs/HostGroupObject.md
+docs/HostGroupResourceInner.md
+docs/HostResourceInner.md
+docs/InitiatorObject.md
+docs/InitiatorResourceInner.md
+docs/InitiatorViewObject.md
+docs/InitiatorViewResourceInner.md
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 docs/NetworkParametersResourceInner.md
 docs/PoolsObject.md
 docs/PoolsResourceInner.md
@@ -52,9 +69,15 @@ docs/SystemResourceInner.md
 docs/TiersResourceInner.md
 docs/VersionsObject.md
 docs/VersionsResourceInner.md
+<<<<<<< HEAD
 docs/VolumeGroupViewResourceInner.md
 docs/VolumeViewMappingsResourceInner.md
 docs/VolumeViewObject.md
+=======
+docs/VolumeGroupViewObject.md
+docs/VolumeGroupViewResourceInner.md
+docs/VolumeViewMappingsResourceInner.md
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 docs/VolumeViewResourceInner.md
 docs/VolumesObject.md
 docs/VolumesResourceInner.md
@@ -68,7 +91,10 @@ model_certificate_status_resource_inner.go
 model_controller_cache_parameters_resource_inner.go
 model_controllers_object.go
 model_controllers_resource_inner.go
+<<<<<<< HEAD
 model_disk_groups_object.go
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 model_disk_groups_resource_inner.go
 model_drives_object.go
 model_drives_resource_inner.go
@@ -78,6 +104,7 @@ model_expander_ports_resource_inner.go
 model_expanders_resource_inner.go
 model_fan_object.go
 model_fan_resource_inner.go
+<<<<<<< HEAD
 model_fc_port_resource_inner.go
 model_host_group_object.go
 model_host_group_resource_inner.go
@@ -88,6 +115,15 @@ model_hosts_view_resource_inner.go
 model_initiator_object.go
 model_initiator_resource_inner.go
 model_iscsi_port_resource_inner.go
+=======
+model_host_group_object.go
+model_host_group_resource_inner.go
+model_host_resource_inner.go
+model_initiator_object.go
+model_initiator_resource_inner.go
+model_initiator_view_object.go
+model_initiator_view_resource_inner.go
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 model_network_parameters_resource_inner.go
 model_pools_object.go
 model_pools_resource_inner.go
@@ -105,11 +141,21 @@ model_system_resource_inner.go
 model_tiers_resource_inner.go
 model_versions_object.go
 model_versions_resource_inner.go
+<<<<<<< HEAD
 model_volume_group_view_resource_inner.go
 model_volume_view_mappings_resource_inner.go
 model_volume_view_object.go
+=======
+model_volume_group_view_object.go
+model_volume_group_view_resource_inner.go
+model_volume_view_mappings_resource_inner.go
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 model_volume_view_resource_inner.go
 model_volumes_object.go
 model_volumes_resource_inner.go
 response.go
+<<<<<<< HEAD
+=======
+test/api_default_test.go
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 utils.go

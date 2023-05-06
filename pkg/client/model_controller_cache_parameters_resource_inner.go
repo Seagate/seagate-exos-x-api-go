@@ -22,6 +22,7 @@ type ControllerCacheParametersResourceInner struct {
 	ObjectName              *string `json:"object-name,omitempty"`
 	Meta                    *string `json:"meta,omitempty"`
 	CacheFlush              *string `json:"cache-flush,omitempty"`
+<<<<<<< HEAD
 	CacheFlushNumeric       *int64  `json:"cache-flush-numeric,omitempty"`
 	ControllerId            *string `json:"controller-id,omitempty"`
 	ControllerIdNumeric     *int64  `json:"controller-id-numeric,omitempty"`
@@ -30,11 +31,25 @@ type ControllerCacheParametersResourceInner struct {
 	MemoryCardHealthNumeric *int64  `json:"memory-card-health-numeric,omitempty"`
 	MemoryCardStatus        *string `json:"memory-card-status,omitempty"`
 	MemoryCardStatusNumeric *int64  `json:"memory-card-status-numeric,omitempty"`
+=======
+	CacheFlushNumeric       *int32  `json:"cache-flush-numeric,omitempty"`
+	ControllerId            *string `json:"controller-id,omitempty"`
+	ControllerIdNumeric     *int32  `json:"controller-id-numeric,omitempty"`
+	DurableId               *string `json:"durable-id,omitempty"`
+	MemoryCardHealth        *string `json:"memory-card-health,omitempty"`
+	MemoryCardHealthNumeric *int32  `json:"memory-card-health-numeric,omitempty"`
+	MemoryCardStatus        *string `json:"memory-card-status,omitempty"`
+	MemoryCardStatusNumeric *int32  `json:"memory-card-status-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Name                    *string `json:"name,omitempty"`
 	// Indicates whether disk write-back cache is enabled
 	WriteBackStatus *string `json:"write-back-status,omitempty"`
 	// Indicates whether disk write-back cache is enabled( In numeric form )
+<<<<<<< HEAD
 	WriteBackStatusNumeric *int64 `json:"write-back-status-numeric,omitempty"`
+=======
+	WriteBackStatusNumeric *int32 `json:"write-back-status-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 }
 
 // NewControllerCacheParametersResourceInner instantiates a new ControllerCacheParametersResourceInner object
@@ -151,9 +166,15 @@ func (o *ControllerCacheParametersResourceInner) SetCacheFlush(v string) {
 }
 
 // GetCacheFlushNumeric returns the CacheFlushNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int64 {
 	if o == nil || IsNil(o.CacheFlushNumeric) {
 		var ret int64
+=======
+func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int32 {
+	if o == nil || IsNil(o.CacheFlushNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.CacheFlushNumeric
@@ -161,7 +182,11 @@ func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int64 {
 
 // GetCacheFlushNumericOk returns a tuple with the CacheFlushNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumericOk() (*int64, bool) {
+=======
+func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.CacheFlushNumeric) {
 		return nil, false
 	}
@@ -177,8 +202,13 @@ func (o *ControllerCacheParametersResourceInner) HasCacheFlushNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetCacheFlushNumeric gets a reference to the given int64 and assigns it to the CacheFlushNumeric field.
 func (o *ControllerCacheParametersResourceInner) SetCacheFlushNumeric(v int64) {
+=======
+// SetCacheFlushNumeric gets a reference to the given int32 and assigns it to the CacheFlushNumeric field.
+func (o *ControllerCacheParametersResourceInner) SetCacheFlushNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.CacheFlushNumeric = &v
 }
 
@@ -215,9 +245,15 @@ func (o *ControllerCacheParametersResourceInner) SetControllerId(v string) {
 }
 
 // GetControllerIdNumeric returns the ControllerIdNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int64 {
 	if o == nil || IsNil(o.ControllerIdNumeric) {
 		var ret int64
+=======
+func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int32 {
+	if o == nil || IsNil(o.ControllerIdNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ControllerIdNumeric
@@ -225,7 +261,11 @@ func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int64 
 
 // GetControllerIdNumericOk returns a tuple with the ControllerIdNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ControllerCacheParametersResourceInner) GetControllerIdNumericOk() (*int64, bool) {
+=======
+func (o *ControllerCacheParametersResourceInner) GetControllerIdNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ControllerIdNumeric) {
 		return nil, false
 	}
@@ -241,8 +281,13 @@ func (o *ControllerCacheParametersResourceInner) HasControllerIdNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetControllerIdNumeric gets a reference to the given int64 and assigns it to the ControllerIdNumeric field.
 func (o *ControllerCacheParametersResourceInner) SetControllerIdNumeric(v int64) {
+=======
+// SetControllerIdNumeric gets a reference to the given int32 and assigns it to the ControllerIdNumeric field.
+func (o *ControllerCacheParametersResourceInner) SetControllerIdNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ControllerIdNumeric = &v
 }
 
@@ -311,9 +356,15 @@ func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealth(v string) {
 }
 
 // GetMemoryCardHealthNumeric returns the MemoryCardHealthNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() int64 {
 	if o == nil || IsNil(o.MemoryCardHealthNumeric) {
 		var ret int64
+=======
+func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() int32 {
+	if o == nil || IsNil(o.MemoryCardHealthNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MemoryCardHealthNumeric
@@ -321,7 +372,11 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() in
 
 // GetMemoryCardHealthNumericOk returns a tuple with the MemoryCardHealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumericOk() (*int64, bool) {
+=======
+func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MemoryCardHealthNumeric) {
 		return nil, false
 	}
@@ -337,8 +392,13 @@ func (o *ControllerCacheParametersResourceInner) HasMemoryCardHealthNumeric() bo
 	return false
 }
 
+<<<<<<< HEAD
 // SetMemoryCardHealthNumeric gets a reference to the given int64 and assigns it to the MemoryCardHealthNumeric field.
 func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealthNumeric(v int64) {
+=======
+// SetMemoryCardHealthNumeric gets a reference to the given int32 and assigns it to the MemoryCardHealthNumeric field.
+func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealthNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MemoryCardHealthNumeric = &v
 }
 
@@ -375,9 +435,15 @@ func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatus(v string) {
 }
 
 // GetMemoryCardStatusNumeric returns the MemoryCardStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() int64 {
 	if o == nil || IsNil(o.MemoryCardStatusNumeric) {
 		var ret int64
+=======
+func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() int32 {
+	if o == nil || IsNil(o.MemoryCardStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MemoryCardStatusNumeric
@@ -385,7 +451,11 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() in
 
 // GetMemoryCardStatusNumericOk returns a tuple with the MemoryCardStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumericOk() (*int64, bool) {
+=======
+func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MemoryCardStatusNumeric) {
 		return nil, false
 	}
@@ -401,8 +471,13 @@ func (o *ControllerCacheParametersResourceInner) HasMemoryCardStatusNumeric() bo
 	return false
 }
 
+<<<<<<< HEAD
 // SetMemoryCardStatusNumeric gets a reference to the given int64 and assigns it to the MemoryCardStatusNumeric field.
 func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatusNumeric(v int64) {
+=======
+// SetMemoryCardStatusNumeric gets a reference to the given int32 and assigns it to the MemoryCardStatusNumeric field.
+func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MemoryCardStatusNumeric = &v
 }
 
@@ -471,9 +546,15 @@ func (o *ControllerCacheParametersResourceInner) SetWriteBackStatus(v string) {
 }
 
 // GetWriteBackStatusNumeric returns the WriteBackStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int64 {
 	if o == nil || IsNil(o.WriteBackStatusNumeric) {
 		var ret int64
+=======
+func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int32 {
+	if o == nil || IsNil(o.WriteBackStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.WriteBackStatusNumeric
@@ -481,7 +562,11 @@ func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int
 
 // GetWriteBackStatusNumericOk returns a tuple with the WriteBackStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumericOk() (*int64, bool) {
+=======
+func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.WriteBackStatusNumeric) {
 		return nil, false
 	}
@@ -497,8 +582,13 @@ func (o *ControllerCacheParametersResourceInner) HasWriteBackStatusNumeric() boo
 	return false
 }
 
+<<<<<<< HEAD
 // SetWriteBackStatusNumeric gets a reference to the given int64 and assigns it to the WriteBackStatusNumeric field.
 func (o *ControllerCacheParametersResourceInner) SetWriteBackStatusNumeric(v int64) {
+=======
+// SetWriteBackStatusNumeric gets a reference to the given int32 and assigns it to the WriteBackStatusNumeric field.
+func (o *ControllerCacheParametersResourceInner) SetWriteBackStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.WriteBackStatusNumeric = &v
 }
 

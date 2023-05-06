@@ -7,10 +7,17 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **Access** | Pointer to **string** | Access rights for this volume | [optional] 
+<<<<<<< HEAD
 **AccessNumeric** | Pointer to **int64** | Access rights for this volume( In numeric form ) | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **HostProfile** | Pointer to **string** |  | [optional] 
 **HostProfileNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**AccessNumeric** | Pointer to **int32** | Access rights for this volume( In numeric form ) | [optional] 
+**DurableId** | Pointer to **string** |  | [optional] 
+**HostProfile** | Pointer to **string** |  | [optional] 
+**HostProfileNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Identifier** | Pointer to **string** | WWPN or IQN or Host Serial Number or Host Group Serial Number | [optional] 
 **InitiatorsUrl** | Pointer to **string** |  | [optional] 
 **Lun** | Pointer to **string** | Logical Unit Number | [optional] 
@@ -115,20 +122,32 @@ HasAccess returns a boolean if a field has been set.
 
 ### GetAccessNumeric
 
+<<<<<<< HEAD
 `func (o *VolumeViewMappingsResourceInner) GetAccessNumeric() int64`
+=======
+`func (o *VolumeViewMappingsResourceInner) GetAccessNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAccessNumeric returns the AccessNumeric field if non-nil, zero value otherwise.
 
 ### GetAccessNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumeViewMappingsResourceInner) GetAccessNumericOk() (*int64, bool)`
+=======
+`func (o *VolumeViewMappingsResourceInner) GetAccessNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAccessNumericOk returns a tuple with the AccessNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAccessNumeric
 
+<<<<<<< HEAD
 `func (o *VolumeViewMappingsResourceInner) SetAccessNumeric(v int64)`
+=======
+`func (o *VolumeViewMappingsResourceInner) SetAccessNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAccessNumeric sets AccessNumeric field to given value.
 
@@ -190,20 +209,32 @@ HasHostProfile returns a boolean if a field has been set.
 
 ### GetHostProfileNumeric
 
+<<<<<<< HEAD
 `func (o *VolumeViewMappingsResourceInner) GetHostProfileNumeric() int64`
+=======
+`func (o *VolumeViewMappingsResourceInner) GetHostProfileNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostProfileNumeric returns the HostProfileNumeric field if non-nil, zero value otherwise.
 
 ### GetHostProfileNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumeViewMappingsResourceInner) GetHostProfileNumericOk() (*int64, bool)`
+=======
+`func (o *VolumeViewMappingsResourceInner) GetHostProfileNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostProfileNumericOk returns a tuple with the HostProfileNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostProfileNumeric
 
+<<<<<<< HEAD
 `func (o *VolumeViewMappingsResourceInner) SetHostProfileNumeric(v int64)`
+=======
+`func (o *VolumeViewMappingsResourceInner) SetHostProfileNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHostProfileNumeric sets HostProfileNumeric field to given value.
 

@@ -27,7 +27,11 @@ type FanResourceInner struct {
 	// Firmware version of the FRU
 	FwRevision           *string `json:"fw-revision,omitempty"`
 	Health               *string `json:"health,omitempty"`
+<<<<<<< HEAD
 	HealthNumeric        *int64  `json:"health-numeric,omitempty"`
+=======
+	HealthNumeric        *int32  `json:"health-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	HealthReason         *string `json:"health-reason,omitempty"`
 	HealthRecommendation *string `json:"health-recommendation,omitempty"`
 	// Hardware version of the FRU
@@ -36,12 +40,17 @@ type FanResourceInner struct {
 	// Indicates whether the locator LED is on
 	LocatorLed *string `json:"locator-led,omitempty"`
 	// Indicates whether the locator LED is on( In numeric form )
+<<<<<<< HEAD
 	LocatorLedNumeric *int64  `json:"locator-led-numeric,omitempty"`
+=======
+	LocatorLedNumeric *int32  `json:"locator-led-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Name              *string `json:"name,omitempty"`
 	PartNumber        *string `json:"part-number,omitempty"`
 	// Position of the component in the enclosure
 	Position *string `json:"position,omitempty"`
 	// Position of the component in the enclosure( In numeric form )
+<<<<<<< HEAD
 	PositionNumeric *int64  `json:"position-numeric,omitempty"`
 	SerialNumber    *string `json:"serial-number,omitempty"`
 	Speed           *int64  `json:"speed,omitempty"`
@@ -51,6 +60,17 @@ type FanResourceInner struct {
 	StatusSes *string `json:"status-ses,omitempty"`
 	// SES Common status( In numeric form )
 	StatusSesNumeric *int64 `json:"status-ses-numeric,omitempty"`
+=======
+	PositionNumeric *int32  `json:"position-numeric,omitempty"`
+	SerialNumber    *string `json:"serial-number,omitempty"`
+	Speed           *int32  `json:"speed,omitempty"`
+	Status          *string `json:"status,omitempty"`
+	StatusNumeric   *int32  `json:"status-numeric,omitempty"`
+	// SES Common status
+	StatusSes *string `json:"status-ses,omitempty"`
+	// SES Common status( In numeric form )
+	StatusSesNumeric *int32 `json:"status-ses-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// The resource URL
 	Url *string `json:"url,omitempty"`
 }
@@ -265,9 +285,15 @@ func (o *FanResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
+=======
+func (o *FanResourceInner) GetHealthNumeric() int32 {
+	if o == nil || IsNil(o.HealthNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthNumeric
@@ -275,7 +301,11 @@ func (o *FanResourceInner) GetHealthNumeric() int64 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetHealthNumericOk() (*int64, bool) {
+=======
+func (o *FanResourceInner) GetHealthNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -291,8 +321,13 @@ func (o *FanResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
 func (o *FanResourceInner) SetHealthNumeric(v int64) {
+=======
+// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
+func (o *FanResourceInner) SetHealthNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthNumeric = &v
 }
 
@@ -457,9 +492,15 @@ func (o *FanResourceInner) SetLocatorLed(v string) {
 }
 
 // GetLocatorLedNumeric returns the LocatorLedNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetLocatorLedNumeric() int64 {
 	if o == nil || IsNil(o.LocatorLedNumeric) {
 		var ret int64
+=======
+func (o *FanResourceInner) GetLocatorLedNumeric() int32 {
+	if o == nil || IsNil(o.LocatorLedNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.LocatorLedNumeric
@@ -467,7 +508,11 @@ func (o *FanResourceInner) GetLocatorLedNumeric() int64 {
 
 // GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetLocatorLedNumericOk() (*int64, bool) {
+=======
+func (o *FanResourceInner) GetLocatorLedNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.LocatorLedNumeric) {
 		return nil, false
 	}
@@ -483,8 +528,13 @@ func (o *FanResourceInner) HasLocatorLedNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetLocatorLedNumeric gets a reference to the given int64 and assigns it to the LocatorLedNumeric field.
 func (o *FanResourceInner) SetLocatorLedNumeric(v int64) {
+=======
+// SetLocatorLedNumeric gets a reference to the given int32 and assigns it to the LocatorLedNumeric field.
+func (o *FanResourceInner) SetLocatorLedNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.LocatorLedNumeric = &v
 }
 
@@ -585,9 +635,15 @@ func (o *FanResourceInner) SetPosition(v string) {
 }
 
 // GetPositionNumeric returns the PositionNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetPositionNumeric() int64 {
 	if o == nil || IsNil(o.PositionNumeric) {
 		var ret int64
+=======
+func (o *FanResourceInner) GetPositionNumeric() int32 {
+	if o == nil || IsNil(o.PositionNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PositionNumeric
@@ -595,7 +651,11 @@ func (o *FanResourceInner) GetPositionNumeric() int64 {
 
 // GetPositionNumericOk returns a tuple with the PositionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetPositionNumericOk() (*int64, bool) {
+=======
+func (o *FanResourceInner) GetPositionNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PositionNumeric) {
 		return nil, false
 	}
@@ -611,8 +671,13 @@ func (o *FanResourceInner) HasPositionNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPositionNumeric gets a reference to the given int64 and assigns it to the PositionNumeric field.
 func (o *FanResourceInner) SetPositionNumeric(v int64) {
+=======
+// SetPositionNumeric gets a reference to the given int32 and assigns it to the PositionNumeric field.
+func (o *FanResourceInner) SetPositionNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PositionNumeric = &v
 }
 
@@ -649,9 +714,15 @@ func (o *FanResourceInner) SetSerialNumber(v string) {
 }
 
 // GetSpeed returns the Speed field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetSpeed() int64 {
 	if o == nil || IsNil(o.Speed) {
 		var ret int64
+=======
+func (o *FanResourceInner) GetSpeed() int32 {
+	if o == nil || IsNil(o.Speed) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Speed
@@ -659,7 +730,11 @@ func (o *FanResourceInner) GetSpeed() int64 {
 
 // GetSpeedOk returns a tuple with the Speed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetSpeedOk() (*int64, bool) {
+=======
+func (o *FanResourceInner) GetSpeedOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Speed) {
 		return nil, false
 	}
@@ -675,8 +750,13 @@ func (o *FanResourceInner) HasSpeed() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSpeed gets a reference to the given int64 and assigns it to the Speed field.
 func (o *FanResourceInner) SetSpeed(v int64) {
+=======
+// SetSpeed gets a reference to the given int32 and assigns it to the Speed field.
+func (o *FanResourceInner) SetSpeed(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Speed = &v
 }
 
@@ -713,9 +793,15 @@ func (o *FanResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
 		var ret int64
+=======
+func (o *FanResourceInner) GetStatusNumeric() int32 {
+	if o == nil || IsNil(o.StatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.StatusNumeric
@@ -723,7 +809,11 @@ func (o *FanResourceInner) GetStatusNumeric() int64 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetStatusNumericOk() (*int64, bool) {
+=======
+func (o *FanResourceInner) GetStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -739,8 +829,13 @@ func (o *FanResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
 func (o *FanResourceInner) SetStatusNumeric(v int64) {
+=======
+// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
+func (o *FanResourceInner) SetStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.StatusNumeric = &v
 }
 
@@ -777,9 +872,15 @@ func (o *FanResourceInner) SetStatusSes(v string) {
 }
 
 // GetStatusSesNumeric returns the StatusSesNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetStatusSesNumeric() int64 {
 	if o == nil || IsNil(o.StatusSesNumeric) {
 		var ret int64
+=======
+func (o *FanResourceInner) GetStatusSesNumeric() int32 {
+	if o == nil || IsNil(o.StatusSesNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.StatusSesNumeric
@@ -787,7 +888,11 @@ func (o *FanResourceInner) GetStatusSesNumeric() int64 {
 
 // GetStatusSesNumericOk returns a tuple with the StatusSesNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *FanResourceInner) GetStatusSesNumericOk() (*int64, bool) {
+=======
+func (o *FanResourceInner) GetStatusSesNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.StatusSesNumeric) {
 		return nil, false
 	}
@@ -803,8 +908,13 @@ func (o *FanResourceInner) HasStatusSesNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetStatusSesNumeric gets a reference to the given int64 and assigns it to the StatusSesNumeric field.
 func (o *FanResourceInner) SetStatusSesNumeric(v int64) {
+=======
+// SetStatusSesNumeric gets a reference to the given int32 and assigns it to the StatusSesNumeric field.
+func (o *FanResourceInner) SetStatusSesNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.StatusSesNumeric = &v
 }
 

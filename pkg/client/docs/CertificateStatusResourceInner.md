@@ -8,11 +8,19 @@ Name | Type | Description | Notes
 **Meta** | Pointer to **string** |  | [optional] 
 **CertificateSignature** | Pointer to **string** |  | [optional] 
 **CertificateStatus** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **CertificateStatusNumeric** | Pointer to **int64** |  | [optional] 
 **CertificateText** | Pointer to **string** |  | [optional] 
 **CertificateTime** | Pointer to **string** |  | [optional] 
 **Controller** | Pointer to **string** |  | [optional] 
 **ControllerNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**CertificateStatusNumeric** | Pointer to **int32** |  | [optional] 
+**CertificateText** | Pointer to **string** |  | [optional] 
+**CertificateTime** | Pointer to **string** |  | [optional] 
+**Controller** | Pointer to **string** |  | [optional] 
+**ControllerNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ## Methods
 
@@ -135,20 +143,32 @@ HasCertificateStatus returns a boolean if a field has been set.
 
 ### GetCertificateStatusNumeric
 
+<<<<<<< HEAD
 `func (o *CertificateStatusResourceInner) GetCertificateStatusNumeric() int64`
+=======
+`func (o *CertificateStatusResourceInner) GetCertificateStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCertificateStatusNumeric returns the CertificateStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetCertificateStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *CertificateStatusResourceInner) GetCertificateStatusNumericOk() (*int64, bool)`
+=======
+`func (o *CertificateStatusResourceInner) GetCertificateStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCertificateStatusNumericOk returns a tuple with the CertificateStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCertificateStatusNumeric
 
+<<<<<<< HEAD
 `func (o *CertificateStatusResourceInner) SetCertificateStatusNumeric(v int64)`
+=======
+`func (o *CertificateStatusResourceInner) SetCertificateStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCertificateStatusNumeric sets CertificateStatusNumeric field to given value.
 
@@ -235,20 +255,32 @@ HasController returns a boolean if a field has been set.
 
 ### GetControllerNumeric
 
+<<<<<<< HEAD
 `func (o *CertificateStatusResourceInner) GetControllerNumeric() int64`
+=======
+`func (o *CertificateStatusResourceInner) GetControllerNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerNumeric returns the ControllerNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerNumericOk
 
+<<<<<<< HEAD
 `func (o *CertificateStatusResourceInner) GetControllerNumericOk() (*int64, bool)`
+=======
+`func (o *CertificateStatusResourceInner) GetControllerNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerNumericOk returns a tuple with the ControllerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerNumeric
 
+<<<<<<< HEAD
 `func (o *CertificateStatusResourceInner) SetControllerNumeric(v int64)`
+=======
+`func (o *CertificateStatusResourceInner) SetControllerNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetControllerNumeric sets ControllerNumeric field to given value.
 

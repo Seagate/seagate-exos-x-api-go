@@ -22,6 +22,7 @@ type DrivesResourceInner struct {
 	ObjectName            *string `json:"object-name,omitempty"`
 	Meta                  *string `json:"meta,omitempty"`
 	Architecture          *string `json:"architecture,omitempty"`
+<<<<<<< HEAD
 	ArchitectureNumeric   *int64  `json:"architecture-numeric,omitempty"`
 	AssuranceLevel        *string `json:"assurance-level,omitempty"`
 	AssuranceLevelNumeric *int64  `json:"assurance-level-numeric,omitempty"`
@@ -91,10 +92,82 @@ type DrivesResourceInner struct {
 	KmipStateNumeric            *int64  `json:"kmip-state-numeric,omitempty"`
 	LedStatus                   *string `json:"led-status,omitempty"`
 	LedStatusNumeric            *int64  `json:"led-status-numeric,omitempty"`
+=======
+	ArchitectureNumeric   *int32  `json:"architecture-numeric,omitempty"`
+	AssuranceLevel        *string `json:"assurance-level,omitempty"`
+	AssuranceLevelNumeric *int32  `json:"assurance-level-numeric,omitempty"`
+	// Indicates if the disk is single-pathed
+	Attributes *string `json:"attributes,omitempty"`
+	// Indicates if the disk is single-pathed( In numeric form )
+	AttributesNumeric *int32 `json:"attributes-numeric,omitempty"`
+	AvgRspTime        *int32 `json:"avg-rsp-time,omitempty"`
+	// Indicates whether the locator LED is on
+	Blink *int32 `json:"blink,omitempty"`
+	// The size in blocks
+	Blocks         *int32 `json:"blocks,omitempty"`
+	Blocksize      *int32 `json:"blocksize,omitempty"`
+	ContainerIndex *int32 `json:"container-index,omitempty"`
+	// Copyback State
+	CopybackState *string `json:"copyback-state,omitempty"`
+	// Copyback State( In numeric form )
+	CopybackStateNumeric *int32  `json:"copyback-state-numeric,omitempty"`
+	CurrentJobCompletion *string `json:"current-job-completion,omitempty"`
+	Description          *string `json:"description,omitempty"`
+	DescriptionNumeric   *int32  `json:"description-numeric,omitempty"`
+	DiskDsdCount         *int32  `json:"disk-dsd-count,omitempty"`
+	// Disk Group details
+	DiskGroup     *string `json:"disk-group,omitempty"`
+	DrawerId      *int32  `json:"drawer-id,omitempty"`
+	DriveDownCode *int32  `json:"drive-down-code,omitempty"`
+	DualPort      *int32  `json:"dual-port,omitempty"`
+	DurableId     *string `json:"durable-id,omitempty"`
+	EnclosureId   *int32  `json:"enclosure-id,omitempty"`
+	// Enclosure World Wide Name
+	EnclosureWwn  *string `json:"enclosure-wwn,omitempty"`
+	EnclosuresUrl *string `json:"enclosures-url,omitempty"`
+	Error         *int32  `json:"error,omitempty"`
+	// Extended status (bits)
+	ExtendedStatus              *int32  `json:"extended-status,omitempty"`
+	FcP1Channel                 *int32  `json:"fc-p1-channel,omitempty"`
+	FcP1DeviceId                *int32  `json:"fc-p1-device-id,omitempty"`
+	FcP1NodeWwn                 *string `json:"fc-p1-node-wwn,omitempty"`
+	FcP1PortWwn                 *string `json:"fc-p1-port-wwn,omitempty"`
+	FcP1UnitNumber              *int32  `json:"fc-p1-unit-number,omitempty"`
+	FcP2Channel                 *int32  `json:"fc-p2-channel,omitempty"`
+	FcP2DeviceId                *int32  `json:"fc-p2-device-id,omitempty"`
+	FcP2NodeWwn                 *string `json:"fc-p2-node-wwn,omitempty"`
+	FcP2PortWwn                 *string `json:"fc-p2-port-wwn,omitempty"`
+	FcP2UnitNumber              *int32  `json:"fc-p2-unit-number,omitempty"`
+	FdeConfigTime               *string `json:"fde-config-time,omitempty"`
+	FdeConfigTimeNumeric        *int32  `json:"fde-config-time-numeric,omitempty"`
+	FdeState                    *string `json:"fde-state,omitempty"`
+	FdeStateNumeric             *int32  `json:"fde-state-numeric,omitempty"`
+	FipsCapable                 *string `json:"fips-capable,omitempty"`
+	FipsCapableNumeric          *int32  `json:"fips-capable-numeric,omitempty"`
+	FirmwareUpdateStatus        *string `json:"firmware-update-status,omitempty"`
+	FirmwareUpdateStatusNumeric *int32  `json:"firmware-update-status-numeric,omitempty"`
+	Health                      *string `json:"health,omitempty"`
+	HealthNumeric               *int32  `json:"health-numeric,omitempty"`
+	HealthReason                *string `json:"health-reason,omitempty"`
+	HealthReasonNumeric         *int32  `json:"health-reason-numeric,omitempty"`
+	HealthRecommendation        *string `json:"health-recommendation,omitempty"`
+	HealthRecommendationNumeric *int32  `json:"health-recommendation-numeric,omitempty"`
+	ImportLockKeyId             *string `json:"import-lock-key-id,omitempty"`
+	Index                       *int32  `json:"index,omitempty"`
+	Interface                   *string `json:"interface,omitempty"`
+	InterfaceNumeric            *int32  `json:"interface-numeric,omitempty"`
+	JobRunning                  *string `json:"job-running,omitempty"`
+	JobRunningNumeric           *int32  `json:"job-running-numeric,omitempty"`
+	KmipState                   *string `json:"kmip-state,omitempty"`
+	KmipStateNumeric            *int32  `json:"kmip-state-numeric,omitempty"`
+	LedStatus                   *string `json:"led-status,omitempty"`
+	LedStatusNumeric            *int32  `json:"led-status-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Location                    *string `json:"location,omitempty"`
 	// Indicates whether the locator LED is on
 	LocatorLed *string `json:"locator-led,omitempty"`
 	// Indicates whether the locator LED is on( In numeric form )
+<<<<<<< HEAD
 	LocatorLedNumeric *int64  `json:"locator-led-numeric,omitempty"`
 	LockKeyId         *string `json:"lock-key-id,omitempty"`
 	// Index for this disk in the vdisk list
@@ -145,6 +218,58 @@ type DrivesResourceInner struct {
 	SpunDown           *int64  `json:"spun-down,omitempty"`
 	SsdLifeLeft        *string `json:"ssd-life-left,omitempty"`
 	SsdLifeLeftNumeric *int64  `json:"ssd-life-left-numeric,omitempty"`
+=======
+	LocatorLedNumeric *int32  `json:"locator-led-numeric,omitempty"`
+	LockKeyId         *string `json:"lock-key-id,omitempty"`
+	// Index for this disk in the vdisk list
+	MemberIndex *int32  `json:"member-index,omitempty"`
+	Model       *string `json:"model,omitempty"`
+	// Number of depopulated heads
+	NumDepoppedHeads *int32 `json:"num-depopped-heads,omitempty"`
+	NumberOfIos      *int32 `json:"number-of-ios,omitempty"`
+	// Controller owning the component
+	Owner *string `json:"owner,omitempty"`
+	// Controller owning the component( In numeric form )
+	OwnerNumeric *int32 `json:"owner-numeric,omitempty"`
+	// Used to describe the Disk Protection Information
+	PiFormatted *string `json:"pi-formatted,omitempty"`
+	// Used to describe the Disk Protection Information( In numeric form )
+	PiFormattedNumeric *int32 `json:"pi-formatted-numeric,omitempty"`
+	Port               *int32 `json:"port,omitempty"`
+	PowerOnHours       *int32 `json:"power-on-hours,omitempty"`
+	// Reconstruction State
+	ReconState *string `json:"recon-state,omitempty"`
+	// Reconstruction State( In numeric form )
+	ReconStateNumeric    *int32  `json:"recon-state-numeric,omitempty"`
+	Remanufacture        *string `json:"remanufacture,omitempty"`
+	RemanufactureNumeric *int32  `json:"remanufacture-numeric,omitempty"`
+	// Current revision for this FRU
+	Revision *string `json:"revision,omitempty"`
+	// Vendor-specified disk speed in thousands of revolutions per minute
+	Rpm *int32 `json:"rpm,omitempty"`
+	// SCSI ID assigned to this disk for the primary channel
+	ScsiId *int32 `json:"scsi-id,omitempty"`
+	// SCSI ID assigned to this disk for the secondary channel
+	SecondaryChannel    *int32  `json:"secondary-channel,omitempty"`
+	SectorFormat        *string `json:"sector-format,omitempty"`
+	SectorFormatNumeric *int32  `json:"sector-format-numeric,omitempty"`
+	SerialNumber        *string `json:"serial-number,omitempty"`
+	SinglePorted        *string `json:"single-ported,omitempty"`
+	SinglePortedNumeric *int32  `json:"single-ported-numeric,omitempty"`
+	// The size or capacity formatted with the current session base, precision, and units
+	Size *string `json:"size,omitempty"`
+	// The size or capacity formatted with the current session base, precision, and units( In numeric form )
+	SizeNumeric *int32 `json:"size-numeric,omitempty"`
+	// The slot number where the disk is located
+	Slot         *int32  `json:"slot,omitempty"`
+	Smart        *string `json:"smart,omitempty"`
+	SmartNumeric *int32  `json:"smart-numeric,omitempty"`
+	Speed        *int32  `json:"speed,omitempty"`
+	// Indicates a drive is spun down
+	SpunDown           *int32  `json:"spun-down,omitempty"`
+	SsdLifeLeft        *string `json:"ssd-life-left,omitempty"`
+	SsdLifeLeftNumeric *int32  `json:"ssd-life-left-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	State              *string `json:"state,omitempty"`
 	Status             *string `json:"status,omitempty"`
 	// User-defined name for the pool
@@ -152,6 +277,7 @@ type DrivesResourceInner struct {
 	// Disk group tier assignment for tiered migration
 	StorageTier *string `json:"storage-tier,omitempty"`
 	// Disk group tier assignment for tiered migration( In numeric form )
+<<<<<<< HEAD
 	StorageTierNumeric          *int64  `json:"storage-tier-numeric,omitempty"`
 	SupportsUnmap               *string `json:"supports-unmap,omitempty"`
 	SupportsUnmapNumeric        *int64  `json:"supports-unmap-numeric,omitempty"`
@@ -169,12 +295,35 @@ type DrivesResourceInner struct {
 	Type *string `json:"type,omitempty"`
 	// The type of disk( In numeric form )
 	TypeNumeric *int64 `json:"type-numeric,omitempty"`
+=======
+	StorageTierNumeric          *int32  `json:"storage-tier-numeric,omitempty"`
+	SupportsUnmap               *string `json:"supports-unmap,omitempty"`
+	SupportsUnmapNumeric        *int32  `json:"supports-unmap-numeric,omitempty"`
+	Temperature                 *string `json:"temperature,omitempty"`
+	TemperatureNumeric          *int32  `json:"temperature-numeric,omitempty"`
+	TemperatureStatus           *string `json:"temperature-status,omitempty"`
+	TemperatureStatusNumeric    *int32  `json:"temperature-status-numeric,omitempty"`
+	TotalDataTransferred        *string `json:"total-data-transferred,omitempty"`
+	TotalDataTransferredNumeric *int32  `json:"total-data-transferred-numeric,omitempty"`
+	// Transfer rate of the disk
+	TransferRate *string `json:"transfer-rate,omitempty"`
+	// Transfer rate of the disk( In numeric form )
+	TransferRateNumeric *int32 `json:"transfer-rate-numeric,omitempty"`
+	// The type of disk
+	Type *string `json:"type,omitempty"`
+	// The type of disk( In numeric form )
+	TypeNumeric *int32 `json:"type-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// The resource URL
 	Url *string `json:"url,omitempty"`
 	// Disk usage
 	Usage *string `json:"usage,omitempty"`
 	// Disk usage
+<<<<<<< HEAD
 	UsageNumeric *int64  `json:"usage-numeric,omitempty"`
+=======
+	UsageNumeric *int32  `json:"usage-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Vendor       *string `json:"vendor,omitempty"`
 	// Unique serial number for the disk group
 	VirtualDiskSerial *string `json:"virtual-disk-serial,omitempty"`
@@ -294,9 +443,15 @@ func (o *DrivesResourceInner) SetArchitecture(v string) {
 }
 
 // GetArchitectureNumeric returns the ArchitectureNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetArchitectureNumeric() int64 {
 	if o == nil || IsNil(o.ArchitectureNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetArchitectureNumeric() int32 {
+	if o == nil || IsNil(o.ArchitectureNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ArchitectureNumeric
@@ -304,7 +459,11 @@ func (o *DrivesResourceInner) GetArchitectureNumeric() int64 {
 
 // GetArchitectureNumericOk returns a tuple with the ArchitectureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetArchitectureNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetArchitectureNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ArchitectureNumeric) {
 		return nil, false
 	}
@@ -320,8 +479,13 @@ func (o *DrivesResourceInner) HasArchitectureNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetArchitectureNumeric gets a reference to the given int64 and assigns it to the ArchitectureNumeric field.
 func (o *DrivesResourceInner) SetArchitectureNumeric(v int64) {
+=======
+// SetArchitectureNumeric gets a reference to the given int32 and assigns it to the ArchitectureNumeric field.
+func (o *DrivesResourceInner) SetArchitectureNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ArchitectureNumeric = &v
 }
 
@@ -358,9 +522,15 @@ func (o *DrivesResourceInner) SetAssuranceLevel(v string) {
 }
 
 // GetAssuranceLevelNumeric returns the AssuranceLevelNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetAssuranceLevelNumeric() int64 {
 	if o == nil || IsNil(o.AssuranceLevelNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetAssuranceLevelNumeric() int32 {
+	if o == nil || IsNil(o.AssuranceLevelNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AssuranceLevelNumeric
@@ -368,7 +538,11 @@ func (o *DrivesResourceInner) GetAssuranceLevelNumeric() int64 {
 
 // GetAssuranceLevelNumericOk returns a tuple with the AssuranceLevelNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetAssuranceLevelNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetAssuranceLevelNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AssuranceLevelNumeric) {
 		return nil, false
 	}
@@ -384,8 +558,13 @@ func (o *DrivesResourceInner) HasAssuranceLevelNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAssuranceLevelNumeric gets a reference to the given int64 and assigns it to the AssuranceLevelNumeric field.
 func (o *DrivesResourceInner) SetAssuranceLevelNumeric(v int64) {
+=======
+// SetAssuranceLevelNumeric gets a reference to the given int32 and assigns it to the AssuranceLevelNumeric field.
+func (o *DrivesResourceInner) SetAssuranceLevelNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AssuranceLevelNumeric = &v
 }
 
@@ -422,9 +601,15 @@ func (o *DrivesResourceInner) SetAttributes(v string) {
 }
 
 // GetAttributesNumeric returns the AttributesNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetAttributesNumeric() int64 {
 	if o == nil || IsNil(o.AttributesNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetAttributesNumeric() int32 {
+	if o == nil || IsNil(o.AttributesNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AttributesNumeric
@@ -432,7 +617,11 @@ func (o *DrivesResourceInner) GetAttributesNumeric() int64 {
 
 // GetAttributesNumericOk returns a tuple with the AttributesNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetAttributesNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetAttributesNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AttributesNumeric) {
 		return nil, false
 	}
@@ -448,15 +637,26 @@ func (o *DrivesResourceInner) HasAttributesNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAttributesNumeric gets a reference to the given int64 and assigns it to the AttributesNumeric field.
 func (o *DrivesResourceInner) SetAttributesNumeric(v int64) {
+=======
+// SetAttributesNumeric gets a reference to the given int32 and assigns it to the AttributesNumeric field.
+func (o *DrivesResourceInner) SetAttributesNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AttributesNumeric = &v
 }
 
 // GetAvgRspTime returns the AvgRspTime field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetAvgRspTime() int64 {
 	if o == nil || IsNil(o.AvgRspTime) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetAvgRspTime() int32 {
+	if o == nil || IsNil(o.AvgRspTime) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AvgRspTime
@@ -464,7 +664,11 @@ func (o *DrivesResourceInner) GetAvgRspTime() int64 {
 
 // GetAvgRspTimeOk returns a tuple with the AvgRspTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetAvgRspTimeOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetAvgRspTimeOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AvgRspTime) {
 		return nil, false
 	}
@@ -480,15 +684,26 @@ func (o *DrivesResourceInner) HasAvgRspTime() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAvgRspTime gets a reference to the given int64 and assigns it to the AvgRspTime field.
 func (o *DrivesResourceInner) SetAvgRspTime(v int64) {
+=======
+// SetAvgRspTime gets a reference to the given int32 and assigns it to the AvgRspTime field.
+func (o *DrivesResourceInner) SetAvgRspTime(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AvgRspTime = &v
 }
 
 // GetBlink returns the Blink field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetBlink() int64 {
 	if o == nil || IsNil(o.Blink) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetBlink() int32 {
+	if o == nil || IsNil(o.Blink) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Blink
@@ -496,7 +711,11 @@ func (o *DrivesResourceInner) GetBlink() int64 {
 
 // GetBlinkOk returns a tuple with the Blink field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetBlinkOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetBlinkOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Blink) {
 		return nil, false
 	}
@@ -512,15 +731,26 @@ func (o *DrivesResourceInner) HasBlink() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBlink gets a reference to the given int64 and assigns it to the Blink field.
 func (o *DrivesResourceInner) SetBlink(v int64) {
+=======
+// SetBlink gets a reference to the given int32 and assigns it to the Blink field.
+func (o *DrivesResourceInner) SetBlink(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Blink = &v
 }
 
 // GetBlocks returns the Blocks field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetBlocks() int64 {
 	if o == nil || IsNil(o.Blocks) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetBlocks() int32 {
+	if o == nil || IsNil(o.Blocks) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Blocks
@@ -528,7 +758,11 @@ func (o *DrivesResourceInner) GetBlocks() int64 {
 
 // GetBlocksOk returns a tuple with the Blocks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetBlocksOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetBlocksOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Blocks) {
 		return nil, false
 	}
@@ -544,15 +778,26 @@ func (o *DrivesResourceInner) HasBlocks() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBlocks gets a reference to the given int64 and assigns it to the Blocks field.
 func (o *DrivesResourceInner) SetBlocks(v int64) {
+=======
+// SetBlocks gets a reference to the given int32 and assigns it to the Blocks field.
+func (o *DrivesResourceInner) SetBlocks(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Blocks = &v
 }
 
 // GetBlocksize returns the Blocksize field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetBlocksize() int64 {
 	if o == nil || IsNil(o.Blocksize) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetBlocksize() int32 {
+	if o == nil || IsNil(o.Blocksize) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Blocksize
@@ -560,7 +805,11 @@ func (o *DrivesResourceInner) GetBlocksize() int64 {
 
 // GetBlocksizeOk returns a tuple with the Blocksize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetBlocksizeOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetBlocksizeOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Blocksize) {
 		return nil, false
 	}
@@ -576,15 +825,26 @@ func (o *DrivesResourceInner) HasBlocksize() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBlocksize gets a reference to the given int64 and assigns it to the Blocksize field.
 func (o *DrivesResourceInner) SetBlocksize(v int64) {
+=======
+// SetBlocksize gets a reference to the given int32 and assigns it to the Blocksize field.
+func (o *DrivesResourceInner) SetBlocksize(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Blocksize = &v
 }
 
 // GetContainerIndex returns the ContainerIndex field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetContainerIndex() int64 {
 	if o == nil || IsNil(o.ContainerIndex) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetContainerIndex() int32 {
+	if o == nil || IsNil(o.ContainerIndex) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ContainerIndex
@@ -592,7 +852,11 @@ func (o *DrivesResourceInner) GetContainerIndex() int64 {
 
 // GetContainerIndexOk returns a tuple with the ContainerIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetContainerIndexOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetContainerIndexOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ContainerIndex) {
 		return nil, false
 	}
@@ -608,8 +872,13 @@ func (o *DrivesResourceInner) HasContainerIndex() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetContainerIndex gets a reference to the given int64 and assigns it to the ContainerIndex field.
 func (o *DrivesResourceInner) SetContainerIndex(v int64) {
+=======
+// SetContainerIndex gets a reference to the given int32 and assigns it to the ContainerIndex field.
+func (o *DrivesResourceInner) SetContainerIndex(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ContainerIndex = &v
 }
 
@@ -646,9 +915,15 @@ func (o *DrivesResourceInner) SetCopybackState(v string) {
 }
 
 // GetCopybackStateNumeric returns the CopybackStateNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetCopybackStateNumeric() int64 {
 	if o == nil || IsNil(o.CopybackStateNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetCopybackStateNumeric() int32 {
+	if o == nil || IsNil(o.CopybackStateNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.CopybackStateNumeric
@@ -656,7 +931,11 @@ func (o *DrivesResourceInner) GetCopybackStateNumeric() int64 {
 
 // GetCopybackStateNumericOk returns a tuple with the CopybackStateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetCopybackStateNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetCopybackStateNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.CopybackStateNumeric) {
 		return nil, false
 	}
@@ -672,8 +951,13 @@ func (o *DrivesResourceInner) HasCopybackStateNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetCopybackStateNumeric gets a reference to the given int64 and assigns it to the CopybackStateNumeric field.
 func (o *DrivesResourceInner) SetCopybackStateNumeric(v int64) {
+=======
+// SetCopybackStateNumeric gets a reference to the given int32 and assigns it to the CopybackStateNumeric field.
+func (o *DrivesResourceInner) SetCopybackStateNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.CopybackStateNumeric = &v
 }
 
@@ -742,9 +1026,15 @@ func (o *DrivesResourceInner) SetDescription(v string) {
 }
 
 // GetDescriptionNumeric returns the DescriptionNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetDescriptionNumeric() int64 {
 	if o == nil || IsNil(o.DescriptionNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetDescriptionNumeric() int32 {
+	if o == nil || IsNil(o.DescriptionNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DescriptionNumeric
@@ -752,7 +1042,11 @@ func (o *DrivesResourceInner) GetDescriptionNumeric() int64 {
 
 // GetDescriptionNumericOk returns a tuple with the DescriptionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetDescriptionNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetDescriptionNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DescriptionNumeric) {
 		return nil, false
 	}
@@ -768,15 +1062,26 @@ func (o *DrivesResourceInner) HasDescriptionNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDescriptionNumeric gets a reference to the given int64 and assigns it to the DescriptionNumeric field.
 func (o *DrivesResourceInner) SetDescriptionNumeric(v int64) {
+=======
+// SetDescriptionNumeric gets a reference to the given int32 and assigns it to the DescriptionNumeric field.
+func (o *DrivesResourceInner) SetDescriptionNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DescriptionNumeric = &v
 }
 
 // GetDiskDsdCount returns the DiskDsdCount field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetDiskDsdCount() int64 {
 	if o == nil || IsNil(o.DiskDsdCount) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetDiskDsdCount() int32 {
+	if o == nil || IsNil(o.DiskDsdCount) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DiskDsdCount
@@ -784,7 +1089,11 @@ func (o *DrivesResourceInner) GetDiskDsdCount() int64 {
 
 // GetDiskDsdCountOk returns a tuple with the DiskDsdCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetDiskDsdCountOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetDiskDsdCountOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DiskDsdCount) {
 		return nil, false
 	}
@@ -800,8 +1109,13 @@ func (o *DrivesResourceInner) HasDiskDsdCount() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskDsdCount gets a reference to the given int64 and assigns it to the DiskDsdCount field.
 func (o *DrivesResourceInner) SetDiskDsdCount(v int64) {
+=======
+// SetDiskDsdCount gets a reference to the given int32 and assigns it to the DiskDsdCount field.
+func (o *DrivesResourceInner) SetDiskDsdCount(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DiskDsdCount = &v
 }
 
@@ -838,9 +1152,15 @@ func (o *DrivesResourceInner) SetDiskGroup(v string) {
 }
 
 // GetDrawerId returns the DrawerId field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetDrawerId() int64 {
 	if o == nil || IsNil(o.DrawerId) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetDrawerId() int32 {
+	if o == nil || IsNil(o.DrawerId) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DrawerId
@@ -848,7 +1168,11 @@ func (o *DrivesResourceInner) GetDrawerId() int64 {
 
 // GetDrawerIdOk returns a tuple with the DrawerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetDrawerIdOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetDrawerIdOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DrawerId) {
 		return nil, false
 	}
@@ -864,15 +1188,26 @@ func (o *DrivesResourceInner) HasDrawerId() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDrawerId gets a reference to the given int64 and assigns it to the DrawerId field.
 func (o *DrivesResourceInner) SetDrawerId(v int64) {
+=======
+// SetDrawerId gets a reference to the given int32 and assigns it to the DrawerId field.
+func (o *DrivesResourceInner) SetDrawerId(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DrawerId = &v
 }
 
 // GetDriveDownCode returns the DriveDownCode field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetDriveDownCode() int64 {
 	if o == nil || IsNil(o.DriveDownCode) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetDriveDownCode() int32 {
+	if o == nil || IsNil(o.DriveDownCode) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DriveDownCode
@@ -880,7 +1215,11 @@ func (o *DrivesResourceInner) GetDriveDownCode() int64 {
 
 // GetDriveDownCodeOk returns a tuple with the DriveDownCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetDriveDownCodeOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetDriveDownCodeOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DriveDownCode) {
 		return nil, false
 	}
@@ -896,15 +1235,26 @@ func (o *DrivesResourceInner) HasDriveDownCode() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDriveDownCode gets a reference to the given int64 and assigns it to the DriveDownCode field.
 func (o *DrivesResourceInner) SetDriveDownCode(v int64) {
+=======
+// SetDriveDownCode gets a reference to the given int32 and assigns it to the DriveDownCode field.
+func (o *DrivesResourceInner) SetDriveDownCode(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DriveDownCode = &v
 }
 
 // GetDualPort returns the DualPort field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetDualPort() int64 {
 	if o == nil || IsNil(o.DualPort) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetDualPort() int32 {
+	if o == nil || IsNil(o.DualPort) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DualPort
@@ -912,7 +1262,11 @@ func (o *DrivesResourceInner) GetDualPort() int64 {
 
 // GetDualPortOk returns a tuple with the DualPort field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetDualPortOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetDualPortOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DualPort) {
 		return nil, false
 	}
@@ -928,8 +1282,13 @@ func (o *DrivesResourceInner) HasDualPort() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDualPort gets a reference to the given int64 and assigns it to the DualPort field.
 func (o *DrivesResourceInner) SetDualPort(v int64) {
+=======
+// SetDualPort gets a reference to the given int32 and assigns it to the DualPort field.
+func (o *DrivesResourceInner) SetDualPort(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DualPort = &v
 }
 
@@ -966,9 +1325,15 @@ func (o *DrivesResourceInner) SetDurableId(v string) {
 }
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetEnclosureId() int64 {
 	if o == nil || IsNil(o.EnclosureId) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetEnclosureId() int32 {
+	if o == nil || IsNil(o.EnclosureId) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.EnclosureId
@@ -976,7 +1341,11 @@ func (o *DrivesResourceInner) GetEnclosureId() int64 {
 
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetEnclosureIdOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetEnclosureIdOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.EnclosureId) {
 		return nil, false
 	}
@@ -992,8 +1361,13 @@ func (o *DrivesResourceInner) HasEnclosureId() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetEnclosureId gets a reference to the given int64 and assigns it to the EnclosureId field.
 func (o *DrivesResourceInner) SetEnclosureId(v int64) {
+=======
+// SetEnclosureId gets a reference to the given int32 and assigns it to the EnclosureId field.
+func (o *DrivesResourceInner) SetEnclosureId(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.EnclosureId = &v
 }
 
@@ -1062,9 +1436,15 @@ func (o *DrivesResourceInner) SetEnclosuresUrl(v string) {
 }
 
 // GetError returns the Error field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetError() int64 {
 	if o == nil || IsNil(o.Error) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetError() int32 {
+	if o == nil || IsNil(o.Error) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Error
@@ -1072,7 +1452,11 @@ func (o *DrivesResourceInner) GetError() int64 {
 
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetErrorOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetErrorOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Error) {
 		return nil, false
 	}
@@ -1088,15 +1472,26 @@ func (o *DrivesResourceInner) HasError() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetError gets a reference to the given int64 and assigns it to the Error field.
 func (o *DrivesResourceInner) SetError(v int64) {
+=======
+// SetError gets a reference to the given int32 and assigns it to the Error field.
+func (o *DrivesResourceInner) SetError(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Error = &v
 }
 
 // GetExtendedStatus returns the ExtendedStatus field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetExtendedStatus() int64 {
 	if o == nil || IsNil(o.ExtendedStatus) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetExtendedStatus() int32 {
+	if o == nil || IsNil(o.ExtendedStatus) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ExtendedStatus
@@ -1104,7 +1499,11 @@ func (o *DrivesResourceInner) GetExtendedStatus() int64 {
 
 // GetExtendedStatusOk returns a tuple with the ExtendedStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetExtendedStatusOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetExtendedStatusOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ExtendedStatus) {
 		return nil, false
 	}
@@ -1120,15 +1519,26 @@ func (o *DrivesResourceInner) HasExtendedStatus() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetExtendedStatus gets a reference to the given int64 and assigns it to the ExtendedStatus field.
 func (o *DrivesResourceInner) SetExtendedStatus(v int64) {
+=======
+// SetExtendedStatus gets a reference to the given int32 and assigns it to the ExtendedStatus field.
+func (o *DrivesResourceInner) SetExtendedStatus(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ExtendedStatus = &v
 }
 
 // GetFcP1Channel returns the FcP1Channel field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP1Channel() int64 {
 	if o == nil || IsNil(o.FcP1Channel) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetFcP1Channel() int32 {
+	if o == nil || IsNil(o.FcP1Channel) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FcP1Channel
@@ -1136,7 +1546,11 @@ func (o *DrivesResourceInner) GetFcP1Channel() int64 {
 
 // GetFcP1ChannelOk returns a tuple with the FcP1Channel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP1ChannelOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetFcP1ChannelOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FcP1Channel) {
 		return nil, false
 	}
@@ -1152,15 +1566,26 @@ func (o *DrivesResourceInner) HasFcP1Channel() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFcP1Channel gets a reference to the given int64 and assigns it to the FcP1Channel field.
 func (o *DrivesResourceInner) SetFcP1Channel(v int64) {
+=======
+// SetFcP1Channel gets a reference to the given int32 and assigns it to the FcP1Channel field.
+func (o *DrivesResourceInner) SetFcP1Channel(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FcP1Channel = &v
 }
 
 // GetFcP1DeviceId returns the FcP1DeviceId field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP1DeviceId() int64 {
 	if o == nil || IsNil(o.FcP1DeviceId) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetFcP1DeviceId() int32 {
+	if o == nil || IsNil(o.FcP1DeviceId) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FcP1DeviceId
@@ -1168,7 +1593,11 @@ func (o *DrivesResourceInner) GetFcP1DeviceId() int64 {
 
 // GetFcP1DeviceIdOk returns a tuple with the FcP1DeviceId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP1DeviceIdOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetFcP1DeviceIdOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FcP1DeviceId) {
 		return nil, false
 	}
@@ -1184,8 +1613,13 @@ func (o *DrivesResourceInner) HasFcP1DeviceId() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFcP1DeviceId gets a reference to the given int64 and assigns it to the FcP1DeviceId field.
 func (o *DrivesResourceInner) SetFcP1DeviceId(v int64) {
+=======
+// SetFcP1DeviceId gets a reference to the given int32 and assigns it to the FcP1DeviceId field.
+func (o *DrivesResourceInner) SetFcP1DeviceId(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FcP1DeviceId = &v
 }
 
@@ -1254,9 +1688,15 @@ func (o *DrivesResourceInner) SetFcP1PortWwn(v string) {
 }
 
 // GetFcP1UnitNumber returns the FcP1UnitNumber field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP1UnitNumber() int64 {
 	if o == nil || IsNil(o.FcP1UnitNumber) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetFcP1UnitNumber() int32 {
+	if o == nil || IsNil(o.FcP1UnitNumber) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FcP1UnitNumber
@@ -1264,7 +1704,11 @@ func (o *DrivesResourceInner) GetFcP1UnitNumber() int64 {
 
 // GetFcP1UnitNumberOk returns a tuple with the FcP1UnitNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP1UnitNumberOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetFcP1UnitNumberOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FcP1UnitNumber) {
 		return nil, false
 	}
@@ -1280,15 +1724,26 @@ func (o *DrivesResourceInner) HasFcP1UnitNumber() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFcP1UnitNumber gets a reference to the given int64 and assigns it to the FcP1UnitNumber field.
 func (o *DrivesResourceInner) SetFcP1UnitNumber(v int64) {
+=======
+// SetFcP1UnitNumber gets a reference to the given int32 and assigns it to the FcP1UnitNumber field.
+func (o *DrivesResourceInner) SetFcP1UnitNumber(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FcP1UnitNumber = &v
 }
 
 // GetFcP2Channel returns the FcP2Channel field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP2Channel() int64 {
 	if o == nil || IsNil(o.FcP2Channel) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetFcP2Channel() int32 {
+	if o == nil || IsNil(o.FcP2Channel) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FcP2Channel
@@ -1296,7 +1751,11 @@ func (o *DrivesResourceInner) GetFcP2Channel() int64 {
 
 // GetFcP2ChannelOk returns a tuple with the FcP2Channel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP2ChannelOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetFcP2ChannelOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FcP2Channel) {
 		return nil, false
 	}
@@ -1312,15 +1771,26 @@ func (o *DrivesResourceInner) HasFcP2Channel() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFcP2Channel gets a reference to the given int64 and assigns it to the FcP2Channel field.
 func (o *DrivesResourceInner) SetFcP2Channel(v int64) {
+=======
+// SetFcP2Channel gets a reference to the given int32 and assigns it to the FcP2Channel field.
+func (o *DrivesResourceInner) SetFcP2Channel(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FcP2Channel = &v
 }
 
 // GetFcP2DeviceId returns the FcP2DeviceId field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP2DeviceId() int64 {
 	if o == nil || IsNil(o.FcP2DeviceId) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetFcP2DeviceId() int32 {
+	if o == nil || IsNil(o.FcP2DeviceId) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FcP2DeviceId
@@ -1328,7 +1798,11 @@ func (o *DrivesResourceInner) GetFcP2DeviceId() int64 {
 
 // GetFcP2DeviceIdOk returns a tuple with the FcP2DeviceId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP2DeviceIdOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetFcP2DeviceIdOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FcP2DeviceId) {
 		return nil, false
 	}
@@ -1344,8 +1818,13 @@ func (o *DrivesResourceInner) HasFcP2DeviceId() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFcP2DeviceId gets a reference to the given int64 and assigns it to the FcP2DeviceId field.
 func (o *DrivesResourceInner) SetFcP2DeviceId(v int64) {
+=======
+// SetFcP2DeviceId gets a reference to the given int32 and assigns it to the FcP2DeviceId field.
+func (o *DrivesResourceInner) SetFcP2DeviceId(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FcP2DeviceId = &v
 }
 
@@ -1414,9 +1893,15 @@ func (o *DrivesResourceInner) SetFcP2PortWwn(v string) {
 }
 
 // GetFcP2UnitNumber returns the FcP2UnitNumber field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP2UnitNumber() int64 {
 	if o == nil || IsNil(o.FcP2UnitNumber) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetFcP2UnitNumber() int32 {
+	if o == nil || IsNil(o.FcP2UnitNumber) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FcP2UnitNumber
@@ -1424,7 +1909,11 @@ func (o *DrivesResourceInner) GetFcP2UnitNumber() int64 {
 
 // GetFcP2UnitNumberOk returns a tuple with the FcP2UnitNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFcP2UnitNumberOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetFcP2UnitNumberOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FcP2UnitNumber) {
 		return nil, false
 	}
@@ -1440,8 +1929,13 @@ func (o *DrivesResourceInner) HasFcP2UnitNumber() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFcP2UnitNumber gets a reference to the given int64 and assigns it to the FcP2UnitNumber field.
 func (o *DrivesResourceInner) SetFcP2UnitNumber(v int64) {
+=======
+// SetFcP2UnitNumber gets a reference to the given int32 and assigns it to the FcP2UnitNumber field.
+func (o *DrivesResourceInner) SetFcP2UnitNumber(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FcP2UnitNumber = &v
 }
 
@@ -1478,9 +1972,15 @@ func (o *DrivesResourceInner) SetFdeConfigTime(v string) {
 }
 
 // GetFdeConfigTimeNumeric returns the FdeConfigTimeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFdeConfigTimeNumeric() int64 {
 	if o == nil || IsNil(o.FdeConfigTimeNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetFdeConfigTimeNumeric() int32 {
+	if o == nil || IsNil(o.FdeConfigTimeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FdeConfigTimeNumeric
@@ -1488,7 +1988,11 @@ func (o *DrivesResourceInner) GetFdeConfigTimeNumeric() int64 {
 
 // GetFdeConfigTimeNumericOk returns a tuple with the FdeConfigTimeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFdeConfigTimeNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetFdeConfigTimeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FdeConfigTimeNumeric) {
 		return nil, false
 	}
@@ -1504,8 +2008,13 @@ func (o *DrivesResourceInner) HasFdeConfigTimeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFdeConfigTimeNumeric gets a reference to the given int64 and assigns it to the FdeConfigTimeNumeric field.
 func (o *DrivesResourceInner) SetFdeConfigTimeNumeric(v int64) {
+=======
+// SetFdeConfigTimeNumeric gets a reference to the given int32 and assigns it to the FdeConfigTimeNumeric field.
+func (o *DrivesResourceInner) SetFdeConfigTimeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FdeConfigTimeNumeric = &v
 }
 
@@ -1542,9 +2051,15 @@ func (o *DrivesResourceInner) SetFdeState(v string) {
 }
 
 // GetFdeStateNumeric returns the FdeStateNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFdeStateNumeric() int64 {
 	if o == nil || IsNil(o.FdeStateNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetFdeStateNumeric() int32 {
+	if o == nil || IsNil(o.FdeStateNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FdeStateNumeric
@@ -1552,7 +2067,11 @@ func (o *DrivesResourceInner) GetFdeStateNumeric() int64 {
 
 // GetFdeStateNumericOk returns a tuple with the FdeStateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFdeStateNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetFdeStateNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FdeStateNumeric) {
 		return nil, false
 	}
@@ -1568,8 +2087,13 @@ func (o *DrivesResourceInner) HasFdeStateNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFdeStateNumeric gets a reference to the given int64 and assigns it to the FdeStateNumeric field.
 func (o *DrivesResourceInner) SetFdeStateNumeric(v int64) {
+=======
+// SetFdeStateNumeric gets a reference to the given int32 and assigns it to the FdeStateNumeric field.
+func (o *DrivesResourceInner) SetFdeStateNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FdeStateNumeric = &v
 }
 
@@ -1606,9 +2130,15 @@ func (o *DrivesResourceInner) SetFipsCapable(v string) {
 }
 
 // GetFipsCapableNumeric returns the FipsCapableNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFipsCapableNumeric() int64 {
 	if o == nil || IsNil(o.FipsCapableNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetFipsCapableNumeric() int32 {
+	if o == nil || IsNil(o.FipsCapableNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FipsCapableNumeric
@@ -1616,7 +2146,11 @@ func (o *DrivesResourceInner) GetFipsCapableNumeric() int64 {
 
 // GetFipsCapableNumericOk returns a tuple with the FipsCapableNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFipsCapableNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetFipsCapableNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FipsCapableNumeric) {
 		return nil, false
 	}
@@ -1632,8 +2166,13 @@ func (o *DrivesResourceInner) HasFipsCapableNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFipsCapableNumeric gets a reference to the given int64 and assigns it to the FipsCapableNumeric field.
 func (o *DrivesResourceInner) SetFipsCapableNumeric(v int64) {
+=======
+// SetFipsCapableNumeric gets a reference to the given int32 and assigns it to the FipsCapableNumeric field.
+func (o *DrivesResourceInner) SetFipsCapableNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FipsCapableNumeric = &v
 }
 
@@ -1670,9 +2209,15 @@ func (o *DrivesResourceInner) SetFirmwareUpdateStatus(v string) {
 }
 
 // GetFirmwareUpdateStatusNumeric returns the FirmwareUpdateStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumeric() int64 {
 	if o == nil || IsNil(o.FirmwareUpdateStatusNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumeric() int32 {
+	if o == nil || IsNil(o.FirmwareUpdateStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FirmwareUpdateStatusNumeric
@@ -1680,7 +2225,11 @@ func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumeric() int64 {
 
 // GetFirmwareUpdateStatusNumericOk returns a tuple with the FirmwareUpdateStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FirmwareUpdateStatusNumeric) {
 		return nil, false
 	}
@@ -1696,8 +2245,13 @@ func (o *DrivesResourceInner) HasFirmwareUpdateStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFirmwareUpdateStatusNumeric gets a reference to the given int64 and assigns it to the FirmwareUpdateStatusNumeric field.
 func (o *DrivesResourceInner) SetFirmwareUpdateStatusNumeric(v int64) {
+=======
+// SetFirmwareUpdateStatusNumeric gets a reference to the given int32 and assigns it to the FirmwareUpdateStatusNumeric field.
+func (o *DrivesResourceInner) SetFirmwareUpdateStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FirmwareUpdateStatusNumeric = &v
 }
 
@@ -1734,9 +2288,15 @@ func (o *DrivesResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetHealthNumeric() int32 {
+	if o == nil || IsNil(o.HealthNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthNumeric
@@ -1744,7 +2304,11 @@ func (o *DrivesResourceInner) GetHealthNumeric() int64 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetHealthNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetHealthNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -1760,8 +2324,13 @@ func (o *DrivesResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
 func (o *DrivesResourceInner) SetHealthNumeric(v int64) {
+=======
+// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
+func (o *DrivesResourceInner) SetHealthNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthNumeric = &v
 }
 
@@ -1798,9 +2367,15 @@ func (o *DrivesResourceInner) SetHealthReason(v string) {
 }
 
 // GetHealthReasonNumeric returns the HealthReasonNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetHealthReasonNumeric() int64 {
 	if o == nil || IsNil(o.HealthReasonNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetHealthReasonNumeric() int32 {
+	if o == nil || IsNil(o.HealthReasonNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthReasonNumeric
@@ -1808,7 +2383,11 @@ func (o *DrivesResourceInner) GetHealthReasonNumeric() int64 {
 
 // GetHealthReasonNumericOk returns a tuple with the HealthReasonNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetHealthReasonNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetHealthReasonNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthReasonNumeric) {
 		return nil, false
 	}
@@ -1824,8 +2403,13 @@ func (o *DrivesResourceInner) HasHealthReasonNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthReasonNumeric gets a reference to the given int64 and assigns it to the HealthReasonNumeric field.
 func (o *DrivesResourceInner) SetHealthReasonNumeric(v int64) {
+=======
+// SetHealthReasonNumeric gets a reference to the given int32 and assigns it to the HealthReasonNumeric field.
+func (o *DrivesResourceInner) SetHealthReasonNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthReasonNumeric = &v
 }
 
@@ -1862,9 +2446,15 @@ func (o *DrivesResourceInner) SetHealthRecommendation(v string) {
 }
 
 // GetHealthRecommendationNumeric returns the HealthRecommendationNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetHealthRecommendationNumeric() int64 {
 	if o == nil || IsNil(o.HealthRecommendationNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetHealthRecommendationNumeric() int32 {
+	if o == nil || IsNil(o.HealthRecommendationNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthRecommendationNumeric
@@ -1872,7 +2462,11 @@ func (o *DrivesResourceInner) GetHealthRecommendationNumeric() int64 {
 
 // GetHealthRecommendationNumericOk returns a tuple with the HealthRecommendationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetHealthRecommendationNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetHealthRecommendationNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthRecommendationNumeric) {
 		return nil, false
 	}
@@ -1888,8 +2482,13 @@ func (o *DrivesResourceInner) HasHealthRecommendationNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthRecommendationNumeric gets a reference to the given int64 and assigns it to the HealthRecommendationNumeric field.
 func (o *DrivesResourceInner) SetHealthRecommendationNumeric(v int64) {
+=======
+// SetHealthRecommendationNumeric gets a reference to the given int32 and assigns it to the HealthRecommendationNumeric field.
+func (o *DrivesResourceInner) SetHealthRecommendationNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthRecommendationNumeric = &v
 }
 
@@ -1926,9 +2525,15 @@ func (o *DrivesResourceInner) SetImportLockKeyId(v string) {
 }
 
 // GetIndex returns the Index field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetIndex() int64 {
 	if o == nil || IsNil(o.Index) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetIndex() int32 {
+	if o == nil || IsNil(o.Index) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Index
@@ -1936,7 +2541,11 @@ func (o *DrivesResourceInner) GetIndex() int64 {
 
 // GetIndexOk returns a tuple with the Index field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetIndexOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetIndexOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Index) {
 		return nil, false
 	}
@@ -1952,8 +2561,13 @@ func (o *DrivesResourceInner) HasIndex() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetIndex gets a reference to the given int64 and assigns it to the Index field.
 func (o *DrivesResourceInner) SetIndex(v int64) {
+=======
+// SetIndex gets a reference to the given int32 and assigns it to the Index field.
+func (o *DrivesResourceInner) SetIndex(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Index = &v
 }
 
@@ -1990,9 +2604,15 @@ func (o *DrivesResourceInner) SetInterface(v string) {
 }
 
 // GetInterfaceNumeric returns the InterfaceNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetInterfaceNumeric() int64 {
 	if o == nil || IsNil(o.InterfaceNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetInterfaceNumeric() int32 {
+	if o == nil || IsNil(o.InterfaceNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.InterfaceNumeric
@@ -2000,7 +2620,11 @@ func (o *DrivesResourceInner) GetInterfaceNumeric() int64 {
 
 // GetInterfaceNumericOk returns a tuple with the InterfaceNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetInterfaceNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetInterfaceNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.InterfaceNumeric) {
 		return nil, false
 	}
@@ -2016,8 +2640,13 @@ func (o *DrivesResourceInner) HasInterfaceNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetInterfaceNumeric gets a reference to the given int64 and assigns it to the InterfaceNumeric field.
 func (o *DrivesResourceInner) SetInterfaceNumeric(v int64) {
+=======
+// SetInterfaceNumeric gets a reference to the given int32 and assigns it to the InterfaceNumeric field.
+func (o *DrivesResourceInner) SetInterfaceNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.InterfaceNumeric = &v
 }
 
@@ -2054,9 +2683,15 @@ func (o *DrivesResourceInner) SetJobRunning(v string) {
 }
 
 // GetJobRunningNumeric returns the JobRunningNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetJobRunningNumeric() int64 {
 	if o == nil || IsNil(o.JobRunningNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetJobRunningNumeric() int32 {
+	if o == nil || IsNil(o.JobRunningNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.JobRunningNumeric
@@ -2064,7 +2699,11 @@ func (o *DrivesResourceInner) GetJobRunningNumeric() int64 {
 
 // GetJobRunningNumericOk returns a tuple with the JobRunningNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetJobRunningNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetJobRunningNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.JobRunningNumeric) {
 		return nil, false
 	}
@@ -2080,8 +2719,13 @@ func (o *DrivesResourceInner) HasJobRunningNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetJobRunningNumeric gets a reference to the given int64 and assigns it to the JobRunningNumeric field.
 func (o *DrivesResourceInner) SetJobRunningNumeric(v int64) {
+=======
+// SetJobRunningNumeric gets a reference to the given int32 and assigns it to the JobRunningNumeric field.
+func (o *DrivesResourceInner) SetJobRunningNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.JobRunningNumeric = &v
 }
 
@@ -2118,9 +2762,15 @@ func (o *DrivesResourceInner) SetKmipState(v string) {
 }
 
 // GetKmipStateNumeric returns the KmipStateNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetKmipStateNumeric() int64 {
 	if o == nil || IsNil(o.KmipStateNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetKmipStateNumeric() int32 {
+	if o == nil || IsNil(o.KmipStateNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.KmipStateNumeric
@@ -2128,7 +2778,11 @@ func (o *DrivesResourceInner) GetKmipStateNumeric() int64 {
 
 // GetKmipStateNumericOk returns a tuple with the KmipStateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetKmipStateNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetKmipStateNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.KmipStateNumeric) {
 		return nil, false
 	}
@@ -2144,8 +2798,13 @@ func (o *DrivesResourceInner) HasKmipStateNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetKmipStateNumeric gets a reference to the given int64 and assigns it to the KmipStateNumeric field.
 func (o *DrivesResourceInner) SetKmipStateNumeric(v int64) {
+=======
+// SetKmipStateNumeric gets a reference to the given int32 and assigns it to the KmipStateNumeric field.
+func (o *DrivesResourceInner) SetKmipStateNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.KmipStateNumeric = &v
 }
 
@@ -2182,9 +2841,15 @@ func (o *DrivesResourceInner) SetLedStatus(v string) {
 }
 
 // GetLedStatusNumeric returns the LedStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetLedStatusNumeric() int64 {
 	if o == nil || IsNil(o.LedStatusNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetLedStatusNumeric() int32 {
+	if o == nil || IsNil(o.LedStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.LedStatusNumeric
@@ -2192,7 +2857,11 @@ func (o *DrivesResourceInner) GetLedStatusNumeric() int64 {
 
 // GetLedStatusNumericOk returns a tuple with the LedStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetLedStatusNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetLedStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.LedStatusNumeric) {
 		return nil, false
 	}
@@ -2208,8 +2877,13 @@ func (o *DrivesResourceInner) HasLedStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetLedStatusNumeric gets a reference to the given int64 and assigns it to the LedStatusNumeric field.
 func (o *DrivesResourceInner) SetLedStatusNumeric(v int64) {
+=======
+// SetLedStatusNumeric gets a reference to the given int32 and assigns it to the LedStatusNumeric field.
+func (o *DrivesResourceInner) SetLedStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.LedStatusNumeric = &v
 }
 
@@ -2278,9 +2952,15 @@ func (o *DrivesResourceInner) SetLocatorLed(v string) {
 }
 
 // GetLocatorLedNumeric returns the LocatorLedNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetLocatorLedNumeric() int64 {
 	if o == nil || IsNil(o.LocatorLedNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetLocatorLedNumeric() int32 {
+	if o == nil || IsNil(o.LocatorLedNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.LocatorLedNumeric
@@ -2288,7 +2968,11 @@ func (o *DrivesResourceInner) GetLocatorLedNumeric() int64 {
 
 // GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetLocatorLedNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetLocatorLedNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.LocatorLedNumeric) {
 		return nil, false
 	}
@@ -2304,8 +2988,13 @@ func (o *DrivesResourceInner) HasLocatorLedNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetLocatorLedNumeric gets a reference to the given int64 and assigns it to the LocatorLedNumeric field.
 func (o *DrivesResourceInner) SetLocatorLedNumeric(v int64) {
+=======
+// SetLocatorLedNumeric gets a reference to the given int32 and assigns it to the LocatorLedNumeric field.
+func (o *DrivesResourceInner) SetLocatorLedNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.LocatorLedNumeric = &v
 }
 
@@ -2342,9 +3031,15 @@ func (o *DrivesResourceInner) SetLockKeyId(v string) {
 }
 
 // GetMemberIndex returns the MemberIndex field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetMemberIndex() int64 {
 	if o == nil || IsNil(o.MemberIndex) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetMemberIndex() int32 {
+	if o == nil || IsNil(o.MemberIndex) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MemberIndex
@@ -2352,7 +3047,11 @@ func (o *DrivesResourceInner) GetMemberIndex() int64 {
 
 // GetMemberIndexOk returns a tuple with the MemberIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetMemberIndexOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetMemberIndexOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MemberIndex) {
 		return nil, false
 	}
@@ -2368,8 +3067,13 @@ func (o *DrivesResourceInner) HasMemberIndex() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMemberIndex gets a reference to the given int64 and assigns it to the MemberIndex field.
 func (o *DrivesResourceInner) SetMemberIndex(v int64) {
+=======
+// SetMemberIndex gets a reference to the given int32 and assigns it to the MemberIndex field.
+func (o *DrivesResourceInner) SetMemberIndex(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MemberIndex = &v
 }
 
@@ -2406,9 +3110,15 @@ func (o *DrivesResourceInner) SetModel(v string) {
 }
 
 // GetNumDepoppedHeads returns the NumDepoppedHeads field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetNumDepoppedHeads() int64 {
 	if o == nil || IsNil(o.NumDepoppedHeads) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetNumDepoppedHeads() int32 {
+	if o == nil || IsNil(o.NumDepoppedHeads) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.NumDepoppedHeads
@@ -2416,7 +3126,11 @@ func (o *DrivesResourceInner) GetNumDepoppedHeads() int64 {
 
 // GetNumDepoppedHeadsOk returns a tuple with the NumDepoppedHeads field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetNumDepoppedHeadsOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetNumDepoppedHeadsOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.NumDepoppedHeads) {
 		return nil, false
 	}
@@ -2432,15 +3146,26 @@ func (o *DrivesResourceInner) HasNumDepoppedHeads() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetNumDepoppedHeads gets a reference to the given int64 and assigns it to the NumDepoppedHeads field.
 func (o *DrivesResourceInner) SetNumDepoppedHeads(v int64) {
+=======
+// SetNumDepoppedHeads gets a reference to the given int32 and assigns it to the NumDepoppedHeads field.
+func (o *DrivesResourceInner) SetNumDepoppedHeads(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.NumDepoppedHeads = &v
 }
 
 // GetNumberOfIos returns the NumberOfIos field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetNumberOfIos() int64 {
 	if o == nil || IsNil(o.NumberOfIos) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetNumberOfIos() int32 {
+	if o == nil || IsNil(o.NumberOfIos) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.NumberOfIos
@@ -2448,7 +3173,11 @@ func (o *DrivesResourceInner) GetNumberOfIos() int64 {
 
 // GetNumberOfIosOk returns a tuple with the NumberOfIos field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetNumberOfIosOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetNumberOfIosOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.NumberOfIos) {
 		return nil, false
 	}
@@ -2464,8 +3193,13 @@ func (o *DrivesResourceInner) HasNumberOfIos() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetNumberOfIos gets a reference to the given int64 and assigns it to the NumberOfIos field.
 func (o *DrivesResourceInner) SetNumberOfIos(v int64) {
+=======
+// SetNumberOfIos gets a reference to the given int32 and assigns it to the NumberOfIos field.
+func (o *DrivesResourceInner) SetNumberOfIos(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.NumberOfIos = &v
 }
 
@@ -2502,9 +3236,15 @@ func (o *DrivesResourceInner) SetOwner(v string) {
 }
 
 // GetOwnerNumeric returns the OwnerNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetOwnerNumeric() int64 {
 	if o == nil || IsNil(o.OwnerNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetOwnerNumeric() int32 {
+	if o == nil || IsNil(o.OwnerNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.OwnerNumeric
@@ -2512,7 +3252,11 @@ func (o *DrivesResourceInner) GetOwnerNumeric() int64 {
 
 // GetOwnerNumericOk returns a tuple with the OwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetOwnerNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetOwnerNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.OwnerNumeric) {
 		return nil, false
 	}
@@ -2528,8 +3272,13 @@ func (o *DrivesResourceInner) HasOwnerNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetOwnerNumeric gets a reference to the given int64 and assigns it to the OwnerNumeric field.
 func (o *DrivesResourceInner) SetOwnerNumeric(v int64) {
+=======
+// SetOwnerNumeric gets a reference to the given int32 and assigns it to the OwnerNumeric field.
+func (o *DrivesResourceInner) SetOwnerNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.OwnerNumeric = &v
 }
 
@@ -2566,9 +3315,15 @@ func (o *DrivesResourceInner) SetPiFormatted(v string) {
 }
 
 // GetPiFormattedNumeric returns the PiFormattedNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetPiFormattedNumeric() int64 {
 	if o == nil || IsNil(o.PiFormattedNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetPiFormattedNumeric() int32 {
+	if o == nil || IsNil(o.PiFormattedNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PiFormattedNumeric
@@ -2576,7 +3331,11 @@ func (o *DrivesResourceInner) GetPiFormattedNumeric() int64 {
 
 // GetPiFormattedNumericOk returns a tuple with the PiFormattedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetPiFormattedNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetPiFormattedNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PiFormattedNumeric) {
 		return nil, false
 	}
@@ -2592,15 +3351,26 @@ func (o *DrivesResourceInner) HasPiFormattedNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPiFormattedNumeric gets a reference to the given int64 and assigns it to the PiFormattedNumeric field.
 func (o *DrivesResourceInner) SetPiFormattedNumeric(v int64) {
+=======
+// SetPiFormattedNumeric gets a reference to the given int32 and assigns it to the PiFormattedNumeric field.
+func (o *DrivesResourceInner) SetPiFormattedNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PiFormattedNumeric = &v
 }
 
 // GetPort returns the Port field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetPort() int64 {
 	if o == nil || IsNil(o.Port) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetPort() int32 {
+	if o == nil || IsNil(o.Port) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Port
@@ -2608,7 +3378,11 @@ func (o *DrivesResourceInner) GetPort() int64 {
 
 // GetPortOk returns a tuple with the Port field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetPortOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetPortOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Port) {
 		return nil, false
 	}
@@ -2624,15 +3398,26 @@ func (o *DrivesResourceInner) HasPort() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPort gets a reference to the given int64 and assigns it to the Port field.
 func (o *DrivesResourceInner) SetPort(v int64) {
+=======
+// SetPort gets a reference to the given int32 and assigns it to the Port field.
+func (o *DrivesResourceInner) SetPort(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Port = &v
 }
 
 // GetPowerOnHours returns the PowerOnHours field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetPowerOnHours() int64 {
 	if o == nil || IsNil(o.PowerOnHours) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetPowerOnHours() int32 {
+	if o == nil || IsNil(o.PowerOnHours) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PowerOnHours
@@ -2640,7 +3425,11 @@ func (o *DrivesResourceInner) GetPowerOnHours() int64 {
 
 // GetPowerOnHoursOk returns a tuple with the PowerOnHours field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetPowerOnHoursOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetPowerOnHoursOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PowerOnHours) {
 		return nil, false
 	}
@@ -2656,8 +3445,13 @@ func (o *DrivesResourceInner) HasPowerOnHours() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPowerOnHours gets a reference to the given int64 and assigns it to the PowerOnHours field.
 func (o *DrivesResourceInner) SetPowerOnHours(v int64) {
+=======
+// SetPowerOnHours gets a reference to the given int32 and assigns it to the PowerOnHours field.
+func (o *DrivesResourceInner) SetPowerOnHours(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PowerOnHours = &v
 }
 
@@ -2694,9 +3488,15 @@ func (o *DrivesResourceInner) SetReconState(v string) {
 }
 
 // GetReconStateNumeric returns the ReconStateNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetReconStateNumeric() int64 {
 	if o == nil || IsNil(o.ReconStateNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetReconStateNumeric() int32 {
+	if o == nil || IsNil(o.ReconStateNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ReconStateNumeric
@@ -2704,7 +3504,11 @@ func (o *DrivesResourceInner) GetReconStateNumeric() int64 {
 
 // GetReconStateNumericOk returns a tuple with the ReconStateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetReconStateNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetReconStateNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ReconStateNumeric) {
 		return nil, false
 	}
@@ -2720,8 +3524,13 @@ func (o *DrivesResourceInner) HasReconStateNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetReconStateNumeric gets a reference to the given int64 and assigns it to the ReconStateNumeric field.
 func (o *DrivesResourceInner) SetReconStateNumeric(v int64) {
+=======
+// SetReconStateNumeric gets a reference to the given int32 and assigns it to the ReconStateNumeric field.
+func (o *DrivesResourceInner) SetReconStateNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ReconStateNumeric = &v
 }
 
@@ -2758,9 +3567,15 @@ func (o *DrivesResourceInner) SetRemanufacture(v string) {
 }
 
 // GetRemanufactureNumeric returns the RemanufactureNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetRemanufactureNumeric() int64 {
 	if o == nil || IsNil(o.RemanufactureNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetRemanufactureNumeric() int32 {
+	if o == nil || IsNil(o.RemanufactureNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RemanufactureNumeric
@@ -2768,7 +3583,11 @@ func (o *DrivesResourceInner) GetRemanufactureNumeric() int64 {
 
 // GetRemanufactureNumericOk returns a tuple with the RemanufactureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetRemanufactureNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetRemanufactureNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RemanufactureNumeric) {
 		return nil, false
 	}
@@ -2784,8 +3603,13 @@ func (o *DrivesResourceInner) HasRemanufactureNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRemanufactureNumeric gets a reference to the given int64 and assigns it to the RemanufactureNumeric field.
 func (o *DrivesResourceInner) SetRemanufactureNumeric(v int64) {
+=======
+// SetRemanufactureNumeric gets a reference to the given int32 and assigns it to the RemanufactureNumeric field.
+func (o *DrivesResourceInner) SetRemanufactureNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RemanufactureNumeric = &v
 }
 
@@ -2822,9 +3646,15 @@ func (o *DrivesResourceInner) SetRevision(v string) {
 }
 
 // GetRpm returns the Rpm field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetRpm() int64 {
 	if o == nil || IsNil(o.Rpm) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetRpm() int32 {
+	if o == nil || IsNil(o.Rpm) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Rpm
@@ -2832,7 +3662,11 @@ func (o *DrivesResourceInner) GetRpm() int64 {
 
 // GetRpmOk returns a tuple with the Rpm field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetRpmOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetRpmOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Rpm) {
 		return nil, false
 	}
@@ -2848,15 +3682,26 @@ func (o *DrivesResourceInner) HasRpm() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRpm gets a reference to the given int64 and assigns it to the Rpm field.
 func (o *DrivesResourceInner) SetRpm(v int64) {
+=======
+// SetRpm gets a reference to the given int32 and assigns it to the Rpm field.
+func (o *DrivesResourceInner) SetRpm(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Rpm = &v
 }
 
 // GetScsiId returns the ScsiId field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetScsiId() int64 {
 	if o == nil || IsNil(o.ScsiId) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetScsiId() int32 {
+	if o == nil || IsNil(o.ScsiId) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ScsiId
@@ -2864,7 +3709,11 @@ func (o *DrivesResourceInner) GetScsiId() int64 {
 
 // GetScsiIdOk returns a tuple with the ScsiId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetScsiIdOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetScsiIdOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ScsiId) {
 		return nil, false
 	}
@@ -2880,15 +3729,26 @@ func (o *DrivesResourceInner) HasScsiId() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetScsiId gets a reference to the given int64 and assigns it to the ScsiId field.
 func (o *DrivesResourceInner) SetScsiId(v int64) {
+=======
+// SetScsiId gets a reference to the given int32 and assigns it to the ScsiId field.
+func (o *DrivesResourceInner) SetScsiId(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ScsiId = &v
 }
 
 // GetSecondaryChannel returns the SecondaryChannel field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSecondaryChannel() int64 {
 	if o == nil || IsNil(o.SecondaryChannel) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetSecondaryChannel() int32 {
+	if o == nil || IsNil(o.SecondaryChannel) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SecondaryChannel
@@ -2896,7 +3756,11 @@ func (o *DrivesResourceInner) GetSecondaryChannel() int64 {
 
 // GetSecondaryChannelOk returns a tuple with the SecondaryChannel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSecondaryChannelOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetSecondaryChannelOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SecondaryChannel) {
 		return nil, false
 	}
@@ -2912,8 +3776,13 @@ func (o *DrivesResourceInner) HasSecondaryChannel() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSecondaryChannel gets a reference to the given int64 and assigns it to the SecondaryChannel field.
 func (o *DrivesResourceInner) SetSecondaryChannel(v int64) {
+=======
+// SetSecondaryChannel gets a reference to the given int32 and assigns it to the SecondaryChannel field.
+func (o *DrivesResourceInner) SetSecondaryChannel(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SecondaryChannel = &v
 }
 
@@ -2950,9 +3819,15 @@ func (o *DrivesResourceInner) SetSectorFormat(v string) {
 }
 
 // GetSectorFormatNumeric returns the SectorFormatNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSectorFormatNumeric() int64 {
 	if o == nil || IsNil(o.SectorFormatNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetSectorFormatNumeric() int32 {
+	if o == nil || IsNil(o.SectorFormatNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SectorFormatNumeric
@@ -2960,7 +3835,11 @@ func (o *DrivesResourceInner) GetSectorFormatNumeric() int64 {
 
 // GetSectorFormatNumericOk returns a tuple with the SectorFormatNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSectorFormatNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetSectorFormatNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SectorFormatNumeric) {
 		return nil, false
 	}
@@ -2976,8 +3855,13 @@ func (o *DrivesResourceInner) HasSectorFormatNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSectorFormatNumeric gets a reference to the given int64 and assigns it to the SectorFormatNumeric field.
 func (o *DrivesResourceInner) SetSectorFormatNumeric(v int64) {
+=======
+// SetSectorFormatNumeric gets a reference to the given int32 and assigns it to the SectorFormatNumeric field.
+func (o *DrivesResourceInner) SetSectorFormatNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SectorFormatNumeric = &v
 }
 
@@ -3046,9 +3930,15 @@ func (o *DrivesResourceInner) SetSinglePorted(v string) {
 }
 
 // GetSinglePortedNumeric returns the SinglePortedNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSinglePortedNumeric() int64 {
 	if o == nil || IsNil(o.SinglePortedNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetSinglePortedNumeric() int32 {
+	if o == nil || IsNil(o.SinglePortedNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SinglePortedNumeric
@@ -3056,7 +3946,11 @@ func (o *DrivesResourceInner) GetSinglePortedNumeric() int64 {
 
 // GetSinglePortedNumericOk returns a tuple with the SinglePortedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSinglePortedNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetSinglePortedNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SinglePortedNumeric) {
 		return nil, false
 	}
@@ -3072,8 +3966,13 @@ func (o *DrivesResourceInner) HasSinglePortedNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSinglePortedNumeric gets a reference to the given int64 and assigns it to the SinglePortedNumeric field.
 func (o *DrivesResourceInner) SetSinglePortedNumeric(v int64) {
+=======
+// SetSinglePortedNumeric gets a reference to the given int32 and assigns it to the SinglePortedNumeric field.
+func (o *DrivesResourceInner) SetSinglePortedNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SinglePortedNumeric = &v
 }
 
@@ -3110,9 +4009,15 @@ func (o *DrivesResourceInner) SetSize(v string) {
 }
 
 // GetSizeNumeric returns the SizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSizeNumeric() int64 {
 	if o == nil || IsNil(o.SizeNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetSizeNumeric() int32 {
+	if o == nil || IsNil(o.SizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SizeNumeric
@@ -3120,7 +4025,11 @@ func (o *DrivesResourceInner) GetSizeNumeric() int64 {
 
 // GetSizeNumericOk returns a tuple with the SizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSizeNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SizeNumeric) {
 		return nil, false
 	}
@@ -3136,15 +4045,26 @@ func (o *DrivesResourceInner) HasSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSizeNumeric gets a reference to the given int64 and assigns it to the SizeNumeric field.
 func (o *DrivesResourceInner) SetSizeNumeric(v int64) {
+=======
+// SetSizeNumeric gets a reference to the given int32 and assigns it to the SizeNumeric field.
+func (o *DrivesResourceInner) SetSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SizeNumeric = &v
 }
 
 // GetSlot returns the Slot field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSlot() int64 {
 	if o == nil || IsNil(o.Slot) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetSlot() int32 {
+	if o == nil || IsNil(o.Slot) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Slot
@@ -3152,7 +4072,11 @@ func (o *DrivesResourceInner) GetSlot() int64 {
 
 // GetSlotOk returns a tuple with the Slot field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSlotOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetSlotOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Slot) {
 		return nil, false
 	}
@@ -3168,8 +4092,13 @@ func (o *DrivesResourceInner) HasSlot() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSlot gets a reference to the given int64 and assigns it to the Slot field.
 func (o *DrivesResourceInner) SetSlot(v int64) {
+=======
+// SetSlot gets a reference to the given int32 and assigns it to the Slot field.
+func (o *DrivesResourceInner) SetSlot(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Slot = &v
 }
 
@@ -3206,9 +4135,15 @@ func (o *DrivesResourceInner) SetSmart(v string) {
 }
 
 // GetSmartNumeric returns the SmartNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSmartNumeric() int64 {
 	if o == nil || IsNil(o.SmartNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetSmartNumeric() int32 {
+	if o == nil || IsNil(o.SmartNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SmartNumeric
@@ -3216,7 +4151,11 @@ func (o *DrivesResourceInner) GetSmartNumeric() int64 {
 
 // GetSmartNumericOk returns a tuple with the SmartNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSmartNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetSmartNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SmartNumeric) {
 		return nil, false
 	}
@@ -3232,15 +4171,26 @@ func (o *DrivesResourceInner) HasSmartNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSmartNumeric gets a reference to the given int64 and assigns it to the SmartNumeric field.
 func (o *DrivesResourceInner) SetSmartNumeric(v int64) {
+=======
+// SetSmartNumeric gets a reference to the given int32 and assigns it to the SmartNumeric field.
+func (o *DrivesResourceInner) SetSmartNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SmartNumeric = &v
 }
 
 // GetSpeed returns the Speed field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSpeed() int64 {
 	if o == nil || IsNil(o.Speed) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetSpeed() int32 {
+	if o == nil || IsNil(o.Speed) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Speed
@@ -3248,7 +4198,11 @@ func (o *DrivesResourceInner) GetSpeed() int64 {
 
 // GetSpeedOk returns a tuple with the Speed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSpeedOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetSpeedOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Speed) {
 		return nil, false
 	}
@@ -3264,15 +4218,26 @@ func (o *DrivesResourceInner) HasSpeed() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSpeed gets a reference to the given int64 and assigns it to the Speed field.
 func (o *DrivesResourceInner) SetSpeed(v int64) {
+=======
+// SetSpeed gets a reference to the given int32 and assigns it to the Speed field.
+func (o *DrivesResourceInner) SetSpeed(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Speed = &v
 }
 
 // GetSpunDown returns the SpunDown field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSpunDown() int64 {
 	if o == nil || IsNil(o.SpunDown) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetSpunDown() int32 {
+	if o == nil || IsNil(o.SpunDown) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SpunDown
@@ -3280,7 +4245,11 @@ func (o *DrivesResourceInner) GetSpunDown() int64 {
 
 // GetSpunDownOk returns a tuple with the SpunDown field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSpunDownOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetSpunDownOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SpunDown) {
 		return nil, false
 	}
@@ -3296,8 +4265,13 @@ func (o *DrivesResourceInner) HasSpunDown() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSpunDown gets a reference to the given int64 and assigns it to the SpunDown field.
 func (o *DrivesResourceInner) SetSpunDown(v int64) {
+=======
+// SetSpunDown gets a reference to the given int32 and assigns it to the SpunDown field.
+func (o *DrivesResourceInner) SetSpunDown(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SpunDown = &v
 }
 
@@ -3334,9 +4308,15 @@ func (o *DrivesResourceInner) SetSsdLifeLeft(v string) {
 }
 
 // GetSsdLifeLeftNumeric returns the SsdLifeLeftNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSsdLifeLeftNumeric() int64 {
 	if o == nil || IsNil(o.SsdLifeLeftNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetSsdLifeLeftNumeric() int32 {
+	if o == nil || IsNil(o.SsdLifeLeftNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SsdLifeLeftNumeric
@@ -3344,7 +4324,11 @@ func (o *DrivesResourceInner) GetSsdLifeLeftNumeric() int64 {
 
 // GetSsdLifeLeftNumericOk returns a tuple with the SsdLifeLeftNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSsdLifeLeftNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetSsdLifeLeftNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SsdLifeLeftNumeric) {
 		return nil, false
 	}
@@ -3360,8 +4344,13 @@ func (o *DrivesResourceInner) HasSsdLifeLeftNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSsdLifeLeftNumeric gets a reference to the given int64 and assigns it to the SsdLifeLeftNumeric field.
 func (o *DrivesResourceInner) SetSsdLifeLeftNumeric(v int64) {
+=======
+// SetSsdLifeLeftNumeric gets a reference to the given int32 and assigns it to the SsdLifeLeftNumeric field.
+func (o *DrivesResourceInner) SetSsdLifeLeftNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SsdLifeLeftNumeric = &v
 }
 
@@ -3494,9 +4483,15 @@ func (o *DrivesResourceInner) SetStorageTier(v string) {
 }
 
 // GetStorageTierNumeric returns the StorageTierNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetStorageTierNumeric() int64 {
 	if o == nil || IsNil(o.StorageTierNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetStorageTierNumeric() int32 {
+	if o == nil || IsNil(o.StorageTierNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.StorageTierNumeric
@@ -3504,7 +4499,11 @@ func (o *DrivesResourceInner) GetStorageTierNumeric() int64 {
 
 // GetStorageTierNumericOk returns a tuple with the StorageTierNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetStorageTierNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetStorageTierNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.StorageTierNumeric) {
 		return nil, false
 	}
@@ -3520,8 +4519,13 @@ func (o *DrivesResourceInner) HasStorageTierNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetStorageTierNumeric gets a reference to the given int64 and assigns it to the StorageTierNumeric field.
 func (o *DrivesResourceInner) SetStorageTierNumeric(v int64) {
+=======
+// SetStorageTierNumeric gets a reference to the given int32 and assigns it to the StorageTierNumeric field.
+func (o *DrivesResourceInner) SetStorageTierNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.StorageTierNumeric = &v
 }
 
@@ -3558,9 +4562,15 @@ func (o *DrivesResourceInner) SetSupportsUnmap(v string) {
 }
 
 // GetSupportsUnmapNumeric returns the SupportsUnmapNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSupportsUnmapNumeric() int64 {
 	if o == nil || IsNil(o.SupportsUnmapNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetSupportsUnmapNumeric() int32 {
+	if o == nil || IsNil(o.SupportsUnmapNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SupportsUnmapNumeric
@@ -3568,7 +4578,11 @@ func (o *DrivesResourceInner) GetSupportsUnmapNumeric() int64 {
 
 // GetSupportsUnmapNumericOk returns a tuple with the SupportsUnmapNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetSupportsUnmapNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetSupportsUnmapNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SupportsUnmapNumeric) {
 		return nil, false
 	}
@@ -3584,8 +4598,13 @@ func (o *DrivesResourceInner) HasSupportsUnmapNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSupportsUnmapNumeric gets a reference to the given int64 and assigns it to the SupportsUnmapNumeric field.
 func (o *DrivesResourceInner) SetSupportsUnmapNumeric(v int64) {
+=======
+// SetSupportsUnmapNumeric gets a reference to the given int32 and assigns it to the SupportsUnmapNumeric field.
+func (o *DrivesResourceInner) SetSupportsUnmapNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SupportsUnmapNumeric = &v
 }
 
@@ -3622,9 +4641,15 @@ func (o *DrivesResourceInner) SetTemperature(v string) {
 }
 
 // GetTemperatureNumeric returns the TemperatureNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetTemperatureNumeric() int64 {
 	if o == nil || IsNil(o.TemperatureNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetTemperatureNumeric() int32 {
+	if o == nil || IsNil(o.TemperatureNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TemperatureNumeric
@@ -3632,7 +4657,11 @@ func (o *DrivesResourceInner) GetTemperatureNumeric() int64 {
 
 // GetTemperatureNumericOk returns a tuple with the TemperatureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetTemperatureNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetTemperatureNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TemperatureNumeric) {
 		return nil, false
 	}
@@ -3648,8 +4677,13 @@ func (o *DrivesResourceInner) HasTemperatureNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTemperatureNumeric gets a reference to the given int64 and assigns it to the TemperatureNumeric field.
 func (o *DrivesResourceInner) SetTemperatureNumeric(v int64) {
+=======
+// SetTemperatureNumeric gets a reference to the given int32 and assigns it to the TemperatureNumeric field.
+func (o *DrivesResourceInner) SetTemperatureNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TemperatureNumeric = &v
 }
 
@@ -3686,9 +4720,15 @@ func (o *DrivesResourceInner) SetTemperatureStatus(v string) {
 }
 
 // GetTemperatureStatusNumeric returns the TemperatureStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetTemperatureStatusNumeric() int64 {
 	if o == nil || IsNil(o.TemperatureStatusNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetTemperatureStatusNumeric() int32 {
+	if o == nil || IsNil(o.TemperatureStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TemperatureStatusNumeric
@@ -3696,7 +4736,11 @@ func (o *DrivesResourceInner) GetTemperatureStatusNumeric() int64 {
 
 // GetTemperatureStatusNumericOk returns a tuple with the TemperatureStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetTemperatureStatusNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetTemperatureStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TemperatureStatusNumeric) {
 		return nil, false
 	}
@@ -3712,8 +4756,13 @@ func (o *DrivesResourceInner) HasTemperatureStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTemperatureStatusNumeric gets a reference to the given int64 and assigns it to the TemperatureStatusNumeric field.
 func (o *DrivesResourceInner) SetTemperatureStatusNumeric(v int64) {
+=======
+// SetTemperatureStatusNumeric gets a reference to the given int32 and assigns it to the TemperatureStatusNumeric field.
+func (o *DrivesResourceInner) SetTemperatureStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TemperatureStatusNumeric = &v
 }
 
@@ -3750,9 +4799,15 @@ func (o *DrivesResourceInner) SetTotalDataTransferred(v string) {
 }
 
 // GetTotalDataTransferredNumeric returns the TotalDataTransferredNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetTotalDataTransferredNumeric() int64 {
 	if o == nil || IsNil(o.TotalDataTransferredNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetTotalDataTransferredNumeric() int32 {
+	if o == nil || IsNil(o.TotalDataTransferredNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TotalDataTransferredNumeric
@@ -3760,7 +4815,11 @@ func (o *DrivesResourceInner) GetTotalDataTransferredNumeric() int64 {
 
 // GetTotalDataTransferredNumericOk returns a tuple with the TotalDataTransferredNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetTotalDataTransferredNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetTotalDataTransferredNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TotalDataTransferredNumeric) {
 		return nil, false
 	}
@@ -3776,8 +4835,13 @@ func (o *DrivesResourceInner) HasTotalDataTransferredNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTotalDataTransferredNumeric gets a reference to the given int64 and assigns it to the TotalDataTransferredNumeric field.
 func (o *DrivesResourceInner) SetTotalDataTransferredNumeric(v int64) {
+=======
+// SetTotalDataTransferredNumeric gets a reference to the given int32 and assigns it to the TotalDataTransferredNumeric field.
+func (o *DrivesResourceInner) SetTotalDataTransferredNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TotalDataTransferredNumeric = &v
 }
 
@@ -3814,9 +4878,15 @@ func (o *DrivesResourceInner) SetTransferRate(v string) {
 }
 
 // GetTransferRateNumeric returns the TransferRateNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetTransferRateNumeric() int64 {
 	if o == nil || IsNil(o.TransferRateNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetTransferRateNumeric() int32 {
+	if o == nil || IsNil(o.TransferRateNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TransferRateNumeric
@@ -3824,7 +4894,11 @@ func (o *DrivesResourceInner) GetTransferRateNumeric() int64 {
 
 // GetTransferRateNumericOk returns a tuple with the TransferRateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetTransferRateNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetTransferRateNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TransferRateNumeric) {
 		return nil, false
 	}
@@ -3840,8 +4914,13 @@ func (o *DrivesResourceInner) HasTransferRateNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTransferRateNumeric gets a reference to the given int64 and assigns it to the TransferRateNumeric field.
 func (o *DrivesResourceInner) SetTransferRateNumeric(v int64) {
+=======
+// SetTransferRateNumeric gets a reference to the given int32 and assigns it to the TransferRateNumeric field.
+func (o *DrivesResourceInner) SetTransferRateNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TransferRateNumeric = &v
 }
 
@@ -3878,9 +4957,15 @@ func (o *DrivesResourceInner) SetType(v string) {
 }
 
 // GetTypeNumeric returns the TypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetTypeNumeric() int64 {
 	if o == nil || IsNil(o.TypeNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetTypeNumeric() int32 {
+	if o == nil || IsNil(o.TypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TypeNumeric
@@ -3888,7 +4973,11 @@ func (o *DrivesResourceInner) GetTypeNumeric() int64 {
 
 // GetTypeNumericOk returns a tuple with the TypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetTypeNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetTypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TypeNumeric) {
 		return nil, false
 	}
@@ -3904,8 +4993,13 @@ func (o *DrivesResourceInner) HasTypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTypeNumeric gets a reference to the given int64 and assigns it to the TypeNumeric field.
 func (o *DrivesResourceInner) SetTypeNumeric(v int64) {
+=======
+// SetTypeNumeric gets a reference to the given int32 and assigns it to the TypeNumeric field.
+func (o *DrivesResourceInner) SetTypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TypeNumeric = &v
 }
 
@@ -3974,9 +5068,15 @@ func (o *DrivesResourceInner) SetUsage(v string) {
 }
 
 // GetUsageNumeric returns the UsageNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetUsageNumeric() int64 {
 	if o == nil || IsNil(o.UsageNumeric) {
 		var ret int64
+=======
+func (o *DrivesResourceInner) GetUsageNumeric() int32 {
+	if o == nil || IsNil(o.UsageNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.UsageNumeric
@@ -3984,7 +5084,11 @@ func (o *DrivesResourceInner) GetUsageNumeric() int64 {
 
 // GetUsageNumericOk returns a tuple with the UsageNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DrivesResourceInner) GetUsageNumericOk() (*int64, bool) {
+=======
+func (o *DrivesResourceInner) GetUsageNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.UsageNumeric) {
 		return nil, false
 	}
@@ -4000,8 +5104,13 @@ func (o *DrivesResourceInner) HasUsageNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetUsageNumeric gets a reference to the given int64 and assigns it to the UsageNumeric field.
 func (o *DrivesResourceInner) SetUsageNumeric(v int64) {
+=======
+// SetUsageNumeric gets a reference to the given int32 and assigns it to the UsageNumeric field.
+func (o *DrivesResourceInner) SetUsageNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.UsageNumeric = &v
 }
 

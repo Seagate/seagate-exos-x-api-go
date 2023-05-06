@@ -21,24 +21,41 @@ var _ MappedNullable = &ExpandersResourceInner{}
 type ExpandersResourceInner struct {
 	ObjectName  *string `json:"object-name,omitempty"`
 	Meta        *string `json:"meta,omitempty"`
+<<<<<<< HEAD
 	DomId       *int64  `json:"dom-id,omitempty"`
 	DrawerId    *int64  `json:"drawer-id,omitempty"`
 	DurableId   *string `json:"durable-id,omitempty"`
 	EnclosureId *int64  `json:"enclosure-id,omitempty"`
+=======
+	DomId       *int32  `json:"dom-id,omitempty"`
+	DrawerId    *int32  `json:"drawer-id,omitempty"`
+	DurableId   *string `json:"durable-id,omitempty"`
+	EnclosureId *int32  `json:"enclosure-id,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// Extended status (bits)
 	ExtendedStatus *string `json:"extended-status,omitempty"`
 	// Firmware version of the FRU
 	FwRevision           *string `json:"fw-revision,omitempty"`
 	Health               *string `json:"health,omitempty"`
+<<<<<<< HEAD
 	HealthNumeric        *int64  `json:"health-numeric,omitempty"`
+=======
+	HealthNumeric        *int32  `json:"health-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	HealthReason         *string `json:"health-reason,omitempty"`
 	HealthRecommendation *string `json:"health-recommendation,omitempty"`
 	Location             *string `json:"location,omitempty"`
 	Name                 *string `json:"name,omitempty"`
 	PathId               *string `json:"path-id,omitempty"`
+<<<<<<< HEAD
 	PathIdNumeric        *int64  `json:"path-id-numeric,omitempty"`
 	Status               *string `json:"status,omitempty"`
 	StatusNumeric        *int64  `json:"status-numeric,omitempty"`
+=======
+	PathIdNumeric        *int32  `json:"path-id-numeric,omitempty"`
+	Status               *string `json:"status,omitempty"`
+	StatusNumeric        *int32  `json:"status-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 }
 
 // NewExpandersResourceInner instantiates a new ExpandersResourceInner object
@@ -123,9 +140,15 @@ func (o *ExpandersResourceInner) SetMeta(v string) {
 }
 
 // GetDomId returns the DomId field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetDomId() int64 {
 	if o == nil || IsNil(o.DomId) {
 		var ret int64
+=======
+func (o *ExpandersResourceInner) GetDomId() int32 {
+	if o == nil || IsNil(o.DomId) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DomId
@@ -133,7 +156,11 @@ func (o *ExpandersResourceInner) GetDomId() int64 {
 
 // GetDomIdOk returns a tuple with the DomId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetDomIdOk() (*int64, bool) {
+=======
+func (o *ExpandersResourceInner) GetDomIdOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DomId) {
 		return nil, false
 	}
@@ -149,15 +176,26 @@ func (o *ExpandersResourceInner) HasDomId() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDomId gets a reference to the given int64 and assigns it to the DomId field.
 func (o *ExpandersResourceInner) SetDomId(v int64) {
+=======
+// SetDomId gets a reference to the given int32 and assigns it to the DomId field.
+func (o *ExpandersResourceInner) SetDomId(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DomId = &v
 }
 
 // GetDrawerId returns the DrawerId field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetDrawerId() int64 {
 	if o == nil || IsNil(o.DrawerId) {
 		var ret int64
+=======
+func (o *ExpandersResourceInner) GetDrawerId() int32 {
+	if o == nil || IsNil(o.DrawerId) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DrawerId
@@ -165,7 +203,11 @@ func (o *ExpandersResourceInner) GetDrawerId() int64 {
 
 // GetDrawerIdOk returns a tuple with the DrawerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetDrawerIdOk() (*int64, bool) {
+=======
+func (o *ExpandersResourceInner) GetDrawerIdOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DrawerId) {
 		return nil, false
 	}
@@ -181,8 +223,13 @@ func (o *ExpandersResourceInner) HasDrawerId() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDrawerId gets a reference to the given int64 and assigns it to the DrawerId field.
 func (o *ExpandersResourceInner) SetDrawerId(v int64) {
+=======
+// SetDrawerId gets a reference to the given int32 and assigns it to the DrawerId field.
+func (o *ExpandersResourceInner) SetDrawerId(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DrawerId = &v
 }
 
@@ -219,9 +266,15 @@ func (o *ExpandersResourceInner) SetDurableId(v string) {
 }
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetEnclosureId() int64 {
 	if o == nil || IsNil(o.EnclosureId) {
 		var ret int64
+=======
+func (o *ExpandersResourceInner) GetEnclosureId() int32 {
+	if o == nil || IsNil(o.EnclosureId) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.EnclosureId
@@ -229,7 +282,11 @@ func (o *ExpandersResourceInner) GetEnclosureId() int64 {
 
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetEnclosureIdOk() (*int64, bool) {
+=======
+func (o *ExpandersResourceInner) GetEnclosureIdOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.EnclosureId) {
 		return nil, false
 	}
@@ -245,8 +302,13 @@ func (o *ExpandersResourceInner) HasEnclosureId() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetEnclosureId gets a reference to the given int64 and assigns it to the EnclosureId field.
 func (o *ExpandersResourceInner) SetEnclosureId(v int64) {
+=======
+// SetEnclosureId gets a reference to the given int32 and assigns it to the EnclosureId field.
+func (o *ExpandersResourceInner) SetEnclosureId(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.EnclosureId = &v
 }
 
@@ -347,9 +409,15 @@ func (o *ExpandersResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
+=======
+func (o *ExpandersResourceInner) GetHealthNumeric() int32 {
+	if o == nil || IsNil(o.HealthNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthNumeric
@@ -357,7 +425,11 @@ func (o *ExpandersResourceInner) GetHealthNumeric() int64 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetHealthNumericOk() (*int64, bool) {
+=======
+func (o *ExpandersResourceInner) GetHealthNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -373,8 +445,13 @@ func (o *ExpandersResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
 func (o *ExpandersResourceInner) SetHealthNumeric(v int64) {
+=======
+// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
+func (o *ExpandersResourceInner) SetHealthNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthNumeric = &v
 }
 
@@ -539,9 +616,15 @@ func (o *ExpandersResourceInner) SetPathId(v string) {
 }
 
 // GetPathIdNumeric returns the PathIdNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetPathIdNumeric() int64 {
 	if o == nil || IsNil(o.PathIdNumeric) {
 		var ret int64
+=======
+func (o *ExpandersResourceInner) GetPathIdNumeric() int32 {
+	if o == nil || IsNil(o.PathIdNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PathIdNumeric
@@ -549,7 +632,11 @@ func (o *ExpandersResourceInner) GetPathIdNumeric() int64 {
 
 // GetPathIdNumericOk returns a tuple with the PathIdNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetPathIdNumericOk() (*int64, bool) {
+=======
+func (o *ExpandersResourceInner) GetPathIdNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PathIdNumeric) {
 		return nil, false
 	}
@@ -565,8 +652,13 @@ func (o *ExpandersResourceInner) HasPathIdNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPathIdNumeric gets a reference to the given int64 and assigns it to the PathIdNumeric field.
 func (o *ExpandersResourceInner) SetPathIdNumeric(v int64) {
+=======
+// SetPathIdNumeric gets a reference to the given int32 and assigns it to the PathIdNumeric field.
+func (o *ExpandersResourceInner) SetPathIdNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PathIdNumeric = &v
 }
 
@@ -603,9 +695,15 @@ func (o *ExpandersResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
 		var ret int64
+=======
+func (o *ExpandersResourceInner) GetStatusNumeric() int32 {
+	if o == nil || IsNil(o.StatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.StatusNumeric
@@ -613,7 +711,11 @@ func (o *ExpandersResourceInner) GetStatusNumeric() int64 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *ExpandersResourceInner) GetStatusNumericOk() (*int64, bool) {
+=======
+func (o *ExpandersResourceInner) GetStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -629,8 +731,13 @@ func (o *ExpandersResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
 func (o *ExpandersResourceInner) SetStatusNumeric(v int64) {
+=======
+// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
+func (o *ExpandersResourceInner) SetStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.StatusNumeric = &v
 }
 

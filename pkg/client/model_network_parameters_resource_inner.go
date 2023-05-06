@@ -22,6 +22,7 @@ type NetworkParametersResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
 	Meta       *string `json:"meta,omitempty"`
 	// Currently assigned IP version
+<<<<<<< HEAD
 	ActiveVersion *int64 `json:"active-version,omitempty"`
 	// The way in which an IP address should be obtained
 	AddressingMode *string `json:"addressing-mode,omitempty"`
@@ -37,17 +38,42 @@ type NetworkParametersResourceInner struct {
 	Gateway              *string `json:"gateway,omitempty"`
 	Health               *string `json:"health,omitempty"`
 	HealthNumeric        *int64  `json:"health-numeric,omitempty"`
+=======
+	ActiveVersion *int32 `json:"active-version,omitempty"`
+	// The way in which an IP address should be obtained
+	AddressingMode *string `json:"addressing-mode,omitempty"`
+	// The way in which an IP address should be obtained( In numeric form )
+	AddressingModeNumeric  *int32  `json:"addressing-mode-numeric,omitempty"`
+	AutoNegotiation        *string `json:"auto-negotiation,omitempty"`
+	AutoNegotiationNumeric *int32  `json:"auto-negotiation-numeric,omitempty"`
+	// Type of duplex mode that is specified
+	DuplexMode *string `json:"duplex-mode,omitempty"`
+	// Type of duplex mode that is specified( In numeric form )
+	DuplexModeNumeric    *int32  `json:"duplex-mode-numeric,omitempty"`
+	DurableId            *string `json:"durable-id,omitempty"`
+	Gateway              *string `json:"gateway,omitempty"`
+	Health               *string `json:"health,omitempty"`
+	HealthNumeric        *int32  `json:"health-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	HealthReason         *string `json:"health-reason,omitempty"`
 	HealthRecommendation *string `json:"health-recommendation,omitempty"`
 	IpAddress            *string `json:"ip-address,omitempty"`
 	// Link speed associated with this ethernet port
 	LinkSpeed *string `json:"link-speed,omitempty"`
 	// Link speed associated with this ethernet port( In numeric form )
+<<<<<<< HEAD
 	LinkSpeedNumeric *int64 `json:"link-speed-numeric,omitempty"`
 	// MAC address for the network port
 	MacAddress           *string `json:"mac-address,omitempty"`
 	PingBroadcast        *string `json:"ping-broadcast,omitempty"`
 	PingBroadcastNumeric *int64  `json:"ping-broadcast-numeric,omitempty"`
+=======
+	LinkSpeedNumeric *int32 `json:"link-speed-numeric,omitempty"`
+	// MAC address for the network port
+	MacAddress           *string `json:"mac-address,omitempty"`
+	PingBroadcast        *string `json:"ping-broadcast,omitempty"`
+	PingBroadcastNumeric *int32  `json:"ping-broadcast-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// Network port subnet mask
 	SubnetMask *string `json:"subnet-mask,omitempty"`
 }
@@ -134,9 +160,15 @@ func (o *NetworkParametersResourceInner) SetMeta(v string) {
 }
 
 // GetActiveVersion returns the ActiveVersion field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetActiveVersion() int64 {
 	if o == nil || IsNil(o.ActiveVersion) {
 		var ret int64
+=======
+func (o *NetworkParametersResourceInner) GetActiveVersion() int32 {
+	if o == nil || IsNil(o.ActiveVersion) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ActiveVersion
@@ -144,7 +176,11 @@ func (o *NetworkParametersResourceInner) GetActiveVersion() int64 {
 
 // GetActiveVersionOk returns a tuple with the ActiveVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetActiveVersionOk() (*int64, bool) {
+=======
+func (o *NetworkParametersResourceInner) GetActiveVersionOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ActiveVersion) {
 		return nil, false
 	}
@@ -160,8 +196,13 @@ func (o *NetworkParametersResourceInner) HasActiveVersion() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetActiveVersion gets a reference to the given int64 and assigns it to the ActiveVersion field.
 func (o *NetworkParametersResourceInner) SetActiveVersion(v int64) {
+=======
+// SetActiveVersion gets a reference to the given int32 and assigns it to the ActiveVersion field.
+func (o *NetworkParametersResourceInner) SetActiveVersion(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ActiveVersion = &v
 }
 
@@ -198,9 +239,15 @@ func (o *NetworkParametersResourceInner) SetAddressingMode(v string) {
 }
 
 // GetAddressingModeNumeric returns the AddressingModeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int64 {
 	if o == nil || IsNil(o.AddressingModeNumeric) {
 		var ret int64
+=======
+func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int32 {
+	if o == nil || IsNil(o.AddressingModeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AddressingModeNumeric
@@ -208,7 +255,11 @@ func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int64 {
 
 // GetAddressingModeNumericOk returns a tuple with the AddressingModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetAddressingModeNumericOk() (*int64, bool) {
+=======
+func (o *NetworkParametersResourceInner) GetAddressingModeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AddressingModeNumeric) {
 		return nil, false
 	}
@@ -224,8 +275,13 @@ func (o *NetworkParametersResourceInner) HasAddressingModeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAddressingModeNumeric gets a reference to the given int64 and assigns it to the AddressingModeNumeric field.
 func (o *NetworkParametersResourceInner) SetAddressingModeNumeric(v int64) {
+=======
+// SetAddressingModeNumeric gets a reference to the given int32 and assigns it to the AddressingModeNumeric field.
+func (o *NetworkParametersResourceInner) SetAddressingModeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AddressingModeNumeric = &v
 }
 
@@ -262,9 +318,15 @@ func (o *NetworkParametersResourceInner) SetAutoNegotiation(v string) {
 }
 
 // GetAutoNegotiationNumeric returns the AutoNegotiationNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int64 {
 	if o == nil || IsNil(o.AutoNegotiationNumeric) {
 		var ret int64
+=======
+func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int32 {
+	if o == nil || IsNil(o.AutoNegotiationNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AutoNegotiationNumeric
@@ -272,7 +334,11 @@ func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int64 {
 
 // GetAutoNegotiationNumericOk returns a tuple with the AutoNegotiationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetAutoNegotiationNumericOk() (*int64, bool) {
+=======
+func (o *NetworkParametersResourceInner) GetAutoNegotiationNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AutoNegotiationNumeric) {
 		return nil, false
 	}
@@ -288,8 +354,13 @@ func (o *NetworkParametersResourceInner) HasAutoNegotiationNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAutoNegotiationNumeric gets a reference to the given int64 and assigns it to the AutoNegotiationNumeric field.
 func (o *NetworkParametersResourceInner) SetAutoNegotiationNumeric(v int64) {
+=======
+// SetAutoNegotiationNumeric gets a reference to the given int32 and assigns it to the AutoNegotiationNumeric field.
+func (o *NetworkParametersResourceInner) SetAutoNegotiationNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AutoNegotiationNumeric = &v
 }
 
@@ -326,9 +397,15 @@ func (o *NetworkParametersResourceInner) SetDuplexMode(v string) {
 }
 
 // GetDuplexModeNumeric returns the DuplexModeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int64 {
 	if o == nil || IsNil(o.DuplexModeNumeric) {
 		var ret int64
+=======
+func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int32 {
+	if o == nil || IsNil(o.DuplexModeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DuplexModeNumeric
@@ -336,7 +413,11 @@ func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int64 {
 
 // GetDuplexModeNumericOk returns a tuple with the DuplexModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetDuplexModeNumericOk() (*int64, bool) {
+=======
+func (o *NetworkParametersResourceInner) GetDuplexModeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DuplexModeNumeric) {
 		return nil, false
 	}
@@ -352,8 +433,13 @@ func (o *NetworkParametersResourceInner) HasDuplexModeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDuplexModeNumeric gets a reference to the given int64 and assigns it to the DuplexModeNumeric field.
 func (o *NetworkParametersResourceInner) SetDuplexModeNumeric(v int64) {
+=======
+// SetDuplexModeNumeric gets a reference to the given int32 and assigns it to the DuplexModeNumeric field.
+func (o *NetworkParametersResourceInner) SetDuplexModeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DuplexModeNumeric = &v
 }
 
@@ -454,9 +540,15 @@ func (o *NetworkParametersResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
+=======
+func (o *NetworkParametersResourceInner) GetHealthNumeric() int32 {
+	if o == nil || IsNil(o.HealthNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthNumeric
@@ -464,7 +556,11 @@ func (o *NetworkParametersResourceInner) GetHealthNumeric() int64 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetHealthNumericOk() (*int64, bool) {
+=======
+func (o *NetworkParametersResourceInner) GetHealthNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -480,8 +576,13 @@ func (o *NetworkParametersResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
 func (o *NetworkParametersResourceInner) SetHealthNumeric(v int64) {
+=======
+// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
+func (o *NetworkParametersResourceInner) SetHealthNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthNumeric = &v
 }
 
@@ -614,9 +715,15 @@ func (o *NetworkParametersResourceInner) SetLinkSpeed(v string) {
 }
 
 // GetLinkSpeedNumeric returns the LinkSpeedNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int64 {
 	if o == nil || IsNil(o.LinkSpeedNumeric) {
 		var ret int64
+=======
+func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int32 {
+	if o == nil || IsNil(o.LinkSpeedNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.LinkSpeedNumeric
@@ -624,7 +731,11 @@ func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int64 {
 
 // GetLinkSpeedNumericOk returns a tuple with the LinkSpeedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetLinkSpeedNumericOk() (*int64, bool) {
+=======
+func (o *NetworkParametersResourceInner) GetLinkSpeedNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.LinkSpeedNumeric) {
 		return nil, false
 	}
@@ -640,8 +751,13 @@ func (o *NetworkParametersResourceInner) HasLinkSpeedNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetLinkSpeedNumeric gets a reference to the given int64 and assigns it to the LinkSpeedNumeric field.
 func (o *NetworkParametersResourceInner) SetLinkSpeedNumeric(v int64) {
+=======
+// SetLinkSpeedNumeric gets a reference to the given int32 and assigns it to the LinkSpeedNumeric field.
+func (o *NetworkParametersResourceInner) SetLinkSpeedNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.LinkSpeedNumeric = &v
 }
 
@@ -710,9 +826,15 @@ func (o *NetworkParametersResourceInner) SetPingBroadcast(v string) {
 }
 
 // GetPingBroadcastNumeric returns the PingBroadcastNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int64 {
 	if o == nil || IsNil(o.PingBroadcastNumeric) {
 		var ret int64
+=======
+func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int32 {
+	if o == nil || IsNil(o.PingBroadcastNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PingBroadcastNumeric
@@ -720,7 +842,11 @@ func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int64 {
 
 // GetPingBroadcastNumericOk returns a tuple with the PingBroadcastNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *NetworkParametersResourceInner) GetPingBroadcastNumericOk() (*int64, bool) {
+=======
+func (o *NetworkParametersResourceInner) GetPingBroadcastNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PingBroadcastNumeric) {
 		return nil, false
 	}
@@ -736,8 +862,13 @@ func (o *NetworkParametersResourceInner) HasPingBroadcastNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPingBroadcastNumeric gets a reference to the given int64 and assigns it to the PingBroadcastNumeric field.
 func (o *NetworkParametersResourceInner) SetPingBroadcastNumeric(v int64) {
+=======
+// SetPingBroadcastNumeric gets a reference to the given int32 and assigns it to the PingBroadcastNumeric field.
+func (o *NetworkParametersResourceInner) SetPingBroadcastNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PingBroadcastNumeric = &v
 }
 

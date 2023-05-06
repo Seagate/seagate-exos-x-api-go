@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Meta** | Pointer to **string** |  | [optional] 
 **ConfigurationSerialnumber** | Pointer to **string** |  | [optional] 
 **DashLevel** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **Dc12i** | Pointer to **int64** |  | [optional] 
 **Dc12v** | Pointer to **int64** |  | [optional] 
 **Dc33v** | Pointer to **int64** |  | [optional] 
@@ -18,27 +19,55 @@ Name | Type | Description | Notes
 **DomId** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **EnclosureId** | Pointer to **int64** |  | [optional] 
+=======
+**Dc12i** | Pointer to **int32** |  | [optional] 
+**Dc12v** | Pointer to **int32** |  | [optional] 
+**Dc33v** | Pointer to **int32** |  | [optional] 
+**Dc5i** | Pointer to **int32** |  | [optional] 
+**Dc5v** | Pointer to **int32** |  | [optional] 
+**Dctemp** | Pointer to **int32** |  | [optional] 
+**Description** | Pointer to **string** |  | [optional] 
+**DomId** | Pointer to **int32** |  | [optional] 
+**DurableId** | Pointer to **string** |  | [optional] 
+**EnclosureId** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **EnclosuresUrl** | Pointer to **string** |  | [optional] 
 **FruShortname** | Pointer to **string** |  | [optional] 
 **FwRevision** | Pointer to **string** | Firmware version of the FRU | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **HealthNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**HealthNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **Location** | Pointer to **string** |  | [optional] 
 **MfgDate** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **MfgDateNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**MfgDateNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **MfgLocation** | Pointer to **string** |  | [optional] 
 **MfgVendorId** | Pointer to **string** |  | [optional] 
 **Model** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **PartNumber** | Pointer to **string** |  | [optional] 
 **Position** | Pointer to **string** | Position of the component in the enclosure | [optional] 
+<<<<<<< HEAD
 **PositionNumeric** | Pointer to **int64** | Position of the component in the enclosure( In numeric form ) | [optional] 
 **Revision** | Pointer to **string** | Current revision for this FRU | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 **StatusNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**PositionNumeric** | Pointer to **int32** | Position of the component in the enclosure( In numeric form ) | [optional] 
+**Revision** | Pointer to **string** | Current revision for this FRU | [optional] 
+**SerialNumber** | Pointer to **string** |  | [optional] 
+**Status** | Pointer to **string** |  | [optional] 
+**StatusNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **Vendor** | Pointer to **string** |  | [optional] 
 **Fan** | Pointer to [**[]FanResourceInner**](FanResourceInner.md) |  | [optional] 
@@ -164,20 +193,32 @@ HasDashLevel returns a boolean if a field has been set.
 
 ### GetDc12i
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDc12i() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetDc12i() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDc12i returns the Dc12i field if non-nil, zero value otherwise.
 
 ### GetDc12iOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDc12iOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetDc12iOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDc12iOk returns a tuple with the Dc12i field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDc12i
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetDc12i(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetDc12i(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDc12i sets Dc12i field to given value.
 
@@ -189,20 +230,32 @@ HasDc12i returns a boolean if a field has been set.
 
 ### GetDc12v
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDc12v() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetDc12v() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDc12v returns the Dc12v field if non-nil, zero value otherwise.
 
 ### GetDc12vOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDc12vOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetDc12vOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDc12vOk returns a tuple with the Dc12v field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDc12v
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetDc12v(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetDc12v(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDc12v sets Dc12v field to given value.
 
@@ -214,20 +267,32 @@ HasDc12v returns a boolean if a field has been set.
 
 ### GetDc33v
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDc33v() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetDc33v() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDc33v returns the Dc33v field if non-nil, zero value otherwise.
 
 ### GetDc33vOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDc33vOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetDc33vOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDc33vOk returns a tuple with the Dc33v field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDc33v
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetDc33v(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetDc33v(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDc33v sets Dc33v field to given value.
 
@@ -239,20 +304,32 @@ HasDc33v returns a boolean if a field has been set.
 
 ### GetDc5i
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDc5i() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetDc5i() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDc5i returns the Dc5i field if non-nil, zero value otherwise.
 
 ### GetDc5iOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDc5iOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetDc5iOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDc5iOk returns a tuple with the Dc5i field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDc5i
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetDc5i(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetDc5i(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDc5i sets Dc5i field to given value.
 
@@ -264,20 +341,32 @@ HasDc5i returns a boolean if a field has been set.
 
 ### GetDc5v
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDc5v() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetDc5v() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDc5v returns the Dc5v field if non-nil, zero value otherwise.
 
 ### GetDc5vOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDc5vOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetDc5vOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDc5vOk returns a tuple with the Dc5v field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDc5v
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetDc5v(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetDc5v(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDc5v sets Dc5v field to given value.
 
@@ -289,20 +378,32 @@ HasDc5v returns a boolean if a field has been set.
 
 ### GetDctemp
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDctemp() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetDctemp() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDctemp returns the Dctemp field if non-nil, zero value otherwise.
 
 ### GetDctempOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDctempOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetDctempOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDctempOk returns a tuple with the Dctemp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDctemp
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetDctemp(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetDctemp(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDctemp sets Dctemp field to given value.
 
@@ -339,20 +440,32 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetDomId
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDomId() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetDomId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDomId returns the DomId field if non-nil, zero value otherwise.
 
 ### GetDomIdOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetDomIdOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetDomIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDomIdOk returns a tuple with the DomId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDomId
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetDomId(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetDomId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDomId sets DomId field to given value.
 
@@ -389,20 +502,32 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetEnclosureId
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetEnclosureId() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetEnclosureId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureId returns the EnclosureId field if non-nil, zero value otherwise.
 
 ### GetEnclosureIdOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetEnclosureIdOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetEnclosureIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureIdOk returns a tuple with the EnclosureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureId
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetEnclosureId(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetEnclosureId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetEnclosureId sets EnclosureId field to given value.
 
@@ -514,20 +639,32 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetHealthNumeric() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetHealthNumericOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetHealthNumeric(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -639,20 +776,32 @@ HasMfgDate returns a boolean if a field has been set.
 
 ### GetMfgDateNumeric
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetMfgDateNumeric() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetMfgDateNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMfgDateNumeric returns the MfgDateNumeric field if non-nil, zero value otherwise.
 
 ### GetMfgDateNumericOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetMfgDateNumericOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetMfgDateNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMfgDateNumericOk returns a tuple with the MfgDateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMfgDateNumeric
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetMfgDateNumeric(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetMfgDateNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMfgDateNumeric sets MfgDateNumeric field to given value.
 
@@ -814,20 +963,32 @@ HasPosition returns a boolean if a field has been set.
 
 ### GetPositionNumeric
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetPositionNumeric() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetPositionNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPositionNumeric returns the PositionNumeric field if non-nil, zero value otherwise.
 
 ### GetPositionNumericOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetPositionNumericOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetPositionNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPositionNumericOk returns a tuple with the PositionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPositionNumeric
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetPositionNumeric(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetPositionNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPositionNumeric sets PositionNumeric field to given value.
 
@@ -914,20 +1075,32 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetStatusNumeric() int64`
+=======
+`func (o *PowerSuppliesResourceInner) GetStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) GetStatusNumericOk() (*int64, bool)`
+=======
+`func (o *PowerSuppliesResourceInner) GetStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *PowerSuppliesResourceInner) SetStatusNumeric(v int64)`
+=======
+`func (o *PowerSuppliesResourceInner) SetStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStatusNumeric sets StatusNumeric field to given value.
 

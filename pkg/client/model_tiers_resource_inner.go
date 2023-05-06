@@ -22,6 +22,7 @@ type TiersResourceInner struct {
 	ObjectName           *string `json:"object-name,omitempty"`
 	Meta                 *string `json:"meta,omitempty"`
 	AffinitySize         *string `json:"affinity-size,omitempty"`
+<<<<<<< HEAD
 	AffinitySizeNumeric  *int64  `json:"affinity-size-numeric,omitempty"`
 	AllocatedSize        *string `json:"allocated-size,omitempty"`
 	AllocatedSizeNumeric *int64  `json:"allocated-size-numeric,omitempty"`
@@ -42,6 +43,28 @@ type TiersResourceInner struct {
 	TotalSize *string `json:"total-size,omitempty"`
 	// The total size formatted using the session settings for base, precision, and units( In numeric form )
 	TotalSizeNumeric *int64 `json:"total-size-numeric,omitempty"`
+=======
+	AffinitySizeNumeric  *int32  `json:"affinity-size-numeric,omitempty"`
+	AllocatedSize        *string `json:"allocated-size,omitempty"`
+	AllocatedSizeNumeric *int32  `json:"allocated-size-numeric,omitempty"`
+	AvailableSize        *string `json:"available-size,omitempty"`
+	AvailableSizeNumeric *int32  `json:"available-size-numeric,omitempty"`
+	// Number of disks
+	Diskcount *int32 `json:"diskcount,omitempty"`
+	// Pool
+	Pool *string `json:"pool,omitempty"`
+	// Portion of the virtual pool used by this disk group
+	PoolPercentage *int32  `json:"pool-percentage,omitempty"`
+	RawSize        *string `json:"raw-size,omitempty"`
+	RawSizeNumeric *int32  `json:"raw-size-numeric,omitempty"`
+	SerialNumber   *string `json:"serial-number,omitempty"`
+	Tier           *string `json:"tier,omitempty"`
+	TierNumeric    *int32  `json:"tier-numeric,omitempty"`
+	// The total size formatted using the session settings for base, precision, and units
+	TotalSize *string `json:"total-size,omitempty"`
+	// The total size formatted using the session settings for base, precision, and units( In numeric form )
+	TotalSizeNumeric *int32 `json:"total-size-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 }
 
 // NewTiersResourceInner instantiates a new TiersResourceInner object
@@ -158,9 +181,15 @@ func (o *TiersResourceInner) SetAffinitySize(v string) {
 }
 
 // GetAffinitySizeNumeric returns the AffinitySizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetAffinitySizeNumeric() int64 {
 	if o == nil || IsNil(o.AffinitySizeNumeric) {
 		var ret int64
+=======
+func (o *TiersResourceInner) GetAffinitySizeNumeric() int32 {
+	if o == nil || IsNil(o.AffinitySizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AffinitySizeNumeric
@@ -168,7 +197,11 @@ func (o *TiersResourceInner) GetAffinitySizeNumeric() int64 {
 
 // GetAffinitySizeNumericOk returns a tuple with the AffinitySizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetAffinitySizeNumericOk() (*int64, bool) {
+=======
+func (o *TiersResourceInner) GetAffinitySizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AffinitySizeNumeric) {
 		return nil, false
 	}
@@ -184,8 +217,13 @@ func (o *TiersResourceInner) HasAffinitySizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAffinitySizeNumeric gets a reference to the given int64 and assigns it to the AffinitySizeNumeric field.
 func (o *TiersResourceInner) SetAffinitySizeNumeric(v int64) {
+=======
+// SetAffinitySizeNumeric gets a reference to the given int32 and assigns it to the AffinitySizeNumeric field.
+func (o *TiersResourceInner) SetAffinitySizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AffinitySizeNumeric = &v
 }
 
@@ -222,9 +260,15 @@ func (o *TiersResourceInner) SetAllocatedSize(v string) {
 }
 
 // GetAllocatedSizeNumeric returns the AllocatedSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetAllocatedSizeNumeric() int64 {
 	if o == nil || IsNil(o.AllocatedSizeNumeric) {
 		var ret int64
+=======
+func (o *TiersResourceInner) GetAllocatedSizeNumeric() int32 {
+	if o == nil || IsNil(o.AllocatedSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AllocatedSizeNumeric
@@ -232,7 +276,11 @@ func (o *TiersResourceInner) GetAllocatedSizeNumeric() int64 {
 
 // GetAllocatedSizeNumericOk returns a tuple with the AllocatedSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetAllocatedSizeNumericOk() (*int64, bool) {
+=======
+func (o *TiersResourceInner) GetAllocatedSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AllocatedSizeNumeric) {
 		return nil, false
 	}
@@ -248,8 +296,13 @@ func (o *TiersResourceInner) HasAllocatedSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAllocatedSizeNumeric gets a reference to the given int64 and assigns it to the AllocatedSizeNumeric field.
 func (o *TiersResourceInner) SetAllocatedSizeNumeric(v int64) {
+=======
+// SetAllocatedSizeNumeric gets a reference to the given int32 and assigns it to the AllocatedSizeNumeric field.
+func (o *TiersResourceInner) SetAllocatedSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AllocatedSizeNumeric = &v
 }
 
@@ -286,9 +339,15 @@ func (o *TiersResourceInner) SetAvailableSize(v string) {
 }
 
 // GetAvailableSizeNumeric returns the AvailableSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetAvailableSizeNumeric() int64 {
 	if o == nil || IsNil(o.AvailableSizeNumeric) {
 		var ret int64
+=======
+func (o *TiersResourceInner) GetAvailableSizeNumeric() int32 {
+	if o == nil || IsNil(o.AvailableSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AvailableSizeNumeric
@@ -296,7 +355,11 @@ func (o *TiersResourceInner) GetAvailableSizeNumeric() int64 {
 
 // GetAvailableSizeNumericOk returns a tuple with the AvailableSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetAvailableSizeNumericOk() (*int64, bool) {
+=======
+func (o *TiersResourceInner) GetAvailableSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AvailableSizeNumeric) {
 		return nil, false
 	}
@@ -312,15 +375,26 @@ func (o *TiersResourceInner) HasAvailableSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAvailableSizeNumeric gets a reference to the given int64 and assigns it to the AvailableSizeNumeric field.
 func (o *TiersResourceInner) SetAvailableSizeNumeric(v int64) {
+=======
+// SetAvailableSizeNumeric gets a reference to the given int32 and assigns it to the AvailableSizeNumeric field.
+func (o *TiersResourceInner) SetAvailableSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AvailableSizeNumeric = &v
 }
 
 // GetDiskcount returns the Diskcount field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetDiskcount() int64 {
 	if o == nil || IsNil(o.Diskcount) {
 		var ret int64
+=======
+func (o *TiersResourceInner) GetDiskcount() int32 {
+	if o == nil || IsNil(o.Diskcount) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Diskcount
@@ -328,7 +402,11 @@ func (o *TiersResourceInner) GetDiskcount() int64 {
 
 // GetDiskcountOk returns a tuple with the Diskcount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetDiskcountOk() (*int64, bool) {
+=======
+func (o *TiersResourceInner) GetDiskcountOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Diskcount) {
 		return nil, false
 	}
@@ -344,8 +422,13 @@ func (o *TiersResourceInner) HasDiskcount() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskcount gets a reference to the given int64 and assigns it to the Diskcount field.
 func (o *TiersResourceInner) SetDiskcount(v int64) {
+=======
+// SetDiskcount gets a reference to the given int32 and assigns it to the Diskcount field.
+func (o *TiersResourceInner) SetDiskcount(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Diskcount = &v
 }
 
@@ -382,9 +465,15 @@ func (o *TiersResourceInner) SetPool(v string) {
 }
 
 // GetPoolPercentage returns the PoolPercentage field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetPoolPercentage() int64 {
 	if o == nil || IsNil(o.PoolPercentage) {
 		var ret int64
+=======
+func (o *TiersResourceInner) GetPoolPercentage() int32 {
+	if o == nil || IsNil(o.PoolPercentage) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PoolPercentage
@@ -392,7 +481,11 @@ func (o *TiersResourceInner) GetPoolPercentage() int64 {
 
 // GetPoolPercentageOk returns a tuple with the PoolPercentage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetPoolPercentageOk() (*int64, bool) {
+=======
+func (o *TiersResourceInner) GetPoolPercentageOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PoolPercentage) {
 		return nil, false
 	}
@@ -408,8 +501,13 @@ func (o *TiersResourceInner) HasPoolPercentage() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPoolPercentage gets a reference to the given int64 and assigns it to the PoolPercentage field.
 func (o *TiersResourceInner) SetPoolPercentage(v int64) {
+=======
+// SetPoolPercentage gets a reference to the given int32 and assigns it to the PoolPercentage field.
+func (o *TiersResourceInner) SetPoolPercentage(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PoolPercentage = &v
 }
 
@@ -446,9 +544,15 @@ func (o *TiersResourceInner) SetRawSize(v string) {
 }
 
 // GetRawSizeNumeric returns the RawSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetRawSizeNumeric() int64 {
 	if o == nil || IsNil(o.RawSizeNumeric) {
 		var ret int64
+=======
+func (o *TiersResourceInner) GetRawSizeNumeric() int32 {
+	if o == nil || IsNil(o.RawSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RawSizeNumeric
@@ -456,7 +560,11 @@ func (o *TiersResourceInner) GetRawSizeNumeric() int64 {
 
 // GetRawSizeNumericOk returns a tuple with the RawSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetRawSizeNumericOk() (*int64, bool) {
+=======
+func (o *TiersResourceInner) GetRawSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RawSizeNumeric) {
 		return nil, false
 	}
@@ -472,8 +580,13 @@ func (o *TiersResourceInner) HasRawSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRawSizeNumeric gets a reference to the given int64 and assigns it to the RawSizeNumeric field.
 func (o *TiersResourceInner) SetRawSizeNumeric(v int64) {
+=======
+// SetRawSizeNumeric gets a reference to the given int32 and assigns it to the RawSizeNumeric field.
+func (o *TiersResourceInner) SetRawSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RawSizeNumeric = &v
 }
 
@@ -542,9 +655,15 @@ func (o *TiersResourceInner) SetTier(v string) {
 }
 
 // GetTierNumeric returns the TierNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetTierNumeric() int64 {
 	if o == nil || IsNil(o.TierNumeric) {
 		var ret int64
+=======
+func (o *TiersResourceInner) GetTierNumeric() int32 {
+	if o == nil || IsNil(o.TierNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TierNumeric
@@ -552,7 +671,11 @@ func (o *TiersResourceInner) GetTierNumeric() int64 {
 
 // GetTierNumericOk returns a tuple with the TierNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetTierNumericOk() (*int64, bool) {
+=======
+func (o *TiersResourceInner) GetTierNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TierNumeric) {
 		return nil, false
 	}
@@ -568,8 +691,13 @@ func (o *TiersResourceInner) HasTierNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTierNumeric gets a reference to the given int64 and assigns it to the TierNumeric field.
 func (o *TiersResourceInner) SetTierNumeric(v int64) {
+=======
+// SetTierNumeric gets a reference to the given int32 and assigns it to the TierNumeric field.
+func (o *TiersResourceInner) SetTierNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TierNumeric = &v
 }
 
@@ -606,9 +734,15 @@ func (o *TiersResourceInner) SetTotalSize(v string) {
 }
 
 // GetTotalSizeNumeric returns the TotalSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetTotalSizeNumeric() int64 {
 	if o == nil || IsNil(o.TotalSizeNumeric) {
 		var ret int64
+=======
+func (o *TiersResourceInner) GetTotalSizeNumeric() int32 {
+	if o == nil || IsNil(o.TotalSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TotalSizeNumeric
@@ -616,7 +750,11 @@ func (o *TiersResourceInner) GetTotalSizeNumeric() int64 {
 
 // GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *TiersResourceInner) GetTotalSizeNumericOk() (*int64, bool) {
+=======
+func (o *TiersResourceInner) GetTotalSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TotalSizeNumeric) {
 		return nil, false
 	}
@@ -632,8 +770,13 @@ func (o *TiersResourceInner) HasTotalSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTotalSizeNumeric gets a reference to the given int64 and assigns it to the TotalSizeNumeric field.
 func (o *TiersResourceInner) SetTotalSizeNumeric(v int64) {
+=======
+// SetTotalSizeNumeric gets a reference to the given int32 and assigns it to the TotalSizeNumeric field.
+func (o *TiersResourceInner) SetTotalSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TotalSizeNumeric = &v
 }
 

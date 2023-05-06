@@ -28,9 +28,12 @@ func (c contextKey) String() string {
 }
 
 var (
+<<<<<<< HEAD
 	// ContextBasicAuth takes BasicAuth as authentication for the request.
 	ContextBasicAuth = contextKey("basic")
 
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// ContextServerIndex uses a server configuration from the index.
 	ContextServerIndex = contextKey("serverIndex")
 

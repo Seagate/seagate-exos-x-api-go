@@ -23,7 +23,11 @@ type HostGroupResourceInner struct {
 	Meta       *string `json:"meta,omitempty"`
 	DurableId  *string `json:"durable-id,omitempty"`
 	// Number of members
+<<<<<<< HEAD
 	MemberCount  *int64  `json:"member-count,omitempty"`
+=======
+	MemberCount  *int32  `json:"member-count,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Name         *string `json:"name,omitempty"`
 	SerialNumber *string `json:"serial-number,omitempty"`
 	// The resource URL
@@ -145,9 +149,15 @@ func (o *HostGroupResourceInner) SetDurableId(v string) {
 }
 
 // GetMemberCount returns the MemberCount field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *HostGroupResourceInner) GetMemberCount() int64 {
 	if o == nil || IsNil(o.MemberCount) {
 		var ret int64
+=======
+func (o *HostGroupResourceInner) GetMemberCount() int32 {
+	if o == nil || IsNil(o.MemberCount) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MemberCount
@@ -155,7 +165,11 @@ func (o *HostGroupResourceInner) GetMemberCount() int64 {
 
 // GetMemberCountOk returns a tuple with the MemberCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *HostGroupResourceInner) GetMemberCountOk() (*int64, bool) {
+=======
+func (o *HostGroupResourceInner) GetMemberCountOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MemberCount) {
 		return nil, false
 	}
@@ -171,8 +185,13 @@ func (o *HostGroupResourceInner) HasMemberCount() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMemberCount gets a reference to the given int64 and assigns it to the MemberCount field.
 func (o *HostGroupResourceInner) SetMemberCount(v int64) {
+=======
+// SetMemberCount gets a reference to the given int32 and assigns it to the MemberCount field.
+func (o *HostGroupResourceInner) SetMemberCount(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MemberCount = &v
 }
 

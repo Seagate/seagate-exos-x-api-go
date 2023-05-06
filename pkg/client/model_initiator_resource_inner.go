@@ -24,18 +24,31 @@ type InitiatorResourceInner struct {
 	Discovered         *string `json:"discovered,omitempty"`
 	DurableId          *string `json:"durable-id,omitempty"`
 	HostBusType        *string `json:"host-bus-type,omitempty"`
+<<<<<<< HEAD
 	HostBusTypeNumeric *int64  `json:"host-bus-type-numeric,omitempty"`
 	HostId             *string `json:"host-id,omitempty"`
 	// Durable ID of a Host
 	HostKey       *string `json:"host-key,omitempty"`
 	HostPortBitsA *int64  `json:"host-port-bits-a,omitempty"`
 	HostPortBitsB *int64  `json:"host-port-bits-b,omitempty"`
+=======
+	HostBusTypeNumeric *int32  `json:"host-bus-type-numeric,omitempty"`
+	HostId             *string `json:"host-id,omitempty"`
+	// Durable ID of a Host
+	HostKey       *string `json:"host-key,omitempty"`
+	HostPortBitsA *int32  `json:"host-port-bits-a,omitempty"`
+	HostPortBitsB *int32  `json:"host-port-bits-b,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Id            *string `json:"id,omitempty"`
 	Mapped        *string `json:"mapped,omitempty"`
 	// User-defined alias for the mapped host
 	Nickname       *string `json:"nickname,omitempty"`
 	Profile        *string `json:"profile,omitempty"`
+<<<<<<< HEAD
 	ProfileNumeric *int64  `json:"profile-numeric,omitempty"`
+=======
+	ProfileNumeric *int32  `json:"profile-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// The resource URL
 	Url *string `json:"url,omitempty"`
 }
@@ -218,9 +231,15 @@ func (o *InitiatorResourceInner) SetHostBusType(v string) {
 }
 
 // GetHostBusTypeNumeric returns the HostBusTypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *InitiatorResourceInner) GetHostBusTypeNumeric() int64 {
 	if o == nil || IsNil(o.HostBusTypeNumeric) {
 		var ret int64
+=======
+func (o *InitiatorResourceInner) GetHostBusTypeNumeric() int32 {
+	if o == nil || IsNil(o.HostBusTypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HostBusTypeNumeric
@@ -228,7 +247,11 @@ func (o *InitiatorResourceInner) GetHostBusTypeNumeric() int64 {
 
 // GetHostBusTypeNumericOk returns a tuple with the HostBusTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *InitiatorResourceInner) GetHostBusTypeNumericOk() (*int64, bool) {
+=======
+func (o *InitiatorResourceInner) GetHostBusTypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HostBusTypeNumeric) {
 		return nil, false
 	}
@@ -244,8 +267,13 @@ func (o *InitiatorResourceInner) HasHostBusTypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHostBusTypeNumeric gets a reference to the given int64 and assigns it to the HostBusTypeNumeric field.
 func (o *InitiatorResourceInner) SetHostBusTypeNumeric(v int64) {
+=======
+// SetHostBusTypeNumeric gets a reference to the given int32 and assigns it to the HostBusTypeNumeric field.
+func (o *InitiatorResourceInner) SetHostBusTypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HostBusTypeNumeric = &v
 }
 
@@ -314,9 +342,15 @@ func (o *InitiatorResourceInner) SetHostKey(v string) {
 }
 
 // GetHostPortBitsA returns the HostPortBitsA field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *InitiatorResourceInner) GetHostPortBitsA() int64 {
 	if o == nil || IsNil(o.HostPortBitsA) {
 		var ret int64
+=======
+func (o *InitiatorResourceInner) GetHostPortBitsA() int32 {
+	if o == nil || IsNil(o.HostPortBitsA) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HostPortBitsA
@@ -324,7 +358,11 @@ func (o *InitiatorResourceInner) GetHostPortBitsA() int64 {
 
 // GetHostPortBitsAOk returns a tuple with the HostPortBitsA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *InitiatorResourceInner) GetHostPortBitsAOk() (*int64, bool) {
+=======
+func (o *InitiatorResourceInner) GetHostPortBitsAOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HostPortBitsA) {
 		return nil, false
 	}
@@ -340,15 +378,26 @@ func (o *InitiatorResourceInner) HasHostPortBitsA() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHostPortBitsA gets a reference to the given int64 and assigns it to the HostPortBitsA field.
 func (o *InitiatorResourceInner) SetHostPortBitsA(v int64) {
+=======
+// SetHostPortBitsA gets a reference to the given int32 and assigns it to the HostPortBitsA field.
+func (o *InitiatorResourceInner) SetHostPortBitsA(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HostPortBitsA = &v
 }
 
 // GetHostPortBitsB returns the HostPortBitsB field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *InitiatorResourceInner) GetHostPortBitsB() int64 {
 	if o == nil || IsNil(o.HostPortBitsB) {
 		var ret int64
+=======
+func (o *InitiatorResourceInner) GetHostPortBitsB() int32 {
+	if o == nil || IsNil(o.HostPortBitsB) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HostPortBitsB
@@ -356,7 +405,11 @@ func (o *InitiatorResourceInner) GetHostPortBitsB() int64 {
 
 // GetHostPortBitsBOk returns a tuple with the HostPortBitsB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *InitiatorResourceInner) GetHostPortBitsBOk() (*int64, bool) {
+=======
+func (o *InitiatorResourceInner) GetHostPortBitsBOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HostPortBitsB) {
 		return nil, false
 	}
@@ -372,8 +425,13 @@ func (o *InitiatorResourceInner) HasHostPortBitsB() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHostPortBitsB gets a reference to the given int64 and assigns it to the HostPortBitsB field.
 func (o *InitiatorResourceInner) SetHostPortBitsB(v int64) {
+=======
+// SetHostPortBitsB gets a reference to the given int32 and assigns it to the HostPortBitsB field.
+func (o *InitiatorResourceInner) SetHostPortBitsB(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HostPortBitsB = &v
 }
 
@@ -506,9 +564,15 @@ func (o *InitiatorResourceInner) SetProfile(v string) {
 }
 
 // GetProfileNumeric returns the ProfileNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *InitiatorResourceInner) GetProfileNumeric() int64 {
 	if o == nil || IsNil(o.ProfileNumeric) {
 		var ret int64
+=======
+func (o *InitiatorResourceInner) GetProfileNumeric() int32 {
+	if o == nil || IsNil(o.ProfileNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ProfileNumeric
@@ -516,7 +580,11 @@ func (o *InitiatorResourceInner) GetProfileNumeric() int64 {
 
 // GetProfileNumericOk returns a tuple with the ProfileNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *InitiatorResourceInner) GetProfileNumericOk() (*int64, bool) {
+=======
+func (o *InitiatorResourceInner) GetProfileNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ProfileNumeric) {
 		return nil, false
 	}
@@ -532,8 +600,13 @@ func (o *InitiatorResourceInner) HasProfileNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetProfileNumeric gets a reference to the given int64 and assigns it to the ProfileNumeric field.
 func (o *InitiatorResourceInner) SetProfileNumeric(v int64) {
+=======
+// SetProfileNumeric gets a reference to the given int32 and assigns it to the ProfileNumeric field.
+func (o *InitiatorResourceInner) SetProfileNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ProfileNumeric = &v
 }
 

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **ActualSpeed** | Pointer to **string** | Actual speed for this port | [optional] 
+<<<<<<< HEAD
 **ActualSpeedNumeric** | Pointer to **int64** | Actual speed for this port( In numeric form ) | [optional] 
 **ConfiguredSpeed** | Pointer to **string** |  | [optional] 
 **ConfiguredSpeedNumeric** | Pointer to **int64** |  | [optional] 
@@ -16,11 +17,23 @@ Name | Type | Description | Notes
 **FanOut** | Pointer to **int64** |  | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
 **HealthNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**ActualSpeedNumeric** | Pointer to **int32** | Actual speed for this port( In numeric form ) | [optional] 
+**ConfiguredSpeed** | Pointer to **string** |  | [optional] 
+**ConfiguredSpeedNumeric** | Pointer to **int32** |  | [optional] 
+**Controller** | Pointer to **string** |  | [optional] 
+**ControllerNumeric** | Pointer to **int32** |  | [optional] 
+**DurableId** | Pointer to **string** |  | [optional] 
+**FanOut** | Pointer to **int32** |  | [optional] 
+**Health** | Pointer to **string** |  | [optional] 
+**HealthNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **Media** | Pointer to **string** | Type of connection media used for this port | [optional] 
 **Port** | Pointer to **string** |  | [optional] 
 **PortType** | Pointer to **string** | Port Type (FC, iSCSI, SAS) | [optional] 
+<<<<<<< HEAD
 **PortTypeNumeric** | Pointer to **int64** | Port Type (FC, iSCSI, SAS)( In numeric form ) | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 **StatusNumeric** | Pointer to **int64** |  | [optional] 
@@ -28,6 +41,13 @@ Name | Type | Description | Notes
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **FcPort** | Pointer to [**[]FcPortResourceInner**](FcPortResourceInner.md) |  | [optional] 
 **IscsiPort** | Pointer to [**[]IscsiPortResourceInner**](IscsiPortResourceInner.md) |  | [optional] 
+=======
+**PortTypeNumeric** | Pointer to **int32** | Port Type (FC, iSCSI, SAS)( In numeric form ) | [optional] 
+**Status** | Pointer to **string** |  | [optional] 
+**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**TargetId** | Pointer to **string** | WWPN or IQN of the host port | [optional] 
+**Url** | Pointer to **string** | The resource URL | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **SasPort** | Pointer to [**[]SasPortResourceInner**](SasPortResourceInner.md) |  | [optional] 
 
 ## Methods
@@ -126,20 +146,32 @@ HasActualSpeed returns a boolean if a field has been set.
 
 ### GetActualSpeedNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetActualSpeedNumeric() int64`
+=======
+`func (o *PortResourceInner) GetActualSpeedNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetActualSpeedNumeric returns the ActualSpeedNumeric field if non-nil, zero value otherwise.
 
 ### GetActualSpeedNumericOk
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetActualSpeedNumericOk() (*int64, bool)`
+=======
+`func (o *PortResourceInner) GetActualSpeedNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetActualSpeedNumericOk returns a tuple with the ActualSpeedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetActualSpeedNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) SetActualSpeedNumeric(v int64)`
+=======
+`func (o *PortResourceInner) SetActualSpeedNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetActualSpeedNumeric sets ActualSpeedNumeric field to given value.
 
@@ -176,20 +208,32 @@ HasConfiguredSpeed returns a boolean if a field has been set.
 
 ### GetConfiguredSpeedNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetConfiguredSpeedNumeric() int64`
+=======
+`func (o *PortResourceInner) GetConfiguredSpeedNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetConfiguredSpeedNumeric returns the ConfiguredSpeedNumeric field if non-nil, zero value otherwise.
 
 ### GetConfiguredSpeedNumericOk
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetConfiguredSpeedNumericOk() (*int64, bool)`
+=======
+`func (o *PortResourceInner) GetConfiguredSpeedNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetConfiguredSpeedNumericOk returns a tuple with the ConfiguredSpeedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConfiguredSpeedNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) SetConfiguredSpeedNumeric(v int64)`
+=======
+`func (o *PortResourceInner) SetConfiguredSpeedNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetConfiguredSpeedNumeric sets ConfiguredSpeedNumeric field to given value.
 
@@ -226,20 +270,32 @@ HasController returns a boolean if a field has been set.
 
 ### GetControllerNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetControllerNumeric() int64`
+=======
+`func (o *PortResourceInner) GetControllerNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerNumeric returns the ControllerNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerNumericOk
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetControllerNumericOk() (*int64, bool)`
+=======
+`func (o *PortResourceInner) GetControllerNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerNumericOk returns a tuple with the ControllerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) SetControllerNumeric(v int64)`
+=======
+`func (o *PortResourceInner) SetControllerNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetControllerNumeric sets ControllerNumeric field to given value.
 
@@ -276,20 +332,32 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetFanOut
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetFanOut() int64`
+=======
+`func (o *PortResourceInner) GetFanOut() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFanOut returns the FanOut field if non-nil, zero value otherwise.
 
 ### GetFanOutOk
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetFanOutOk() (*int64, bool)`
+=======
+`func (o *PortResourceInner) GetFanOutOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFanOutOk returns a tuple with the FanOut field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFanOut
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) SetFanOut(v int64)`
+=======
+`func (o *PortResourceInner) SetFanOut(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFanOut sets FanOut field to given value.
 
@@ -326,20 +394,32 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetHealthNumeric() int64`
+=======
+`func (o *PortResourceInner) GetHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetHealthNumericOk() (*int64, bool)`
+=======
+`func (o *PortResourceInner) GetHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) SetHealthNumeric(v int64)`
+=======
+`func (o *PortResourceInner) SetHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -476,20 +556,32 @@ HasPortType returns a boolean if a field has been set.
 
 ### GetPortTypeNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetPortTypeNumeric() int64`
+=======
+`func (o *PortResourceInner) GetPortTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPortTypeNumeric returns the PortTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetPortTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetPortTypeNumericOk() (*int64, bool)`
+=======
+`func (o *PortResourceInner) GetPortTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPortTypeNumericOk returns a tuple with the PortTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPortTypeNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) SetPortTypeNumeric(v int64)`
+=======
+`func (o *PortResourceInner) SetPortTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPortTypeNumeric sets PortTypeNumeric field to given value.
 
@@ -526,20 +618,32 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetStatusNumeric() int64`
+=======
+`func (o *PortResourceInner) GetStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) GetStatusNumericOk() (*int64, bool)`
+=======
+`func (o *PortResourceInner) GetStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *PortResourceInner) SetStatusNumeric(v int64)`
+=======
+`func (o *PortResourceInner) SetStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStatusNumeric sets StatusNumeric field to given value.
 
@@ -599,6 +703,7 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+<<<<<<< HEAD
 ### GetFcPort
 
 `func (o *PortResourceInner) GetFcPort() []FcPortResourceInner`
@@ -649,6 +754,8 @@ SetIscsiPort sets IscsiPort field to given value.
 
 HasIscsiPort returns a boolean if a field has been set.
 
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 ### GetSasPort
 
 `func (o *PortResourceInner) GetSasPort() []SasPortResourceInner`

@@ -11,7 +11,11 @@ package client
 
 import (
 	"context"
+<<<<<<< HEAD
 	openapiclient "github.com/Seagate/seagate-exos-x-api-go/pkg/v2"
+=======
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"

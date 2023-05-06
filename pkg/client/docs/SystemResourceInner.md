@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Meta** | Pointer to **string** |  | [optional] 
 **ConfigurationSelector** | Pointer to **string** |  | [optional] 
 **CurrentNodeWwn** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **EnclosureCount** | Pointer to **int64** |  | [optional] 
 **FdeSecurityStatus** | Pointer to **string** |  | [optional] 
 **FdeSecurityStatusNumeric** | Pointer to **int64** |  | [optional] 
@@ -23,12 +24,33 @@ Name | Type | Description | Notes
 **PlatformBrandNumeric** | Pointer to **int64** | HW Platform Brand( In numeric form ) | [optional] 
 **PlatformType** | Pointer to **string** | HW Platform Type | [optional] 
 **PlatformTypeNumeric** | Pointer to **int64** | HW Platform Type( In numeric form ) | [optional] 
+=======
+**EnclosureCount** | Pointer to **int32** |  | [optional] 
+**FdeSecurityStatus** | Pointer to **string** |  | [optional] 
+**FdeSecurityStatusNumeric** | Pointer to **int32** |  | [optional] 
+**Health** | Pointer to **string** |  | [optional] 
+**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthReason** | Pointer to **string** |  | [optional] 
+**MidplaneSerialNumber** | Pointer to **string** | Serial number of the enclosure | [optional] 
+**OtherMCStatus** | Pointer to **string** | Identifies the availability of the partner MC | [optional] 
+**OtherMCStatusNumeric** | Pointer to **int32** | Identifies the availability of the partner MC( In numeric form ) | [optional] 
+**PfuStatus** | Pointer to **string** |  | [optional] 
+**PfuStatusNumeric** | Pointer to **int32** |  | [optional] 
+**PlatformBrand** | Pointer to **string** | HW Platform Brand | [optional] 
+**PlatformBrandNumeric** | Pointer to **int32** | HW Platform Brand( In numeric form ) | [optional] 
+**PlatformType** | Pointer to **string** | HW Platform Type | [optional] 
+**PlatformTypeNumeric** | Pointer to **int32** | HW Platform Type( In numeric form ) | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **ProductBrand** | Pointer to **string** |  | [optional] 
 **ProductId** | Pointer to **string** |  | [optional] 
 **ScsiProductId** | Pointer to **string** | SCSI Product ID | [optional] 
 **ScsiVendorId** | Pointer to **string** | SCSI vendor name | [optional] 
 **SecuritySystemManagement** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **SecuritySystemManagementNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**SecuritySystemManagementNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **SupportedLocales** | Pointer to **string** |  | [optional] 
 **SystemContact** | Pointer to **string** | User-defined contact for this system | [optional] 
 **SystemInformation** | Pointer to **string** |  | [optional] 
@@ -159,20 +181,32 @@ HasCurrentNodeWwn returns a boolean if a field has been set.
 
 ### GetEnclosureCount
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetEnclosureCount() int64`
+=======
+`func (o *SystemResourceInner) GetEnclosureCount() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureCount returns the EnclosureCount field if non-nil, zero value otherwise.
 
 ### GetEnclosureCountOk
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetEnclosureCountOk() (*int64, bool)`
+=======
+`func (o *SystemResourceInner) GetEnclosureCountOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureCountOk returns a tuple with the EnclosureCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureCount
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) SetEnclosureCount(v int64)`
+=======
+`func (o *SystemResourceInner) SetEnclosureCount(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetEnclosureCount sets EnclosureCount field to given value.
 
@@ -209,20 +243,32 @@ HasFdeSecurityStatus returns a boolean if a field has been set.
 
 ### GetFdeSecurityStatusNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetFdeSecurityStatusNumeric() int64`
+=======
+`func (o *SystemResourceInner) GetFdeSecurityStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFdeSecurityStatusNumeric returns the FdeSecurityStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetFdeSecurityStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetFdeSecurityStatusNumericOk() (*int64, bool)`
+=======
+`func (o *SystemResourceInner) GetFdeSecurityStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFdeSecurityStatusNumericOk returns a tuple with the FdeSecurityStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFdeSecurityStatusNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) SetFdeSecurityStatusNumeric(v int64)`
+=======
+`func (o *SystemResourceInner) SetFdeSecurityStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFdeSecurityStatusNumeric sets FdeSecurityStatusNumeric field to given value.
 
@@ -259,20 +305,32 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetHealthNumeric() int64`
+=======
+`func (o *SystemResourceInner) GetHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetHealthNumericOk() (*int64, bool)`
+=======
+`func (o *SystemResourceInner) GetHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) SetHealthNumeric(v int64)`
+=======
+`func (o *SystemResourceInner) SetHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -359,20 +417,32 @@ HasOtherMCStatus returns a boolean if a field has been set.
 
 ### GetOtherMCStatusNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetOtherMCStatusNumeric() int64`
+=======
+`func (o *SystemResourceInner) GetOtherMCStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOtherMCStatusNumeric returns the OtherMCStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetOtherMCStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetOtherMCStatusNumericOk() (*int64, bool)`
+=======
+`func (o *SystemResourceInner) GetOtherMCStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOtherMCStatusNumericOk returns a tuple with the OtherMCStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOtherMCStatusNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) SetOtherMCStatusNumeric(v int64)`
+=======
+`func (o *SystemResourceInner) SetOtherMCStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetOtherMCStatusNumeric sets OtherMCStatusNumeric field to given value.
 
@@ -409,20 +479,32 @@ HasPfuStatus returns a boolean if a field has been set.
 
 ### GetPfuStatusNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetPfuStatusNumeric() int64`
+=======
+`func (o *SystemResourceInner) GetPfuStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPfuStatusNumeric returns the PfuStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetPfuStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetPfuStatusNumericOk() (*int64, bool)`
+=======
+`func (o *SystemResourceInner) GetPfuStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPfuStatusNumericOk returns a tuple with the PfuStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPfuStatusNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) SetPfuStatusNumeric(v int64)`
+=======
+`func (o *SystemResourceInner) SetPfuStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPfuStatusNumeric sets PfuStatusNumeric field to given value.
 
@@ -459,20 +541,32 @@ HasPlatformBrand returns a boolean if a field has been set.
 
 ### GetPlatformBrandNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetPlatformBrandNumeric() int64`
+=======
+`func (o *SystemResourceInner) GetPlatformBrandNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPlatformBrandNumeric returns the PlatformBrandNumeric field if non-nil, zero value otherwise.
 
 ### GetPlatformBrandNumericOk
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetPlatformBrandNumericOk() (*int64, bool)`
+=======
+`func (o *SystemResourceInner) GetPlatformBrandNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPlatformBrandNumericOk returns a tuple with the PlatformBrandNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlatformBrandNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) SetPlatformBrandNumeric(v int64)`
+=======
+`func (o *SystemResourceInner) SetPlatformBrandNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPlatformBrandNumeric sets PlatformBrandNumeric field to given value.
 
@@ -509,20 +603,32 @@ HasPlatformType returns a boolean if a field has been set.
 
 ### GetPlatformTypeNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetPlatformTypeNumeric() int64`
+=======
+`func (o *SystemResourceInner) GetPlatformTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPlatformTypeNumeric returns the PlatformTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetPlatformTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetPlatformTypeNumericOk() (*int64, bool)`
+=======
+`func (o *SystemResourceInner) GetPlatformTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPlatformTypeNumericOk returns a tuple with the PlatformTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlatformTypeNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) SetPlatformTypeNumeric(v int64)`
+=======
+`func (o *SystemResourceInner) SetPlatformTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPlatformTypeNumeric sets PlatformTypeNumeric field to given value.
 
@@ -659,20 +765,32 @@ HasSecuritySystemManagement returns a boolean if a field has been set.
 
 ### GetSecuritySystemManagementNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetSecuritySystemManagementNumeric() int64`
+=======
+`func (o *SystemResourceInner) GetSecuritySystemManagementNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSecuritySystemManagementNumeric returns the SecuritySystemManagementNumeric field if non-nil, zero value otherwise.
 
 ### GetSecuritySystemManagementNumericOk
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) GetSecuritySystemManagementNumericOk() (*int64, bool)`
+=======
+`func (o *SystemResourceInner) GetSecuritySystemManagementNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSecuritySystemManagementNumericOk returns a tuple with the SecuritySystemManagementNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSecuritySystemManagementNumeric
 
+<<<<<<< HEAD
 `func (o *SystemResourceInner) SetSecuritySystemManagementNumeric(v int64)`
+=======
+`func (o *SystemResourceInner) SetSecuritySystemManagementNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSecuritySystemManagementNumeric sets SecuritySystemManagementNumeric field to given value.
 

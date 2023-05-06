@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **BaseVolume** | Pointer to **string** | The root of the snapshot tree | [optional] 
 **BaseVolumesUrl** | Pointer to **string** | The resource URL of the root of the snapshot tree | [optional] 
 **CreationDateTime** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **CreationDateTimeNumeric** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **MasterVolumeName** | Pointer to **string** | Source volume for snapshots | [optional] 
@@ -39,6 +40,37 @@ Name | Type | Description | Notes
 **TotalSizeNumeric** | Pointer to **int64** | The total size formatted using the session settings for base, precision, and units( In numeric form ) | [optional] 
 **Uniquedata** | Pointer to **string** | Amount of preserved and write data that is unique to the snapshot | [optional] 
 **UniquedataNumeric** | Pointer to **int64** | Amount of preserved and write data that is unique to the snapshot( In numeric form ) | [optional] 
+=======
+**CreationDateTimeNumeric** | Pointer to **int32** |  | [optional] 
+**DurableId** | Pointer to **string** |  | [optional] 
+**MasterVolumeName** | Pointer to **string** | Source volume for snapshots | [optional] 
+**Name** | Pointer to **string** |  | [optional] 
+**NumChildren** | Pointer to **int32** |  | [optional] 
+**NumSnapsTree** | Pointer to **int32** |  | [optional] 
+**PriorityValue** | Pointer to **string** | Attribute priority | [optional] 
+**RetentionPriority** | Pointer to **string** | Retention priority of the snapshot or children | [optional] 
+**RetentionPriorityNumeric** | Pointer to **int32** | Retention priority of the snapshot or children( In numeric form ) | [optional] 
+**SerialNumber** | Pointer to **string** |  | [optional] 
+**Shareddata** | Pointer to **string** |  | [optional] 
+**ShareddataNumeric** | Pointer to **int32** |  | [optional] 
+**SnapData** | Pointer to **string** | Amount of snapshot data associated with this volume | [optional] 
+**SnapDataNumeric** | Pointer to **int32** | Amount of snapshot data associated with this volume( In numeric form ) | [optional] 
+**SnapPoolName** | Pointer to **string** | User-defined name of the snap pool | [optional] 
+**SnapshotType** | Pointer to **string** | Associated snapshot type | [optional] 
+**SnapshotTypeNumeric** | Pointer to **int32** | Associated snapshot type( In numeric form ) | [optional] 
+**Status** | Pointer to **string** |  | [optional] 
+**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**StatusReason** | Pointer to **string** | Probable cause for the current status | [optional] 
+**StatusReasonNumeric** | Pointer to **int32** | Probable cause for the current status( In numeric form ) | [optional] 
+**StoragePoolName** | Pointer to **string** | User-defined name for the pool | [optional] 
+**StoragePoolsUrl** | Pointer to **string** |  | [optional] 
+**StorageType** | Pointer to **string** | Storage type | [optional] 
+**StorageTypeNumeric** | Pointer to **int32** | Storage type( In numeric form ) | [optional] 
+**TotalSize** | Pointer to **string** | The total size formatted using the session settings for base, precision, and units | [optional] 
+**TotalSizeNumeric** | Pointer to **int32** | The total size formatted using the session settings for base, precision, and units( In numeric form ) | [optional] 
+**Uniquedata** | Pointer to **string** | Amount of preserved and write data that is unique to the snapshot | [optional] 
+**UniquedataNumeric** | Pointer to **int32** | Amount of preserved and write data that is unique to the snapshot( In numeric form ) | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **UserPriorityValue** | Pointer to **string** | User-assigned priority | [optional] 
 **VirtualDiskName** | Pointer to **string** | The name of the pool that contains the volume | [optional] 
@@ -215,20 +247,32 @@ HasCreationDateTime returns a boolean if a field has been set.
 
 ### GetCreationDateTimeNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetCreationDateTimeNumeric() int64`
+=======
+`func (o *SnapshotsResourceInner) GetCreationDateTimeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCreationDateTimeNumeric returns the CreationDateTimeNumeric field if non-nil, zero value otherwise.
 
 ### GetCreationDateTimeNumericOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetCreationDateTimeNumericOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetCreationDateTimeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCreationDateTimeNumericOk returns a tuple with the CreationDateTimeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreationDateTimeNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetCreationDateTimeNumeric(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetCreationDateTimeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCreationDateTimeNumeric sets CreationDateTimeNumeric field to given value.
 
@@ -315,20 +359,32 @@ HasName returns a boolean if a field has been set.
 
 ### GetNumChildren
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetNumChildren() int64`
+=======
+`func (o *SnapshotsResourceInner) GetNumChildren() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumChildren returns the NumChildren field if non-nil, zero value otherwise.
 
 ### GetNumChildrenOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetNumChildrenOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetNumChildrenOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumChildrenOk returns a tuple with the NumChildren field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumChildren
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetNumChildren(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetNumChildren(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetNumChildren sets NumChildren field to given value.
 
@@ -340,20 +396,32 @@ HasNumChildren returns a boolean if a field has been set.
 
 ### GetNumSnapsTree
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetNumSnapsTree() int64`
+=======
+`func (o *SnapshotsResourceInner) GetNumSnapsTree() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumSnapsTree returns the NumSnapsTree field if non-nil, zero value otherwise.
 
 ### GetNumSnapsTreeOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetNumSnapsTreeOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetNumSnapsTreeOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumSnapsTreeOk returns a tuple with the NumSnapsTree field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumSnapsTree
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetNumSnapsTree(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetNumSnapsTree(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetNumSnapsTree sets NumSnapsTree field to given value.
 
@@ -415,20 +483,32 @@ HasRetentionPriority returns a boolean if a field has been set.
 
 ### GetRetentionPriorityNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetRetentionPriorityNumeric() int64`
+=======
+`func (o *SnapshotsResourceInner) GetRetentionPriorityNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRetentionPriorityNumeric returns the RetentionPriorityNumeric field if non-nil, zero value otherwise.
 
 ### GetRetentionPriorityNumericOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetRetentionPriorityNumericOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetRetentionPriorityNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRetentionPriorityNumericOk returns a tuple with the RetentionPriorityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRetentionPriorityNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetRetentionPriorityNumeric(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetRetentionPriorityNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRetentionPriorityNumeric sets RetentionPriorityNumeric field to given value.
 
@@ -490,20 +570,32 @@ HasShareddata returns a boolean if a field has been set.
 
 ### GetShareddataNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetShareddataNumeric() int64`
+=======
+`func (o *SnapshotsResourceInner) GetShareddataNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetShareddataNumeric returns the ShareddataNumeric field if non-nil, zero value otherwise.
 
 ### GetShareddataNumericOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetShareddataNumericOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetShareddataNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetShareddataNumericOk returns a tuple with the ShareddataNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetShareddataNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetShareddataNumeric(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetShareddataNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetShareddataNumeric sets ShareddataNumeric field to given value.
 
@@ -540,20 +632,32 @@ HasSnapData returns a boolean if a field has been set.
 
 ### GetSnapDataNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetSnapDataNumeric() int64`
+=======
+`func (o *SnapshotsResourceInner) GetSnapDataNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSnapDataNumeric returns the SnapDataNumeric field if non-nil, zero value otherwise.
 
 ### GetSnapDataNumericOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetSnapDataNumericOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetSnapDataNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSnapDataNumericOk returns a tuple with the SnapDataNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSnapDataNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetSnapDataNumeric(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetSnapDataNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSnapDataNumeric sets SnapDataNumeric field to given value.
 
@@ -615,20 +719,32 @@ HasSnapshotType returns a boolean if a field has been set.
 
 ### GetSnapshotTypeNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetSnapshotTypeNumeric() int64`
+=======
+`func (o *SnapshotsResourceInner) GetSnapshotTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSnapshotTypeNumeric returns the SnapshotTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetSnapshotTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetSnapshotTypeNumericOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetSnapshotTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSnapshotTypeNumericOk returns a tuple with the SnapshotTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSnapshotTypeNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetSnapshotTypeNumeric(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetSnapshotTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSnapshotTypeNumeric sets SnapshotTypeNumeric field to given value.
 
@@ -665,20 +781,32 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetStatusNumeric() int64`
+=======
+`func (o *SnapshotsResourceInner) GetStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetStatusNumericOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetStatusNumeric(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStatusNumeric sets StatusNumeric field to given value.
 
@@ -715,20 +843,32 @@ HasStatusReason returns a boolean if a field has been set.
 
 ### GetStatusReasonNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetStatusReasonNumeric() int64`
+=======
+`func (o *SnapshotsResourceInner) GetStatusReasonNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusReasonNumeric returns the StatusReasonNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusReasonNumericOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetStatusReasonNumericOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetStatusReasonNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusReasonNumericOk returns a tuple with the StatusReasonNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusReasonNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetStatusReasonNumeric(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetStatusReasonNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStatusReasonNumeric sets StatusReasonNumeric field to given value.
 
@@ -815,20 +955,32 @@ HasStorageType returns a boolean if a field has been set.
 
 ### GetStorageTypeNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetStorageTypeNumeric() int64`
+=======
+`func (o *SnapshotsResourceInner) GetStorageTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStorageTypeNumeric returns the StorageTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetStorageTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetStorageTypeNumericOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetStorageTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStorageTypeNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetStorageTypeNumeric(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetStorageTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStorageTypeNumeric sets StorageTypeNumeric field to given value.
 
@@ -865,20 +1017,32 @@ HasTotalSize returns a boolean if a field has been set.
 
 ### GetTotalSizeNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetTotalSizeNumeric() int64`
+=======
+`func (o *SnapshotsResourceInner) GetTotalSizeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTotalSizeNumeric returns the TotalSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetTotalSizeNumericOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetTotalSizeNumericOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetTotalSizeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalSizeNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetTotalSizeNumeric(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetTotalSizeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetTotalSizeNumeric sets TotalSizeNumeric field to given value.
 
@@ -915,20 +1079,32 @@ HasUniquedata returns a boolean if a field has been set.
 
 ### GetUniquedataNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetUniquedataNumeric() int64`
+=======
+`func (o *SnapshotsResourceInner) GetUniquedataNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetUniquedataNumeric returns the UniquedataNumeric field if non-nil, zero value otherwise.
 
 ### GetUniquedataNumericOk
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) GetUniquedataNumericOk() (*int64, bool)`
+=======
+`func (o *SnapshotsResourceInner) GetUniquedataNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetUniquedataNumericOk returns a tuple with the UniquedataNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUniquedataNumeric
 
+<<<<<<< HEAD
 `func (o *SnapshotsResourceInner) SetUniquedataNumeric(v int64)`
+=======
+`func (o *SnapshotsResourceInner) SetUniquedataNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetUniquedataNumeric sets UniquedataNumeric field to given value.
 

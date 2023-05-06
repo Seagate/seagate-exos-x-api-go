@@ -22,6 +22,7 @@ type AdvancedSettingsTableResourceInner struct {
 	ObjectName     *string `json:"object-name,omitempty"`
 	Meta           *string `json:"meta,omitempty"`
 	AutoMap        *string `json:"auto-map,omitempty"`
+<<<<<<< HEAD
 	AutoMapNumeric *int64  `json:"auto-map-numeric,omitempty"`
 	// Provides detection of when hung controllers are preventing IO from completing
 	AutoStallRecovery *string `json:"auto-stall-recovery,omitempty"`
@@ -54,10 +55,45 @@ type AdvancedSettingsTableResourceInner struct {
 	DiskDsdEnableNumeric      *int64  `json:"disk-dsd-enable-numeric,omitempty"`
 	DiskFirmwareUpdate        *string `json:"disk-firmware-update,omitempty"`
 	DiskFirmwareUpdateNumeric *int64  `json:"disk-firmware-update-numeric,omitempty"`
+=======
+	AutoMapNumeric *int32  `json:"auto-map-numeric,omitempty"`
+	// Provides detection of when hung controllers are preventing IO from completing
+	AutoStallRecovery *string `json:"auto-stall-recovery,omitempty"`
+	// Provides detection of when hung controllers are preventing IO from completing( In numeric form )
+	AutoStallRecoveryNumeric *int32  `json:"auto-stall-recovery-numeric,omitempty"`
+	AutoUnmap                *string `json:"auto-unmap,omitempty"`
+	AutoUnmapNumeric         *int32  `json:"auto-unmap-numeric,omitempty"`
+	// Data is cached to memory before being written to disk
+	AutoWriteBack *string `json:"auto-write-back,omitempty"`
+	// Data is cached to memory before being written to disk( In numeric form )
+	AutoWriteBackNumeric *int32 `json:"auto-write-back-numeric,omitempty"`
+	// Low priority disk group scrub
+	BackgroundScrub *string `json:"background-scrub,omitempty"`
+	// Disk group scrub start interval
+	BackgroundScrubInterval *int32 `json:"background-scrub-interval,omitempty"`
+	// Low priority disk group scrub( In numeric form )
+	BackgroundScrubNumeric   *int32  `json:"background-scrub-numeric,omitempty"`
+	CacheFlushTimeout        *string `json:"cache-flush-timeout,omitempty"`
+	CacheFlushTimeoutNumeric *int32  `json:"cache-flush-timeout-numeric,omitempty"`
+	ControllerFailure        *string `json:"controller-failure,omitempty"`
+	ControllerFailureNumeric *int32  `json:"controller-failure-numeric,omitempty"`
+	DefaultMapping           *string `json:"default-mapping,omitempty"`
+	DefaultMappingNumeric    *int32  `json:"default-mapping-numeric,omitempty"`
+	// Bypass checks when deleting a pool.
+	DeleteOverride *string `json:"delete-override,omitempty"`
+	// Bypass checks when deleting a pool.( In numeric form )
+	DeleteOverrideNumeric     *int32  `json:"delete-override-numeric,omitempty"`
+	DiskDsdDelay              *int32  `json:"disk-dsd-delay,omitempty"`
+	DiskDsdEnable             *string `json:"disk-dsd-enable,omitempty"`
+	DiskDsdEnableNumeric      *int32  `json:"disk-dsd-enable-numeric,omitempty"`
+	DiskFirmwareUpdate        *string `json:"disk-firmware-update,omitempty"`
+	DiskFirmwareUpdateNumeric *int32  `json:"disk-firmware-update-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// If enabled, replaces failed disks in a degraded vdisk with properly sized available disks
 	DynamicSpares             *string `json:"dynamic-spares,omitempty"`
 	EmpPollRate               *string `json:"emp-poll-rate,omitempty"`
 	FanFailure                *string `json:"fan-failure,omitempty"`
+<<<<<<< HEAD
 	FanFailureNumeric         *int64  `json:"fan-failure-numeric,omitempty"`
 	HedgedReadsTimeout        *string `json:"hedged-reads-timeout,omitempty"`
 	HedgedReadsTimeoutNumeric *int64  `json:"hedged-reads-timeout-numeric,omitempty"`
@@ -121,6 +157,71 @@ type AdvancedSettingsTableResourceInner struct {
 	UtilityPriority *string `json:"utility-priority,omitempty"`
 	// Configured processing priority for utilities( In numeric form )
 	UtilityPriorityNumeric *int64 `json:"utility-priority-numeric,omitempty"`
+=======
+	FanFailureNumeric         *int32  `json:"fan-failure-numeric,omitempty"`
+	HedgedReadsTimeout        *string `json:"hedged-reads-timeout,omitempty"`
+	HedgedReadsTimeoutNumeric *int32  `json:"hedged-reads-timeout-numeric,omitempty"`
+	// Whether hosts can change the system's write-back cache setting
+	HostCacheControl *string `json:"host-cache-control,omitempty"`
+	// Whether hosts can change the system's write-back cache setting( In numeric form )
+	HostCacheControlNumeric   *int32  `json:"host-cache-control-numeric,omitempty"`
+	IndependentCache          *string `json:"independent-cache,omitempty"`
+	IndependentCacheNumeric   *int32  `json:"independent-cache-numeric,omitempty"`
+	LargePools                *string `json:"large-pools,omitempty"`
+	LargePoolsNumeric         *int32  `json:"large-pools-numeric,omitempty"`
+	ManagedLogs               *string `json:"managed-logs,omitempty"`
+	ManagedLogsNumeric        *int32  `json:"managed-logs-numeric,omitempty"`
+	MemoryCardFailure         *string `json:"memory-card-failure,omitempty"`
+	MemoryCardFailureNumeric  *int32  `json:"memory-card-failure-numeric,omitempty"`
+	MissingLunResponse        *string `json:"missing-lun-response,omitempty"`
+	MissingLunResponseNumeric *int32  `json:"missing-lun-response-numeric,omitempty"`
+	// Indicates whether automated update of firmware of other controller is enabled
+	PartnerFirmwareUpgrade *string `json:"partner-firmware-upgrade,omitempty"`
+	// Indicates whether automated update of firmware of other controller is enabled( In numeric form )
+	PartnerFirmwareUpgradeNumeric *int32 `json:"partner-firmware-upgrade-numeric,omitempty"`
+	// Indicates whether the write-through trigger is enabled
+	PartnerNotify *string `json:"partner-notify,omitempty"`
+	// Indicates whether the write-through trigger is enabled( In numeric form )
+	PartnerNotifyNumeric *int32  `json:"partner-notify-numeric,omitempty"`
+	PcieHotplug          *string `json:"pcie-hotplug,omitempty"`
+	PcieHotplugNumeric   *int32  `json:"pcie-hotplug-numeric,omitempty"`
+	// Indicates whether the write-through trigger is enabled
+	PowerSupplyFailure *string `json:"power-supply-failure,omitempty"`
+	// Indicates whether the write-through trigger is enabled( In numeric form )
+	PowerSupplyFailureNumeric              *int32  `json:"power-supply-failure-numeric,omitempty"`
+	RandomIoPerformanceOptimization        *string `json:"random-io-performance-optimization,omitempty"`
+	RandomIoPerformanceOptimizationNumeric *int32  `json:"random-io-performance-optimization-numeric,omitempty"`
+	Remanufacture                          *string `json:"remanufacture,omitempty"`
+	RemanufactureNumeric                   *int32  `json:"remanufacture-numeric,omitempty"`
+	RestartOnCapiFail                      *string `json:"restart-on-capi-fail,omitempty"`
+	RestartOnCapiFailNumeric               *int32  `json:"restart-on-capi-fail-numeric,omitempty"`
+	ScrubSchedule                          *string `json:"scrub-schedule,omitempty"`
+	ScrubScheduleNumeric                   *int32  `json:"scrub-schedule-numeric,omitempty"`
+	SingleController                       *string `json:"single-controller,omitempty"`
+	SingleControllerNumeric                *int32  `json:"single-controller-numeric,omitempty"`
+	SlotAffinity                           *string `json:"slot-affinity,omitempty"`
+	SlotAffinityNumeric                    *int32  `json:"slot-affinity-numeric,omitempty"`
+	SlowDiskDetection                      *string `json:"slow-disk-detection,omitempty"`
+	SlowDiskDetectionNumeric               *int32  `json:"slow-disk-detection-numeric,omitempty"`
+	Smart                                  *string `json:"smart,omitempty"`
+	SmartNumeric                           *int32  `json:"smart-numeric,omitempty"`
+	SsdConcurrentAccess                    *string `json:"ssd-concurrent-access,omitempty"`
+	SsdConcurrentAccessNumeric             *int32  `json:"ssd-concurrent-access-numeric,omitempty"`
+	// Indicates whether the write-through trigger is enabled
+	SuperCapFailure *string `json:"super-cap-failure,omitempty"`
+	// Indicates whether the write-through trigger is enabled( In numeric form )
+	SuperCapFailureNumeric *int32  `json:"super-cap-failure-numeric,omitempty"`
+	SyncCacheMode          *string `json:"sync-cache-mode,omitempty"`
+	SyncCacheModeNumeric   *int32  `json:"sync-cache-mode-numeric,omitempty"`
+	// Indicates whether the write-through trigger is enabled
+	TemperatureExceeded *string `json:"temperature-exceeded,omitempty"`
+	// Indicates whether the write-through trigger is enabled( In numeric form )
+	TemperatureExceededNumeric *int32 `json:"temperature-exceeded-numeric,omitempty"`
+	// Configured processing priority for utilities
+	UtilityPriority *string `json:"utility-priority,omitempty"`
+	// Configured processing priority for utilities( In numeric form )
+	UtilityPriorityNumeric *int32 `json:"utility-priority-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 }
 
 // NewAdvancedSettingsTableResourceInner instantiates a new AdvancedSettingsTableResourceInner object
@@ -237,9 +338,15 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoMap(v string) {
 }
 
 // GetAutoMapNumeric returns the AutoMapNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumeric() int64 {
 	if o == nil || IsNil(o.AutoMapNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumeric() int32 {
+	if o == nil || IsNil(o.AutoMapNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AutoMapNumeric
@@ -247,7 +354,11 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumeric() int64 {
 
 // GetAutoMapNumericOk returns a tuple with the AutoMapNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AutoMapNumeric) {
 		return nil, false
 	}
@@ -263,8 +374,13 @@ func (o *AdvancedSettingsTableResourceInner) HasAutoMapNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAutoMapNumeric gets a reference to the given int64 and assigns it to the AutoMapNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetAutoMapNumeric(v int64) {
+=======
+// SetAutoMapNumeric gets a reference to the given int32 and assigns it to the AutoMapNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetAutoMapNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AutoMapNumeric = &v
 }
 
@@ -301,9 +417,15 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoStallRecovery(v string) {
 }
 
 // GetAutoStallRecoveryNumeric returns the AutoStallRecoveryNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumeric() int64 {
 	if o == nil || IsNil(o.AutoStallRecoveryNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumeric() int32 {
+	if o == nil || IsNil(o.AutoStallRecoveryNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AutoStallRecoveryNumeric
@@ -311,7 +433,11 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumeric() int64
 
 // GetAutoStallRecoveryNumericOk returns a tuple with the AutoStallRecoveryNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AutoStallRecoveryNumeric) {
 		return nil, false
 	}
@@ -327,8 +453,13 @@ func (o *AdvancedSettingsTableResourceInner) HasAutoStallRecoveryNumeric() bool 
 	return false
 }
 
+<<<<<<< HEAD
 // SetAutoStallRecoveryNumeric gets a reference to the given int64 and assigns it to the AutoStallRecoveryNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetAutoStallRecoveryNumeric(v int64) {
+=======
+// SetAutoStallRecoveryNumeric gets a reference to the given int32 and assigns it to the AutoStallRecoveryNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetAutoStallRecoveryNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AutoStallRecoveryNumeric = &v
 }
 
@@ -365,9 +496,15 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoUnmap(v string) {
 }
 
 // GetAutoUnmapNumeric returns the AutoUnmapNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumeric() int64 {
 	if o == nil || IsNil(o.AutoUnmapNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumeric() int32 {
+	if o == nil || IsNil(o.AutoUnmapNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AutoUnmapNumeric
@@ -375,7 +512,11 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumeric() int64 {
 
 // GetAutoUnmapNumericOk returns a tuple with the AutoUnmapNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AutoUnmapNumeric) {
 		return nil, false
 	}
@@ -391,8 +532,13 @@ func (o *AdvancedSettingsTableResourceInner) HasAutoUnmapNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAutoUnmapNumeric gets a reference to the given int64 and assigns it to the AutoUnmapNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetAutoUnmapNumeric(v int64) {
+=======
+// SetAutoUnmapNumeric gets a reference to the given int32 and assigns it to the AutoUnmapNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetAutoUnmapNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AutoUnmapNumeric = &v
 }
 
@@ -429,9 +575,15 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoWriteBack(v string) {
 }
 
 // GetAutoWriteBackNumeric returns the AutoWriteBackNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumeric() int64 {
 	if o == nil || IsNil(o.AutoWriteBackNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumeric() int32 {
+	if o == nil || IsNil(o.AutoWriteBackNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AutoWriteBackNumeric
@@ -439,7 +591,11 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumeric() int64 {
 
 // GetAutoWriteBackNumericOk returns a tuple with the AutoWriteBackNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AutoWriteBackNumeric) {
 		return nil, false
 	}
@@ -455,8 +611,13 @@ func (o *AdvancedSettingsTableResourceInner) HasAutoWriteBackNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAutoWriteBackNumeric gets a reference to the given int64 and assigns it to the AutoWriteBackNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetAutoWriteBackNumeric(v int64) {
+=======
+// SetAutoWriteBackNumeric gets a reference to the given int32 and assigns it to the AutoWriteBackNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetAutoWriteBackNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AutoWriteBackNumeric = &v
 }
 
@@ -493,9 +654,15 @@ func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrub(v string) {
 }
 
 // GetBackgroundScrubInterval returns the BackgroundScrubInterval field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubInterval() int64 {
 	if o == nil || IsNil(o.BackgroundScrubInterval) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubInterval() int32 {
+	if o == nil || IsNil(o.BackgroundScrubInterval) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.BackgroundScrubInterval
@@ -503,7 +670,11 @@ func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubInterval() int64 
 
 // GetBackgroundScrubIntervalOk returns a tuple with the BackgroundScrubInterval field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubIntervalOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubIntervalOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.BackgroundScrubInterval) {
 		return nil, false
 	}
@@ -519,15 +690,26 @@ func (o *AdvancedSettingsTableResourceInner) HasBackgroundScrubInterval() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBackgroundScrubInterval gets a reference to the given int64 and assigns it to the BackgroundScrubInterval field.
 func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubInterval(v int64) {
+=======
+// SetBackgroundScrubInterval gets a reference to the given int32 and assigns it to the BackgroundScrubInterval field.
+func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubInterval(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.BackgroundScrubInterval = &v
 }
 
 // GetBackgroundScrubNumeric returns the BackgroundScrubNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumeric() int64 {
 	if o == nil || IsNil(o.BackgroundScrubNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumeric() int32 {
+	if o == nil || IsNil(o.BackgroundScrubNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.BackgroundScrubNumeric
@@ -535,7 +717,11 @@ func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumeric() int64 {
 
 // GetBackgroundScrubNumericOk returns a tuple with the BackgroundScrubNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.BackgroundScrubNumeric) {
 		return nil, false
 	}
@@ -551,8 +737,13 @@ func (o *AdvancedSettingsTableResourceInner) HasBackgroundScrubNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBackgroundScrubNumeric gets a reference to the given int64 and assigns it to the BackgroundScrubNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubNumeric(v int64) {
+=======
+// SetBackgroundScrubNumeric gets a reference to the given int32 and assigns it to the BackgroundScrubNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.BackgroundScrubNumeric = &v
 }
 
@@ -589,9 +780,15 @@ func (o *AdvancedSettingsTableResourceInner) SetCacheFlushTimeout(v string) {
 }
 
 // GetCacheFlushTimeoutNumeric returns the CacheFlushTimeoutNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumeric() int64 {
 	if o == nil || IsNil(o.CacheFlushTimeoutNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumeric() int32 {
+	if o == nil || IsNil(o.CacheFlushTimeoutNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.CacheFlushTimeoutNumeric
@@ -599,7 +796,11 @@ func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumeric() int64
 
 // GetCacheFlushTimeoutNumericOk returns a tuple with the CacheFlushTimeoutNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.CacheFlushTimeoutNumeric) {
 		return nil, false
 	}
@@ -615,8 +816,13 @@ func (o *AdvancedSettingsTableResourceInner) HasCacheFlushTimeoutNumeric() bool 
 	return false
 }
 
+<<<<<<< HEAD
 // SetCacheFlushTimeoutNumeric gets a reference to the given int64 and assigns it to the CacheFlushTimeoutNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetCacheFlushTimeoutNumeric(v int64) {
+=======
+// SetCacheFlushTimeoutNumeric gets a reference to the given int32 and assigns it to the CacheFlushTimeoutNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetCacheFlushTimeoutNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.CacheFlushTimeoutNumeric = &v
 }
 
@@ -653,9 +859,15 @@ func (o *AdvancedSettingsTableResourceInner) SetControllerFailure(v string) {
 }
 
 // GetControllerFailureNumeric returns the ControllerFailureNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumeric() int64 {
 	if o == nil || IsNil(o.ControllerFailureNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumeric() int32 {
+	if o == nil || IsNil(o.ControllerFailureNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ControllerFailureNumeric
@@ -663,7 +875,11 @@ func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumeric() int64
 
 // GetControllerFailureNumericOk returns a tuple with the ControllerFailureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ControllerFailureNumeric) {
 		return nil, false
 	}
@@ -679,8 +895,13 @@ func (o *AdvancedSettingsTableResourceInner) HasControllerFailureNumeric() bool 
 	return false
 }
 
+<<<<<<< HEAD
 // SetControllerFailureNumeric gets a reference to the given int64 and assigns it to the ControllerFailureNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetControllerFailureNumeric(v int64) {
+=======
+// SetControllerFailureNumeric gets a reference to the given int32 and assigns it to the ControllerFailureNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetControllerFailureNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ControllerFailureNumeric = &v
 }
 
@@ -717,9 +938,15 @@ func (o *AdvancedSettingsTableResourceInner) SetDefaultMapping(v string) {
 }
 
 // GetDefaultMappingNumeric returns the DefaultMappingNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumeric() int64 {
 	if o == nil || IsNil(o.DefaultMappingNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumeric() int32 {
+	if o == nil || IsNil(o.DefaultMappingNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DefaultMappingNumeric
@@ -727,7 +954,11 @@ func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumeric() int64 {
 
 // GetDefaultMappingNumericOk returns a tuple with the DefaultMappingNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DefaultMappingNumeric) {
 		return nil, false
 	}
@@ -743,8 +974,13 @@ func (o *AdvancedSettingsTableResourceInner) HasDefaultMappingNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDefaultMappingNumeric gets a reference to the given int64 and assigns it to the DefaultMappingNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetDefaultMappingNumeric(v int64) {
+=======
+// SetDefaultMappingNumeric gets a reference to the given int32 and assigns it to the DefaultMappingNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetDefaultMappingNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DefaultMappingNumeric = &v
 }
 
@@ -781,9 +1017,15 @@ func (o *AdvancedSettingsTableResourceInner) SetDeleteOverride(v string) {
 }
 
 // GetDeleteOverrideNumeric returns the DeleteOverrideNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumeric() int64 {
 	if o == nil || IsNil(o.DeleteOverrideNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumeric() int32 {
+	if o == nil || IsNil(o.DeleteOverrideNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DeleteOverrideNumeric
@@ -791,7 +1033,11 @@ func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumeric() int64 {
 
 // GetDeleteOverrideNumericOk returns a tuple with the DeleteOverrideNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DeleteOverrideNumeric) {
 		return nil, false
 	}
@@ -807,15 +1053,26 @@ func (o *AdvancedSettingsTableResourceInner) HasDeleteOverrideNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDeleteOverrideNumeric gets a reference to the given int64 and assigns it to the DeleteOverrideNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetDeleteOverrideNumeric(v int64) {
+=======
+// SetDeleteOverrideNumeric gets a reference to the given int32 and assigns it to the DeleteOverrideNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetDeleteOverrideNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DeleteOverrideNumeric = &v
 }
 
 // GetDiskDsdDelay returns the DiskDsdDelay field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelay() int64 {
 	if o == nil || IsNil(o.DiskDsdDelay) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelay() int32 {
+	if o == nil || IsNil(o.DiskDsdDelay) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DiskDsdDelay
@@ -823,7 +1080,11 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelay() int64 {
 
 // GetDiskDsdDelayOk returns a tuple with the DiskDsdDelay field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelayOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelayOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DiskDsdDelay) {
 		return nil, false
 	}
@@ -839,8 +1100,13 @@ func (o *AdvancedSettingsTableResourceInner) HasDiskDsdDelay() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskDsdDelay gets a reference to the given int64 and assigns it to the DiskDsdDelay field.
 func (o *AdvancedSettingsTableResourceInner) SetDiskDsdDelay(v int64) {
+=======
+// SetDiskDsdDelay gets a reference to the given int32 and assigns it to the DiskDsdDelay field.
+func (o *AdvancedSettingsTableResourceInner) SetDiskDsdDelay(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DiskDsdDelay = &v
 }
 
@@ -877,9 +1143,15 @@ func (o *AdvancedSettingsTableResourceInner) SetDiskDsdEnable(v string) {
 }
 
 // GetDiskDsdEnableNumeric returns the DiskDsdEnableNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumeric() int64 {
 	if o == nil || IsNil(o.DiskDsdEnableNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumeric() int32 {
+	if o == nil || IsNil(o.DiskDsdEnableNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DiskDsdEnableNumeric
@@ -887,7 +1159,11 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumeric() int64 {
 
 // GetDiskDsdEnableNumericOk returns a tuple with the DiskDsdEnableNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DiskDsdEnableNumeric) {
 		return nil, false
 	}
@@ -903,8 +1179,13 @@ func (o *AdvancedSettingsTableResourceInner) HasDiskDsdEnableNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskDsdEnableNumeric gets a reference to the given int64 and assigns it to the DiskDsdEnableNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetDiskDsdEnableNumeric(v int64) {
+=======
+// SetDiskDsdEnableNumeric gets a reference to the given int32 and assigns it to the DiskDsdEnableNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetDiskDsdEnableNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DiskDsdEnableNumeric = &v
 }
 
@@ -941,9 +1222,15 @@ func (o *AdvancedSettingsTableResourceInner) SetDiskFirmwareUpdate(v string) {
 }
 
 // GetDiskFirmwareUpdateNumeric returns the DiskFirmwareUpdateNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumeric() int64 {
 	if o == nil || IsNil(o.DiskFirmwareUpdateNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumeric() int32 {
+	if o == nil || IsNil(o.DiskFirmwareUpdateNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DiskFirmwareUpdateNumeric
@@ -951,7 +1238,11 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumeric() int6
 
 // GetDiskFirmwareUpdateNumericOk returns a tuple with the DiskFirmwareUpdateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DiskFirmwareUpdateNumeric) {
 		return nil, false
 	}
@@ -967,8 +1258,13 @@ func (o *AdvancedSettingsTableResourceInner) HasDiskFirmwareUpdateNumeric() bool
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskFirmwareUpdateNumeric gets a reference to the given int64 and assigns it to the DiskFirmwareUpdateNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetDiskFirmwareUpdateNumeric(v int64) {
+=======
+// SetDiskFirmwareUpdateNumeric gets a reference to the given int32 and assigns it to the DiskFirmwareUpdateNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetDiskFirmwareUpdateNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DiskFirmwareUpdateNumeric = &v
 }
 
@@ -1069,9 +1365,15 @@ func (o *AdvancedSettingsTableResourceInner) SetFanFailure(v string) {
 }
 
 // GetFanFailureNumeric returns the FanFailureNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumeric() int64 {
 	if o == nil || IsNil(o.FanFailureNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumeric() int32 {
+	if o == nil || IsNil(o.FanFailureNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FanFailureNumeric
@@ -1079,7 +1381,11 @@ func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumeric() int64 {
 
 // GetFanFailureNumericOk returns a tuple with the FanFailureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FanFailureNumeric) {
 		return nil, false
 	}
@@ -1095,8 +1401,13 @@ func (o *AdvancedSettingsTableResourceInner) HasFanFailureNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFanFailureNumeric gets a reference to the given int64 and assigns it to the FanFailureNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetFanFailureNumeric(v int64) {
+=======
+// SetFanFailureNumeric gets a reference to the given int32 and assigns it to the FanFailureNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetFanFailureNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FanFailureNumeric = &v
 }
 
@@ -1133,9 +1444,15 @@ func (o *AdvancedSettingsTableResourceInner) SetHedgedReadsTimeout(v string) {
 }
 
 // GetHedgedReadsTimeoutNumeric returns the HedgedReadsTimeoutNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumeric() int64 {
 	if o == nil || IsNil(o.HedgedReadsTimeoutNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumeric() int32 {
+	if o == nil || IsNil(o.HedgedReadsTimeoutNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HedgedReadsTimeoutNumeric
@@ -1143,7 +1460,11 @@ func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumeric() int6
 
 // GetHedgedReadsTimeoutNumericOk returns a tuple with the HedgedReadsTimeoutNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HedgedReadsTimeoutNumeric) {
 		return nil, false
 	}
@@ -1159,8 +1480,13 @@ func (o *AdvancedSettingsTableResourceInner) HasHedgedReadsTimeoutNumeric() bool
 	return false
 }
 
+<<<<<<< HEAD
 // SetHedgedReadsTimeoutNumeric gets a reference to the given int64 and assigns it to the HedgedReadsTimeoutNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetHedgedReadsTimeoutNumeric(v int64) {
+=======
+// SetHedgedReadsTimeoutNumeric gets a reference to the given int32 and assigns it to the HedgedReadsTimeoutNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetHedgedReadsTimeoutNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HedgedReadsTimeoutNumeric = &v
 }
 
@@ -1197,9 +1523,15 @@ func (o *AdvancedSettingsTableResourceInner) SetHostCacheControl(v string) {
 }
 
 // GetHostCacheControlNumeric returns the HostCacheControlNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumeric() int64 {
 	if o == nil || IsNil(o.HostCacheControlNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumeric() int32 {
+	if o == nil || IsNil(o.HostCacheControlNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HostCacheControlNumeric
@@ -1207,7 +1539,11 @@ func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumeric() int64 
 
 // GetHostCacheControlNumericOk returns a tuple with the HostCacheControlNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HostCacheControlNumeric) {
 		return nil, false
 	}
@@ -1223,8 +1559,13 @@ func (o *AdvancedSettingsTableResourceInner) HasHostCacheControlNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHostCacheControlNumeric gets a reference to the given int64 and assigns it to the HostCacheControlNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetHostCacheControlNumeric(v int64) {
+=======
+// SetHostCacheControlNumeric gets a reference to the given int32 and assigns it to the HostCacheControlNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetHostCacheControlNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HostCacheControlNumeric = &v
 }
 
@@ -1261,9 +1602,15 @@ func (o *AdvancedSettingsTableResourceInner) SetIndependentCache(v string) {
 }
 
 // GetIndependentCacheNumeric returns the IndependentCacheNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumeric() int64 {
 	if o == nil || IsNil(o.IndependentCacheNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumeric() int32 {
+	if o == nil || IsNil(o.IndependentCacheNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.IndependentCacheNumeric
@@ -1271,7 +1618,11 @@ func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumeric() int64 
 
 // GetIndependentCacheNumericOk returns a tuple with the IndependentCacheNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.IndependentCacheNumeric) {
 		return nil, false
 	}
@@ -1287,8 +1638,13 @@ func (o *AdvancedSettingsTableResourceInner) HasIndependentCacheNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetIndependentCacheNumeric gets a reference to the given int64 and assigns it to the IndependentCacheNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetIndependentCacheNumeric(v int64) {
+=======
+// SetIndependentCacheNumeric gets a reference to the given int32 and assigns it to the IndependentCacheNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetIndependentCacheNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.IndependentCacheNumeric = &v
 }
 
@@ -1325,9 +1681,15 @@ func (o *AdvancedSettingsTableResourceInner) SetLargePools(v string) {
 }
 
 // GetLargePoolsNumeric returns the LargePoolsNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumeric() int64 {
 	if o == nil || IsNil(o.LargePoolsNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumeric() int32 {
+	if o == nil || IsNil(o.LargePoolsNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.LargePoolsNumeric
@@ -1335,7 +1697,11 @@ func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumeric() int64 {
 
 // GetLargePoolsNumericOk returns a tuple with the LargePoolsNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.LargePoolsNumeric) {
 		return nil, false
 	}
@@ -1351,8 +1717,13 @@ func (o *AdvancedSettingsTableResourceInner) HasLargePoolsNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetLargePoolsNumeric gets a reference to the given int64 and assigns it to the LargePoolsNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetLargePoolsNumeric(v int64) {
+=======
+// SetLargePoolsNumeric gets a reference to the given int32 and assigns it to the LargePoolsNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetLargePoolsNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.LargePoolsNumeric = &v
 }
 
@@ -1389,9 +1760,15 @@ func (o *AdvancedSettingsTableResourceInner) SetManagedLogs(v string) {
 }
 
 // GetManagedLogsNumeric returns the ManagedLogsNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumeric() int64 {
 	if o == nil || IsNil(o.ManagedLogsNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumeric() int32 {
+	if o == nil || IsNil(o.ManagedLogsNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ManagedLogsNumeric
@@ -1399,7 +1776,11 @@ func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumeric() int64 {
 
 // GetManagedLogsNumericOk returns a tuple with the ManagedLogsNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ManagedLogsNumeric) {
 		return nil, false
 	}
@@ -1415,8 +1796,13 @@ func (o *AdvancedSettingsTableResourceInner) HasManagedLogsNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetManagedLogsNumeric gets a reference to the given int64 and assigns it to the ManagedLogsNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetManagedLogsNumeric(v int64) {
+=======
+// SetManagedLogsNumeric gets a reference to the given int32 and assigns it to the ManagedLogsNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetManagedLogsNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ManagedLogsNumeric = &v
 }
 
@@ -1453,9 +1839,15 @@ func (o *AdvancedSettingsTableResourceInner) SetMemoryCardFailure(v string) {
 }
 
 // GetMemoryCardFailureNumeric returns the MemoryCardFailureNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumeric() int64 {
 	if o == nil || IsNil(o.MemoryCardFailureNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumeric() int32 {
+	if o == nil || IsNil(o.MemoryCardFailureNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MemoryCardFailureNumeric
@@ -1463,7 +1855,11 @@ func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumeric() int64
 
 // GetMemoryCardFailureNumericOk returns a tuple with the MemoryCardFailureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MemoryCardFailureNumeric) {
 		return nil, false
 	}
@@ -1479,8 +1875,13 @@ func (o *AdvancedSettingsTableResourceInner) HasMemoryCardFailureNumeric() bool 
 	return false
 }
 
+<<<<<<< HEAD
 // SetMemoryCardFailureNumeric gets a reference to the given int64 and assigns it to the MemoryCardFailureNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetMemoryCardFailureNumeric(v int64) {
+=======
+// SetMemoryCardFailureNumeric gets a reference to the given int32 and assigns it to the MemoryCardFailureNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetMemoryCardFailureNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MemoryCardFailureNumeric = &v
 }
 
@@ -1517,9 +1918,15 @@ func (o *AdvancedSettingsTableResourceInner) SetMissingLunResponse(v string) {
 }
 
 // GetMissingLunResponseNumeric returns the MissingLunResponseNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumeric() int64 {
 	if o == nil || IsNil(o.MissingLunResponseNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumeric() int32 {
+	if o == nil || IsNil(o.MissingLunResponseNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MissingLunResponseNumeric
@@ -1527,7 +1934,11 @@ func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumeric() int6
 
 // GetMissingLunResponseNumericOk returns a tuple with the MissingLunResponseNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MissingLunResponseNumeric) {
 		return nil, false
 	}
@@ -1543,8 +1954,13 @@ func (o *AdvancedSettingsTableResourceInner) HasMissingLunResponseNumeric() bool
 	return false
 }
 
+<<<<<<< HEAD
 // SetMissingLunResponseNumeric gets a reference to the given int64 and assigns it to the MissingLunResponseNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetMissingLunResponseNumeric(v int64) {
+=======
+// SetMissingLunResponseNumeric gets a reference to the given int32 and assigns it to the MissingLunResponseNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetMissingLunResponseNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MissingLunResponseNumeric = &v
 }
 
@@ -1581,9 +1997,15 @@ func (o *AdvancedSettingsTableResourceInner) SetPartnerFirmwareUpgrade(v string)
 }
 
 // GetPartnerFirmwareUpgradeNumeric returns the PartnerFirmwareUpgradeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumeric() int64 {
 	if o == nil || IsNil(o.PartnerFirmwareUpgradeNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumeric() int32 {
+	if o == nil || IsNil(o.PartnerFirmwareUpgradeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PartnerFirmwareUpgradeNumeric
@@ -1591,7 +2013,11 @@ func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumeric() 
 
 // GetPartnerFirmwareUpgradeNumericOk returns a tuple with the PartnerFirmwareUpgradeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PartnerFirmwareUpgradeNumeric) {
 		return nil, false
 	}
@@ -1607,8 +2033,13 @@ func (o *AdvancedSettingsTableResourceInner) HasPartnerFirmwareUpgradeNumeric() 
 	return false
 }
 
+<<<<<<< HEAD
 // SetPartnerFirmwareUpgradeNumeric gets a reference to the given int64 and assigns it to the PartnerFirmwareUpgradeNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetPartnerFirmwareUpgradeNumeric(v int64) {
+=======
+// SetPartnerFirmwareUpgradeNumeric gets a reference to the given int32 and assigns it to the PartnerFirmwareUpgradeNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetPartnerFirmwareUpgradeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PartnerFirmwareUpgradeNumeric = &v
 }
 
@@ -1645,9 +2076,15 @@ func (o *AdvancedSettingsTableResourceInner) SetPartnerNotify(v string) {
 }
 
 // GetPartnerNotifyNumeric returns the PartnerNotifyNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumeric() int64 {
 	if o == nil || IsNil(o.PartnerNotifyNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumeric() int32 {
+	if o == nil || IsNil(o.PartnerNotifyNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PartnerNotifyNumeric
@@ -1655,7 +2092,11 @@ func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumeric() int64 {
 
 // GetPartnerNotifyNumericOk returns a tuple with the PartnerNotifyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PartnerNotifyNumeric) {
 		return nil, false
 	}
@@ -1671,8 +2112,13 @@ func (o *AdvancedSettingsTableResourceInner) HasPartnerNotifyNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPartnerNotifyNumeric gets a reference to the given int64 and assigns it to the PartnerNotifyNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetPartnerNotifyNumeric(v int64) {
+=======
+// SetPartnerNotifyNumeric gets a reference to the given int32 and assigns it to the PartnerNotifyNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetPartnerNotifyNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PartnerNotifyNumeric = &v
 }
 
@@ -1709,9 +2155,15 @@ func (o *AdvancedSettingsTableResourceInner) SetPcieHotplug(v string) {
 }
 
 // GetPcieHotplugNumeric returns the PcieHotplugNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumeric() int64 {
 	if o == nil || IsNil(o.PcieHotplugNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumeric() int32 {
+	if o == nil || IsNil(o.PcieHotplugNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PcieHotplugNumeric
@@ -1719,7 +2171,11 @@ func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumeric() int64 {
 
 // GetPcieHotplugNumericOk returns a tuple with the PcieHotplugNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PcieHotplugNumeric) {
 		return nil, false
 	}
@@ -1735,8 +2191,13 @@ func (o *AdvancedSettingsTableResourceInner) HasPcieHotplugNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPcieHotplugNumeric gets a reference to the given int64 and assigns it to the PcieHotplugNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetPcieHotplugNumeric(v int64) {
+=======
+// SetPcieHotplugNumeric gets a reference to the given int32 and assigns it to the PcieHotplugNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetPcieHotplugNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PcieHotplugNumeric = &v
 }
 
@@ -1773,9 +2234,15 @@ func (o *AdvancedSettingsTableResourceInner) SetPowerSupplyFailure(v string) {
 }
 
 // GetPowerSupplyFailureNumeric returns the PowerSupplyFailureNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumeric() int64 {
 	if o == nil || IsNil(o.PowerSupplyFailureNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumeric() int32 {
+	if o == nil || IsNil(o.PowerSupplyFailureNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PowerSupplyFailureNumeric
@@ -1783,7 +2250,11 @@ func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumeric() int6
 
 // GetPowerSupplyFailureNumericOk returns a tuple with the PowerSupplyFailureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PowerSupplyFailureNumeric) {
 		return nil, false
 	}
@@ -1799,8 +2270,13 @@ func (o *AdvancedSettingsTableResourceInner) HasPowerSupplyFailureNumeric() bool
 	return false
 }
 
+<<<<<<< HEAD
 // SetPowerSupplyFailureNumeric gets a reference to the given int64 and assigns it to the PowerSupplyFailureNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetPowerSupplyFailureNumeric(v int64) {
+=======
+// SetPowerSupplyFailureNumeric gets a reference to the given int32 and assigns it to the PowerSupplyFailureNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetPowerSupplyFailureNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PowerSupplyFailureNumeric = &v
 }
 
@@ -1837,9 +2313,15 @@ func (o *AdvancedSettingsTableResourceInner) SetRandomIoPerformanceOptimization(
 }
 
 // GetRandomIoPerformanceOptimizationNumeric returns the RandomIoPerformanceOptimizationNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumeric() int64 {
 	if o == nil || IsNil(o.RandomIoPerformanceOptimizationNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumeric() int32 {
+	if o == nil || IsNil(o.RandomIoPerformanceOptimizationNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RandomIoPerformanceOptimizationNumeric
@@ -1847,7 +2329,11 @@ func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationN
 
 // GetRandomIoPerformanceOptimizationNumericOk returns a tuple with the RandomIoPerformanceOptimizationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RandomIoPerformanceOptimizationNumeric) {
 		return nil, false
 	}
@@ -1863,8 +2349,13 @@ func (o *AdvancedSettingsTableResourceInner) HasRandomIoPerformanceOptimizationN
 	return false
 }
 
+<<<<<<< HEAD
 // SetRandomIoPerformanceOptimizationNumeric gets a reference to the given int64 and assigns it to the RandomIoPerformanceOptimizationNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetRandomIoPerformanceOptimizationNumeric(v int64) {
+=======
+// SetRandomIoPerformanceOptimizationNumeric gets a reference to the given int32 and assigns it to the RandomIoPerformanceOptimizationNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetRandomIoPerformanceOptimizationNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RandomIoPerformanceOptimizationNumeric = &v
 }
 
@@ -1901,9 +2392,15 @@ func (o *AdvancedSettingsTableResourceInner) SetRemanufacture(v string) {
 }
 
 // GetRemanufactureNumeric returns the RemanufactureNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumeric() int64 {
 	if o == nil || IsNil(o.RemanufactureNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumeric() int32 {
+	if o == nil || IsNil(o.RemanufactureNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RemanufactureNumeric
@@ -1911,7 +2408,11 @@ func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumeric() int64 {
 
 // GetRemanufactureNumericOk returns a tuple with the RemanufactureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RemanufactureNumeric) {
 		return nil, false
 	}
@@ -1927,8 +2428,13 @@ func (o *AdvancedSettingsTableResourceInner) HasRemanufactureNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRemanufactureNumeric gets a reference to the given int64 and assigns it to the RemanufactureNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetRemanufactureNumeric(v int64) {
+=======
+// SetRemanufactureNumeric gets a reference to the given int32 and assigns it to the RemanufactureNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetRemanufactureNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RemanufactureNumeric = &v
 }
 
@@ -1965,9 +2471,15 @@ func (o *AdvancedSettingsTableResourceInner) SetRestartOnCapiFail(v string) {
 }
 
 // GetRestartOnCapiFailNumeric returns the RestartOnCapiFailNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumeric() int64 {
 	if o == nil || IsNil(o.RestartOnCapiFailNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumeric() int32 {
+	if o == nil || IsNil(o.RestartOnCapiFailNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RestartOnCapiFailNumeric
@@ -1975,7 +2487,11 @@ func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumeric() int64
 
 // GetRestartOnCapiFailNumericOk returns a tuple with the RestartOnCapiFailNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RestartOnCapiFailNumeric) {
 		return nil, false
 	}
@@ -1991,8 +2507,13 @@ func (o *AdvancedSettingsTableResourceInner) HasRestartOnCapiFailNumeric() bool 
 	return false
 }
 
+<<<<<<< HEAD
 // SetRestartOnCapiFailNumeric gets a reference to the given int64 and assigns it to the RestartOnCapiFailNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetRestartOnCapiFailNumeric(v int64) {
+=======
+// SetRestartOnCapiFailNumeric gets a reference to the given int32 and assigns it to the RestartOnCapiFailNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetRestartOnCapiFailNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RestartOnCapiFailNumeric = &v
 }
 
@@ -2029,9 +2550,15 @@ func (o *AdvancedSettingsTableResourceInner) SetScrubSchedule(v string) {
 }
 
 // GetScrubScheduleNumeric returns the ScrubScheduleNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumeric() int64 {
 	if o == nil || IsNil(o.ScrubScheduleNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumeric() int32 {
+	if o == nil || IsNil(o.ScrubScheduleNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ScrubScheduleNumeric
@@ -2039,7 +2566,11 @@ func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumeric() int64 {
 
 // GetScrubScheduleNumericOk returns a tuple with the ScrubScheduleNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ScrubScheduleNumeric) {
 		return nil, false
 	}
@@ -2055,8 +2586,13 @@ func (o *AdvancedSettingsTableResourceInner) HasScrubScheduleNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetScrubScheduleNumeric gets a reference to the given int64 and assigns it to the ScrubScheduleNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetScrubScheduleNumeric(v int64) {
+=======
+// SetScrubScheduleNumeric gets a reference to the given int32 and assigns it to the ScrubScheduleNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetScrubScheduleNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ScrubScheduleNumeric = &v
 }
 
@@ -2093,9 +2629,15 @@ func (o *AdvancedSettingsTableResourceInner) SetSingleController(v string) {
 }
 
 // GetSingleControllerNumeric returns the SingleControllerNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumeric() int64 {
 	if o == nil || IsNil(o.SingleControllerNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumeric() int32 {
+	if o == nil || IsNil(o.SingleControllerNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SingleControllerNumeric
@@ -2103,7 +2645,11 @@ func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumeric() int64 
 
 // GetSingleControllerNumericOk returns a tuple with the SingleControllerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SingleControllerNumeric) {
 		return nil, false
 	}
@@ -2119,8 +2665,13 @@ func (o *AdvancedSettingsTableResourceInner) HasSingleControllerNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSingleControllerNumeric gets a reference to the given int64 and assigns it to the SingleControllerNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetSingleControllerNumeric(v int64) {
+=======
+// SetSingleControllerNumeric gets a reference to the given int32 and assigns it to the SingleControllerNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetSingleControllerNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SingleControllerNumeric = &v
 }
 
@@ -2157,9 +2708,15 @@ func (o *AdvancedSettingsTableResourceInner) SetSlotAffinity(v string) {
 }
 
 // GetSlotAffinityNumeric returns the SlotAffinityNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumeric() int64 {
 	if o == nil || IsNil(o.SlotAffinityNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumeric() int32 {
+	if o == nil || IsNil(o.SlotAffinityNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SlotAffinityNumeric
@@ -2167,7 +2724,11 @@ func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumeric() int64 {
 
 // GetSlotAffinityNumericOk returns a tuple with the SlotAffinityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SlotAffinityNumeric) {
 		return nil, false
 	}
@@ -2183,8 +2744,13 @@ func (o *AdvancedSettingsTableResourceInner) HasSlotAffinityNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSlotAffinityNumeric gets a reference to the given int64 and assigns it to the SlotAffinityNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetSlotAffinityNumeric(v int64) {
+=======
+// SetSlotAffinityNumeric gets a reference to the given int32 and assigns it to the SlotAffinityNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetSlotAffinityNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SlotAffinityNumeric = &v
 }
 
@@ -2221,9 +2787,15 @@ func (o *AdvancedSettingsTableResourceInner) SetSlowDiskDetection(v string) {
 }
 
 // GetSlowDiskDetectionNumeric returns the SlowDiskDetectionNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumeric() int64 {
 	if o == nil || IsNil(o.SlowDiskDetectionNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumeric() int32 {
+	if o == nil || IsNil(o.SlowDiskDetectionNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SlowDiskDetectionNumeric
@@ -2231,7 +2803,11 @@ func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumeric() int64
 
 // GetSlowDiskDetectionNumericOk returns a tuple with the SlowDiskDetectionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SlowDiskDetectionNumeric) {
 		return nil, false
 	}
@@ -2247,8 +2823,13 @@ func (o *AdvancedSettingsTableResourceInner) HasSlowDiskDetectionNumeric() bool 
 	return false
 }
 
+<<<<<<< HEAD
 // SetSlowDiskDetectionNumeric gets a reference to the given int64 and assigns it to the SlowDiskDetectionNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetSlowDiskDetectionNumeric(v int64) {
+=======
+// SetSlowDiskDetectionNumeric gets a reference to the given int32 and assigns it to the SlowDiskDetectionNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetSlowDiskDetectionNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SlowDiskDetectionNumeric = &v
 }
 
@@ -2285,9 +2866,15 @@ func (o *AdvancedSettingsTableResourceInner) SetSmart(v string) {
 }
 
 // GetSmartNumeric returns the SmartNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSmartNumeric() int64 {
 	if o == nil || IsNil(o.SmartNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSmartNumeric() int32 {
+	if o == nil || IsNil(o.SmartNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SmartNumeric
@@ -2295,7 +2882,11 @@ func (o *AdvancedSettingsTableResourceInner) GetSmartNumeric() int64 {
 
 // GetSmartNumericOk returns a tuple with the SmartNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSmartNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSmartNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SmartNumeric) {
 		return nil, false
 	}
@@ -2311,8 +2902,13 @@ func (o *AdvancedSettingsTableResourceInner) HasSmartNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSmartNumeric gets a reference to the given int64 and assigns it to the SmartNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetSmartNumeric(v int64) {
+=======
+// SetSmartNumeric gets a reference to the given int32 and assigns it to the SmartNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetSmartNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SmartNumeric = &v
 }
 
@@ -2349,9 +2945,15 @@ func (o *AdvancedSettingsTableResourceInner) SetSsdConcurrentAccess(v string) {
 }
 
 // GetSsdConcurrentAccessNumeric returns the SsdConcurrentAccessNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumeric() int64 {
 	if o == nil || IsNil(o.SsdConcurrentAccessNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumeric() int32 {
+	if o == nil || IsNil(o.SsdConcurrentAccessNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SsdConcurrentAccessNumeric
@@ -2359,7 +2961,11 @@ func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumeric() int
 
 // GetSsdConcurrentAccessNumericOk returns a tuple with the SsdConcurrentAccessNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SsdConcurrentAccessNumeric) {
 		return nil, false
 	}
@@ -2375,8 +2981,13 @@ func (o *AdvancedSettingsTableResourceInner) HasSsdConcurrentAccessNumeric() boo
 	return false
 }
 
+<<<<<<< HEAD
 // SetSsdConcurrentAccessNumeric gets a reference to the given int64 and assigns it to the SsdConcurrentAccessNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetSsdConcurrentAccessNumeric(v int64) {
+=======
+// SetSsdConcurrentAccessNumeric gets a reference to the given int32 and assigns it to the SsdConcurrentAccessNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetSsdConcurrentAccessNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SsdConcurrentAccessNumeric = &v
 }
 
@@ -2413,9 +3024,15 @@ func (o *AdvancedSettingsTableResourceInner) SetSuperCapFailure(v string) {
 }
 
 // GetSuperCapFailureNumeric returns the SuperCapFailureNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumeric() int64 {
 	if o == nil || IsNil(o.SuperCapFailureNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumeric() int32 {
+	if o == nil || IsNil(o.SuperCapFailureNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SuperCapFailureNumeric
@@ -2423,7 +3040,11 @@ func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumeric() int64 {
 
 // GetSuperCapFailureNumericOk returns a tuple with the SuperCapFailureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SuperCapFailureNumeric) {
 		return nil, false
 	}
@@ -2439,8 +3060,13 @@ func (o *AdvancedSettingsTableResourceInner) HasSuperCapFailureNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSuperCapFailureNumeric gets a reference to the given int64 and assigns it to the SuperCapFailureNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetSuperCapFailureNumeric(v int64) {
+=======
+// SetSuperCapFailureNumeric gets a reference to the given int32 and assigns it to the SuperCapFailureNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetSuperCapFailureNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SuperCapFailureNumeric = &v
 }
 
@@ -2477,9 +3103,15 @@ func (o *AdvancedSettingsTableResourceInner) SetSyncCacheMode(v string) {
 }
 
 // GetSyncCacheModeNumeric returns the SyncCacheModeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumeric() int64 {
 	if o == nil || IsNil(o.SyncCacheModeNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumeric() int32 {
+	if o == nil || IsNil(o.SyncCacheModeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SyncCacheModeNumeric
@@ -2487,7 +3119,11 @@ func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumeric() int64 {
 
 // GetSyncCacheModeNumericOk returns a tuple with the SyncCacheModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SyncCacheModeNumeric) {
 		return nil, false
 	}
@@ -2503,8 +3139,13 @@ func (o *AdvancedSettingsTableResourceInner) HasSyncCacheModeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSyncCacheModeNumeric gets a reference to the given int64 and assigns it to the SyncCacheModeNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetSyncCacheModeNumeric(v int64) {
+=======
+// SetSyncCacheModeNumeric gets a reference to the given int32 and assigns it to the SyncCacheModeNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetSyncCacheModeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SyncCacheModeNumeric = &v
 }
 
@@ -2541,9 +3182,15 @@ func (o *AdvancedSettingsTableResourceInner) SetTemperatureExceeded(v string) {
 }
 
 // GetTemperatureExceededNumeric returns the TemperatureExceededNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumeric() int64 {
 	if o == nil || IsNil(o.TemperatureExceededNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumeric() int32 {
+	if o == nil || IsNil(o.TemperatureExceededNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TemperatureExceededNumeric
@@ -2551,7 +3198,11 @@ func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumeric() int
 
 // GetTemperatureExceededNumericOk returns a tuple with the TemperatureExceededNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TemperatureExceededNumeric) {
 		return nil, false
 	}
@@ -2567,8 +3218,13 @@ func (o *AdvancedSettingsTableResourceInner) HasTemperatureExceededNumeric() boo
 	return false
 }
 
+<<<<<<< HEAD
 // SetTemperatureExceededNumeric gets a reference to the given int64 and assigns it to the TemperatureExceededNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetTemperatureExceededNumeric(v int64) {
+=======
+// SetTemperatureExceededNumeric gets a reference to the given int32 and assigns it to the TemperatureExceededNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetTemperatureExceededNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TemperatureExceededNumeric = &v
 }
 
@@ -2605,9 +3261,15 @@ func (o *AdvancedSettingsTableResourceInner) SetUtilityPriority(v string) {
 }
 
 // GetUtilityPriorityNumeric returns the UtilityPriorityNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumeric() int64 {
 	if o == nil || IsNil(o.UtilityPriorityNumeric) {
 		var ret int64
+=======
+func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumeric() int32 {
+	if o == nil || IsNil(o.UtilityPriorityNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.UtilityPriorityNumeric
@@ -2615,7 +3277,11 @@ func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumeric() int64 {
 
 // GetUtilityPriorityNumericOk returns a tuple with the UtilityPriorityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumericOk() (*int64, bool) {
+=======
+func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.UtilityPriorityNumeric) {
 		return nil, false
 	}
@@ -2631,8 +3297,13 @@ func (o *AdvancedSettingsTableResourceInner) HasUtilityPriorityNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetUtilityPriorityNumeric gets a reference to the given int64 and assigns it to the UtilityPriorityNumeric field.
 func (o *AdvancedSettingsTableResourceInner) SetUtilityPriorityNumeric(v int64) {
+=======
+// SetUtilityPriorityNumeric gets a reference to the given int32 and assigns it to the UtilityPriorityNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetUtilityPriorityNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.UtilityPriorityNumeric = &v
 }
 

@@ -7,7 +7,11 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **MemberCount** | Pointer to **int64** | Number of members | [optional] 
+=======
+**MemberCount** | Pointer to **int32** | Number of members | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Name** | Pointer to **string** |  | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
@@ -109,20 +113,32 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetMemberCount
 
+<<<<<<< HEAD
 `func (o *HostGroupResourceInner) GetMemberCount() int64`
+=======
+`func (o *HostGroupResourceInner) GetMemberCount() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMemberCount returns the MemberCount field if non-nil, zero value otherwise.
 
 ### GetMemberCountOk
 
+<<<<<<< HEAD
 `func (o *HostGroupResourceInner) GetMemberCountOk() (*int64, bool)`
+=======
+`func (o *HostGroupResourceInner) GetMemberCountOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMemberCountOk returns a tuple with the MemberCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemberCount
 
+<<<<<<< HEAD
 `func (o *HostGroupResourceInner) SetMemberCount(v int64)`
+=======
+`func (o *HostGroupResourceInner) SetMemberCount(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMemberCount sets MemberCount field to given value.
 

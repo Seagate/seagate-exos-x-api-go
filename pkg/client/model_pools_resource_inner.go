@@ -22,6 +22,7 @@ type PoolsResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
 	Meta       *string `json:"meta,omitempty"`
 	// Number of pages allocated
+<<<<<<< HEAD
 	AllocatedPages *int64 `json:"allocated-pages,omitempty"`
 	// Available pages
 	AvailablePages          *int64  `json:"available-pages,omitempty"`
@@ -42,11 +43,34 @@ type PoolsResourceInner struct {
 	HighThreshold        *string `json:"high-threshold,omitempty"`
 	IdlePageCheck        *string `json:"idle-page-check,omitempty"`
 	IdlePageCheckNumeric *int64  `json:"idle-page-check-numeric,omitempty"`
+=======
+	AllocatedPages *int32 `json:"allocated-pages,omitempty"`
+	// Available pages
+	AvailablePages          *int32  `json:"available-pages,omitempty"`
+	AvailableRfcSize        *string `json:"available-rfc-size,omitempty"`
+	AvailableRfcSizeNumeric *int32  `json:"available-rfc-size-numeric,omitempty"`
+	Blocksize               *int32  `json:"blocksize,omitempty"`
+	CompressionEfficiency   *string `json:"compression-efficiency,omitempty"`
+	DiskGroupsCount         *int32  `json:"disk-groups-count,omitempty"`
+	// Extended status (bits)
+	ExtendedStatus              *int32  `json:"extended-status,omitempty"`
+	Health                      *string `json:"health,omitempty"`
+	HealthNumeric               *int32  `json:"health-numeric,omitempty"`
+	HealthReason                *string `json:"health-reason,omitempty"`
+	HealthReasonNumeric         *int32  `json:"health-reason-numeric,omitempty"`
+	HealthRecommendation        *string `json:"health-recommendation,omitempty"`
+	HealthRecommendationNumeric *int32  `json:"health-recommendation-numeric,omitempty"`
+	// High threshold percentage
+	HighThreshold        *string `json:"high-threshold,omitempty"`
+	IdlePageCheck        *string `json:"idle-page-check,omitempty"`
+	IdlePageCheckNumeric *int32  `json:"idle-page-check-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// Low threshold percentage
 	LowThreshold *string `json:"low-threshold,omitempty"`
 	// Pool Metadata currently in use
 	MetadataAllocated *string `json:"metadata-allocated,omitempty"`
 	// Pool Metadata currently in use( In numeric form )
+<<<<<<< HEAD
 	MetadataAllocatedNumeric *int64 `json:"metadata-allocated-numeric,omitempty"`
 	// Pool Metadata available capacity
 	MetadataAvailable *string `json:"metadata-available,omitempty"`
@@ -60,11 +84,27 @@ type PoolsResourceInner struct {
 	MetadataVolSize *string `json:"metadata-vol-size,omitempty"`
 	// Size of the storage pool metadata volume( In numeric form )
 	MetadataVolSizeNumeric *int64 `json:"metadata-vol-size-numeric,omitempty"`
+=======
+	MetadataAllocatedNumeric *int32 `json:"metadata-allocated-numeric,omitempty"`
+	// Pool Metadata available capacity
+	MetadataAvailable *string `json:"metadata-available,omitempty"`
+	// Pool Metadata available capacity( In numeric form )
+	MetadataAvailableNumeric *int32 `json:"metadata-available-numeric,omitempty"`
+	// Disk Group Metadata Total Size
+	MetadataTotalSize *string `json:"metadata-total-size,omitempty"`
+	// Disk Group Metadata Total Size( In numeric form )
+	MetadataTotalSizeNumeric *int32 `json:"metadata-total-size-numeric,omitempty"`
+	// Size of the storage pool metadata volume
+	MetadataVolSize *string `json:"metadata-vol-size,omitempty"`
+	// Size of the storage pool metadata volume( In numeric form )
+	MetadataVolSizeNumeric *int32 `json:"metadata-vol-size-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// Middle threshold percentage
 	MiddleThreshold *string `json:"middle-threshold,omitempty"`
 	// Migration between tiers
 	Migration *string `json:"migration,omitempty"`
 	// Migration between tiers( In numeric form )
+<<<<<<< HEAD
 	MigrationNumeric     *int64  `json:"migration-numeric,omitempty"`
 	Name                 *string `json:"name,omitempty"`
 	OverCommitted        *string `json:"over-committed,omitempty"`
@@ -121,6 +161,64 @@ type PoolsResourceInner struct {
 	ZeroScan *string `json:"zero-scan,omitempty"`
 	// Scan for zero-value pages( In numeric form )
 	ZeroScanNumeric *int64                    `json:"zero-scan-numeric,omitempty"`
+=======
+	MigrationNumeric     *int32  `json:"migration-numeric,omitempty"`
+	Name                 *string `json:"name,omitempty"`
+	OverCommitted        *string `json:"over-committed,omitempty"`
+	OverCommittedNumeric *int32  `json:"over-committed-numeric,omitempty"`
+	Overcommit           *string `json:"overcommit,omitempty"`
+	OvercommitNumeric    *int32  `json:"overcommit-numeric,omitempty"`
+	// Controller owning the component
+	Owner *string `json:"owner,omitempty"`
+	// Controller owning the component( In numeric form )
+	OwnerNumeric *int32 `json:"owner-numeric,omitempty"`
+	// Page size in blocks
+	PageSize *string `json:"page-size,omitempty"`
+	// Page size in blocks( In numeric form )
+	PageSizeNumeric *int32 `json:"page-size-numeric,omitempty"`
+	// Pool Sector Format
+	PoolSectorFormat *string `json:"pool-sector-format,omitempty"`
+	// Pool Sector Format( In numeric form )
+	PoolSectorFormatNumeric *int32 `json:"pool-sector-format-numeric,omitempty"`
+	// Configured owner
+	PreferredOwner *string `json:"preferred-owner,omitempty"`
+	// Configured owner( In numeric form )
+	PreferredOwnerNumeric *int32  `json:"preferred-owner-numeric,omitempty"`
+	ReadFlashCache        *string `json:"read-flash-cache,omitempty"`
+	ReadFlashCacheNumeric *int32  `json:"read-flash-cache-numeric,omitempty"`
+	// Rebalance within the tier
+	Rebalance *string `json:"rebalance,omitempty"`
+	// Rebalance within the tier( In numeric form )
+	RebalanceNumeric           *int32  `json:"rebalance-numeric,omitempty"`
+	ReservedSize               *string `json:"reserved-size,omitempty"`
+	ReservedSizeNumeric        *int32  `json:"reserved-size-numeric,omitempty"`
+	ReservedUnallocSize        *string `json:"reserved-unalloc-size,omitempty"`
+	ReservedUnallocSizeNumeric *int32  `json:"reserved-unalloc-size-numeric,omitempty"`
+	SerialNumber               *string `json:"serial-number,omitempty"`
+	SnapSize                   *string `json:"snap-size,omitempty"`
+	SnapSizeNumeric            *int32  `json:"snap-size-numeric,omitempty"`
+	// Storage type
+	StorageType *string `json:"storage-type,omitempty"`
+	// Storage type( In numeric form )
+	StorageTypeNumeric  *int32  `json:"storage-type-numeric,omitempty"`
+	TotalAvail          *string `json:"total-avail,omitempty"`
+	TotalAvailNumeric   *int32  `json:"total-avail-numeric,omitempty"`
+	TotalRfcSize        *string `json:"total-rfc-size,omitempty"`
+	TotalRfcSizeNumeric *int32  `json:"total-rfc-size-numeric,omitempty"`
+	// The total size formatted using the session settings for base, precision, and units
+	TotalSize *string `json:"total-size,omitempty"`
+	// The total size formatted using the session settings for base, precision, and units( In numeric form )
+	TotalSizeNumeric *int32 `json:"total-size-numeric,omitempty"`
+	// The resource URL
+	Url                   *string `json:"url,omitempty"`
+	UtilityRunning        *string `json:"utility-running,omitempty"`
+	UtilityRunningNumeric *int32  `json:"utility-running-numeric,omitempty"`
+	Volumes               *int32  `json:"volumes,omitempty"`
+	// Scan for zero-value pages
+	ZeroScan *string `json:"zero-scan,omitempty"`
+	// Scan for zero-value pages( In numeric form )
+	ZeroScanNumeric *int32                    `json:"zero-scan-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	DiskGroups      []DiskGroupsResourceInner `json:"disk-groups,omitempty"`
 	Tiers           []TiersResourceInner      `json:"tiers,omitempty"`
 }
@@ -207,9 +305,15 @@ func (o *PoolsResourceInner) SetMeta(v string) {
 }
 
 // GetAllocatedPages returns the AllocatedPages field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetAllocatedPages() int64 {
 	if o == nil || IsNil(o.AllocatedPages) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetAllocatedPages() int32 {
+	if o == nil || IsNil(o.AllocatedPages) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AllocatedPages
@@ -217,7 +321,11 @@ func (o *PoolsResourceInner) GetAllocatedPages() int64 {
 
 // GetAllocatedPagesOk returns a tuple with the AllocatedPages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetAllocatedPagesOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetAllocatedPagesOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AllocatedPages) {
 		return nil, false
 	}
@@ -233,15 +341,26 @@ func (o *PoolsResourceInner) HasAllocatedPages() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAllocatedPages gets a reference to the given int64 and assigns it to the AllocatedPages field.
 func (o *PoolsResourceInner) SetAllocatedPages(v int64) {
+=======
+// SetAllocatedPages gets a reference to the given int32 and assigns it to the AllocatedPages field.
+func (o *PoolsResourceInner) SetAllocatedPages(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AllocatedPages = &v
 }
 
 // GetAvailablePages returns the AvailablePages field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetAvailablePages() int64 {
 	if o == nil || IsNil(o.AvailablePages) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetAvailablePages() int32 {
+	if o == nil || IsNil(o.AvailablePages) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AvailablePages
@@ -249,7 +368,11 @@ func (o *PoolsResourceInner) GetAvailablePages() int64 {
 
 // GetAvailablePagesOk returns a tuple with the AvailablePages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetAvailablePagesOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetAvailablePagesOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AvailablePages) {
 		return nil, false
 	}
@@ -265,8 +388,13 @@ func (o *PoolsResourceInner) HasAvailablePages() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAvailablePages gets a reference to the given int64 and assigns it to the AvailablePages field.
 func (o *PoolsResourceInner) SetAvailablePages(v int64) {
+=======
+// SetAvailablePages gets a reference to the given int32 and assigns it to the AvailablePages field.
+func (o *PoolsResourceInner) SetAvailablePages(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AvailablePages = &v
 }
 
@@ -303,9 +431,15 @@ func (o *PoolsResourceInner) SetAvailableRfcSize(v string) {
 }
 
 // GetAvailableRfcSizeNumeric returns the AvailableRfcSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetAvailableRfcSizeNumeric() int64 {
 	if o == nil || IsNil(o.AvailableRfcSizeNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetAvailableRfcSizeNumeric() int32 {
+	if o == nil || IsNil(o.AvailableRfcSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AvailableRfcSizeNumeric
@@ -313,7 +447,11 @@ func (o *PoolsResourceInner) GetAvailableRfcSizeNumeric() int64 {
 
 // GetAvailableRfcSizeNumericOk returns a tuple with the AvailableRfcSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetAvailableRfcSizeNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetAvailableRfcSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AvailableRfcSizeNumeric) {
 		return nil, false
 	}
@@ -329,15 +467,26 @@ func (o *PoolsResourceInner) HasAvailableRfcSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAvailableRfcSizeNumeric gets a reference to the given int64 and assigns it to the AvailableRfcSizeNumeric field.
 func (o *PoolsResourceInner) SetAvailableRfcSizeNumeric(v int64) {
+=======
+// SetAvailableRfcSizeNumeric gets a reference to the given int32 and assigns it to the AvailableRfcSizeNumeric field.
+func (o *PoolsResourceInner) SetAvailableRfcSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AvailableRfcSizeNumeric = &v
 }
 
 // GetBlocksize returns the Blocksize field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetBlocksize() int64 {
 	if o == nil || IsNil(o.Blocksize) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetBlocksize() int32 {
+	if o == nil || IsNil(o.Blocksize) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Blocksize
@@ -345,7 +494,11 @@ func (o *PoolsResourceInner) GetBlocksize() int64 {
 
 // GetBlocksizeOk returns a tuple with the Blocksize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetBlocksizeOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetBlocksizeOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Blocksize) {
 		return nil, false
 	}
@@ -361,8 +514,13 @@ func (o *PoolsResourceInner) HasBlocksize() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBlocksize gets a reference to the given int64 and assigns it to the Blocksize field.
 func (o *PoolsResourceInner) SetBlocksize(v int64) {
+=======
+// SetBlocksize gets a reference to the given int32 and assigns it to the Blocksize field.
+func (o *PoolsResourceInner) SetBlocksize(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Blocksize = &v
 }
 
@@ -399,9 +557,15 @@ func (o *PoolsResourceInner) SetCompressionEfficiency(v string) {
 }
 
 // GetDiskGroupsCount returns the DiskGroupsCount field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetDiskGroupsCount() int64 {
 	if o == nil || IsNil(o.DiskGroupsCount) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetDiskGroupsCount() int32 {
+	if o == nil || IsNil(o.DiskGroupsCount) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DiskGroupsCount
@@ -409,7 +573,11 @@ func (o *PoolsResourceInner) GetDiskGroupsCount() int64 {
 
 // GetDiskGroupsCountOk returns a tuple with the DiskGroupsCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetDiskGroupsCountOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetDiskGroupsCountOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DiskGroupsCount) {
 		return nil, false
 	}
@@ -425,15 +593,26 @@ func (o *PoolsResourceInner) HasDiskGroupsCount() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskGroupsCount gets a reference to the given int64 and assigns it to the DiskGroupsCount field.
 func (o *PoolsResourceInner) SetDiskGroupsCount(v int64) {
+=======
+// SetDiskGroupsCount gets a reference to the given int32 and assigns it to the DiskGroupsCount field.
+func (o *PoolsResourceInner) SetDiskGroupsCount(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DiskGroupsCount = &v
 }
 
 // GetExtendedStatus returns the ExtendedStatus field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetExtendedStatus() int64 {
 	if o == nil || IsNil(o.ExtendedStatus) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetExtendedStatus() int32 {
+	if o == nil || IsNil(o.ExtendedStatus) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ExtendedStatus
@@ -441,7 +620,11 @@ func (o *PoolsResourceInner) GetExtendedStatus() int64 {
 
 // GetExtendedStatusOk returns a tuple with the ExtendedStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetExtendedStatusOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetExtendedStatusOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ExtendedStatus) {
 		return nil, false
 	}
@@ -457,8 +640,13 @@ func (o *PoolsResourceInner) HasExtendedStatus() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetExtendedStatus gets a reference to the given int64 and assigns it to the ExtendedStatus field.
 func (o *PoolsResourceInner) SetExtendedStatus(v int64) {
+=======
+// SetExtendedStatus gets a reference to the given int32 and assigns it to the ExtendedStatus field.
+func (o *PoolsResourceInner) SetExtendedStatus(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ExtendedStatus = &v
 }
 
@@ -495,9 +683,15 @@ func (o *PoolsResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetHealthNumeric() int32 {
+	if o == nil || IsNil(o.HealthNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthNumeric
@@ -505,7 +699,11 @@ func (o *PoolsResourceInner) GetHealthNumeric() int64 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetHealthNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetHealthNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -521,8 +719,13 @@ func (o *PoolsResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
 func (o *PoolsResourceInner) SetHealthNumeric(v int64) {
+=======
+// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
+func (o *PoolsResourceInner) SetHealthNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthNumeric = &v
 }
 
@@ -559,9 +762,15 @@ func (o *PoolsResourceInner) SetHealthReason(v string) {
 }
 
 // GetHealthReasonNumeric returns the HealthReasonNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetHealthReasonNumeric() int64 {
 	if o == nil || IsNil(o.HealthReasonNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetHealthReasonNumeric() int32 {
+	if o == nil || IsNil(o.HealthReasonNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthReasonNumeric
@@ -569,7 +778,11 @@ func (o *PoolsResourceInner) GetHealthReasonNumeric() int64 {
 
 // GetHealthReasonNumericOk returns a tuple with the HealthReasonNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetHealthReasonNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetHealthReasonNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthReasonNumeric) {
 		return nil, false
 	}
@@ -585,8 +798,13 @@ func (o *PoolsResourceInner) HasHealthReasonNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthReasonNumeric gets a reference to the given int64 and assigns it to the HealthReasonNumeric field.
 func (o *PoolsResourceInner) SetHealthReasonNumeric(v int64) {
+=======
+// SetHealthReasonNumeric gets a reference to the given int32 and assigns it to the HealthReasonNumeric field.
+func (o *PoolsResourceInner) SetHealthReasonNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthReasonNumeric = &v
 }
 
@@ -623,9 +841,15 @@ func (o *PoolsResourceInner) SetHealthRecommendation(v string) {
 }
 
 // GetHealthRecommendationNumeric returns the HealthRecommendationNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetHealthRecommendationNumeric() int64 {
 	if o == nil || IsNil(o.HealthRecommendationNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetHealthRecommendationNumeric() int32 {
+	if o == nil || IsNil(o.HealthRecommendationNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthRecommendationNumeric
@@ -633,7 +857,11 @@ func (o *PoolsResourceInner) GetHealthRecommendationNumeric() int64 {
 
 // GetHealthRecommendationNumericOk returns a tuple with the HealthRecommendationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetHealthRecommendationNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetHealthRecommendationNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthRecommendationNumeric) {
 		return nil, false
 	}
@@ -649,8 +877,13 @@ func (o *PoolsResourceInner) HasHealthRecommendationNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthRecommendationNumeric gets a reference to the given int64 and assigns it to the HealthRecommendationNumeric field.
 func (o *PoolsResourceInner) SetHealthRecommendationNumeric(v int64) {
+=======
+// SetHealthRecommendationNumeric gets a reference to the given int32 and assigns it to the HealthRecommendationNumeric field.
+func (o *PoolsResourceInner) SetHealthRecommendationNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthRecommendationNumeric = &v
 }
 
@@ -719,9 +952,15 @@ func (o *PoolsResourceInner) SetIdlePageCheck(v string) {
 }
 
 // GetIdlePageCheckNumeric returns the IdlePageCheckNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetIdlePageCheckNumeric() int64 {
 	if o == nil || IsNil(o.IdlePageCheckNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetIdlePageCheckNumeric() int32 {
+	if o == nil || IsNil(o.IdlePageCheckNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.IdlePageCheckNumeric
@@ -729,7 +968,11 @@ func (o *PoolsResourceInner) GetIdlePageCheckNumeric() int64 {
 
 // GetIdlePageCheckNumericOk returns a tuple with the IdlePageCheckNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetIdlePageCheckNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetIdlePageCheckNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.IdlePageCheckNumeric) {
 		return nil, false
 	}
@@ -745,8 +988,13 @@ func (o *PoolsResourceInner) HasIdlePageCheckNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetIdlePageCheckNumeric gets a reference to the given int64 and assigns it to the IdlePageCheckNumeric field.
 func (o *PoolsResourceInner) SetIdlePageCheckNumeric(v int64) {
+=======
+// SetIdlePageCheckNumeric gets a reference to the given int32 and assigns it to the IdlePageCheckNumeric field.
+func (o *PoolsResourceInner) SetIdlePageCheckNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.IdlePageCheckNumeric = &v
 }
 
@@ -815,9 +1063,15 @@ func (o *PoolsResourceInner) SetMetadataAllocated(v string) {
 }
 
 // GetMetadataAllocatedNumeric returns the MetadataAllocatedNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetMetadataAllocatedNumeric() int64 {
 	if o == nil || IsNil(o.MetadataAllocatedNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetMetadataAllocatedNumeric() int32 {
+	if o == nil || IsNil(o.MetadataAllocatedNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MetadataAllocatedNumeric
@@ -825,7 +1079,11 @@ func (o *PoolsResourceInner) GetMetadataAllocatedNumeric() int64 {
 
 // GetMetadataAllocatedNumericOk returns a tuple with the MetadataAllocatedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetMetadataAllocatedNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetMetadataAllocatedNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MetadataAllocatedNumeric) {
 		return nil, false
 	}
@@ -841,8 +1099,13 @@ func (o *PoolsResourceInner) HasMetadataAllocatedNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMetadataAllocatedNumeric gets a reference to the given int64 and assigns it to the MetadataAllocatedNumeric field.
 func (o *PoolsResourceInner) SetMetadataAllocatedNumeric(v int64) {
+=======
+// SetMetadataAllocatedNumeric gets a reference to the given int32 and assigns it to the MetadataAllocatedNumeric field.
+func (o *PoolsResourceInner) SetMetadataAllocatedNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MetadataAllocatedNumeric = &v
 }
 
@@ -879,9 +1142,15 @@ func (o *PoolsResourceInner) SetMetadataAvailable(v string) {
 }
 
 // GetMetadataAvailableNumeric returns the MetadataAvailableNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetMetadataAvailableNumeric() int64 {
 	if o == nil || IsNil(o.MetadataAvailableNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetMetadataAvailableNumeric() int32 {
+	if o == nil || IsNil(o.MetadataAvailableNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MetadataAvailableNumeric
@@ -889,7 +1158,11 @@ func (o *PoolsResourceInner) GetMetadataAvailableNumeric() int64 {
 
 // GetMetadataAvailableNumericOk returns a tuple with the MetadataAvailableNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetMetadataAvailableNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetMetadataAvailableNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MetadataAvailableNumeric) {
 		return nil, false
 	}
@@ -905,8 +1178,13 @@ func (o *PoolsResourceInner) HasMetadataAvailableNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMetadataAvailableNumeric gets a reference to the given int64 and assigns it to the MetadataAvailableNumeric field.
 func (o *PoolsResourceInner) SetMetadataAvailableNumeric(v int64) {
+=======
+// SetMetadataAvailableNumeric gets a reference to the given int32 and assigns it to the MetadataAvailableNumeric field.
+func (o *PoolsResourceInner) SetMetadataAvailableNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MetadataAvailableNumeric = &v
 }
 
@@ -943,9 +1221,15 @@ func (o *PoolsResourceInner) SetMetadataTotalSize(v string) {
 }
 
 // GetMetadataTotalSizeNumeric returns the MetadataTotalSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetMetadataTotalSizeNumeric() int64 {
 	if o == nil || IsNil(o.MetadataTotalSizeNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetMetadataTotalSizeNumeric() int32 {
+	if o == nil || IsNil(o.MetadataTotalSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MetadataTotalSizeNumeric
@@ -953,7 +1237,11 @@ func (o *PoolsResourceInner) GetMetadataTotalSizeNumeric() int64 {
 
 // GetMetadataTotalSizeNumericOk returns a tuple with the MetadataTotalSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetMetadataTotalSizeNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetMetadataTotalSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MetadataTotalSizeNumeric) {
 		return nil, false
 	}
@@ -969,8 +1257,13 @@ func (o *PoolsResourceInner) HasMetadataTotalSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMetadataTotalSizeNumeric gets a reference to the given int64 and assigns it to the MetadataTotalSizeNumeric field.
 func (o *PoolsResourceInner) SetMetadataTotalSizeNumeric(v int64) {
+=======
+// SetMetadataTotalSizeNumeric gets a reference to the given int32 and assigns it to the MetadataTotalSizeNumeric field.
+func (o *PoolsResourceInner) SetMetadataTotalSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MetadataTotalSizeNumeric = &v
 }
 
@@ -1007,9 +1300,15 @@ func (o *PoolsResourceInner) SetMetadataVolSize(v string) {
 }
 
 // GetMetadataVolSizeNumeric returns the MetadataVolSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetMetadataVolSizeNumeric() int64 {
 	if o == nil || IsNil(o.MetadataVolSizeNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetMetadataVolSizeNumeric() int32 {
+	if o == nil || IsNil(o.MetadataVolSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MetadataVolSizeNumeric
@@ -1017,7 +1316,11 @@ func (o *PoolsResourceInner) GetMetadataVolSizeNumeric() int64 {
 
 // GetMetadataVolSizeNumericOk returns a tuple with the MetadataVolSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetMetadataVolSizeNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetMetadataVolSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MetadataVolSizeNumeric) {
 		return nil, false
 	}
@@ -1033,8 +1336,13 @@ func (o *PoolsResourceInner) HasMetadataVolSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMetadataVolSizeNumeric gets a reference to the given int64 and assigns it to the MetadataVolSizeNumeric field.
 func (o *PoolsResourceInner) SetMetadataVolSizeNumeric(v int64) {
+=======
+// SetMetadataVolSizeNumeric gets a reference to the given int32 and assigns it to the MetadataVolSizeNumeric field.
+func (o *PoolsResourceInner) SetMetadataVolSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MetadataVolSizeNumeric = &v
 }
 
@@ -1103,9 +1411,15 @@ func (o *PoolsResourceInner) SetMigration(v string) {
 }
 
 // GetMigrationNumeric returns the MigrationNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetMigrationNumeric() int64 {
 	if o == nil || IsNil(o.MigrationNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetMigrationNumeric() int32 {
+	if o == nil || IsNil(o.MigrationNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MigrationNumeric
@@ -1113,7 +1427,11 @@ func (o *PoolsResourceInner) GetMigrationNumeric() int64 {
 
 // GetMigrationNumericOk returns a tuple with the MigrationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetMigrationNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetMigrationNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MigrationNumeric) {
 		return nil, false
 	}
@@ -1129,8 +1447,13 @@ func (o *PoolsResourceInner) HasMigrationNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMigrationNumeric gets a reference to the given int64 and assigns it to the MigrationNumeric field.
 func (o *PoolsResourceInner) SetMigrationNumeric(v int64) {
+=======
+// SetMigrationNumeric gets a reference to the given int32 and assigns it to the MigrationNumeric field.
+func (o *PoolsResourceInner) SetMigrationNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MigrationNumeric = &v
 }
 
@@ -1199,9 +1522,15 @@ func (o *PoolsResourceInner) SetOverCommitted(v string) {
 }
 
 // GetOverCommittedNumeric returns the OverCommittedNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetOverCommittedNumeric() int64 {
 	if o == nil || IsNil(o.OverCommittedNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetOverCommittedNumeric() int32 {
+	if o == nil || IsNil(o.OverCommittedNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.OverCommittedNumeric
@@ -1209,7 +1538,11 @@ func (o *PoolsResourceInner) GetOverCommittedNumeric() int64 {
 
 // GetOverCommittedNumericOk returns a tuple with the OverCommittedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetOverCommittedNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetOverCommittedNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.OverCommittedNumeric) {
 		return nil, false
 	}
@@ -1225,8 +1558,13 @@ func (o *PoolsResourceInner) HasOverCommittedNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetOverCommittedNumeric gets a reference to the given int64 and assigns it to the OverCommittedNumeric field.
 func (o *PoolsResourceInner) SetOverCommittedNumeric(v int64) {
+=======
+// SetOverCommittedNumeric gets a reference to the given int32 and assigns it to the OverCommittedNumeric field.
+func (o *PoolsResourceInner) SetOverCommittedNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.OverCommittedNumeric = &v
 }
 
@@ -1263,9 +1601,15 @@ func (o *PoolsResourceInner) SetOvercommit(v string) {
 }
 
 // GetOvercommitNumeric returns the OvercommitNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetOvercommitNumeric() int64 {
 	if o == nil || IsNil(o.OvercommitNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetOvercommitNumeric() int32 {
+	if o == nil || IsNil(o.OvercommitNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.OvercommitNumeric
@@ -1273,7 +1617,11 @@ func (o *PoolsResourceInner) GetOvercommitNumeric() int64 {
 
 // GetOvercommitNumericOk returns a tuple with the OvercommitNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetOvercommitNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetOvercommitNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.OvercommitNumeric) {
 		return nil, false
 	}
@@ -1289,8 +1637,13 @@ func (o *PoolsResourceInner) HasOvercommitNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetOvercommitNumeric gets a reference to the given int64 and assigns it to the OvercommitNumeric field.
 func (o *PoolsResourceInner) SetOvercommitNumeric(v int64) {
+=======
+// SetOvercommitNumeric gets a reference to the given int32 and assigns it to the OvercommitNumeric field.
+func (o *PoolsResourceInner) SetOvercommitNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.OvercommitNumeric = &v
 }
 
@@ -1327,9 +1680,15 @@ func (o *PoolsResourceInner) SetOwner(v string) {
 }
 
 // GetOwnerNumeric returns the OwnerNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetOwnerNumeric() int64 {
 	if o == nil || IsNil(o.OwnerNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetOwnerNumeric() int32 {
+	if o == nil || IsNil(o.OwnerNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.OwnerNumeric
@@ -1337,7 +1696,11 @@ func (o *PoolsResourceInner) GetOwnerNumeric() int64 {
 
 // GetOwnerNumericOk returns a tuple with the OwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetOwnerNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetOwnerNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.OwnerNumeric) {
 		return nil, false
 	}
@@ -1353,8 +1716,13 @@ func (o *PoolsResourceInner) HasOwnerNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetOwnerNumeric gets a reference to the given int64 and assigns it to the OwnerNumeric field.
 func (o *PoolsResourceInner) SetOwnerNumeric(v int64) {
+=======
+// SetOwnerNumeric gets a reference to the given int32 and assigns it to the OwnerNumeric field.
+func (o *PoolsResourceInner) SetOwnerNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.OwnerNumeric = &v
 }
 
@@ -1391,9 +1759,15 @@ func (o *PoolsResourceInner) SetPageSize(v string) {
 }
 
 // GetPageSizeNumeric returns the PageSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetPageSizeNumeric() int64 {
 	if o == nil || IsNil(o.PageSizeNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetPageSizeNumeric() int32 {
+	if o == nil || IsNil(o.PageSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PageSizeNumeric
@@ -1401,7 +1775,11 @@ func (o *PoolsResourceInner) GetPageSizeNumeric() int64 {
 
 // GetPageSizeNumericOk returns a tuple with the PageSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetPageSizeNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetPageSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PageSizeNumeric) {
 		return nil, false
 	}
@@ -1417,8 +1795,13 @@ func (o *PoolsResourceInner) HasPageSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPageSizeNumeric gets a reference to the given int64 and assigns it to the PageSizeNumeric field.
 func (o *PoolsResourceInner) SetPageSizeNumeric(v int64) {
+=======
+// SetPageSizeNumeric gets a reference to the given int32 and assigns it to the PageSizeNumeric field.
+func (o *PoolsResourceInner) SetPageSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PageSizeNumeric = &v
 }
 
@@ -1455,9 +1838,15 @@ func (o *PoolsResourceInner) SetPoolSectorFormat(v string) {
 }
 
 // GetPoolSectorFormatNumeric returns the PoolSectorFormatNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetPoolSectorFormatNumeric() int64 {
 	if o == nil || IsNil(o.PoolSectorFormatNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetPoolSectorFormatNumeric() int32 {
+	if o == nil || IsNil(o.PoolSectorFormatNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PoolSectorFormatNumeric
@@ -1465,7 +1854,11 @@ func (o *PoolsResourceInner) GetPoolSectorFormatNumeric() int64 {
 
 // GetPoolSectorFormatNumericOk returns a tuple with the PoolSectorFormatNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetPoolSectorFormatNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetPoolSectorFormatNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PoolSectorFormatNumeric) {
 		return nil, false
 	}
@@ -1481,8 +1874,13 @@ func (o *PoolsResourceInner) HasPoolSectorFormatNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPoolSectorFormatNumeric gets a reference to the given int64 and assigns it to the PoolSectorFormatNumeric field.
 func (o *PoolsResourceInner) SetPoolSectorFormatNumeric(v int64) {
+=======
+// SetPoolSectorFormatNumeric gets a reference to the given int32 and assigns it to the PoolSectorFormatNumeric field.
+func (o *PoolsResourceInner) SetPoolSectorFormatNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PoolSectorFormatNumeric = &v
 }
 
@@ -1519,9 +1917,15 @@ func (o *PoolsResourceInner) SetPreferredOwner(v string) {
 }
 
 // GetPreferredOwnerNumeric returns the PreferredOwnerNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetPreferredOwnerNumeric() int64 {
 	if o == nil || IsNil(o.PreferredOwnerNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetPreferredOwnerNumeric() int32 {
+	if o == nil || IsNil(o.PreferredOwnerNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PreferredOwnerNumeric
@@ -1529,7 +1933,11 @@ func (o *PoolsResourceInner) GetPreferredOwnerNumeric() int64 {
 
 // GetPreferredOwnerNumericOk returns a tuple with the PreferredOwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetPreferredOwnerNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetPreferredOwnerNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PreferredOwnerNumeric) {
 		return nil, false
 	}
@@ -1545,8 +1953,13 @@ func (o *PoolsResourceInner) HasPreferredOwnerNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPreferredOwnerNumeric gets a reference to the given int64 and assigns it to the PreferredOwnerNumeric field.
 func (o *PoolsResourceInner) SetPreferredOwnerNumeric(v int64) {
+=======
+// SetPreferredOwnerNumeric gets a reference to the given int32 and assigns it to the PreferredOwnerNumeric field.
+func (o *PoolsResourceInner) SetPreferredOwnerNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PreferredOwnerNumeric = &v
 }
 
@@ -1583,9 +1996,15 @@ func (o *PoolsResourceInner) SetReadFlashCache(v string) {
 }
 
 // GetReadFlashCacheNumeric returns the ReadFlashCacheNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetReadFlashCacheNumeric() int64 {
 	if o == nil || IsNil(o.ReadFlashCacheNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetReadFlashCacheNumeric() int32 {
+	if o == nil || IsNil(o.ReadFlashCacheNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ReadFlashCacheNumeric
@@ -1593,7 +2012,11 @@ func (o *PoolsResourceInner) GetReadFlashCacheNumeric() int64 {
 
 // GetReadFlashCacheNumericOk returns a tuple with the ReadFlashCacheNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetReadFlashCacheNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetReadFlashCacheNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ReadFlashCacheNumeric) {
 		return nil, false
 	}
@@ -1609,8 +2032,13 @@ func (o *PoolsResourceInner) HasReadFlashCacheNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetReadFlashCacheNumeric gets a reference to the given int64 and assigns it to the ReadFlashCacheNumeric field.
 func (o *PoolsResourceInner) SetReadFlashCacheNumeric(v int64) {
+=======
+// SetReadFlashCacheNumeric gets a reference to the given int32 and assigns it to the ReadFlashCacheNumeric field.
+func (o *PoolsResourceInner) SetReadFlashCacheNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ReadFlashCacheNumeric = &v
 }
 
@@ -1647,9 +2075,15 @@ func (o *PoolsResourceInner) SetRebalance(v string) {
 }
 
 // GetRebalanceNumeric returns the RebalanceNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetRebalanceNumeric() int64 {
 	if o == nil || IsNil(o.RebalanceNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetRebalanceNumeric() int32 {
+	if o == nil || IsNil(o.RebalanceNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RebalanceNumeric
@@ -1657,7 +2091,11 @@ func (o *PoolsResourceInner) GetRebalanceNumeric() int64 {
 
 // GetRebalanceNumericOk returns a tuple with the RebalanceNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetRebalanceNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetRebalanceNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RebalanceNumeric) {
 		return nil, false
 	}
@@ -1673,8 +2111,13 @@ func (o *PoolsResourceInner) HasRebalanceNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRebalanceNumeric gets a reference to the given int64 and assigns it to the RebalanceNumeric field.
 func (o *PoolsResourceInner) SetRebalanceNumeric(v int64) {
+=======
+// SetRebalanceNumeric gets a reference to the given int32 and assigns it to the RebalanceNumeric field.
+func (o *PoolsResourceInner) SetRebalanceNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RebalanceNumeric = &v
 }
 
@@ -1711,9 +2154,15 @@ func (o *PoolsResourceInner) SetReservedSize(v string) {
 }
 
 // GetReservedSizeNumeric returns the ReservedSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetReservedSizeNumeric() int64 {
 	if o == nil || IsNil(o.ReservedSizeNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetReservedSizeNumeric() int32 {
+	if o == nil || IsNil(o.ReservedSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ReservedSizeNumeric
@@ -1721,7 +2170,11 @@ func (o *PoolsResourceInner) GetReservedSizeNumeric() int64 {
 
 // GetReservedSizeNumericOk returns a tuple with the ReservedSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetReservedSizeNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetReservedSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ReservedSizeNumeric) {
 		return nil, false
 	}
@@ -1737,8 +2190,13 @@ func (o *PoolsResourceInner) HasReservedSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetReservedSizeNumeric gets a reference to the given int64 and assigns it to the ReservedSizeNumeric field.
 func (o *PoolsResourceInner) SetReservedSizeNumeric(v int64) {
+=======
+// SetReservedSizeNumeric gets a reference to the given int32 and assigns it to the ReservedSizeNumeric field.
+func (o *PoolsResourceInner) SetReservedSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ReservedSizeNumeric = &v
 }
 
@@ -1775,9 +2233,15 @@ func (o *PoolsResourceInner) SetReservedUnallocSize(v string) {
 }
 
 // GetReservedUnallocSizeNumeric returns the ReservedUnallocSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetReservedUnallocSizeNumeric() int64 {
 	if o == nil || IsNil(o.ReservedUnallocSizeNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetReservedUnallocSizeNumeric() int32 {
+	if o == nil || IsNil(o.ReservedUnallocSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ReservedUnallocSizeNumeric
@@ -1785,7 +2249,11 @@ func (o *PoolsResourceInner) GetReservedUnallocSizeNumeric() int64 {
 
 // GetReservedUnallocSizeNumericOk returns a tuple with the ReservedUnallocSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetReservedUnallocSizeNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetReservedUnallocSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ReservedUnallocSizeNumeric) {
 		return nil, false
 	}
@@ -1801,8 +2269,13 @@ func (o *PoolsResourceInner) HasReservedUnallocSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetReservedUnallocSizeNumeric gets a reference to the given int64 and assigns it to the ReservedUnallocSizeNumeric field.
 func (o *PoolsResourceInner) SetReservedUnallocSizeNumeric(v int64) {
+=======
+// SetReservedUnallocSizeNumeric gets a reference to the given int32 and assigns it to the ReservedUnallocSizeNumeric field.
+func (o *PoolsResourceInner) SetReservedUnallocSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ReservedUnallocSizeNumeric = &v
 }
 
@@ -1871,9 +2344,15 @@ func (o *PoolsResourceInner) SetSnapSize(v string) {
 }
 
 // GetSnapSizeNumeric returns the SnapSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetSnapSizeNumeric() int64 {
 	if o == nil || IsNil(o.SnapSizeNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetSnapSizeNumeric() int32 {
+	if o == nil || IsNil(o.SnapSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SnapSizeNumeric
@@ -1881,7 +2360,11 @@ func (o *PoolsResourceInner) GetSnapSizeNumeric() int64 {
 
 // GetSnapSizeNumericOk returns a tuple with the SnapSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetSnapSizeNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetSnapSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SnapSizeNumeric) {
 		return nil, false
 	}
@@ -1897,8 +2380,13 @@ func (o *PoolsResourceInner) HasSnapSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSnapSizeNumeric gets a reference to the given int64 and assigns it to the SnapSizeNumeric field.
 func (o *PoolsResourceInner) SetSnapSizeNumeric(v int64) {
+=======
+// SetSnapSizeNumeric gets a reference to the given int32 and assigns it to the SnapSizeNumeric field.
+func (o *PoolsResourceInner) SetSnapSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SnapSizeNumeric = &v
 }
 
@@ -1935,9 +2423,15 @@ func (o *PoolsResourceInner) SetStorageType(v string) {
 }
 
 // GetStorageTypeNumeric returns the StorageTypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetStorageTypeNumeric() int64 {
 	if o == nil || IsNil(o.StorageTypeNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetStorageTypeNumeric() int32 {
+	if o == nil || IsNil(o.StorageTypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.StorageTypeNumeric
@@ -1945,7 +2439,11 @@ func (o *PoolsResourceInner) GetStorageTypeNumeric() int64 {
 
 // GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetStorageTypeNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetStorageTypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.StorageTypeNumeric) {
 		return nil, false
 	}
@@ -1961,8 +2459,13 @@ func (o *PoolsResourceInner) HasStorageTypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetStorageTypeNumeric gets a reference to the given int64 and assigns it to the StorageTypeNumeric field.
 func (o *PoolsResourceInner) SetStorageTypeNumeric(v int64) {
+=======
+// SetStorageTypeNumeric gets a reference to the given int32 and assigns it to the StorageTypeNumeric field.
+func (o *PoolsResourceInner) SetStorageTypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.StorageTypeNumeric = &v
 }
 
@@ -1999,9 +2502,15 @@ func (o *PoolsResourceInner) SetTotalAvail(v string) {
 }
 
 // GetTotalAvailNumeric returns the TotalAvailNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetTotalAvailNumeric() int64 {
 	if o == nil || IsNil(o.TotalAvailNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetTotalAvailNumeric() int32 {
+	if o == nil || IsNil(o.TotalAvailNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TotalAvailNumeric
@@ -2009,7 +2518,11 @@ func (o *PoolsResourceInner) GetTotalAvailNumeric() int64 {
 
 // GetTotalAvailNumericOk returns a tuple with the TotalAvailNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetTotalAvailNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetTotalAvailNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TotalAvailNumeric) {
 		return nil, false
 	}
@@ -2025,8 +2538,13 @@ func (o *PoolsResourceInner) HasTotalAvailNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTotalAvailNumeric gets a reference to the given int64 and assigns it to the TotalAvailNumeric field.
 func (o *PoolsResourceInner) SetTotalAvailNumeric(v int64) {
+=======
+// SetTotalAvailNumeric gets a reference to the given int32 and assigns it to the TotalAvailNumeric field.
+func (o *PoolsResourceInner) SetTotalAvailNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TotalAvailNumeric = &v
 }
 
@@ -2063,9 +2581,15 @@ func (o *PoolsResourceInner) SetTotalRfcSize(v string) {
 }
 
 // GetTotalRfcSizeNumeric returns the TotalRfcSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetTotalRfcSizeNumeric() int64 {
 	if o == nil || IsNil(o.TotalRfcSizeNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetTotalRfcSizeNumeric() int32 {
+	if o == nil || IsNil(o.TotalRfcSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TotalRfcSizeNumeric
@@ -2073,7 +2597,11 @@ func (o *PoolsResourceInner) GetTotalRfcSizeNumeric() int64 {
 
 // GetTotalRfcSizeNumericOk returns a tuple with the TotalRfcSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetTotalRfcSizeNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetTotalRfcSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TotalRfcSizeNumeric) {
 		return nil, false
 	}
@@ -2089,8 +2617,13 @@ func (o *PoolsResourceInner) HasTotalRfcSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTotalRfcSizeNumeric gets a reference to the given int64 and assigns it to the TotalRfcSizeNumeric field.
 func (o *PoolsResourceInner) SetTotalRfcSizeNumeric(v int64) {
+=======
+// SetTotalRfcSizeNumeric gets a reference to the given int32 and assigns it to the TotalRfcSizeNumeric field.
+func (o *PoolsResourceInner) SetTotalRfcSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TotalRfcSizeNumeric = &v
 }
 
@@ -2127,9 +2660,15 @@ func (o *PoolsResourceInner) SetTotalSize(v string) {
 }
 
 // GetTotalSizeNumeric returns the TotalSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetTotalSizeNumeric() int64 {
 	if o == nil || IsNil(o.TotalSizeNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetTotalSizeNumeric() int32 {
+	if o == nil || IsNil(o.TotalSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TotalSizeNumeric
@@ -2137,7 +2676,11 @@ func (o *PoolsResourceInner) GetTotalSizeNumeric() int64 {
 
 // GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetTotalSizeNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetTotalSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TotalSizeNumeric) {
 		return nil, false
 	}
@@ -2153,8 +2696,13 @@ func (o *PoolsResourceInner) HasTotalSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTotalSizeNumeric gets a reference to the given int64 and assigns it to the TotalSizeNumeric field.
 func (o *PoolsResourceInner) SetTotalSizeNumeric(v int64) {
+=======
+// SetTotalSizeNumeric gets a reference to the given int32 and assigns it to the TotalSizeNumeric field.
+func (o *PoolsResourceInner) SetTotalSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TotalSizeNumeric = &v
 }
 
@@ -2223,9 +2771,15 @@ func (o *PoolsResourceInner) SetUtilityRunning(v string) {
 }
 
 // GetUtilityRunningNumeric returns the UtilityRunningNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetUtilityRunningNumeric() int64 {
 	if o == nil || IsNil(o.UtilityRunningNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetUtilityRunningNumeric() int32 {
+	if o == nil || IsNil(o.UtilityRunningNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.UtilityRunningNumeric
@@ -2233,7 +2787,11 @@ func (o *PoolsResourceInner) GetUtilityRunningNumeric() int64 {
 
 // GetUtilityRunningNumericOk returns a tuple with the UtilityRunningNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetUtilityRunningNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetUtilityRunningNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.UtilityRunningNumeric) {
 		return nil, false
 	}
@@ -2249,15 +2807,26 @@ func (o *PoolsResourceInner) HasUtilityRunningNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetUtilityRunningNumeric gets a reference to the given int64 and assigns it to the UtilityRunningNumeric field.
 func (o *PoolsResourceInner) SetUtilityRunningNumeric(v int64) {
+=======
+// SetUtilityRunningNumeric gets a reference to the given int32 and assigns it to the UtilityRunningNumeric field.
+func (o *PoolsResourceInner) SetUtilityRunningNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.UtilityRunningNumeric = &v
 }
 
 // GetVolumes returns the Volumes field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetVolumes() int64 {
 	if o == nil || IsNil(o.Volumes) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetVolumes() int32 {
+	if o == nil || IsNil(o.Volumes) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Volumes
@@ -2265,7 +2834,11 @@ func (o *PoolsResourceInner) GetVolumes() int64 {
 
 // GetVolumesOk returns a tuple with the Volumes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetVolumesOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetVolumesOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Volumes) {
 		return nil, false
 	}
@@ -2281,8 +2854,13 @@ func (o *PoolsResourceInner) HasVolumes() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetVolumes gets a reference to the given int64 and assigns it to the Volumes field.
 func (o *PoolsResourceInner) SetVolumes(v int64) {
+=======
+// SetVolumes gets a reference to the given int32 and assigns it to the Volumes field.
+func (o *PoolsResourceInner) SetVolumes(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Volumes = &v
 }
 
@@ -2319,9 +2897,15 @@ func (o *PoolsResourceInner) SetZeroScan(v string) {
 }
 
 // GetZeroScanNumeric returns the ZeroScanNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetZeroScanNumeric() int64 {
 	if o == nil || IsNil(o.ZeroScanNumeric) {
 		var ret int64
+=======
+func (o *PoolsResourceInner) GetZeroScanNumeric() int32 {
+	if o == nil || IsNil(o.ZeroScanNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ZeroScanNumeric
@@ -2329,7 +2913,11 @@ func (o *PoolsResourceInner) GetZeroScanNumeric() int64 {
 
 // GetZeroScanNumericOk returns a tuple with the ZeroScanNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *PoolsResourceInner) GetZeroScanNumericOk() (*int64, bool) {
+=======
+func (o *PoolsResourceInner) GetZeroScanNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ZeroScanNumeric) {
 		return nil, false
 	}
@@ -2345,8 +2933,13 @@ func (o *PoolsResourceInner) HasZeroScanNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetZeroScanNumeric gets a reference to the given int64 and assigns it to the ZeroScanNumeric field.
 func (o *PoolsResourceInner) SetZeroScanNumeric(v int64) {
+=======
+// SetZeroScanNumeric gets a reference to the given int32 and assigns it to the ZeroScanNumeric field.
+func (o *PoolsResourceInner) SetZeroScanNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ZeroScanNumeric = &v
 }
 

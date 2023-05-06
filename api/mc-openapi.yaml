@@ -15,12 +15,21 @@ servers:
 
 paths:
   # Login
+<<<<<<< HEAD
   /login:
     get:
       description: Log in to the storage array management controller
       operationId: LoginGet
       security:
       - basicAuth: []
+=======
+  /login/{loginHash}:
+    get:
+      description: Log in to the storage array management controller
+      operationId: LoginGetByHash
+      parameters:
+      - $ref: '#/components/parameters/loginHash'
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
       responses:
         '200':
           description: OK
@@ -224,6 +233,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/statusObject'
+<<<<<<< HEAD
   # /show/disk-groups
   /show/disk-groups:
     get:
@@ -242,6 +252,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/statusObject'
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
   # /show/enclosures
   /show/enclosures:
     get:
@@ -325,7 +337,11 @@ paths:
           content:
             application/json:
               schema:
+<<<<<<< HEAD
                 $ref: '#/components/schemas/volume-viewObject'
+=======
+                $ref: '#/components/schemas/volume-group-viewObject'
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
         '401':
           description: Unauthorized
           content:
@@ -345,7 +361,11 @@ paths:
           content:
             application/json:
               schema:
+<<<<<<< HEAD
                 $ref: '#/components/schemas/volume-viewObject'
+=======
+                $ref: '#/components/schemas/volume-group-viewObject'
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
         '401':
           description: Unauthorized
           content:
@@ -353,18 +373,26 @@ paths:
               schema:
                 $ref: '#/components/schemas/statusObject'
   # /show/maps/initiator
+<<<<<<< HEAD
   /show/maps/initiator/{namesOption}:
     get:
       description: Execute /show/maps/initiator command
       operationId: ShowMapsInitiatorNamesGet
       parameters:
         - $ref: '#/components/parameters/namesOption'
+=======
+  /show/maps/initiator:
+    get:
+      description: Execute /show/maps/initiator command
+      operationId: ShowMapsInitiatorGet
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
+<<<<<<< HEAD
                 $ref: '#/components/schemas/hosts-viewObject'
         '401':
           description: Unauthorized
@@ -384,6 +412,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/volume-viewObject'
+=======
+                $ref: '#/components/schemas/initiator-viewObject'
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
         '401':
           description: Unauthorized
           content:
@@ -502,7 +533,11 @@ paths:
           content:
             application/json:
               schema:
+<<<<<<< HEAD
                 $ref: '#/components/schemas/volumesObject'
+=======
+                $ref: '#/components/schemas/statusObject'
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
         '401':
           description: Unauthorized
           content:
@@ -739,6 +774,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/statusObject'
 
+<<<<<<< HEAD
 # Security, common parameters, and schemas used by this API
 security:
 - basicAuth: []
@@ -749,6 +785,20 @@ components:
       type: http
       scheme: basic
   parameters:
+=======
+# Common parameters and schemas used by this API
+components:
+  parameters:
+    loginHash:
+      description: A SHA256 hash of the 'username_password' string
+      name: loginHash
+      in: path
+      required: true
+      schema:
+        type: string
+        maxLength: 64
+        example: '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     schemaId:
       description: A string label for a resource
       name: schemaId
@@ -900,19 +950,28 @@ components:
             type: string
           controller-a-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           controller-b-serial-number:
             type: string
           controller-b-status:
             type: string
           controller-b-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           local-ready:
             type: string
           local-ready-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           local-reason:
             type: string
           other-MC-status:
@@ -920,13 +979,19 @@ components:
             description: Identifies the availability of the partner MC
           other-MC-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Identifies the availability of the partner MC( In numeric form )
           other-ready:
             type: string
           other-ready-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           other-reason:
             type: string
           redundancy-mode:
@@ -934,20 +999,29 @@ components:
             description: Mode in which the controllers are operating
           redundancy-mode-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Mode in which the controllers are operating( In numeric form )
           redundancy-status:
             type: string
             description: Current operational state of the controllers
           redundancy-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Current operational state of the controllers( In numeric form )
           system-ready:
             type: string
           system-ready-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     systemResource:
       type: array
       minItems: 1
@@ -965,17 +1039,26 @@ components:
             type: string
           enclosure-count:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fde-security-status:
             type: string
           fde-security-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           midplane-serial-number:
@@ -986,26 +1069,38 @@ components:
             description: Identifies the availability of the partner MC
           other-MC-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Identifies the availability of the partner MC( In numeric form )
           pfuStatus:
             type: string
           pfuStatus-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           platform-brand:
             type: string
             description: HW Platform Brand
           platform-brand-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: HW Platform Brand( In numeric form )
           platform-type:
             type: string
             description: HW Platform Type
           platform-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: HW Platform Type( In numeric form )
           product-brand:
             type: string
@@ -1021,7 +1116,10 @@ components:
             type: string
           security-system-management-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           supported-locales:
             type: string
           system-contact:
@@ -1065,7 +1163,10 @@ components:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-recommendation:
@@ -1080,7 +1181,10 @@ components:
             description: Indicates whether the locator LED is on
           locator-led-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether the locator LED is on( In numeric form )
           name:
             type: string
@@ -1091,24 +1195,36 @@ components:
             description: Position of the component in the enclosure
           position-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Position of the component in the enclosure( In numeric form )
           serial-number:
             type: string
           speed:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           status:
             type: string
           status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           status-ses:
             type: string
             description: SES Common status
           status-ses-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: SES Common status( In numeric form )
           url:
             type: string
@@ -1129,36 +1245,54 @@ components:
             description: Allocate Reserved Pages First
           allocate-reserved-pages-first-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Allocate Reserved Pages First( In numeric form )
           allocated-size:
             type: string
           allocated-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           allowed-storage-tiers:
             type: string
             description: Allowed Virtual Pool Tiers
           allowed-storage-tiers-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Allowed Virtual Pool Tiers( In numeric form )
           attributes:
             type: string
             description: Indicates if the disk is single-pathed
           blocks:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: The size in blocks
           blocksize:
             type: integer
             format: int64
+=======
+            description: The size in blocks
+          blocksize:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           cache-optimization:
             type: string
             description: Whether cache is optimized for sequential and random reads, or sequential only
           cache-optimization-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Whether cache is optimized for sequential and random reads, or sequential only( In numeric form )
           capabilities:
             type: string
@@ -1168,7 +1302,10 @@ components:
             type: string
           compression-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           container-name:
             type: string
             description: Container Name
@@ -1179,29 +1316,44 @@ components:
             type: string
           creation-date-time-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           cs-copy-dest:
             type: string
           cs-copy-dest-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           cs-copy-src:
             type: string
           cs-copy-src-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           cs-primary:
             type: string
           cs-primary-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           cs-replication-role:
             type: string
           cs-secondary:
             type: string
           cs-secondary-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           durable-id:
             type: string
           group-key:
@@ -1211,7 +1363,10 @@ components:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-recommendation:
@@ -1220,68 +1375,98 @@ components:
             type: string
           interleaved-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           large-virtual-extents:
             type: string
             description: Sequentially optimize zone allocation for virtual volume
           large-virtual-extents-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Sequentially optimize zone allocation for virtual volume( In numeric form )
           metadata-in-use:
             type: string
             description: Pool Metadata currently being used by volume
           metadata-in-use-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Pool Metadata currently being used by volume( In numeric form )
           owner:
             type: string
             description: Controller owning the component
           owner-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Controller owning the component( In numeric form )
           pi-format:
             type: string
             description: Used to describe the Host Protection Information
           pi-format-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Used to describe the Host Protection Information( In numeric form )
           preferred-owner:
             type: string
             description: Configured owner
           preferred-owner-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Configured owner( In numeric form )
           progress:
             type: string
             description: Progress in percent for the volume-copy operation
           progress-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Progress in percent for the volume-copy operation( In numeric form )
           raidtype:
             type: string
             description: RAID level
           raidtype-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: RAID level( In numeric form )
           read-ahead-size:
             type: string
             description: Read-ahead cache setting
           read-ahead-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Read-ahead cache setting( In numeric form )
           replication-set:
             type: string
           reserved-size-in-pages:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Reserved Size In Pages
           serial-number:
             type: string
@@ -1290,7 +1475,10 @@ components:
             description: The size or capacity formatted with the current session base, precision, and units
           size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
           snap-pool:
             type: string
@@ -1302,7 +1490,10 @@ components:
             description: Retention priority of the snapshot
           snapshot-retention-priority-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Retention priority of the snapshot( In numeric form )
           storage-pool-name:
             type: string
@@ -1314,7 +1505,10 @@ components:
             description: Storage type
           storage-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Storage type( In numeric form )
           threshold-percent-of-pool:
             type: string
@@ -1323,13 +1517,19 @@ components:
             type: string
           tier-affinity-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           total-size:
             type: string
             description: The total size formatted using the session settings for base, precision, and units
           total-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The total size formatted using the session settings for base, precision, and units( In numeric form )
           url:
             type: string
@@ -1344,7 +1544,10 @@ components:
             type: string
           volume-class-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           volume-description:
             type: string
             description: Provides a user-defined volume identifier
@@ -1361,27 +1564,39 @@ components:
             type: string
           volume-qualifier-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           volume-type:
             type: string
             description: Indicates whether the volume is being used for Snapshots
           volume-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether the volume is being used for Snapshots( In numeric form )
           volume-usage-type:
             type: string
             description: Indicates the usage of volume
           volume-usage-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates the usage of volume( In numeric form )
           write-policy:
             type: string
             description: The write-back cache mode
           write-policy-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The write-back cache mode( In numeric form )
           wwn:
             type: string
@@ -1391,7 +1606,10 @@ components:
             description: Zero Init Page On Allocation
           zero-init-page-on-allocation-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Zero Init Page On Allocation( In numeric form )
     power-suppliesResource:
       type: array
@@ -1410,6 +1628,7 @@ components:
             type: string
           dc12i:
             type: integer
+<<<<<<< HEAD
             format: int64
           dc12v:
             type: integer
@@ -1426,16 +1645,34 @@ components:
           dctemp:
             type: integer
             format: int64
+=======
+          dc12v:
+            type: integer
+          dc33v:
+            type: integer
+          dc5i:
+            type: integer
+          dc5v:
+            type: integer
+          dctemp:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           description:
             type: string
           dom-id:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           durable-id:
             type: string
           enclosure-id:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           enclosures-url:
             type: string
           fru-shortname:
@@ -1447,7 +1684,10 @@ components:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-recommendation:
@@ -1458,7 +1698,10 @@ components:
             type: string
           mfg-date-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           mfg-location:
             type: string
           mfg-vendor-id:
@@ -1474,7 +1717,10 @@ components:
             description: Position of the component in the enclosure
           position-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Position of the component in the enclosure( In numeric form )
           revision:
             type: string
@@ -1485,7 +1731,10 @@ components:
             type: string
           status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           url:
             type: string
             description: The resource URL
@@ -1510,7 +1759,10 @@ components:
             type: string
           certificate-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           certificate-text:
             type: string
           certificate-time:
@@ -1519,7 +1771,10 @@ components:
             type: string
           controller-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     disk-groupsResource:
       type: array
       minItems: 1
@@ -1535,16 +1790,22 @@ components:
             type: string
           actual-spare-capacity-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           allocated-pages:
             type: integer
             format: int64
+=======
+          allocated-pages:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Number of pages allocated
           array-drive-type:
             type: string
             description: Disk interface type
           array-drive-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Disk interface type( In numeric form )
           available-pages:
@@ -1561,11 +1822,27 @@ components:
           cache-flush-period:
             type: integer
             format: int64
+=======
+            description: Disk interface type( In numeric form )
+          available-pages:
+            type: integer
+            description: Available pages
+          blocks:
+            type: integer
+            description: The size in blocks
+          blocksize:
+            type: integer
+          cache-flush-period:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           cache-read-ahead:
             type: string
           cache-read-ahead-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           chunksize:
             type: string
             description: Smallest block of usable space
@@ -1573,38 +1850,57 @@ components:
             type: string
           create-date-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           critical-capacity:
             type: string
           critical-capacity-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           current-job:
             type: string
           current-job-completion:
             type: string
           current-job-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           degraded-capacity:
             type: string
           degraded-capacity-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           disk-description:
             type: string
             description: Disk interface Description
           disk-description-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Disk interface Description( In numeric form )
           disk-dsd-delay-vdisk:
             type: integer
             format: int64
+=======
+            description: Disk interface Description( In numeric form )
+          disk-dsd-delay-vdisk:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           disk-dsd-enable-vdisk:
             type: string
           disk-dsd-enable-vdisk-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           diskcount:
             type: integer
@@ -1613,43 +1909,68 @@ components:
           extended-status:
             type: integer
             format: int64
+=======
+          diskcount:
+            type: integer
+            description: Number of disks
+          extended-status:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Extended status (bits)
           freespace:
             type: string
             description: Amount of free space in the vdisk
           freespace-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Amount of free space in the vdisk( In numeric form )
           health:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-reason-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-recommendation:
             type: string
           health-recommendation-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           interleaved-volume-count:
             type: integer
             format: int64
+=======
+          interleaved-volume-count:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           is-job-auto-abortable:
             type: string
           is-job-auto-abortable-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           job-running:
             type: string
           largest-free-partition-space:
             type: string
           largest-free-partition-space-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           linear-volume-boundary:
             type: integer
@@ -1657,20 +1978,32 @@ components:
           lun:
             type: integer
             format: int64
+=======
+          linear-volume-boundary:
+            type: integer
+          lun:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Logical Unit Number
           metadata-size:
             type: string
             description: Disk Group Metadata Capacity
           metadata-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Disk Group Metadata Capacity( In numeric form )
           min-drive-size:
             type: string
             description: Smallest disk size that can be used for this disk group
           min-drive-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Smallest disk size that can be used for this disk group( In numeric form )
           name:
             type: string
@@ -1679,6 +2012,7 @@ components:
             description: LBA used for the next volume that will be created
           new-partition-lba-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: LBA used for the next volume that will be created( In numeric form )
           num-array-partitions:
@@ -1695,35 +2029,63 @@ components:
           num-partition-segments:
             type: integer
             format: int64
+=======
+            description: LBA used for the next volume that will be created( In numeric form )
+          num-array-partitions:
+            type: integer
+            description: Number of volumes in this vdisk
+          num-drives-per-low-level-array:
+            type: integer
+            description: Number of disks in the RAID 10 or 50 subgroup
+          num-expansion-partitions:
+            type: integer
+          num-partition-segments:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           overhead:
             type: string
           overhead-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           owner:
             type: string
             description: Controller owning the component
           owner-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Controller owning the component( In numeric form )
           performance-rank:
             type: integer
             format: int64
+=======
+            description: Controller owning the component( In numeric form )
+          performance-rank:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Disk group performance rank within the virtual pool
           pool:
             type: string
             description: Pool
           pool-percentage:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Portion of the virtual pool used by this disk group
           pool-sector-format:
             type: string
             description: Pool Sector Format
           pool-sector-format-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Pool Sector Format( In numeric form )
           pool-serial-number:
             type: string
@@ -1736,30 +2098,45 @@ components:
             description: Configured owner
           preferred-owner-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Configured owner( In numeric form )
           raidtype:
             type: string
             description: RAID level
           raidtype-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: RAID level( In numeric form )
           raw-size:
             type: string
           raw-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           read-ahead-enabled:
             type: string
             description: Indicates whether read-ahead cache mode is enabled
           read-ahead-enabled-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Indicates whether read-ahead cache mode is enabled( In numeric form )
           scrub-duration-goal:
             type: integer
             format: int64
+=======
+            description: Indicates whether read-ahead cache mode is enabled( In numeric form )
+          scrub-duration-goal:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Preferred duration for vdisk scrub utility
           serial-number:
             type: string
@@ -1768,49 +2145,75 @@ components:
             description: The size or capacity formatted with the current session base, precision, and units
           size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
           sparecount:
             type: integer
             format: int64
+=======
+            description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
+          sparecount:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Number of spare disks currently configured
           spear:
             type: string
           spear-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           status:
             type: string
           status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           storage-tier:
             type: string
             description: Disk group tier assignment for tiered migration
           storage-tier-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Disk group tier assignment for tiered migration( In numeric form )
           storage-type:
             type: string
             description: Storage type
           storage-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Storage type( In numeric form )
           stripe-width:
             type: string
           stripe-width-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           target-spare-capacity:
             type: string
           target-spare-capacity-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           total-pages:
             type: integer
             format: int64
+=======
+          total-pages:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           url:
             type: string
             description: The resource URL
@@ -1819,7 +2222,10 @@ components:
             description: Indicates whether disk write-back cache is enabled
           write-back-enabled-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether disk write-back cache is enabled( In numeric form )
     tiersResource:
       type: array
@@ -1836,46 +2242,69 @@ components:
             type: string
           affinity-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           allocated-size:
             type: string
           allocated-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           available-size:
             type: string
           available-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           diskcount:
             type: integer
             format: int64
+=======
+          diskcount:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Number of disks
           pool:
             type: string
             description: Pool
           pool-percentage:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Portion of the virtual pool used by this disk group
           raw-size:
             type: string
           raw-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           serial-number:
             type: string
           tier:
             type: string
           tier-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           total-size:
             type: string
             description: The total size formatted using the session settings for base, precision, and units
           total-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The total size formatted using the session settings for base, precision, and units( In numeric form )
     poolsResource:
       type: array
@@ -1890,44 +2319,69 @@ components:
             type: string
           allocated-pages:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Number of pages allocated
           available-pages:
             type: integer
             format: int64
+=======
+            description: Number of pages allocated
+          available-pages:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Available pages
           available-rfc-size:
             type: string
           available-rfc-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           blocksize:
             type: integer
             format: int64
+=======
+          blocksize:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           compression-efficiency:
             type: string
           disk-groups-count:
             type: integer
+<<<<<<< HEAD
             format: int64
           extended-status:
             type: integer
             format: int64
+=======
+          extended-status:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Extended status (bits)
           health:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-reason-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-recommendation:
             type: string
           health-recommendation-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           high-threshold:
             type: string
             description: High threshold percentage
@@ -1935,7 +2389,10 @@ components:
             type: string
           idle-page-check-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           low-threshold:
             type: string
             description: Low threshold percentage
@@ -1944,28 +2401,40 @@ components:
             description: Pool Metadata currently in use
           metadata-allocated-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Pool Metadata currently in use( In numeric form )
           metadata-available:
             type: string
             description: Pool Metadata available capacity
           metadata-available-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Pool Metadata available capacity( In numeric form )
           metadata-total-size:
             type: string
             description: Disk Group Metadata Total Size
           metadata-total-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Disk Group Metadata Total Size( In numeric form )
           metadata-vol-size:
             type: string
             description: Size of the storage pool metadata volume
           metadata-vol-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Size of the storage pool metadata volume( In numeric form )
           middle-threshold:
             type: string
@@ -1975,7 +2444,10 @@ components:
             description: Migration between tiers
           migration-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Migration between tiers( In numeric form )
           name:
             type: string
@@ -1983,92 +2455,137 @@ components:
             type: string
           over-committed-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           overcommit:
             type: string
           overcommit-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           owner:
             type: string
             description: Controller owning the component
           owner-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Controller owning the component( In numeric form )
           page-size:
             type: string
             description: Page size in blocks
           page-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Page size in blocks( In numeric form )
           pool-sector-format:
             type: string
             description: Pool Sector Format
           pool-sector-format-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Pool Sector Format( In numeric form )
           preferred-owner:
             type: string
             description: Configured owner
           preferred-owner-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Configured owner( In numeric form )
           read-flash-cache:
             type: string
           read-flash-cache-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           rebalance:
             type: string
             description: Rebalance within the tier
           rebalance-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Rebalance within the tier( In numeric form )
           reserved-size:
             type: string
           reserved-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           reserved-unalloc-size:
             type: string
           reserved-unalloc-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           serial-number:
             type: string
           snap-size:
             type: string
           snap-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           storage-type:
             type: string
             description: Storage type
           storage-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Storage type( In numeric form )
           total-avail:
             type: string
           total-avail-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           total-rfc-size:
             type: string
           total-rfc-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           total-size:
             type: string
             description: The total size formatted using the session settings for base, precision, and units
           total-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The total size formatted using the session settings for base, precision, and units( In numeric form )
           url:
             type: string
@@ -2077,16 +2594,24 @@ components:
             type: string
           utility-running-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           volumes:
             type: integer
             format: int64
+=======
+          volumes:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           zero-scan:
             type: string
             description: Scan for zero-value pages
           zero-scan-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Scan for zero-value pages( In numeric form )
           disk-groups:
             $ref: '#/components/schemas/disk-groupsResource'
@@ -2107,17 +2632,24 @@ components:
             type: string
           architecture-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           assurance-level:
             type: string
           assurance-level-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           attributes:
             type: string
             description: Indicates if the disk is single-pathed
           attributes-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Indicates if the disk is single-pathed( In numeric form )
           avg-rsp-time:
@@ -2137,12 +2669,30 @@ components:
           container-index:
             type: integer
             format: int64
+=======
+            description: Indicates if the disk is single-pathed( In numeric form )
+          avg-rsp-time:
+            type: integer
+          blink:
+            type: integer
+            description: Indicates whether the locator LED is on
+          blocks:
+            type: integer
+            description: The size in blocks
+          blocksize:
+            type: integer
+          container-index:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           copyback-state:
             type: string
             description: Copyback State
           copyback-state-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Copyback State( In numeric form )
           current-job-completion:
             type: string
@@ -2150,15 +2700,21 @@ components:
             type: string
           description-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           disk-dsd-count:
             type: integer
             format: int64
+=======
+          disk-dsd-count:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           disk-group:
             type: string
             description: Disk Group details
           drawer-id:
             type: integer
+<<<<<<< HEAD
             format: int64
           drive-down-code:
             type: integer
@@ -2166,11 +2722,20 @@ components:
           dual-port:
             type: integer
             format: int64
+=======
+          drive-down-code:
+            type: integer
+          dual-port:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           durable-id:
             type: string
           enclosure-id:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           enclosure-wwn:
             type: string
             description: Enclosure World Wide Name
@@ -2178,6 +2743,7 @@ components:
             type: string
           error:
             type: integer
+<<<<<<< HEAD
             format: int64
           extended-status:
             type: integer
@@ -2189,12 +2755,22 @@ components:
           fc-p1-device-id:
             type: integer
             format: int64
+=======
+          extended-status:
+            type: integer
+            description: Extended status (bits)
+          fc-p1-channel:
+            type: integer
+          fc-p1-device-id:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fc-p1-node-wwn:
             type: string
           fc-p1-port-wwn:
             type: string
           fc-p1-unit-number:
             type: integer
+<<<<<<< HEAD
             format: int64
           fc-p2-channel:
             type: integer
@@ -2202,73 +2778,118 @@ components:
           fc-p2-device-id:
             type: integer
             format: int64
+=======
+          fc-p2-channel:
+            type: integer
+          fc-p2-device-id:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fc-p2-node-wwn:
             type: string
           fc-p2-port-wwn:
             type: string
           fc-p2-unit-number:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fde-config-time:
             type: string
           fde-config-time-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fde-state:
             type: string
           fde-state-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fips-capable:
             type: string
           fips-capable-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           firmware-update-status:
             type: string
           firmware-update-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-reason-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-recommendation:
             type: string
           health-recommendation-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           import-lock-key-id:
             type: string
           index:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           interface:
             type: string
           interface-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           job-running:
             type: string
           job-running-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           kmip-state:
             type: string
           kmip-state-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           led-status:
             type: string
           led-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           location:
             type: string
           locator-led:
@@ -2276,35 +2897,51 @@ components:
             description: Indicates whether the locator LED is on
           locator-led-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether the locator LED is on( In numeric form )
           lock-key-id:
             type: string
           member-index:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Index for this disk in the vdisk list
           model:
             type: string
           num-depopped-heads:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Number of depopulated heads
           number-of-ios:
             type: integer
             format: int64
+=======
+            description: Number of depopulated heads
+          number-of-ios:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           owner:
             type: string
             description: Controller owning the component
           owner-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Controller owning the component( In numeric form )
           pi-formatted:
             type: string
             description: Used to describe the Disk Protection Information
           pi-formatted-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Used to describe the Disk Protection Information( In numeric form )
           port:
@@ -2313,23 +2950,37 @@ components:
           power-on-hours:
             type: integer
             format: int64
+=======
+            description: Used to describe the Disk Protection Information( In numeric form )
+          port:
+            type: integer
+          power-on-hours:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           recon-state:
             type: string
             description: Reconstruction State
           recon-state-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Reconstruction State( In numeric form )
           remanufacture:
             type: string
           remanufacture-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           revision:
             type: string
             description: Current revision for this FRU
           rpm:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Vendor-specified disk speed in thousands of revolutions per minute
           scsi-id:
@@ -2339,34 +2990,55 @@ components:
           secondary-channel:
             type: integer
             format: int64
+=======
+            description: Vendor-specified disk speed in thousands of revolutions per minute
+          scsi-id:
+            type: integer
+            description: SCSI ID assigned to this disk for the primary channel
+          secondary-channel:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: SCSI ID assigned to this disk for the secondary channel
           sector-format:
             type: string
           sector-format-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           serial-number:
             type: string
           single-ported:
             type: string
           single-ported-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           size:
             type: string
             description: The size or capacity formatted with the current session base, precision, and units
           size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
           slot:
             type: integer
             format: int64
+=======
+            description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
+          slot:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The slot number where the disk is located
           smart:
             type: string
           smart-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           speed:
             type: integer
@@ -2374,12 +3046,21 @@ components:
           spun-down:
             type: integer
             format: int64
+=======
+          speed:
+            type: integer
+          spun-down:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates a drive is spun down
           ssd-life-left:
             type: string
           ssd-life-left-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           state:
             type: string
           status:
@@ -2392,41 +3073,62 @@ components:
             description: Disk group tier assignment for tiered migration
           storage-tier-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Disk group tier assignment for tiered migration( In numeric form )
           supports-unmap:
             type: string
           supports-unmap-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           temperature:
             type: string
           temperature-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           temperature-status:
             type: string
           temperature-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           total-data-transferred:
             type: string
           total-data-transferred-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           transfer-rate:
             type: string
             description: Transfer rate of the disk
           transfer-rate-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Transfer rate of the disk( In numeric form )
           type:
             type: string
             description: The type of disk
           type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The type of disk( In numeric form )
           url:
             type: string
@@ -2436,7 +3138,10 @@ components:
             description: Disk usage
           usage-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Disk usage
           vendor:
             type: string
@@ -2458,72 +3163,111 @@ components:
             type: string
           auto-map-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           auto-stall-recovery:
             type: string
             description: Provides detection of when hung controllers are preventing IO from completing
           auto-stall-recovery-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Provides detection of when hung controllers are preventing IO from completing( In numeric form )
           auto-unmap:
             type: string
           auto-unmap-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           auto-write-back:
             type: string
             description: Data is cached to memory before being written to disk
           auto-write-back-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Data is cached to memory before being written to disk( In numeric form )
           background-scrub:
             type: string
             description: Low priority disk group scrub
           background-scrub-interval:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Disk group scrub start interval
           background-scrub-numeric:
             type: integer
             format: int64
+=======
+            description: Disk group scrub start interval
+          background-scrub-numeric:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Low priority disk group scrub( In numeric form )
           cache-flush-timeout:
             type: string
           cache-flush-timeout-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           controller-failure:
             type: string
           controller-failure-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           default-mapping:
             type: string
           default-mapping-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           delete-override:
             type: string
             description: Bypass checks when deleting a pool.
           delete-override-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Bypass checks when deleting a pool.( In numeric form )
           disk-dsd-delay:
             type: integer
             format: int64
+=======
+            description: Bypass checks when deleting a pool.( In numeric form )
+          disk-dsd-delay:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           disk-dsd-enable:
             type: string
           disk-dsd-enable-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           disk-firmware-update:
             type: string
           disk-firmware-update-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           dynamic-spares:
             type: string
             description: If enabled, replaces failed disks in a degraded vdisk with properly sized available disks
@@ -2533,140 +3277,215 @@ components:
             type: string
           fan-failure-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           hedged-reads-timeout:
             type: string
           hedged-reads-timeout-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           host-cache-control:
             type: string
             description: Whether hosts can change the system's write-back cache setting
           host-cache-control-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Whether hosts can change the system's write-back cache setting( In numeric form )
           independent-cache:
             type: string
           independent-cache-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           large-pools:
             type: string
           large-pools-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           managed-logs:
             type: string
           managed-logs-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           memory-card-failure:
             type: string
           memory-card-failure-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           missing-lun-response:
             type: string
           missing-lun-response-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           partner-firmware-upgrade:
             type: string
             description: Indicates whether automated update of firmware of other controller is enabled
           partner-firmware-upgrade-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether automated update of firmware of other controller is enabled( In numeric form )
           partner-notify:
             type: string
             description: Indicates whether the write-through trigger is enabled
           partner-notify-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether the write-through trigger is enabled( In numeric form )
           pcie-hotplug:
             type: string
           pcie-hotplug-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           power-supply-failure:
             type: string
             description: Indicates whether the write-through trigger is enabled
           power-supply-failure-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether the write-through trigger is enabled( In numeric form )
           random-io-performance-optimization:
             type: string
           random-io-performance-optimization-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           remanufacture:
             type: string
           remanufacture-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           restart-on-capi-fail:
             type: string
           restart-on-capi-fail-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           scrub-schedule:
             type: string
           scrub-schedule-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           single-controller:
             type: string
           single-controller-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           slot-affinity:
             type: string
           slot-affinity-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           slow-disk-detection:
             type: string
           slow-disk-detection-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           smart:
             type: string
           smart-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           ssd-concurrent-access:
             type: string
           ssd-concurrent-access-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           super-cap-failure:
             type: string
             description: Indicates whether the write-through trigger is enabled
           super-cap-failure-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether the write-through trigger is enabled( In numeric form )
           sync-cache-mode:
             type: string
           sync-cache-mode-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           temperature-exceeded:
             type: string
             description: Indicates whether the write-through trigger is enabled
           temperature-exceeded-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether the write-through trigger is enabled( In numeric form )
           utility-priority:
             type: string
             description: Configured processing priority for utilities
           utility-priority-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Configured processing priority for utilities( In numeric form )
     controller-cache-parametersResource:
       type: array
@@ -2683,24 +3502,36 @@ components:
             type: string
           cache-flush-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           controller-id:
             type: string
           controller-id-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           durable-id:
             type: string
           memory-card-health:
             type: string
           memory-card-health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           memory-card-status:
             type: string
           memory-card-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           name:
             type: string
           write-back-status:
@@ -2708,7 +3539,10 @@ components:
             description: Indicates whether disk write-back cache is enabled
           write-back-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether disk write-back cache is enabled( In numeric form )
     cache-settingsResource:
       type: array
@@ -2723,20 +3557,29 @@ components:
             type: string
           cache-block-size:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           operation-mode:
             type: string
             description: Storage system operation mode (redundancy mode)
           operation-mode-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Storage system operation mode (redundancy mode)( In numeric form )
           pi-format:
             type: string
             description: Used to describe the Host Protection Information
           pi-format-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Used to describe the Host Protection Information( In numeric form )
           controller-cache-parameters:
             $ref: '#/components/schemas/controller-cache-parametersResource'
@@ -2759,7 +3602,10 @@ components:
             type: string
           host-bus-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           host-id:
             type: string
           host-key:
@@ -2767,10 +3613,15 @@ components:
             description: Durable ID of a Host
           host-port-bits-a:
             type: integer
+<<<<<<< HEAD
             format: int64
           host-port-bits-b:
             type: integer
             format: int64
+=======
+          host-port-bits-b:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           id:
             type: string
           mapped:
@@ -2782,7 +3633,10 @@ components:
             type: string
           profile-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           url:
             type: string
             description: The resource URL
@@ -2806,7 +3660,10 @@ components:
             type: string
           member-count:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Number of members
           name:
             type: string
@@ -2829,7 +3686,10 @@ components:
             type: string
           member-count:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Number of members
           name:
             type: string
@@ -2853,26 +3713,38 @@ components:
             type: string
           active-version:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Currently assigned IP version
           addressing-mode:
             type: string
             description: The way in which an IP address should be obtained
           addressing-mode-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The way in which an IP address should be obtained( In numeric form )
           auto-negotiation:
             type: string
           auto-negotiation-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           duplex-mode:
             type: string
             description: Type of duplex mode that is specified
           duplex-mode-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Type of duplex mode that is specified( In numeric form )
           durable-id:
             type: string
@@ -2882,7 +3754,10 @@ components:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-recommendation:
@@ -2894,7 +3769,10 @@ components:
             description: Link speed associated with this ethernet port
           link-speed-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Link speed associated with this ethernet port( In numeric form )
           mac-address:
             type: string
@@ -2903,6 +3781,7 @@ components:
             type: string
           ping-broadcast-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           subnet-mask:
             type: string
@@ -3009,6 +3888,11 @@ components:
             format: int64
           sfp-vendor:
             type: string
+=======
+          subnet-mask:
+            type: string
+            description: Network port subnet mask
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     sas-portResource:
       type: array
       minItems: 1
@@ -3024,6 +3908,7 @@ components:
             type: string
           configured-topology-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           sas-active-lanes:
             type: integer
@@ -3040,6 +3925,19 @@ components:
           width:
             type: integer
             format: int64
+=======
+          sas-active-lanes:
+            type: integer
+            description: Number of currently active PHY lanes for the SAS port
+          sas-disabled-lanes:
+            type: integer
+            description: Number of disabled PHY lanes for the SAS port
+          sas-lanes-expected:
+            type: integer
+            description: Expected number of active PHY lanes for the SAS port
+          width:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Number of PHY lanes for the SAS port
     portResource:
       type: array
@@ -3057,28 +3955,43 @@ components:
             description: Actual speed for this port
           actual-speed-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Actual speed for this port( In numeric form )
           configured-speed:
             type: string
           configured-speed-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           controller:
             type: string
           controller-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           durable-id:
             type: string
           fan-out:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-recommendation:
@@ -3093,23 +4006,32 @@ components:
             description: Port Type (FC, iSCSI, SAS)
           port-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Port Type (FC, iSCSI, SAS)( In numeric form )
           status:
             type: string
           status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           target-id:
             type: string
             description: WWPN or IQN of the host port
           url:
             type: string
             description: The resource URL
+<<<<<<< HEAD
           fc-port:
             $ref: '#/components/schemas/fc-portResource'
           iscsi-port:
             $ref: '#/components/schemas/iscsi-portResource'
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           sas-port:
             $ref: '#/components/schemas/sas-portResource'
     expander-portsResource:
@@ -3127,17 +4049,26 @@ components:
             type: string
           controller-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           durable-id:
             type: string
           enclosure-id:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-recommendation:
@@ -3146,20 +4077,29 @@ components:
             type: string
           sas-port-index:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Port number for this SAS port
           sas-port-type:
             type: string
             description: The type of SAS port
           sas-port-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The type of SAS port( In numeric form )
           status:
             type: string
           status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     expandersResource:
       type: array
       minItems: 1
@@ -3173,15 +4113,23 @@ components:
             type: string
           dom-id:
             type: integer
+<<<<<<< HEAD
             format: int64
           drawer-id:
             type: integer
             format: int64
+=======
+          drawer-id:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           durable-id:
             type: string
           enclosure-id:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           extended-status:
             type: string
             description: Extended status (bits)
@@ -3192,7 +4140,10 @@ components:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-recommendation:
@@ -3205,12 +4156,18 @@ components:
             type: string
           path-id-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           status:
             type: string
           status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     controllersResource:
       type: array
       minItems: 1
@@ -3227,21 +4184,32 @@ components:
             description: IPv6 Address autoconfiguration
           autoconfig-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: IPv6 Address autoconfiguration( In numeric form )
           cache-lock:
             type: string
           cache-lock-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           cache-memory-size:
             type: integer
             format: int64
+=======
+          cache-memory-size:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           controller-id:
             type: string
           controller-id-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           cpld-version:
             type: string
             description: Complex Programmable Logic Device
@@ -3253,46 +4221,70 @@ components:
             type: string
           disks:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           drive-bus-type:
             type: string
           drive-bus-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           drive-channels:
             type: integer
             format: int64
+=======
+          drive-channels:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           durable-id:
             type: string
           fail-over-reason:
             type: string
           fail-over-reason-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           failed-over:
             type: string
           failed-over-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fram-disabled-0:
             type: string
           fram-disabled-0-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fram-disabled-1:
             type: string
           fram-disabled-1-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fram-model-0:
             type: string
           fram-model-0-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fram-model-1:
             type: string
           fram-model-1-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           fram-version-0:
             type: integer
@@ -3300,6 +4292,12 @@ components:
           fram-version-1:
             type: integer
             format: int64
+=======
+          fram-version-0:
+            type: integer
+          fram-version-1:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           fru-shortname:
             type: string
           hardware-version:
@@ -3308,14 +4306,20 @@ components:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-recommendation:
             type: string
           host-ports:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           internal-serial-number:
             type: string
             description: Internal Controller Serial Number
@@ -3331,7 +4335,10 @@ components:
             type: string
           ip6-auto-address-source-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           ip6-auto-gateway:
             type: string
           ip6-link-local-address:
@@ -3359,7 +4366,10 @@ components:
             description: Indicates whether the locator LED is on
           locator-led-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether the locator LED is on( In numeric form )
           mac-address:
             type: string
@@ -3368,7 +4378,10 @@ components:
             type: string
           mfg-date-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           mfg-location:
             type: string
           mfg-vendor-id:
@@ -3379,13 +4392,19 @@ components:
             type: string
           multicore-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           node-wwn:
             type: string
             description: World Wide Node Name of the system
           number-of-storage-pools:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Number of Virtual Pools per Controller
           part-number:
             type: string
@@ -3393,34 +4412,49 @@ components:
             type: string
           phy-isolation-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           platform-type:
             type: string
             description: HW Platform Type
           platform-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: HW Platform Type( In numeric form )
           position:
             type: string
             description: Position of the component in the enclosure
           position-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Position of the component in the enclosure( In numeric form )
           redundancy-mode:
             type: string
             description: Mode in which the controllers are operating
           redundancy-mode-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Mode in which the controllers are operating( In numeric form )
           redundancy-status:
             type: string
             description: Current operational state of the controllers
           redundancy-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Current operational state of the controllers( In numeric form )
           revision:
             type: string
@@ -3430,11 +4464,17 @@ components:
             description: FRU rotation
           rotation-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: FRU rotation( In numeric form )
           sc-cpu-speed:
             type: integer
             format: int64
+=======
+            description: FRU rotation( In numeric form )
+          sc-cpu-speed:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Storage Controller processor speed
           sc-cpu-type:
             type: string
@@ -3448,16 +4488,24 @@ components:
             type: string
           ssd-alt-path-io-count:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: IO count before sending to alt ssd path
           status:
             type: string
           status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           system-memory-size:
             type: integer
             format: int64
+=======
+          system-memory-size:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           url:
             type: string
             description: The resource URL
@@ -3465,13 +4513,19 @@ components:
             type: string
           virtual-disks:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           write-policy:
             type: string
             description: The write-back cache mode
           write-policy-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The write-back cache mode( In numeric form )
           network-parameters:
             $ref: '#/components/schemas/network-parametersResource'
@@ -3497,11 +4551,17 @@ components:
             description: IOM Board model
           board-model-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: IOM Board model( In numeric form )
           columns:
             type: integer
             format: int64
+=======
+            description: IOM Board model( In numeric form )
+          columns:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           dash-level:
             type: string
           description:
@@ -3510,7 +4570,10 @@ components:
             type: string
           drive-orientation-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           durable-id:
             type: string
           emp-a:
@@ -3539,10 +4602,15 @@ components:
             type: string
           enclosure-arrangement-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
           enclosure-id:
             type: integer
             format: int64
+=======
+          enclosure-id:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           enclosure-power:
             type: string
           enclosure-wwn:
@@ -3565,7 +4633,10 @@ components:
             type: string
           health-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           health-reason:
             type: string
           health-recommendation:
@@ -3574,7 +4645,10 @@ components:
             type: string
           iom-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           location:
             type: string
           locator-led:
@@ -3582,18 +4656,27 @@ components:
             description: Indicates whether the locator LED is on
           locator-led-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Indicates whether the locator LED is on( In numeric form )
           mfg-date:
             type: string
           mfg-date-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           mfg-location:
             type: string
           midplane-rev:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Revision level of midplane
           midplane-serial-number:
             type: string
@@ -3603,7 +4686,10 @@ components:
             description: Type of midplane
           midplane-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Type of midplane( In numeric form )
           model:
             type: string
@@ -3611,6 +4697,7 @@ components:
             type: string
           number-of-coolings-elements:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: Number of fans in the enclosure
           number-of-disks:
@@ -3620,6 +4707,14 @@ components:
           number-of-power-supplies:
             type: integer
             format: int64
+=======
+            description: Number of fans in the enclosure
+          number-of-disks:
+            type: integer
+            description: Number of disks in the enclosure
+          number-of-power-supplies:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Number of power supplies in the enclosure
           part-number:
             type: string
@@ -3628,13 +4723,17 @@ components:
             description: Enclosure is capable of using PCIe version 2
           pcie2-capable-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Enclosure is capable of using PCIe version 2( In numeric form )
           platform-type:
             type: string
             description: HW Platform Type
           platform-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
             description: HW Platform Type( In numeric form )
           rack-number:
@@ -3643,27 +4742,45 @@ components:
           rack-position:
             type: integer
             format: int64
+=======
+            description: HW Platform Type( In numeric form )
+          rack-number:
+            type: integer
+          rack-position:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           revision:
             type: string
             description: Current revision for this FRU
           rows:
             type: integer
+<<<<<<< HEAD
             format: int64
           slots:
             type: integer
             format: int64
+=======
+          slots:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The number of disk slots in this enclosure
           status:
             type: string
           status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           type:
             type: string
             description: Type of component in this enclosure
           type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Type of component in this enclosure( In numeric form )
           url:
             type: string
@@ -3687,7 +4804,10 @@ components:
             type: string
           backplane-type:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           build-date:
             type: string
           bundle-base-version:
@@ -3696,7 +4816,10 @@ components:
             type: string
           bundle-status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           bundle-version:
             type: string
           bundle-version-only:
@@ -3708,7 +4831,10 @@ components:
             description: Customization Toolkit (CTK) Version
           disk-channel_revision:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           ec-fw:
             type: string
             description: The Expander Controller firmware version
@@ -3717,7 +4843,10 @@ components:
             description: Default hardware platform brand of the firmware
           fw-default-platform-brand-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Default hardware platform brand of the firmware( In numeric form )
           gem-version:
             type: string
@@ -3727,7 +4856,10 @@ components:
             type: string
           host-channel_revision:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           hw-rev:
             type: string
             description: The main hardware version of the controller
@@ -3821,7 +4953,10 @@ components:
             description: Access rights for this volume
           access-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Access rights for this volume( In numeric form )
           durable-id:
             type: string
@@ -3829,7 +4964,10 @@ components:
             type: string
           host-profile-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           identifier:
             type: string
             description: WWPN or IQN or Host Serial Number or Host Group Serial Number
@@ -3874,7 +5012,11 @@ components:
             description: Volumes URL
           volume-view-mappings:
             $ref: '#/components/schemas/volume-view-mappingsResource'
+<<<<<<< HEAD
     host-view-mappingsResource:
+=======
+    initiator-viewResource:
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
       type: array
       minItems: 1
       maxItems: 1024
@@ -3885,6 +5027,7 @@ components:
             type: string
           meta:
             type: string
+<<<<<<< HEAD
           access:
             type: string
             description: Access rights for this host
@@ -3922,6 +5065,18 @@ components:
             type: string
           host-view-mappings:
             $ref: '#/components/schemas/host-view-mappingsResource'
+=======
+          hba-nickname:
+            type: string
+          host-profile:
+            type: string
+          host-profile-numeric:
+            type: integer
+          id:
+            type: string
+          volume-view:
+            $ref: '#/components/schemas/volume-viewResource'
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     snapshotsResource:
       type: array
       minItems: 1
@@ -3946,7 +5101,10 @@ components:
             type: string
           creation-date-time-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           durable-id:
             type: string
           master-volume-name:
@@ -3956,10 +5114,15 @@ components:
             type: string
           num-children:
             type: integer
+<<<<<<< HEAD
             format: int64
           num-snaps-tree:
             type: integer
             format: int64
+=======
+          num-snaps-tree:
+            type: integer
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           priority-value:
             type: string
             description: Attribute priority
@@ -3968,7 +5131,10 @@ components:
             description: Retention priority of the snapshot or children
           retention-priority-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Retention priority of the snapshot or children( In numeric form )
           serial-number:
             type: string
@@ -3976,13 +5142,19 @@ components:
             type: string
           shareddata-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           snap-data:
             type: string
             description: Amount of snapshot data associated with this volume
           snap-data-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Amount of snapshot data associated with this volume( In numeric form )
           snap-pool-name:
             type: string
@@ -3992,19 +5164,28 @@ components:
             description: Associated snapshot type
           snapshot-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Associated snapshot type( In numeric form )
           status:
             type: string
           status-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
           status-reason:
             type: string
             description: Probable cause for the current status
           status-reason-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Probable cause for the current status( In numeric form )
           storage-pool-name:
             type: string
@@ -4016,21 +5197,30 @@ components:
             description: Storage type
           storage-type-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Storage type( In numeric form )
           total-size:
             type: string
             description: The total size formatted using the session settings for base, precision, and units
           total-size-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: The total size formatted using the session settings for base, precision, and units( In numeric form )
           uniquedata:
             type: string
             description: Amount of preserved and write data that is unique to the snapshot
           uniquedata-numeric:
             type: integer
+<<<<<<< HEAD
             format: int64
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
             description: Amount of preserved and write data that is unique to the snapshot( In numeric form )
           url:
             type: string
@@ -4122,6 +5312,7 @@ components:
           $ref: '#/components/schemas/statusResource'
         host-group:
           $ref: '#/components/schemas/host-groupResource'
+<<<<<<< HEAD
     disk-groupsObject:
       type: object
       properties:
@@ -4129,6 +5320,8 @@ components:
           $ref: '#/components/schemas/statusResource'
         disk-groups:
           $ref: '#/components/schemas/disk-groupsResource'
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     enclosuresObject:
       type: object
       properties:
@@ -4150,22 +5343,35 @@ components:
           $ref: '#/components/schemas/statusResource'
         versions:
           $ref: '#/components/schemas/versionsResource'
+<<<<<<< HEAD
     volume-viewObject:
+=======
+    volume-group-viewObject:
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
       type: object
       properties:
         status:
           $ref: '#/components/schemas/statusResource'
         volume-group-view:
           $ref: '#/components/schemas/volume-group-viewResource'
+<<<<<<< HEAD
         volume-view:
           $ref: '#/components/schemas/volume-viewResource'
     hosts-viewObject:
+=======
+    initiator-viewObject:
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
       type: object
       properties:
         status:
           $ref: '#/components/schemas/statusResource'
+<<<<<<< HEAD
         hosts-view:
           $ref: '#/components/schemas/hosts-viewResource'
+=======
+        initiator-view:
+          $ref: '#/components/schemas/initiator-viewResource'
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
     initiatorObject:
       type: object
       properties:

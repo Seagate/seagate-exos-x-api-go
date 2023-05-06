@@ -26,7 +26,11 @@ type HostResourceInner struct {
 	GroupKey  *string `json:"group-key,omitempty"`
 	HostGroup *string `json:"host-group,omitempty"`
 	// Number of members
+<<<<<<< HEAD
 	MemberCount  *int64                   `json:"member-count,omitempty"`
+=======
+	MemberCount  *int32                   `json:"member-count,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Name         *string                  `json:"name,omitempty"`
 	SerialNumber *string                  `json:"serial-number,omitempty"`
 	Initiator    []InitiatorResourceInner `json:"initiator,omitempty"`
@@ -210,9 +214,15 @@ func (o *HostResourceInner) SetHostGroup(v string) {
 }
 
 // GetMemberCount returns the MemberCount field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *HostResourceInner) GetMemberCount() int64 {
 	if o == nil || IsNil(o.MemberCount) {
 		var ret int64
+=======
+func (o *HostResourceInner) GetMemberCount() int32 {
+	if o == nil || IsNil(o.MemberCount) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MemberCount
@@ -220,7 +230,11 @@ func (o *HostResourceInner) GetMemberCount() int64 {
 
 // GetMemberCountOk returns a tuple with the MemberCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *HostResourceInner) GetMemberCountOk() (*int64, bool) {
+=======
+func (o *HostResourceInner) GetMemberCountOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MemberCount) {
 		return nil, false
 	}
@@ -236,8 +250,13 @@ func (o *HostResourceInner) HasMemberCount() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMemberCount gets a reference to the given int64 and assigns it to the MemberCount field.
 func (o *HostResourceInner) SetMemberCount(v int64) {
+=======
+// SetMemberCount gets a reference to the given int32 and assigns it to the MemberCount field.
+func (o *HostResourceInner) SetMemberCount(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MemberCount = &v
 }
 

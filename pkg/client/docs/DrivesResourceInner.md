@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **Architecture** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **ArchitectureNumeric** | Pointer to **int64** |  | [optional] 
 **AssuranceLevel** | Pointer to **string** |  | [optional] 
 **AssuranceLevelNumeric** | Pointer to **int64** |  | [optional] 
@@ -103,10 +104,109 @@ Name | Type | Description | Notes
 **SpunDown** | Pointer to **int64** | Indicates a drive is spun down | [optional] 
 **SsdLifeLeft** | Pointer to **string** |  | [optional] 
 **SsdLifeLeftNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**ArchitectureNumeric** | Pointer to **int32** |  | [optional] 
+**AssuranceLevel** | Pointer to **string** |  | [optional] 
+**AssuranceLevelNumeric** | Pointer to **int32** |  | [optional] 
+**Attributes** | Pointer to **string** | Indicates if the disk is single-pathed | [optional] 
+**AttributesNumeric** | Pointer to **int32** | Indicates if the disk is single-pathed( In numeric form ) | [optional] 
+**AvgRspTime** | Pointer to **int32** |  | [optional] 
+**Blink** | Pointer to **int32** | Indicates whether the locator LED is on | [optional] 
+**Blocks** | Pointer to **int32** | The size in blocks | [optional] 
+**Blocksize** | Pointer to **int32** |  | [optional] 
+**ContainerIndex** | Pointer to **int32** |  | [optional] 
+**CopybackState** | Pointer to **string** | Copyback State | [optional] 
+**CopybackStateNumeric** | Pointer to **int32** | Copyback State( In numeric form ) | [optional] 
+**CurrentJobCompletion** | Pointer to **string** |  | [optional] 
+**Description** | Pointer to **string** |  | [optional] 
+**DescriptionNumeric** | Pointer to **int32** |  | [optional] 
+**DiskDsdCount** | Pointer to **int32** |  | [optional] 
+**DiskGroup** | Pointer to **string** | Disk Group details | [optional] 
+**DrawerId** | Pointer to **int32** |  | [optional] 
+**DriveDownCode** | Pointer to **int32** |  | [optional] 
+**DualPort** | Pointer to **int32** |  | [optional] 
+**DurableId** | Pointer to **string** |  | [optional] 
+**EnclosureId** | Pointer to **int32** |  | [optional] 
+**EnclosureWwn** | Pointer to **string** | Enclosure World Wide Name | [optional] 
+**EnclosuresUrl** | Pointer to **string** |  | [optional] 
+**Error** | Pointer to **int32** |  | [optional] 
+**ExtendedStatus** | Pointer to **int32** | Extended status (bits) | [optional] 
+**FcP1Channel** | Pointer to **int32** |  | [optional] 
+**FcP1DeviceId** | Pointer to **int32** |  | [optional] 
+**FcP1NodeWwn** | Pointer to **string** |  | [optional] 
+**FcP1PortWwn** | Pointer to **string** |  | [optional] 
+**FcP1UnitNumber** | Pointer to **int32** |  | [optional] 
+**FcP2Channel** | Pointer to **int32** |  | [optional] 
+**FcP2DeviceId** | Pointer to **int32** |  | [optional] 
+**FcP2NodeWwn** | Pointer to **string** |  | [optional] 
+**FcP2PortWwn** | Pointer to **string** |  | [optional] 
+**FcP2UnitNumber** | Pointer to **int32** |  | [optional] 
+**FdeConfigTime** | Pointer to **string** |  | [optional] 
+**FdeConfigTimeNumeric** | Pointer to **int32** |  | [optional] 
+**FdeState** | Pointer to **string** |  | [optional] 
+**FdeStateNumeric** | Pointer to **int32** |  | [optional] 
+**FipsCapable** | Pointer to **string** |  | [optional] 
+**FipsCapableNumeric** | Pointer to **int32** |  | [optional] 
+**FirmwareUpdateStatus** | Pointer to **string** |  | [optional] 
+**FirmwareUpdateStatusNumeric** | Pointer to **int32** |  | [optional] 
+**Health** | Pointer to **string** |  | [optional] 
+**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthReason** | Pointer to **string** |  | [optional] 
+**HealthReasonNumeric** | Pointer to **int32** |  | [optional] 
+**HealthRecommendation** | Pointer to **string** |  | [optional] 
+**HealthRecommendationNumeric** | Pointer to **int32** |  | [optional] 
+**ImportLockKeyId** | Pointer to **string** |  | [optional] 
+**Index** | Pointer to **int32** |  | [optional] 
+**Interface** | Pointer to **string** |  | [optional] 
+**InterfaceNumeric** | Pointer to **int32** |  | [optional] 
+**JobRunning** | Pointer to **string** |  | [optional] 
+**JobRunningNumeric** | Pointer to **int32** |  | [optional] 
+**KmipState** | Pointer to **string** |  | [optional] 
+**KmipStateNumeric** | Pointer to **int32** |  | [optional] 
+**LedStatus** | Pointer to **string** |  | [optional] 
+**LedStatusNumeric** | Pointer to **int32** |  | [optional] 
+**Location** | Pointer to **string** |  | [optional] 
+**LocatorLed** | Pointer to **string** | Indicates whether the locator LED is on | [optional] 
+**LocatorLedNumeric** | Pointer to **int32** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
+**LockKeyId** | Pointer to **string** |  | [optional] 
+**MemberIndex** | Pointer to **int32** | Index for this disk in the vdisk list | [optional] 
+**Model** | Pointer to **string** |  | [optional] 
+**NumDepoppedHeads** | Pointer to **int32** | Number of depopulated heads | [optional] 
+**NumberOfIos** | Pointer to **int32** |  | [optional] 
+**Owner** | Pointer to **string** | Controller owning the component | [optional] 
+**OwnerNumeric** | Pointer to **int32** | Controller owning the component( In numeric form ) | [optional] 
+**PiFormatted** | Pointer to **string** | Used to describe the Disk Protection Information | [optional] 
+**PiFormattedNumeric** | Pointer to **int32** | Used to describe the Disk Protection Information( In numeric form ) | [optional] 
+**Port** | Pointer to **int32** |  | [optional] 
+**PowerOnHours** | Pointer to **int32** |  | [optional] 
+**ReconState** | Pointer to **string** | Reconstruction State | [optional] 
+**ReconStateNumeric** | Pointer to **int32** | Reconstruction State( In numeric form ) | [optional] 
+**Remanufacture** | Pointer to **string** |  | [optional] 
+**RemanufactureNumeric** | Pointer to **int32** |  | [optional] 
+**Revision** | Pointer to **string** | Current revision for this FRU | [optional] 
+**Rpm** | Pointer to **int32** | Vendor-specified disk speed in thousands of revolutions per minute | [optional] 
+**ScsiId** | Pointer to **int32** | SCSI ID assigned to this disk for the primary channel | [optional] 
+**SecondaryChannel** | Pointer to **int32** | SCSI ID assigned to this disk for the secondary channel | [optional] 
+**SectorFormat** | Pointer to **string** |  | [optional] 
+**SectorFormatNumeric** | Pointer to **int32** |  | [optional] 
+**SerialNumber** | Pointer to **string** |  | [optional] 
+**SinglePorted** | Pointer to **string** |  | [optional] 
+**SinglePortedNumeric** | Pointer to **int32** |  | [optional] 
+**Size** | Pointer to **string** | The size or capacity formatted with the current session base, precision, and units | [optional] 
+**SizeNumeric** | Pointer to **int32** | The size or capacity formatted with the current session base, precision, and units( In numeric form ) | [optional] 
+**Slot** | Pointer to **int32** | The slot number where the disk is located | [optional] 
+**Smart** | Pointer to **string** |  | [optional] 
+**SmartNumeric** | Pointer to **int32** |  | [optional] 
+**Speed** | Pointer to **int32** |  | [optional] 
+**SpunDown** | Pointer to **int32** | Indicates a drive is spun down | [optional] 
+**SsdLifeLeft** | Pointer to **string** |  | [optional] 
+**SsdLifeLeftNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **State** | Pointer to **string** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 **StoragePoolName** | Pointer to **string** | User-defined name for the pool | [optional] 
 **StorageTier** | Pointer to **string** | Disk group tier assignment for tiered migration | [optional] 
+<<<<<<< HEAD
 **StorageTierNumeric** | Pointer to **int64** | Disk group tier assignment for tiered migration( In numeric form ) | [optional] 
 **SupportsUnmap** | Pointer to **string** |  | [optional] 
 **SupportsUnmapNumeric** | Pointer to **int64** |  | [optional] 
@@ -123,6 +223,24 @@ Name | Type | Description | Notes
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **Usage** | Pointer to **string** | Disk usage | [optional] 
 **UsageNumeric** | Pointer to **int64** | Disk usage | [optional] 
+=======
+**StorageTierNumeric** | Pointer to **int32** | Disk group tier assignment for tiered migration( In numeric form ) | [optional] 
+**SupportsUnmap** | Pointer to **string** |  | [optional] 
+**SupportsUnmapNumeric** | Pointer to **int32** |  | [optional] 
+**Temperature** | Pointer to **string** |  | [optional] 
+**TemperatureNumeric** | Pointer to **int32** |  | [optional] 
+**TemperatureStatus** | Pointer to **string** |  | [optional] 
+**TemperatureStatusNumeric** | Pointer to **int32** |  | [optional] 
+**TotalDataTransferred** | Pointer to **string** |  | [optional] 
+**TotalDataTransferredNumeric** | Pointer to **int32** |  | [optional] 
+**TransferRate** | Pointer to **string** | Transfer rate of the disk | [optional] 
+**TransferRateNumeric** | Pointer to **int32** | Transfer rate of the disk( In numeric form ) | [optional] 
+**Type** | Pointer to **string** | The type of disk | [optional] 
+**TypeNumeric** | Pointer to **int32** | The type of disk( In numeric form ) | [optional] 
+**Url** | Pointer to **string** | The resource URL | [optional] 
+**Usage** | Pointer to **string** | Disk usage | [optional] 
+**UsageNumeric** | Pointer to **int32** | Disk usage | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Vendor** | Pointer to **string** |  | [optional] 
 **VirtualDiskSerial** | Pointer to **string** | Unique serial number for the disk group | [optional] 
 
@@ -222,20 +340,32 @@ HasArchitecture returns a boolean if a field has been set.
 
 ### GetArchitectureNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetArchitectureNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetArchitectureNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetArchitectureNumeric returns the ArchitectureNumeric field if non-nil, zero value otherwise.
 
 ### GetArchitectureNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetArchitectureNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetArchitectureNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetArchitectureNumericOk returns a tuple with the ArchitectureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetArchitectureNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetArchitectureNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetArchitectureNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetArchitectureNumeric sets ArchitectureNumeric field to given value.
 
@@ -272,20 +402,32 @@ HasAssuranceLevel returns a boolean if a field has been set.
 
 ### GetAssuranceLevelNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetAssuranceLevelNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetAssuranceLevelNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAssuranceLevelNumeric returns the AssuranceLevelNumeric field if non-nil, zero value otherwise.
 
 ### GetAssuranceLevelNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetAssuranceLevelNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetAssuranceLevelNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAssuranceLevelNumericOk returns a tuple with the AssuranceLevelNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAssuranceLevelNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetAssuranceLevelNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetAssuranceLevelNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAssuranceLevelNumeric sets AssuranceLevelNumeric field to given value.
 
@@ -322,20 +464,32 @@ HasAttributes returns a boolean if a field has been set.
 
 ### GetAttributesNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetAttributesNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetAttributesNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAttributesNumeric returns the AttributesNumeric field if non-nil, zero value otherwise.
 
 ### GetAttributesNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetAttributesNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetAttributesNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAttributesNumericOk returns a tuple with the AttributesNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAttributesNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetAttributesNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetAttributesNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAttributesNumeric sets AttributesNumeric field to given value.
 
@@ -347,20 +501,32 @@ HasAttributesNumeric returns a boolean if a field has been set.
 
 ### GetAvgRspTime
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetAvgRspTime() int64`
+=======
+`func (o *DrivesResourceInner) GetAvgRspTime() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAvgRspTime returns the AvgRspTime field if non-nil, zero value otherwise.
 
 ### GetAvgRspTimeOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetAvgRspTimeOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetAvgRspTimeOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAvgRspTimeOk returns a tuple with the AvgRspTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAvgRspTime
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetAvgRspTime(v int64)`
+=======
+`func (o *DrivesResourceInner) SetAvgRspTime(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAvgRspTime sets AvgRspTime field to given value.
 
@@ -372,20 +538,32 @@ HasAvgRspTime returns a boolean if a field has been set.
 
 ### GetBlink
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetBlink() int64`
+=======
+`func (o *DrivesResourceInner) GetBlink() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBlink returns the Blink field if non-nil, zero value otherwise.
 
 ### GetBlinkOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetBlinkOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetBlinkOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBlinkOk returns a tuple with the Blink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlink
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetBlink(v int64)`
+=======
+`func (o *DrivesResourceInner) SetBlink(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetBlink sets Blink field to given value.
 
@@ -397,20 +575,32 @@ HasBlink returns a boolean if a field has been set.
 
 ### GetBlocks
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetBlocks() int64`
+=======
+`func (o *DrivesResourceInner) GetBlocks() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBlocks returns the Blocks field if non-nil, zero value otherwise.
 
 ### GetBlocksOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetBlocksOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetBlocksOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBlocksOk returns a tuple with the Blocks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlocks
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetBlocks(v int64)`
+=======
+`func (o *DrivesResourceInner) SetBlocks(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetBlocks sets Blocks field to given value.
 
@@ -422,20 +612,32 @@ HasBlocks returns a boolean if a field has been set.
 
 ### GetBlocksize
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetBlocksize() int64`
+=======
+`func (o *DrivesResourceInner) GetBlocksize() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBlocksize returns the Blocksize field if non-nil, zero value otherwise.
 
 ### GetBlocksizeOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetBlocksizeOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetBlocksizeOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBlocksizeOk returns a tuple with the Blocksize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlocksize
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetBlocksize(v int64)`
+=======
+`func (o *DrivesResourceInner) SetBlocksize(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetBlocksize sets Blocksize field to given value.
 
@@ -447,20 +649,32 @@ HasBlocksize returns a boolean if a field has been set.
 
 ### GetContainerIndex
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetContainerIndex() int64`
+=======
+`func (o *DrivesResourceInner) GetContainerIndex() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetContainerIndex returns the ContainerIndex field if non-nil, zero value otherwise.
 
 ### GetContainerIndexOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetContainerIndexOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetContainerIndexOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetContainerIndexOk returns a tuple with the ContainerIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetContainerIndex
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetContainerIndex(v int64)`
+=======
+`func (o *DrivesResourceInner) SetContainerIndex(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetContainerIndex sets ContainerIndex field to given value.
 
@@ -497,20 +711,32 @@ HasCopybackState returns a boolean if a field has been set.
 
 ### GetCopybackStateNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetCopybackStateNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetCopybackStateNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCopybackStateNumeric returns the CopybackStateNumeric field if non-nil, zero value otherwise.
 
 ### GetCopybackStateNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetCopybackStateNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetCopybackStateNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCopybackStateNumericOk returns a tuple with the CopybackStateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCopybackStateNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetCopybackStateNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetCopybackStateNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCopybackStateNumeric sets CopybackStateNumeric field to given value.
 
@@ -572,20 +798,32 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetDescriptionNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetDescriptionNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetDescriptionNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDescriptionNumeric returns the DescriptionNumeric field if non-nil, zero value otherwise.
 
 ### GetDescriptionNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetDescriptionNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetDescriptionNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDescriptionNumericOk returns a tuple with the DescriptionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDescriptionNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetDescriptionNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetDescriptionNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDescriptionNumeric sets DescriptionNumeric field to given value.
 
@@ -597,20 +835,32 @@ HasDescriptionNumeric returns a boolean if a field has been set.
 
 ### GetDiskDsdCount
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetDiskDsdCount() int64`
+=======
+`func (o *DrivesResourceInner) GetDiskDsdCount() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDiskDsdCount returns the DiskDsdCount field if non-nil, zero value otherwise.
 
 ### GetDiskDsdCountOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetDiskDsdCountOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetDiskDsdCountOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDiskDsdCountOk returns a tuple with the DiskDsdCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskDsdCount
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetDiskDsdCount(v int64)`
+=======
+`func (o *DrivesResourceInner) SetDiskDsdCount(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDiskDsdCount sets DiskDsdCount field to given value.
 
@@ -647,20 +897,32 @@ HasDiskGroup returns a boolean if a field has been set.
 
 ### GetDrawerId
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetDrawerId() int64`
+=======
+`func (o *DrivesResourceInner) GetDrawerId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDrawerId returns the DrawerId field if non-nil, zero value otherwise.
 
 ### GetDrawerIdOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetDrawerIdOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetDrawerIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDrawerIdOk returns a tuple with the DrawerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDrawerId
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetDrawerId(v int64)`
+=======
+`func (o *DrivesResourceInner) SetDrawerId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDrawerId sets DrawerId field to given value.
 
@@ -672,20 +934,32 @@ HasDrawerId returns a boolean if a field has been set.
 
 ### GetDriveDownCode
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetDriveDownCode() int64`
+=======
+`func (o *DrivesResourceInner) GetDriveDownCode() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDriveDownCode returns the DriveDownCode field if non-nil, zero value otherwise.
 
 ### GetDriveDownCodeOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetDriveDownCodeOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetDriveDownCodeOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDriveDownCodeOk returns a tuple with the DriveDownCode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDriveDownCode
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetDriveDownCode(v int64)`
+=======
+`func (o *DrivesResourceInner) SetDriveDownCode(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDriveDownCode sets DriveDownCode field to given value.
 
@@ -697,20 +971,32 @@ HasDriveDownCode returns a boolean if a field has been set.
 
 ### GetDualPort
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetDualPort() int64`
+=======
+`func (o *DrivesResourceInner) GetDualPort() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDualPort returns the DualPort field if non-nil, zero value otherwise.
 
 ### GetDualPortOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetDualPortOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetDualPortOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDualPortOk returns a tuple with the DualPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDualPort
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetDualPort(v int64)`
+=======
+`func (o *DrivesResourceInner) SetDualPort(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDualPort sets DualPort field to given value.
 
@@ -747,20 +1033,32 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetEnclosureId
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetEnclosureId() int64`
+=======
+`func (o *DrivesResourceInner) GetEnclosureId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureId returns the EnclosureId field if non-nil, zero value otherwise.
 
 ### GetEnclosureIdOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetEnclosureIdOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetEnclosureIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureIdOk returns a tuple with the EnclosureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureId
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetEnclosureId(v int64)`
+=======
+`func (o *DrivesResourceInner) SetEnclosureId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetEnclosureId sets EnclosureId field to given value.
 
@@ -822,20 +1120,32 @@ HasEnclosuresUrl returns a boolean if a field has been set.
 
 ### GetError
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetError() int64`
+=======
+`func (o *DrivesResourceInner) GetError() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetError returns the Error field if non-nil, zero value otherwise.
 
 ### GetErrorOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetErrorOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetErrorOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetError
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetError(v int64)`
+=======
+`func (o *DrivesResourceInner) SetError(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetError sets Error field to given value.
 
@@ -847,20 +1157,32 @@ HasError returns a boolean if a field has been set.
 
 ### GetExtendedStatus
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetExtendedStatus() int64`
+=======
+`func (o *DrivesResourceInner) GetExtendedStatus() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetExtendedStatus returns the ExtendedStatus field if non-nil, zero value otherwise.
 
 ### GetExtendedStatusOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetExtendedStatusOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetExtendedStatusOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetExtendedStatusOk returns a tuple with the ExtendedStatus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtendedStatus
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetExtendedStatus(v int64)`
+=======
+`func (o *DrivesResourceInner) SetExtendedStatus(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetExtendedStatus sets ExtendedStatus field to given value.
 
@@ -872,20 +1194,32 @@ HasExtendedStatus returns a boolean if a field has been set.
 
 ### GetFcP1Channel
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP1Channel() int64`
+=======
+`func (o *DrivesResourceInner) GetFcP1Channel() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP1Channel returns the FcP1Channel field if non-nil, zero value otherwise.
 
 ### GetFcP1ChannelOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP1ChannelOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetFcP1ChannelOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP1ChannelOk returns a tuple with the FcP1Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP1Channel
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetFcP1Channel(v int64)`
+=======
+`func (o *DrivesResourceInner) SetFcP1Channel(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFcP1Channel sets FcP1Channel field to given value.
 
@@ -897,20 +1231,32 @@ HasFcP1Channel returns a boolean if a field has been set.
 
 ### GetFcP1DeviceId
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP1DeviceId() int64`
+=======
+`func (o *DrivesResourceInner) GetFcP1DeviceId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP1DeviceId returns the FcP1DeviceId field if non-nil, zero value otherwise.
 
 ### GetFcP1DeviceIdOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP1DeviceIdOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetFcP1DeviceIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP1DeviceIdOk returns a tuple with the FcP1DeviceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP1DeviceId
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetFcP1DeviceId(v int64)`
+=======
+`func (o *DrivesResourceInner) SetFcP1DeviceId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFcP1DeviceId sets FcP1DeviceId field to given value.
 
@@ -972,20 +1318,32 @@ HasFcP1PortWwn returns a boolean if a field has been set.
 
 ### GetFcP1UnitNumber
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP1UnitNumber() int64`
+=======
+`func (o *DrivesResourceInner) GetFcP1UnitNumber() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP1UnitNumber returns the FcP1UnitNumber field if non-nil, zero value otherwise.
 
 ### GetFcP1UnitNumberOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP1UnitNumberOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetFcP1UnitNumberOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP1UnitNumberOk returns a tuple with the FcP1UnitNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP1UnitNumber
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetFcP1UnitNumber(v int64)`
+=======
+`func (o *DrivesResourceInner) SetFcP1UnitNumber(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFcP1UnitNumber sets FcP1UnitNumber field to given value.
 
@@ -997,20 +1355,32 @@ HasFcP1UnitNumber returns a boolean if a field has been set.
 
 ### GetFcP2Channel
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP2Channel() int64`
+=======
+`func (o *DrivesResourceInner) GetFcP2Channel() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP2Channel returns the FcP2Channel field if non-nil, zero value otherwise.
 
 ### GetFcP2ChannelOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP2ChannelOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetFcP2ChannelOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP2ChannelOk returns a tuple with the FcP2Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP2Channel
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetFcP2Channel(v int64)`
+=======
+`func (o *DrivesResourceInner) SetFcP2Channel(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFcP2Channel sets FcP2Channel field to given value.
 
@@ -1022,20 +1392,32 @@ HasFcP2Channel returns a boolean if a field has been set.
 
 ### GetFcP2DeviceId
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP2DeviceId() int64`
+=======
+`func (o *DrivesResourceInner) GetFcP2DeviceId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP2DeviceId returns the FcP2DeviceId field if non-nil, zero value otherwise.
 
 ### GetFcP2DeviceIdOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP2DeviceIdOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetFcP2DeviceIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP2DeviceIdOk returns a tuple with the FcP2DeviceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP2DeviceId
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetFcP2DeviceId(v int64)`
+=======
+`func (o *DrivesResourceInner) SetFcP2DeviceId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFcP2DeviceId sets FcP2DeviceId field to given value.
 
@@ -1097,20 +1479,32 @@ HasFcP2PortWwn returns a boolean if a field has been set.
 
 ### GetFcP2UnitNumber
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP2UnitNumber() int64`
+=======
+`func (o *DrivesResourceInner) GetFcP2UnitNumber() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP2UnitNumber returns the FcP2UnitNumber field if non-nil, zero value otherwise.
 
 ### GetFcP2UnitNumberOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFcP2UnitNumberOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetFcP2UnitNumberOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFcP2UnitNumberOk returns a tuple with the FcP2UnitNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP2UnitNumber
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetFcP2UnitNumber(v int64)`
+=======
+`func (o *DrivesResourceInner) SetFcP2UnitNumber(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFcP2UnitNumber sets FcP2UnitNumber field to given value.
 
@@ -1147,20 +1541,32 @@ HasFdeConfigTime returns a boolean if a field has been set.
 
 ### GetFdeConfigTimeNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFdeConfigTimeNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetFdeConfigTimeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFdeConfigTimeNumeric returns the FdeConfigTimeNumeric field if non-nil, zero value otherwise.
 
 ### GetFdeConfigTimeNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFdeConfigTimeNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetFdeConfigTimeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFdeConfigTimeNumericOk returns a tuple with the FdeConfigTimeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFdeConfigTimeNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetFdeConfigTimeNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetFdeConfigTimeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFdeConfigTimeNumeric sets FdeConfigTimeNumeric field to given value.
 
@@ -1197,20 +1603,32 @@ HasFdeState returns a boolean if a field has been set.
 
 ### GetFdeStateNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFdeStateNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetFdeStateNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFdeStateNumeric returns the FdeStateNumeric field if non-nil, zero value otherwise.
 
 ### GetFdeStateNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFdeStateNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetFdeStateNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFdeStateNumericOk returns a tuple with the FdeStateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFdeStateNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetFdeStateNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetFdeStateNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFdeStateNumeric sets FdeStateNumeric field to given value.
 
@@ -1247,20 +1665,32 @@ HasFipsCapable returns a boolean if a field has been set.
 
 ### GetFipsCapableNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFipsCapableNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetFipsCapableNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFipsCapableNumeric returns the FipsCapableNumeric field if non-nil, zero value otherwise.
 
 ### GetFipsCapableNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFipsCapableNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetFipsCapableNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFipsCapableNumericOk returns a tuple with the FipsCapableNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFipsCapableNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetFipsCapableNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetFipsCapableNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFipsCapableNumeric sets FipsCapableNumeric field to given value.
 
@@ -1297,20 +1727,32 @@ HasFirmwareUpdateStatus returns a boolean if a field has been set.
 
 ### GetFirmwareUpdateStatusNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFirmwareUpdateStatusNumeric returns the FirmwareUpdateStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetFirmwareUpdateStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFirmwareUpdateStatusNumericOk returns a tuple with the FirmwareUpdateStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFirmwareUpdateStatusNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetFirmwareUpdateStatusNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetFirmwareUpdateStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFirmwareUpdateStatusNumeric sets FirmwareUpdateStatusNumeric field to given value.
 
@@ -1347,20 +1789,32 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetHealthNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetHealthNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetHealthNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -1397,20 +1851,32 @@ HasHealthReason returns a boolean if a field has been set.
 
 ### GetHealthReasonNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetHealthReasonNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetHealthReasonNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthReasonNumeric returns the HealthReasonNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthReasonNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetHealthReasonNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetHealthReasonNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthReasonNumericOk returns a tuple with the HealthReasonNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthReasonNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetHealthReasonNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetHealthReasonNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthReasonNumeric sets HealthReasonNumeric field to given value.
 
@@ -1447,20 +1913,32 @@ HasHealthRecommendation returns a boolean if a field has been set.
 
 ### GetHealthRecommendationNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetHealthRecommendationNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetHealthRecommendationNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthRecommendationNumeric returns the HealthRecommendationNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthRecommendationNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetHealthRecommendationNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetHealthRecommendationNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthRecommendationNumericOk returns a tuple with the HealthRecommendationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthRecommendationNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetHealthRecommendationNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetHealthRecommendationNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthRecommendationNumeric sets HealthRecommendationNumeric field to given value.
 
@@ -1497,20 +1975,32 @@ HasImportLockKeyId returns a boolean if a field has been set.
 
 ### GetIndex
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetIndex() int64`
+=======
+`func (o *DrivesResourceInner) GetIndex() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetIndex returns the Index field if non-nil, zero value otherwise.
 
 ### GetIndexOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetIndexOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetIndexOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetIndexOk returns a tuple with the Index field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIndex
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetIndex(v int64)`
+=======
+`func (o *DrivesResourceInner) SetIndex(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetIndex sets Index field to given value.
 
@@ -1547,20 +2037,32 @@ HasInterface returns a boolean if a field has been set.
 
 ### GetInterfaceNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetInterfaceNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetInterfaceNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetInterfaceNumeric returns the InterfaceNumeric field if non-nil, zero value otherwise.
 
 ### GetInterfaceNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetInterfaceNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetInterfaceNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetInterfaceNumericOk returns a tuple with the InterfaceNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInterfaceNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetInterfaceNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetInterfaceNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetInterfaceNumeric sets InterfaceNumeric field to given value.
 
@@ -1597,20 +2099,32 @@ HasJobRunning returns a boolean if a field has been set.
 
 ### GetJobRunningNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetJobRunningNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetJobRunningNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetJobRunningNumeric returns the JobRunningNumeric field if non-nil, zero value otherwise.
 
 ### GetJobRunningNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetJobRunningNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetJobRunningNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetJobRunningNumericOk returns a tuple with the JobRunningNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetJobRunningNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetJobRunningNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetJobRunningNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetJobRunningNumeric sets JobRunningNumeric field to given value.
 
@@ -1647,20 +2161,32 @@ HasKmipState returns a boolean if a field has been set.
 
 ### GetKmipStateNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetKmipStateNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetKmipStateNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetKmipStateNumeric returns the KmipStateNumeric field if non-nil, zero value otherwise.
 
 ### GetKmipStateNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetKmipStateNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetKmipStateNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetKmipStateNumericOk returns a tuple with the KmipStateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetKmipStateNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetKmipStateNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetKmipStateNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetKmipStateNumeric sets KmipStateNumeric field to given value.
 
@@ -1697,20 +2223,32 @@ HasLedStatus returns a boolean if a field has been set.
 
 ### GetLedStatusNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetLedStatusNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetLedStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLedStatusNumeric returns the LedStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetLedStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetLedStatusNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetLedStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLedStatusNumericOk returns a tuple with the LedStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLedStatusNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetLedStatusNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetLedStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetLedStatusNumeric sets LedStatusNumeric field to given value.
 
@@ -1772,20 +2310,32 @@ HasLocatorLed returns a boolean if a field has been set.
 
 ### GetLocatorLedNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetLocatorLedNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetLocatorLedNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLocatorLedNumeric returns the LocatorLedNumeric field if non-nil, zero value otherwise.
 
 ### GetLocatorLedNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetLocatorLedNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetLocatorLedNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocatorLedNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetLocatorLedNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetLocatorLedNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetLocatorLedNumeric sets LocatorLedNumeric field to given value.
 
@@ -1822,20 +2372,32 @@ HasLockKeyId returns a boolean if a field has been set.
 
 ### GetMemberIndex
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetMemberIndex() int64`
+=======
+`func (o *DrivesResourceInner) GetMemberIndex() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMemberIndex returns the MemberIndex field if non-nil, zero value otherwise.
 
 ### GetMemberIndexOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetMemberIndexOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetMemberIndexOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMemberIndexOk returns a tuple with the MemberIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemberIndex
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetMemberIndex(v int64)`
+=======
+`func (o *DrivesResourceInner) SetMemberIndex(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMemberIndex sets MemberIndex field to given value.
 
@@ -1872,20 +2434,32 @@ HasModel returns a boolean if a field has been set.
 
 ### GetNumDepoppedHeads
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetNumDepoppedHeads() int64`
+=======
+`func (o *DrivesResourceInner) GetNumDepoppedHeads() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumDepoppedHeads returns the NumDepoppedHeads field if non-nil, zero value otherwise.
 
 ### GetNumDepoppedHeadsOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetNumDepoppedHeadsOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetNumDepoppedHeadsOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumDepoppedHeadsOk returns a tuple with the NumDepoppedHeads field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumDepoppedHeads
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetNumDepoppedHeads(v int64)`
+=======
+`func (o *DrivesResourceInner) SetNumDepoppedHeads(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetNumDepoppedHeads sets NumDepoppedHeads field to given value.
 
@@ -1897,20 +2471,32 @@ HasNumDepoppedHeads returns a boolean if a field has been set.
 
 ### GetNumberOfIos
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetNumberOfIos() int64`
+=======
+`func (o *DrivesResourceInner) GetNumberOfIos() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumberOfIos returns the NumberOfIos field if non-nil, zero value otherwise.
 
 ### GetNumberOfIosOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetNumberOfIosOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetNumberOfIosOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetNumberOfIosOk returns a tuple with the NumberOfIos field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumberOfIos
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetNumberOfIos(v int64)`
+=======
+`func (o *DrivesResourceInner) SetNumberOfIos(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetNumberOfIos sets NumberOfIos field to given value.
 
@@ -1947,20 +2533,32 @@ HasOwner returns a boolean if a field has been set.
 
 ### GetOwnerNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetOwnerNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetOwnerNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOwnerNumeric returns the OwnerNumeric field if non-nil, zero value otherwise.
 
 ### GetOwnerNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetOwnerNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetOwnerNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOwnerNumericOk returns a tuple with the OwnerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOwnerNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetOwnerNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetOwnerNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetOwnerNumeric sets OwnerNumeric field to given value.
 
@@ -1997,20 +2595,32 @@ HasPiFormatted returns a boolean if a field has been set.
 
 ### GetPiFormattedNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetPiFormattedNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetPiFormattedNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPiFormattedNumeric returns the PiFormattedNumeric field if non-nil, zero value otherwise.
 
 ### GetPiFormattedNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetPiFormattedNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetPiFormattedNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPiFormattedNumericOk returns a tuple with the PiFormattedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPiFormattedNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetPiFormattedNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetPiFormattedNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPiFormattedNumeric sets PiFormattedNumeric field to given value.
 
@@ -2022,20 +2632,32 @@ HasPiFormattedNumeric returns a boolean if a field has been set.
 
 ### GetPort
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetPort() int64`
+=======
+`func (o *DrivesResourceInner) GetPort() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPort returns the Port field if non-nil, zero value otherwise.
 
 ### GetPortOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetPortOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetPortOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPort
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetPort(v int64)`
+=======
+`func (o *DrivesResourceInner) SetPort(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPort sets Port field to given value.
 
@@ -2047,20 +2669,32 @@ HasPort returns a boolean if a field has been set.
 
 ### GetPowerOnHours
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetPowerOnHours() int64`
+=======
+`func (o *DrivesResourceInner) GetPowerOnHours() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPowerOnHours returns the PowerOnHours field if non-nil, zero value otherwise.
 
 ### GetPowerOnHoursOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetPowerOnHoursOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetPowerOnHoursOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPowerOnHoursOk returns a tuple with the PowerOnHours field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPowerOnHours
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetPowerOnHours(v int64)`
+=======
+`func (o *DrivesResourceInner) SetPowerOnHours(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPowerOnHours sets PowerOnHours field to given value.
 
@@ -2097,20 +2731,32 @@ HasReconState returns a boolean if a field has been set.
 
 ### GetReconStateNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetReconStateNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetReconStateNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetReconStateNumeric returns the ReconStateNumeric field if non-nil, zero value otherwise.
 
 ### GetReconStateNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetReconStateNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetReconStateNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetReconStateNumericOk returns a tuple with the ReconStateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReconStateNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetReconStateNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetReconStateNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetReconStateNumeric sets ReconStateNumeric field to given value.
 
@@ -2147,20 +2793,32 @@ HasRemanufacture returns a boolean if a field has been set.
 
 ### GetRemanufactureNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetRemanufactureNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetRemanufactureNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRemanufactureNumeric returns the RemanufactureNumeric field if non-nil, zero value otherwise.
 
 ### GetRemanufactureNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetRemanufactureNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetRemanufactureNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRemanufactureNumericOk returns a tuple with the RemanufactureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRemanufactureNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetRemanufactureNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetRemanufactureNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRemanufactureNumeric sets RemanufactureNumeric field to given value.
 
@@ -2197,20 +2855,32 @@ HasRevision returns a boolean if a field has been set.
 
 ### GetRpm
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetRpm() int64`
+=======
+`func (o *DrivesResourceInner) GetRpm() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRpm returns the Rpm field if non-nil, zero value otherwise.
 
 ### GetRpmOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetRpmOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetRpmOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRpmOk returns a tuple with the Rpm field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRpm
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetRpm(v int64)`
+=======
+`func (o *DrivesResourceInner) SetRpm(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRpm sets Rpm field to given value.
 
@@ -2222,20 +2892,32 @@ HasRpm returns a boolean if a field has been set.
 
 ### GetScsiId
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetScsiId() int64`
+=======
+`func (o *DrivesResourceInner) GetScsiId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetScsiId returns the ScsiId field if non-nil, zero value otherwise.
 
 ### GetScsiIdOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetScsiIdOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetScsiIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetScsiIdOk returns a tuple with the ScsiId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScsiId
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetScsiId(v int64)`
+=======
+`func (o *DrivesResourceInner) SetScsiId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetScsiId sets ScsiId field to given value.
 
@@ -2247,20 +2929,32 @@ HasScsiId returns a boolean if a field has been set.
 
 ### GetSecondaryChannel
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSecondaryChannel() int64`
+=======
+`func (o *DrivesResourceInner) GetSecondaryChannel() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSecondaryChannel returns the SecondaryChannel field if non-nil, zero value otherwise.
 
 ### GetSecondaryChannelOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSecondaryChannelOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetSecondaryChannelOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSecondaryChannelOk returns a tuple with the SecondaryChannel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSecondaryChannel
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetSecondaryChannel(v int64)`
+=======
+`func (o *DrivesResourceInner) SetSecondaryChannel(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSecondaryChannel sets SecondaryChannel field to given value.
 
@@ -2297,20 +2991,32 @@ HasSectorFormat returns a boolean if a field has been set.
 
 ### GetSectorFormatNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSectorFormatNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetSectorFormatNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSectorFormatNumeric returns the SectorFormatNumeric field if non-nil, zero value otherwise.
 
 ### GetSectorFormatNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSectorFormatNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetSectorFormatNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSectorFormatNumericOk returns a tuple with the SectorFormatNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSectorFormatNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetSectorFormatNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetSectorFormatNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSectorFormatNumeric sets SectorFormatNumeric field to given value.
 
@@ -2372,20 +3078,32 @@ HasSinglePorted returns a boolean if a field has been set.
 
 ### GetSinglePortedNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSinglePortedNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetSinglePortedNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSinglePortedNumeric returns the SinglePortedNumeric field if non-nil, zero value otherwise.
 
 ### GetSinglePortedNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSinglePortedNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetSinglePortedNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSinglePortedNumericOk returns a tuple with the SinglePortedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSinglePortedNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetSinglePortedNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetSinglePortedNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSinglePortedNumeric sets SinglePortedNumeric field to given value.
 
@@ -2422,20 +3140,32 @@ HasSize returns a boolean if a field has been set.
 
 ### GetSizeNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSizeNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetSizeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSizeNumeric returns the SizeNumeric field if non-nil, zero value otherwise.
 
 ### GetSizeNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSizeNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetSizeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSizeNumericOk returns a tuple with the SizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSizeNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetSizeNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetSizeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSizeNumeric sets SizeNumeric field to given value.
 
@@ -2447,20 +3177,32 @@ HasSizeNumeric returns a boolean if a field has been set.
 
 ### GetSlot
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSlot() int64`
+=======
+`func (o *DrivesResourceInner) GetSlot() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSlot returns the Slot field if non-nil, zero value otherwise.
 
 ### GetSlotOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSlotOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetSlotOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSlotOk returns a tuple with the Slot field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlot
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetSlot(v int64)`
+=======
+`func (o *DrivesResourceInner) SetSlot(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSlot sets Slot field to given value.
 
@@ -2497,20 +3239,32 @@ HasSmart returns a boolean if a field has been set.
 
 ### GetSmartNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSmartNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetSmartNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSmartNumeric returns the SmartNumeric field if non-nil, zero value otherwise.
 
 ### GetSmartNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSmartNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetSmartNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSmartNumericOk returns a tuple with the SmartNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSmartNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetSmartNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetSmartNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSmartNumeric sets SmartNumeric field to given value.
 
@@ -2522,20 +3276,32 @@ HasSmartNumeric returns a boolean if a field has been set.
 
 ### GetSpeed
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSpeed() int64`
+=======
+`func (o *DrivesResourceInner) GetSpeed() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSpeed returns the Speed field if non-nil, zero value otherwise.
 
 ### GetSpeedOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSpeedOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetSpeedOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSpeedOk returns a tuple with the Speed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSpeed
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetSpeed(v int64)`
+=======
+`func (o *DrivesResourceInner) SetSpeed(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSpeed sets Speed field to given value.
 
@@ -2547,20 +3313,32 @@ HasSpeed returns a boolean if a field has been set.
 
 ### GetSpunDown
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSpunDown() int64`
+=======
+`func (o *DrivesResourceInner) GetSpunDown() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSpunDown returns the SpunDown field if non-nil, zero value otherwise.
 
 ### GetSpunDownOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSpunDownOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetSpunDownOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSpunDownOk returns a tuple with the SpunDown field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSpunDown
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetSpunDown(v int64)`
+=======
+`func (o *DrivesResourceInner) SetSpunDown(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSpunDown sets SpunDown field to given value.
 
@@ -2597,20 +3375,32 @@ HasSsdLifeLeft returns a boolean if a field has been set.
 
 ### GetSsdLifeLeftNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSsdLifeLeftNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetSsdLifeLeftNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSsdLifeLeftNumeric returns the SsdLifeLeftNumeric field if non-nil, zero value otherwise.
 
 ### GetSsdLifeLeftNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSsdLifeLeftNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetSsdLifeLeftNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSsdLifeLeftNumericOk returns a tuple with the SsdLifeLeftNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSsdLifeLeftNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetSsdLifeLeftNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetSsdLifeLeftNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSsdLifeLeftNumeric sets SsdLifeLeftNumeric field to given value.
 
@@ -2722,20 +3512,32 @@ HasStorageTier returns a boolean if a field has been set.
 
 ### GetStorageTierNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetStorageTierNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetStorageTierNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStorageTierNumeric returns the StorageTierNumeric field if non-nil, zero value otherwise.
 
 ### GetStorageTierNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetStorageTierNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetStorageTierNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStorageTierNumericOk returns a tuple with the StorageTierNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStorageTierNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetStorageTierNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetStorageTierNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStorageTierNumeric sets StorageTierNumeric field to given value.
 
@@ -2772,20 +3574,32 @@ HasSupportsUnmap returns a boolean if a field has been set.
 
 ### GetSupportsUnmapNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSupportsUnmapNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetSupportsUnmapNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSupportsUnmapNumeric returns the SupportsUnmapNumeric field if non-nil, zero value otherwise.
 
 ### GetSupportsUnmapNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetSupportsUnmapNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetSupportsUnmapNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSupportsUnmapNumericOk returns a tuple with the SupportsUnmapNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSupportsUnmapNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetSupportsUnmapNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetSupportsUnmapNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSupportsUnmapNumeric sets SupportsUnmapNumeric field to given value.
 
@@ -2822,20 +3636,32 @@ HasTemperature returns a boolean if a field has been set.
 
 ### GetTemperatureNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetTemperatureNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetTemperatureNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTemperatureNumeric returns the TemperatureNumeric field if non-nil, zero value otherwise.
 
 ### GetTemperatureNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetTemperatureNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetTemperatureNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTemperatureNumericOk returns a tuple with the TemperatureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTemperatureNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetTemperatureNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetTemperatureNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetTemperatureNumeric sets TemperatureNumeric field to given value.
 
@@ -2872,20 +3698,32 @@ HasTemperatureStatus returns a boolean if a field has been set.
 
 ### GetTemperatureStatusNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetTemperatureStatusNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetTemperatureStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTemperatureStatusNumeric returns the TemperatureStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetTemperatureStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetTemperatureStatusNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetTemperatureStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTemperatureStatusNumericOk returns a tuple with the TemperatureStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTemperatureStatusNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetTemperatureStatusNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetTemperatureStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetTemperatureStatusNumeric sets TemperatureStatusNumeric field to given value.
 
@@ -2922,20 +3760,32 @@ HasTotalDataTransferred returns a boolean if a field has been set.
 
 ### GetTotalDataTransferredNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetTotalDataTransferredNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetTotalDataTransferredNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTotalDataTransferredNumeric returns the TotalDataTransferredNumeric field if non-nil, zero value otherwise.
 
 ### GetTotalDataTransferredNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetTotalDataTransferredNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetTotalDataTransferredNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTotalDataTransferredNumericOk returns a tuple with the TotalDataTransferredNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalDataTransferredNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetTotalDataTransferredNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetTotalDataTransferredNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetTotalDataTransferredNumeric sets TotalDataTransferredNumeric field to given value.
 
@@ -2972,20 +3822,32 @@ HasTransferRate returns a boolean if a field has been set.
 
 ### GetTransferRateNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetTransferRateNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetTransferRateNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTransferRateNumeric returns the TransferRateNumeric field if non-nil, zero value otherwise.
 
 ### GetTransferRateNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetTransferRateNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetTransferRateNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTransferRateNumericOk returns a tuple with the TransferRateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTransferRateNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetTransferRateNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetTransferRateNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetTransferRateNumeric sets TransferRateNumeric field to given value.
 
@@ -3022,20 +3884,32 @@ HasType returns a boolean if a field has been set.
 
 ### GetTypeNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetTypeNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTypeNumeric returns the TypeNumeric field if non-nil, zero value otherwise.
 
 ### GetTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetTypeNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTypeNumericOk returns a tuple with the TypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTypeNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetTypeNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetTypeNumeric sets TypeNumeric field to given value.
 
@@ -3097,20 +3971,32 @@ HasUsage returns a boolean if a field has been set.
 
 ### GetUsageNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetUsageNumeric() int64`
+=======
+`func (o *DrivesResourceInner) GetUsageNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetUsageNumeric returns the UsageNumeric field if non-nil, zero value otherwise.
 
 ### GetUsageNumericOk
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) GetUsageNumericOk() (*int64, bool)`
+=======
+`func (o *DrivesResourceInner) GetUsageNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetUsageNumericOk returns a tuple with the UsageNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUsageNumeric
 
+<<<<<<< HEAD
 `func (o *DrivesResourceInner) SetUsageNumeric(v int64)`
+=======
+`func (o *DrivesResourceInner) SetUsageNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetUsageNumeric sets UsageNumeric field to given value.
 

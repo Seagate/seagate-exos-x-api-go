@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **CacheFlush** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **CacheFlushNumeric** | Pointer to **int64** |  | [optional] 
 **ControllerId** | Pointer to **string** |  | [optional] 
 **ControllerIdNumeric** | Pointer to **int64** |  | [optional] 
@@ -18,6 +19,19 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** |  | [optional] 
 **WriteBackStatus** | Pointer to **string** | Indicates whether disk write-back cache is enabled | [optional] 
 **WriteBackStatusNumeric** | Pointer to **int64** | Indicates whether disk write-back cache is enabled( In numeric form ) | [optional] 
+=======
+**CacheFlushNumeric** | Pointer to **int32** |  | [optional] 
+**ControllerId** | Pointer to **string** |  | [optional] 
+**ControllerIdNumeric** | Pointer to **int32** |  | [optional] 
+**DurableId** | Pointer to **string** |  | [optional] 
+**MemoryCardHealth** | Pointer to **string** |  | [optional] 
+**MemoryCardHealthNumeric** | Pointer to **int32** |  | [optional] 
+**MemoryCardStatus** | Pointer to **string** |  | [optional] 
+**MemoryCardStatusNumeric** | Pointer to **int32** |  | [optional] 
+**Name** | Pointer to **string** |  | [optional] 
+**WriteBackStatus** | Pointer to **string** | Indicates whether disk write-back cache is enabled | [optional] 
+**WriteBackStatusNumeric** | Pointer to **int32** | Indicates whether disk write-back cache is enabled( In numeric form ) | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ## Methods
 
@@ -115,20 +129,32 @@ HasCacheFlush returns a boolean if a field has been set.
 
 ### GetCacheFlushNumeric
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int64`
+=======
+`func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCacheFlushNumeric returns the CacheFlushNumeric field if non-nil, zero value otherwise.
 
 ### GetCacheFlushNumericOk
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumericOk() (*int64, bool)`
+=======
+`func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCacheFlushNumericOk returns a tuple with the CacheFlushNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheFlushNumeric
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) SetCacheFlushNumeric(v int64)`
+=======
+`func (o *ControllerCacheParametersResourceInner) SetCacheFlushNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCacheFlushNumeric sets CacheFlushNumeric field to given value.
 
@@ -165,20 +191,32 @@ HasControllerId returns a boolean if a field has been set.
 
 ### GetControllerIdNumeric
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int64`
+=======
+`func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerIdNumeric returns the ControllerIdNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerIdNumericOk
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) GetControllerIdNumericOk() (*int64, bool)`
+=======
+`func (o *ControllerCacheParametersResourceInner) GetControllerIdNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerIdNumericOk returns a tuple with the ControllerIdNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerIdNumeric
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) SetControllerIdNumeric(v int64)`
+=======
+`func (o *ControllerCacheParametersResourceInner) SetControllerIdNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetControllerIdNumeric sets ControllerIdNumeric field to given value.
 
@@ -240,20 +278,32 @@ HasMemoryCardHealth returns a boolean if a field has been set.
 
 ### GetMemoryCardHealthNumeric
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() int64`
+=======
+`func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMemoryCardHealthNumeric returns the MemoryCardHealthNumeric field if non-nil, zero value otherwise.
 
 ### GetMemoryCardHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumericOk() (*int64, bool)`
+=======
+`func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMemoryCardHealthNumericOk returns a tuple with the MemoryCardHealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemoryCardHealthNumeric
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealthNumeric(v int64)`
+=======
+`func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMemoryCardHealthNumeric sets MemoryCardHealthNumeric field to given value.
 
@@ -290,20 +340,32 @@ HasMemoryCardStatus returns a boolean if a field has been set.
 
 ### GetMemoryCardStatusNumeric
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() int64`
+=======
+`func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMemoryCardStatusNumeric returns the MemoryCardStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetMemoryCardStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumericOk() (*int64, bool)`
+=======
+`func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMemoryCardStatusNumericOk returns a tuple with the MemoryCardStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemoryCardStatusNumeric
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatusNumeric(v int64)`
+=======
+`func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMemoryCardStatusNumeric sets MemoryCardStatusNumeric field to given value.
 
@@ -365,20 +427,32 @@ HasWriteBackStatus returns a boolean if a field has been set.
 
 ### GetWriteBackStatusNumeric
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int64`
+=======
+`func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetWriteBackStatusNumeric returns the WriteBackStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetWriteBackStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumericOk() (*int64, bool)`
+=======
+`func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetWriteBackStatusNumericOk returns a tuple with the WriteBackStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWriteBackStatusNumeric
 
+<<<<<<< HEAD
 `func (o *ControllerCacheParametersResourceInner) SetWriteBackStatusNumeric(v int64)`
+=======
+`func (o *ControllerCacheParametersResourceInner) SetWriteBackStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetWriteBackStatusNumeric sets WriteBackStatusNumeric field to given value.
 

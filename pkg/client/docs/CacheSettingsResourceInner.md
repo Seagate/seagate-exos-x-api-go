@@ -6,11 +6,19 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **CacheBlockSize** | Pointer to **int64** |  | [optional] 
 **OperationMode** | Pointer to **string** | Storage system operation mode (redundancy mode) | [optional] 
 **OperationModeNumeric** | Pointer to **int64** | Storage system operation mode (redundancy mode)( In numeric form ) | [optional] 
 **PiFormat** | Pointer to **string** | Used to describe the Host Protection Information | [optional] 
 **PiFormatNumeric** | Pointer to **int64** | Used to describe the Host Protection Information( In numeric form ) | [optional] 
+=======
+**CacheBlockSize** | Pointer to **int32** |  | [optional] 
+**OperationMode** | Pointer to **string** | Storage system operation mode (redundancy mode) | [optional] 
+**OperationModeNumeric** | Pointer to **int32** | Storage system operation mode (redundancy mode)( In numeric form ) | [optional] 
+**PiFormat** | Pointer to **string** | Used to describe the Host Protection Information | [optional] 
+**PiFormatNumeric** | Pointer to **int32** | Used to describe the Host Protection Information( In numeric form ) | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **ControllerCacheParameters** | Pointer to [**[]ControllerCacheParametersResourceInner**](ControllerCacheParametersResourceInner.md) |  | [optional] 
 
 ## Methods
@@ -84,20 +92,32 @@ HasMeta returns a boolean if a field has been set.
 
 ### GetCacheBlockSize
 
+<<<<<<< HEAD
 `func (o *CacheSettingsResourceInner) GetCacheBlockSize() int64`
+=======
+`func (o *CacheSettingsResourceInner) GetCacheBlockSize() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCacheBlockSize returns the CacheBlockSize field if non-nil, zero value otherwise.
 
 ### GetCacheBlockSizeOk
 
+<<<<<<< HEAD
 `func (o *CacheSettingsResourceInner) GetCacheBlockSizeOk() (*int64, bool)`
+=======
+`func (o *CacheSettingsResourceInner) GetCacheBlockSizeOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCacheBlockSizeOk returns a tuple with the CacheBlockSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheBlockSize
 
+<<<<<<< HEAD
 `func (o *CacheSettingsResourceInner) SetCacheBlockSize(v int64)`
+=======
+`func (o *CacheSettingsResourceInner) SetCacheBlockSize(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCacheBlockSize sets CacheBlockSize field to given value.
 
@@ -134,20 +154,32 @@ HasOperationMode returns a boolean if a field has been set.
 
 ### GetOperationModeNumeric
 
+<<<<<<< HEAD
 `func (o *CacheSettingsResourceInner) GetOperationModeNumeric() int64`
+=======
+`func (o *CacheSettingsResourceInner) GetOperationModeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOperationModeNumeric returns the OperationModeNumeric field if non-nil, zero value otherwise.
 
 ### GetOperationModeNumericOk
 
+<<<<<<< HEAD
 `func (o *CacheSettingsResourceInner) GetOperationModeNumericOk() (*int64, bool)`
+=======
+`func (o *CacheSettingsResourceInner) GetOperationModeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOperationModeNumericOk returns a tuple with the OperationModeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOperationModeNumeric
 
+<<<<<<< HEAD
 `func (o *CacheSettingsResourceInner) SetOperationModeNumeric(v int64)`
+=======
+`func (o *CacheSettingsResourceInner) SetOperationModeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetOperationModeNumeric sets OperationModeNumeric field to given value.
 
@@ -184,20 +216,32 @@ HasPiFormat returns a boolean if a field has been set.
 
 ### GetPiFormatNumeric
 
+<<<<<<< HEAD
 `func (o *CacheSettingsResourceInner) GetPiFormatNumeric() int64`
+=======
+`func (o *CacheSettingsResourceInner) GetPiFormatNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPiFormatNumeric returns the PiFormatNumeric field if non-nil, zero value otherwise.
 
 ### GetPiFormatNumericOk
 
+<<<<<<< HEAD
 `func (o *CacheSettingsResourceInner) GetPiFormatNumericOk() (*int64, bool)`
+=======
+`func (o *CacheSettingsResourceInner) GetPiFormatNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPiFormatNumericOk returns a tuple with the PiFormatNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPiFormatNumeric
 
+<<<<<<< HEAD
 `func (o *CacheSettingsResourceInner) SetPiFormatNumeric(v int64)`
+=======
+`func (o *CacheSettingsResourceInner) SetPiFormatNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPiFormatNumeric sets PiFormatNumeric field to given value.
 

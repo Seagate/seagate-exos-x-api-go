@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **AllocateReservedPagesFirst** | Pointer to **string** | Allocate Reserved Pages First | [optional] 
+<<<<<<< HEAD
 **AllocateReservedPagesFirstNumeric** | Pointer to **int64** | Allocate Reserved Pages First( In numeric form ) | [optional] 
 **AllocatedSize** | Pointer to **string** |  | [optional] 
 **AllocatedSizeNumeric** | Pointer to **int64** |  | [optional] 
@@ -76,16 +77,92 @@ Name | Type | Description | Notes
 **TierAffinityNumeric** | Pointer to **int64** |  | [optional] 
 **TotalSize** | Pointer to **string** | The total size formatted using the session settings for base, precision, and units | [optional] 
 **TotalSizeNumeric** | Pointer to **int64** | The total size formatted using the session settings for base, precision, and units( In numeric form ) | [optional] 
+=======
+**AllocateReservedPagesFirstNumeric** | Pointer to **int32** | Allocate Reserved Pages First( In numeric form ) | [optional] 
+**AllocatedSize** | Pointer to **string** |  | [optional] 
+**AllocatedSizeNumeric** | Pointer to **int32** |  | [optional] 
+**AllowedStorageTiers** | Pointer to **string** | Allowed Virtual Pool Tiers | [optional] 
+**AllowedStorageTiersNumeric** | Pointer to **int32** | Allowed Virtual Pool Tiers( In numeric form ) | [optional] 
+**Attributes** | Pointer to **string** | Indicates if the disk is single-pathed | [optional] 
+**Blocks** | Pointer to **int32** | The size in blocks | [optional] 
+**Blocksize** | Pointer to **int32** |  | [optional] 
+**CacheOptimization** | Pointer to **string** | Whether cache is optimized for sequential and random reads, or sequential only | [optional] 
+**CacheOptimizationNumeric** | Pointer to **int32** | Whether cache is optimized for sequential and random reads, or sequential only( In numeric form ) | [optional] 
+**Capabilities** | Pointer to **string** |  | [optional] 
+**Compression** | Pointer to **string** |  | [optional] 
+**CompressionEfficiency** | Pointer to **string** |  | [optional] 
+**CompressionNumeric** | Pointer to **int32** |  | [optional] 
+**ContainerName** | Pointer to **string** | Container Name | [optional] 
+**ContainerSerial** | Pointer to **string** | Container Serial Number | [optional] 
+**CreationDateTime** | Pointer to **string** |  | [optional] 
+**CreationDateTimeNumeric** | Pointer to **int32** |  | [optional] 
+**CsCopyDest** | Pointer to **string** |  | [optional] 
+**CsCopyDestNumeric** | Pointer to **int32** |  | [optional] 
+**CsCopySrc** | Pointer to **string** |  | [optional] 
+**CsCopySrcNumeric** | Pointer to **int32** |  | [optional] 
+**CsPrimary** | Pointer to **string** |  | [optional] 
+**CsPrimaryNumeric** | Pointer to **int32** |  | [optional] 
+**CsReplicationRole** | Pointer to **string** |  | [optional] 
+**CsSecondary** | Pointer to **string** |  | [optional] 
+**CsSecondaryNumeric** | Pointer to **int32** |  | [optional] 
+**DurableId** | Pointer to **string** |  | [optional] 
+**GroupKey** | Pointer to **string** | Durable ID of a Management Group | [optional] 
+**Health** | Pointer to **string** |  | [optional] 
+**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthReason** | Pointer to **string** |  | [optional] 
+**HealthRecommendation** | Pointer to **string** |  | [optional] 
+**Interleaved** | Pointer to **string** |  | [optional] 
+**InterleavedNumeric** | Pointer to **int32** |  | [optional] 
+**LargeVirtualExtents** | Pointer to **string** | Sequentially optimize zone allocation for virtual volume | [optional] 
+**LargeVirtualExtentsNumeric** | Pointer to **int32** | Sequentially optimize zone allocation for virtual volume( In numeric form ) | [optional] 
+**MetadataInUse** | Pointer to **string** | Pool Metadata currently being used by volume | [optional] 
+**MetadataInUseNumeric** | Pointer to **int32** | Pool Metadata currently being used by volume( In numeric form ) | [optional] 
+**Owner** | Pointer to **string** | Controller owning the component | [optional] 
+**OwnerNumeric** | Pointer to **int32** | Controller owning the component( In numeric form ) | [optional] 
+**PiFormat** | Pointer to **string** | Used to describe the Host Protection Information | [optional] 
+**PiFormatNumeric** | Pointer to **int32** | Used to describe the Host Protection Information( In numeric form ) | [optional] 
+**PreferredOwner** | Pointer to **string** | Configured owner | [optional] 
+**PreferredOwnerNumeric** | Pointer to **int32** | Configured owner( In numeric form ) | [optional] 
+**Progress** | Pointer to **string** | Progress in percent for the volume-copy operation | [optional] 
+**ProgressNumeric** | Pointer to **int32** | Progress in percent for the volume-copy operation( In numeric form ) | [optional] 
+**Raidtype** | Pointer to **string** | RAID level | [optional] 
+**RaidtypeNumeric** | Pointer to **int32** | RAID level( In numeric form ) | [optional] 
+**ReadAheadSize** | Pointer to **string** | Read-ahead cache setting | [optional] 
+**ReadAheadSizeNumeric** | Pointer to **int32** | Read-ahead cache setting( In numeric form ) | [optional] 
+**ReplicationSet** | Pointer to **string** |  | [optional] 
+**ReservedSizeInPages** | Pointer to **int32** | Reserved Size In Pages | [optional] 
+**SerialNumber** | Pointer to **string** |  | [optional] 
+**Size** | Pointer to **string** | The size or capacity formatted with the current session base, precision, and units | [optional] 
+**SizeNumeric** | Pointer to **int32** | The size or capacity formatted with the current session base, precision, and units( In numeric form ) | [optional] 
+**SnapPool** | Pointer to **string** | Snap pool associated with this volume | [optional] 
+**Snapshot** | Pointer to **string** |  | [optional] 
+**SnapshotRetentionPriority** | Pointer to **string** | Retention priority of the snapshot | [optional] 
+**SnapshotRetentionPriorityNumeric** | Pointer to **int32** | Retention priority of the snapshot( In numeric form ) | [optional] 
+**StoragePoolName** | Pointer to **string** | User-defined name for the pool | [optional] 
+**StoragePoolsUrl** | Pointer to **string** |  | [optional] 
+**StorageType** | Pointer to **string** | Storage type | [optional] 
+**StorageTypeNumeric** | Pointer to **int32** | Storage type( In numeric form ) | [optional] 
+**ThresholdPercentOfPool** | Pointer to **string** | Threshold Percent of Pool | [optional] 
+**TierAffinity** | Pointer to **string** |  | [optional] 
+**TierAffinityNumeric** | Pointer to **int32** |  | [optional] 
+**TotalSize** | Pointer to **string** | The total size formatted using the session settings for base, precision, and units | [optional] 
+**TotalSizeNumeric** | Pointer to **int32** | The total size formatted using the session settings for base, precision, and units( In numeric form ) | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **VirtualDiskName** | Pointer to **string** | The name of the pool that contains the volume | [optional] 
 **VirtualDiskSerial** | Pointer to **string** | Unique serial number for the disk group | [optional] 
 **VolumeClass** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **VolumeClassNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**VolumeClassNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **VolumeDescription** | Pointer to **string** | Provides a user-defined volume identifier | [optional] 
 **VolumeGroup** | Pointer to **string** | Volume Group | [optional] 
 **VolumeName** | Pointer to **string** | User-defined name for the volume | [optional] 
 **VolumeParent** | Pointer to **string** | Serial number of the associated volume | [optional] 
 **VolumeQualifier** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **VolumeQualifierNumeric** | Pointer to **int64** |  | [optional] 
 **VolumeType** | Pointer to **string** | Indicates whether the volume is being used for Snapshots | [optional] 
 **VolumeTypeNumeric** | Pointer to **int64** | Indicates whether the volume is being used for Snapshots( In numeric form ) | [optional] 
@@ -96,6 +173,18 @@ Name | Type | Description | Notes
 **Wwn** | Pointer to **string** | World Wide Name | [optional] 
 **ZeroInitPageOnAllocation** | Pointer to **string** | Zero Init Page On Allocation | [optional] 
 **ZeroInitPageOnAllocationNumeric** | Pointer to **int64** | Zero Init Page On Allocation( In numeric form ) | [optional] 
+=======
+**VolumeQualifierNumeric** | Pointer to **int32** |  | [optional] 
+**VolumeType** | Pointer to **string** | Indicates whether the volume is being used for Snapshots | [optional] 
+**VolumeTypeNumeric** | Pointer to **int32** | Indicates whether the volume is being used for Snapshots( In numeric form ) | [optional] 
+**VolumeUsageType** | Pointer to **string** | Indicates the usage of volume | [optional] 
+**VolumeUsageTypeNumeric** | Pointer to **int32** | Indicates the usage of volume( In numeric form ) | [optional] 
+**WritePolicy** | Pointer to **string** | The write-back cache mode | [optional] 
+**WritePolicyNumeric** | Pointer to **int32** | The write-back cache mode( In numeric form ) | [optional] 
+**Wwn** | Pointer to **string** | World Wide Name | [optional] 
+**ZeroInitPageOnAllocation** | Pointer to **string** | Zero Init Page On Allocation | [optional] 
+**ZeroInitPageOnAllocationNumeric** | Pointer to **int32** | Zero Init Page On Allocation( In numeric form ) | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ## Methods
 
@@ -193,20 +282,32 @@ HasAllocateReservedPagesFirst returns a boolean if a field has been set.
 
 ### GetAllocateReservedPagesFirstNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAllocateReservedPagesFirstNumeric returns the AllocateReservedPagesFirstNumeric field if non-nil, zero value otherwise.
 
 ### GetAllocateReservedPagesFirstNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAllocateReservedPagesFirstNumericOk returns a tuple with the AllocateReservedPagesFirstNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllocateReservedPagesFirstNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetAllocateReservedPagesFirstNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetAllocateReservedPagesFirstNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAllocateReservedPagesFirstNumeric sets AllocateReservedPagesFirstNumeric field to given value.
 
@@ -243,20 +344,32 @@ HasAllocatedSize returns a boolean if a field has been set.
 
 ### GetAllocatedSizeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetAllocatedSizeNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetAllocatedSizeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAllocatedSizeNumeric returns the AllocatedSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetAllocatedSizeNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetAllocatedSizeNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetAllocatedSizeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAllocatedSizeNumericOk returns a tuple with the AllocatedSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllocatedSizeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetAllocatedSizeNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetAllocatedSizeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAllocatedSizeNumeric sets AllocatedSizeNumeric field to given value.
 
@@ -293,20 +406,32 @@ HasAllowedStorageTiers returns a boolean if a field has been set.
 
 ### GetAllowedStorageTiersNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetAllowedStorageTiersNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetAllowedStorageTiersNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAllowedStorageTiersNumeric returns the AllowedStorageTiersNumeric field if non-nil, zero value otherwise.
 
 ### GetAllowedStorageTiersNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetAllowedStorageTiersNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetAllowedStorageTiersNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAllowedStorageTiersNumericOk returns a tuple with the AllowedStorageTiersNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllowedStorageTiersNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetAllowedStorageTiersNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetAllowedStorageTiersNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAllowedStorageTiersNumeric sets AllowedStorageTiersNumeric field to given value.
 
@@ -343,20 +468,32 @@ HasAttributes returns a boolean if a field has been set.
 
 ### GetBlocks
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetBlocks() int64`
+=======
+`func (o *VolumesResourceInner) GetBlocks() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBlocks returns the Blocks field if non-nil, zero value otherwise.
 
 ### GetBlocksOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetBlocksOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetBlocksOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBlocksOk returns a tuple with the Blocks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlocks
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetBlocks(v int64)`
+=======
+`func (o *VolumesResourceInner) SetBlocks(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetBlocks sets Blocks field to given value.
 
@@ -368,20 +505,32 @@ HasBlocks returns a boolean if a field has been set.
 
 ### GetBlocksize
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetBlocksize() int64`
+=======
+`func (o *VolumesResourceInner) GetBlocksize() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBlocksize returns the Blocksize field if non-nil, zero value otherwise.
 
 ### GetBlocksizeOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetBlocksizeOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetBlocksizeOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBlocksizeOk returns a tuple with the Blocksize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlocksize
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetBlocksize(v int64)`
+=======
+`func (o *VolumesResourceInner) SetBlocksize(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetBlocksize sets Blocksize field to given value.
 
@@ -418,20 +567,32 @@ HasCacheOptimization returns a boolean if a field has been set.
 
 ### GetCacheOptimizationNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCacheOptimizationNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetCacheOptimizationNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCacheOptimizationNumeric returns the CacheOptimizationNumeric field if non-nil, zero value otherwise.
 
 ### GetCacheOptimizationNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCacheOptimizationNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetCacheOptimizationNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCacheOptimizationNumericOk returns a tuple with the CacheOptimizationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheOptimizationNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetCacheOptimizationNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetCacheOptimizationNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCacheOptimizationNumeric sets CacheOptimizationNumeric field to given value.
 
@@ -518,20 +679,32 @@ HasCompressionEfficiency returns a boolean if a field has been set.
 
 ### GetCompressionNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCompressionNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetCompressionNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCompressionNumeric returns the CompressionNumeric field if non-nil, zero value otherwise.
 
 ### GetCompressionNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCompressionNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetCompressionNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCompressionNumericOk returns a tuple with the CompressionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCompressionNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetCompressionNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetCompressionNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCompressionNumeric sets CompressionNumeric field to given value.
 
@@ -618,20 +791,32 @@ HasCreationDateTime returns a boolean if a field has been set.
 
 ### GetCreationDateTimeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCreationDateTimeNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetCreationDateTimeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCreationDateTimeNumeric returns the CreationDateTimeNumeric field if non-nil, zero value otherwise.
 
 ### GetCreationDateTimeNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCreationDateTimeNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetCreationDateTimeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCreationDateTimeNumericOk returns a tuple with the CreationDateTimeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreationDateTimeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetCreationDateTimeNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetCreationDateTimeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCreationDateTimeNumeric sets CreationDateTimeNumeric field to given value.
 
@@ -668,20 +853,32 @@ HasCsCopyDest returns a boolean if a field has been set.
 
 ### GetCsCopyDestNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCsCopyDestNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetCsCopyDestNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCsCopyDestNumeric returns the CsCopyDestNumeric field if non-nil, zero value otherwise.
 
 ### GetCsCopyDestNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCsCopyDestNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetCsCopyDestNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCsCopyDestNumericOk returns a tuple with the CsCopyDestNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCsCopyDestNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetCsCopyDestNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetCsCopyDestNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCsCopyDestNumeric sets CsCopyDestNumeric field to given value.
 
@@ -718,20 +915,32 @@ HasCsCopySrc returns a boolean if a field has been set.
 
 ### GetCsCopySrcNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCsCopySrcNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetCsCopySrcNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCsCopySrcNumeric returns the CsCopySrcNumeric field if non-nil, zero value otherwise.
 
 ### GetCsCopySrcNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCsCopySrcNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetCsCopySrcNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCsCopySrcNumericOk returns a tuple with the CsCopySrcNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCsCopySrcNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetCsCopySrcNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetCsCopySrcNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCsCopySrcNumeric sets CsCopySrcNumeric field to given value.
 
@@ -768,20 +977,32 @@ HasCsPrimary returns a boolean if a field has been set.
 
 ### GetCsPrimaryNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCsPrimaryNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetCsPrimaryNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCsPrimaryNumeric returns the CsPrimaryNumeric field if non-nil, zero value otherwise.
 
 ### GetCsPrimaryNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCsPrimaryNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetCsPrimaryNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCsPrimaryNumericOk returns a tuple with the CsPrimaryNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCsPrimaryNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetCsPrimaryNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetCsPrimaryNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCsPrimaryNumeric sets CsPrimaryNumeric field to given value.
 
@@ -843,20 +1064,32 @@ HasCsSecondary returns a boolean if a field has been set.
 
 ### GetCsSecondaryNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCsSecondaryNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetCsSecondaryNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCsSecondaryNumeric returns the CsSecondaryNumeric field if non-nil, zero value otherwise.
 
 ### GetCsSecondaryNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetCsSecondaryNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetCsSecondaryNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCsSecondaryNumericOk returns a tuple with the CsSecondaryNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCsSecondaryNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetCsSecondaryNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetCsSecondaryNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCsSecondaryNumeric sets CsSecondaryNumeric field to given value.
 
@@ -943,20 +1176,32 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetHealthNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetHealthNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetHealthNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -1043,20 +1288,32 @@ HasInterleaved returns a boolean if a field has been set.
 
 ### GetInterleavedNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetInterleavedNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetInterleavedNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetInterleavedNumeric returns the InterleavedNumeric field if non-nil, zero value otherwise.
 
 ### GetInterleavedNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetInterleavedNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetInterleavedNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetInterleavedNumericOk returns a tuple with the InterleavedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInterleavedNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetInterleavedNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetInterleavedNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetInterleavedNumeric sets InterleavedNumeric field to given value.
 
@@ -1093,20 +1350,32 @@ HasLargeVirtualExtents returns a boolean if a field has been set.
 
 ### GetLargeVirtualExtentsNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetLargeVirtualExtentsNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetLargeVirtualExtentsNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLargeVirtualExtentsNumeric returns the LargeVirtualExtentsNumeric field if non-nil, zero value otherwise.
 
 ### GetLargeVirtualExtentsNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetLargeVirtualExtentsNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetLargeVirtualExtentsNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLargeVirtualExtentsNumericOk returns a tuple with the LargeVirtualExtentsNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLargeVirtualExtentsNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetLargeVirtualExtentsNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetLargeVirtualExtentsNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetLargeVirtualExtentsNumeric sets LargeVirtualExtentsNumeric field to given value.
 
@@ -1143,20 +1412,32 @@ HasMetadataInUse returns a boolean if a field has been set.
 
 ### GetMetadataInUseNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetMetadataInUseNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetMetadataInUseNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMetadataInUseNumeric returns the MetadataInUseNumeric field if non-nil, zero value otherwise.
 
 ### GetMetadataInUseNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetMetadataInUseNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetMetadataInUseNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMetadataInUseNumericOk returns a tuple with the MetadataInUseNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMetadataInUseNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetMetadataInUseNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetMetadataInUseNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMetadataInUseNumeric sets MetadataInUseNumeric field to given value.
 
@@ -1193,20 +1474,32 @@ HasOwner returns a boolean if a field has been set.
 
 ### GetOwnerNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetOwnerNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetOwnerNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOwnerNumeric returns the OwnerNumeric field if non-nil, zero value otherwise.
 
 ### GetOwnerNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetOwnerNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetOwnerNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetOwnerNumericOk returns a tuple with the OwnerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOwnerNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetOwnerNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetOwnerNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetOwnerNumeric sets OwnerNumeric field to given value.
 
@@ -1243,20 +1536,32 @@ HasPiFormat returns a boolean if a field has been set.
 
 ### GetPiFormatNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetPiFormatNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetPiFormatNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPiFormatNumeric returns the PiFormatNumeric field if non-nil, zero value otherwise.
 
 ### GetPiFormatNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetPiFormatNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetPiFormatNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPiFormatNumericOk returns a tuple with the PiFormatNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPiFormatNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetPiFormatNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetPiFormatNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPiFormatNumeric sets PiFormatNumeric field to given value.
 
@@ -1293,20 +1598,32 @@ HasPreferredOwner returns a boolean if a field has been set.
 
 ### GetPreferredOwnerNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetPreferredOwnerNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetPreferredOwnerNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPreferredOwnerNumeric returns the PreferredOwnerNumeric field if non-nil, zero value otherwise.
 
 ### GetPreferredOwnerNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetPreferredOwnerNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetPreferredOwnerNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPreferredOwnerNumericOk returns a tuple with the PreferredOwnerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPreferredOwnerNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetPreferredOwnerNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetPreferredOwnerNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPreferredOwnerNumeric sets PreferredOwnerNumeric field to given value.
 
@@ -1343,20 +1660,32 @@ HasProgress returns a boolean if a field has been set.
 
 ### GetProgressNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetProgressNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetProgressNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetProgressNumeric returns the ProgressNumeric field if non-nil, zero value otherwise.
 
 ### GetProgressNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetProgressNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetProgressNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetProgressNumericOk returns a tuple with the ProgressNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProgressNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetProgressNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetProgressNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetProgressNumeric sets ProgressNumeric field to given value.
 
@@ -1393,20 +1722,32 @@ HasRaidtype returns a boolean if a field has been set.
 
 ### GetRaidtypeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetRaidtypeNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetRaidtypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRaidtypeNumeric returns the RaidtypeNumeric field if non-nil, zero value otherwise.
 
 ### GetRaidtypeNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetRaidtypeNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetRaidtypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRaidtypeNumericOk returns a tuple with the RaidtypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRaidtypeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetRaidtypeNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetRaidtypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRaidtypeNumeric sets RaidtypeNumeric field to given value.
 
@@ -1443,20 +1784,32 @@ HasReadAheadSize returns a boolean if a field has been set.
 
 ### GetReadAheadSizeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetReadAheadSizeNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetReadAheadSizeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetReadAheadSizeNumeric returns the ReadAheadSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetReadAheadSizeNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetReadAheadSizeNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetReadAheadSizeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetReadAheadSizeNumericOk returns a tuple with the ReadAheadSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReadAheadSizeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetReadAheadSizeNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetReadAheadSizeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetReadAheadSizeNumeric sets ReadAheadSizeNumeric field to given value.
 
@@ -1493,20 +1846,32 @@ HasReplicationSet returns a boolean if a field has been set.
 
 ### GetReservedSizeInPages
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetReservedSizeInPages() int64`
+=======
+`func (o *VolumesResourceInner) GetReservedSizeInPages() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetReservedSizeInPages returns the ReservedSizeInPages field if non-nil, zero value otherwise.
 
 ### GetReservedSizeInPagesOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetReservedSizeInPagesOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetReservedSizeInPagesOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetReservedSizeInPagesOk returns a tuple with the ReservedSizeInPages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReservedSizeInPages
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetReservedSizeInPages(v int64)`
+=======
+`func (o *VolumesResourceInner) SetReservedSizeInPages(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetReservedSizeInPages sets ReservedSizeInPages field to given value.
 
@@ -1568,20 +1933,32 @@ HasSize returns a boolean if a field has been set.
 
 ### GetSizeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetSizeNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetSizeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSizeNumeric returns the SizeNumeric field if non-nil, zero value otherwise.
 
 ### GetSizeNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetSizeNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetSizeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSizeNumericOk returns a tuple with the SizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSizeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetSizeNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetSizeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSizeNumeric sets SizeNumeric field to given value.
 
@@ -1668,20 +2045,32 @@ HasSnapshotRetentionPriority returns a boolean if a field has been set.
 
 ### GetSnapshotRetentionPriorityNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSnapshotRetentionPriorityNumeric returns the SnapshotRetentionPriorityNumeric field if non-nil, zero value otherwise.
 
 ### GetSnapshotRetentionPriorityNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSnapshotRetentionPriorityNumericOk returns a tuple with the SnapshotRetentionPriorityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSnapshotRetentionPriorityNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetSnapshotRetentionPriorityNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetSnapshotRetentionPriorityNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSnapshotRetentionPriorityNumeric sets SnapshotRetentionPriorityNumeric field to given value.
 
@@ -1768,20 +2157,32 @@ HasStorageType returns a boolean if a field has been set.
 
 ### GetStorageTypeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetStorageTypeNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetStorageTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStorageTypeNumeric returns the StorageTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetStorageTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetStorageTypeNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetStorageTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStorageTypeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetStorageTypeNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetStorageTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStorageTypeNumeric sets StorageTypeNumeric field to given value.
 
@@ -1843,20 +2244,32 @@ HasTierAffinity returns a boolean if a field has been set.
 
 ### GetTierAffinityNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetTierAffinityNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetTierAffinityNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTierAffinityNumeric returns the TierAffinityNumeric field if non-nil, zero value otherwise.
 
 ### GetTierAffinityNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetTierAffinityNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetTierAffinityNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTierAffinityNumericOk returns a tuple with the TierAffinityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTierAffinityNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetTierAffinityNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetTierAffinityNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetTierAffinityNumeric sets TierAffinityNumeric field to given value.
 
@@ -1893,20 +2306,32 @@ HasTotalSize returns a boolean if a field has been set.
 
 ### GetTotalSizeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetTotalSizeNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetTotalSizeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTotalSizeNumeric returns the TotalSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetTotalSizeNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetTotalSizeNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetTotalSizeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalSizeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetTotalSizeNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetTotalSizeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetTotalSizeNumeric sets TotalSizeNumeric field to given value.
 
@@ -2018,20 +2443,32 @@ HasVolumeClass returns a boolean if a field has been set.
 
 ### GetVolumeClassNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetVolumeClassNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetVolumeClassNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetVolumeClassNumeric returns the VolumeClassNumeric field if non-nil, zero value otherwise.
 
 ### GetVolumeClassNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetVolumeClassNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetVolumeClassNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetVolumeClassNumericOk returns a tuple with the VolumeClassNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVolumeClassNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetVolumeClassNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetVolumeClassNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetVolumeClassNumeric sets VolumeClassNumeric field to given value.
 
@@ -2168,20 +2605,32 @@ HasVolumeQualifier returns a boolean if a field has been set.
 
 ### GetVolumeQualifierNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetVolumeQualifierNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetVolumeQualifierNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetVolumeQualifierNumeric returns the VolumeQualifierNumeric field if non-nil, zero value otherwise.
 
 ### GetVolumeQualifierNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetVolumeQualifierNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetVolumeQualifierNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetVolumeQualifierNumericOk returns a tuple with the VolumeQualifierNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVolumeQualifierNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetVolumeQualifierNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetVolumeQualifierNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetVolumeQualifierNumeric sets VolumeQualifierNumeric field to given value.
 
@@ -2218,20 +2667,32 @@ HasVolumeType returns a boolean if a field has been set.
 
 ### GetVolumeTypeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetVolumeTypeNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetVolumeTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetVolumeTypeNumeric returns the VolumeTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetVolumeTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetVolumeTypeNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetVolumeTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetVolumeTypeNumericOk returns a tuple with the VolumeTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVolumeTypeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetVolumeTypeNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetVolumeTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetVolumeTypeNumeric sets VolumeTypeNumeric field to given value.
 
@@ -2268,20 +2729,32 @@ HasVolumeUsageType returns a boolean if a field has been set.
 
 ### GetVolumeUsageTypeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetVolumeUsageTypeNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetVolumeUsageTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetVolumeUsageTypeNumeric returns the VolumeUsageTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetVolumeUsageTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetVolumeUsageTypeNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetVolumeUsageTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetVolumeUsageTypeNumericOk returns a tuple with the VolumeUsageTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVolumeUsageTypeNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetVolumeUsageTypeNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetVolumeUsageTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetVolumeUsageTypeNumeric sets VolumeUsageTypeNumeric field to given value.
 
@@ -2318,20 +2791,32 @@ HasWritePolicy returns a boolean if a field has been set.
 
 ### GetWritePolicyNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetWritePolicyNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetWritePolicyNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetWritePolicyNumeric returns the WritePolicyNumeric field if non-nil, zero value otherwise.
 
 ### GetWritePolicyNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetWritePolicyNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetWritePolicyNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetWritePolicyNumericOk returns a tuple with the WritePolicyNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWritePolicyNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetWritePolicyNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetWritePolicyNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetWritePolicyNumeric sets WritePolicyNumeric field to given value.
 
@@ -2393,20 +2878,32 @@ HasZeroInitPageOnAllocation returns a boolean if a field has been set.
 
 ### GetZeroInitPageOnAllocationNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumeric() int64`
+=======
+`func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetZeroInitPageOnAllocationNumeric returns the ZeroInitPageOnAllocationNumeric field if non-nil, zero value otherwise.
 
 ### GetZeroInitPageOnAllocationNumericOk
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumericOk() (*int64, bool)`
+=======
+`func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetZeroInitPageOnAllocationNumericOk returns a tuple with the ZeroInitPageOnAllocationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetZeroInitPageOnAllocationNumeric
 
+<<<<<<< HEAD
 `func (o *VolumesResourceInner) SetZeroInitPageOnAllocationNumeric(v int64)`
+=======
+`func (o *VolumesResourceInner) SetZeroInitPageOnAllocationNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetZeroInitPageOnAllocationNumeric sets ZeroInitPageOnAllocationNumeric field to given value.
 

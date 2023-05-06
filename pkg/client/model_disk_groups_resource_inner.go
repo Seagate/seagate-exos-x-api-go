@@ -22,6 +22,7 @@ type DiskGroupsResourceInner struct {
 	ObjectName                 *string `json:"object-name,omitempty"`
 	Meta                       *string `json:"meta,omitempty"`
 	ActualSpareCapacity        *string `json:"actual-spare-capacity,omitempty"`
+<<<<<<< HEAD
 	ActualSpareCapacityNumeric *int64  `json:"actual-spare-capacity-numeric,omitempty"`
 	// Number of pages allocated
 	AllocatedPages *int64 `json:"allocated-pages,omitempty"`
@@ -86,10 +87,77 @@ type DiskGroupsResourceInner struct {
 	MinDriveSize *string `json:"min-drive-size,omitempty"`
 	// Smallest disk size that can be used for this disk group( In numeric form )
 	MinDriveSizeNumeric *int64  `json:"min-drive-size-numeric,omitempty"`
+=======
+	ActualSpareCapacityNumeric *int32  `json:"actual-spare-capacity-numeric,omitempty"`
+	// Number of pages allocated
+	AllocatedPages *int32 `json:"allocated-pages,omitempty"`
+	// Disk interface type
+	ArrayDriveType *string `json:"array-drive-type,omitempty"`
+	// Disk interface type( In numeric form )
+	ArrayDriveTypeNumeric *int32 `json:"array-drive-type-numeric,omitempty"`
+	// Available pages
+	AvailablePages *int32 `json:"available-pages,omitempty"`
+	// The size in blocks
+	Blocks                *int32  `json:"blocks,omitempty"`
+	Blocksize             *int32  `json:"blocksize,omitempty"`
+	CacheFlushPeriod      *int32  `json:"cache-flush-period,omitempty"`
+	CacheReadAhead        *string `json:"cache-read-ahead,omitempty"`
+	CacheReadAheadNumeric *int32  `json:"cache-read-ahead-numeric,omitempty"`
+	// Smallest block of usable space
+	Chunksize               *string `json:"chunksize,omitempty"`
+	CreateDate              *string `json:"create-date,omitempty"`
+	CreateDateNumeric       *int32  `json:"create-date-numeric,omitempty"`
+	CriticalCapacity        *string `json:"critical-capacity,omitempty"`
+	CriticalCapacityNumeric *int32  `json:"critical-capacity-numeric,omitempty"`
+	CurrentJob              *string `json:"current-job,omitempty"`
+	CurrentJobCompletion    *string `json:"current-job-completion,omitempty"`
+	CurrentJobNumeric       *int32  `json:"current-job-numeric,omitempty"`
+	DegradedCapacity        *string `json:"degraded-capacity,omitempty"`
+	DegradedCapacityNumeric *int32  `json:"degraded-capacity-numeric,omitempty"`
+	// Disk interface Description
+	DiskDescription *string `json:"disk-description,omitempty"`
+	// Disk interface Description( In numeric form )
+	DiskDescriptionNumeric    *int32  `json:"disk-description-numeric,omitempty"`
+	DiskDsdDelayVdisk         *int32  `json:"disk-dsd-delay-vdisk,omitempty"`
+	DiskDsdEnableVdisk        *string `json:"disk-dsd-enable-vdisk,omitempty"`
+	DiskDsdEnableVdiskNumeric *int32  `json:"disk-dsd-enable-vdisk-numeric,omitempty"`
+	// Number of disks
+	Diskcount *int32 `json:"diskcount,omitempty"`
+	// Extended status (bits)
+	ExtendedStatus *int32 `json:"extended-status,omitempty"`
+	// Amount of free space in the vdisk
+	Freespace *string `json:"freespace,omitempty"`
+	// Amount of free space in the vdisk( In numeric form )
+	FreespaceNumeric                 *int32  `json:"freespace-numeric,omitempty"`
+	Health                           *string `json:"health,omitempty"`
+	HealthNumeric                    *int32  `json:"health-numeric,omitempty"`
+	HealthReason                     *string `json:"health-reason,omitempty"`
+	HealthReasonNumeric              *int32  `json:"health-reason-numeric,omitempty"`
+	HealthRecommendation             *string `json:"health-recommendation,omitempty"`
+	HealthRecommendationNumeric      *int32  `json:"health-recommendation-numeric,omitempty"`
+	InterleavedVolumeCount           *int32  `json:"interleaved-volume-count,omitempty"`
+	IsJobAutoAbortable               *string `json:"is-job-auto-abortable,omitempty"`
+	IsJobAutoAbortableNumeric        *int32  `json:"is-job-auto-abortable-numeric,omitempty"`
+	JobRunning                       *string `json:"job-running,omitempty"`
+	LargestFreePartitionSpace        *string `json:"largest-free-partition-space,omitempty"`
+	LargestFreePartitionSpaceNumeric *int32  `json:"largest-free-partition-space-numeric,omitempty"`
+	LinearVolumeBoundary             *int32  `json:"linear-volume-boundary,omitempty"`
+	// Logical Unit Number
+	Lun *int32 `json:"lun,omitempty"`
+	// Disk Group Metadata Capacity
+	MetadataSize *string `json:"metadata-size,omitempty"`
+	// Disk Group Metadata Capacity( In numeric form )
+	MetadataSizeNumeric *int32 `json:"metadata-size-numeric,omitempty"`
+	// Smallest disk size that can be used for this disk group
+	MinDriveSize *string `json:"min-drive-size,omitempty"`
+	// Smallest disk size that can be used for this disk group( In numeric form )
+	MinDriveSizeNumeric *int32  `json:"min-drive-size-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Name                *string `json:"name,omitempty"`
 	// LBA used for the next volume that will be created
 	NewPartitionLba *string `json:"new-partition-lba,omitempty"`
 	// LBA used for the next volume that will be created( In numeric form )
+<<<<<<< HEAD
 	NewPartitionLbaNumeric *int64 `json:"new-partition-lba-numeric,omitempty"`
 	// Number of volumes in this vdisk
 	NumArrayPartitions *int64 `json:"num-array-partitions,omitempty"`
@@ -113,6 +181,31 @@ type DiskGroupsResourceInner struct {
 	PoolSectorFormat *string `json:"pool-sector-format,omitempty"`
 	// Pool Sector Format( In numeric form )
 	PoolSectorFormatNumeric *int64 `json:"pool-sector-format-numeric,omitempty"`
+=======
+	NewPartitionLbaNumeric *int32 `json:"new-partition-lba-numeric,omitempty"`
+	// Number of volumes in this vdisk
+	NumArrayPartitions *int32 `json:"num-array-partitions,omitempty"`
+	// Number of disks in the RAID 10 or 50 subgroup
+	NumDrivesPerLowLevelArray *int32  `json:"num-drives-per-low-level-array,omitempty"`
+	NumExpansionPartitions    *int32  `json:"num-expansion-partitions,omitempty"`
+	NumPartitionSegments      *int32  `json:"num-partition-segments,omitempty"`
+	Overhead                  *string `json:"overhead,omitempty"`
+	OverheadNumeric           *int32  `json:"overhead-numeric,omitempty"`
+	// Controller owning the component
+	Owner *string `json:"owner,omitempty"`
+	// Controller owning the component( In numeric form )
+	OwnerNumeric *int32 `json:"owner-numeric,omitempty"`
+	// Disk group performance rank within the virtual pool
+	PerformanceRank *int32 `json:"performance-rank,omitempty"`
+	// Pool
+	Pool *string `json:"pool,omitempty"`
+	// Portion of the virtual pool used by this disk group
+	PoolPercentage *int32 `json:"pool-percentage,omitempty"`
+	// Pool Sector Format
+	PoolSectorFormat *string `json:"pool-sector-format,omitempty"`
+	// Pool Sector Format( In numeric form )
+	PoolSectorFormatNumeric *int32 `json:"pool-sector-format-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// Serial number of the pool
 	PoolSerialNumber *string `json:"pool-serial-number,omitempty"`
 	// URL for associated Storage Pool
@@ -120,6 +213,7 @@ type DiskGroupsResourceInner struct {
 	// Configured owner
 	PreferredOwner *string `json:"preferred-owner,omitempty"`
 	// Configured owner( In numeric form )
+<<<<<<< HEAD
 	PreferredOwnerNumeric *int64 `json:"preferred-owner-numeric,omitempty"`
 	// RAID level
 	Raidtype *string `json:"raidtype,omitempty"`
@@ -133,10 +227,26 @@ type DiskGroupsResourceInner struct {
 	ReadAheadEnabledNumeric *int64 `json:"read-ahead-enabled-numeric,omitempty"`
 	// Preferred duration for vdisk scrub utility
 	ScrubDurationGoal *int64  `json:"scrub-duration-goal,omitempty"`
+=======
+	PreferredOwnerNumeric *int32 `json:"preferred-owner-numeric,omitempty"`
+	// RAID level
+	Raidtype *string `json:"raidtype,omitempty"`
+	// RAID level( In numeric form )
+	RaidtypeNumeric *int32  `json:"raidtype-numeric,omitempty"`
+	RawSize         *string `json:"raw-size,omitempty"`
+	RawSizeNumeric  *int32  `json:"raw-size-numeric,omitempty"`
+	// Indicates whether read-ahead cache mode is enabled
+	ReadAheadEnabled *string `json:"read-ahead-enabled,omitempty"`
+	// Indicates whether read-ahead cache mode is enabled( In numeric form )
+	ReadAheadEnabledNumeric *int32 `json:"read-ahead-enabled-numeric,omitempty"`
+	// Preferred duration for vdisk scrub utility
+	ScrubDurationGoal *int32  `json:"scrub-duration-goal,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	SerialNumber      *string `json:"serial-number,omitempty"`
 	// The size or capacity formatted with the current session base, precision, and units
 	Size *string `json:"size,omitempty"`
 	// The size or capacity formatted with the current session base, precision, and units( In numeric form )
+<<<<<<< HEAD
 	SizeNumeric *int64 `json:"size-numeric,omitempty"`
 	// Number of spare disks currently configured
 	Sparecount    *int64  `json:"sparecount,omitempty"`
@@ -157,12 +267,38 @@ type DiskGroupsResourceInner struct {
 	TargetSpareCapacity        *string `json:"target-spare-capacity,omitempty"`
 	TargetSpareCapacityNumeric *int64  `json:"target-spare-capacity-numeric,omitempty"`
 	TotalPages                 *int64  `json:"total-pages,omitempty"`
+=======
+	SizeNumeric *int32 `json:"size-numeric,omitempty"`
+	// Number of spare disks currently configured
+	Sparecount    *int32  `json:"sparecount,omitempty"`
+	Spear         *string `json:"spear,omitempty"`
+	SpearNumeric  *int32  `json:"spear-numeric,omitempty"`
+	Status        *string `json:"status,omitempty"`
+	StatusNumeric *int32  `json:"status-numeric,omitempty"`
+	// Disk group tier assignment for tiered migration
+	StorageTier *string `json:"storage-tier,omitempty"`
+	// Disk group tier assignment for tiered migration( In numeric form )
+	StorageTierNumeric *int32 `json:"storage-tier-numeric,omitempty"`
+	// Storage type
+	StorageType *string `json:"storage-type,omitempty"`
+	// Storage type( In numeric form )
+	StorageTypeNumeric         *int32  `json:"storage-type-numeric,omitempty"`
+	StripeWidth                *string `json:"stripe-width,omitempty"`
+	StripeWidthNumeric         *int32  `json:"stripe-width-numeric,omitempty"`
+	TargetSpareCapacity        *string `json:"target-spare-capacity,omitempty"`
+	TargetSpareCapacityNumeric *int32  `json:"target-spare-capacity-numeric,omitempty"`
+	TotalPages                 *int32  `json:"total-pages,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// The resource URL
 	Url *string `json:"url,omitempty"`
 	// Indicates whether disk write-back cache is enabled
 	WriteBackEnabled *string `json:"write-back-enabled,omitempty"`
 	// Indicates whether disk write-back cache is enabled( In numeric form )
+<<<<<<< HEAD
 	WriteBackEnabledNumeric *int64 `json:"write-back-enabled-numeric,omitempty"`
+=======
+	WriteBackEnabledNumeric *int32 `json:"write-back-enabled-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 }
 
 // NewDiskGroupsResourceInner instantiates a new DiskGroupsResourceInner object
@@ -279,9 +415,15 @@ func (o *DiskGroupsResourceInner) SetActualSpareCapacity(v string) {
 }
 
 // GetActualSpareCapacityNumeric returns the ActualSpareCapacityNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumeric() int64 {
 	if o == nil || IsNil(o.ActualSpareCapacityNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumeric() int32 {
+	if o == nil || IsNil(o.ActualSpareCapacityNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ActualSpareCapacityNumeric
@@ -289,7 +431,11 @@ func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumeric() int64 {
 
 // GetActualSpareCapacityNumericOk returns a tuple with the ActualSpareCapacityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ActualSpareCapacityNumeric) {
 		return nil, false
 	}
@@ -305,15 +451,26 @@ func (o *DiskGroupsResourceInner) HasActualSpareCapacityNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetActualSpareCapacityNumeric gets a reference to the given int64 and assigns it to the ActualSpareCapacityNumeric field.
 func (o *DiskGroupsResourceInner) SetActualSpareCapacityNumeric(v int64) {
+=======
+// SetActualSpareCapacityNumeric gets a reference to the given int32 and assigns it to the ActualSpareCapacityNumeric field.
+func (o *DiskGroupsResourceInner) SetActualSpareCapacityNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ActualSpareCapacityNumeric = &v
 }
 
 // GetAllocatedPages returns the AllocatedPages field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetAllocatedPages() int64 {
 	if o == nil || IsNil(o.AllocatedPages) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetAllocatedPages() int32 {
+	if o == nil || IsNil(o.AllocatedPages) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AllocatedPages
@@ -321,7 +478,11 @@ func (o *DiskGroupsResourceInner) GetAllocatedPages() int64 {
 
 // GetAllocatedPagesOk returns a tuple with the AllocatedPages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetAllocatedPagesOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetAllocatedPagesOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AllocatedPages) {
 		return nil, false
 	}
@@ -337,8 +498,13 @@ func (o *DiskGroupsResourceInner) HasAllocatedPages() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAllocatedPages gets a reference to the given int64 and assigns it to the AllocatedPages field.
 func (o *DiskGroupsResourceInner) SetAllocatedPages(v int64) {
+=======
+// SetAllocatedPages gets a reference to the given int32 and assigns it to the AllocatedPages field.
+func (o *DiskGroupsResourceInner) SetAllocatedPages(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AllocatedPages = &v
 }
 
@@ -375,9 +541,15 @@ func (o *DiskGroupsResourceInner) SetArrayDriveType(v string) {
 }
 
 // GetArrayDriveTypeNumeric returns the ArrayDriveTypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumeric() int64 {
 	if o == nil || IsNil(o.ArrayDriveTypeNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumeric() int32 {
+	if o == nil || IsNil(o.ArrayDriveTypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ArrayDriveTypeNumeric
@@ -385,7 +557,11 @@ func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumeric() int64 {
 
 // GetArrayDriveTypeNumericOk returns a tuple with the ArrayDriveTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ArrayDriveTypeNumeric) {
 		return nil, false
 	}
@@ -401,15 +577,26 @@ func (o *DiskGroupsResourceInner) HasArrayDriveTypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetArrayDriveTypeNumeric gets a reference to the given int64 and assigns it to the ArrayDriveTypeNumeric field.
 func (o *DiskGroupsResourceInner) SetArrayDriveTypeNumeric(v int64) {
+=======
+// SetArrayDriveTypeNumeric gets a reference to the given int32 and assigns it to the ArrayDriveTypeNumeric field.
+func (o *DiskGroupsResourceInner) SetArrayDriveTypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ArrayDriveTypeNumeric = &v
 }
 
 // GetAvailablePages returns the AvailablePages field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetAvailablePages() int64 {
 	if o == nil || IsNil(o.AvailablePages) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetAvailablePages() int32 {
+	if o == nil || IsNil(o.AvailablePages) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.AvailablePages
@@ -417,7 +604,11 @@ func (o *DiskGroupsResourceInner) GetAvailablePages() int64 {
 
 // GetAvailablePagesOk returns a tuple with the AvailablePages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetAvailablePagesOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetAvailablePagesOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.AvailablePages) {
 		return nil, false
 	}
@@ -433,15 +624,26 @@ func (o *DiskGroupsResourceInner) HasAvailablePages() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetAvailablePages gets a reference to the given int64 and assigns it to the AvailablePages field.
 func (o *DiskGroupsResourceInner) SetAvailablePages(v int64) {
+=======
+// SetAvailablePages gets a reference to the given int32 and assigns it to the AvailablePages field.
+func (o *DiskGroupsResourceInner) SetAvailablePages(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.AvailablePages = &v
 }
 
 // GetBlocks returns the Blocks field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetBlocks() int64 {
 	if o == nil || IsNil(o.Blocks) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetBlocks() int32 {
+	if o == nil || IsNil(o.Blocks) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Blocks
@@ -449,7 +651,11 @@ func (o *DiskGroupsResourceInner) GetBlocks() int64 {
 
 // GetBlocksOk returns a tuple with the Blocks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetBlocksOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetBlocksOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Blocks) {
 		return nil, false
 	}
@@ -465,15 +671,26 @@ func (o *DiskGroupsResourceInner) HasBlocks() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBlocks gets a reference to the given int64 and assigns it to the Blocks field.
 func (o *DiskGroupsResourceInner) SetBlocks(v int64) {
+=======
+// SetBlocks gets a reference to the given int32 and assigns it to the Blocks field.
+func (o *DiskGroupsResourceInner) SetBlocks(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Blocks = &v
 }
 
 // GetBlocksize returns the Blocksize field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetBlocksize() int64 {
 	if o == nil || IsNil(o.Blocksize) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetBlocksize() int32 {
+	if o == nil || IsNil(o.Blocksize) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Blocksize
@@ -481,7 +698,11 @@ func (o *DiskGroupsResourceInner) GetBlocksize() int64 {
 
 // GetBlocksizeOk returns a tuple with the Blocksize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetBlocksizeOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetBlocksizeOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Blocksize) {
 		return nil, false
 	}
@@ -497,15 +718,26 @@ func (o *DiskGroupsResourceInner) HasBlocksize() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetBlocksize gets a reference to the given int64 and assigns it to the Blocksize field.
 func (o *DiskGroupsResourceInner) SetBlocksize(v int64) {
+=======
+// SetBlocksize gets a reference to the given int32 and assigns it to the Blocksize field.
+func (o *DiskGroupsResourceInner) SetBlocksize(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Blocksize = &v
 }
 
 // GetCacheFlushPeriod returns the CacheFlushPeriod field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetCacheFlushPeriod() int64 {
 	if o == nil || IsNil(o.CacheFlushPeriod) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetCacheFlushPeriod() int32 {
+	if o == nil || IsNil(o.CacheFlushPeriod) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.CacheFlushPeriod
@@ -513,7 +745,11 @@ func (o *DiskGroupsResourceInner) GetCacheFlushPeriod() int64 {
 
 // GetCacheFlushPeriodOk returns a tuple with the CacheFlushPeriod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetCacheFlushPeriodOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetCacheFlushPeriodOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.CacheFlushPeriod) {
 		return nil, false
 	}
@@ -529,8 +765,13 @@ func (o *DiskGroupsResourceInner) HasCacheFlushPeriod() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetCacheFlushPeriod gets a reference to the given int64 and assigns it to the CacheFlushPeriod field.
 func (o *DiskGroupsResourceInner) SetCacheFlushPeriod(v int64) {
+=======
+// SetCacheFlushPeriod gets a reference to the given int32 and assigns it to the CacheFlushPeriod field.
+func (o *DiskGroupsResourceInner) SetCacheFlushPeriod(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.CacheFlushPeriod = &v
 }
 
@@ -567,9 +808,15 @@ func (o *DiskGroupsResourceInner) SetCacheReadAhead(v string) {
 }
 
 // GetCacheReadAheadNumeric returns the CacheReadAheadNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetCacheReadAheadNumeric() int64 {
 	if o == nil || IsNil(o.CacheReadAheadNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetCacheReadAheadNumeric() int32 {
+	if o == nil || IsNil(o.CacheReadAheadNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.CacheReadAheadNumeric
@@ -577,7 +824,11 @@ func (o *DiskGroupsResourceInner) GetCacheReadAheadNumeric() int64 {
 
 // GetCacheReadAheadNumericOk returns a tuple with the CacheReadAheadNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetCacheReadAheadNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetCacheReadAheadNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.CacheReadAheadNumeric) {
 		return nil, false
 	}
@@ -593,8 +844,13 @@ func (o *DiskGroupsResourceInner) HasCacheReadAheadNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetCacheReadAheadNumeric gets a reference to the given int64 and assigns it to the CacheReadAheadNumeric field.
 func (o *DiskGroupsResourceInner) SetCacheReadAheadNumeric(v int64) {
+=======
+// SetCacheReadAheadNumeric gets a reference to the given int32 and assigns it to the CacheReadAheadNumeric field.
+func (o *DiskGroupsResourceInner) SetCacheReadAheadNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.CacheReadAheadNumeric = &v
 }
 
@@ -663,9 +919,15 @@ func (o *DiskGroupsResourceInner) SetCreateDate(v string) {
 }
 
 // GetCreateDateNumeric returns the CreateDateNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetCreateDateNumeric() int64 {
 	if o == nil || IsNil(o.CreateDateNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetCreateDateNumeric() int32 {
+	if o == nil || IsNil(o.CreateDateNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.CreateDateNumeric
@@ -673,7 +935,11 @@ func (o *DiskGroupsResourceInner) GetCreateDateNumeric() int64 {
 
 // GetCreateDateNumericOk returns a tuple with the CreateDateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetCreateDateNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetCreateDateNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.CreateDateNumeric) {
 		return nil, false
 	}
@@ -689,8 +955,13 @@ func (o *DiskGroupsResourceInner) HasCreateDateNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetCreateDateNumeric gets a reference to the given int64 and assigns it to the CreateDateNumeric field.
 func (o *DiskGroupsResourceInner) SetCreateDateNumeric(v int64) {
+=======
+// SetCreateDateNumeric gets a reference to the given int32 and assigns it to the CreateDateNumeric field.
+func (o *DiskGroupsResourceInner) SetCreateDateNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.CreateDateNumeric = &v
 }
 
@@ -727,9 +998,15 @@ func (o *DiskGroupsResourceInner) SetCriticalCapacity(v string) {
 }
 
 // GetCriticalCapacityNumeric returns the CriticalCapacityNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetCriticalCapacityNumeric() int64 {
 	if o == nil || IsNil(o.CriticalCapacityNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetCriticalCapacityNumeric() int32 {
+	if o == nil || IsNil(o.CriticalCapacityNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.CriticalCapacityNumeric
@@ -737,7 +1014,11 @@ func (o *DiskGroupsResourceInner) GetCriticalCapacityNumeric() int64 {
 
 // GetCriticalCapacityNumericOk returns a tuple with the CriticalCapacityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetCriticalCapacityNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetCriticalCapacityNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.CriticalCapacityNumeric) {
 		return nil, false
 	}
@@ -753,8 +1034,13 @@ func (o *DiskGroupsResourceInner) HasCriticalCapacityNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetCriticalCapacityNumeric gets a reference to the given int64 and assigns it to the CriticalCapacityNumeric field.
 func (o *DiskGroupsResourceInner) SetCriticalCapacityNumeric(v int64) {
+=======
+// SetCriticalCapacityNumeric gets a reference to the given int32 and assigns it to the CriticalCapacityNumeric field.
+func (o *DiskGroupsResourceInner) SetCriticalCapacityNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.CriticalCapacityNumeric = &v
 }
 
@@ -823,9 +1109,15 @@ func (o *DiskGroupsResourceInner) SetCurrentJobCompletion(v string) {
 }
 
 // GetCurrentJobNumeric returns the CurrentJobNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetCurrentJobNumeric() int64 {
 	if o == nil || IsNil(o.CurrentJobNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetCurrentJobNumeric() int32 {
+	if o == nil || IsNil(o.CurrentJobNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.CurrentJobNumeric
@@ -833,7 +1125,11 @@ func (o *DiskGroupsResourceInner) GetCurrentJobNumeric() int64 {
 
 // GetCurrentJobNumericOk returns a tuple with the CurrentJobNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetCurrentJobNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetCurrentJobNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.CurrentJobNumeric) {
 		return nil, false
 	}
@@ -849,8 +1145,13 @@ func (o *DiskGroupsResourceInner) HasCurrentJobNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetCurrentJobNumeric gets a reference to the given int64 and assigns it to the CurrentJobNumeric field.
 func (o *DiskGroupsResourceInner) SetCurrentJobNumeric(v int64) {
+=======
+// SetCurrentJobNumeric gets a reference to the given int32 and assigns it to the CurrentJobNumeric field.
+func (o *DiskGroupsResourceInner) SetCurrentJobNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.CurrentJobNumeric = &v
 }
 
@@ -887,9 +1188,15 @@ func (o *DiskGroupsResourceInner) SetDegradedCapacity(v string) {
 }
 
 // GetDegradedCapacityNumeric returns the DegradedCapacityNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetDegradedCapacityNumeric() int64 {
 	if o == nil || IsNil(o.DegradedCapacityNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetDegradedCapacityNumeric() int32 {
+	if o == nil || IsNil(o.DegradedCapacityNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DegradedCapacityNumeric
@@ -897,7 +1204,11 @@ func (o *DiskGroupsResourceInner) GetDegradedCapacityNumeric() int64 {
 
 // GetDegradedCapacityNumericOk returns a tuple with the DegradedCapacityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetDegradedCapacityNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetDegradedCapacityNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DegradedCapacityNumeric) {
 		return nil, false
 	}
@@ -913,8 +1224,13 @@ func (o *DiskGroupsResourceInner) HasDegradedCapacityNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDegradedCapacityNumeric gets a reference to the given int64 and assigns it to the DegradedCapacityNumeric field.
 func (o *DiskGroupsResourceInner) SetDegradedCapacityNumeric(v int64) {
+=======
+// SetDegradedCapacityNumeric gets a reference to the given int32 and assigns it to the DegradedCapacityNumeric field.
+func (o *DiskGroupsResourceInner) SetDegradedCapacityNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DegradedCapacityNumeric = &v
 }
 
@@ -951,9 +1267,15 @@ func (o *DiskGroupsResourceInner) SetDiskDescription(v string) {
 }
 
 // GetDiskDescriptionNumeric returns the DiskDescriptionNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetDiskDescriptionNumeric() int64 {
 	if o == nil || IsNil(o.DiskDescriptionNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetDiskDescriptionNumeric() int32 {
+	if o == nil || IsNil(o.DiskDescriptionNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DiskDescriptionNumeric
@@ -961,7 +1283,11 @@ func (o *DiskGroupsResourceInner) GetDiskDescriptionNumeric() int64 {
 
 // GetDiskDescriptionNumericOk returns a tuple with the DiskDescriptionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetDiskDescriptionNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetDiskDescriptionNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DiskDescriptionNumeric) {
 		return nil, false
 	}
@@ -977,15 +1303,26 @@ func (o *DiskGroupsResourceInner) HasDiskDescriptionNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskDescriptionNumeric gets a reference to the given int64 and assigns it to the DiskDescriptionNumeric field.
 func (o *DiskGroupsResourceInner) SetDiskDescriptionNumeric(v int64) {
+=======
+// SetDiskDescriptionNumeric gets a reference to the given int32 and assigns it to the DiskDescriptionNumeric field.
+func (o *DiskGroupsResourceInner) SetDiskDescriptionNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DiskDescriptionNumeric = &v
 }
 
 // GetDiskDsdDelayVdisk returns the DiskDsdDelayVdisk field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdisk() int64 {
 	if o == nil || IsNil(o.DiskDsdDelayVdisk) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdisk() int32 {
+	if o == nil || IsNil(o.DiskDsdDelayVdisk) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DiskDsdDelayVdisk
@@ -993,7 +1330,11 @@ func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdisk() int64 {
 
 // GetDiskDsdDelayVdiskOk returns a tuple with the DiskDsdDelayVdisk field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdiskOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdiskOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DiskDsdDelayVdisk) {
 		return nil, false
 	}
@@ -1009,8 +1350,13 @@ func (o *DiskGroupsResourceInner) HasDiskDsdDelayVdisk() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskDsdDelayVdisk gets a reference to the given int64 and assigns it to the DiskDsdDelayVdisk field.
 func (o *DiskGroupsResourceInner) SetDiskDsdDelayVdisk(v int64) {
+=======
+// SetDiskDsdDelayVdisk gets a reference to the given int32 and assigns it to the DiskDsdDelayVdisk field.
+func (o *DiskGroupsResourceInner) SetDiskDsdDelayVdisk(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DiskDsdDelayVdisk = &v
 }
 
@@ -1047,9 +1393,15 @@ func (o *DiskGroupsResourceInner) SetDiskDsdEnableVdisk(v string) {
 }
 
 // GetDiskDsdEnableVdiskNumeric returns the DiskDsdEnableVdiskNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumeric() int64 {
 	if o == nil || IsNil(o.DiskDsdEnableVdiskNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumeric() int32 {
+	if o == nil || IsNil(o.DiskDsdEnableVdiskNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.DiskDsdEnableVdiskNumeric
@@ -1057,7 +1409,11 @@ func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumeric() int64 {
 
 // GetDiskDsdEnableVdiskNumericOk returns a tuple with the DiskDsdEnableVdiskNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.DiskDsdEnableVdiskNumeric) {
 		return nil, false
 	}
@@ -1073,15 +1429,26 @@ func (o *DiskGroupsResourceInner) HasDiskDsdEnableVdiskNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskDsdEnableVdiskNumeric gets a reference to the given int64 and assigns it to the DiskDsdEnableVdiskNumeric field.
 func (o *DiskGroupsResourceInner) SetDiskDsdEnableVdiskNumeric(v int64) {
+=======
+// SetDiskDsdEnableVdiskNumeric gets a reference to the given int32 and assigns it to the DiskDsdEnableVdiskNumeric field.
+func (o *DiskGroupsResourceInner) SetDiskDsdEnableVdiskNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.DiskDsdEnableVdiskNumeric = &v
 }
 
 // GetDiskcount returns the Diskcount field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetDiskcount() int64 {
 	if o == nil || IsNil(o.Diskcount) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetDiskcount() int32 {
+	if o == nil || IsNil(o.Diskcount) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Diskcount
@@ -1089,7 +1456,11 @@ func (o *DiskGroupsResourceInner) GetDiskcount() int64 {
 
 // GetDiskcountOk returns a tuple with the Diskcount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetDiskcountOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetDiskcountOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Diskcount) {
 		return nil, false
 	}
@@ -1105,15 +1476,26 @@ func (o *DiskGroupsResourceInner) HasDiskcount() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetDiskcount gets a reference to the given int64 and assigns it to the Diskcount field.
 func (o *DiskGroupsResourceInner) SetDiskcount(v int64) {
+=======
+// SetDiskcount gets a reference to the given int32 and assigns it to the Diskcount field.
+func (o *DiskGroupsResourceInner) SetDiskcount(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Diskcount = &v
 }
 
 // GetExtendedStatus returns the ExtendedStatus field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetExtendedStatus() int64 {
 	if o == nil || IsNil(o.ExtendedStatus) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetExtendedStatus() int32 {
+	if o == nil || IsNil(o.ExtendedStatus) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ExtendedStatus
@@ -1121,7 +1503,11 @@ func (o *DiskGroupsResourceInner) GetExtendedStatus() int64 {
 
 // GetExtendedStatusOk returns a tuple with the ExtendedStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetExtendedStatusOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetExtendedStatusOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ExtendedStatus) {
 		return nil, false
 	}
@@ -1137,8 +1523,13 @@ func (o *DiskGroupsResourceInner) HasExtendedStatus() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetExtendedStatus gets a reference to the given int64 and assigns it to the ExtendedStatus field.
 func (o *DiskGroupsResourceInner) SetExtendedStatus(v int64) {
+=======
+// SetExtendedStatus gets a reference to the given int32 and assigns it to the ExtendedStatus field.
+func (o *DiskGroupsResourceInner) SetExtendedStatus(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ExtendedStatus = &v
 }
 
@@ -1175,9 +1566,15 @@ func (o *DiskGroupsResourceInner) SetFreespace(v string) {
 }
 
 // GetFreespaceNumeric returns the FreespaceNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetFreespaceNumeric() int64 {
 	if o == nil || IsNil(o.FreespaceNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetFreespaceNumeric() int32 {
+	if o == nil || IsNil(o.FreespaceNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FreespaceNumeric
@@ -1185,7 +1582,11 @@ func (o *DiskGroupsResourceInner) GetFreespaceNumeric() int64 {
 
 // GetFreespaceNumericOk returns a tuple with the FreespaceNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetFreespaceNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetFreespaceNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FreespaceNumeric) {
 		return nil, false
 	}
@@ -1201,8 +1602,13 @@ func (o *DiskGroupsResourceInner) HasFreespaceNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFreespaceNumeric gets a reference to the given int64 and assigns it to the FreespaceNumeric field.
 func (o *DiskGroupsResourceInner) SetFreespaceNumeric(v int64) {
+=======
+// SetFreespaceNumeric gets a reference to the given int32 and assigns it to the FreespaceNumeric field.
+func (o *DiskGroupsResourceInner) SetFreespaceNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FreespaceNumeric = &v
 }
 
@@ -1239,9 +1645,15 @@ func (o *DiskGroupsResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetHealthNumeric() int32 {
+	if o == nil || IsNil(o.HealthNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthNumeric
@@ -1249,7 +1661,11 @@ func (o *DiskGroupsResourceInner) GetHealthNumeric() int64 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetHealthNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetHealthNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -1265,8 +1681,13 @@ func (o *DiskGroupsResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
 func (o *DiskGroupsResourceInner) SetHealthNumeric(v int64) {
+=======
+// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
+func (o *DiskGroupsResourceInner) SetHealthNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthNumeric = &v
 }
 
@@ -1303,9 +1724,15 @@ func (o *DiskGroupsResourceInner) SetHealthReason(v string) {
 }
 
 // GetHealthReasonNumeric returns the HealthReasonNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetHealthReasonNumeric() int64 {
 	if o == nil || IsNil(o.HealthReasonNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetHealthReasonNumeric() int32 {
+	if o == nil || IsNil(o.HealthReasonNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthReasonNumeric
@@ -1313,7 +1740,11 @@ func (o *DiskGroupsResourceInner) GetHealthReasonNumeric() int64 {
 
 // GetHealthReasonNumericOk returns a tuple with the HealthReasonNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetHealthReasonNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetHealthReasonNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthReasonNumeric) {
 		return nil, false
 	}
@@ -1329,8 +1760,13 @@ func (o *DiskGroupsResourceInner) HasHealthReasonNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthReasonNumeric gets a reference to the given int64 and assigns it to the HealthReasonNumeric field.
 func (o *DiskGroupsResourceInner) SetHealthReasonNumeric(v int64) {
+=======
+// SetHealthReasonNumeric gets a reference to the given int32 and assigns it to the HealthReasonNumeric field.
+func (o *DiskGroupsResourceInner) SetHealthReasonNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthReasonNumeric = &v
 }
 
@@ -1367,9 +1803,15 @@ func (o *DiskGroupsResourceInner) SetHealthRecommendation(v string) {
 }
 
 // GetHealthRecommendationNumeric returns the HealthRecommendationNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetHealthRecommendationNumeric() int64 {
 	if o == nil || IsNil(o.HealthRecommendationNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetHealthRecommendationNumeric() int32 {
+	if o == nil || IsNil(o.HealthRecommendationNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthRecommendationNumeric
@@ -1377,7 +1819,11 @@ func (o *DiskGroupsResourceInner) GetHealthRecommendationNumeric() int64 {
 
 // GetHealthRecommendationNumericOk returns a tuple with the HealthRecommendationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetHealthRecommendationNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetHealthRecommendationNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthRecommendationNumeric) {
 		return nil, false
 	}
@@ -1393,15 +1839,26 @@ func (o *DiskGroupsResourceInner) HasHealthRecommendationNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthRecommendationNumeric gets a reference to the given int64 and assigns it to the HealthRecommendationNumeric field.
 func (o *DiskGroupsResourceInner) SetHealthRecommendationNumeric(v int64) {
+=======
+// SetHealthRecommendationNumeric gets a reference to the given int32 and assigns it to the HealthRecommendationNumeric field.
+func (o *DiskGroupsResourceInner) SetHealthRecommendationNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthRecommendationNumeric = &v
 }
 
 // GetInterleavedVolumeCount returns the InterleavedVolumeCount field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetInterleavedVolumeCount() int64 {
 	if o == nil || IsNil(o.InterleavedVolumeCount) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetInterleavedVolumeCount() int32 {
+	if o == nil || IsNil(o.InterleavedVolumeCount) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.InterleavedVolumeCount
@@ -1409,7 +1866,11 @@ func (o *DiskGroupsResourceInner) GetInterleavedVolumeCount() int64 {
 
 // GetInterleavedVolumeCountOk returns a tuple with the InterleavedVolumeCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetInterleavedVolumeCountOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetInterleavedVolumeCountOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.InterleavedVolumeCount) {
 		return nil, false
 	}
@@ -1425,8 +1886,13 @@ func (o *DiskGroupsResourceInner) HasInterleavedVolumeCount() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetInterleavedVolumeCount gets a reference to the given int64 and assigns it to the InterleavedVolumeCount field.
 func (o *DiskGroupsResourceInner) SetInterleavedVolumeCount(v int64) {
+=======
+// SetInterleavedVolumeCount gets a reference to the given int32 and assigns it to the InterleavedVolumeCount field.
+func (o *DiskGroupsResourceInner) SetInterleavedVolumeCount(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.InterleavedVolumeCount = &v
 }
 
@@ -1463,9 +1929,15 @@ func (o *DiskGroupsResourceInner) SetIsJobAutoAbortable(v string) {
 }
 
 // GetIsJobAutoAbortableNumeric returns the IsJobAutoAbortableNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumeric() int64 {
 	if o == nil || IsNil(o.IsJobAutoAbortableNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumeric() int32 {
+	if o == nil || IsNil(o.IsJobAutoAbortableNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.IsJobAutoAbortableNumeric
@@ -1473,7 +1945,11 @@ func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumeric() int64 {
 
 // GetIsJobAutoAbortableNumericOk returns a tuple with the IsJobAutoAbortableNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.IsJobAutoAbortableNumeric) {
 		return nil, false
 	}
@@ -1489,8 +1965,13 @@ func (o *DiskGroupsResourceInner) HasIsJobAutoAbortableNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetIsJobAutoAbortableNumeric gets a reference to the given int64 and assigns it to the IsJobAutoAbortableNumeric field.
 func (o *DiskGroupsResourceInner) SetIsJobAutoAbortableNumeric(v int64) {
+=======
+// SetIsJobAutoAbortableNumeric gets a reference to the given int32 and assigns it to the IsJobAutoAbortableNumeric field.
+func (o *DiskGroupsResourceInner) SetIsJobAutoAbortableNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.IsJobAutoAbortableNumeric = &v
 }
 
@@ -1559,9 +2040,15 @@ func (o *DiskGroupsResourceInner) SetLargestFreePartitionSpace(v string) {
 }
 
 // GetLargestFreePartitionSpaceNumeric returns the LargestFreePartitionSpaceNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumeric() int64 {
 	if o == nil || IsNil(o.LargestFreePartitionSpaceNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumeric() int32 {
+	if o == nil || IsNil(o.LargestFreePartitionSpaceNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.LargestFreePartitionSpaceNumeric
@@ -1569,7 +2056,11 @@ func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumeric() int64 {
 
 // GetLargestFreePartitionSpaceNumericOk returns a tuple with the LargestFreePartitionSpaceNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.LargestFreePartitionSpaceNumeric) {
 		return nil, false
 	}
@@ -1585,15 +2076,26 @@ func (o *DiskGroupsResourceInner) HasLargestFreePartitionSpaceNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetLargestFreePartitionSpaceNumeric gets a reference to the given int64 and assigns it to the LargestFreePartitionSpaceNumeric field.
 func (o *DiskGroupsResourceInner) SetLargestFreePartitionSpaceNumeric(v int64) {
+=======
+// SetLargestFreePartitionSpaceNumeric gets a reference to the given int32 and assigns it to the LargestFreePartitionSpaceNumeric field.
+func (o *DiskGroupsResourceInner) SetLargestFreePartitionSpaceNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.LargestFreePartitionSpaceNumeric = &v
 }
 
 // GetLinearVolumeBoundary returns the LinearVolumeBoundary field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetLinearVolumeBoundary() int64 {
 	if o == nil || IsNil(o.LinearVolumeBoundary) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetLinearVolumeBoundary() int32 {
+	if o == nil || IsNil(o.LinearVolumeBoundary) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.LinearVolumeBoundary
@@ -1601,7 +2103,11 @@ func (o *DiskGroupsResourceInner) GetLinearVolumeBoundary() int64 {
 
 // GetLinearVolumeBoundaryOk returns a tuple with the LinearVolumeBoundary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetLinearVolumeBoundaryOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetLinearVolumeBoundaryOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.LinearVolumeBoundary) {
 		return nil, false
 	}
@@ -1617,15 +2123,26 @@ func (o *DiskGroupsResourceInner) HasLinearVolumeBoundary() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetLinearVolumeBoundary gets a reference to the given int64 and assigns it to the LinearVolumeBoundary field.
 func (o *DiskGroupsResourceInner) SetLinearVolumeBoundary(v int64) {
+=======
+// SetLinearVolumeBoundary gets a reference to the given int32 and assigns it to the LinearVolumeBoundary field.
+func (o *DiskGroupsResourceInner) SetLinearVolumeBoundary(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.LinearVolumeBoundary = &v
 }
 
 // GetLun returns the Lun field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetLun() int64 {
 	if o == nil || IsNil(o.Lun) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetLun() int32 {
+	if o == nil || IsNil(o.Lun) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Lun
@@ -1633,7 +2150,11 @@ func (o *DiskGroupsResourceInner) GetLun() int64 {
 
 // GetLunOk returns a tuple with the Lun field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetLunOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetLunOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Lun) {
 		return nil, false
 	}
@@ -1649,8 +2170,13 @@ func (o *DiskGroupsResourceInner) HasLun() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetLun gets a reference to the given int64 and assigns it to the Lun field.
 func (o *DiskGroupsResourceInner) SetLun(v int64) {
+=======
+// SetLun gets a reference to the given int32 and assigns it to the Lun field.
+func (o *DiskGroupsResourceInner) SetLun(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Lun = &v
 }
 
@@ -1687,9 +2213,15 @@ func (o *DiskGroupsResourceInner) SetMetadataSize(v string) {
 }
 
 // GetMetadataSizeNumeric returns the MetadataSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetMetadataSizeNumeric() int64 {
 	if o == nil || IsNil(o.MetadataSizeNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetMetadataSizeNumeric() int32 {
+	if o == nil || IsNil(o.MetadataSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MetadataSizeNumeric
@@ -1697,7 +2229,11 @@ func (o *DiskGroupsResourceInner) GetMetadataSizeNumeric() int64 {
 
 // GetMetadataSizeNumericOk returns a tuple with the MetadataSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetMetadataSizeNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetMetadataSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MetadataSizeNumeric) {
 		return nil, false
 	}
@@ -1713,8 +2249,13 @@ func (o *DiskGroupsResourceInner) HasMetadataSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMetadataSizeNumeric gets a reference to the given int64 and assigns it to the MetadataSizeNumeric field.
 func (o *DiskGroupsResourceInner) SetMetadataSizeNumeric(v int64) {
+=======
+// SetMetadataSizeNumeric gets a reference to the given int32 and assigns it to the MetadataSizeNumeric field.
+func (o *DiskGroupsResourceInner) SetMetadataSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MetadataSizeNumeric = &v
 }
 
@@ -1751,9 +2292,15 @@ func (o *DiskGroupsResourceInner) SetMinDriveSize(v string) {
 }
 
 // GetMinDriveSizeNumeric returns the MinDriveSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetMinDriveSizeNumeric() int64 {
 	if o == nil || IsNil(o.MinDriveSizeNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetMinDriveSizeNumeric() int32 {
+	if o == nil || IsNil(o.MinDriveSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.MinDriveSizeNumeric
@@ -1761,7 +2308,11 @@ func (o *DiskGroupsResourceInner) GetMinDriveSizeNumeric() int64 {
 
 // GetMinDriveSizeNumericOk returns a tuple with the MinDriveSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetMinDriveSizeNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetMinDriveSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.MinDriveSizeNumeric) {
 		return nil, false
 	}
@@ -1777,8 +2328,13 @@ func (o *DiskGroupsResourceInner) HasMinDriveSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetMinDriveSizeNumeric gets a reference to the given int64 and assigns it to the MinDriveSizeNumeric field.
 func (o *DiskGroupsResourceInner) SetMinDriveSizeNumeric(v int64) {
+=======
+// SetMinDriveSizeNumeric gets a reference to the given int32 and assigns it to the MinDriveSizeNumeric field.
+func (o *DiskGroupsResourceInner) SetMinDriveSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.MinDriveSizeNumeric = &v
 }
 
@@ -1847,9 +2403,15 @@ func (o *DiskGroupsResourceInner) SetNewPartitionLba(v string) {
 }
 
 // GetNewPartitionLbaNumeric returns the NewPartitionLbaNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumeric() int64 {
 	if o == nil || IsNil(o.NewPartitionLbaNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumeric() int32 {
+	if o == nil || IsNil(o.NewPartitionLbaNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.NewPartitionLbaNumeric
@@ -1857,7 +2419,11 @@ func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumeric() int64 {
 
 // GetNewPartitionLbaNumericOk returns a tuple with the NewPartitionLbaNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.NewPartitionLbaNumeric) {
 		return nil, false
 	}
@@ -1873,15 +2439,26 @@ func (o *DiskGroupsResourceInner) HasNewPartitionLbaNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetNewPartitionLbaNumeric gets a reference to the given int64 and assigns it to the NewPartitionLbaNumeric field.
 func (o *DiskGroupsResourceInner) SetNewPartitionLbaNumeric(v int64) {
+=======
+// SetNewPartitionLbaNumeric gets a reference to the given int32 and assigns it to the NewPartitionLbaNumeric field.
+func (o *DiskGroupsResourceInner) SetNewPartitionLbaNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.NewPartitionLbaNumeric = &v
 }
 
 // GetNumArrayPartitions returns the NumArrayPartitions field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetNumArrayPartitions() int64 {
 	if o == nil || IsNil(o.NumArrayPartitions) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetNumArrayPartitions() int32 {
+	if o == nil || IsNil(o.NumArrayPartitions) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.NumArrayPartitions
@@ -1889,7 +2466,11 @@ func (o *DiskGroupsResourceInner) GetNumArrayPartitions() int64 {
 
 // GetNumArrayPartitionsOk returns a tuple with the NumArrayPartitions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetNumArrayPartitionsOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetNumArrayPartitionsOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.NumArrayPartitions) {
 		return nil, false
 	}
@@ -1905,15 +2486,26 @@ func (o *DiskGroupsResourceInner) HasNumArrayPartitions() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetNumArrayPartitions gets a reference to the given int64 and assigns it to the NumArrayPartitions field.
 func (o *DiskGroupsResourceInner) SetNumArrayPartitions(v int64) {
+=======
+// SetNumArrayPartitions gets a reference to the given int32 and assigns it to the NumArrayPartitions field.
+func (o *DiskGroupsResourceInner) SetNumArrayPartitions(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.NumArrayPartitions = &v
 }
 
 // GetNumDrivesPerLowLevelArray returns the NumDrivesPerLowLevelArray field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArray() int64 {
 	if o == nil || IsNil(o.NumDrivesPerLowLevelArray) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArray() int32 {
+	if o == nil || IsNil(o.NumDrivesPerLowLevelArray) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.NumDrivesPerLowLevelArray
@@ -1921,7 +2513,11 @@ func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArray() int64 {
 
 // GetNumDrivesPerLowLevelArrayOk returns a tuple with the NumDrivesPerLowLevelArray field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArrayOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArrayOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.NumDrivesPerLowLevelArray) {
 		return nil, false
 	}
@@ -1937,15 +2533,26 @@ func (o *DiskGroupsResourceInner) HasNumDrivesPerLowLevelArray() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetNumDrivesPerLowLevelArray gets a reference to the given int64 and assigns it to the NumDrivesPerLowLevelArray field.
 func (o *DiskGroupsResourceInner) SetNumDrivesPerLowLevelArray(v int64) {
+=======
+// SetNumDrivesPerLowLevelArray gets a reference to the given int32 and assigns it to the NumDrivesPerLowLevelArray field.
+func (o *DiskGroupsResourceInner) SetNumDrivesPerLowLevelArray(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.NumDrivesPerLowLevelArray = &v
 }
 
 // GetNumExpansionPartitions returns the NumExpansionPartitions field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetNumExpansionPartitions() int64 {
 	if o == nil || IsNil(o.NumExpansionPartitions) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetNumExpansionPartitions() int32 {
+	if o == nil || IsNil(o.NumExpansionPartitions) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.NumExpansionPartitions
@@ -1953,7 +2560,11 @@ func (o *DiskGroupsResourceInner) GetNumExpansionPartitions() int64 {
 
 // GetNumExpansionPartitionsOk returns a tuple with the NumExpansionPartitions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetNumExpansionPartitionsOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetNumExpansionPartitionsOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.NumExpansionPartitions) {
 		return nil, false
 	}
@@ -1969,15 +2580,26 @@ func (o *DiskGroupsResourceInner) HasNumExpansionPartitions() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetNumExpansionPartitions gets a reference to the given int64 and assigns it to the NumExpansionPartitions field.
 func (o *DiskGroupsResourceInner) SetNumExpansionPartitions(v int64) {
+=======
+// SetNumExpansionPartitions gets a reference to the given int32 and assigns it to the NumExpansionPartitions field.
+func (o *DiskGroupsResourceInner) SetNumExpansionPartitions(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.NumExpansionPartitions = &v
 }
 
 // GetNumPartitionSegments returns the NumPartitionSegments field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetNumPartitionSegments() int64 {
 	if o == nil || IsNil(o.NumPartitionSegments) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetNumPartitionSegments() int32 {
+	if o == nil || IsNil(o.NumPartitionSegments) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.NumPartitionSegments
@@ -1985,7 +2607,11 @@ func (o *DiskGroupsResourceInner) GetNumPartitionSegments() int64 {
 
 // GetNumPartitionSegmentsOk returns a tuple with the NumPartitionSegments field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetNumPartitionSegmentsOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetNumPartitionSegmentsOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.NumPartitionSegments) {
 		return nil, false
 	}
@@ -2001,8 +2627,13 @@ func (o *DiskGroupsResourceInner) HasNumPartitionSegments() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetNumPartitionSegments gets a reference to the given int64 and assigns it to the NumPartitionSegments field.
 func (o *DiskGroupsResourceInner) SetNumPartitionSegments(v int64) {
+=======
+// SetNumPartitionSegments gets a reference to the given int32 and assigns it to the NumPartitionSegments field.
+func (o *DiskGroupsResourceInner) SetNumPartitionSegments(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.NumPartitionSegments = &v
 }
 
@@ -2039,9 +2670,15 @@ func (o *DiskGroupsResourceInner) SetOverhead(v string) {
 }
 
 // GetOverheadNumeric returns the OverheadNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetOverheadNumeric() int64 {
 	if o == nil || IsNil(o.OverheadNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetOverheadNumeric() int32 {
+	if o == nil || IsNil(o.OverheadNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.OverheadNumeric
@@ -2049,7 +2686,11 @@ func (o *DiskGroupsResourceInner) GetOverheadNumeric() int64 {
 
 // GetOverheadNumericOk returns a tuple with the OverheadNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetOverheadNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetOverheadNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.OverheadNumeric) {
 		return nil, false
 	}
@@ -2065,8 +2706,13 @@ func (o *DiskGroupsResourceInner) HasOverheadNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetOverheadNumeric gets a reference to the given int64 and assigns it to the OverheadNumeric field.
 func (o *DiskGroupsResourceInner) SetOverheadNumeric(v int64) {
+=======
+// SetOverheadNumeric gets a reference to the given int32 and assigns it to the OverheadNumeric field.
+func (o *DiskGroupsResourceInner) SetOverheadNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.OverheadNumeric = &v
 }
 
@@ -2103,9 +2749,15 @@ func (o *DiskGroupsResourceInner) SetOwner(v string) {
 }
 
 // GetOwnerNumeric returns the OwnerNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetOwnerNumeric() int64 {
 	if o == nil || IsNil(o.OwnerNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetOwnerNumeric() int32 {
+	if o == nil || IsNil(o.OwnerNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.OwnerNumeric
@@ -2113,7 +2765,11 @@ func (o *DiskGroupsResourceInner) GetOwnerNumeric() int64 {
 
 // GetOwnerNumericOk returns a tuple with the OwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetOwnerNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetOwnerNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.OwnerNumeric) {
 		return nil, false
 	}
@@ -2129,15 +2785,26 @@ func (o *DiskGroupsResourceInner) HasOwnerNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetOwnerNumeric gets a reference to the given int64 and assigns it to the OwnerNumeric field.
 func (o *DiskGroupsResourceInner) SetOwnerNumeric(v int64) {
+=======
+// SetOwnerNumeric gets a reference to the given int32 and assigns it to the OwnerNumeric field.
+func (o *DiskGroupsResourceInner) SetOwnerNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.OwnerNumeric = &v
 }
 
 // GetPerformanceRank returns the PerformanceRank field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetPerformanceRank() int64 {
 	if o == nil || IsNil(o.PerformanceRank) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetPerformanceRank() int32 {
+	if o == nil || IsNil(o.PerformanceRank) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PerformanceRank
@@ -2145,7 +2812,11 @@ func (o *DiskGroupsResourceInner) GetPerformanceRank() int64 {
 
 // GetPerformanceRankOk returns a tuple with the PerformanceRank field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetPerformanceRankOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetPerformanceRankOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PerformanceRank) {
 		return nil, false
 	}
@@ -2161,8 +2832,13 @@ func (o *DiskGroupsResourceInner) HasPerformanceRank() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPerformanceRank gets a reference to the given int64 and assigns it to the PerformanceRank field.
 func (o *DiskGroupsResourceInner) SetPerformanceRank(v int64) {
+=======
+// SetPerformanceRank gets a reference to the given int32 and assigns it to the PerformanceRank field.
+func (o *DiskGroupsResourceInner) SetPerformanceRank(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PerformanceRank = &v
 }
 
@@ -2199,9 +2875,15 @@ func (o *DiskGroupsResourceInner) SetPool(v string) {
 }
 
 // GetPoolPercentage returns the PoolPercentage field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetPoolPercentage() int64 {
 	if o == nil || IsNil(o.PoolPercentage) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetPoolPercentage() int32 {
+	if o == nil || IsNil(o.PoolPercentage) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PoolPercentage
@@ -2209,7 +2891,11 @@ func (o *DiskGroupsResourceInner) GetPoolPercentage() int64 {
 
 // GetPoolPercentageOk returns a tuple with the PoolPercentage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetPoolPercentageOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetPoolPercentageOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PoolPercentage) {
 		return nil, false
 	}
@@ -2225,8 +2911,13 @@ func (o *DiskGroupsResourceInner) HasPoolPercentage() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPoolPercentage gets a reference to the given int64 and assigns it to the PoolPercentage field.
 func (o *DiskGroupsResourceInner) SetPoolPercentage(v int64) {
+=======
+// SetPoolPercentage gets a reference to the given int32 and assigns it to the PoolPercentage field.
+func (o *DiskGroupsResourceInner) SetPoolPercentage(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PoolPercentage = &v
 }
 
@@ -2263,9 +2954,15 @@ func (o *DiskGroupsResourceInner) SetPoolSectorFormat(v string) {
 }
 
 // GetPoolSectorFormatNumeric returns the PoolSectorFormatNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumeric() int64 {
 	if o == nil || IsNil(o.PoolSectorFormatNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumeric() int32 {
+	if o == nil || IsNil(o.PoolSectorFormatNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PoolSectorFormatNumeric
@@ -2273,7 +2970,11 @@ func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumeric() int64 {
 
 // GetPoolSectorFormatNumericOk returns a tuple with the PoolSectorFormatNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PoolSectorFormatNumeric) {
 		return nil, false
 	}
@@ -2289,8 +2990,13 @@ func (o *DiskGroupsResourceInner) HasPoolSectorFormatNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPoolSectorFormatNumeric gets a reference to the given int64 and assigns it to the PoolSectorFormatNumeric field.
 func (o *DiskGroupsResourceInner) SetPoolSectorFormatNumeric(v int64) {
+=======
+// SetPoolSectorFormatNumeric gets a reference to the given int32 and assigns it to the PoolSectorFormatNumeric field.
+func (o *DiskGroupsResourceInner) SetPoolSectorFormatNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PoolSectorFormatNumeric = &v
 }
 
@@ -2391,9 +3097,15 @@ func (o *DiskGroupsResourceInner) SetPreferredOwner(v string) {
 }
 
 // GetPreferredOwnerNumeric returns the PreferredOwnerNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetPreferredOwnerNumeric() int64 {
 	if o == nil || IsNil(o.PreferredOwnerNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetPreferredOwnerNumeric() int32 {
+	if o == nil || IsNil(o.PreferredOwnerNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PreferredOwnerNumeric
@@ -2401,7 +3113,11 @@ func (o *DiskGroupsResourceInner) GetPreferredOwnerNumeric() int64 {
 
 // GetPreferredOwnerNumericOk returns a tuple with the PreferredOwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetPreferredOwnerNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetPreferredOwnerNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PreferredOwnerNumeric) {
 		return nil, false
 	}
@@ -2417,8 +3133,13 @@ func (o *DiskGroupsResourceInner) HasPreferredOwnerNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPreferredOwnerNumeric gets a reference to the given int64 and assigns it to the PreferredOwnerNumeric field.
 func (o *DiskGroupsResourceInner) SetPreferredOwnerNumeric(v int64) {
+=======
+// SetPreferredOwnerNumeric gets a reference to the given int32 and assigns it to the PreferredOwnerNumeric field.
+func (o *DiskGroupsResourceInner) SetPreferredOwnerNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PreferredOwnerNumeric = &v
 }
 
@@ -2455,9 +3176,15 @@ func (o *DiskGroupsResourceInner) SetRaidtype(v string) {
 }
 
 // GetRaidtypeNumeric returns the RaidtypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetRaidtypeNumeric() int64 {
 	if o == nil || IsNil(o.RaidtypeNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetRaidtypeNumeric() int32 {
+	if o == nil || IsNil(o.RaidtypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RaidtypeNumeric
@@ -2465,7 +3192,11 @@ func (o *DiskGroupsResourceInner) GetRaidtypeNumeric() int64 {
 
 // GetRaidtypeNumericOk returns a tuple with the RaidtypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetRaidtypeNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetRaidtypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RaidtypeNumeric) {
 		return nil, false
 	}
@@ -2481,8 +3212,13 @@ func (o *DiskGroupsResourceInner) HasRaidtypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRaidtypeNumeric gets a reference to the given int64 and assigns it to the RaidtypeNumeric field.
 func (o *DiskGroupsResourceInner) SetRaidtypeNumeric(v int64) {
+=======
+// SetRaidtypeNumeric gets a reference to the given int32 and assigns it to the RaidtypeNumeric field.
+func (o *DiskGroupsResourceInner) SetRaidtypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RaidtypeNumeric = &v
 }
 
@@ -2519,9 +3255,15 @@ func (o *DiskGroupsResourceInner) SetRawSize(v string) {
 }
 
 // GetRawSizeNumeric returns the RawSizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetRawSizeNumeric() int64 {
 	if o == nil || IsNil(o.RawSizeNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetRawSizeNumeric() int32 {
+	if o == nil || IsNil(o.RawSizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RawSizeNumeric
@@ -2529,7 +3271,11 @@ func (o *DiskGroupsResourceInner) GetRawSizeNumeric() int64 {
 
 // GetRawSizeNumericOk returns a tuple with the RawSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetRawSizeNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetRawSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RawSizeNumeric) {
 		return nil, false
 	}
@@ -2545,8 +3291,13 @@ func (o *DiskGroupsResourceInner) HasRawSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRawSizeNumeric gets a reference to the given int64 and assigns it to the RawSizeNumeric field.
 func (o *DiskGroupsResourceInner) SetRawSizeNumeric(v int64) {
+=======
+// SetRawSizeNumeric gets a reference to the given int32 and assigns it to the RawSizeNumeric field.
+func (o *DiskGroupsResourceInner) SetRawSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RawSizeNumeric = &v
 }
 
@@ -2583,9 +3334,15 @@ func (o *DiskGroupsResourceInner) SetReadAheadEnabled(v string) {
 }
 
 // GetReadAheadEnabledNumeric returns the ReadAheadEnabledNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumeric() int64 {
 	if o == nil || IsNil(o.ReadAheadEnabledNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumeric() int32 {
+	if o == nil || IsNil(o.ReadAheadEnabledNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ReadAheadEnabledNumeric
@@ -2593,7 +3350,11 @@ func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumeric() int64 {
 
 // GetReadAheadEnabledNumericOk returns a tuple with the ReadAheadEnabledNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ReadAheadEnabledNumeric) {
 		return nil, false
 	}
@@ -2609,15 +3370,26 @@ func (o *DiskGroupsResourceInner) HasReadAheadEnabledNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetReadAheadEnabledNumeric gets a reference to the given int64 and assigns it to the ReadAheadEnabledNumeric field.
 func (o *DiskGroupsResourceInner) SetReadAheadEnabledNumeric(v int64) {
+=======
+// SetReadAheadEnabledNumeric gets a reference to the given int32 and assigns it to the ReadAheadEnabledNumeric field.
+func (o *DiskGroupsResourceInner) SetReadAheadEnabledNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ReadAheadEnabledNumeric = &v
 }
 
 // GetScrubDurationGoal returns the ScrubDurationGoal field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetScrubDurationGoal() int64 {
 	if o == nil || IsNil(o.ScrubDurationGoal) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetScrubDurationGoal() int32 {
+	if o == nil || IsNil(o.ScrubDurationGoal) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ScrubDurationGoal
@@ -2625,7 +3397,11 @@ func (o *DiskGroupsResourceInner) GetScrubDurationGoal() int64 {
 
 // GetScrubDurationGoalOk returns a tuple with the ScrubDurationGoal field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetScrubDurationGoalOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetScrubDurationGoalOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ScrubDurationGoal) {
 		return nil, false
 	}
@@ -2641,8 +3417,13 @@ func (o *DiskGroupsResourceInner) HasScrubDurationGoal() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetScrubDurationGoal gets a reference to the given int64 and assigns it to the ScrubDurationGoal field.
 func (o *DiskGroupsResourceInner) SetScrubDurationGoal(v int64) {
+=======
+// SetScrubDurationGoal gets a reference to the given int32 and assigns it to the ScrubDurationGoal field.
+func (o *DiskGroupsResourceInner) SetScrubDurationGoal(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ScrubDurationGoal = &v
 }
 
@@ -2711,9 +3492,15 @@ func (o *DiskGroupsResourceInner) SetSize(v string) {
 }
 
 // GetSizeNumeric returns the SizeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetSizeNumeric() int64 {
 	if o == nil || IsNil(o.SizeNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetSizeNumeric() int32 {
+	if o == nil || IsNil(o.SizeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SizeNumeric
@@ -2721,7 +3508,11 @@ func (o *DiskGroupsResourceInner) GetSizeNumeric() int64 {
 
 // GetSizeNumericOk returns a tuple with the SizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetSizeNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetSizeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SizeNumeric) {
 		return nil, false
 	}
@@ -2737,15 +3528,26 @@ func (o *DiskGroupsResourceInner) HasSizeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSizeNumeric gets a reference to the given int64 and assigns it to the SizeNumeric field.
 func (o *DiskGroupsResourceInner) SetSizeNumeric(v int64) {
+=======
+// SetSizeNumeric gets a reference to the given int32 and assigns it to the SizeNumeric field.
+func (o *DiskGroupsResourceInner) SetSizeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SizeNumeric = &v
 }
 
 // GetSparecount returns the Sparecount field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetSparecount() int64 {
 	if o == nil || IsNil(o.Sparecount) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetSparecount() int32 {
+	if o == nil || IsNil(o.Sparecount) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.Sparecount
@@ -2753,7 +3555,11 @@ func (o *DiskGroupsResourceInner) GetSparecount() int64 {
 
 // GetSparecountOk returns a tuple with the Sparecount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetSparecountOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetSparecountOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.Sparecount) {
 		return nil, false
 	}
@@ -2769,8 +3575,13 @@ func (o *DiskGroupsResourceInner) HasSparecount() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSparecount gets a reference to the given int64 and assigns it to the Sparecount field.
 func (o *DiskGroupsResourceInner) SetSparecount(v int64) {
+=======
+// SetSparecount gets a reference to the given int32 and assigns it to the Sparecount field.
+func (o *DiskGroupsResourceInner) SetSparecount(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.Sparecount = &v
 }
 
@@ -2807,9 +3618,15 @@ func (o *DiskGroupsResourceInner) SetSpear(v string) {
 }
 
 // GetSpearNumeric returns the SpearNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetSpearNumeric() int64 {
 	if o == nil || IsNil(o.SpearNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetSpearNumeric() int32 {
+	if o == nil || IsNil(o.SpearNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SpearNumeric
@@ -2817,7 +3634,11 @@ func (o *DiskGroupsResourceInner) GetSpearNumeric() int64 {
 
 // GetSpearNumericOk returns a tuple with the SpearNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetSpearNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetSpearNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SpearNumeric) {
 		return nil, false
 	}
@@ -2833,8 +3654,13 @@ func (o *DiskGroupsResourceInner) HasSpearNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSpearNumeric gets a reference to the given int64 and assigns it to the SpearNumeric field.
 func (o *DiskGroupsResourceInner) SetSpearNumeric(v int64) {
+=======
+// SetSpearNumeric gets a reference to the given int32 and assigns it to the SpearNumeric field.
+func (o *DiskGroupsResourceInner) SetSpearNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SpearNumeric = &v
 }
 
@@ -2871,9 +3697,15 @@ func (o *DiskGroupsResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetStatusNumeric() int32 {
+	if o == nil || IsNil(o.StatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.StatusNumeric
@@ -2881,7 +3713,11 @@ func (o *DiskGroupsResourceInner) GetStatusNumeric() int64 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetStatusNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -2897,8 +3733,13 @@ func (o *DiskGroupsResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
 func (o *DiskGroupsResourceInner) SetStatusNumeric(v int64) {
+=======
+// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
+func (o *DiskGroupsResourceInner) SetStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.StatusNumeric = &v
 }
 
@@ -2935,9 +3776,15 @@ func (o *DiskGroupsResourceInner) SetStorageTier(v string) {
 }
 
 // GetStorageTierNumeric returns the StorageTierNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetStorageTierNumeric() int64 {
 	if o == nil || IsNil(o.StorageTierNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetStorageTierNumeric() int32 {
+	if o == nil || IsNil(o.StorageTierNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.StorageTierNumeric
@@ -2945,7 +3792,11 @@ func (o *DiskGroupsResourceInner) GetStorageTierNumeric() int64 {
 
 // GetStorageTierNumericOk returns a tuple with the StorageTierNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetStorageTierNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetStorageTierNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.StorageTierNumeric) {
 		return nil, false
 	}
@@ -2961,8 +3812,13 @@ func (o *DiskGroupsResourceInner) HasStorageTierNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetStorageTierNumeric gets a reference to the given int64 and assigns it to the StorageTierNumeric field.
 func (o *DiskGroupsResourceInner) SetStorageTierNumeric(v int64) {
+=======
+// SetStorageTierNumeric gets a reference to the given int32 and assigns it to the StorageTierNumeric field.
+func (o *DiskGroupsResourceInner) SetStorageTierNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.StorageTierNumeric = &v
 }
 
@@ -2999,9 +3855,15 @@ func (o *DiskGroupsResourceInner) SetStorageType(v string) {
 }
 
 // GetStorageTypeNumeric returns the StorageTypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetStorageTypeNumeric() int64 {
 	if o == nil || IsNil(o.StorageTypeNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetStorageTypeNumeric() int32 {
+	if o == nil || IsNil(o.StorageTypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.StorageTypeNumeric
@@ -3009,7 +3871,11 @@ func (o *DiskGroupsResourceInner) GetStorageTypeNumeric() int64 {
 
 // GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetStorageTypeNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetStorageTypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.StorageTypeNumeric) {
 		return nil, false
 	}
@@ -3025,8 +3891,13 @@ func (o *DiskGroupsResourceInner) HasStorageTypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetStorageTypeNumeric gets a reference to the given int64 and assigns it to the StorageTypeNumeric field.
 func (o *DiskGroupsResourceInner) SetStorageTypeNumeric(v int64) {
+=======
+// SetStorageTypeNumeric gets a reference to the given int32 and assigns it to the StorageTypeNumeric field.
+func (o *DiskGroupsResourceInner) SetStorageTypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.StorageTypeNumeric = &v
 }
 
@@ -3063,9 +3934,15 @@ func (o *DiskGroupsResourceInner) SetStripeWidth(v string) {
 }
 
 // GetStripeWidthNumeric returns the StripeWidthNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetStripeWidthNumeric() int64 {
 	if o == nil || IsNil(o.StripeWidthNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetStripeWidthNumeric() int32 {
+	if o == nil || IsNil(o.StripeWidthNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.StripeWidthNumeric
@@ -3073,7 +3950,11 @@ func (o *DiskGroupsResourceInner) GetStripeWidthNumeric() int64 {
 
 // GetStripeWidthNumericOk returns a tuple with the StripeWidthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetStripeWidthNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetStripeWidthNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.StripeWidthNumeric) {
 		return nil, false
 	}
@@ -3089,8 +3970,13 @@ func (o *DiskGroupsResourceInner) HasStripeWidthNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetStripeWidthNumeric gets a reference to the given int64 and assigns it to the StripeWidthNumeric field.
 func (o *DiskGroupsResourceInner) SetStripeWidthNumeric(v int64) {
+=======
+// SetStripeWidthNumeric gets a reference to the given int32 and assigns it to the StripeWidthNumeric field.
+func (o *DiskGroupsResourceInner) SetStripeWidthNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.StripeWidthNumeric = &v
 }
 
@@ -3127,9 +4013,15 @@ func (o *DiskGroupsResourceInner) SetTargetSpareCapacity(v string) {
 }
 
 // GetTargetSpareCapacityNumeric returns the TargetSpareCapacityNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumeric() int64 {
 	if o == nil || IsNil(o.TargetSpareCapacityNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumeric() int32 {
+	if o == nil || IsNil(o.TargetSpareCapacityNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TargetSpareCapacityNumeric
@@ -3137,7 +4029,11 @@ func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumeric() int64 {
 
 // GetTargetSpareCapacityNumericOk returns a tuple with the TargetSpareCapacityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TargetSpareCapacityNumeric) {
 		return nil, false
 	}
@@ -3153,15 +4049,26 @@ func (o *DiskGroupsResourceInner) HasTargetSpareCapacityNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTargetSpareCapacityNumeric gets a reference to the given int64 and assigns it to the TargetSpareCapacityNumeric field.
 func (o *DiskGroupsResourceInner) SetTargetSpareCapacityNumeric(v int64) {
+=======
+// SetTargetSpareCapacityNumeric gets a reference to the given int32 and assigns it to the TargetSpareCapacityNumeric field.
+func (o *DiskGroupsResourceInner) SetTargetSpareCapacityNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TargetSpareCapacityNumeric = &v
 }
 
 // GetTotalPages returns the TotalPages field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetTotalPages() int64 {
 	if o == nil || IsNil(o.TotalPages) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetTotalPages() int32 {
+	if o == nil || IsNil(o.TotalPages) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.TotalPages
@@ -3169,7 +4076,11 @@ func (o *DiskGroupsResourceInner) GetTotalPages() int64 {
 
 // GetTotalPagesOk returns a tuple with the TotalPages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetTotalPagesOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetTotalPagesOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.TotalPages) {
 		return nil, false
 	}
@@ -3185,8 +4096,13 @@ func (o *DiskGroupsResourceInner) HasTotalPages() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetTotalPages gets a reference to the given int64 and assigns it to the TotalPages field.
 func (o *DiskGroupsResourceInner) SetTotalPages(v int64) {
+=======
+// SetTotalPages gets a reference to the given int32 and assigns it to the TotalPages field.
+func (o *DiskGroupsResourceInner) SetTotalPages(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.TotalPages = &v
 }
 
@@ -3255,9 +4171,15 @@ func (o *DiskGroupsResourceInner) SetWriteBackEnabled(v string) {
 }
 
 // GetWriteBackEnabledNumeric returns the WriteBackEnabledNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumeric() int64 {
 	if o == nil || IsNil(o.WriteBackEnabledNumeric) {
 		var ret int64
+=======
+func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumeric() int32 {
+	if o == nil || IsNil(o.WriteBackEnabledNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.WriteBackEnabledNumeric
@@ -3265,7 +4187,11 @@ func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumeric() int64 {
 
 // GetWriteBackEnabledNumericOk returns a tuple with the WriteBackEnabledNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumericOk() (*int64, bool) {
+=======
+func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.WriteBackEnabledNumeric) {
 		return nil, false
 	}
@@ -3281,8 +4207,13 @@ func (o *DiskGroupsResourceInner) HasWriteBackEnabledNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetWriteBackEnabledNumeric gets a reference to the given int64 and assigns it to the WriteBackEnabledNumeric field.
 func (o *DiskGroupsResourceInner) SetWriteBackEnabledNumeric(v int64) {
+=======
+// SetWriteBackEnabledNumeric gets a reference to the given int32 and assigns it to the WriteBackEnabledNumeric field.
+func (o *DiskGroupsResourceInner) SetWriteBackEnabledNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.WriteBackEnabledNumeric = &v
 }
 

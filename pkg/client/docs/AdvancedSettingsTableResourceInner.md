@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **AutoMap** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **AutoMapNumeric** | Pointer to **int64** |  | [optional] 
 **AutoStallRecovery** | Pointer to **string** | Provides detection of when hung controllers are preventing IO from completing | [optional] 
 **AutoStallRecoveryNumeric** | Pointer to **int64** | Provides detection of when hung controllers are preventing IO from completing( In numeric form ) | [optional] 
@@ -82,6 +83,83 @@ Name | Type | Description | Notes
 **TemperatureExceededNumeric** | Pointer to **int64** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
 **UtilityPriority** | Pointer to **string** | Configured processing priority for utilities | [optional] 
 **UtilityPriorityNumeric** | Pointer to **int64** | Configured processing priority for utilities( In numeric form ) | [optional] 
+=======
+**AutoMapNumeric** | Pointer to **int32** |  | [optional] 
+**AutoStallRecovery** | Pointer to **string** | Provides detection of when hung controllers are preventing IO from completing | [optional] 
+**AutoStallRecoveryNumeric** | Pointer to **int32** | Provides detection of when hung controllers are preventing IO from completing( In numeric form ) | [optional] 
+**AutoUnmap** | Pointer to **string** |  | [optional] 
+**AutoUnmapNumeric** | Pointer to **int32** |  | [optional] 
+**AutoWriteBack** | Pointer to **string** | Data is cached to memory before being written to disk | [optional] 
+**AutoWriteBackNumeric** | Pointer to **int32** | Data is cached to memory before being written to disk( In numeric form ) | [optional] 
+**BackgroundScrub** | Pointer to **string** | Low priority disk group scrub | [optional] 
+**BackgroundScrubInterval** | Pointer to **int32** | Disk group scrub start interval | [optional] 
+**BackgroundScrubNumeric** | Pointer to **int32** | Low priority disk group scrub( In numeric form ) | [optional] 
+**CacheFlushTimeout** | Pointer to **string** |  | [optional] 
+**CacheFlushTimeoutNumeric** | Pointer to **int32** |  | [optional] 
+**ControllerFailure** | Pointer to **string** |  | [optional] 
+**ControllerFailureNumeric** | Pointer to **int32** |  | [optional] 
+**DefaultMapping** | Pointer to **string** |  | [optional] 
+**DefaultMappingNumeric** | Pointer to **int32** |  | [optional] 
+**DeleteOverride** | Pointer to **string** | Bypass checks when deleting a pool. | [optional] 
+**DeleteOverrideNumeric** | Pointer to **int32** | Bypass checks when deleting a pool.( In numeric form ) | [optional] 
+**DiskDsdDelay** | Pointer to **int32** |  | [optional] 
+**DiskDsdEnable** | Pointer to **string** |  | [optional] 
+**DiskDsdEnableNumeric** | Pointer to **int32** |  | [optional] 
+**DiskFirmwareUpdate** | Pointer to **string** |  | [optional] 
+**DiskFirmwareUpdateNumeric** | Pointer to **int32** |  | [optional] 
+**DynamicSpares** | Pointer to **string** | If enabled, replaces failed disks in a degraded vdisk with properly sized available disks | [optional] 
+**EmpPollRate** | Pointer to **string** |  | [optional] 
+**FanFailure** | Pointer to **string** |  | [optional] 
+**FanFailureNumeric** | Pointer to **int32** |  | [optional] 
+**HedgedReadsTimeout** | Pointer to **string** |  | [optional] 
+**HedgedReadsTimeoutNumeric** | Pointer to **int32** |  | [optional] 
+**HostCacheControl** | Pointer to **string** | Whether hosts can change the system&#39;s write-back cache setting | [optional] 
+**HostCacheControlNumeric** | Pointer to **int32** | Whether hosts can change the system&#39;s write-back cache setting( In numeric form ) | [optional] 
+**IndependentCache** | Pointer to **string** |  | [optional] 
+**IndependentCacheNumeric** | Pointer to **int32** |  | [optional] 
+**LargePools** | Pointer to **string** |  | [optional] 
+**LargePoolsNumeric** | Pointer to **int32** |  | [optional] 
+**ManagedLogs** | Pointer to **string** |  | [optional] 
+**ManagedLogsNumeric** | Pointer to **int32** |  | [optional] 
+**MemoryCardFailure** | Pointer to **string** |  | [optional] 
+**MemoryCardFailureNumeric** | Pointer to **int32** |  | [optional] 
+**MissingLunResponse** | Pointer to **string** |  | [optional] 
+**MissingLunResponseNumeric** | Pointer to **int32** |  | [optional] 
+**PartnerFirmwareUpgrade** | Pointer to **string** | Indicates whether automated update of firmware of other controller is enabled | [optional] 
+**PartnerFirmwareUpgradeNumeric** | Pointer to **int32** | Indicates whether automated update of firmware of other controller is enabled( In numeric form ) | [optional] 
+**PartnerNotify** | Pointer to **string** | Indicates whether the write-through trigger is enabled | [optional] 
+**PartnerNotifyNumeric** | Pointer to **int32** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
+**PcieHotplug** | Pointer to **string** |  | [optional] 
+**PcieHotplugNumeric** | Pointer to **int32** |  | [optional] 
+**PowerSupplyFailure** | Pointer to **string** | Indicates whether the write-through trigger is enabled | [optional] 
+**PowerSupplyFailureNumeric** | Pointer to **int32** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
+**RandomIoPerformanceOptimization** | Pointer to **string** |  | [optional] 
+**RandomIoPerformanceOptimizationNumeric** | Pointer to **int32** |  | [optional] 
+**Remanufacture** | Pointer to **string** |  | [optional] 
+**RemanufactureNumeric** | Pointer to **int32** |  | [optional] 
+**RestartOnCapiFail** | Pointer to **string** |  | [optional] 
+**RestartOnCapiFailNumeric** | Pointer to **int32** |  | [optional] 
+**ScrubSchedule** | Pointer to **string** |  | [optional] 
+**ScrubScheduleNumeric** | Pointer to **int32** |  | [optional] 
+**SingleController** | Pointer to **string** |  | [optional] 
+**SingleControllerNumeric** | Pointer to **int32** |  | [optional] 
+**SlotAffinity** | Pointer to **string** |  | [optional] 
+**SlotAffinityNumeric** | Pointer to **int32** |  | [optional] 
+**SlowDiskDetection** | Pointer to **string** |  | [optional] 
+**SlowDiskDetectionNumeric** | Pointer to **int32** |  | [optional] 
+**Smart** | Pointer to **string** |  | [optional] 
+**SmartNumeric** | Pointer to **int32** |  | [optional] 
+**SsdConcurrentAccess** | Pointer to **string** |  | [optional] 
+**SsdConcurrentAccessNumeric** | Pointer to **int32** |  | [optional] 
+**SuperCapFailure** | Pointer to **string** | Indicates whether the write-through trigger is enabled | [optional] 
+**SuperCapFailureNumeric** | Pointer to **int32** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
+**SyncCacheMode** | Pointer to **string** |  | [optional] 
+**SyncCacheModeNumeric** | Pointer to **int32** |  | [optional] 
+**TemperatureExceeded** | Pointer to **string** | Indicates whether the write-through trigger is enabled | [optional] 
+**TemperatureExceededNumeric** | Pointer to **int32** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
+**UtilityPriority** | Pointer to **string** | Configured processing priority for utilities | [optional] 
+**UtilityPriorityNumeric** | Pointer to **int32** | Configured processing priority for utilities( In numeric form ) | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ## Methods
 
@@ -179,20 +257,32 @@ HasAutoMap returns a boolean if a field has been set.
 
 ### GetAutoMapNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAutoMapNumeric returns the AutoMapNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoMapNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAutoMapNumericOk returns a tuple with the AutoMapNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoMapNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetAutoMapNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetAutoMapNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAutoMapNumeric sets AutoMapNumeric field to given value.
 
@@ -229,20 +319,32 @@ HasAutoStallRecovery returns a boolean if a field has been set.
 
 ### GetAutoStallRecoveryNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAutoStallRecoveryNumeric returns the AutoStallRecoveryNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoStallRecoveryNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAutoStallRecoveryNumericOk returns a tuple with the AutoStallRecoveryNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoStallRecoveryNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetAutoStallRecoveryNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetAutoStallRecoveryNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAutoStallRecoveryNumeric sets AutoStallRecoveryNumeric field to given value.
 
@@ -279,20 +381,32 @@ HasAutoUnmap returns a boolean if a field has been set.
 
 ### GetAutoUnmapNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAutoUnmapNumeric returns the AutoUnmapNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoUnmapNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAutoUnmapNumericOk returns a tuple with the AutoUnmapNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoUnmapNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetAutoUnmapNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetAutoUnmapNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAutoUnmapNumeric sets AutoUnmapNumeric field to given value.
 
@@ -329,20 +443,32 @@ HasAutoWriteBack returns a boolean if a field has been set.
 
 ### GetAutoWriteBackNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAutoWriteBackNumeric returns the AutoWriteBackNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoWriteBackNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAutoWriteBackNumericOk returns a tuple with the AutoWriteBackNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoWriteBackNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetAutoWriteBackNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetAutoWriteBackNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAutoWriteBackNumeric sets AutoWriteBackNumeric field to given value.
 
@@ -379,20 +505,32 @@ HasBackgroundScrub returns a boolean if a field has been set.
 
 ### GetBackgroundScrubInterval
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubInterval() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubInterval() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBackgroundScrubInterval returns the BackgroundScrubInterval field if non-nil, zero value otherwise.
 
 ### GetBackgroundScrubIntervalOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubIntervalOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubIntervalOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBackgroundScrubIntervalOk returns a tuple with the BackgroundScrubInterval field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBackgroundScrubInterval
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubInterval(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubInterval(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetBackgroundScrubInterval sets BackgroundScrubInterval field to given value.
 
@@ -404,20 +542,32 @@ HasBackgroundScrubInterval returns a boolean if a field has been set.
 
 ### GetBackgroundScrubNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBackgroundScrubNumeric returns the BackgroundScrubNumeric field if non-nil, zero value otherwise.
 
 ### GetBackgroundScrubNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetBackgroundScrubNumericOk returns a tuple with the BackgroundScrubNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBackgroundScrubNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetBackgroundScrubNumeric sets BackgroundScrubNumeric field to given value.
 
@@ -454,20 +604,32 @@ HasCacheFlushTimeout returns a boolean if a field has been set.
 
 ### GetCacheFlushTimeoutNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCacheFlushTimeoutNumeric returns the CacheFlushTimeoutNumeric field if non-nil, zero value otherwise.
 
 ### GetCacheFlushTimeoutNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetCacheFlushTimeoutNumericOk returns a tuple with the CacheFlushTimeoutNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheFlushTimeoutNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetCacheFlushTimeoutNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetCacheFlushTimeoutNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetCacheFlushTimeoutNumeric sets CacheFlushTimeoutNumeric field to given value.
 
@@ -504,20 +666,32 @@ HasControllerFailure returns a boolean if a field has been set.
 
 ### GetControllerFailureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerFailureNumeric returns the ControllerFailureNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerFailureNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerFailureNumericOk returns a tuple with the ControllerFailureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerFailureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetControllerFailureNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetControllerFailureNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetControllerFailureNumeric sets ControllerFailureNumeric field to given value.
 
@@ -554,20 +728,32 @@ HasDefaultMapping returns a boolean if a field has been set.
 
 ### GetDefaultMappingNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDefaultMappingNumeric returns the DefaultMappingNumeric field if non-nil, zero value otherwise.
 
 ### GetDefaultMappingNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDefaultMappingNumericOk returns a tuple with the DefaultMappingNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDefaultMappingNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetDefaultMappingNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetDefaultMappingNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDefaultMappingNumeric sets DefaultMappingNumeric field to given value.
 
@@ -604,20 +790,32 @@ HasDeleteOverride returns a boolean if a field has been set.
 
 ### GetDeleteOverrideNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDeleteOverrideNumeric returns the DeleteOverrideNumeric field if non-nil, zero value otherwise.
 
 ### GetDeleteOverrideNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDeleteOverrideNumericOk returns a tuple with the DeleteOverrideNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDeleteOverrideNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetDeleteOverrideNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetDeleteOverrideNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDeleteOverrideNumeric sets DeleteOverrideNumeric field to given value.
 
@@ -629,20 +827,32 @@ HasDeleteOverrideNumeric returns a boolean if a field has been set.
 
 ### GetDiskDsdDelay
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelay() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelay() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDiskDsdDelay returns the DiskDsdDelay field if non-nil, zero value otherwise.
 
 ### GetDiskDsdDelayOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelayOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelayOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDiskDsdDelayOk returns a tuple with the DiskDsdDelay field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskDsdDelay
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetDiskDsdDelay(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetDiskDsdDelay(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDiskDsdDelay sets DiskDsdDelay field to given value.
 
@@ -679,20 +889,32 @@ HasDiskDsdEnable returns a boolean if a field has been set.
 
 ### GetDiskDsdEnableNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDiskDsdEnableNumeric returns the DiskDsdEnableNumeric field if non-nil, zero value otherwise.
 
 ### GetDiskDsdEnableNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDiskDsdEnableNumericOk returns a tuple with the DiskDsdEnableNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskDsdEnableNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetDiskDsdEnableNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetDiskDsdEnableNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDiskDsdEnableNumeric sets DiskDsdEnableNumeric field to given value.
 
@@ -729,20 +951,32 @@ HasDiskFirmwareUpdate returns a boolean if a field has been set.
 
 ### GetDiskFirmwareUpdateNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDiskFirmwareUpdateNumeric returns the DiskFirmwareUpdateNumeric field if non-nil, zero value otherwise.
 
 ### GetDiskFirmwareUpdateNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDiskFirmwareUpdateNumericOk returns a tuple with the DiskFirmwareUpdateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskFirmwareUpdateNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetDiskFirmwareUpdateNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetDiskFirmwareUpdateNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDiskFirmwareUpdateNumeric sets DiskFirmwareUpdateNumeric field to given value.
 
@@ -829,20 +1063,32 @@ HasFanFailure returns a boolean if a field has been set.
 
 ### GetFanFailureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFanFailureNumeric returns the FanFailureNumeric field if non-nil, zero value otherwise.
 
 ### GetFanFailureNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetFanFailureNumericOk returns a tuple with the FanFailureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFanFailureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetFanFailureNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetFanFailureNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetFanFailureNumeric sets FanFailureNumeric field to given value.
 
@@ -879,20 +1125,32 @@ HasHedgedReadsTimeout returns a boolean if a field has been set.
 
 ### GetHedgedReadsTimeoutNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHedgedReadsTimeoutNumeric returns the HedgedReadsTimeoutNumeric field if non-nil, zero value otherwise.
 
 ### GetHedgedReadsTimeoutNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHedgedReadsTimeoutNumericOk returns a tuple with the HedgedReadsTimeoutNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHedgedReadsTimeoutNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetHedgedReadsTimeoutNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetHedgedReadsTimeoutNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHedgedReadsTimeoutNumeric sets HedgedReadsTimeoutNumeric field to given value.
 
@@ -929,20 +1187,32 @@ HasHostCacheControl returns a boolean if a field has been set.
 
 ### GetHostCacheControlNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostCacheControlNumeric returns the HostCacheControlNumeric field if non-nil, zero value otherwise.
 
 ### GetHostCacheControlNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostCacheControlNumericOk returns a tuple with the HostCacheControlNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostCacheControlNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetHostCacheControlNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetHostCacheControlNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHostCacheControlNumeric sets HostCacheControlNumeric field to given value.
 
@@ -979,20 +1249,32 @@ HasIndependentCache returns a boolean if a field has been set.
 
 ### GetIndependentCacheNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetIndependentCacheNumeric returns the IndependentCacheNumeric field if non-nil, zero value otherwise.
 
 ### GetIndependentCacheNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetIndependentCacheNumericOk returns a tuple with the IndependentCacheNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIndependentCacheNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetIndependentCacheNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetIndependentCacheNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetIndependentCacheNumeric sets IndependentCacheNumeric field to given value.
 
@@ -1029,20 +1311,32 @@ HasLargePools returns a boolean if a field has been set.
 
 ### GetLargePoolsNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLargePoolsNumeric returns the LargePoolsNumeric field if non-nil, zero value otherwise.
 
 ### GetLargePoolsNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLargePoolsNumericOk returns a tuple with the LargePoolsNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLargePoolsNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetLargePoolsNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetLargePoolsNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetLargePoolsNumeric sets LargePoolsNumeric field to given value.
 
@@ -1079,20 +1373,32 @@ HasManagedLogs returns a boolean if a field has been set.
 
 ### GetManagedLogsNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetManagedLogsNumeric returns the ManagedLogsNumeric field if non-nil, zero value otherwise.
 
 ### GetManagedLogsNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetManagedLogsNumericOk returns a tuple with the ManagedLogsNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetManagedLogsNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetManagedLogsNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetManagedLogsNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetManagedLogsNumeric sets ManagedLogsNumeric field to given value.
 
@@ -1129,20 +1435,32 @@ HasMemoryCardFailure returns a boolean if a field has been set.
 
 ### GetMemoryCardFailureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMemoryCardFailureNumeric returns the MemoryCardFailureNumeric field if non-nil, zero value otherwise.
 
 ### GetMemoryCardFailureNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMemoryCardFailureNumericOk returns a tuple with the MemoryCardFailureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemoryCardFailureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetMemoryCardFailureNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetMemoryCardFailureNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMemoryCardFailureNumeric sets MemoryCardFailureNumeric field to given value.
 
@@ -1179,20 +1497,32 @@ HasMissingLunResponse returns a boolean if a field has been set.
 
 ### GetMissingLunResponseNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMissingLunResponseNumeric returns the MissingLunResponseNumeric field if non-nil, zero value otherwise.
 
 ### GetMissingLunResponseNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetMissingLunResponseNumericOk returns a tuple with the MissingLunResponseNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMissingLunResponseNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetMissingLunResponseNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetMissingLunResponseNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetMissingLunResponseNumeric sets MissingLunResponseNumeric field to given value.
 
@@ -1229,20 +1559,32 @@ HasPartnerFirmwareUpgrade returns a boolean if a field has been set.
 
 ### GetPartnerFirmwareUpgradeNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPartnerFirmwareUpgradeNumeric returns the PartnerFirmwareUpgradeNumeric field if non-nil, zero value otherwise.
 
 ### GetPartnerFirmwareUpgradeNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPartnerFirmwareUpgradeNumericOk returns a tuple with the PartnerFirmwareUpgradeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPartnerFirmwareUpgradeNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetPartnerFirmwareUpgradeNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetPartnerFirmwareUpgradeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPartnerFirmwareUpgradeNumeric sets PartnerFirmwareUpgradeNumeric field to given value.
 
@@ -1279,20 +1621,32 @@ HasPartnerNotify returns a boolean if a field has been set.
 
 ### GetPartnerNotifyNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPartnerNotifyNumeric returns the PartnerNotifyNumeric field if non-nil, zero value otherwise.
 
 ### GetPartnerNotifyNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPartnerNotifyNumericOk returns a tuple with the PartnerNotifyNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPartnerNotifyNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetPartnerNotifyNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetPartnerNotifyNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPartnerNotifyNumeric sets PartnerNotifyNumeric field to given value.
 
@@ -1329,20 +1683,32 @@ HasPcieHotplug returns a boolean if a field has been set.
 
 ### GetPcieHotplugNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPcieHotplugNumeric returns the PcieHotplugNumeric field if non-nil, zero value otherwise.
 
 ### GetPcieHotplugNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPcieHotplugNumericOk returns a tuple with the PcieHotplugNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPcieHotplugNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetPcieHotplugNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetPcieHotplugNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPcieHotplugNumeric sets PcieHotplugNumeric field to given value.
 
@@ -1379,20 +1745,32 @@ HasPowerSupplyFailure returns a boolean if a field has been set.
 
 ### GetPowerSupplyFailureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPowerSupplyFailureNumeric returns the PowerSupplyFailureNumeric field if non-nil, zero value otherwise.
 
 ### GetPowerSupplyFailureNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPowerSupplyFailureNumericOk returns a tuple with the PowerSupplyFailureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPowerSupplyFailureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetPowerSupplyFailureNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetPowerSupplyFailureNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPowerSupplyFailureNumeric sets PowerSupplyFailureNumeric field to given value.
 
@@ -1429,20 +1807,32 @@ HasRandomIoPerformanceOptimization returns a boolean if a field has been set.
 
 ### GetRandomIoPerformanceOptimizationNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRandomIoPerformanceOptimizationNumeric returns the RandomIoPerformanceOptimizationNumeric field if non-nil, zero value otherwise.
 
 ### GetRandomIoPerformanceOptimizationNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRandomIoPerformanceOptimizationNumericOk returns a tuple with the RandomIoPerformanceOptimizationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRandomIoPerformanceOptimizationNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetRandomIoPerformanceOptimizationNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetRandomIoPerformanceOptimizationNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRandomIoPerformanceOptimizationNumeric sets RandomIoPerformanceOptimizationNumeric field to given value.
 
@@ -1479,20 +1869,32 @@ HasRemanufacture returns a boolean if a field has been set.
 
 ### GetRemanufactureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRemanufactureNumeric returns the RemanufactureNumeric field if non-nil, zero value otherwise.
 
 ### GetRemanufactureNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRemanufactureNumericOk returns a tuple with the RemanufactureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRemanufactureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetRemanufactureNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetRemanufactureNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRemanufactureNumeric sets RemanufactureNumeric field to given value.
 
@@ -1529,20 +1931,32 @@ HasRestartOnCapiFail returns a boolean if a field has been set.
 
 ### GetRestartOnCapiFailNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRestartOnCapiFailNumeric returns the RestartOnCapiFailNumeric field if non-nil, zero value otherwise.
 
 ### GetRestartOnCapiFailNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetRestartOnCapiFailNumericOk returns a tuple with the RestartOnCapiFailNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRestartOnCapiFailNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetRestartOnCapiFailNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetRestartOnCapiFailNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetRestartOnCapiFailNumeric sets RestartOnCapiFailNumeric field to given value.
 
@@ -1579,20 +1993,32 @@ HasScrubSchedule returns a boolean if a field has been set.
 
 ### GetScrubScheduleNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetScrubScheduleNumeric returns the ScrubScheduleNumeric field if non-nil, zero value otherwise.
 
 ### GetScrubScheduleNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetScrubScheduleNumericOk returns a tuple with the ScrubScheduleNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScrubScheduleNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetScrubScheduleNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetScrubScheduleNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetScrubScheduleNumeric sets ScrubScheduleNumeric field to given value.
 
@@ -1629,20 +2055,32 @@ HasSingleController returns a boolean if a field has been set.
 
 ### GetSingleControllerNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSingleControllerNumeric returns the SingleControllerNumeric field if non-nil, zero value otherwise.
 
 ### GetSingleControllerNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSingleControllerNumericOk returns a tuple with the SingleControllerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSingleControllerNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetSingleControllerNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetSingleControllerNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSingleControllerNumeric sets SingleControllerNumeric field to given value.
 
@@ -1679,20 +2117,32 @@ HasSlotAffinity returns a boolean if a field has been set.
 
 ### GetSlotAffinityNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSlotAffinityNumeric returns the SlotAffinityNumeric field if non-nil, zero value otherwise.
 
 ### GetSlotAffinityNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSlotAffinityNumericOk returns a tuple with the SlotAffinityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlotAffinityNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetSlotAffinityNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetSlotAffinityNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSlotAffinityNumeric sets SlotAffinityNumeric field to given value.
 
@@ -1729,20 +2179,32 @@ HasSlowDiskDetection returns a boolean if a field has been set.
 
 ### GetSlowDiskDetectionNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSlowDiskDetectionNumeric returns the SlowDiskDetectionNumeric field if non-nil, zero value otherwise.
 
 ### GetSlowDiskDetectionNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSlowDiskDetectionNumericOk returns a tuple with the SlowDiskDetectionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlowDiskDetectionNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetSlowDiskDetectionNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetSlowDiskDetectionNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSlowDiskDetectionNumeric sets SlowDiskDetectionNumeric field to given value.
 
@@ -1779,20 +2241,32 @@ HasSmart returns a boolean if a field has been set.
 
 ### GetSmartNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSmartNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSmartNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSmartNumeric returns the SmartNumeric field if non-nil, zero value otherwise.
 
 ### GetSmartNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSmartNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSmartNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSmartNumericOk returns a tuple with the SmartNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSmartNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetSmartNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetSmartNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSmartNumeric sets SmartNumeric field to given value.
 
@@ -1829,20 +2303,32 @@ HasSsdConcurrentAccess returns a boolean if a field has been set.
 
 ### GetSsdConcurrentAccessNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSsdConcurrentAccessNumeric returns the SsdConcurrentAccessNumeric field if non-nil, zero value otherwise.
 
 ### GetSsdConcurrentAccessNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSsdConcurrentAccessNumericOk returns a tuple with the SsdConcurrentAccessNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSsdConcurrentAccessNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetSsdConcurrentAccessNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetSsdConcurrentAccessNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSsdConcurrentAccessNumeric sets SsdConcurrentAccessNumeric field to given value.
 
@@ -1879,20 +2365,32 @@ HasSuperCapFailure returns a boolean if a field has been set.
 
 ### GetSuperCapFailureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSuperCapFailureNumeric returns the SuperCapFailureNumeric field if non-nil, zero value otherwise.
 
 ### GetSuperCapFailureNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSuperCapFailureNumericOk returns a tuple with the SuperCapFailureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSuperCapFailureNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetSuperCapFailureNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetSuperCapFailureNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSuperCapFailureNumeric sets SuperCapFailureNumeric field to given value.
 
@@ -1929,20 +2427,32 @@ HasSyncCacheMode returns a boolean if a field has been set.
 
 ### GetSyncCacheModeNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSyncCacheModeNumeric returns the SyncCacheModeNumeric field if non-nil, zero value otherwise.
 
 ### GetSyncCacheModeNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSyncCacheModeNumericOk returns a tuple with the SyncCacheModeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSyncCacheModeNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetSyncCacheModeNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetSyncCacheModeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSyncCacheModeNumeric sets SyncCacheModeNumeric field to given value.
 
@@ -1979,20 +2489,32 @@ HasTemperatureExceeded returns a boolean if a field has been set.
 
 ### GetTemperatureExceededNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTemperatureExceededNumeric returns the TemperatureExceededNumeric field if non-nil, zero value otherwise.
 
 ### GetTemperatureExceededNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetTemperatureExceededNumericOk returns a tuple with the TemperatureExceededNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTemperatureExceededNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetTemperatureExceededNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetTemperatureExceededNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetTemperatureExceededNumeric sets TemperatureExceededNumeric field to given value.
 
@@ -2029,20 +2551,32 @@ HasUtilityPriority returns a boolean if a field has been set.
 
 ### GetUtilityPriorityNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumeric() int64`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetUtilityPriorityNumeric returns the UtilityPriorityNumeric field if non-nil, zero value otherwise.
 
 ### GetUtilityPriorityNumericOk
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumericOk() (*int64, bool)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetUtilityPriorityNumericOk returns a tuple with the UtilityPriorityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUtilityPriorityNumeric
 
+<<<<<<< HEAD
 `func (o *AdvancedSettingsTableResourceInner) SetUtilityPriorityNumeric(v int64)`
+=======
+`func (o *AdvancedSettingsTableResourceInner) SetUtilityPriorityNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetUtilityPriorityNumeric sets UtilityPriorityNumeric field to given value.
 

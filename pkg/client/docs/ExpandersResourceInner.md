@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **DomId** | Pointer to **int64** |  | [optional] 
 **DrawerId** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
@@ -14,14 +15,30 @@ Name | Type | Description | Notes
 **FwRevision** | Pointer to **string** | Firmware version of the FRU | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
 **HealthNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**DomId** | Pointer to **int32** |  | [optional] 
+**DrawerId** | Pointer to **int32** |  | [optional] 
+**DurableId** | Pointer to **string** |  | [optional] 
+**EnclosureId** | Pointer to **int32** |  | [optional] 
+**ExtendedStatus** | Pointer to **string** | Extended status (bits) | [optional] 
+**FwRevision** | Pointer to **string** | Firmware version of the FRU | [optional] 
+**Health** | Pointer to **string** |  | [optional] 
+**HealthNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **Location** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **PathId** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **PathIdNumeric** | Pointer to **int64** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 **StatusNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**PathIdNumeric** | Pointer to **int32** |  | [optional] 
+**Status** | Pointer to **string** |  | [optional] 
+**StatusNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ## Methods
 
@@ -94,20 +111,32 @@ HasMeta returns a boolean if a field has been set.
 
 ### GetDomId
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetDomId() int64`
+=======
+`func (o *ExpandersResourceInner) GetDomId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDomId returns the DomId field if non-nil, zero value otherwise.
 
 ### GetDomIdOk
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetDomIdOk() (*int64, bool)`
+=======
+`func (o *ExpandersResourceInner) GetDomIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDomIdOk returns a tuple with the DomId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDomId
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) SetDomId(v int64)`
+=======
+`func (o *ExpandersResourceInner) SetDomId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDomId sets DomId field to given value.
 
@@ -119,20 +148,32 @@ HasDomId returns a boolean if a field has been set.
 
 ### GetDrawerId
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetDrawerId() int64`
+=======
+`func (o *ExpandersResourceInner) GetDrawerId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDrawerId returns the DrawerId field if non-nil, zero value otherwise.
 
 ### GetDrawerIdOk
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetDrawerIdOk() (*int64, bool)`
+=======
+`func (o *ExpandersResourceInner) GetDrawerIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDrawerIdOk returns a tuple with the DrawerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDrawerId
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) SetDrawerId(v int64)`
+=======
+`func (o *ExpandersResourceInner) SetDrawerId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDrawerId sets DrawerId field to given value.
 
@@ -169,20 +210,32 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetEnclosureId
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetEnclosureId() int64`
+=======
+`func (o *ExpandersResourceInner) GetEnclosureId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureId returns the EnclosureId field if non-nil, zero value otherwise.
 
 ### GetEnclosureIdOk
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetEnclosureIdOk() (*int64, bool)`
+=======
+`func (o *ExpandersResourceInner) GetEnclosureIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureIdOk returns a tuple with the EnclosureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureId
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) SetEnclosureId(v int64)`
+=======
+`func (o *ExpandersResourceInner) SetEnclosureId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetEnclosureId sets EnclosureId field to given value.
 
@@ -269,20 +322,32 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetHealthNumeric() int64`
+=======
+`func (o *ExpandersResourceInner) GetHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetHealthNumericOk() (*int64, bool)`
+=======
+`func (o *ExpandersResourceInner) GetHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) SetHealthNumeric(v int64)`
+=======
+`func (o *ExpandersResourceInner) SetHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -419,20 +484,32 @@ HasPathId returns a boolean if a field has been set.
 
 ### GetPathIdNumeric
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetPathIdNumeric() int64`
+=======
+`func (o *ExpandersResourceInner) GetPathIdNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPathIdNumeric returns the PathIdNumeric field if non-nil, zero value otherwise.
 
 ### GetPathIdNumericOk
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetPathIdNumericOk() (*int64, bool)`
+=======
+`func (o *ExpandersResourceInner) GetPathIdNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPathIdNumericOk returns a tuple with the PathIdNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPathIdNumeric
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) SetPathIdNumeric(v int64)`
+=======
+`func (o *ExpandersResourceInner) SetPathIdNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPathIdNumeric sets PathIdNumeric field to given value.
 
@@ -469,20 +546,32 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetStatusNumeric() int64`
+=======
+`func (o *ExpandersResourceInner) GetStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) GetStatusNumericOk() (*int64, bool)`
+=======
+`func (o *ExpandersResourceInner) GetStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *ExpandersResourceInner) SetStatusNumeric(v int64)`
+=======
+`func (o *ExpandersResourceInner) SetStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStatusNumeric sets StatusNumeric field to given value.
 

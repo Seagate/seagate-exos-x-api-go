@@ -37,7 +37,11 @@ type OptionInformation struct {
 type CommandInformation struct {
 	Path    string              `yaml:"path"`    // The command path, such as '/show/system'
 	Meta    string              `yaml:"meta"`    // The meta resource, which may be different from the main command name, such as 'drives'
+<<<<<<< HEAD
 	Include []string            `yaml:"include"` // When a response object includes other response types at the root level, such as 'status'
+=======
+	Include string              `yaml:"include"` // When a response object includes other response types at the root level, such as 'status'
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	Nested  []NestedMeta        `yaml:"nested"`  // When one or more response objects are nested into the main response object, such as 'redundancy' is nested under 'system'
 	Options []OptionInformation `yaml:"options"` // One or more command line options
 }

@@ -409,11 +409,14 @@ func (c *APIClient) prepareRequest(
 
 		// Walk through any authentication.
 
+<<<<<<< HEAD
 		// Basic HTTP Authentication
 		if auth, ok := ctx.Value(ContextBasicAuth).(BasicAuth); ok {
 			localVarRequest.SetBasicAuth(auth.UserName, auth.Password)
 		}
 
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	}
 
 	for header, value := range c.cfg.DefaultHeader {

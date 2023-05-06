@@ -23,17 +23,26 @@ type SystemResourceInner struct {
 	Meta                     *string `json:"meta,omitempty"`
 	ConfigurationSelector    *string `json:"configuration-selector,omitempty"`
 	CurrentNodeWwn           *string `json:"current-node-wwn,omitempty"`
+<<<<<<< HEAD
 	EnclosureCount           *int64  `json:"enclosure-count,omitempty"`
 	FdeSecurityStatus        *string `json:"fde-security-status,omitempty"`
 	FdeSecurityStatusNumeric *int64  `json:"fde-security-status-numeric,omitempty"`
 	Health                   *string `json:"health,omitempty"`
 	HealthNumeric            *int64  `json:"health-numeric,omitempty"`
+=======
+	EnclosureCount           *int32  `json:"enclosure-count,omitempty"`
+	FdeSecurityStatus        *string `json:"fde-security-status,omitempty"`
+	FdeSecurityStatusNumeric *int32  `json:"fde-security-status-numeric,omitempty"`
+	Health                   *string `json:"health,omitempty"`
+	HealthNumeric            *int32  `json:"health-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	HealthReason             *string `json:"health-reason,omitempty"`
 	// Serial number of the enclosure
 	MidplaneSerialNumber *string `json:"midplane-serial-number,omitempty"`
 	// Identifies the availability of the partner MC
 	OtherMCStatus *string `json:"other-MC-status,omitempty"`
 	// Identifies the availability of the partner MC( In numeric form )
+<<<<<<< HEAD
 	OtherMCStatusNumeric *int64  `json:"other-MC-status-numeric,omitempty"`
 	PfuStatus            *string `json:"pfuStatus,omitempty"`
 	PfuStatusNumeric     *int64  `json:"pfuStatus-numeric,omitempty"`
@@ -45,6 +54,19 @@ type SystemResourceInner struct {
 	PlatformType *string `json:"platform-type,omitempty"`
 	// HW Platform Type( In numeric form )
 	PlatformTypeNumeric *int64  `json:"platform-type-numeric,omitempty"`
+=======
+	OtherMCStatusNumeric *int32  `json:"other-MC-status-numeric,omitempty"`
+	PfuStatus            *string `json:"pfuStatus,omitempty"`
+	PfuStatusNumeric     *int32  `json:"pfuStatus-numeric,omitempty"`
+	// HW Platform Brand
+	PlatformBrand *string `json:"platform-brand,omitempty"`
+	// HW Platform Brand( In numeric form )
+	PlatformBrandNumeric *int32 `json:"platform-brand-numeric,omitempty"`
+	// HW Platform Type
+	PlatformType *string `json:"platform-type,omitempty"`
+	// HW Platform Type( In numeric form )
+	PlatformTypeNumeric *int32  `json:"platform-type-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	ProductBrand        *string `json:"product-brand,omitempty"`
 	ProductId           *string `json:"product-id,omitempty"`
 	// SCSI Product ID
@@ -52,7 +74,11 @@ type SystemResourceInner struct {
 	// SCSI vendor name
 	ScsiVendorId                    *string `json:"scsi-vendor-id,omitempty"`
 	SecuritySystemManagement        *string `json:"security-system-management,omitempty"`
+<<<<<<< HEAD
 	SecuritySystemManagementNumeric *int64  `json:"security-system-management-numeric,omitempty"`
+=======
+	SecuritySystemManagementNumeric *int32  `json:"security-system-management-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	SupportedLocales                *string `json:"supported-locales,omitempty"`
 	// User-defined contact for this system
 	SystemContact     *string `json:"system-contact,omitempty"`
@@ -213,9 +239,15 @@ func (o *SystemResourceInner) SetCurrentNodeWwn(v string) {
 }
 
 // GetEnclosureCount returns the EnclosureCount field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetEnclosureCount() int64 {
 	if o == nil || IsNil(o.EnclosureCount) {
 		var ret int64
+=======
+func (o *SystemResourceInner) GetEnclosureCount() int32 {
+	if o == nil || IsNil(o.EnclosureCount) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.EnclosureCount
@@ -223,7 +255,11 @@ func (o *SystemResourceInner) GetEnclosureCount() int64 {
 
 // GetEnclosureCountOk returns a tuple with the EnclosureCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetEnclosureCountOk() (*int64, bool) {
+=======
+func (o *SystemResourceInner) GetEnclosureCountOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.EnclosureCount) {
 		return nil, false
 	}
@@ -239,8 +275,13 @@ func (o *SystemResourceInner) HasEnclosureCount() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetEnclosureCount gets a reference to the given int64 and assigns it to the EnclosureCount field.
 func (o *SystemResourceInner) SetEnclosureCount(v int64) {
+=======
+// SetEnclosureCount gets a reference to the given int32 and assigns it to the EnclosureCount field.
+func (o *SystemResourceInner) SetEnclosureCount(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.EnclosureCount = &v
 }
 
@@ -277,9 +318,15 @@ func (o *SystemResourceInner) SetFdeSecurityStatus(v string) {
 }
 
 // GetFdeSecurityStatusNumeric returns the FdeSecurityStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetFdeSecurityStatusNumeric() int64 {
 	if o == nil || IsNil(o.FdeSecurityStatusNumeric) {
 		var ret int64
+=======
+func (o *SystemResourceInner) GetFdeSecurityStatusNumeric() int32 {
+	if o == nil || IsNil(o.FdeSecurityStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.FdeSecurityStatusNumeric
@@ -287,7 +334,11 @@ func (o *SystemResourceInner) GetFdeSecurityStatusNumeric() int64 {
 
 // GetFdeSecurityStatusNumericOk returns a tuple with the FdeSecurityStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetFdeSecurityStatusNumericOk() (*int64, bool) {
+=======
+func (o *SystemResourceInner) GetFdeSecurityStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.FdeSecurityStatusNumeric) {
 		return nil, false
 	}
@@ -303,8 +354,13 @@ func (o *SystemResourceInner) HasFdeSecurityStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetFdeSecurityStatusNumeric gets a reference to the given int64 and assigns it to the FdeSecurityStatusNumeric field.
 func (o *SystemResourceInner) SetFdeSecurityStatusNumeric(v int64) {
+=======
+// SetFdeSecurityStatusNumeric gets a reference to the given int32 and assigns it to the FdeSecurityStatusNumeric field.
+func (o *SystemResourceInner) SetFdeSecurityStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.FdeSecurityStatusNumeric = &v
 }
 
@@ -341,9 +397,15 @@ func (o *SystemResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
+=======
+func (o *SystemResourceInner) GetHealthNumeric() int32 {
+	if o == nil || IsNil(o.HealthNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.HealthNumeric
@@ -351,7 +413,11 @@ func (o *SystemResourceInner) GetHealthNumeric() int64 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetHealthNumericOk() (*int64, bool) {
+=======
+func (o *SystemResourceInner) GetHealthNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -367,8 +433,13 @@ func (o *SystemResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
 func (o *SystemResourceInner) SetHealthNumeric(v int64) {
+=======
+// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
+func (o *SystemResourceInner) SetHealthNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.HealthNumeric = &v
 }
 
@@ -469,9 +540,15 @@ func (o *SystemResourceInner) SetOtherMCStatus(v string) {
 }
 
 // GetOtherMCStatusNumeric returns the OtherMCStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetOtherMCStatusNumeric() int64 {
 	if o == nil || IsNil(o.OtherMCStatusNumeric) {
 		var ret int64
+=======
+func (o *SystemResourceInner) GetOtherMCStatusNumeric() int32 {
+	if o == nil || IsNil(o.OtherMCStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.OtherMCStatusNumeric
@@ -479,7 +556,11 @@ func (o *SystemResourceInner) GetOtherMCStatusNumeric() int64 {
 
 // GetOtherMCStatusNumericOk returns a tuple with the OtherMCStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetOtherMCStatusNumericOk() (*int64, bool) {
+=======
+func (o *SystemResourceInner) GetOtherMCStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.OtherMCStatusNumeric) {
 		return nil, false
 	}
@@ -495,8 +576,13 @@ func (o *SystemResourceInner) HasOtherMCStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetOtherMCStatusNumeric gets a reference to the given int64 and assigns it to the OtherMCStatusNumeric field.
 func (o *SystemResourceInner) SetOtherMCStatusNumeric(v int64) {
+=======
+// SetOtherMCStatusNumeric gets a reference to the given int32 and assigns it to the OtherMCStatusNumeric field.
+func (o *SystemResourceInner) SetOtherMCStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.OtherMCStatusNumeric = &v
 }
 
@@ -533,9 +619,15 @@ func (o *SystemResourceInner) SetPfuStatus(v string) {
 }
 
 // GetPfuStatusNumeric returns the PfuStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetPfuStatusNumeric() int64 {
 	if o == nil || IsNil(o.PfuStatusNumeric) {
 		var ret int64
+=======
+func (o *SystemResourceInner) GetPfuStatusNumeric() int32 {
+	if o == nil || IsNil(o.PfuStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PfuStatusNumeric
@@ -543,7 +635,11 @@ func (o *SystemResourceInner) GetPfuStatusNumeric() int64 {
 
 // GetPfuStatusNumericOk returns a tuple with the PfuStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetPfuStatusNumericOk() (*int64, bool) {
+=======
+func (o *SystemResourceInner) GetPfuStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PfuStatusNumeric) {
 		return nil, false
 	}
@@ -559,8 +655,13 @@ func (o *SystemResourceInner) HasPfuStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPfuStatusNumeric gets a reference to the given int64 and assigns it to the PfuStatusNumeric field.
 func (o *SystemResourceInner) SetPfuStatusNumeric(v int64) {
+=======
+// SetPfuStatusNumeric gets a reference to the given int32 and assigns it to the PfuStatusNumeric field.
+func (o *SystemResourceInner) SetPfuStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PfuStatusNumeric = &v
 }
 
@@ -597,9 +698,15 @@ func (o *SystemResourceInner) SetPlatformBrand(v string) {
 }
 
 // GetPlatformBrandNumeric returns the PlatformBrandNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetPlatformBrandNumeric() int64 {
 	if o == nil || IsNil(o.PlatformBrandNumeric) {
 		var ret int64
+=======
+func (o *SystemResourceInner) GetPlatformBrandNumeric() int32 {
+	if o == nil || IsNil(o.PlatformBrandNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PlatformBrandNumeric
@@ -607,7 +714,11 @@ func (o *SystemResourceInner) GetPlatformBrandNumeric() int64 {
 
 // GetPlatformBrandNumericOk returns a tuple with the PlatformBrandNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetPlatformBrandNumericOk() (*int64, bool) {
+=======
+func (o *SystemResourceInner) GetPlatformBrandNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PlatformBrandNumeric) {
 		return nil, false
 	}
@@ -623,8 +734,13 @@ func (o *SystemResourceInner) HasPlatformBrandNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPlatformBrandNumeric gets a reference to the given int64 and assigns it to the PlatformBrandNumeric field.
 func (o *SystemResourceInner) SetPlatformBrandNumeric(v int64) {
+=======
+// SetPlatformBrandNumeric gets a reference to the given int32 and assigns it to the PlatformBrandNumeric field.
+func (o *SystemResourceInner) SetPlatformBrandNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PlatformBrandNumeric = &v
 }
 
@@ -661,9 +777,15 @@ func (o *SystemResourceInner) SetPlatformType(v string) {
 }
 
 // GetPlatformTypeNumeric returns the PlatformTypeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetPlatformTypeNumeric() int64 {
 	if o == nil || IsNil(o.PlatformTypeNumeric) {
 		var ret int64
+=======
+func (o *SystemResourceInner) GetPlatformTypeNumeric() int32 {
+	if o == nil || IsNil(o.PlatformTypeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.PlatformTypeNumeric
@@ -671,7 +793,11 @@ func (o *SystemResourceInner) GetPlatformTypeNumeric() int64 {
 
 // GetPlatformTypeNumericOk returns a tuple with the PlatformTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetPlatformTypeNumericOk() (*int64, bool) {
+=======
+func (o *SystemResourceInner) GetPlatformTypeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.PlatformTypeNumeric) {
 		return nil, false
 	}
@@ -687,8 +813,13 @@ func (o *SystemResourceInner) HasPlatformTypeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetPlatformTypeNumeric gets a reference to the given int64 and assigns it to the PlatformTypeNumeric field.
 func (o *SystemResourceInner) SetPlatformTypeNumeric(v int64) {
+=======
+// SetPlatformTypeNumeric gets a reference to the given int32 and assigns it to the PlatformTypeNumeric field.
+func (o *SystemResourceInner) SetPlatformTypeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.PlatformTypeNumeric = &v
 }
 
@@ -853,9 +984,15 @@ func (o *SystemResourceInner) SetSecuritySystemManagement(v string) {
 }
 
 // GetSecuritySystemManagementNumeric returns the SecuritySystemManagementNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetSecuritySystemManagementNumeric() int64 {
 	if o == nil || IsNil(o.SecuritySystemManagementNumeric) {
 		var ret int64
+=======
+func (o *SystemResourceInner) GetSecuritySystemManagementNumeric() int32 {
+	if o == nil || IsNil(o.SecuritySystemManagementNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SecuritySystemManagementNumeric
@@ -863,7 +1000,11 @@ func (o *SystemResourceInner) GetSecuritySystemManagementNumeric() int64 {
 
 // GetSecuritySystemManagementNumericOk returns a tuple with the SecuritySystemManagementNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *SystemResourceInner) GetSecuritySystemManagementNumericOk() (*int64, bool) {
+=======
+func (o *SystemResourceInner) GetSecuritySystemManagementNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SecuritySystemManagementNumeric) {
 		return nil, false
 	}
@@ -879,8 +1020,13 @@ func (o *SystemResourceInner) HasSecuritySystemManagementNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSecuritySystemManagementNumeric gets a reference to the given int64 and assigns it to the SecuritySystemManagementNumeric field.
 func (o *SystemResourceInner) SetSecuritySystemManagementNumeric(v int64) {
+=======
+// SetSecuritySystemManagementNumeric gets a reference to the given int32 and assigns it to the SecuritySystemManagementNumeric field.
+func (o *SystemResourceInner) SetSecuritySystemManagementNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SecuritySystemManagementNumeric = &v
 }
 

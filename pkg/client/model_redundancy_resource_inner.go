@@ -23,23 +23,39 @@ type RedundancyResourceInner struct {
 	Meta                     *string `json:"meta,omitempty"`
 	ControllerASerialNumber  *string `json:"controller-a-serial-number,omitempty"`
 	ControllerAStatus        *string `json:"controller-a-status,omitempty"`
+<<<<<<< HEAD
 	ControllerAStatusNumeric *int64  `json:"controller-a-status-numeric,omitempty"`
 	ControllerBSerialNumber  *string `json:"controller-b-serial-number,omitempty"`
 	ControllerBStatus        *string `json:"controller-b-status,omitempty"`
 	ControllerBStatusNumeric *int64  `json:"controller-b-status-numeric,omitempty"`
 	LocalReady               *string `json:"local-ready,omitempty"`
 	LocalReadyNumeric        *int64  `json:"local-ready-numeric,omitempty"`
+=======
+	ControllerAStatusNumeric *int32  `json:"controller-a-status-numeric,omitempty"`
+	ControllerBSerialNumber  *string `json:"controller-b-serial-number,omitempty"`
+	ControllerBStatus        *string `json:"controller-b-status,omitempty"`
+	ControllerBStatusNumeric *int32  `json:"controller-b-status-numeric,omitempty"`
+	LocalReady               *string `json:"local-ready,omitempty"`
+	LocalReadyNumeric        *int32  `json:"local-ready-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	LocalReason              *string `json:"local-reason,omitempty"`
 	// Identifies the availability of the partner MC
 	OtherMCStatus *string `json:"other-MC-status,omitempty"`
 	// Identifies the availability of the partner MC( In numeric form )
+<<<<<<< HEAD
 	OtherMCStatusNumeric *int64  `json:"other-MC-status-numeric,omitempty"`
 	OtherReady           *string `json:"other-ready,omitempty"`
 	OtherReadyNumeric    *int64  `json:"other-ready-numeric,omitempty"`
+=======
+	OtherMCStatusNumeric *int32  `json:"other-MC-status-numeric,omitempty"`
+	OtherReady           *string `json:"other-ready,omitempty"`
+	OtherReadyNumeric    *int32  `json:"other-ready-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	OtherReason          *string `json:"other-reason,omitempty"`
 	// Mode in which the controllers are operating
 	RedundancyMode *string `json:"redundancy-mode,omitempty"`
 	// Mode in which the controllers are operating( In numeric form )
+<<<<<<< HEAD
 	RedundancyModeNumeric *int64 `json:"redundancy-mode-numeric,omitempty"`
 	// Current operational state of the controllers
 	RedundancyStatus *string `json:"redundancy-status,omitempty"`
@@ -47,6 +63,15 @@ type RedundancyResourceInner struct {
 	RedundancyStatusNumeric *int64  `json:"redundancy-status-numeric,omitempty"`
 	SystemReady             *string `json:"system-ready,omitempty"`
 	SystemReadyNumeric      *int64  `json:"system-ready-numeric,omitempty"`
+=======
+	RedundancyModeNumeric *int32 `json:"redundancy-mode-numeric,omitempty"`
+	// Current operational state of the controllers
+	RedundancyStatus *string `json:"redundancy-status,omitempty"`
+	// Current operational state of the controllers( In numeric form )
+	RedundancyStatusNumeric *int32  `json:"redundancy-status-numeric,omitempty"`
+	SystemReady             *string `json:"system-ready,omitempty"`
+	SystemReadyNumeric      *int32  `json:"system-ready-numeric,omitempty"`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 }
 
 // NewRedundancyResourceInner instantiates a new RedundancyResourceInner object
@@ -195,9 +220,15 @@ func (o *RedundancyResourceInner) SetControllerAStatus(v string) {
 }
 
 // GetControllerAStatusNumeric returns the ControllerAStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetControllerAStatusNumeric() int64 {
 	if o == nil || IsNil(o.ControllerAStatusNumeric) {
 		var ret int64
+=======
+func (o *RedundancyResourceInner) GetControllerAStatusNumeric() int32 {
+	if o == nil || IsNil(o.ControllerAStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ControllerAStatusNumeric
@@ -205,7 +236,11 @@ func (o *RedundancyResourceInner) GetControllerAStatusNumeric() int64 {
 
 // GetControllerAStatusNumericOk returns a tuple with the ControllerAStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetControllerAStatusNumericOk() (*int64, bool) {
+=======
+func (o *RedundancyResourceInner) GetControllerAStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ControllerAStatusNumeric) {
 		return nil, false
 	}
@@ -221,8 +256,13 @@ func (o *RedundancyResourceInner) HasControllerAStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetControllerAStatusNumeric gets a reference to the given int64 and assigns it to the ControllerAStatusNumeric field.
 func (o *RedundancyResourceInner) SetControllerAStatusNumeric(v int64) {
+=======
+// SetControllerAStatusNumeric gets a reference to the given int32 and assigns it to the ControllerAStatusNumeric field.
+func (o *RedundancyResourceInner) SetControllerAStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ControllerAStatusNumeric = &v
 }
 
@@ -291,9 +331,15 @@ func (o *RedundancyResourceInner) SetControllerBStatus(v string) {
 }
 
 // GetControllerBStatusNumeric returns the ControllerBStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetControllerBStatusNumeric() int64 {
 	if o == nil || IsNil(o.ControllerBStatusNumeric) {
 		var ret int64
+=======
+func (o *RedundancyResourceInner) GetControllerBStatusNumeric() int32 {
+	if o == nil || IsNil(o.ControllerBStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.ControllerBStatusNumeric
@@ -301,7 +347,11 @@ func (o *RedundancyResourceInner) GetControllerBStatusNumeric() int64 {
 
 // GetControllerBStatusNumericOk returns a tuple with the ControllerBStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetControllerBStatusNumericOk() (*int64, bool) {
+=======
+func (o *RedundancyResourceInner) GetControllerBStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.ControllerBStatusNumeric) {
 		return nil, false
 	}
@@ -317,8 +367,13 @@ func (o *RedundancyResourceInner) HasControllerBStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetControllerBStatusNumeric gets a reference to the given int64 and assigns it to the ControllerBStatusNumeric field.
 func (o *RedundancyResourceInner) SetControllerBStatusNumeric(v int64) {
+=======
+// SetControllerBStatusNumeric gets a reference to the given int32 and assigns it to the ControllerBStatusNumeric field.
+func (o *RedundancyResourceInner) SetControllerBStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.ControllerBStatusNumeric = &v
 }
 
@@ -355,9 +410,15 @@ func (o *RedundancyResourceInner) SetLocalReady(v string) {
 }
 
 // GetLocalReadyNumeric returns the LocalReadyNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetLocalReadyNumeric() int64 {
 	if o == nil || IsNil(o.LocalReadyNumeric) {
 		var ret int64
+=======
+func (o *RedundancyResourceInner) GetLocalReadyNumeric() int32 {
+	if o == nil || IsNil(o.LocalReadyNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.LocalReadyNumeric
@@ -365,7 +426,11 @@ func (o *RedundancyResourceInner) GetLocalReadyNumeric() int64 {
 
 // GetLocalReadyNumericOk returns a tuple with the LocalReadyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetLocalReadyNumericOk() (*int64, bool) {
+=======
+func (o *RedundancyResourceInner) GetLocalReadyNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.LocalReadyNumeric) {
 		return nil, false
 	}
@@ -381,8 +446,13 @@ func (o *RedundancyResourceInner) HasLocalReadyNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetLocalReadyNumeric gets a reference to the given int64 and assigns it to the LocalReadyNumeric field.
 func (o *RedundancyResourceInner) SetLocalReadyNumeric(v int64) {
+=======
+// SetLocalReadyNumeric gets a reference to the given int32 and assigns it to the LocalReadyNumeric field.
+func (o *RedundancyResourceInner) SetLocalReadyNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.LocalReadyNumeric = &v
 }
 
@@ -451,9 +521,15 @@ func (o *RedundancyResourceInner) SetOtherMCStatus(v string) {
 }
 
 // GetOtherMCStatusNumeric returns the OtherMCStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetOtherMCStatusNumeric() int64 {
 	if o == nil || IsNil(o.OtherMCStatusNumeric) {
 		var ret int64
+=======
+func (o *RedundancyResourceInner) GetOtherMCStatusNumeric() int32 {
+	if o == nil || IsNil(o.OtherMCStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.OtherMCStatusNumeric
@@ -461,7 +537,11 @@ func (o *RedundancyResourceInner) GetOtherMCStatusNumeric() int64 {
 
 // GetOtherMCStatusNumericOk returns a tuple with the OtherMCStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetOtherMCStatusNumericOk() (*int64, bool) {
+=======
+func (o *RedundancyResourceInner) GetOtherMCStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.OtherMCStatusNumeric) {
 		return nil, false
 	}
@@ -477,8 +557,13 @@ func (o *RedundancyResourceInner) HasOtherMCStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetOtherMCStatusNumeric gets a reference to the given int64 and assigns it to the OtherMCStatusNumeric field.
 func (o *RedundancyResourceInner) SetOtherMCStatusNumeric(v int64) {
+=======
+// SetOtherMCStatusNumeric gets a reference to the given int32 and assigns it to the OtherMCStatusNumeric field.
+func (o *RedundancyResourceInner) SetOtherMCStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.OtherMCStatusNumeric = &v
 }
 
@@ -515,9 +600,15 @@ func (o *RedundancyResourceInner) SetOtherReady(v string) {
 }
 
 // GetOtherReadyNumeric returns the OtherReadyNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetOtherReadyNumeric() int64 {
 	if o == nil || IsNil(o.OtherReadyNumeric) {
 		var ret int64
+=======
+func (o *RedundancyResourceInner) GetOtherReadyNumeric() int32 {
+	if o == nil || IsNil(o.OtherReadyNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.OtherReadyNumeric
@@ -525,7 +616,11 @@ func (o *RedundancyResourceInner) GetOtherReadyNumeric() int64 {
 
 // GetOtherReadyNumericOk returns a tuple with the OtherReadyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetOtherReadyNumericOk() (*int64, bool) {
+=======
+func (o *RedundancyResourceInner) GetOtherReadyNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.OtherReadyNumeric) {
 		return nil, false
 	}
@@ -541,8 +636,13 @@ func (o *RedundancyResourceInner) HasOtherReadyNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetOtherReadyNumeric gets a reference to the given int64 and assigns it to the OtherReadyNumeric field.
 func (o *RedundancyResourceInner) SetOtherReadyNumeric(v int64) {
+=======
+// SetOtherReadyNumeric gets a reference to the given int32 and assigns it to the OtherReadyNumeric field.
+func (o *RedundancyResourceInner) SetOtherReadyNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.OtherReadyNumeric = &v
 }
 
@@ -611,9 +711,15 @@ func (o *RedundancyResourceInner) SetRedundancyMode(v string) {
 }
 
 // GetRedundancyModeNumeric returns the RedundancyModeNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetRedundancyModeNumeric() int64 {
 	if o == nil || IsNil(o.RedundancyModeNumeric) {
 		var ret int64
+=======
+func (o *RedundancyResourceInner) GetRedundancyModeNumeric() int32 {
+	if o == nil || IsNil(o.RedundancyModeNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RedundancyModeNumeric
@@ -621,7 +727,11 @@ func (o *RedundancyResourceInner) GetRedundancyModeNumeric() int64 {
 
 // GetRedundancyModeNumericOk returns a tuple with the RedundancyModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetRedundancyModeNumericOk() (*int64, bool) {
+=======
+func (o *RedundancyResourceInner) GetRedundancyModeNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RedundancyModeNumeric) {
 		return nil, false
 	}
@@ -637,8 +747,13 @@ func (o *RedundancyResourceInner) HasRedundancyModeNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRedundancyModeNumeric gets a reference to the given int64 and assigns it to the RedundancyModeNumeric field.
 func (o *RedundancyResourceInner) SetRedundancyModeNumeric(v int64) {
+=======
+// SetRedundancyModeNumeric gets a reference to the given int32 and assigns it to the RedundancyModeNumeric field.
+func (o *RedundancyResourceInner) SetRedundancyModeNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RedundancyModeNumeric = &v
 }
 
@@ -675,9 +790,15 @@ func (o *RedundancyResourceInner) SetRedundancyStatus(v string) {
 }
 
 // GetRedundancyStatusNumeric returns the RedundancyStatusNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetRedundancyStatusNumeric() int64 {
 	if o == nil || IsNil(o.RedundancyStatusNumeric) {
 		var ret int64
+=======
+func (o *RedundancyResourceInner) GetRedundancyStatusNumeric() int32 {
+	if o == nil || IsNil(o.RedundancyStatusNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.RedundancyStatusNumeric
@@ -685,7 +806,11 @@ func (o *RedundancyResourceInner) GetRedundancyStatusNumeric() int64 {
 
 // GetRedundancyStatusNumericOk returns a tuple with the RedundancyStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetRedundancyStatusNumericOk() (*int64, bool) {
+=======
+func (o *RedundancyResourceInner) GetRedundancyStatusNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.RedundancyStatusNumeric) {
 		return nil, false
 	}
@@ -701,8 +826,13 @@ func (o *RedundancyResourceInner) HasRedundancyStatusNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetRedundancyStatusNumeric gets a reference to the given int64 and assigns it to the RedundancyStatusNumeric field.
 func (o *RedundancyResourceInner) SetRedundancyStatusNumeric(v int64) {
+=======
+// SetRedundancyStatusNumeric gets a reference to the given int32 and assigns it to the RedundancyStatusNumeric field.
+func (o *RedundancyResourceInner) SetRedundancyStatusNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.RedundancyStatusNumeric = &v
 }
 
@@ -739,9 +869,15 @@ func (o *RedundancyResourceInner) SetSystemReady(v string) {
 }
 
 // GetSystemReadyNumeric returns the SystemReadyNumeric field value if set, zero value otherwise.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetSystemReadyNumeric() int64 {
 	if o == nil || IsNil(o.SystemReadyNumeric) {
 		var ret int64
+=======
+func (o *RedundancyResourceInner) GetSystemReadyNumeric() int32 {
+	if o == nil || IsNil(o.SystemReadyNumeric) {
+		var ret int32
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return ret
 	}
 	return *o.SystemReadyNumeric
@@ -749,7 +885,11 @@ func (o *RedundancyResourceInner) GetSystemReadyNumeric() int64 {
 
 // GetSystemReadyNumericOk returns a tuple with the SystemReadyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+<<<<<<< HEAD
 func (o *RedundancyResourceInner) GetSystemReadyNumericOk() (*int64, bool) {
+=======
+func (o *RedundancyResourceInner) GetSystemReadyNumericOk() (*int32, bool) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	if o == nil || IsNil(o.SystemReadyNumeric) {
 		return nil, false
 	}
@@ -765,8 +905,13 @@ func (o *RedundancyResourceInner) HasSystemReadyNumeric() bool {
 	return false
 }
 
+<<<<<<< HEAD
 // SetSystemReadyNumeric gets a reference to the given int64 and assigns it to the SystemReadyNumeric field.
 func (o *RedundancyResourceInner) SetSystemReadyNumeric(v int64) {
+=======
+// SetSystemReadyNumeric gets a reference to the given int32 and assigns it to the SystemReadyNumeric field.
+func (o *RedundancyResourceInner) SetSystemReadyNumeric(v int32) {
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	o.SystemReadyNumeric = &v
 }
 

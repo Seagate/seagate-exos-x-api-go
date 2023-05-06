@@ -114,6 +114,7 @@ func (s *Specification) Write(ctx context.Context, filename string, append bool)
 	// Write out the components/parameters section
 	if len(s.parameters.lines) > 0 {
 		fmt.Fprintln(f, "")
+<<<<<<< HEAD
 		fmt.Fprintln(f, "# Security, common parameters, and schemas used by this API")
 		fmt.Fprintln(f, "security:")
 		fmt.Fprintln(f, "- basicAuth: []")
@@ -123,6 +124,10 @@ func (s *Specification) Write(ctx context.Context, filename string, append bool)
 		fmt.Fprintln(f, "    basicAuth:")
 		fmt.Fprintln(f, "      type: http")
 		fmt.Fprintln(f, "      scheme: basic")
+=======
+		fmt.Fprintln(f, "# Common parameters and schemas used by this API")
+		fmt.Fprintln(f, "components:")
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		fmt.Fprintln(f, "  parameters:")
 		for line, value := range s.parameters.lines {
 			logger.V(4).Info(fmt.Sprintf("[%d][%s] %s", line, "parameters", value))
@@ -183,12 +188,21 @@ func (s *Specification) GenerateHeader(ctx context.Context) error {
 func (s *Specification) GenerateLogin(ctx context.Context) error {
 
 	s.Paths(1, "# Login")
+<<<<<<< HEAD
 	s.Paths(1, "/login:")
 	s.Paths(2, "get:")
 	s.Paths(3, "description: Log in to the storage array management controller")
 	s.Paths(3, "operationId: LoginGet")
 	s.Paths(3, "security:")
 	s.Paths(3, "- basicAuth: []")
+=======
+	s.Paths(1, "/login/{loginHash}:")
+	s.Paths(2, "get:")
+	s.Paths(3, "description: Log in to the storage array management controller")
+	s.Paths(3, "operationId: LoginGetByHash")
+	s.Paths(3, "parameters:")
+	s.Paths(3, "- $ref: '#/components/parameters/loginHash'")
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	s.Paths(3, "responses:")
 	s.Paths(4, "'200':")
 	s.Paths(5, "description: OK")
@@ -197,6 +211,20 @@ func (s *Specification) GenerateLogin(ctx context.Context) error {
 	s.Paths(7, "schema:")
 	s.Paths(8, "$ref: '#/components/schemas/statusObject'")
 
+<<<<<<< HEAD
+=======
+	s.generatedOptions["loginHash"] = true
+	s.Parameters(2, "loginHash:")
+	s.Parameters(3, "description: A SHA256 hash of the 'username_password' string")
+	s.Parameters(3, "name: loginHash")
+	s.Parameters(3, "in: path")
+	s.Parameters(3, "required: true")
+	s.Parameters(3, "schema:")
+	s.Parameters(4, "type: string")
+	s.Parameters(4, "maxLength: 64")
+	s.Parameters(4, "example: '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'")
+
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	s.generatedResources["status"] = true
 	s.Resources(2, "statusResource:")
 	s.Resources(3, "type: array")
@@ -301,7 +329,10 @@ func (s *Specification) AddMetaProperties(ctx context.Context, config *common.Co
 	// Log in to the MC
 	apiClient, err := common.Login(ctx, config)
 	if err != nil || apiClient == nil {
+<<<<<<< HEAD
 		logger.Error(err, "login", "ipaddress", config.MCIpAddress)
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		return fmt.Errorf("login failed for (%s) at (%s)", config.MCDescription, config.MCIpAddress)
 	}
 
@@ -395,7 +426,11 @@ func (s *Specification) AddMetaProperties(ctx context.Context, config *common.Co
 	s.Resources(5, "meta:")
 	s.Resources(6, "type: string")
 
+<<<<<<< HEAD
 	// Next export all the properties, but do so in a sorted manner
+=======
+	// Next all all the properties, but do so in a sorted manner
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// The meta command does not produce the same property order every time, hence the desire to sort for consistency
 	if len(properties) > 0 {
 
@@ -431,10 +466,13 @@ func (s *Specification) AddMetaProperties(ctx context.Context, config *common.Co
 			logger.V(4).Info("properties", "key", newkey, "type", datatype, "description", description)
 			s.Resources(5, fmt.Sprintf("%s:", newkey))
 			s.Resources(6, fmt.Sprintf("type: %s", datatype))
+<<<<<<< HEAD
 			if datatype == "integer" {
 				// add special formatting to support very large integers
 				s.Resources(6, fmt.Sprintf("format: %s", "int64"))
 			}
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 			if description != nil {
 				s.Resources(6, fmt.Sprintf("description: %s", description))
 			}
@@ -512,6 +550,7 @@ func (s *Specification) AddCommand(ctx context.Context, config *common.Config, c
 	s.Paths(7, "schema:")
 	s.Paths(8, "$ref: '#/components/schemas/statusObject'")
 
+<<<<<<< HEAD
 	// If specified in the input yaml, generate spec lines for all include data types
 	if len(command.Include) > 0 {
 		for _, include := range command.Include {
@@ -522,6 +561,8 @@ func (s *Specification) AddCommand(ctx context.Context, config *common.Config, c
 		}
 	}
 
+=======
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	// If specified in the input yaml, generate spec lines for the resource and add a reference link
 	err := s.AddMetaProperties(ctx, config, command.Meta, command.Nested, exceptions)
 	if err != nil {
@@ -539,12 +580,19 @@ func (s *Specification) AddCommand(ctx context.Context, config *common.Config, c
 		s.Objects(3, "properties:")
 
 		// If specified in the input yaml, add a link to any included resource before defining this resource's object properties
+<<<<<<< HEAD
 		if len(command.Include) > 0 {
 			for _, include := range command.Include {
 				logger.V(3).Info("add include ref", "name", fmt.Sprintf("%sResource:", include))
 				s.Objects(4, fmt.Sprintf("%s:", include))
 				s.Objects(5, fmt.Sprintf("$ref: '#/components/schemas/%sResource'", include))
 			}
+=======
+		if command.Include != "" {
+			logger.V(3).Info("add ref", "name", fmt.Sprintf("%sResource:", command.Include))
+			s.Objects(4, fmt.Sprintf("%s:", command.Include))
+			s.Objects(5, fmt.Sprintf("$ref: '#/components/schemas/%sResource'", command.Include))
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 		}
 
 		// Add link to meta resource reference

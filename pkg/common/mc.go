@@ -4,6 +4,10 @@ package common
 
 import (
 	"context"
+<<<<<<< HEAD
+=======
+	"crypto/sha256"
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	"fmt"
 	"net/http"
 
@@ -44,6 +48,7 @@ func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 
 	apiClient = client.NewAPIClient(configuration)
 
+<<<<<<< HEAD
 	var sessionKey string = ""
 
 	logger.V(3).Info("================================================================================")
@@ -52,6 +57,25 @@ func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 		logger.V(3).Info("++ LoginGet",
 			"ResponseType", *resp1.Status[0].ResponseType,
 			"ResponseTypeNumeric", *resp1.Status[0].ResponseTypeNumeric)
+=======
+	// log in using SHA256
+	userpass := fmt.Sprintf("%s_%s", config.MCUsername, config.MCPassword)
+	data := []byte(userpass)
+	hash := sha256.Sum256(data)
+	hashStr := fmt.Sprintf("%x", hash[:])
+	logger.V(4).Info("login credentials", "userpass", userpass, "hash", hashStr)
+
+	var sessionKey string = ""
+
+	logger.V(3).Info("================================================================================")
+	logger.V(3).Info(">> LoginGetByHash")
+	resp1, httpRes, err := apiClient.DefaultApi.LoginGetByHash(ctx, hashStr).Execute()
+	if httpRes.StatusCode == http.StatusOK {
+		logger.V(3).Info("++ LoginGetByHash",
+			"ResponseType", *resp1.Status[0].ResponseType,
+			"ResponseTypeNumeric", *resp1.Status[0].ResponseTypeNumeric,
+			"Response", *resp1.Status[0].Response)
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 		if *resp1.Status[0].ResponseTypeNumeric == 0 {
 			logger.V(0).Info("++ MC Login SUCCESS", "ipaddress", config.MCIpAddress)
@@ -61,7 +85,11 @@ func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 			return nil, fmt.Errorf("++ MC Login FAILURE", "response", *resp1.Status[0].Response)
 		}
 	} else {
+<<<<<<< HEAD
 		logger.V(0).Info("-- LoginGet", "status", httpRes.Status, "err", err, "body", httpRes.Body)
+=======
+		logger.V(0).Info("-- LoginGetByHash", "status", httpRes.Status, "err", err, "body", httpRes.Body)
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	}
 	logger.V(3).Info("================================================================================")
 

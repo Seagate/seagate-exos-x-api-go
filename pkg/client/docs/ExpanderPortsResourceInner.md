@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **Controller** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **ControllerNumeric** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **EnclosureId** | Pointer to **int64** |  | [optional] 
@@ -20,6 +21,21 @@ Name | Type | Description | Notes
 **SasPortTypeNumeric** | Pointer to **int64** | The type of SAS port( In numeric form ) | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 **StatusNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**ControllerNumeric** | Pointer to **int32** |  | [optional] 
+**DurableId** | Pointer to **string** |  | [optional] 
+**EnclosureId** | Pointer to **int32** |  | [optional] 
+**Health** | Pointer to **string** |  | [optional] 
+**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthReason** | Pointer to **string** |  | [optional] 
+**HealthRecommendation** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **string** |  | [optional] 
+**SasPortIndex** | Pointer to **int32** | Port number for this SAS port | [optional] 
+**SasPortType** | Pointer to **string** | The type of SAS port | [optional] 
+**SasPortTypeNumeric** | Pointer to **int32** | The type of SAS port( In numeric form ) | [optional] 
+**Status** | Pointer to **string** |  | [optional] 
+**StatusNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 ## Methods
 
@@ -117,20 +133,32 @@ HasController returns a boolean if a field has been set.
 
 ### GetControllerNumeric
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetControllerNumeric() int64`
+=======
+`func (o *ExpanderPortsResourceInner) GetControllerNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerNumeric returns the ControllerNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerNumericOk
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetControllerNumericOk() (*int64, bool)`
+=======
+`func (o *ExpanderPortsResourceInner) GetControllerNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetControllerNumericOk returns a tuple with the ControllerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerNumeric
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) SetControllerNumeric(v int64)`
+=======
+`func (o *ExpanderPortsResourceInner) SetControllerNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetControllerNumeric sets ControllerNumeric field to given value.
 
@@ -167,20 +195,32 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetEnclosureId
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetEnclosureId() int64`
+=======
+`func (o *ExpanderPortsResourceInner) GetEnclosureId() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureId returns the EnclosureId field if non-nil, zero value otherwise.
 
 ### GetEnclosureIdOk
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetEnclosureIdOk() (*int64, bool)`
+=======
+`func (o *ExpanderPortsResourceInner) GetEnclosureIdOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetEnclosureIdOk returns a tuple with the EnclosureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureId
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) SetEnclosureId(v int64)`
+=======
+`func (o *ExpanderPortsResourceInner) SetEnclosureId(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetEnclosureId sets EnclosureId field to given value.
 
@@ -217,20 +257,32 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetHealthNumeric() int64`
+=======
+`func (o *ExpanderPortsResourceInner) GetHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetHealthNumericOk() (*int64, bool)`
+=======
+`func (o *ExpanderPortsResourceInner) GetHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) SetHealthNumeric(v int64)`
+=======
+`func (o *ExpanderPortsResourceInner) SetHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -317,20 +369,32 @@ HasName returns a boolean if a field has been set.
 
 ### GetSasPortIndex
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetSasPortIndex() int64`
+=======
+`func (o *ExpanderPortsResourceInner) GetSasPortIndex() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSasPortIndex returns the SasPortIndex field if non-nil, zero value otherwise.
 
 ### GetSasPortIndexOk
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetSasPortIndexOk() (*int64, bool)`
+=======
+`func (o *ExpanderPortsResourceInner) GetSasPortIndexOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSasPortIndexOk returns a tuple with the SasPortIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSasPortIndex
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) SetSasPortIndex(v int64)`
+=======
+`func (o *ExpanderPortsResourceInner) SetSasPortIndex(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSasPortIndex sets SasPortIndex field to given value.
 
@@ -367,20 +431,32 @@ HasSasPortType returns a boolean if a field has been set.
 
 ### GetSasPortTypeNumeric
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetSasPortTypeNumeric() int64`
+=======
+`func (o *ExpanderPortsResourceInner) GetSasPortTypeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSasPortTypeNumeric returns the SasPortTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetSasPortTypeNumericOk
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetSasPortTypeNumericOk() (*int64, bool)`
+=======
+`func (o *ExpanderPortsResourceInner) GetSasPortTypeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetSasPortTypeNumericOk returns a tuple with the SasPortTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSasPortTypeNumeric
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) SetSasPortTypeNumeric(v int64)`
+=======
+`func (o *ExpanderPortsResourceInner) SetSasPortTypeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetSasPortTypeNumeric sets SasPortTypeNumeric field to given value.
 
@@ -417,20 +493,32 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetStatusNumeric() int64`
+=======
+`func (o *ExpanderPortsResourceInner) GetStatusNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) GetStatusNumericOk() (*int64, bool)`
+=======
+`func (o *ExpanderPortsResourceInner) GetStatusNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
+<<<<<<< HEAD
 `func (o *ExpanderPortsResourceInner) SetStatusNumeric(v int64)`
+=======
+`func (o *ExpanderPortsResourceInner) SetStatusNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetStatusNumeric sets StatusNumeric field to given value.
 

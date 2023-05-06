@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **ActiveVersion** | Pointer to **int64** | Currently assigned IP version | [optional] 
 **AddressingMode** | Pointer to **string** | The way in which an IP address should be obtained | [optional] 
 **AddressingModeNumeric** | Pointer to **int64** | The way in which an IP address should be obtained( In numeric form ) | [optional] 
@@ -17,14 +18,34 @@ Name | Type | Description | Notes
 **Gateway** | Pointer to **string** |  | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
 **HealthNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**ActiveVersion** | Pointer to **int32** | Currently assigned IP version | [optional] 
+**AddressingMode** | Pointer to **string** | The way in which an IP address should be obtained | [optional] 
+**AddressingModeNumeric** | Pointer to **int32** | The way in which an IP address should be obtained( In numeric form ) | [optional] 
+**AutoNegotiation** | Pointer to **string** |  | [optional] 
+**AutoNegotiationNumeric** | Pointer to **int32** |  | [optional] 
+**DuplexMode** | Pointer to **string** | Type of duplex mode that is specified | [optional] 
+**DuplexModeNumeric** | Pointer to **int32** | Type of duplex mode that is specified( In numeric form ) | [optional] 
+**DurableId** | Pointer to **string** |  | [optional] 
+**Gateway** | Pointer to **string** |  | [optional] 
+**Health** | Pointer to **string** |  | [optional] 
+**HealthNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **IpAddress** | Pointer to **string** |  | [optional] 
 **LinkSpeed** | Pointer to **string** | Link speed associated with this ethernet port | [optional] 
+<<<<<<< HEAD
 **LinkSpeedNumeric** | Pointer to **int64** | Link speed associated with this ethernet port( In numeric form ) | [optional] 
 **MacAddress** | Pointer to **string** | MAC address for the network port | [optional] 
 **PingBroadcast** | Pointer to **string** |  | [optional] 
 **PingBroadcastNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**LinkSpeedNumeric** | Pointer to **int32** | Link speed associated with this ethernet port( In numeric form ) | [optional] 
+**MacAddress** | Pointer to **string** | MAC address for the network port | [optional] 
+**PingBroadcast** | Pointer to **string** |  | [optional] 
+**PingBroadcastNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **SubnetMask** | Pointer to **string** | Network port subnet mask | [optional] 
 
 ## Methods
@@ -98,20 +119,32 @@ HasMeta returns a boolean if a field has been set.
 
 ### GetActiveVersion
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetActiveVersion() int64`
+=======
+`func (o *NetworkParametersResourceInner) GetActiveVersion() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetActiveVersion returns the ActiveVersion field if non-nil, zero value otherwise.
 
 ### GetActiveVersionOk
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetActiveVersionOk() (*int64, bool)`
+=======
+`func (o *NetworkParametersResourceInner) GetActiveVersionOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetActiveVersionOk returns a tuple with the ActiveVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetActiveVersion
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) SetActiveVersion(v int64)`
+=======
+`func (o *NetworkParametersResourceInner) SetActiveVersion(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetActiveVersion sets ActiveVersion field to given value.
 
@@ -148,20 +181,32 @@ HasAddressingMode returns a boolean if a field has been set.
 
 ### GetAddressingModeNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int64`
+=======
+`func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAddressingModeNumeric returns the AddressingModeNumeric field if non-nil, zero value otherwise.
 
 ### GetAddressingModeNumericOk
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetAddressingModeNumericOk() (*int64, bool)`
+=======
+`func (o *NetworkParametersResourceInner) GetAddressingModeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAddressingModeNumericOk returns a tuple with the AddressingModeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAddressingModeNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) SetAddressingModeNumeric(v int64)`
+=======
+`func (o *NetworkParametersResourceInner) SetAddressingModeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAddressingModeNumeric sets AddressingModeNumeric field to given value.
 
@@ -198,20 +243,32 @@ HasAutoNegotiation returns a boolean if a field has been set.
 
 ### GetAutoNegotiationNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int64`
+=======
+`func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAutoNegotiationNumeric returns the AutoNegotiationNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoNegotiationNumericOk
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetAutoNegotiationNumericOk() (*int64, bool)`
+=======
+`func (o *NetworkParametersResourceInner) GetAutoNegotiationNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetAutoNegotiationNumericOk returns a tuple with the AutoNegotiationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoNegotiationNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) SetAutoNegotiationNumeric(v int64)`
+=======
+`func (o *NetworkParametersResourceInner) SetAutoNegotiationNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetAutoNegotiationNumeric sets AutoNegotiationNumeric field to given value.
 
@@ -248,20 +305,32 @@ HasDuplexMode returns a boolean if a field has been set.
 
 ### GetDuplexModeNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int64`
+=======
+`func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDuplexModeNumeric returns the DuplexModeNumeric field if non-nil, zero value otherwise.
 
 ### GetDuplexModeNumericOk
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetDuplexModeNumericOk() (*int64, bool)`
+=======
+`func (o *NetworkParametersResourceInner) GetDuplexModeNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetDuplexModeNumericOk returns a tuple with the DuplexModeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDuplexModeNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) SetDuplexModeNumeric(v int64)`
+=======
+`func (o *NetworkParametersResourceInner) SetDuplexModeNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetDuplexModeNumeric sets DuplexModeNumeric field to given value.
 
@@ -348,20 +417,32 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetHealthNumeric() int64`
+=======
+`func (o *NetworkParametersResourceInner) GetHealthNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetHealthNumericOk() (*int64, bool)`
+=======
+`func (o *NetworkParametersResourceInner) GetHealthNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) SetHealthNumeric(v int64)`
+=======
+`func (o *NetworkParametersResourceInner) SetHealthNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -473,20 +554,32 @@ HasLinkSpeed returns a boolean if a field has been set.
 
 ### GetLinkSpeedNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int64`
+=======
+`func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLinkSpeedNumeric returns the LinkSpeedNumeric field if non-nil, zero value otherwise.
 
 ### GetLinkSpeedNumericOk
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetLinkSpeedNumericOk() (*int64, bool)`
+=======
+`func (o *NetworkParametersResourceInner) GetLinkSpeedNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetLinkSpeedNumericOk returns a tuple with the LinkSpeedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLinkSpeedNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) SetLinkSpeedNumeric(v int64)`
+=======
+`func (o *NetworkParametersResourceInner) SetLinkSpeedNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetLinkSpeedNumeric sets LinkSpeedNumeric field to given value.
 
@@ -548,20 +641,32 @@ HasPingBroadcast returns a boolean if a field has been set.
 
 ### GetPingBroadcastNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int64`
+=======
+`func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPingBroadcastNumeric returns the PingBroadcastNumeric field if non-nil, zero value otherwise.
 
 ### GetPingBroadcastNumericOk
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) GetPingBroadcastNumericOk() (*int64, bool)`
+=======
+`func (o *NetworkParametersResourceInner) GetPingBroadcastNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetPingBroadcastNumericOk returns a tuple with the PingBroadcastNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPingBroadcastNumeric
 
+<<<<<<< HEAD
 `func (o *NetworkParametersResourceInner) SetPingBroadcastNumeric(v int64)`
+=======
+`func (o *NetworkParametersResourceInner) SetPingBroadcastNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetPingBroadcastNumeric sets PingBroadcastNumeric field to given value.
 

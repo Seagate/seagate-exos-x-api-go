@@ -8,7 +8,11 @@ Name | Type | Description | Notes
 **Meta** | Pointer to **string** |  | [optional] 
 **HbaNickname** | Pointer to **string** |  | [optional] 
 **HostProfile** | Pointer to **string** |  | [optional] 
+<<<<<<< HEAD
 **HostProfileNumeric** | Pointer to **int64** |  | [optional] 
+=======
+**HostProfileNumeric** | Pointer to **int32** |  | [optional] 
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 **Id** | Pointer to **string** |  | [optional] 
 **VolumeView** | Pointer to [**[]VolumeViewResourceInner**](VolumeViewResourceInner.md) |  | [optional] 
 
@@ -133,20 +137,32 @@ HasHostProfile returns a boolean if a field has been set.
 
 ### GetHostProfileNumeric
 
+<<<<<<< HEAD
 `func (o *InitiatorViewResourceInner) GetHostProfileNumeric() int64`
+=======
+`func (o *InitiatorViewResourceInner) GetHostProfileNumeric() int32`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostProfileNumeric returns the HostProfileNumeric field if non-nil, zero value otherwise.
 
 ### GetHostProfileNumericOk
 
+<<<<<<< HEAD
 `func (o *InitiatorViewResourceInner) GetHostProfileNumericOk() (*int64, bool)`
+=======
+`func (o *InitiatorViewResourceInner) GetHostProfileNumericOk() (*int32, bool)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 GetHostProfileNumericOk returns a tuple with the HostProfileNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostProfileNumeric
 
+<<<<<<< HEAD
 `func (o *InitiatorViewResourceInner) SetHostProfileNumeric(v int64)`
+=======
+`func (o *InitiatorViewResourceInner) SetHostProfileNumeric(v int32)`
+>>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 SetHostProfileNumeric sets HostProfileNumeric field to given value.
 
