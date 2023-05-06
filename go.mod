@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/go-logr/logr v1.2.4
 	github.com/golang/protobuf v1.5.3
+	github.com/joho/godotenv v1.5.1
 	github.com/namsral/flag v1.7.4-pre
 	github.com/onsi/ginkgo/v2 v2.9.5
 	github.com/onsi/gomega v1.27.6
