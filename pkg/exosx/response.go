@@ -6,6 +6,8 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 )
 
 // Response : Typed representation of any XML API response
@@ -67,8 +69,8 @@ func NewResponse(data []byte) (*Response, error) {
 }
 
 // NewErrorStatus : Creates an error status when response is not available
-func NewErrorStatus(err string) *ResponseStatus {
-	return &ResponseStatus{
+func NewErrorStatus(err string) *common.ResponseStatus {
+	return &common.ResponseStatus{
 		ResponseType: "Error",
 		Response:     err,
 		Time:         time.Now(),
@@ -77,13 +79,13 @@ func NewErrorStatus(err string) *ResponseStatus {
 
 // GetStatus : Creates and returns the final ResponseStatus struct
 // from the raw status object in response
-func (res *Response) GetStatus() *ResponseStatus {
+func (res *Response) GetStatus() *common.ResponseStatus {
 	statusObject := res.ObjectsMap["status"]
 	responseTypeNumeric, _ := strconv.Atoi(statusObject.PropertiesMap["response-type-numeric"].Data)
 	returnCode, _ := strconv.Atoi(statusObject.PropertiesMap["return-code"].Data)
 	timestampNumeric, _ := strconv.Atoi(statusObject.PropertiesMap["time-stamp-numeric"].Data)
 
-	return &ResponseStatus{
+	return &common.ResponseStatus{
 		ResponseType:        statusObject.PropertiesMap["response-type"].Data,
 		ResponseTypeNumeric: responseTypeNumeric,
 		Response:            statusObject.PropertiesMap["response"].Data,

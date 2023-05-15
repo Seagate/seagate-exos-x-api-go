@@ -24,6 +24,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"k8s.io/klog/v2"
@@ -32,18 +33,6 @@ import (
 // Configuration constants
 const (
 	MaximumLUN = 255
-)
-
-// Exos X Storage API Error Codes
-const (
-	snapshotNotFoundErrorCode             = -10050
-	badInputParam                         = -10058
-	hostMapDoesNotExistsErrorCode         = -10074
-	volumeNotFoundErrorCode               = -10075
-	volumeHasSnapshot                     = -10183
-	snapshotAlreadyExists                 = -10186
-	initiatorNicknameOrIdentifierNotFound = -10386
-	unmapFailedErrorCode                  = -10509
 )
 
 type VolumeMapInfo struct {
@@ -108,7 +97,7 @@ func (client *Client) InitSystemInfo() error {
 }
 
 // GetVolumeMaps2: Return a list of mapped initiators for a specified volume
-func (client *Client) GetVolumeMaps2(volume string) (VolumeMapInfo, *ResponseStatus, error) {
+func (client *Client) GetVolumeMaps2(volume string) (VolumeMapInfo, *common.ResponseStatus, error) {
 
 	m := VolumeMapInfo{Volume: volume}
 	original := volume
@@ -177,7 +166,7 @@ func (client *Client) LogVolumeMaps(maps VolumeMapInfo) error {
 }
 
 // GetInitiatorMaps: Return a list of mapped volumes for a specified initiator
-func (client *Client) GetInitiatorMaps(initiator string) (InitiatorMapInfo, *ResponseStatus, error) {
+func (client *Client) GetInitiatorMaps(initiator string) (InitiatorMapInfo, *common.ResponseStatus, error) {
 
 	m := InitiatorMapInfo{InitiatorId: initiator}
 	original := initiator
@@ -242,7 +231,7 @@ func (client *Client) LogInitiatorMaps(maps InitiatorMapInfo) error {
 }
 
 // GetVolumeMaps: Return a slice of mapped initiators for a specified volume
-func (client *Client) GetVolumeMaps(volume string) ([]string, []string, *ResponseStatus, error) {
+func (client *Client) GetVolumeMaps(volume string) ([]string, []string, *common.ResponseStatus, error) {
 	if volume != "" {
 		volume = fmt.Sprintf("\"%s\"", volume)
 	}
@@ -276,7 +265,7 @@ func (client *Client) GetVolumeMaps(volume string) ([]string, []string, *Respons
 	return initiators, luns, status, err
 }
 
-// nextLUN: Determine the next available Loginal Unit Number (LUN), which is used for mapping avolume to an initiator
+// nextLUN: Determine the next available Logical Unit Number (LUN), which is used for mapping avolume to an initiator
 func (client *Client) nextLUN(maps InitiatorMapInfo) (int, error) {
 
 	if len(maps.InitiatorId) == 0 {
@@ -323,7 +312,7 @@ func (client *Client) chooseLUN(initiators []string) (int, error) {
 		if err != nil {
 			klog.Errorf("error looking for host maps for initiator %s: %s", initiatorName, err)
 		}
-		if responseStatus.ReturnCode == hostMapDoesNotExistsErrorCode {
+		if responseStatus.ReturnCode == common.HostMapDoesNotExistsErrorCode {
 			klog.Infof("initiator %s does not exist", initiatorName)
 		}
 		if volumes != nil {
@@ -364,13 +353,13 @@ func (client *Client) chooseLUN(initiators []string) (int, error) {
 // mapVolumeProcess: Map a volume to an initiator and create a nickname when required by the storage array
 func (client *Client) mapVolumeProcess(volumeName, initiatorName string, lun int) error {
 	klog.Infof("trying to map volume %s for initiator %s on LUN %d", volumeName, initiatorName, lun)
-	_, metadata, err := client.MapVolume(volumeName, initiatorName, "rw", lun)
+	metadata, err := client.MapVolume(volumeName, initiatorName, "rw", lun)
 	if err != nil && metadata == nil {
 		return err
 	}
 
 	klog.Infof("status: metadata.ReturnCode=%v", metadata.ReturnCode)
-	if metadata.ReturnCode == initiatorNicknameOrIdentifierNotFound {
+	if metadata.ReturnCode == common.InitiatorNicknameOrIdentifierNotFound {
 		nodeIDParts := strings.Split(initiatorName, ":")
 		if len(nodeIDParts) < 2 {
 			return status.Error(codes.NotFound, "specified node ID is not a valid IQN")
@@ -380,16 +369,16 @@ func (client *Client) mapVolumeProcess(volumeName, initiatorName string, lun int
 		nickname = strings.ReplaceAll(nickname, ".", "-")
 
 		klog.Infof("initiator does not exist, creating it with nickname %s", nickname)
-		_, _, err = client.CreateNickname(nickname, initiatorName)
+		_, err = client.CreateNickname(nickname, initiatorName)
 		if err != nil {
 			return err
 		}
 		klog.Info("retrying to map volume")
-		_, _, err = client.MapVolume(volumeName, initiatorName, "rw", lun)
+		_, err = client.MapVolume(volumeName, initiatorName, "rw", lun)
 		if err != nil {
 			return err
 		}
-	} else if metadata.ReturnCode == volumeNotFoundErrorCode {
+	} else if metadata.ReturnCode == common.VolumeNotFoundErrorCode {
 		return status.Errorf(codes.NotFound, "volume %s not found", volumeName)
 	} else if err != nil {
 		return status.Error(codes.Internal, err.Error())
@@ -401,18 +390,17 @@ func (client *Client) mapVolumeProcess(volumeName, initiatorName string, lun int
 // CheckVolumeExists: Return true if a volume already exists
 func (client *Client) CheckVolumeExists(volumeID string, size int64) (bool, error) {
 	data, responseStatus, err := client.ShowVolumes(volumeID)
-	if err != nil && responseStatus.ReturnCode != badInputParam {
+	fmt.Printf("==0 CheckVolumeExists id=%s, len=%d\n", volumeID, len(data))
+	if err != nil && responseStatus.ReturnCode != common.BadInputParam {
 		return false, err
 	}
 
-	for _, object := range data.Objects {
-		if object.Name == "volume" {
-			if object.PropertiesMap["volume-name"].Data == volumeID {
-				blocks, _ := strconv.ParseInt(object.PropertiesMap["blocks"].Data, 10, 64)
-				blocksize, _ := strconv.ParseInt(object.PropertiesMap["blocksize"].Data, 10, 64)
-				klog.V(3).Infof("volume exists: checking (%s) size (%d) against blocksize (%d)", volumeID, size, blocksize)
+	for _, object := range data {
+		if object.ObjectName == "volume" {
+			if object.VolumeName == volumeID {
+				klog.V(3).Infof("volume exists: checking (%s) size (%d) against blocks(%d) block size (%d)", volumeID, size, object.Blocks, object.BlockSize)
 
-				if blocks*blocksize == size {
+				if object.Blocks*object.BlockSize == size {
 					return true, nil
 				}
 				return true, status.Error(codes.AlreadyExists, "cannot create volume with same name but different capacity than the existing one")
@@ -428,7 +416,7 @@ func (client *Client) PublishVolume(volumeId string, initiators []string) (strin
 
 	hostNames, apistatus, err := client.GetVolumeMapsHostNames(volumeId)
 	if err != nil {
-		if apistatus != nil && apistatus.ReturnCode == volumeNotFoundErrorCode {
+		if apistatus != nil && apistatus.ReturnCode == common.VolumeNotFoundErrorCode {
 			return "", status.Errorf(codes.NotFound, "The specified volume (%s) was not found.", volumeId)
 		} else {
 			return "", err
@@ -472,8 +460,8 @@ func (client *Client) GetVolumeWwn(volumeName string) (string, error) {
 	wwn := ""
 	response, status, err := client.ShowVolumes(volumeName)
 	if err == nil && status.ResponseTypeNumeric == 0 {
-		if response.ObjectsMap["volume"] != nil {
-			wwn = strings.ToLower(response.ObjectsMap["volume"].PropertiesMap["wwn"].Data)
+		if len(response) > 0 && response[0].ObjectName == "volume" {
+			wwn = strings.ToLower(response[0].Wwn)
 		}
 	}
 

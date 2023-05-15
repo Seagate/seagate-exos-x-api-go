@@ -1,4 +1,6 @@
-package exosx
+// Copyright (c) 2023 Seagate Technology LLC and/or its Affiliates
+
+package mcapi
 
 import (
 	"crypto/tls"
@@ -8,9 +10,40 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 	"k8s.io/klog/v2"
 )
+
+const (
+	invalidSessionKey = 2
+)
+
+// Client : Can be used to request the API
+type Client struct {
+	Username   string
+	Password   string
+	Addr       string
+	HTTPClient http.Client
+	Collector  *Collector
+	SessionKey string
+	Initiator  string
+	PoolName   string
+	Info       *SystemInfo
+}
+
+// SessionValid : Determine if a session is valid, if not a login is required
+func (client *Client) SessionValid(addr, username string) bool {
+
+	if client.Addr == addr && client.Username == username {
+		if client.SessionKey == "" {
+			klog.Infof("SessionKey is invalid: %q", client.SessionKey)
+			return false
+		}
+		klog.Infof("client is already configured for API address %q, session is valid", addr)
+		return true
+	}
+
+	return false
+}
 
 // Client : Can be used to request the API
 type Client struct {
@@ -46,7 +79,7 @@ func NewClient() *Client {
 }
 
 // internalRequest : Execute the given request with client's configuration
-func (client *Client) internalRequest(endpoint string) (*Response, *common.ResponseStatus, error) {
+func (client *Client) internalRequest(endpoint string) (*Response, *ResponseStatus, error) {
 	if client.Addr == "" {
 		err := errors.New("missing server address")
 		return nil, NewErrorStatus(err.Error()), err
@@ -56,7 +89,7 @@ func (client *Client) internalRequest(endpoint string) (*Response, *common.Respo
 }
 
 // FormattedRequest : Format and execute the given request with client's configuration
-func (client *Client) FormattedRequest(endpointFormat string, opts ...interface{}) (*Response, *common.ResponseStatus, error) {
+func (client *Client) FormattedRequest(endpointFormat string, opts ...interface{}) (*Response, *ResponseStatus, error) {
 	endpoint := fmt.Sprintf(endpointFormat, opts...)
 	stopTrackAPICall := client.Collector.trackAPICall(endpointFormat)
 	resp, status, err := client.internalRequest(endpoint)
@@ -65,7 +98,7 @@ func (client *Client) FormattedRequest(endpointFormat string, opts ...interface{
 }
 
 // request: process a storage api request
-func (client *Client) request(req *Request) (*Response, *common.ResponseStatus, error) {
+func (client *Client) request(req *Request) (*Response, *ResponseStatus, error) {
 	isLoginReq := strings.Contains(req.Endpoint, "login")
 	if !isLoginReq {
 		if len(client.SessionKey) == 0 {
