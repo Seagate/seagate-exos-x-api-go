@@ -3,8 +3,10 @@ package exosx
 import (
 	"crypto/md5"
 	"fmt"
+	"strconv"
 	"strings"
 
+	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 	"k8s.io/klog/v2"
 )
 
@@ -23,8 +25,18 @@ func (client *Client) SessionValid(addr, username string) bool {
 	return false
 }
 
+// StoreCredentials : Called to store ip address, username, and password for the client
+func (client *Client) StoreCredentials(ipaddress string, username string, password string) {
+
+	// Store the login credentials in the Client object
+	client.Username = username
+	client.Password = password
+	client.Addr = ipaddress
+}
+
 // Login : Called automatically, may be called manually if credentials changed
 func (client *Client) Login() error {
+
 	userpass := fmt.Sprintf("%s_%s", client.Username, client.Password)
 	hash := fmt.Sprintf("%x", md5.Sum([]byte(userpass)))
 	res, _, err := client.FormattedRequest("/login/%s", hash)
@@ -38,61 +50,125 @@ func (client *Client) Login() error {
 	return nil
 }
 
+// CloseConnections: Called to close any idle connections
+func (client *Client) CloseConnections() error {
+	client.HTTPClient.CloseIdleConnections()
+	return nil
+}
+
+// GetPoolType: Returns the pool type for a specified pool
+func (client *Client) GetPoolType(pool string) (string, error) {
+	return client.Info.GetPoolType(pool)
+}
+
 // CreateVolume : creates a volume with the given name, capacity in the given pool
-func (client *Client) CreateVolume(name, size, pool, poolType string) (*Response, *ResponseStatus, error) {
+func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.ResponseStatus, error) {
 	if poolType == "Virtual" {
-		return client.FormattedRequest("/create/volume/pool/\"%s\"/size/%s/tier-affinity/no-affinity/\"%s\"", pool, size, name)
+		_, status, err := client.FormattedRequest("/create/volume/pool/\"%s\"/size/%s/tier-affinity/no-affinity/\"%s\"", pool, size, name)
+		return status, err
 	} else {
-		return client.FormattedRequest("/create/volume/pool/\"%s\"/size/%s/\"%s\"", pool, size, name)
+		_, status, err := client.FormattedRequest("/create/volume/pool/\"%s\"/size/%s/tier-affinity/no-affinity/\"%s\"", pool, size, name)
+		return status, err
 	}
+}
+
+// GetPortals: Return a list of portals for the storage system
+func (client *Client) GetPortals() (string, error) {
+	return client.Info.GetPortals()
 }
 
 // CreateNickname : Create a nickname for an initiator. The Storage API policy is to prohibit mapping of initiators which are not either
 // (a) presently connected to the array or (b) represented by an entry in the initiator nickname table.
-func (client *Client) CreateNickname(name, iqn string) (*Response, *ResponseStatus, error) {
-	return client.FormattedRequest("/set/initiator/id/\"%s\"/nickname/\"%s\"", iqn, name)
+func (client *Client) CreateNickname(name, iqn string) (*common.ResponseStatus, error) {
+	_, status, err := client.FormattedRequest("/set/initiator/id/\"%s\"/nickname/\"%s\"", iqn, name)
+	return status, err
 }
 
 // MapVolume : map a volume to an initiator using a specified LUN
-func (client *Client) MapVolume(name, initiator, access string, lun int) (*Response, *ResponseStatus, error) {
-	return client.FormattedRequest("/map/volume/access/%s/lun/%d/initiator/\"%s\"/\"%s\"", access, lun, initiator, name)
+func (client *Client) MapVolume(name, initiator, access string, lun int) (*common.ResponseStatus, error) {
+	_, status, err := client.FormattedRequest("/map/volume/access/%s/lun/%d/initiator/\"%s\"/\"%s\"", access, lun, initiator, name)
+	return status, err
 }
 
-// ShowVolumes : get informations about volumes
-func (client *Client) ShowVolumes(volumes ...string) (*Response, *ResponseStatus, error) {
+// ShowVolumes : get information about volumes
+func (client *Client) ShowVolumes(volumes ...string) ([]common.VolumeObject, *common.ResponseStatus, error) {
+
+	request := ""
+	returnVolumes := []common.VolumeObject{}
+
 	if len(volumes) == 0 {
-		return client.FormattedRequest("/show/volumes/")
+		request = "/show/volumes/"
+	} else {
+		request = fmt.Sprintf("/show/volumes/\"%s\"", strings.Join(volumes, ","))
 	}
-	return client.FormattedRequest("/show/volumes/\"%s\"", strings.Join(volumes, ","))
+
+	fmt.Printf("==1 request=%s\n", request)
+
+	data, status, err := client.FormattedRequest(request)
+
+	fmt.Printf("==2 status=%+v, err=%v\n", status, err)
+
+	// Fill in Volume properties for all volume data objects returned
+	if err == nil && status.ResponseTypeNumeric == 0 {
+		for _, object := range data.Objects {
+			fmt.Printf("==3 name=%v\n", object.Name)
+			if object.Name == "volume" {
+				volume := common.VolumeObject{}
+				volume.ObjectName = object.Name
+				volume.Blocks, _ = strconv.ParseInt(object.PropertiesMap["blocks"].Data, 10, 64)
+				volume.BlockSize, _ = strconv.ParseInt(object.PropertiesMap["blocksize"].Data, 10, 64)
+				volume.Health = object.PropertiesMap["health"].Data
+				volume.SizeNumeric, _ = strconv.ParseInt(object.PropertiesMap["size-numeric"].Data, 10, 64)
+				volume.StoragePoolName = object.PropertiesMap["storage-pool-name"].Data
+				volume.StorageType = object.PropertiesMap["storage-type"].Data
+				volume.TierAffinity = object.PropertiesMap["tier-affinity"].Data
+				volume.TotalSize = object.PropertiesMap["total-size"].Data
+				volume.VolumeName = object.PropertiesMap["volume-name"].Data
+				volume.VolumeType = object.PropertiesMap["volume-type"].Data
+				volume.Wwn = object.PropertiesMap["wwn"].Data
+
+				fmt.Printf("==3 volumeName=%v\n", volume.VolumeName)
+				returnVolumes = append(returnVolumes, volume)
+			}
+		}
+	}
+
+	fmt.Printf("==4 len=%d\n", len(returnVolumes))
+
+	return returnVolumes, status, err
 }
 
 // UnmapVolume : unmap a volume from an initiator
-func (client *Client) UnmapVolume(name, initiator string) (*Response, *ResponseStatus, error) {
+func (client *Client) UnmapVolume(name, initiator string) (*common.ResponseStatus, error) {
 	if len(initiator) == 0 {
-		return client.FormattedRequest("/unmap/volume/\"%s\"", name)
+		_, status, err := client.FormattedRequest("/unmap/volume/\"%s\"", name)
+		return status, err
 	}
-
-	return client.FormattedRequest("/unmap/volume/initiator/\"%s\"/\"%s\"", initiator, name)
+	_, status, err := client.FormattedRequest("/unmap/volume/initiator/\"%s\"/\"%s\"", initiator, name)
+	return status, err
 }
 
 // ExpandVolume : extend a volume if there is enough space on the vdisk
-func (client *Client) ExpandVolume(name, size string) (*Response, *ResponseStatus, error) {
-	return client.FormattedRequest("/expand/volume/size/\"%s\"/\"%s\"", size, name)
+func (client *Client) ExpandVolume(name, size string) (*common.ResponseStatus, error) {
+	_, status, err := client.FormattedRequest("/expand/volume/size/\"%s\"/\"%s\"", size, name)
+	return status, err
 }
 
 // DeleteVolume : deletes a volume
-func (client *Client) DeleteVolume(name string) (*Response, *ResponseStatus, error) {
-	return client.FormattedRequest("/delete/volumes/\"%s\"", name)
+func (client *Client) DeleteVolume(name string) (*common.ResponseStatus, error) {
+	_, status, err := client.FormattedRequest("/delete/volumes/\"%s\"", name)
+	return status, err
 }
 
 // DeleteHost : deletes a host by its ID or nickname
-func (client *Client) DeleteHost(name string) (*Response, *ResponseStatus, error) {
-	return client.FormattedRequest("/delete/hosts/\"%s\"", name)
+func (client *Client) DeleteHost(name string) (*common.ResponseStatus, error) {
+	_, status, err := client.FormattedRequest("/delete/hosts/\"%s\"", name)
+	return status, err
 }
 
 // ShowHostMaps : list the volume mappings for given host
 // If host is an empty string, mapping for all hosts is shown
-func (client *Client) ShowHostMaps(host string) ([]Volume, *ResponseStatus, error) {
+func (client *Client) ShowHostMaps(host string) ([]Volume, *common.ResponseStatus, error) {
 	// We don't use "/show/maps/initiator/<host>" here because
 	// the maps for an initiator with a nickname or in a host group will not
 	// be returned. Instead we get all initiator mappings and filter by initiator
@@ -128,31 +204,65 @@ func (client *Client) ShowHostMaps(host string) ([]Volume, *ResponseStatus, erro
 }
 
 // ShowSnapshots : Show one snaphot, or all snapshots, or all snapshots for a volume
-func (client *Client) ShowSnapshots(snapshotId string, sourceVolumeId string) (*Response, *ResponseStatus, error) {
+func (client *Client) ShowSnapshots(snapshotId string, sourceVolumeId string) ([]common.SnapshotObject, *common.ResponseStatus, error) {
+
+	request := ""
+	returnSnapshots := []common.SnapshotObject{}
+
+	// Create the correctly formatted request command
 	if sourceVolumeId != "" {
-		return client.FormattedRequest("/show/snapshots/volume/%q", sourceVolumeId)
+		request = fmt.Sprintf("/show/snapshots/volume/%q", sourceVolumeId)
 	} else if snapshotId != "" {
-		return client.FormattedRequest("/show/snapshots/pattern/%q", snapshotId)
+		request = fmt.Sprintf("/show/snapshots/pattern/%q", snapshotId)
+	} else {
+		request = "/show/snapshots"
 	}
-	return client.FormattedRequest("/show/snapshots")
+
+	data, status, err := client.FormattedRequest(request)
+
+	// Fill in Snapshot properties for all data objects returned
+	if err == nil && status.ResponseTypeNumeric == 0 {
+		for _, object := range data.Objects {
+			if object.Name == "snapshots" {
+				snapshot := common.SnapshotObject{}
+				snapshot.ObjectName = object.Name
+				snapshot.CreationTime, _ = common.CreationTimeFromString(object.PropertiesMap["creation-date-time-numeric"].Data)
+				snapshot.CreationDateTime = object.PropertiesMap["creation-date-time"].Data
+				snapshot.CreationDateTimeNumeric, _ = strconv.ParseInt(object.PropertiesMap["creation-date-time-numeric"].Data, 10, 64)
+				snapshot.MasterVolumeName = object.PropertiesMap["master-volume-name"].Data
+				snapshot.Name = object.PropertiesMap["name"].Data
+				snapshot.StoragePoolName = object.PropertiesMap["storage-pool-name"].Data
+				snapshot.TotalSize = object.PropertiesMap["total-size"].Data
+				snapshot.TotalSizeNumeric, _ = strconv.ParseInt(object.PropertiesMap["total-size-numeric"].Data, 10, 64)
+				snapshot.VolumeParent = object.PropertiesMap["volume-parent"].Data
+
+				returnSnapshots = append(returnSnapshots, snapshot)
+			}
+		}
+	}
+
+	return returnSnapshots, status, err
 }
 
 // CreateSnapshot : create a snapshot in a snap pool and the snap pool if it doesn't exsits
-func (client *Client) CreateSnapshot(name string, snapshotName string) (*Response, *ResponseStatus, error) {
-	return client.FormattedRequest("/create/snapshots/volumes/%q/%q", name, snapshotName)
+func (client *Client) CreateSnapshot(name string, snapshotName string) (*common.ResponseStatus, error) {
+	_, status, err := client.FormattedRequest("/create/snapshots/volumes/%q/%q", name, snapshotName)
+	return status, err
 }
 
 // DeleteSnapshot : delete a snapshot
-func (client *Client) DeleteSnapshot(names ...string) (*Response, *ResponseStatus, error) {
-	return client.FormattedRequest("/delete/snapshot/%q", strings.Join(names, ","))
+func (client *Client) DeleteSnapshot(names ...string) (*common.ResponseStatus, error) {
+	_, status, err := client.FormattedRequest("/delete/snapshot/%q", strings.Join(names, ","))
+	return status, err
 }
 
 // CopyVolume : create an new volume by copying another one or a snapshot
-func (client *Client) CopyVolume(sourceName string, destinationName string, pool string) (*Response, *ResponseStatus, error) {
-	return client.FormattedRequest("/copy/volume/destination-pool/%q/name/%q/%q", pool, destinationName, sourceName)
+func (client *Client) CopyVolume(sourceName string, destinationName string, pool string) (*common.ResponseStatus, error) {
+	_, status, err := client.FormattedRequest("/copy/volume/destination-pool/%q/name/%q/%q", pool, destinationName, sourceName)
+	return status, err
 }
 
-func (client *Client) GetVolumeMapsHostNames(name string) ([]string, *ResponseStatus, error) {
+func (client *Client) GetVolumeMapsHostNames(name string) ([]string, *common.ResponseStatus, error) {
 	if name != "" {
 		name = fmt.Sprintf("\"%s\"", name)
 	}

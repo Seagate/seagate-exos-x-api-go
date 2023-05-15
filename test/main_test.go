@@ -1,4 +1,4 @@
-package exosx
+package test
 
 import (
 	"flag"
@@ -7,12 +7,13 @@ import (
 	"strings"
 	"testing"
 
+	storageapi "github.com/Seagate/seagate-exos-x-api-go/pkg/exosx"
 	"github.com/joho/godotenv"
 	. "github.com/onsi/gomega"
 	"k8s.io/klog/v2"
 )
 
-var client = NewClient()
+var client = storageapi.NewClient()
 
 var logging = flag.Bool("logging", true, "logging")
 
@@ -77,7 +78,7 @@ func TestLogin(t *testing.T) {
 }
 
 func TestLoginFailed(t *testing.T) {
-	var wrongClient = NewClient()
+	var wrongClient = storageapi.NewClient()
 	wrongClient.Addr = client.Addr
 	wrongClient.Username = client.Username
 	wrongClient.Password = "wrongpassword"
@@ -87,7 +88,7 @@ func TestLoginFailed(t *testing.T) {
 }
 
 func TestReLoginFailed(t *testing.T) {
-	var wrongClient = NewClient()
+	var wrongClient = storageapi.NewClient()
 	wrongClient.Addr = client.Addr
 	wrongClient.Username = client.Username
 	wrongClient.Password = client.Password

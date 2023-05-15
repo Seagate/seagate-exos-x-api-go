@@ -12,7 +12,10 @@ import (
 
 // Exos X Storage API Error Codes
 const (
+<<<<<<< HEAD
 	InvalidSessionKey                     = 2
+=======
+>>>>>>> 04e64f3 (remove api XML exposure, common api codes)
 	SnapshotNotFoundErrorCode             = -10050
 	BadInputParam                         = -10058
 	InvalidArgumentErrorCode              = -10058

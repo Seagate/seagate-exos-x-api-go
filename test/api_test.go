@@ -16,14 +16,15 @@
 // For any questions about this software or licensing,
 // please email opensource@seagate.com or cortx-questions@seagate.com.
 
-package exosx
+package test
 
 import (
 	"fmt"
 	"sort"
-	"strconv"
 	"testing"
 
+	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
+	storageapi "github.com/Seagate/seagate-exos-x-api-go/pkg/exosx"
 	. "github.com/onsi/gomega"
 	"golang.org/x/text/language"
 	"golang.org/x/text/message"
@@ -77,19 +78,17 @@ func ShowVolume(t *testing.T, volumeName string) {
 	g.Expect(err).To(BeNil())
 	g.Expect(status.ResponseTypeNumeric).To(Equal(0))
 
-	volume := response.ObjectsMap["volume"]
-	bint, _ := strconv.ParseInt(volume.PropertiesMap["blocks"].Data, 10, 64)
-	bsint, _ := strconv.ParseInt(volume.PropertiesMap["blocksize"].Data, 10, 64)
-
-	p := message.NewPrinter(language.English)
-	p.Printf("\n")
-	p.Printf("    volume-name       = %v\n", volume.PropertiesMap["volume-name"].Data)
-	p.Printf("    storage-pool-name = %v\n", volume.PropertiesMap["storage-pool-name"].Data)
-	p.Printf("    blocksize         = %v\n", bsint)
-	p.Printf("    blocks            = %d\n", bint)
-	p.Printf("    current size      = %d\n", bsint*bint)
-	p.Printf("    tier-affinity     = %v\n", volume.PropertiesMap["tier-affinity"].Data)
-	p.Printf("\n")
+	if len(response) > 0 {
+		p := message.NewPrinter(language.English)
+		p.Printf("\n")
+		p.Printf("    volume-name       = %v\n", response[0].VolumeName)
+		p.Printf("    storage-pool-name = %v\n", response[0].StoragePoolName)
+		p.Printf("    blocksize         = %v\n", response[0].BlockSize)
+		p.Printf("    blocks            = %d\n", response[0].Blocks)
+		p.Printf("    current size      = %d\n", response[0].BlockSize*response[0].Blocks)
+		p.Printf("    tier-affinity     = %v\n", response[0].TierAffinity)
+		p.Printf("\n")
+	}
 }
 
 // ShowVolumes: Display useful information for all volume objects allocated
@@ -103,20 +102,17 @@ func ShowVolumes(t *testing.T) {
 	if err == nil {
 		fmt.Printf("\n")
 		fmt.Printf("Volumes:\n")
-		for _, object := range response.Objects {
-			if object.Name == "volume" {
-				blocks, _ := strconv.ParseInt(object.PropertiesMap["blocks"].Data, 10, 64)
-				blocksize, _ := strconv.ParseInt(object.PropertiesMap["blocksize"].Data, 10, 64)
-
+		for _, object := range response {
+			if object.ObjectName == "volume" {
 				fmt.Printf("%8v, %32v, %10v, %8v, %10v, %v, %8v, %v\n",
-					object.PropertiesMap["storage-pool-name"].Data,
-					object.PropertiesMap["volume-name"].Data,
-					object.PropertiesMap["total-size"].Data,
-					blocks,
-					blocksize,
-					object.PropertiesMap["storage-type"].Data,
-					object.PropertiesMap["volume-type"].Data,
-					object.PropertiesMap["health"].Data,
+					object.StoragePoolName,
+					object.VolumeName,
+					object.TotalSize,
+					object.Blocks,
+					object.BlockSize,
+					object.StorageType,
+					object.VolumeType,
+					object.Health,
 				)
 			}
 		}
@@ -129,23 +125,19 @@ func ShowVolumes(t *testing.T) {
 func ShowSnapshot(t *testing.T, name string) {
 	g := NewWithT(t)
 
-	var err error
-	var status *ResponseStatus
-	var response *Response
-	response, status, err = client.ShowSnapshots(name, "")
+	response, status, err := client.ShowSnapshots(name, "")
 	g.Expect(err).To(BeNil())
 	g.Expect(status.ResponseTypeNumeric).To(Equal(0))
 
 	if err == nil {
 		fmt.Printf("\n")
 		fmt.Printf("Snapshots:\n")
-		for _, object := range response.Objects {
-			if object.Name == "snapshot" {
-
+		for _, object := range response {
+			if object.Name == "snapshots" {
 				fmt.Printf("%8v, %32v, %32v\n",
-					object.PropertiesMap["storage-pool-name"].Data,
-					object.PropertiesMap["name"].Data,
-					object.PropertiesMap["volume-parent"].Data,
+					object.StoragePoolName,
+					object.Name,
+					object.VolumeParent,
 				)
 			}
 		}
@@ -173,10 +165,10 @@ func TestAPISystemInfo(t *testing.T) {
 	ConditionalSkip(t)
 	g := NewWithT(t)
 
-	err := AddSystem(client.Addr, client)
+	err := storageapi.AddSystem(client.Addr, client)
 	g.Expect(err).To(BeNil())
 
-	client.Info, err = GetSystem(client.Addr)
+	client.Info, err = storageapi.GetSystem(client.Addr)
 	g.Expect(err).To(BeNil())
 
 	err = client.Info.Log()
@@ -191,9 +183,9 @@ func TestAPICreateVolume(t *testing.T) {
 	ConditionalSkip(t)
 	g := NewWithT(t)
 
-	var err error
-	var status *ResponseStatus
-	_, status, err = client.CreateVolume(volname1, size, client.PoolName, poolType)
+	fmt.Printf("create volume (%s)\n", volname1)
+
+	status, err := client.CreateVolume(volname1, size, client.PoolName, poolType)
 	g.Expect(err).To(BeNil())
 	g.Expect(status.ResponseTypeNumeric).To(Equal(0))
 	ShowVolume(t, volname1)
@@ -215,23 +207,23 @@ func TestAPIShowInitiators(t *testing.T) {
 	ConditionalSkip(t)
 	g := NewWithT(t)
 
-	respone, status, err := client.FormattedRequest("/show/initiators/")
+	response, status, err := client.FormattedRequest("/show/initiators/")
 	g.Expect(err).To(BeNil())
 	g.Expect(status.ResponseTypeNumeric).To(Equal(0))
 
 	fmt.Printf("\n")
-	fmt.Printf("Nickname        Discovered Mapped Profile  Host Type  ID\n")
+	fmt.Printf("%-22s %-11s %-7s %-9s %-11s %-11s\n", "Nickname", "Discovered", "Mapped", "Profile", "Host", "ID")
 
 	if err == nil {
-		for _, obj := range respone.Objects {
+		for _, obj := range response.Objects {
 			if obj.Name == "initiator" {
-				fmt.Printf("%-16s", obj.PropertiesMap["nickname"].Data)
-				fmt.Printf("%-11s", obj.PropertiesMap["discovered"].Data)
-				fmt.Printf("%-7s", obj.PropertiesMap["mapped"].Data)
-				fmt.Printf("%-9s", obj.PropertiesMap["profile"].Data)
-				fmt.Printf("%-11s", obj.PropertiesMap["host-bus-type"].Data)
-				fmt.Printf("%s", obj.PropertiesMap["id"].Data)
-				fmt.Printf("\n")
+				fmt.Printf("%-22s %-11s %-7s %-9s %-11s %-11s\n",
+					obj.PropertiesMap["nickname"].Data,
+					obj.PropertiesMap["discovered"].Data,
+					obj.PropertiesMap["mapped"].Data,
+					obj.PropertiesMap["profile"].Data,
+					obj.PropertiesMap["host-bus-type"].Data,
+					obj.PropertiesMap["id"].Data)
 			}
 		}
 	}
@@ -239,12 +231,12 @@ func TestAPIShowInitiators(t *testing.T) {
 	fmt.Printf("\n")
 }
 
-func volumeSlicesEqual(vol1 []Volume, vol2 []Volume) bool {
+func volumeSlicesEqual(vol1 []storageapi.Volume, vol2 []storageapi.Volume) bool {
 	if len(vol1) != len(vol2) {
 		return false
 	}
-	sort.Sort(Volumes(vol1))
-	sort.Sort(Volumes(vol2))
+	sort.Sort(storageapi.Volumes(vol1))
+	sort.Sort(storageapi.Volumes(vol2))
 	for i, vol := range vol1 {
 		if vol.LUN != vol2[i].LUN {
 			return false
@@ -354,7 +346,7 @@ func TestAPIExpandVolume(t *testing.T) {
 	g := NewWithT(t)
 
 	klog.Infof("expand volume (%s) from original size (%s) to new size (%s)", volname1, size, expandSize)
-	_, status, err := client.ExpandVolume(volname1, expandSize)
+	status, err := client.ExpandVolume(volname1, expandSize)
 	if err != nil {
 		if status != nil && status.ReturnCode != 0 {
 			fmt.Printf("expand volume failed, status.ReturnCode=%v", status.ReturnCode)
@@ -377,7 +369,7 @@ func TestAPICreateSnapshots(t *testing.T) {
 	g := NewWithT(t)
 
 	klog.Infof("snapshot volume (%s) using name (%s)", volname1, snap1)
-	_, status, err := client.CreateSnapshot(volname1, snap1)
+	status, err := client.CreateSnapshot(volname1, snap1)
 	if err != nil {
 		if status != nil && status.ReturnCode != 0 {
 			fmt.Printf("snapshot volume failed, status.ReturnCode=%v", status.ReturnCode)
@@ -390,7 +382,7 @@ func TestAPICreateSnapshots(t *testing.T) {
 	ShowVolumes(t)
 
 	klog.Infof("snapshot volume (%s) using name (%s)", volname1, snap2)
-	_, status, err = client.CreateSnapshot(volname1, snap2)
+	status, err = client.CreateSnapshot(volname1, snap2)
 	if err != nil {
 		if status != nil && status.ReturnCode != 0 {
 			fmt.Printf("snapshot volume failed, status.ReturnCode=%v", status.ReturnCode)
@@ -414,7 +406,7 @@ func TestAPIDeleteSnapshots(t *testing.T) {
 	g := NewWithT(t)
 
 	klog.Infof("delete snapshot (%s)", snap1)
-	_, status, err := client.DeleteSnapshot(snap1)
+	status, err := client.DeleteSnapshot(snap1)
 	if err != nil {
 		if status != nil && status.ReturnCode != 0 {
 			fmt.Printf("delete snapshot failed, status.ReturnCode=%v", status.ReturnCode)
@@ -425,7 +417,7 @@ func TestAPIDeleteSnapshots(t *testing.T) {
 	klog.Infof("successfully deleted snapshot (%s)", snap1)
 
 	klog.Infof("delete snapshot (%s)", snap2)
-	_, status, err = client.DeleteSnapshot(snap2)
+	status, err = client.DeleteSnapshot(snap2)
 	if err != nil {
 		if status != nil && status.ReturnCode != 0 {
 			fmt.Printf("delete snapshot failed, status.ReturnCode=%v", status.ReturnCode)
@@ -442,9 +434,9 @@ func TestAPIUnmapVolume(t *testing.T) {
 	g := NewWithT(t)
 
 	klog.Infof("unmapping volume %s from initiator %s", volname1, client.Initiator)
-	_, status, err := client.UnmapVolume(volname1, client.Initiator)
+	status, err := client.UnmapVolume(volname1, client.Initiator)
 	if err != nil {
-		if status != nil && status.ReturnCode == unmapFailedErrorCode {
+		if status != nil && status.ReturnCode == common.UnmapFailedErrorCode {
 			fmt.Printf("unmap failed, assuming volume is already unmapped")
 		}
 	}
@@ -465,7 +457,7 @@ func TestAPICopyVolume(t *testing.T) {
 
 	klog.Infof("copy volume (%s) to (%s) using pool (%s)", volname1, volname1, client.PoolName)
 
-	_, status, err := client.CopyVolume(volname1, volname2, client.PoolName)
+	status, err := client.CopyVolume(volname1, volname2, client.PoolName)
 	if err != nil {
 		if status != nil && status.ReturnCode != 0 {
 			fmt.Printf("copy volume failed, status.ReturnCode=%v", status.ReturnCode)
@@ -481,12 +473,12 @@ func TestAPIDeleteVolumes(t *testing.T) {
 	ConditionalSkip(t)
 	g := NewWithT(t)
 
-	_, status, err := client.DeleteVolume(volname1)
+	status, err := client.DeleteVolume(volname1)
 	g.Expect(err).To(BeNil())
 	g.Expect(status.ResponseTypeNumeric).To(Equal(0))
 
 	if poolType != "Linear" {
-		_, status, err := client.DeleteVolume(volname2)
+		status, err := client.DeleteVolume(volname2)
 		g.Expect(err).To(BeNil())
 		g.Expect(status.ResponseTypeNumeric).To(Equal(0))
 	}
