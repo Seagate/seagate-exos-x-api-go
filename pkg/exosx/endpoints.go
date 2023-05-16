@@ -102,16 +102,11 @@ func (client *Client) ShowVolumes(volumes ...string) ([]common.VolumeObject, *co
 		request = fmt.Sprintf("/show/volumes/\"%s\"", strings.Join(volumes, ","))
 	}
 
-	fmt.Printf("==1 request=%s\n", request)
-
 	data, status, err := client.FormattedRequest(request)
-
-	fmt.Printf("==2 status=%+v, err=%v\n", status, err)
 
 	// Fill in Volume properties for all volume data objects returned
 	if err == nil && status.ResponseTypeNumeric == 0 {
 		for _, object := range data.Objects {
-			fmt.Printf("==3 name=%v\n", object.Name)
 			if object.Name == "volume" {
 				volume := common.VolumeObject{}
 				volume.ObjectName = object.Name
@@ -127,13 +122,10 @@ func (client *Client) ShowVolumes(volumes ...string) ([]common.VolumeObject, *co
 				volume.VolumeType = object.PropertiesMap["volume-type"].Data
 				volume.Wwn = object.PropertiesMap["wwn"].Data
 
-				fmt.Printf("==3 volumeName=%v\n", volume.VolumeName)
 				returnVolumes = append(returnVolumes, volume)
 			}
 		}
 	}
-
-	fmt.Printf("==4 len=%d\n", len(returnVolumes))
 
 	return returnVolumes, status, err
 }
