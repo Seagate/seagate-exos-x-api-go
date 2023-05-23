@@ -3,13 +3,13 @@
 package regression
 
 import (
-	storageapi "github.com/Seagate/seagate-exos-x-api-go/pkg/exosx"
+	storageapi "github.com/Seagate/seagate-exos-x-api-go/pkg/mcapi"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 	"k8s.io/klog/v2"
 )
 
-var _ = DescribeRegression("System Testing", func(tc *TestContext) {
+var _ = DescribeRegression("System Testing (v2)", func(tc *TestContext) {
 	var (
 		client *storageapi.Client = nil
 	)
@@ -20,12 +20,12 @@ var _ = DescribeRegression("System Testing", func(tc *TestContext) {
 		logger := klog.FromContext(tc.Config.Ctx)
 		client = storageapi.NewClient()
 		client.StoreCredentials(tc.Config.StorageController.Ip, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
-		err := client.Login()
-		logger.V(3).Info("Login", "ip", client.Addr, "username", client.Username, "err", err)
+		err := client.Login(tc.Config.Ctx)
+		logger.V(3).Info("Login", "ipaddress", client.Addr, "username", client.Username, "err", err)
 		Expect(err).To(BeNil())
 	})
 
-	Describe("SystemTest", func() {
+	Describe("v2System", func() {
 		It("should successfully init the system info", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)

@@ -5,10 +5,12 @@ package mcapi
 import (
 	"context"
 	"crypto/tls"
+	"fmt"
 	"net/http"
 	"strings"
 	"time"
 
+	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 	"k8s.io/klog/v2"
 )
@@ -25,6 +27,7 @@ type Client struct {
 	Initiator  string
 	PoolName   string
 	Info       *common.SystemInfo
+	apiClient  *client.APIClient
 }
 
 // NewClient : Creates an API client by setting up its HTTP transport
@@ -67,6 +70,7 @@ func (client *Client) Login(ctx context.Context) error {
 
 	apiClient, err := common.Login(ctx, config)
 	if err == nil && apiClient != nil {
+		client.apiClient = apiClient
 		configuration := apiClient.GetConfig()
 		client.SessionKey = configuration.DefaultHeader["sessionKey"]
 	}
@@ -87,4 +91,20 @@ func (client *Client) SessionValid(addr, username string) bool {
 	}
 
 	return false
+}
+
+// InitSystemInfo: Retrieve and store system information for this client
+func (client *Client) InitSystemInfo() error {
+
+	err := AddSystem(client.Addr, client)
+	if err != nil {
+		return fmt.Errorf("unable to add system info for ip (%s) ", client.Addr)
+	}
+
+	client.Info, err = GetSystem(client.Addr)
+	if err == nil {
+		_ = Log(client.Info)
+	}
+
+	return err
 }
