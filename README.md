@@ -194,6 +194,7 @@ initiator: "iqn.2004-10.com.ubuntu:01:b6f76364a18"
 pool: "A"
 ```
 
+<<<<<<< HEAD
 The suggestion is to create your own configuration file and do not check it into the repo. For example:
 `cp api-regression.conf myconfig.conf` and then run `./api-regression -debug 4 -config myconfig.conf --ginkgo.v`.
 
@@ -206,6 +207,15 @@ There are many options for running Ginkgo test cases, here are a few:
 - `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2System"` to run only the ***v2 System*** tests
 - `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Volume"` to run only ***v2 Volume*** tests
 - `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Snapshot"` to run only ***v2 Snapshot*** tests
+=======
+There are many options for running Ginkgo test cases, here are a few:
+
+- `make regession` to build the ***api-regression*** executable.
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "Login"` to run only the ***Login*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "System"` to run only the ***System*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "Volume"` to run only ***Volume*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "Snapshot"` to run only ***Snapshot*** tests
+>>>>>>> cafb639 (added api-regression)
 - `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast` to run only all tests
 
 There are also many command line flags:

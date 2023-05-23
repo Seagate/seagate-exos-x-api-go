@@ -3,6 +3,10 @@
 package main
 
 import (
+<<<<<<< HEAD
+=======
+	"context"
+>>>>>>> cafb639 (added api-regression)
 	"flag"
 	"fmt"
 	"os"
@@ -33,6 +37,12 @@ func (t *testing) Fail() {
 
 func main() {
 
+<<<<<<< HEAD
+=======
+	// Context
+	ctx := context.Background()
+
+>>>>>>> cafb639 (added api-regression)
 	// Flags for version and debug level
 	version := flag.Bool("version", false, "print the version of this program")
 	debug := flag.String("debug", "", "set the logging debug level")
@@ -60,7 +70,11 @@ func main() {
 	fmt.Printf("using config file (%s)\n", configFilename)
 
 	// Read config info from yaml file and set up configuration instance
+<<<<<<< HEAD
 	apiConfig, err := regression.NewTestConfig(configFilename)
+=======
+	apiConfig, err := regression.NewTestConfig(ctx, configFilename)
+>>>>>>> cafb639 (added api-regression)
 	if err != nil {
 		fmt.Printf("ERROR: reading config file (%s), err: %v\n", configFilename, err)
 		os.Exit(1)
@@ -69,7 +83,11 @@ func main() {
 	// Logging
 	klog.EnableContextualLogging(true)
 	klog.SetOutput(ginkgo.GinkgoWriter)
+<<<<<<< HEAD
 	logger := klog.FromContext(apiConfig.Ctx)
+=======
+	logger := klog.FromContext(ctx)
+>>>>>>> cafb639 (added api-regression)
 
 	// Create testing object
 	t := testing{}

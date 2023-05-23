@@ -6,9 +6,15 @@ import (
 	"context"
 	"io/ioutil"
 
+<<<<<<< HEAD
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
 	"github.com/go-logr/logr"
 	"gopkg.in/yaml.v2"
+=======
+	"github.com/go-logr/logr"
+	"gopkg.in/yaml.v2"
+	"k8s.io/klog/v2"
+>>>>>>> cafb639 (added api-regression)
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -39,34 +45,58 @@ type TestContext struct {
 }
 
 // ReadConfigurationYaml: Read configuration file and return Go struct
+<<<<<<< HEAD
 func ReadConfigurationYaml(filename string) (*ConfigurationYaml, error) {
+=======
+func ReadConfigurationYaml(ctx context.Context, filename string) (*ConfigurationYaml, error) {
+
+	logger := klog.FromContext(ctx)
+	logger.V(4).Info("read configuration setting", "filename", filename)
+>>>>>>> cafb639 (added api-regression)
 
 	// If it is not possible to extract the configuration.yaml from the tar file, use defaults
 	var yamlc = ConfigurationYaml{}
 
 	yamlFile, err := ioutil.ReadFile(filename)
+<<<<<<< HEAD
+=======
+	logger.V(4).Info("read file", "err", err)
+>>>>>>> cafb639 (added api-regression)
 	if err != nil {
 		return &yamlc, err
 	}
 
 	err = yaml.Unmarshal(yamlFile, &yamlc)
+<<<<<<< HEAD
+=======
+	logger.V(4).Info("configuration file", "filename", filename, "contents", yamlc)
+>>>>>>> cafb639 (added api-regression)
 	return &yamlc, err
 }
 
 // NewTestConfig returns a config instance with all values set to values read from a config file.
+<<<<<<< HEAD
 func NewTestConfig(filename string) (*TestConfig, error) {
 
 	config, err := ReadConfigurationYaml(filename)
+=======
+func NewTestConfig(ctx context.Context, filename string) (*TestConfig, error) {
+
+	config, err := ReadConfigurationYaml(ctx, filename)
+>>>>>>> cafb639 (added api-regression)
 
 	if err != nil {
 		return nil, err
 	}
 
+<<<<<<< HEAD
 	ctx := context.WithValue(context.Background(), client.ContextBasicAuth, client.BasicAuth{
 		UserName: config.Username,
 		Password: config.Password,
 	})
 
+=======
+>>>>>>> cafb639 (added api-regression)
 	return &TestConfig{
 		StorageController: ConfigurationYaml{
 			Ip:        config.Ip,

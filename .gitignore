@@ -22,7 +22,4 @@ go.work
 node_modules
 /validator-app
 /generator-app
-<<<<<<< HEAD
 /api-regression
-=======
->>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)

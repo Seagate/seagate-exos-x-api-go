@@ -1,19 +1,12 @@
 # Copyright (c) 2023 Seagate Technology LLC and/or its Affiliates
 
-<<<<<<< HEAD
 .PHONY: help clean validator runv generator rung validate generate fmt regen regression run-regression
-=======
-.PHONY: help clean validator runv generator rung validate generate fmt regen
->>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 VALIDATOR_APP := validator
 GENERATOR_APP := generator
 OPENAPI_YAML := api/mc-openapi.yaml
 GOFMT_OPTS := gofmt -w .
-<<<<<<< HEAD
 REGRESSION_APP := api-regression
-=======
->>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 help:
 	@echo ""
@@ -26,23 +19,15 @@ help:
 	@echo "make validate        - validate the openapi specification using openapi-generator-cli"
 	@echo "make generate        - generate go code for the openapi specification using openapi-generator-cli"
 	@echo "make fmt             - Run gofmt"	
-<<<<<<< HEAD
 	@echo "make regen           - Run the generator, validate, generate, and then run the validator"
 	@echo "make regression      - Build api-regression"
 	@echo "make run-regression  - Run api-regression"
-=======
-	@echo "make regen           - Run the generator, validate, generate, and then run the validator"	
->>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 	@echo ""
 
 clean:
 	@echo "Clean up..."
 	go clean
-<<<<<<< HEAD
 	rm -f $(APP_NAME) $(VALIDATOR_APP)-app $(GENERATOR_APP)-app $(REGRESSION_APP)
-=======
-	rm -f $(APP_NAME)
->>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
 
 validator: clean
 	@echo "Build local '$(VALIDATOR_APP)-app' executable..."
@@ -79,7 +64,6 @@ fmt:
 
 regen: rung validate generate runv
 	@echo "Full Regeneration of $(OPENAPI_YAML)"
-<<<<<<< HEAD
 
 regression:
 	@echo "Build local $(REGRESSION_APP)..."
@@ -89,5 +73,3 @@ run-regression: regression
 	# ./$(REGRESSION_APP) -debug 4 -config i1.conf --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v1"
 	# ./$(REGRESSION_APP) -debug 4 -config i1.conf --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2"
 	./$(REGRESSION_APP) -debug 4 -config $(REGRESSION_APP).conf --ginkgo.v --ginkgo.fail-fast 
-=======
->>>>>>> aac8175 (feat(apiv2): openapi generator and validator and spec)
