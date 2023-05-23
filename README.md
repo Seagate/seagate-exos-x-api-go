@@ -186,6 +186,9 @@ initiator: "iqn.2004-10.com.ubuntu:01:b6f76364a18"
 pool: "A"
 ```
 
+The suggestion is to create your own configuration file and do not check it into the repo. For example:
+`cp api-regression.conf myconfig.conf` and then run `./api-regression -debug 4 -config myconfig.conf --ginkgo.v`.
+
 There are many options for running Ginkgo test cases, here are a few:
 
 - `make regession` to build the ***api-regression*** executable.

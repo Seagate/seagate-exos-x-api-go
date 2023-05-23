@@ -69,4 +69,4 @@ regression:
 	go build -o api-regression cmd/api-regression/main.go
 
 run-regression: regression
-	./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast 
+	./api-regression -debug 4 -config api-regression.conf --ginkgo.v --ginkgo.fail-fast 

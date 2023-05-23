@@ -1,0 +1,18 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "api-regression",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/cmd/api-regression/main.go",
+            "args": ["-debug", "4", "-config", "i1.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v2Login"]
+        },
+      ]
+}

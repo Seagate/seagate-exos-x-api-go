@@ -1,4 +1,4 @@
-package exosx
+package common
 
 import (
 	"fmt"
@@ -20,7 +20,7 @@ type Collector struct {
 	apiCallDuration *prometheus.CounterVec
 }
 
-func newCollector() *Collector {
+func NewCollector() *Collector {
 	return &Collector{
 		apiCall: prometheus.NewCounterVec(
 			prometheus.CounterOpts{
@@ -49,7 +49,7 @@ func (collector *Collector) Collect(ch chan<- prometheus.Metric) {
 	collector.apiCallDuration.Collect(ch)
 }
 
-func (collector *Collector) trackAPICall(endpoint string) func(bool) {
+func (collector *Collector) TrackAPICall(endpoint string) func(bool) {
 	start := time.Now()
 
 	return func(success bool) {

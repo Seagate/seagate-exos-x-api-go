@@ -18,16 +18,12 @@ type Client struct {
 	Password   string
 	Addr       string
 	HTTPClient http.Client
-	Collector  *Collector
+	Collector  *common.Collector
 	SessionKey string
 	Initiator  string
 	PoolName   string
-	Info       *SystemInfo
+	Info       *common.SystemInfo
 }
-
-const (
-	invalidSessionKey = 2
-)
 
 // NewClient : Creates an API client by setting up its HTTP transport
 func NewClient() *Client {
@@ -41,7 +37,7 @@ func NewClient() *Client {
 				},
 			},
 		},
-		Collector: newCollector(),
+		Collector: common.NewCollector(),
 	}
 }
 
@@ -58,7 +54,7 @@ func (client *Client) internalRequest(endpoint string) (*Response, *common.Respo
 // FormattedRequest : Format and execute the given request with client's configuration
 func (client *Client) FormattedRequest(endpointFormat string, opts ...interface{}) (*Response, *common.ResponseStatus, error) {
 	endpoint := fmt.Sprintf(endpointFormat, opts...)
-	stopTrackAPICall := client.Collector.trackAPICall(endpointFormat)
+	stopTrackAPICall := client.Collector.TrackAPICall(endpointFormat)
 	resp, status, err := client.internalRequest(endpoint)
 	stopTrackAPICall(err == nil)
 	return resp, status, err
@@ -109,7 +105,7 @@ func (client *Client) request(req *Request) (*Response, *common.ResponseStatus, 
 	status := res.GetStatus()
 
 	// Some API versions return success with an invalid session key response, so log in again
-	if !isLoginReq && code == http.StatusOK && status.ReturnCode == invalidSessionKey {
+	if !isLoginReq && code == http.StatusOK && status.ReturnCode == common.InvalidSessionKey {
 		klog.Info("invalid session key response, trying to re-login")
 		err = client.Login()
 		if err != nil {

@@ -58,7 +58,7 @@ func (client *Client) CloseConnections() error {
 
 // GetPoolType: Returns the pool type for a specified pool
 func (client *Client) GetPoolType(pool string) (string, error) {
-	return client.Info.GetPoolType(pool)
+	return GetPoolType(client.Info, pool)
 }
 
 // CreateVolume : creates a volume with the given name, capacity in the given pool
@@ -74,7 +74,7 @@ func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.R
 
 // GetPortals: Return a list of portals for the storage system
 func (client *Client) GetPortals() (string, error) {
-	return client.Info.GetPortals()
+	return GetPortals(client.Info)
 }
 
 // CreateNickname : Create a nickname for an initiator. The Storage API policy is to prohibit mapping of initiators which are not either

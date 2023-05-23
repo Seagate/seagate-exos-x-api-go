@@ -90,7 +90,7 @@ func (client *Client) InitSystemInfo() error {
 
 	client.Info, err = GetSystem(client.Addr)
 	if err == nil {
-		_ = client.Info.Log()
+		_ = Log(client.Info)
 	}
 
 	return err

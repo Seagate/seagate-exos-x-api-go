@@ -55,13 +55,11 @@ func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 	var sessionKey string = ""
 
 	logger.V(3).Info("================================================================================")
-	logger.V(3).Info(">> LoginGetByHash")
 	resp1, httpRes, err := apiClient.DefaultApi.LoginGetByHash(ctx, hashStr).Execute()
-	if httpRes.StatusCode == http.StatusOK {
+	if err == nil && httpRes != nil && httpRes.StatusCode == http.StatusOK {
 		logger.V(3).Info("++ LoginGetByHash",
 			"ResponseType", *resp1.Status[0].ResponseType,
-			"ResponseTypeNumeric", *resp1.Status[0].ResponseTypeNumeric,
-			"Response", *resp1.Status[0].Response)
+			"ResponseTypeNumeric", *resp1.Status[0].ResponseTypeNumeric)
 
 		if *resp1.Status[0].ResponseTypeNumeric == 0 {
 			logger.V(0).Info("++ MC Login SUCCESS", "ipaddress", config.MCIpAddress)

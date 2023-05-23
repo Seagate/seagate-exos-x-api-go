@@ -3,64 +3,29 @@
 package mcapi
 
 import (
+	"context"
 	"crypto/tls"
-	"errors"
-	"fmt"
 	"net/http"
 	"strings"
 	"time"
 
+	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 	"k8s.io/klog/v2"
 )
 
-const (
-	invalidSessionKey = 2
-)
-
 // Client : Can be used to request the API
 type Client struct {
+	Ctx        context.Context
 	Username   string
 	Password   string
 	Addr       string
 	HTTPClient http.Client
-	Collector  *Collector
+	Collector  *common.Collector
 	SessionKey string
 	Initiator  string
 	PoolName   string
-	Info       *SystemInfo
+	Info       *common.SystemInfo
 }
-
-// SessionValid : Determine if a session is valid, if not a login is required
-func (client *Client) SessionValid(addr, username string) bool {
-
-	if client.Addr == addr && client.Username == username {
-		if client.SessionKey == "" {
-			klog.Infof("SessionKey is invalid: %q", client.SessionKey)
-			return false
-		}
-		klog.Infof("client is already configured for API address %q, session is valid", addr)
-		return true
-	}
-
-	return false
-}
-
-// Client : Can be used to request the API
-type Client struct {
-	Username   string
-	Password   string
-	Addr       string
-	HTTPClient http.Client
-	Collector  *Collector
-	SessionKey string
-	Initiator  string
-	PoolName   string
-	Info       *SystemInfo
-}
-
-const (
-	invalidSessionKey = 2
-)
 
 // NewClient : Creates an API client by setting up its HTTP transport
 func NewClient() *Client {
@@ -74,108 +39,52 @@ func NewClient() *Client {
 				},
 			},
 		},
-		Collector: newCollector(),
+		Collector: common.NewCollector(),
 	}
 }
 
-// internalRequest : Execute the given request with client's configuration
-func (client *Client) internalRequest(endpoint string) (*Response, *ResponseStatus, error) {
-	if client.Addr == "" {
-		err := errors.New("missing server address")
-		return nil, NewErrorStatus(err.Error()), err
-	}
+// StoreCredentials : Called to store ip address, username, and password for the client
+func (client *Client) StoreCredentials(ipaddress string, username string, password string) {
 
-	return client.request(&Request{Endpoint: endpoint})
-}
-
-// FormattedRequest : Format and execute the given request with client's configuration
-func (client *Client) FormattedRequest(endpointFormat string, opts ...interface{}) (*Response, *ResponseStatus, error) {
-	endpoint := fmt.Sprintf(endpointFormat, opts...)
-	stopTrackAPICall := client.Collector.trackAPICall(endpointFormat)
-	resp, status, err := client.internalRequest(endpoint)
-	stopTrackAPICall(err == nil)
-	return resp, status, err
-}
-
-// request: process a storage api request
-func (client *Client) request(req *Request) (*Response, *ResponseStatus, error) {
-	isLoginReq := strings.Contains(req.Endpoint, "login")
-	if !isLoginReq {
-		if len(client.SessionKey) == 0 {
-			klog.Info("no session key stored, authenticating before sending request")
-			err := client.Login()
-			if err != nil {
-				return nil, NewErrorStatus("login failed"), err
-			}
-		}
-
-		klog.Infof("-> GET %s", req.Endpoint)
+	// Store the login credentials in the Client object
+	client.Username = username
+	client.Password = password
+	if strings.HasPrefix(ipaddress, "https") {
+		client.Addr = strings.Replace(ipaddress, "https://", "", 1)
 	} else {
-		klog.Infof("-> GET /login/<hidden>")
+		client.Addr = strings.Replace(ipaddress, "http://", "", 1)
+	}
+}
+
+// Login: Called to log into the storage controller API
+func (client *Client) Login(ctx context.Context) error {
+
+	config := &common.Config{
+		MCIpAddress: client.Addr,
+		MCUsername:  client.Username,
+		MCPassword:  client.Password,
 	}
 
-	raw, code, err := req.execute(client)
-	klog.V(2).Infof("req.execute: status code %d", code)
+	apiClient, err := common.Login(ctx, config)
+	if err == nil && apiClient != nil {
+		configuration := apiClient.GetConfig()
+		client.SessionKey = configuration.DefaultHeader["sessionKey"]
+	}
 
-	if (code == http.StatusUnauthorized || code == http.StatusForbidden) && !isLoginReq {
-		klog.Info("session key may have expired, trying to re-login")
-		err = client.Login()
-		if err != nil {
-			return nil, NewErrorStatus("re-login failed"), err
+	return err
+}
+
+// SessionValid : Determine if a session is valid, if not a login is required
+func (client *Client) SessionValid(addr, username string) bool {
+
+	if client.Addr == addr && client.Username == username {
+		if client.SessionKey == "" {
+			klog.V(2).InfoS("session invalid", "sessionkey", client.SessionKey)
+			return false
 		}
-		klog.Info("re-login succeeded, re-trying request")
-		raw, _, err = req.execute(client)
-	}
-	if err != nil {
-		return nil, NewErrorStatus("request failed"), err
+		klog.V(2).InfoS("client is configured", "ipaddress", addr)
+		return true
 	}
 
-	res, err := NewResponse(raw)
-	if err != nil {
-		if res != nil {
-			return res, res.GetStatus(), err
-		}
-
-		return nil, NewErrorStatus("corrupted response"), err
-	}
-
-	status := res.GetStatus()
-
-	// Some API versions return success with an invalid session key response, so log in again
-	if !isLoginReq && code == http.StatusOK && status.ReturnCode == invalidSessionKey {
-		klog.Info("invalid session key response, trying to re-login")
-		err = client.Login()
-		if err != nil {
-			return nil, NewErrorStatus("re-login failed"), err
-		}
-		klog.Info("re-login succeeded, re-trying request")
-		raw, _, err = req.execute(client)
-
-		if err != nil {
-			return nil, NewErrorStatus("request failed"), err
-		}
-
-		res, err := NewResponse(raw)
-		if err != nil {
-			if res != nil {
-				return res, res.GetStatus(), err
-			}
-
-			return nil, NewErrorStatus("corrupted response"), err
-		}
-
-		status = res.GetStatus()
-	}
-
-	if !isLoginReq {
-		klog.Infof("<- [%d %s] %s", status.ReturnCode, status.ResponseType, status.Response)
-	} else {
-		klog.Infof("<- [%d %s] <hidden>", status.ReturnCode, status.ResponseType)
-	}
-
-	if status.ResponseTypeNumeric != 0 {
-		return res, status, fmt.Errorf("API returned non-zero code %d (%s)", status.ReturnCode, status.Response)
-	}
-
-	return res, status, nil
+	return false
 }

@@ -22,6 +22,7 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 	"k8s.io/klog/v2"
 )
 
@@ -29,51 +30,14 @@ import (
 // System Information Storage and Creation
 //
 
-// PoolType: Linear or virtual pool attributes
-type PoolType struct {
-	Name         string
-	SerialNumber string
-	Type         string
-}
-
-// PortType: Storage system port attributes
-type PortType struct {
-	Label      string
-	Type       string
-	TargetId   string
-	IPAddress  string
-	Present    string
-	Compliance string
-}
-
-// System: Information stored for a storage array controller
-type SystemInfo struct {
-	IPAddress     string
-	HTTP          string
-	URL           string
-	Controller    string
-	Platform      string
-	SerialNumber  string
-	Status        string
-	MCCodeVersion string
-	MCBaseVersion string
-	Pools         []PoolType
-	Ports         []PortType
-}
-
-// SystemsData: Information stored multiple storage array controllers
-type SystemsData struct {
-	Systems []*SystemInfo
-}
-
 // systems: Data object storing all system information for all added controllers
-var systems SystemsData
+var systems common.SystemsData
 
 // AddSystem: Uses the client to query and store system data
 func AddSystem(url string, client *Client) error {
 
 	// Create the system record with the designated ip address
-	var s SystemInfo
+	var s common.SystemInfo
 	s.URL = strings.ToLower(url)
 	if strings.HasPrefix(s.URL, "http://") {
 		parts := strings.Split(s.URL, "http://")
@@ -112,7 +76,7 @@ func AddSystem(url string, client *Client) error {
 				for _, obj2 := range obj1.Objects {
 					if obj2.Name == "ports" {
 						klog.V(2).Infof("++ Adding port (%s)\n", obj2.PropertiesMap["port"].Data)
-						p := PortType{
+						p := common.PortType{
 							Label:    obj2.PropertiesMap["port"].Data,
 							Type:     obj2.PropertiesMap["port-type"].Data,
 							TargetId: obj2.PropertiesMap["target-id"].Data,
@@ -156,7 +120,7 @@ func AddSystem(url string, client *Client) error {
 			if obj1.Name == "pools" || obj1.Name == "pool" {
 				klog.V(2).Infof("++ Adding pool (%s)\n", obj1.PropertiesMap["name"].Data)
 				s.Pools = append(s.Pools,
-					PoolType{
+					common.PoolType{
 						Name:         obj1.PropertiesMap["name"].Data,
 						SerialNumber: obj1.PropertiesMap["serial-number"].Data,
 						Type:         obj1.PropertiesMap["storage-type"].Data,
@@ -168,8 +132,8 @@ func AddSystem(url string, client *Client) error {
 	return nil
 }
 
-// GetSystem: Return the System data object correspoinding to the IP Address
-func GetSystem(url string) (*SystemInfo, error) {
+// GetSystem: Return the System data object corresponding to the IP Address
+func GetSystem(url string) (*common.SystemInfo, error) {
 
 	for _, s := range systems.Systems {
 		if s.URL == url {
@@ -185,7 +149,7 @@ func GetSystem(url string) (*SystemInfo, error) {
 //
 
 // Log: Display the contents of all system information collected
-func (system *SystemInfo) Log() error {
+func Log(system *common.SystemInfo) error {
 
 	klog.Infof("\n")
 	klog.Infof("System Information:")
@@ -219,7 +183,7 @@ func (system *SystemInfo) Log() error {
 }
 
 // GetPoolType: Return the pool type for a given pool
-func (system *SystemInfo) GetPoolType(pool string) (string, error) {
+func GetPoolType(system *common.SystemInfo, pool string) (string, error) {
 	if system == nil {
 		return "", fmt.Errorf("system pointer is nil")
 	}
@@ -235,7 +199,7 @@ func (system *SystemInfo) GetPoolType(pool string) (string, error) {
 }
 
 // GetTargetId: Return the target id value for this storage system
-func (system *SystemInfo) GetTargetId(portType string) (string, error) {
+func GetTargetId(system *common.SystemInfo, portType string) (string, error) {
 	if system == nil {
 		return "", fmt.Errorf("system pointer is nil")
 	}
@@ -251,7 +215,7 @@ func (system *SystemInfo) GetTargetId(portType string) (string, error) {
 }
 
 // GetPortals: Return a list of iSCSI portals for the storage system
-func (system *SystemInfo) GetPortals() (string, error) {
+func GetPortals(system *common.SystemInfo) (string, error) {
 	if system == nil {
 		return "", fmt.Errorf("system pointer is nil")
 	}
