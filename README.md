@@ -156,18 +156,49 @@ This section describes commands still needed for special use cases.
 - /unmap/volume/{name}
 
 
-## Test Using A Live System
+# Regression Testing Using A Live System
 
-This option runs the Go language test cases against a live storage system. Two steps are required:
-- Update `test/.env` with the correct system IP Address and credentials
-  - See `test/env-example` which provides an example of the file contents
-- Run `go test ./test/ -v`
+This option runs a API Regression test suite using Ginkgo expressive tests.
 
-Another option is to define environment variables, which take precedence over .env values
-- export TEST_STORAGEIP=http://[ipaddress]
-- export TEST_USERNAME=[username]
-- export TEST_PASSWORD=[password]
-- export TEST_INITIATOR=[initiator]
-- export TEST_POOL=[pool]
-- Run `go test ./test/ -v`
-- unset TEST_STORAGEIP TEST_PASSWORD TEST_USERNAME TEST_INITIATOR TEST_POOL
+This option requires a configuration file, for example: `api-regression.conf`
+
+```
+#
+# api-regression configuration
+#
+# Properties:
+#   'ip' is required and is the IP Address of the storage controller used for testing
+#   'username' is required and is the login credentials for the storage controller
+#   'password' is required and is the login credentials for the storage controller
+#
+#   'initiator' is the iSCSI IQN value
+#   'pool' is the storage pool used for creating volumes
+#
+# Notes:
+#    To find initiator: sudo cat /etc/iscsi/initiatorname.iscsi | grep -v "##" | awk -F= '{print $2}'
+api-regression: 1.0.0
+
+# Example Controller
+ip: "http://<ipaddress>"
+username: "<username>"
+password: "<password>"
+initiator: "iqn.2004-10.com.ubuntu:01:b6f76364a18"
+pool: "A"
+```
+
+There are many options for running Ginkgo test cases, here are a few:
+
+- `make regession` to build the ***api-regression*** executable.
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "Login"` to run only the ***Login*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "System"` to run only the ***System*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "Volume"` to run only ***Volume*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "Snapshot"` to run only ***Snapshot*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast` to run only all tests
+
+There are also many command line flags:
+- `./api-regression --help` to see all options
+- `-debug level` to set the debug level to 0, 1, 2, 3, or 4
+- `-config filename` to use an alternate configuration file
+- `-version` to display the ***api-regression*** version and exit
+- `--ginkgo.fail-fast` to stop testing after the first failure
+- `--ginkgo.v` to run testing in verbose mode

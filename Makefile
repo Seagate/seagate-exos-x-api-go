@@ -1,6 +1,6 @@
 # Copyright (c) 2023 Seagate Technology LLC and/or its Affiliates
 
-.PHONY: help clean validator runv generator rung validate generate fmt regen
+.PHONY: help clean validator runv generator rung validate generate fmt regen regression run-regression
 
 VALIDATOR_APP := validator
 GENERATOR_APP := generator
@@ -18,7 +18,9 @@ help:
 	@echo "make validate        - validate the openapi specification using openapi-generator-cli"
 	@echo "make generate        - generate go code for the openapi specification using openapi-generator-cli"
 	@echo "make fmt             - Run gofmt"	
-	@echo "make regen           - Run the generator, validate, generate, and then run the validator"	
+	@echo "make regen           - Run the generator, validate, generate, and then run the validator"
+	@echo "make regression      - Build api-regression"
+	@echo "make run-regression  - Run api-regression"
 	@echo ""
 
 clean:
@@ -61,3 +63,10 @@ fmt:
 
 regen: rung validate generate runv
 	@echo "Full Regeneration of $(OPENAPI_YAML)"
+
+regression:
+	@echo "Build local api-regression..."
+	go build -o api-regression cmd/api-regression/main.go
+
+run-regression: regression
+	./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast 
