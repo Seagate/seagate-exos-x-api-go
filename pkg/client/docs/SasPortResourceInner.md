@@ -7,11 +7,11 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **ConfiguredTopology** | Pointer to **string** |  | [optional] 
-**ConfiguredTopologyNumeric** | Pointer to **int32** |  | [optional] 
-**SasActiveLanes** | Pointer to **int32** | Number of currently active PHY lanes for the SAS port | [optional] 
-**SasDisabledLanes** | Pointer to **int32** | Number of disabled PHY lanes for the SAS port | [optional] 
-**SasLanesExpected** | Pointer to **int32** | Expected number of active PHY lanes for the SAS port | [optional] 
-**Width** | Pointer to **int32** | Number of PHY lanes for the SAS port | [optional] 
+**ConfiguredTopologyNumeric** | Pointer to **int64** |  | [optional] 
+**SasActiveLanes** | Pointer to **int64** | Number of currently active PHY lanes for the SAS port | [optional] 
+**SasDisabledLanes** | Pointer to **int64** | Number of disabled PHY lanes for the SAS port | [optional] 
+**SasLanesExpected** | Pointer to **int64** | Expected number of active PHY lanes for the SAS port | [optional] 
+**Width** | Pointer to **int64** | Number of PHY lanes for the SAS port | [optional] 
 
 ## Methods
 
@@ -109,20 +109,20 @@ HasConfiguredTopology returns a boolean if a field has been set.
 
 ### GetConfiguredTopologyNumeric
 
-`func (o *SasPortResourceInner) GetConfiguredTopologyNumeric() int32`
+`func (o *SasPortResourceInner) GetConfiguredTopologyNumeric() int64`
 
 GetConfiguredTopologyNumeric returns the ConfiguredTopologyNumeric field if non-nil, zero value otherwise.
 
 ### GetConfiguredTopologyNumericOk
 
-`func (o *SasPortResourceInner) GetConfiguredTopologyNumericOk() (*int32, bool)`
+`func (o *SasPortResourceInner) GetConfiguredTopologyNumericOk() (*int64, bool)`
 
 GetConfiguredTopologyNumericOk returns a tuple with the ConfiguredTopologyNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConfiguredTopologyNumeric
 
-`func (o *SasPortResourceInner) SetConfiguredTopologyNumeric(v int32)`
+`func (o *SasPortResourceInner) SetConfiguredTopologyNumeric(v int64)`
 
 SetConfiguredTopologyNumeric sets ConfiguredTopologyNumeric field to given value.
 
@@ -134,20 +134,20 @@ HasConfiguredTopologyNumeric returns a boolean if a field has been set.
 
 ### GetSasActiveLanes
 
-`func (o *SasPortResourceInner) GetSasActiveLanes() int32`
+`func (o *SasPortResourceInner) GetSasActiveLanes() int64`
 
 GetSasActiveLanes returns the SasActiveLanes field if non-nil, zero value otherwise.
 
 ### GetSasActiveLanesOk
 
-`func (o *SasPortResourceInner) GetSasActiveLanesOk() (*int32, bool)`
+`func (o *SasPortResourceInner) GetSasActiveLanesOk() (*int64, bool)`
 
 GetSasActiveLanesOk returns a tuple with the SasActiveLanes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSasActiveLanes
 
-`func (o *SasPortResourceInner) SetSasActiveLanes(v int32)`
+`func (o *SasPortResourceInner) SetSasActiveLanes(v int64)`
 
 SetSasActiveLanes sets SasActiveLanes field to given value.
 
@@ -159,20 +159,20 @@ HasSasActiveLanes returns a boolean if a field has been set.
 
 ### GetSasDisabledLanes
 
-`func (o *SasPortResourceInner) GetSasDisabledLanes() int32`
+`func (o *SasPortResourceInner) GetSasDisabledLanes() int64`
 
 GetSasDisabledLanes returns the SasDisabledLanes field if non-nil, zero value otherwise.
 
 ### GetSasDisabledLanesOk
 
-`func (o *SasPortResourceInner) GetSasDisabledLanesOk() (*int32, bool)`
+`func (o *SasPortResourceInner) GetSasDisabledLanesOk() (*int64, bool)`
 
 GetSasDisabledLanesOk returns a tuple with the SasDisabledLanes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSasDisabledLanes
 
-`func (o *SasPortResourceInner) SetSasDisabledLanes(v int32)`
+`func (o *SasPortResourceInner) SetSasDisabledLanes(v int64)`
 
 SetSasDisabledLanes sets SasDisabledLanes field to given value.
 
@@ -184,20 +184,20 @@ HasSasDisabledLanes returns a boolean if a field has been set.
 
 ### GetSasLanesExpected
 
-`func (o *SasPortResourceInner) GetSasLanesExpected() int32`
+`func (o *SasPortResourceInner) GetSasLanesExpected() int64`
 
 GetSasLanesExpected returns the SasLanesExpected field if non-nil, zero value otherwise.
 
 ### GetSasLanesExpectedOk
 
-`func (o *SasPortResourceInner) GetSasLanesExpectedOk() (*int32, bool)`
+`func (o *SasPortResourceInner) GetSasLanesExpectedOk() (*int64, bool)`
 
 GetSasLanesExpectedOk returns a tuple with the SasLanesExpected field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSasLanesExpected
 
-`func (o *SasPortResourceInner) SetSasLanesExpected(v int32)`
+`func (o *SasPortResourceInner) SetSasLanesExpected(v int64)`
 
 SetSasLanesExpected sets SasLanesExpected field to given value.
 
@@ -209,20 +209,20 @@ HasSasLanesExpected returns a boolean if a field has been set.
 
 ### GetWidth
 
-`func (o *SasPortResourceInner) GetWidth() int32`
+`func (o *SasPortResourceInner) GetWidth() int64`
 
 GetWidth returns the Width field if non-nil, zero value otherwise.
 
 ### GetWidthOk
 
-`func (o *SasPortResourceInner) GetWidthOk() (*int32, bool)`
+`func (o *SasPortResourceInner) GetWidthOk() (*int64, bool)`
 
 GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWidth
 
-`func (o *SasPortResourceInner) SetWidth(v int32)`
+`func (o *SasPortResourceInner) SetWidth(v int64)`
 
 SetWidth sets Width field to given value.
 

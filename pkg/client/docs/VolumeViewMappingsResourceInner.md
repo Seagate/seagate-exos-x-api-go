@@ -7,10 +7,10 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **Access** | Pointer to **string** | Access rights for this volume | [optional] 
-**AccessNumeric** | Pointer to **int32** | Access rights for this volume( In numeric form ) | [optional] 
+**AccessNumeric** | Pointer to **int64** | Access rights for this volume( In numeric form ) | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **HostProfile** | Pointer to **string** |  | [optional] 
-**HostProfileNumeric** | Pointer to **int32** |  | [optional] 
+**HostProfileNumeric** | Pointer to **int64** |  | [optional] 
 **Identifier** | Pointer to **string** | WWPN or IQN or Host Serial Number or Host Group Serial Number | [optional] 
 **InitiatorsUrl** | Pointer to **string** |  | [optional] 
 **Lun** | Pointer to **string** | Logical Unit Number | [optional] 
@@ -115,20 +115,20 @@ HasAccess returns a boolean if a field has been set.
 
 ### GetAccessNumeric
 
-`func (o *VolumeViewMappingsResourceInner) GetAccessNumeric() int32`
+`func (o *VolumeViewMappingsResourceInner) GetAccessNumeric() int64`
 
 GetAccessNumeric returns the AccessNumeric field if non-nil, zero value otherwise.
 
 ### GetAccessNumericOk
 
-`func (o *VolumeViewMappingsResourceInner) GetAccessNumericOk() (*int32, bool)`
+`func (o *VolumeViewMappingsResourceInner) GetAccessNumericOk() (*int64, bool)`
 
 GetAccessNumericOk returns a tuple with the AccessNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAccessNumeric
 
-`func (o *VolumeViewMappingsResourceInner) SetAccessNumeric(v int32)`
+`func (o *VolumeViewMappingsResourceInner) SetAccessNumeric(v int64)`
 
 SetAccessNumeric sets AccessNumeric field to given value.
 
@@ -190,20 +190,20 @@ HasHostProfile returns a boolean if a field has been set.
 
 ### GetHostProfileNumeric
 
-`func (o *VolumeViewMappingsResourceInner) GetHostProfileNumeric() int32`
+`func (o *VolumeViewMappingsResourceInner) GetHostProfileNumeric() int64`
 
 GetHostProfileNumeric returns the HostProfileNumeric field if non-nil, zero value otherwise.
 
 ### GetHostProfileNumericOk
 
-`func (o *VolumeViewMappingsResourceInner) GetHostProfileNumericOk() (*int32, bool)`
+`func (o *VolumeViewMappingsResourceInner) GetHostProfileNumericOk() (*int64, bool)`
 
 GetHostProfileNumericOk returns a tuple with the HostProfileNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostProfileNumeric
 
-`func (o *VolumeViewMappingsResourceInner) SetHostProfileNumeric(v int32)`
+`func (o *VolumeViewMappingsResourceInner) SetHostProfileNumeric(v int64)`
 
 SetHostProfileNumeric sets HostProfileNumeric field to given value.
 

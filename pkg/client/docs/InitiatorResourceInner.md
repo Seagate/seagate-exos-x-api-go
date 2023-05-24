@@ -9,16 +9,16 @@ Name | Type | Description | Notes
 **Discovered** | Pointer to **string** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **HostBusType** | Pointer to **string** |  | [optional] 
-**HostBusTypeNumeric** | Pointer to **int32** |  | [optional] 
+**HostBusTypeNumeric** | Pointer to **int64** |  | [optional] 
 **HostId** | Pointer to **string** |  | [optional] 
 **HostKey** | Pointer to **string** | Durable ID of a Host | [optional] 
-**HostPortBitsA** | Pointer to **int32** |  | [optional] 
-**HostPortBitsB** | Pointer to **int32** |  | [optional] 
+**HostPortBitsA** | Pointer to **int64** |  | [optional] 
+**HostPortBitsB** | Pointer to **int64** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
 **Mapped** | Pointer to **string** |  | [optional] 
 **Nickname** | Pointer to **string** | User-defined alias for the mapped host | [optional] 
 **Profile** | Pointer to **string** |  | [optional] 
-**ProfileNumeric** | Pointer to **int32** |  | [optional] 
+**ProfileNumeric** | Pointer to **int64** |  | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
 
 ## Methods
@@ -167,20 +167,20 @@ HasHostBusType returns a boolean if a field has been set.
 
 ### GetHostBusTypeNumeric
 
-`func (o *InitiatorResourceInner) GetHostBusTypeNumeric() int32`
+`func (o *InitiatorResourceInner) GetHostBusTypeNumeric() int64`
 
 GetHostBusTypeNumeric returns the HostBusTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetHostBusTypeNumericOk
 
-`func (o *InitiatorResourceInner) GetHostBusTypeNumericOk() (*int32, bool)`
+`func (o *InitiatorResourceInner) GetHostBusTypeNumericOk() (*int64, bool)`
 
 GetHostBusTypeNumericOk returns a tuple with the HostBusTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostBusTypeNumeric
 
-`func (o *InitiatorResourceInner) SetHostBusTypeNumeric(v int32)`
+`func (o *InitiatorResourceInner) SetHostBusTypeNumeric(v int64)`
 
 SetHostBusTypeNumeric sets HostBusTypeNumeric field to given value.
 
@@ -242,20 +242,20 @@ HasHostKey returns a boolean if a field has been set.
 
 ### GetHostPortBitsA
 
-`func (o *InitiatorResourceInner) GetHostPortBitsA() int32`
+`func (o *InitiatorResourceInner) GetHostPortBitsA() int64`
 
 GetHostPortBitsA returns the HostPortBitsA field if non-nil, zero value otherwise.
 
 ### GetHostPortBitsAOk
 
-`func (o *InitiatorResourceInner) GetHostPortBitsAOk() (*int32, bool)`
+`func (o *InitiatorResourceInner) GetHostPortBitsAOk() (*int64, bool)`
 
 GetHostPortBitsAOk returns a tuple with the HostPortBitsA field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostPortBitsA
 
-`func (o *InitiatorResourceInner) SetHostPortBitsA(v int32)`
+`func (o *InitiatorResourceInner) SetHostPortBitsA(v int64)`
 
 SetHostPortBitsA sets HostPortBitsA field to given value.
 
@@ -267,20 +267,20 @@ HasHostPortBitsA returns a boolean if a field has been set.
 
 ### GetHostPortBitsB
 
-`func (o *InitiatorResourceInner) GetHostPortBitsB() int32`
+`func (o *InitiatorResourceInner) GetHostPortBitsB() int64`
 
 GetHostPortBitsB returns the HostPortBitsB field if non-nil, zero value otherwise.
 
 ### GetHostPortBitsBOk
 
-`func (o *InitiatorResourceInner) GetHostPortBitsBOk() (*int32, bool)`
+`func (o *InitiatorResourceInner) GetHostPortBitsBOk() (*int64, bool)`
 
 GetHostPortBitsBOk returns a tuple with the HostPortBitsB field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostPortBitsB
 
-`func (o *InitiatorResourceInner) SetHostPortBitsB(v int32)`
+`func (o *InitiatorResourceInner) SetHostPortBitsB(v int64)`
 
 SetHostPortBitsB sets HostPortBitsB field to given value.
 
@@ -392,20 +392,20 @@ HasProfile returns a boolean if a field has been set.
 
 ### GetProfileNumeric
 
-`func (o *InitiatorResourceInner) GetProfileNumeric() int32`
+`func (o *InitiatorResourceInner) GetProfileNumeric() int64`
 
 GetProfileNumeric returns the ProfileNumeric field if non-nil, zero value otherwise.
 
 ### GetProfileNumericOk
 
-`func (o *InitiatorResourceInner) GetProfileNumericOk() (*int32, bool)`
+`func (o *InitiatorResourceInner) GetProfileNumericOk() (*int64, bool)`
 
 GetProfileNumericOk returns a tuple with the ProfileNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProfileNumeric
 
-`func (o *InitiatorResourceInner) SetProfileNumeric(v int32)`
+`func (o *InitiatorResourceInner) SetProfileNumeric(v int64)`
 
 SetProfileNumeric sets ProfileNumeric field to given value.
 

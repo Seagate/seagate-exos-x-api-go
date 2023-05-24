@@ -22,32 +22,32 @@ type NetworkParametersResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
 	Meta       *string `json:"meta,omitempty"`
 	// Currently assigned IP version
-	ActiveVersion *int32 `json:"active-version,omitempty"`
+	ActiveVersion *int64 `json:"active-version,omitempty"`
 	// The way in which an IP address should be obtained
 	AddressingMode *string `json:"addressing-mode,omitempty"`
 	// The way in which an IP address should be obtained( In numeric form )
-	AddressingModeNumeric  *int32  `json:"addressing-mode-numeric,omitempty"`
+	AddressingModeNumeric  *int64  `json:"addressing-mode-numeric,omitempty"`
 	AutoNegotiation        *string `json:"auto-negotiation,omitempty"`
-	AutoNegotiationNumeric *int32  `json:"auto-negotiation-numeric,omitempty"`
+	AutoNegotiationNumeric *int64  `json:"auto-negotiation-numeric,omitempty"`
 	// Type of duplex mode that is specified
 	DuplexMode *string `json:"duplex-mode,omitempty"`
 	// Type of duplex mode that is specified( In numeric form )
-	DuplexModeNumeric    *int32  `json:"duplex-mode-numeric,omitempty"`
+	DuplexModeNumeric    *int64  `json:"duplex-mode-numeric,omitempty"`
 	DurableId            *string `json:"durable-id,omitempty"`
 	Gateway              *string `json:"gateway,omitempty"`
 	Health               *string `json:"health,omitempty"`
-	HealthNumeric        *int32  `json:"health-numeric,omitempty"`
+	HealthNumeric        *int64  `json:"health-numeric,omitempty"`
 	HealthReason         *string `json:"health-reason,omitempty"`
 	HealthRecommendation *string `json:"health-recommendation,omitempty"`
 	IpAddress            *string `json:"ip-address,omitempty"`
 	// Link speed associated with this ethernet port
 	LinkSpeed *string `json:"link-speed,omitempty"`
 	// Link speed associated with this ethernet port( In numeric form )
-	LinkSpeedNumeric *int32 `json:"link-speed-numeric,omitempty"`
+	LinkSpeedNumeric *int64 `json:"link-speed-numeric,omitempty"`
 	// MAC address for the network port
 	MacAddress           *string `json:"mac-address,omitempty"`
 	PingBroadcast        *string `json:"ping-broadcast,omitempty"`
-	PingBroadcastNumeric *int32  `json:"ping-broadcast-numeric,omitempty"`
+	PingBroadcastNumeric *int64  `json:"ping-broadcast-numeric,omitempty"`
 	// Network port subnet mask
 	SubnetMask *string `json:"subnet-mask,omitempty"`
 }
@@ -134,9 +134,9 @@ func (o *NetworkParametersResourceInner) SetMeta(v string) {
 }
 
 // GetActiveVersion returns the ActiveVersion field value if set, zero value otherwise.
-func (o *NetworkParametersResourceInner) GetActiveVersion() int32 {
+func (o *NetworkParametersResourceInner) GetActiveVersion() int64 {
 	if o == nil || IsNil(o.ActiveVersion) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ActiveVersion
@@ -144,7 +144,7 @@ func (o *NetworkParametersResourceInner) GetActiveVersion() int32 {
 
 // GetActiveVersionOk returns a tuple with the ActiveVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *NetworkParametersResourceInner) GetActiveVersionOk() (*int32, bool) {
+func (o *NetworkParametersResourceInner) GetActiveVersionOk() (*int64, bool) {
 	if o == nil || IsNil(o.ActiveVersion) {
 		return nil, false
 	}
@@ -160,8 +160,8 @@ func (o *NetworkParametersResourceInner) HasActiveVersion() bool {
 	return false
 }
 
-// SetActiveVersion gets a reference to the given int32 and assigns it to the ActiveVersion field.
-func (o *NetworkParametersResourceInner) SetActiveVersion(v int32) {
+// SetActiveVersion gets a reference to the given int64 and assigns it to the ActiveVersion field.
+func (o *NetworkParametersResourceInner) SetActiveVersion(v int64) {
 	o.ActiveVersion = &v
 }
 
@@ -198,9 +198,9 @@ func (o *NetworkParametersResourceInner) SetAddressingMode(v string) {
 }
 
 // GetAddressingModeNumeric returns the AddressingModeNumeric field value if set, zero value otherwise.
-func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int32 {
+func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int64 {
 	if o == nil || IsNil(o.AddressingModeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.AddressingModeNumeric
@@ -208,7 +208,7 @@ func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int32 {
 
 // GetAddressingModeNumericOk returns a tuple with the AddressingModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *NetworkParametersResourceInner) GetAddressingModeNumericOk() (*int32, bool) {
+func (o *NetworkParametersResourceInner) GetAddressingModeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.AddressingModeNumeric) {
 		return nil, false
 	}
@@ -224,8 +224,8 @@ func (o *NetworkParametersResourceInner) HasAddressingModeNumeric() bool {
 	return false
 }
 
-// SetAddressingModeNumeric gets a reference to the given int32 and assigns it to the AddressingModeNumeric field.
-func (o *NetworkParametersResourceInner) SetAddressingModeNumeric(v int32) {
+// SetAddressingModeNumeric gets a reference to the given int64 and assigns it to the AddressingModeNumeric field.
+func (o *NetworkParametersResourceInner) SetAddressingModeNumeric(v int64) {
 	o.AddressingModeNumeric = &v
 }
 
@@ -262,9 +262,9 @@ func (o *NetworkParametersResourceInner) SetAutoNegotiation(v string) {
 }
 
 // GetAutoNegotiationNumeric returns the AutoNegotiationNumeric field value if set, zero value otherwise.
-func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int32 {
+func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int64 {
 	if o == nil || IsNil(o.AutoNegotiationNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.AutoNegotiationNumeric
@@ -272,7 +272,7 @@ func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int32 {
 
 // GetAutoNegotiationNumericOk returns a tuple with the AutoNegotiationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *NetworkParametersResourceInner) GetAutoNegotiationNumericOk() (*int32, bool) {
+func (o *NetworkParametersResourceInner) GetAutoNegotiationNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.AutoNegotiationNumeric) {
 		return nil, false
 	}
@@ -288,8 +288,8 @@ func (o *NetworkParametersResourceInner) HasAutoNegotiationNumeric() bool {
 	return false
 }
 
-// SetAutoNegotiationNumeric gets a reference to the given int32 and assigns it to the AutoNegotiationNumeric field.
-func (o *NetworkParametersResourceInner) SetAutoNegotiationNumeric(v int32) {
+// SetAutoNegotiationNumeric gets a reference to the given int64 and assigns it to the AutoNegotiationNumeric field.
+func (o *NetworkParametersResourceInner) SetAutoNegotiationNumeric(v int64) {
 	o.AutoNegotiationNumeric = &v
 }
 
@@ -326,9 +326,9 @@ func (o *NetworkParametersResourceInner) SetDuplexMode(v string) {
 }
 
 // GetDuplexModeNumeric returns the DuplexModeNumeric field value if set, zero value otherwise.
-func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int32 {
+func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int64 {
 	if o == nil || IsNil(o.DuplexModeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.DuplexModeNumeric
@@ -336,7 +336,7 @@ func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int32 {
 
 // GetDuplexModeNumericOk returns a tuple with the DuplexModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *NetworkParametersResourceInner) GetDuplexModeNumericOk() (*int32, bool) {
+func (o *NetworkParametersResourceInner) GetDuplexModeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.DuplexModeNumeric) {
 		return nil, false
 	}
@@ -352,8 +352,8 @@ func (o *NetworkParametersResourceInner) HasDuplexModeNumeric() bool {
 	return false
 }
 
-// SetDuplexModeNumeric gets a reference to the given int32 and assigns it to the DuplexModeNumeric field.
-func (o *NetworkParametersResourceInner) SetDuplexModeNumeric(v int32) {
+// SetDuplexModeNumeric gets a reference to the given int64 and assigns it to the DuplexModeNumeric field.
+func (o *NetworkParametersResourceInner) SetDuplexModeNumeric(v int64) {
 	o.DuplexModeNumeric = &v
 }
 
@@ -454,9 +454,9 @@ func (o *NetworkParametersResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
-func (o *NetworkParametersResourceInner) GetHealthNumeric() int32 {
+func (o *NetworkParametersResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HealthNumeric
@@ -464,7 +464,7 @@ func (o *NetworkParametersResourceInner) GetHealthNumeric() int32 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *NetworkParametersResourceInner) GetHealthNumericOk() (*int32, bool) {
+func (o *NetworkParametersResourceInner) GetHealthNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -480,8 +480,8 @@ func (o *NetworkParametersResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
-// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
-func (o *NetworkParametersResourceInner) SetHealthNumeric(v int32) {
+// SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
+func (o *NetworkParametersResourceInner) SetHealthNumeric(v int64) {
 	o.HealthNumeric = &v
 }
 
@@ -614,9 +614,9 @@ func (o *NetworkParametersResourceInner) SetLinkSpeed(v string) {
 }
 
 // GetLinkSpeedNumeric returns the LinkSpeedNumeric field value if set, zero value otherwise.
-func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int32 {
+func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int64 {
 	if o == nil || IsNil(o.LinkSpeedNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.LinkSpeedNumeric
@@ -624,7 +624,7 @@ func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int32 {
 
 // GetLinkSpeedNumericOk returns a tuple with the LinkSpeedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *NetworkParametersResourceInner) GetLinkSpeedNumericOk() (*int32, bool) {
+func (o *NetworkParametersResourceInner) GetLinkSpeedNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.LinkSpeedNumeric) {
 		return nil, false
 	}
@@ -640,8 +640,8 @@ func (o *NetworkParametersResourceInner) HasLinkSpeedNumeric() bool {
 	return false
 }
 
-// SetLinkSpeedNumeric gets a reference to the given int32 and assigns it to the LinkSpeedNumeric field.
-func (o *NetworkParametersResourceInner) SetLinkSpeedNumeric(v int32) {
+// SetLinkSpeedNumeric gets a reference to the given int64 and assigns it to the LinkSpeedNumeric field.
+func (o *NetworkParametersResourceInner) SetLinkSpeedNumeric(v int64) {
 	o.LinkSpeedNumeric = &v
 }
 
@@ -710,9 +710,9 @@ func (o *NetworkParametersResourceInner) SetPingBroadcast(v string) {
 }
 
 // GetPingBroadcastNumeric returns the PingBroadcastNumeric field value if set, zero value otherwise.
-func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int32 {
+func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int64 {
 	if o == nil || IsNil(o.PingBroadcastNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PingBroadcastNumeric
@@ -720,7 +720,7 @@ func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int32 {
 
 // GetPingBroadcastNumericOk returns a tuple with the PingBroadcastNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *NetworkParametersResourceInner) GetPingBroadcastNumericOk() (*int32, bool) {
+func (o *NetworkParametersResourceInner) GetPingBroadcastNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.PingBroadcastNumeric) {
 		return nil, false
 	}
@@ -736,8 +736,8 @@ func (o *NetworkParametersResourceInner) HasPingBroadcastNumeric() bool {
 	return false
 }
 
-// SetPingBroadcastNumeric gets a reference to the given int32 and assigns it to the PingBroadcastNumeric field.
-func (o *NetworkParametersResourceInner) SetPingBroadcastNumeric(v int32) {
+// SetPingBroadcastNumeric gets a reference to the given int64 and assigns it to the PingBroadcastNumeric field.
+func (o *NetworkParametersResourceInner) SetPingBroadcastNumeric(v int64) {
 	o.PingBroadcastNumeric = &v
 }
 

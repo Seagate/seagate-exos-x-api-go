@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Meta** | Pointer to **string** |  | [optional] 
 **HbaNickname** | Pointer to **string** |  | [optional] 
 **HostProfile** | Pointer to **string** |  | [optional] 
-**HostProfileNumeric** | Pointer to **int32** |  | [optional] 
+**HostProfileNumeric** | Pointer to **int64** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
 **VolumeView** | Pointer to [**[]VolumeViewResourceInner**](VolumeViewResourceInner.md) |  | [optional] 
 
@@ -133,20 +133,20 @@ HasHostProfile returns a boolean if a field has been set.
 
 ### GetHostProfileNumeric
 
-`func (o *InitiatorViewResourceInner) GetHostProfileNumeric() int32`
+`func (o *InitiatorViewResourceInner) GetHostProfileNumeric() int64`
 
 GetHostProfileNumeric returns the HostProfileNumeric field if non-nil, zero value otherwise.
 
 ### GetHostProfileNumericOk
 
-`func (o *InitiatorViewResourceInner) GetHostProfileNumericOk() (*int32, bool)`
+`func (o *InitiatorViewResourceInner) GetHostProfileNumericOk() (*int64, bool)`
 
 GetHostProfileNumericOk returns a tuple with the HostProfileNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostProfileNumeric
 
-`func (o *InitiatorViewResourceInner) SetHostProfileNumeric(v int32)`
+`func (o *InitiatorViewResourceInner) SetHostProfileNumeric(v int64)`
 
 SetHostProfileNumeric sets HostProfileNumeric field to given value.
 

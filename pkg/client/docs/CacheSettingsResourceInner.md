@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
-**CacheBlockSize** | Pointer to **int32** |  | [optional] 
+**CacheBlockSize** | Pointer to **int64** |  | [optional] 
 **OperationMode** | Pointer to **string** | Storage system operation mode (redundancy mode) | [optional] 
-**OperationModeNumeric** | Pointer to **int32** | Storage system operation mode (redundancy mode)( In numeric form ) | [optional] 
+**OperationModeNumeric** | Pointer to **int64** | Storage system operation mode (redundancy mode)( In numeric form ) | [optional] 
 **PiFormat** | Pointer to **string** | Used to describe the Host Protection Information | [optional] 
-**PiFormatNumeric** | Pointer to **int32** | Used to describe the Host Protection Information( In numeric form ) | [optional] 
+**PiFormatNumeric** | Pointer to **int64** | Used to describe the Host Protection Information( In numeric form ) | [optional] 
 **ControllerCacheParameters** | Pointer to [**[]ControllerCacheParametersResourceInner**](ControllerCacheParametersResourceInner.md) |  | [optional] 
 
 ## Methods
@@ -84,20 +84,20 @@ HasMeta returns a boolean if a field has been set.
 
 ### GetCacheBlockSize
 
-`func (o *CacheSettingsResourceInner) GetCacheBlockSize() int32`
+`func (o *CacheSettingsResourceInner) GetCacheBlockSize() int64`
 
 GetCacheBlockSize returns the CacheBlockSize field if non-nil, zero value otherwise.
 
 ### GetCacheBlockSizeOk
 
-`func (o *CacheSettingsResourceInner) GetCacheBlockSizeOk() (*int32, bool)`
+`func (o *CacheSettingsResourceInner) GetCacheBlockSizeOk() (*int64, bool)`
 
 GetCacheBlockSizeOk returns a tuple with the CacheBlockSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheBlockSize
 
-`func (o *CacheSettingsResourceInner) SetCacheBlockSize(v int32)`
+`func (o *CacheSettingsResourceInner) SetCacheBlockSize(v int64)`
 
 SetCacheBlockSize sets CacheBlockSize field to given value.
 
@@ -134,20 +134,20 @@ HasOperationMode returns a boolean if a field has been set.
 
 ### GetOperationModeNumeric
 
-`func (o *CacheSettingsResourceInner) GetOperationModeNumeric() int32`
+`func (o *CacheSettingsResourceInner) GetOperationModeNumeric() int64`
 
 GetOperationModeNumeric returns the OperationModeNumeric field if non-nil, zero value otherwise.
 
 ### GetOperationModeNumericOk
 
-`func (o *CacheSettingsResourceInner) GetOperationModeNumericOk() (*int32, bool)`
+`func (o *CacheSettingsResourceInner) GetOperationModeNumericOk() (*int64, bool)`
 
 GetOperationModeNumericOk returns a tuple with the OperationModeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOperationModeNumeric
 
-`func (o *CacheSettingsResourceInner) SetOperationModeNumeric(v int32)`
+`func (o *CacheSettingsResourceInner) SetOperationModeNumeric(v int64)`
 
 SetOperationModeNumeric sets OperationModeNumeric field to given value.
 
@@ -184,20 +184,20 @@ HasPiFormat returns a boolean if a field has been set.
 
 ### GetPiFormatNumeric
 
-`func (o *CacheSettingsResourceInner) GetPiFormatNumeric() int32`
+`func (o *CacheSettingsResourceInner) GetPiFormatNumeric() int64`
 
 GetPiFormatNumeric returns the PiFormatNumeric field if non-nil, zero value otherwise.
 
 ### GetPiFormatNumericOk
 
-`func (o *CacheSettingsResourceInner) GetPiFormatNumericOk() (*int32, bool)`
+`func (o *CacheSettingsResourceInner) GetPiFormatNumericOk() (*int64, bool)`
 
 GetPiFormatNumericOk returns a tuple with the PiFormatNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPiFormatNumeric
 
-`func (o *CacheSettingsResourceInner) SetPiFormatNumeric(v int32)`
+`func (o *CacheSettingsResourceInner) SetPiFormatNumeric(v int64)`
 
 SetPiFormatNumeric sets PiFormatNumeric field to given value.
 

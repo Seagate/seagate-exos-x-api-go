@@ -7,122 +7,122 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **Architecture** | Pointer to **string** |  | [optional] 
-**ArchitectureNumeric** | Pointer to **int32** |  | [optional] 
+**ArchitectureNumeric** | Pointer to **int64** |  | [optional] 
 **AssuranceLevel** | Pointer to **string** |  | [optional] 
-**AssuranceLevelNumeric** | Pointer to **int32** |  | [optional] 
+**AssuranceLevelNumeric** | Pointer to **int64** |  | [optional] 
 **Attributes** | Pointer to **string** | Indicates if the disk is single-pathed | [optional] 
-**AttributesNumeric** | Pointer to **int32** | Indicates if the disk is single-pathed( In numeric form ) | [optional] 
-**AvgRspTime** | Pointer to **int32** |  | [optional] 
-**Blink** | Pointer to **int32** | Indicates whether the locator LED is on | [optional] 
-**Blocks** | Pointer to **int32** | The size in blocks | [optional] 
-**Blocksize** | Pointer to **int32** |  | [optional] 
-**ContainerIndex** | Pointer to **int32** |  | [optional] 
+**AttributesNumeric** | Pointer to **int64** | Indicates if the disk is single-pathed( In numeric form ) | [optional] 
+**AvgRspTime** | Pointer to **int64** |  | [optional] 
+**Blink** | Pointer to **int64** | Indicates whether the locator LED is on | [optional] 
+**Blocks** | Pointer to **int64** | The size in blocks | [optional] 
+**Blocksize** | Pointer to **int64** |  | [optional] 
+**ContainerIndex** | Pointer to **int64** |  | [optional] 
 **CopybackState** | Pointer to **string** | Copyback State | [optional] 
-**CopybackStateNumeric** | Pointer to **int32** | Copyback State( In numeric form ) | [optional] 
+**CopybackStateNumeric** | Pointer to **int64** | Copyback State( In numeric form ) | [optional] 
 **CurrentJobCompletion** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
-**DescriptionNumeric** | Pointer to **int32** |  | [optional] 
-**DiskDsdCount** | Pointer to **int32** |  | [optional] 
+**DescriptionNumeric** | Pointer to **int64** |  | [optional] 
+**DiskDsdCount** | Pointer to **int64** |  | [optional] 
 **DiskGroup** | Pointer to **string** | Disk Group details | [optional] 
-**DrawerId** | Pointer to **int32** |  | [optional] 
-**DriveDownCode** | Pointer to **int32** |  | [optional] 
-**DualPort** | Pointer to **int32** |  | [optional] 
+**DrawerId** | Pointer to **int64** |  | [optional] 
+**DriveDownCode** | Pointer to **int64** |  | [optional] 
+**DualPort** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
-**EnclosureId** | Pointer to **int32** |  | [optional] 
+**EnclosureId** | Pointer to **int64** |  | [optional] 
 **EnclosureWwn** | Pointer to **string** | Enclosure World Wide Name | [optional] 
 **EnclosuresUrl** | Pointer to **string** |  | [optional] 
-**Error** | Pointer to **int32** |  | [optional] 
-**ExtendedStatus** | Pointer to **int32** | Extended status (bits) | [optional] 
-**FcP1Channel** | Pointer to **int32** |  | [optional] 
-**FcP1DeviceId** | Pointer to **int32** |  | [optional] 
+**Error** | Pointer to **int64** |  | [optional] 
+**ExtendedStatus** | Pointer to **int64** | Extended status (bits) | [optional] 
+**FcP1Channel** | Pointer to **int64** |  | [optional] 
+**FcP1DeviceId** | Pointer to **int64** |  | [optional] 
 **FcP1NodeWwn** | Pointer to **string** |  | [optional] 
 **FcP1PortWwn** | Pointer to **string** |  | [optional] 
-**FcP1UnitNumber** | Pointer to **int32** |  | [optional] 
-**FcP2Channel** | Pointer to **int32** |  | [optional] 
-**FcP2DeviceId** | Pointer to **int32** |  | [optional] 
+**FcP1UnitNumber** | Pointer to **int64** |  | [optional] 
+**FcP2Channel** | Pointer to **int64** |  | [optional] 
+**FcP2DeviceId** | Pointer to **int64** |  | [optional] 
 **FcP2NodeWwn** | Pointer to **string** |  | [optional] 
 **FcP2PortWwn** | Pointer to **string** |  | [optional] 
-**FcP2UnitNumber** | Pointer to **int32** |  | [optional] 
+**FcP2UnitNumber** | Pointer to **int64** |  | [optional] 
 **FdeConfigTime** | Pointer to **string** |  | [optional] 
-**FdeConfigTimeNumeric** | Pointer to **int32** |  | [optional] 
+**FdeConfigTimeNumeric** | Pointer to **int64** |  | [optional] 
 **FdeState** | Pointer to **string** |  | [optional] 
-**FdeStateNumeric** | Pointer to **int32** |  | [optional] 
+**FdeStateNumeric** | Pointer to **int64** |  | [optional] 
 **FipsCapable** | Pointer to **string** |  | [optional] 
-**FipsCapableNumeric** | Pointer to **int32** |  | [optional] 
+**FipsCapableNumeric** | Pointer to **int64** |  | [optional] 
 **FirmwareUpdateStatus** | Pointer to **string** |  | [optional] 
-**FirmwareUpdateStatusNumeric** | Pointer to **int32** |  | [optional] 
+**FirmwareUpdateStatusNumeric** | Pointer to **int64** |  | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
-**HealthReasonNumeric** | Pointer to **int32** |  | [optional] 
+**HealthReasonNumeric** | Pointer to **int64** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
-**HealthRecommendationNumeric** | Pointer to **int32** |  | [optional] 
+**HealthRecommendationNumeric** | Pointer to **int64** |  | [optional] 
 **ImportLockKeyId** | Pointer to **string** |  | [optional] 
-**Index** | Pointer to **int32** |  | [optional] 
+**Index** | Pointer to **int64** |  | [optional] 
 **Interface** | Pointer to **string** |  | [optional] 
-**InterfaceNumeric** | Pointer to **int32** |  | [optional] 
+**InterfaceNumeric** | Pointer to **int64** |  | [optional] 
 **JobRunning** | Pointer to **string** |  | [optional] 
-**JobRunningNumeric** | Pointer to **int32** |  | [optional] 
+**JobRunningNumeric** | Pointer to **int64** |  | [optional] 
 **KmipState** | Pointer to **string** |  | [optional] 
-**KmipStateNumeric** | Pointer to **int32** |  | [optional] 
+**KmipStateNumeric** | Pointer to **int64** |  | [optional] 
 **LedStatus** | Pointer to **string** |  | [optional] 
-**LedStatusNumeric** | Pointer to **int32** |  | [optional] 
+**LedStatusNumeric** | Pointer to **int64** |  | [optional] 
 **Location** | Pointer to **string** |  | [optional] 
 **LocatorLed** | Pointer to **string** | Indicates whether the locator LED is on | [optional] 
-**LocatorLedNumeric** | Pointer to **int32** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
+**LocatorLedNumeric** | Pointer to **int64** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
 **LockKeyId** | Pointer to **string** |  | [optional] 
-**MemberIndex** | Pointer to **int32** | Index for this disk in the vdisk list | [optional] 
+**MemberIndex** | Pointer to **int64** | Index for this disk in the vdisk list | [optional] 
 **Model** | Pointer to **string** |  | [optional] 
-**NumDepoppedHeads** | Pointer to **int32** | Number of depopulated heads | [optional] 
-**NumberOfIos** | Pointer to **int32** |  | [optional] 
+**NumDepoppedHeads** | Pointer to **int64** | Number of depopulated heads | [optional] 
+**NumberOfIos** | Pointer to **int64** |  | [optional] 
 **Owner** | Pointer to **string** | Controller owning the component | [optional] 
-**OwnerNumeric** | Pointer to **int32** | Controller owning the component( In numeric form ) | [optional] 
+**OwnerNumeric** | Pointer to **int64** | Controller owning the component( In numeric form ) | [optional] 
 **PiFormatted** | Pointer to **string** | Used to describe the Disk Protection Information | [optional] 
-**PiFormattedNumeric** | Pointer to **int32** | Used to describe the Disk Protection Information( In numeric form ) | [optional] 
-**Port** | Pointer to **int32** |  | [optional] 
-**PowerOnHours** | Pointer to **int32** |  | [optional] 
+**PiFormattedNumeric** | Pointer to **int64** | Used to describe the Disk Protection Information( In numeric form ) | [optional] 
+**Port** | Pointer to **int64** |  | [optional] 
+**PowerOnHours** | Pointer to **int64** |  | [optional] 
 **ReconState** | Pointer to **string** | Reconstruction State | [optional] 
-**ReconStateNumeric** | Pointer to **int32** | Reconstruction State( In numeric form ) | [optional] 
+**ReconStateNumeric** | Pointer to **int64** | Reconstruction State( In numeric form ) | [optional] 
 **Remanufacture** | Pointer to **string** |  | [optional] 
-**RemanufactureNumeric** | Pointer to **int32** |  | [optional] 
+**RemanufactureNumeric** | Pointer to **int64** |  | [optional] 
 **Revision** | Pointer to **string** | Current revision for this FRU | [optional] 
-**Rpm** | Pointer to **int32** | Vendor-specified disk speed in thousands of revolutions per minute | [optional] 
-**ScsiId** | Pointer to **int32** | SCSI ID assigned to this disk for the primary channel | [optional] 
-**SecondaryChannel** | Pointer to **int32** | SCSI ID assigned to this disk for the secondary channel | [optional] 
+**Rpm** | Pointer to **int64** | Vendor-specified disk speed in thousands of revolutions per minute | [optional] 
+**ScsiId** | Pointer to **int64** | SCSI ID assigned to this disk for the primary channel | [optional] 
+**SecondaryChannel** | Pointer to **int64** | SCSI ID assigned to this disk for the secondary channel | [optional] 
 **SectorFormat** | Pointer to **string** |  | [optional] 
-**SectorFormatNumeric** | Pointer to **int32** |  | [optional] 
+**SectorFormatNumeric** | Pointer to **int64** |  | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
 **SinglePorted** | Pointer to **string** |  | [optional] 
-**SinglePortedNumeric** | Pointer to **int32** |  | [optional] 
+**SinglePortedNumeric** | Pointer to **int64** |  | [optional] 
 **Size** | Pointer to **string** | The size or capacity formatted with the current session base, precision, and units | [optional] 
-**SizeNumeric** | Pointer to **int32** | The size or capacity formatted with the current session base, precision, and units( In numeric form ) | [optional] 
-**Slot** | Pointer to **int32** | The slot number where the disk is located | [optional] 
+**SizeNumeric** | Pointer to **int64** | The size or capacity formatted with the current session base, precision, and units( In numeric form ) | [optional] 
+**Slot** | Pointer to **int64** | The slot number where the disk is located | [optional] 
 **Smart** | Pointer to **string** |  | [optional] 
-**SmartNumeric** | Pointer to **int32** |  | [optional] 
-**Speed** | Pointer to **int32** |  | [optional] 
-**SpunDown** | Pointer to **int32** | Indicates a drive is spun down | [optional] 
+**SmartNumeric** | Pointer to **int64** |  | [optional] 
+**Speed** | Pointer to **int64** |  | [optional] 
+**SpunDown** | Pointer to **int64** | Indicates a drive is spun down | [optional] 
 **SsdLifeLeft** | Pointer to **string** |  | [optional] 
-**SsdLifeLeftNumeric** | Pointer to **int32** |  | [optional] 
+**SsdLifeLeftNumeric** | Pointer to **int64** |  | [optional] 
 **State** | Pointer to **string** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 **StoragePoolName** | Pointer to **string** | User-defined name for the pool | [optional] 
 **StorageTier** | Pointer to **string** | Disk group tier assignment for tiered migration | [optional] 
-**StorageTierNumeric** | Pointer to **int32** | Disk group tier assignment for tiered migration( In numeric form ) | [optional] 
+**StorageTierNumeric** | Pointer to **int64** | Disk group tier assignment for tiered migration( In numeric form ) | [optional] 
 **SupportsUnmap** | Pointer to **string** |  | [optional] 
-**SupportsUnmapNumeric** | Pointer to **int32** |  | [optional] 
+**SupportsUnmapNumeric** | Pointer to **int64** |  | [optional] 
 **Temperature** | Pointer to **string** |  | [optional] 
-**TemperatureNumeric** | Pointer to **int32** |  | [optional] 
+**TemperatureNumeric** | Pointer to **int64** |  | [optional] 
 **TemperatureStatus** | Pointer to **string** |  | [optional] 
-**TemperatureStatusNumeric** | Pointer to **int32** |  | [optional] 
+**TemperatureStatusNumeric** | Pointer to **int64** |  | [optional] 
 **TotalDataTransferred** | Pointer to **string** |  | [optional] 
-**TotalDataTransferredNumeric** | Pointer to **int32** |  | [optional] 
+**TotalDataTransferredNumeric** | Pointer to **int64** |  | [optional] 
 **TransferRate** | Pointer to **string** | Transfer rate of the disk | [optional] 
-**TransferRateNumeric** | Pointer to **int32** | Transfer rate of the disk( In numeric form ) | [optional] 
+**TransferRateNumeric** | Pointer to **int64** | Transfer rate of the disk( In numeric form ) | [optional] 
 **Type** | Pointer to **string** | The type of disk | [optional] 
-**TypeNumeric** | Pointer to **int32** | The type of disk( In numeric form ) | [optional] 
+**TypeNumeric** | Pointer to **int64** | The type of disk( In numeric form ) | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **Usage** | Pointer to **string** | Disk usage | [optional] 
-**UsageNumeric** | Pointer to **int32** | Disk usage | [optional] 
+**UsageNumeric** | Pointer to **int64** | Disk usage | [optional] 
 **Vendor** | Pointer to **string** |  | [optional] 
 **VirtualDiskSerial** | Pointer to **string** | Unique serial number for the disk group | [optional] 
 
@@ -222,20 +222,20 @@ HasArchitecture returns a boolean if a field has been set.
 
 ### GetArchitectureNumeric
 
-`func (o *DrivesResourceInner) GetArchitectureNumeric() int32`
+`func (o *DrivesResourceInner) GetArchitectureNumeric() int64`
 
 GetArchitectureNumeric returns the ArchitectureNumeric field if non-nil, zero value otherwise.
 
 ### GetArchitectureNumericOk
 
-`func (o *DrivesResourceInner) GetArchitectureNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetArchitectureNumericOk() (*int64, bool)`
 
 GetArchitectureNumericOk returns a tuple with the ArchitectureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetArchitectureNumeric
 
-`func (o *DrivesResourceInner) SetArchitectureNumeric(v int32)`
+`func (o *DrivesResourceInner) SetArchitectureNumeric(v int64)`
 
 SetArchitectureNumeric sets ArchitectureNumeric field to given value.
 
@@ -272,20 +272,20 @@ HasAssuranceLevel returns a boolean if a field has been set.
 
 ### GetAssuranceLevelNumeric
 
-`func (o *DrivesResourceInner) GetAssuranceLevelNumeric() int32`
+`func (o *DrivesResourceInner) GetAssuranceLevelNumeric() int64`
 
 GetAssuranceLevelNumeric returns the AssuranceLevelNumeric field if non-nil, zero value otherwise.
 
 ### GetAssuranceLevelNumericOk
 
-`func (o *DrivesResourceInner) GetAssuranceLevelNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetAssuranceLevelNumericOk() (*int64, bool)`
 
 GetAssuranceLevelNumericOk returns a tuple with the AssuranceLevelNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAssuranceLevelNumeric
 
-`func (o *DrivesResourceInner) SetAssuranceLevelNumeric(v int32)`
+`func (o *DrivesResourceInner) SetAssuranceLevelNumeric(v int64)`
 
 SetAssuranceLevelNumeric sets AssuranceLevelNumeric field to given value.
 
@@ -322,20 +322,20 @@ HasAttributes returns a boolean if a field has been set.
 
 ### GetAttributesNumeric
 
-`func (o *DrivesResourceInner) GetAttributesNumeric() int32`
+`func (o *DrivesResourceInner) GetAttributesNumeric() int64`
 
 GetAttributesNumeric returns the AttributesNumeric field if non-nil, zero value otherwise.
 
 ### GetAttributesNumericOk
 
-`func (o *DrivesResourceInner) GetAttributesNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetAttributesNumericOk() (*int64, bool)`
 
 GetAttributesNumericOk returns a tuple with the AttributesNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAttributesNumeric
 
-`func (o *DrivesResourceInner) SetAttributesNumeric(v int32)`
+`func (o *DrivesResourceInner) SetAttributesNumeric(v int64)`
 
 SetAttributesNumeric sets AttributesNumeric field to given value.
 
@@ -347,20 +347,20 @@ HasAttributesNumeric returns a boolean if a field has been set.
 
 ### GetAvgRspTime
 
-`func (o *DrivesResourceInner) GetAvgRspTime() int32`
+`func (o *DrivesResourceInner) GetAvgRspTime() int64`
 
 GetAvgRspTime returns the AvgRspTime field if non-nil, zero value otherwise.
 
 ### GetAvgRspTimeOk
 
-`func (o *DrivesResourceInner) GetAvgRspTimeOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetAvgRspTimeOk() (*int64, bool)`
 
 GetAvgRspTimeOk returns a tuple with the AvgRspTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAvgRspTime
 
-`func (o *DrivesResourceInner) SetAvgRspTime(v int32)`
+`func (o *DrivesResourceInner) SetAvgRspTime(v int64)`
 
 SetAvgRspTime sets AvgRspTime field to given value.
 
@@ -372,20 +372,20 @@ HasAvgRspTime returns a boolean if a field has been set.
 
 ### GetBlink
 
-`func (o *DrivesResourceInner) GetBlink() int32`
+`func (o *DrivesResourceInner) GetBlink() int64`
 
 GetBlink returns the Blink field if non-nil, zero value otherwise.
 
 ### GetBlinkOk
 
-`func (o *DrivesResourceInner) GetBlinkOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetBlinkOk() (*int64, bool)`
 
 GetBlinkOk returns a tuple with the Blink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlink
 
-`func (o *DrivesResourceInner) SetBlink(v int32)`
+`func (o *DrivesResourceInner) SetBlink(v int64)`
 
 SetBlink sets Blink field to given value.
 
@@ -397,20 +397,20 @@ HasBlink returns a boolean if a field has been set.
 
 ### GetBlocks
 
-`func (o *DrivesResourceInner) GetBlocks() int32`
+`func (o *DrivesResourceInner) GetBlocks() int64`
 
 GetBlocks returns the Blocks field if non-nil, zero value otherwise.
 
 ### GetBlocksOk
 
-`func (o *DrivesResourceInner) GetBlocksOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetBlocksOk() (*int64, bool)`
 
 GetBlocksOk returns a tuple with the Blocks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlocks
 
-`func (o *DrivesResourceInner) SetBlocks(v int32)`
+`func (o *DrivesResourceInner) SetBlocks(v int64)`
 
 SetBlocks sets Blocks field to given value.
 
@@ -422,20 +422,20 @@ HasBlocks returns a boolean if a field has been set.
 
 ### GetBlocksize
 
-`func (o *DrivesResourceInner) GetBlocksize() int32`
+`func (o *DrivesResourceInner) GetBlocksize() int64`
 
 GetBlocksize returns the Blocksize field if non-nil, zero value otherwise.
 
 ### GetBlocksizeOk
 
-`func (o *DrivesResourceInner) GetBlocksizeOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetBlocksizeOk() (*int64, bool)`
 
 GetBlocksizeOk returns a tuple with the Blocksize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlocksize
 
-`func (o *DrivesResourceInner) SetBlocksize(v int32)`
+`func (o *DrivesResourceInner) SetBlocksize(v int64)`
 
 SetBlocksize sets Blocksize field to given value.
 
@@ -447,20 +447,20 @@ HasBlocksize returns a boolean if a field has been set.
 
 ### GetContainerIndex
 
-`func (o *DrivesResourceInner) GetContainerIndex() int32`
+`func (o *DrivesResourceInner) GetContainerIndex() int64`
 
 GetContainerIndex returns the ContainerIndex field if non-nil, zero value otherwise.
 
 ### GetContainerIndexOk
 
-`func (o *DrivesResourceInner) GetContainerIndexOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetContainerIndexOk() (*int64, bool)`
 
 GetContainerIndexOk returns a tuple with the ContainerIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetContainerIndex
 
-`func (o *DrivesResourceInner) SetContainerIndex(v int32)`
+`func (o *DrivesResourceInner) SetContainerIndex(v int64)`
 
 SetContainerIndex sets ContainerIndex field to given value.
 
@@ -497,20 +497,20 @@ HasCopybackState returns a boolean if a field has been set.
 
 ### GetCopybackStateNumeric
 
-`func (o *DrivesResourceInner) GetCopybackStateNumeric() int32`
+`func (o *DrivesResourceInner) GetCopybackStateNumeric() int64`
 
 GetCopybackStateNumeric returns the CopybackStateNumeric field if non-nil, zero value otherwise.
 
 ### GetCopybackStateNumericOk
 
-`func (o *DrivesResourceInner) GetCopybackStateNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetCopybackStateNumericOk() (*int64, bool)`
 
 GetCopybackStateNumericOk returns a tuple with the CopybackStateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCopybackStateNumeric
 
-`func (o *DrivesResourceInner) SetCopybackStateNumeric(v int32)`
+`func (o *DrivesResourceInner) SetCopybackStateNumeric(v int64)`
 
 SetCopybackStateNumeric sets CopybackStateNumeric field to given value.
 
@@ -572,20 +572,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetDescriptionNumeric
 
-`func (o *DrivesResourceInner) GetDescriptionNumeric() int32`
+`func (o *DrivesResourceInner) GetDescriptionNumeric() int64`
 
 GetDescriptionNumeric returns the DescriptionNumeric field if non-nil, zero value otherwise.
 
 ### GetDescriptionNumericOk
 
-`func (o *DrivesResourceInner) GetDescriptionNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetDescriptionNumericOk() (*int64, bool)`
 
 GetDescriptionNumericOk returns a tuple with the DescriptionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDescriptionNumeric
 
-`func (o *DrivesResourceInner) SetDescriptionNumeric(v int32)`
+`func (o *DrivesResourceInner) SetDescriptionNumeric(v int64)`
 
 SetDescriptionNumeric sets DescriptionNumeric field to given value.
 
@@ -597,20 +597,20 @@ HasDescriptionNumeric returns a boolean if a field has been set.
 
 ### GetDiskDsdCount
 
-`func (o *DrivesResourceInner) GetDiskDsdCount() int32`
+`func (o *DrivesResourceInner) GetDiskDsdCount() int64`
 
 GetDiskDsdCount returns the DiskDsdCount field if non-nil, zero value otherwise.
 
 ### GetDiskDsdCountOk
 
-`func (o *DrivesResourceInner) GetDiskDsdCountOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetDiskDsdCountOk() (*int64, bool)`
 
 GetDiskDsdCountOk returns a tuple with the DiskDsdCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskDsdCount
 
-`func (o *DrivesResourceInner) SetDiskDsdCount(v int32)`
+`func (o *DrivesResourceInner) SetDiskDsdCount(v int64)`
 
 SetDiskDsdCount sets DiskDsdCount field to given value.
 
@@ -647,20 +647,20 @@ HasDiskGroup returns a boolean if a field has been set.
 
 ### GetDrawerId
 
-`func (o *DrivesResourceInner) GetDrawerId() int32`
+`func (o *DrivesResourceInner) GetDrawerId() int64`
 
 GetDrawerId returns the DrawerId field if non-nil, zero value otherwise.
 
 ### GetDrawerIdOk
 
-`func (o *DrivesResourceInner) GetDrawerIdOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetDrawerIdOk() (*int64, bool)`
 
 GetDrawerIdOk returns a tuple with the DrawerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDrawerId
 
-`func (o *DrivesResourceInner) SetDrawerId(v int32)`
+`func (o *DrivesResourceInner) SetDrawerId(v int64)`
 
 SetDrawerId sets DrawerId field to given value.
 
@@ -672,20 +672,20 @@ HasDrawerId returns a boolean if a field has been set.
 
 ### GetDriveDownCode
 
-`func (o *DrivesResourceInner) GetDriveDownCode() int32`
+`func (o *DrivesResourceInner) GetDriveDownCode() int64`
 
 GetDriveDownCode returns the DriveDownCode field if non-nil, zero value otherwise.
 
 ### GetDriveDownCodeOk
 
-`func (o *DrivesResourceInner) GetDriveDownCodeOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetDriveDownCodeOk() (*int64, bool)`
 
 GetDriveDownCodeOk returns a tuple with the DriveDownCode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDriveDownCode
 
-`func (o *DrivesResourceInner) SetDriveDownCode(v int32)`
+`func (o *DrivesResourceInner) SetDriveDownCode(v int64)`
 
 SetDriveDownCode sets DriveDownCode field to given value.
 
@@ -697,20 +697,20 @@ HasDriveDownCode returns a boolean if a field has been set.
 
 ### GetDualPort
 
-`func (o *DrivesResourceInner) GetDualPort() int32`
+`func (o *DrivesResourceInner) GetDualPort() int64`
 
 GetDualPort returns the DualPort field if non-nil, zero value otherwise.
 
 ### GetDualPortOk
 
-`func (o *DrivesResourceInner) GetDualPortOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetDualPortOk() (*int64, bool)`
 
 GetDualPortOk returns a tuple with the DualPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDualPort
 
-`func (o *DrivesResourceInner) SetDualPort(v int32)`
+`func (o *DrivesResourceInner) SetDualPort(v int64)`
 
 SetDualPort sets DualPort field to given value.
 
@@ -747,20 +747,20 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetEnclosureId
 
-`func (o *DrivesResourceInner) GetEnclosureId() int32`
+`func (o *DrivesResourceInner) GetEnclosureId() int64`
 
 GetEnclosureId returns the EnclosureId field if non-nil, zero value otherwise.
 
 ### GetEnclosureIdOk
 
-`func (o *DrivesResourceInner) GetEnclosureIdOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetEnclosureIdOk() (*int64, bool)`
 
 GetEnclosureIdOk returns a tuple with the EnclosureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureId
 
-`func (o *DrivesResourceInner) SetEnclosureId(v int32)`
+`func (o *DrivesResourceInner) SetEnclosureId(v int64)`
 
 SetEnclosureId sets EnclosureId field to given value.
 
@@ -822,20 +822,20 @@ HasEnclosuresUrl returns a boolean if a field has been set.
 
 ### GetError
 
-`func (o *DrivesResourceInner) GetError() int32`
+`func (o *DrivesResourceInner) GetError() int64`
 
 GetError returns the Error field if non-nil, zero value otherwise.
 
 ### GetErrorOk
 
-`func (o *DrivesResourceInner) GetErrorOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetErrorOk() (*int64, bool)`
 
 GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetError
 
-`func (o *DrivesResourceInner) SetError(v int32)`
+`func (o *DrivesResourceInner) SetError(v int64)`
 
 SetError sets Error field to given value.
 
@@ -847,20 +847,20 @@ HasError returns a boolean if a field has been set.
 
 ### GetExtendedStatus
 
-`func (o *DrivesResourceInner) GetExtendedStatus() int32`
+`func (o *DrivesResourceInner) GetExtendedStatus() int64`
 
 GetExtendedStatus returns the ExtendedStatus field if non-nil, zero value otherwise.
 
 ### GetExtendedStatusOk
 
-`func (o *DrivesResourceInner) GetExtendedStatusOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetExtendedStatusOk() (*int64, bool)`
 
 GetExtendedStatusOk returns a tuple with the ExtendedStatus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtendedStatus
 
-`func (o *DrivesResourceInner) SetExtendedStatus(v int32)`
+`func (o *DrivesResourceInner) SetExtendedStatus(v int64)`
 
 SetExtendedStatus sets ExtendedStatus field to given value.
 
@@ -872,20 +872,20 @@ HasExtendedStatus returns a boolean if a field has been set.
 
 ### GetFcP1Channel
 
-`func (o *DrivesResourceInner) GetFcP1Channel() int32`
+`func (o *DrivesResourceInner) GetFcP1Channel() int64`
 
 GetFcP1Channel returns the FcP1Channel field if non-nil, zero value otherwise.
 
 ### GetFcP1ChannelOk
 
-`func (o *DrivesResourceInner) GetFcP1ChannelOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetFcP1ChannelOk() (*int64, bool)`
 
 GetFcP1ChannelOk returns a tuple with the FcP1Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP1Channel
 
-`func (o *DrivesResourceInner) SetFcP1Channel(v int32)`
+`func (o *DrivesResourceInner) SetFcP1Channel(v int64)`
 
 SetFcP1Channel sets FcP1Channel field to given value.
 
@@ -897,20 +897,20 @@ HasFcP1Channel returns a boolean if a field has been set.
 
 ### GetFcP1DeviceId
 
-`func (o *DrivesResourceInner) GetFcP1DeviceId() int32`
+`func (o *DrivesResourceInner) GetFcP1DeviceId() int64`
 
 GetFcP1DeviceId returns the FcP1DeviceId field if non-nil, zero value otherwise.
 
 ### GetFcP1DeviceIdOk
 
-`func (o *DrivesResourceInner) GetFcP1DeviceIdOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetFcP1DeviceIdOk() (*int64, bool)`
 
 GetFcP1DeviceIdOk returns a tuple with the FcP1DeviceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP1DeviceId
 
-`func (o *DrivesResourceInner) SetFcP1DeviceId(v int32)`
+`func (o *DrivesResourceInner) SetFcP1DeviceId(v int64)`
 
 SetFcP1DeviceId sets FcP1DeviceId field to given value.
 
@@ -972,20 +972,20 @@ HasFcP1PortWwn returns a boolean if a field has been set.
 
 ### GetFcP1UnitNumber
 
-`func (o *DrivesResourceInner) GetFcP1UnitNumber() int32`
+`func (o *DrivesResourceInner) GetFcP1UnitNumber() int64`
 
 GetFcP1UnitNumber returns the FcP1UnitNumber field if non-nil, zero value otherwise.
 
 ### GetFcP1UnitNumberOk
 
-`func (o *DrivesResourceInner) GetFcP1UnitNumberOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetFcP1UnitNumberOk() (*int64, bool)`
 
 GetFcP1UnitNumberOk returns a tuple with the FcP1UnitNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP1UnitNumber
 
-`func (o *DrivesResourceInner) SetFcP1UnitNumber(v int32)`
+`func (o *DrivesResourceInner) SetFcP1UnitNumber(v int64)`
 
 SetFcP1UnitNumber sets FcP1UnitNumber field to given value.
 
@@ -997,20 +997,20 @@ HasFcP1UnitNumber returns a boolean if a field has been set.
 
 ### GetFcP2Channel
 
-`func (o *DrivesResourceInner) GetFcP2Channel() int32`
+`func (o *DrivesResourceInner) GetFcP2Channel() int64`
 
 GetFcP2Channel returns the FcP2Channel field if non-nil, zero value otherwise.
 
 ### GetFcP2ChannelOk
 
-`func (o *DrivesResourceInner) GetFcP2ChannelOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetFcP2ChannelOk() (*int64, bool)`
 
 GetFcP2ChannelOk returns a tuple with the FcP2Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP2Channel
 
-`func (o *DrivesResourceInner) SetFcP2Channel(v int32)`
+`func (o *DrivesResourceInner) SetFcP2Channel(v int64)`
 
 SetFcP2Channel sets FcP2Channel field to given value.
 
@@ -1022,20 +1022,20 @@ HasFcP2Channel returns a boolean if a field has been set.
 
 ### GetFcP2DeviceId
 
-`func (o *DrivesResourceInner) GetFcP2DeviceId() int32`
+`func (o *DrivesResourceInner) GetFcP2DeviceId() int64`
 
 GetFcP2DeviceId returns the FcP2DeviceId field if non-nil, zero value otherwise.
 
 ### GetFcP2DeviceIdOk
 
-`func (o *DrivesResourceInner) GetFcP2DeviceIdOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetFcP2DeviceIdOk() (*int64, bool)`
 
 GetFcP2DeviceIdOk returns a tuple with the FcP2DeviceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP2DeviceId
 
-`func (o *DrivesResourceInner) SetFcP2DeviceId(v int32)`
+`func (o *DrivesResourceInner) SetFcP2DeviceId(v int64)`
 
 SetFcP2DeviceId sets FcP2DeviceId field to given value.
 
@@ -1097,20 +1097,20 @@ HasFcP2PortWwn returns a boolean if a field has been set.
 
 ### GetFcP2UnitNumber
 
-`func (o *DrivesResourceInner) GetFcP2UnitNumber() int32`
+`func (o *DrivesResourceInner) GetFcP2UnitNumber() int64`
 
 GetFcP2UnitNumber returns the FcP2UnitNumber field if non-nil, zero value otherwise.
 
 ### GetFcP2UnitNumberOk
 
-`func (o *DrivesResourceInner) GetFcP2UnitNumberOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetFcP2UnitNumberOk() (*int64, bool)`
 
 GetFcP2UnitNumberOk returns a tuple with the FcP2UnitNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFcP2UnitNumber
 
-`func (o *DrivesResourceInner) SetFcP2UnitNumber(v int32)`
+`func (o *DrivesResourceInner) SetFcP2UnitNumber(v int64)`
 
 SetFcP2UnitNumber sets FcP2UnitNumber field to given value.
 
@@ -1147,20 +1147,20 @@ HasFdeConfigTime returns a boolean if a field has been set.
 
 ### GetFdeConfigTimeNumeric
 
-`func (o *DrivesResourceInner) GetFdeConfigTimeNumeric() int32`
+`func (o *DrivesResourceInner) GetFdeConfigTimeNumeric() int64`
 
 GetFdeConfigTimeNumeric returns the FdeConfigTimeNumeric field if non-nil, zero value otherwise.
 
 ### GetFdeConfigTimeNumericOk
 
-`func (o *DrivesResourceInner) GetFdeConfigTimeNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetFdeConfigTimeNumericOk() (*int64, bool)`
 
 GetFdeConfigTimeNumericOk returns a tuple with the FdeConfigTimeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFdeConfigTimeNumeric
 
-`func (o *DrivesResourceInner) SetFdeConfigTimeNumeric(v int32)`
+`func (o *DrivesResourceInner) SetFdeConfigTimeNumeric(v int64)`
 
 SetFdeConfigTimeNumeric sets FdeConfigTimeNumeric field to given value.
 
@@ -1197,20 +1197,20 @@ HasFdeState returns a boolean if a field has been set.
 
 ### GetFdeStateNumeric
 
-`func (o *DrivesResourceInner) GetFdeStateNumeric() int32`
+`func (o *DrivesResourceInner) GetFdeStateNumeric() int64`
 
 GetFdeStateNumeric returns the FdeStateNumeric field if non-nil, zero value otherwise.
 
 ### GetFdeStateNumericOk
 
-`func (o *DrivesResourceInner) GetFdeStateNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetFdeStateNumericOk() (*int64, bool)`
 
 GetFdeStateNumericOk returns a tuple with the FdeStateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFdeStateNumeric
 
-`func (o *DrivesResourceInner) SetFdeStateNumeric(v int32)`
+`func (o *DrivesResourceInner) SetFdeStateNumeric(v int64)`
 
 SetFdeStateNumeric sets FdeStateNumeric field to given value.
 
@@ -1247,20 +1247,20 @@ HasFipsCapable returns a boolean if a field has been set.
 
 ### GetFipsCapableNumeric
 
-`func (o *DrivesResourceInner) GetFipsCapableNumeric() int32`
+`func (o *DrivesResourceInner) GetFipsCapableNumeric() int64`
 
 GetFipsCapableNumeric returns the FipsCapableNumeric field if non-nil, zero value otherwise.
 
 ### GetFipsCapableNumericOk
 
-`func (o *DrivesResourceInner) GetFipsCapableNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetFipsCapableNumericOk() (*int64, bool)`
 
 GetFipsCapableNumericOk returns a tuple with the FipsCapableNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFipsCapableNumeric
 
-`func (o *DrivesResourceInner) SetFipsCapableNumeric(v int32)`
+`func (o *DrivesResourceInner) SetFipsCapableNumeric(v int64)`
 
 SetFipsCapableNumeric sets FipsCapableNumeric field to given value.
 
@@ -1297,20 +1297,20 @@ HasFirmwareUpdateStatus returns a boolean if a field has been set.
 
 ### GetFirmwareUpdateStatusNumeric
 
-`func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumeric() int32`
+`func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumeric() int64`
 
 GetFirmwareUpdateStatusNumeric returns the FirmwareUpdateStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetFirmwareUpdateStatusNumericOk
 
-`func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetFirmwareUpdateStatusNumericOk() (*int64, bool)`
 
 GetFirmwareUpdateStatusNumericOk returns a tuple with the FirmwareUpdateStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFirmwareUpdateStatusNumeric
 
-`func (o *DrivesResourceInner) SetFirmwareUpdateStatusNumeric(v int32)`
+`func (o *DrivesResourceInner) SetFirmwareUpdateStatusNumeric(v int64)`
 
 SetFirmwareUpdateStatusNumeric sets FirmwareUpdateStatusNumeric field to given value.
 
@@ -1347,20 +1347,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *DrivesResourceInner) GetHealthNumeric() int32`
+`func (o *DrivesResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *DrivesResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *DrivesResourceInner) SetHealthNumeric(v int32)`
+`func (o *DrivesResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -1397,20 +1397,20 @@ HasHealthReason returns a boolean if a field has been set.
 
 ### GetHealthReasonNumeric
 
-`func (o *DrivesResourceInner) GetHealthReasonNumeric() int32`
+`func (o *DrivesResourceInner) GetHealthReasonNumeric() int64`
 
 GetHealthReasonNumeric returns the HealthReasonNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthReasonNumericOk
 
-`func (o *DrivesResourceInner) GetHealthReasonNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetHealthReasonNumericOk() (*int64, bool)`
 
 GetHealthReasonNumericOk returns a tuple with the HealthReasonNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthReasonNumeric
 
-`func (o *DrivesResourceInner) SetHealthReasonNumeric(v int32)`
+`func (o *DrivesResourceInner) SetHealthReasonNumeric(v int64)`
 
 SetHealthReasonNumeric sets HealthReasonNumeric field to given value.
 
@@ -1447,20 +1447,20 @@ HasHealthRecommendation returns a boolean if a field has been set.
 
 ### GetHealthRecommendationNumeric
 
-`func (o *DrivesResourceInner) GetHealthRecommendationNumeric() int32`
+`func (o *DrivesResourceInner) GetHealthRecommendationNumeric() int64`
 
 GetHealthRecommendationNumeric returns the HealthRecommendationNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthRecommendationNumericOk
 
-`func (o *DrivesResourceInner) GetHealthRecommendationNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetHealthRecommendationNumericOk() (*int64, bool)`
 
 GetHealthRecommendationNumericOk returns a tuple with the HealthRecommendationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthRecommendationNumeric
 
-`func (o *DrivesResourceInner) SetHealthRecommendationNumeric(v int32)`
+`func (o *DrivesResourceInner) SetHealthRecommendationNumeric(v int64)`
 
 SetHealthRecommendationNumeric sets HealthRecommendationNumeric field to given value.
 
@@ -1497,20 +1497,20 @@ HasImportLockKeyId returns a boolean if a field has been set.
 
 ### GetIndex
 
-`func (o *DrivesResourceInner) GetIndex() int32`
+`func (o *DrivesResourceInner) GetIndex() int64`
 
 GetIndex returns the Index field if non-nil, zero value otherwise.
 
 ### GetIndexOk
 
-`func (o *DrivesResourceInner) GetIndexOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetIndexOk() (*int64, bool)`
 
 GetIndexOk returns a tuple with the Index field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIndex
 
-`func (o *DrivesResourceInner) SetIndex(v int32)`
+`func (o *DrivesResourceInner) SetIndex(v int64)`
 
 SetIndex sets Index field to given value.
 
@@ -1547,20 +1547,20 @@ HasInterface returns a boolean if a field has been set.
 
 ### GetInterfaceNumeric
 
-`func (o *DrivesResourceInner) GetInterfaceNumeric() int32`
+`func (o *DrivesResourceInner) GetInterfaceNumeric() int64`
 
 GetInterfaceNumeric returns the InterfaceNumeric field if non-nil, zero value otherwise.
 
 ### GetInterfaceNumericOk
 
-`func (o *DrivesResourceInner) GetInterfaceNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetInterfaceNumericOk() (*int64, bool)`
 
 GetInterfaceNumericOk returns a tuple with the InterfaceNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInterfaceNumeric
 
-`func (o *DrivesResourceInner) SetInterfaceNumeric(v int32)`
+`func (o *DrivesResourceInner) SetInterfaceNumeric(v int64)`
 
 SetInterfaceNumeric sets InterfaceNumeric field to given value.
 
@@ -1597,20 +1597,20 @@ HasJobRunning returns a boolean if a field has been set.
 
 ### GetJobRunningNumeric
 
-`func (o *DrivesResourceInner) GetJobRunningNumeric() int32`
+`func (o *DrivesResourceInner) GetJobRunningNumeric() int64`
 
 GetJobRunningNumeric returns the JobRunningNumeric field if non-nil, zero value otherwise.
 
 ### GetJobRunningNumericOk
 
-`func (o *DrivesResourceInner) GetJobRunningNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetJobRunningNumericOk() (*int64, bool)`
 
 GetJobRunningNumericOk returns a tuple with the JobRunningNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetJobRunningNumeric
 
-`func (o *DrivesResourceInner) SetJobRunningNumeric(v int32)`
+`func (o *DrivesResourceInner) SetJobRunningNumeric(v int64)`
 
 SetJobRunningNumeric sets JobRunningNumeric field to given value.
 
@@ -1647,20 +1647,20 @@ HasKmipState returns a boolean if a field has been set.
 
 ### GetKmipStateNumeric
 
-`func (o *DrivesResourceInner) GetKmipStateNumeric() int32`
+`func (o *DrivesResourceInner) GetKmipStateNumeric() int64`
 
 GetKmipStateNumeric returns the KmipStateNumeric field if non-nil, zero value otherwise.
 
 ### GetKmipStateNumericOk
 
-`func (o *DrivesResourceInner) GetKmipStateNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetKmipStateNumericOk() (*int64, bool)`
 
 GetKmipStateNumericOk returns a tuple with the KmipStateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetKmipStateNumeric
 
-`func (o *DrivesResourceInner) SetKmipStateNumeric(v int32)`
+`func (o *DrivesResourceInner) SetKmipStateNumeric(v int64)`
 
 SetKmipStateNumeric sets KmipStateNumeric field to given value.
 
@@ -1697,20 +1697,20 @@ HasLedStatus returns a boolean if a field has been set.
 
 ### GetLedStatusNumeric
 
-`func (o *DrivesResourceInner) GetLedStatusNumeric() int32`
+`func (o *DrivesResourceInner) GetLedStatusNumeric() int64`
 
 GetLedStatusNumeric returns the LedStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetLedStatusNumericOk
 
-`func (o *DrivesResourceInner) GetLedStatusNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetLedStatusNumericOk() (*int64, bool)`
 
 GetLedStatusNumericOk returns a tuple with the LedStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLedStatusNumeric
 
-`func (o *DrivesResourceInner) SetLedStatusNumeric(v int32)`
+`func (o *DrivesResourceInner) SetLedStatusNumeric(v int64)`
 
 SetLedStatusNumeric sets LedStatusNumeric field to given value.
 
@@ -1772,20 +1772,20 @@ HasLocatorLed returns a boolean if a field has been set.
 
 ### GetLocatorLedNumeric
 
-`func (o *DrivesResourceInner) GetLocatorLedNumeric() int32`
+`func (o *DrivesResourceInner) GetLocatorLedNumeric() int64`
 
 GetLocatorLedNumeric returns the LocatorLedNumeric field if non-nil, zero value otherwise.
 
 ### GetLocatorLedNumericOk
 
-`func (o *DrivesResourceInner) GetLocatorLedNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetLocatorLedNumericOk() (*int64, bool)`
 
 GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocatorLedNumeric
 
-`func (o *DrivesResourceInner) SetLocatorLedNumeric(v int32)`
+`func (o *DrivesResourceInner) SetLocatorLedNumeric(v int64)`
 
 SetLocatorLedNumeric sets LocatorLedNumeric field to given value.
 
@@ -1822,20 +1822,20 @@ HasLockKeyId returns a boolean if a field has been set.
 
 ### GetMemberIndex
 
-`func (o *DrivesResourceInner) GetMemberIndex() int32`
+`func (o *DrivesResourceInner) GetMemberIndex() int64`
 
 GetMemberIndex returns the MemberIndex field if non-nil, zero value otherwise.
 
 ### GetMemberIndexOk
 
-`func (o *DrivesResourceInner) GetMemberIndexOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetMemberIndexOk() (*int64, bool)`
 
 GetMemberIndexOk returns a tuple with the MemberIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemberIndex
 
-`func (o *DrivesResourceInner) SetMemberIndex(v int32)`
+`func (o *DrivesResourceInner) SetMemberIndex(v int64)`
 
 SetMemberIndex sets MemberIndex field to given value.
 
@@ -1872,20 +1872,20 @@ HasModel returns a boolean if a field has been set.
 
 ### GetNumDepoppedHeads
 
-`func (o *DrivesResourceInner) GetNumDepoppedHeads() int32`
+`func (o *DrivesResourceInner) GetNumDepoppedHeads() int64`
 
 GetNumDepoppedHeads returns the NumDepoppedHeads field if non-nil, zero value otherwise.
 
 ### GetNumDepoppedHeadsOk
 
-`func (o *DrivesResourceInner) GetNumDepoppedHeadsOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetNumDepoppedHeadsOk() (*int64, bool)`
 
 GetNumDepoppedHeadsOk returns a tuple with the NumDepoppedHeads field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumDepoppedHeads
 
-`func (o *DrivesResourceInner) SetNumDepoppedHeads(v int32)`
+`func (o *DrivesResourceInner) SetNumDepoppedHeads(v int64)`
 
 SetNumDepoppedHeads sets NumDepoppedHeads field to given value.
 
@@ -1897,20 +1897,20 @@ HasNumDepoppedHeads returns a boolean if a field has been set.
 
 ### GetNumberOfIos
 
-`func (o *DrivesResourceInner) GetNumberOfIos() int32`
+`func (o *DrivesResourceInner) GetNumberOfIos() int64`
 
 GetNumberOfIos returns the NumberOfIos field if non-nil, zero value otherwise.
 
 ### GetNumberOfIosOk
 
-`func (o *DrivesResourceInner) GetNumberOfIosOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetNumberOfIosOk() (*int64, bool)`
 
 GetNumberOfIosOk returns a tuple with the NumberOfIos field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumberOfIos
 
-`func (o *DrivesResourceInner) SetNumberOfIos(v int32)`
+`func (o *DrivesResourceInner) SetNumberOfIos(v int64)`
 
 SetNumberOfIos sets NumberOfIos field to given value.
 
@@ -1947,20 +1947,20 @@ HasOwner returns a boolean if a field has been set.
 
 ### GetOwnerNumeric
 
-`func (o *DrivesResourceInner) GetOwnerNumeric() int32`
+`func (o *DrivesResourceInner) GetOwnerNumeric() int64`
 
 GetOwnerNumeric returns the OwnerNumeric field if non-nil, zero value otherwise.
 
 ### GetOwnerNumericOk
 
-`func (o *DrivesResourceInner) GetOwnerNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetOwnerNumericOk() (*int64, bool)`
 
 GetOwnerNumericOk returns a tuple with the OwnerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOwnerNumeric
 
-`func (o *DrivesResourceInner) SetOwnerNumeric(v int32)`
+`func (o *DrivesResourceInner) SetOwnerNumeric(v int64)`
 
 SetOwnerNumeric sets OwnerNumeric field to given value.
 
@@ -1997,20 +1997,20 @@ HasPiFormatted returns a boolean if a field has been set.
 
 ### GetPiFormattedNumeric
 
-`func (o *DrivesResourceInner) GetPiFormattedNumeric() int32`
+`func (o *DrivesResourceInner) GetPiFormattedNumeric() int64`
 
 GetPiFormattedNumeric returns the PiFormattedNumeric field if non-nil, zero value otherwise.
 
 ### GetPiFormattedNumericOk
 
-`func (o *DrivesResourceInner) GetPiFormattedNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetPiFormattedNumericOk() (*int64, bool)`
 
 GetPiFormattedNumericOk returns a tuple with the PiFormattedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPiFormattedNumeric
 
-`func (o *DrivesResourceInner) SetPiFormattedNumeric(v int32)`
+`func (o *DrivesResourceInner) SetPiFormattedNumeric(v int64)`
 
 SetPiFormattedNumeric sets PiFormattedNumeric field to given value.
 
@@ -2022,20 +2022,20 @@ HasPiFormattedNumeric returns a boolean if a field has been set.
 
 ### GetPort
 
-`func (o *DrivesResourceInner) GetPort() int32`
+`func (o *DrivesResourceInner) GetPort() int64`
 
 GetPort returns the Port field if non-nil, zero value otherwise.
 
 ### GetPortOk
 
-`func (o *DrivesResourceInner) GetPortOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetPortOk() (*int64, bool)`
 
 GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPort
 
-`func (o *DrivesResourceInner) SetPort(v int32)`
+`func (o *DrivesResourceInner) SetPort(v int64)`
 
 SetPort sets Port field to given value.
 
@@ -2047,20 +2047,20 @@ HasPort returns a boolean if a field has been set.
 
 ### GetPowerOnHours
 
-`func (o *DrivesResourceInner) GetPowerOnHours() int32`
+`func (o *DrivesResourceInner) GetPowerOnHours() int64`
 
 GetPowerOnHours returns the PowerOnHours field if non-nil, zero value otherwise.
 
 ### GetPowerOnHoursOk
 
-`func (o *DrivesResourceInner) GetPowerOnHoursOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetPowerOnHoursOk() (*int64, bool)`
 
 GetPowerOnHoursOk returns a tuple with the PowerOnHours field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPowerOnHours
 
-`func (o *DrivesResourceInner) SetPowerOnHours(v int32)`
+`func (o *DrivesResourceInner) SetPowerOnHours(v int64)`
 
 SetPowerOnHours sets PowerOnHours field to given value.
 
@@ -2097,20 +2097,20 @@ HasReconState returns a boolean if a field has been set.
 
 ### GetReconStateNumeric
 
-`func (o *DrivesResourceInner) GetReconStateNumeric() int32`
+`func (o *DrivesResourceInner) GetReconStateNumeric() int64`
 
 GetReconStateNumeric returns the ReconStateNumeric field if non-nil, zero value otherwise.
 
 ### GetReconStateNumericOk
 
-`func (o *DrivesResourceInner) GetReconStateNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetReconStateNumericOk() (*int64, bool)`
 
 GetReconStateNumericOk returns a tuple with the ReconStateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReconStateNumeric
 
-`func (o *DrivesResourceInner) SetReconStateNumeric(v int32)`
+`func (o *DrivesResourceInner) SetReconStateNumeric(v int64)`
 
 SetReconStateNumeric sets ReconStateNumeric field to given value.
 
@@ -2147,20 +2147,20 @@ HasRemanufacture returns a boolean if a field has been set.
 
 ### GetRemanufactureNumeric
 
-`func (o *DrivesResourceInner) GetRemanufactureNumeric() int32`
+`func (o *DrivesResourceInner) GetRemanufactureNumeric() int64`
 
 GetRemanufactureNumeric returns the RemanufactureNumeric field if non-nil, zero value otherwise.
 
 ### GetRemanufactureNumericOk
 
-`func (o *DrivesResourceInner) GetRemanufactureNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetRemanufactureNumericOk() (*int64, bool)`
 
 GetRemanufactureNumericOk returns a tuple with the RemanufactureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRemanufactureNumeric
 
-`func (o *DrivesResourceInner) SetRemanufactureNumeric(v int32)`
+`func (o *DrivesResourceInner) SetRemanufactureNumeric(v int64)`
 
 SetRemanufactureNumeric sets RemanufactureNumeric field to given value.
 
@@ -2197,20 +2197,20 @@ HasRevision returns a boolean if a field has been set.
 
 ### GetRpm
 
-`func (o *DrivesResourceInner) GetRpm() int32`
+`func (o *DrivesResourceInner) GetRpm() int64`
 
 GetRpm returns the Rpm field if non-nil, zero value otherwise.
 
 ### GetRpmOk
 
-`func (o *DrivesResourceInner) GetRpmOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetRpmOk() (*int64, bool)`
 
 GetRpmOk returns a tuple with the Rpm field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRpm
 
-`func (o *DrivesResourceInner) SetRpm(v int32)`
+`func (o *DrivesResourceInner) SetRpm(v int64)`
 
 SetRpm sets Rpm field to given value.
 
@@ -2222,20 +2222,20 @@ HasRpm returns a boolean if a field has been set.
 
 ### GetScsiId
 
-`func (o *DrivesResourceInner) GetScsiId() int32`
+`func (o *DrivesResourceInner) GetScsiId() int64`
 
 GetScsiId returns the ScsiId field if non-nil, zero value otherwise.
 
 ### GetScsiIdOk
 
-`func (o *DrivesResourceInner) GetScsiIdOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetScsiIdOk() (*int64, bool)`
 
 GetScsiIdOk returns a tuple with the ScsiId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScsiId
 
-`func (o *DrivesResourceInner) SetScsiId(v int32)`
+`func (o *DrivesResourceInner) SetScsiId(v int64)`
 
 SetScsiId sets ScsiId field to given value.
 
@@ -2247,20 +2247,20 @@ HasScsiId returns a boolean if a field has been set.
 
 ### GetSecondaryChannel
 
-`func (o *DrivesResourceInner) GetSecondaryChannel() int32`
+`func (o *DrivesResourceInner) GetSecondaryChannel() int64`
 
 GetSecondaryChannel returns the SecondaryChannel field if non-nil, zero value otherwise.
 
 ### GetSecondaryChannelOk
 
-`func (o *DrivesResourceInner) GetSecondaryChannelOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetSecondaryChannelOk() (*int64, bool)`
 
 GetSecondaryChannelOk returns a tuple with the SecondaryChannel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSecondaryChannel
 
-`func (o *DrivesResourceInner) SetSecondaryChannel(v int32)`
+`func (o *DrivesResourceInner) SetSecondaryChannel(v int64)`
 
 SetSecondaryChannel sets SecondaryChannel field to given value.
 
@@ -2297,20 +2297,20 @@ HasSectorFormat returns a boolean if a field has been set.
 
 ### GetSectorFormatNumeric
 
-`func (o *DrivesResourceInner) GetSectorFormatNumeric() int32`
+`func (o *DrivesResourceInner) GetSectorFormatNumeric() int64`
 
 GetSectorFormatNumeric returns the SectorFormatNumeric field if non-nil, zero value otherwise.
 
 ### GetSectorFormatNumericOk
 
-`func (o *DrivesResourceInner) GetSectorFormatNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetSectorFormatNumericOk() (*int64, bool)`
 
 GetSectorFormatNumericOk returns a tuple with the SectorFormatNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSectorFormatNumeric
 
-`func (o *DrivesResourceInner) SetSectorFormatNumeric(v int32)`
+`func (o *DrivesResourceInner) SetSectorFormatNumeric(v int64)`
 
 SetSectorFormatNumeric sets SectorFormatNumeric field to given value.
 
@@ -2372,20 +2372,20 @@ HasSinglePorted returns a boolean if a field has been set.
 
 ### GetSinglePortedNumeric
 
-`func (o *DrivesResourceInner) GetSinglePortedNumeric() int32`
+`func (o *DrivesResourceInner) GetSinglePortedNumeric() int64`
 
 GetSinglePortedNumeric returns the SinglePortedNumeric field if non-nil, zero value otherwise.
 
 ### GetSinglePortedNumericOk
 
-`func (o *DrivesResourceInner) GetSinglePortedNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetSinglePortedNumericOk() (*int64, bool)`
 
 GetSinglePortedNumericOk returns a tuple with the SinglePortedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSinglePortedNumeric
 
-`func (o *DrivesResourceInner) SetSinglePortedNumeric(v int32)`
+`func (o *DrivesResourceInner) SetSinglePortedNumeric(v int64)`
 
 SetSinglePortedNumeric sets SinglePortedNumeric field to given value.
 
@@ -2422,20 +2422,20 @@ HasSize returns a boolean if a field has been set.
 
 ### GetSizeNumeric
 
-`func (o *DrivesResourceInner) GetSizeNumeric() int32`
+`func (o *DrivesResourceInner) GetSizeNumeric() int64`
 
 GetSizeNumeric returns the SizeNumeric field if non-nil, zero value otherwise.
 
 ### GetSizeNumericOk
 
-`func (o *DrivesResourceInner) GetSizeNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetSizeNumericOk() (*int64, bool)`
 
 GetSizeNumericOk returns a tuple with the SizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSizeNumeric
 
-`func (o *DrivesResourceInner) SetSizeNumeric(v int32)`
+`func (o *DrivesResourceInner) SetSizeNumeric(v int64)`
 
 SetSizeNumeric sets SizeNumeric field to given value.
 
@@ -2447,20 +2447,20 @@ HasSizeNumeric returns a boolean if a field has been set.
 
 ### GetSlot
 
-`func (o *DrivesResourceInner) GetSlot() int32`
+`func (o *DrivesResourceInner) GetSlot() int64`
 
 GetSlot returns the Slot field if non-nil, zero value otherwise.
 
 ### GetSlotOk
 
-`func (o *DrivesResourceInner) GetSlotOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetSlotOk() (*int64, bool)`
 
 GetSlotOk returns a tuple with the Slot field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlot
 
-`func (o *DrivesResourceInner) SetSlot(v int32)`
+`func (o *DrivesResourceInner) SetSlot(v int64)`
 
 SetSlot sets Slot field to given value.
 
@@ -2497,20 +2497,20 @@ HasSmart returns a boolean if a field has been set.
 
 ### GetSmartNumeric
 
-`func (o *DrivesResourceInner) GetSmartNumeric() int32`
+`func (o *DrivesResourceInner) GetSmartNumeric() int64`
 
 GetSmartNumeric returns the SmartNumeric field if non-nil, zero value otherwise.
 
 ### GetSmartNumericOk
 
-`func (o *DrivesResourceInner) GetSmartNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetSmartNumericOk() (*int64, bool)`
 
 GetSmartNumericOk returns a tuple with the SmartNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSmartNumeric
 
-`func (o *DrivesResourceInner) SetSmartNumeric(v int32)`
+`func (o *DrivesResourceInner) SetSmartNumeric(v int64)`
 
 SetSmartNumeric sets SmartNumeric field to given value.
 
@@ -2522,20 +2522,20 @@ HasSmartNumeric returns a boolean if a field has been set.
 
 ### GetSpeed
 
-`func (o *DrivesResourceInner) GetSpeed() int32`
+`func (o *DrivesResourceInner) GetSpeed() int64`
 
 GetSpeed returns the Speed field if non-nil, zero value otherwise.
 
 ### GetSpeedOk
 
-`func (o *DrivesResourceInner) GetSpeedOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetSpeedOk() (*int64, bool)`
 
 GetSpeedOk returns a tuple with the Speed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSpeed
 
-`func (o *DrivesResourceInner) SetSpeed(v int32)`
+`func (o *DrivesResourceInner) SetSpeed(v int64)`
 
 SetSpeed sets Speed field to given value.
 
@@ -2547,20 +2547,20 @@ HasSpeed returns a boolean if a field has been set.
 
 ### GetSpunDown
 
-`func (o *DrivesResourceInner) GetSpunDown() int32`
+`func (o *DrivesResourceInner) GetSpunDown() int64`
 
 GetSpunDown returns the SpunDown field if non-nil, zero value otherwise.
 
 ### GetSpunDownOk
 
-`func (o *DrivesResourceInner) GetSpunDownOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetSpunDownOk() (*int64, bool)`
 
 GetSpunDownOk returns a tuple with the SpunDown field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSpunDown
 
-`func (o *DrivesResourceInner) SetSpunDown(v int32)`
+`func (o *DrivesResourceInner) SetSpunDown(v int64)`
 
 SetSpunDown sets SpunDown field to given value.
 
@@ -2597,20 +2597,20 @@ HasSsdLifeLeft returns a boolean if a field has been set.
 
 ### GetSsdLifeLeftNumeric
 
-`func (o *DrivesResourceInner) GetSsdLifeLeftNumeric() int32`
+`func (o *DrivesResourceInner) GetSsdLifeLeftNumeric() int64`
 
 GetSsdLifeLeftNumeric returns the SsdLifeLeftNumeric field if non-nil, zero value otherwise.
 
 ### GetSsdLifeLeftNumericOk
 
-`func (o *DrivesResourceInner) GetSsdLifeLeftNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetSsdLifeLeftNumericOk() (*int64, bool)`
 
 GetSsdLifeLeftNumericOk returns a tuple with the SsdLifeLeftNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSsdLifeLeftNumeric
 
-`func (o *DrivesResourceInner) SetSsdLifeLeftNumeric(v int32)`
+`func (o *DrivesResourceInner) SetSsdLifeLeftNumeric(v int64)`
 
 SetSsdLifeLeftNumeric sets SsdLifeLeftNumeric field to given value.
 
@@ -2722,20 +2722,20 @@ HasStorageTier returns a boolean if a field has been set.
 
 ### GetStorageTierNumeric
 
-`func (o *DrivesResourceInner) GetStorageTierNumeric() int32`
+`func (o *DrivesResourceInner) GetStorageTierNumeric() int64`
 
 GetStorageTierNumeric returns the StorageTierNumeric field if non-nil, zero value otherwise.
 
 ### GetStorageTierNumericOk
 
-`func (o *DrivesResourceInner) GetStorageTierNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetStorageTierNumericOk() (*int64, bool)`
 
 GetStorageTierNumericOk returns a tuple with the StorageTierNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStorageTierNumeric
 
-`func (o *DrivesResourceInner) SetStorageTierNumeric(v int32)`
+`func (o *DrivesResourceInner) SetStorageTierNumeric(v int64)`
 
 SetStorageTierNumeric sets StorageTierNumeric field to given value.
 
@@ -2772,20 +2772,20 @@ HasSupportsUnmap returns a boolean if a field has been set.
 
 ### GetSupportsUnmapNumeric
 
-`func (o *DrivesResourceInner) GetSupportsUnmapNumeric() int32`
+`func (o *DrivesResourceInner) GetSupportsUnmapNumeric() int64`
 
 GetSupportsUnmapNumeric returns the SupportsUnmapNumeric field if non-nil, zero value otherwise.
 
 ### GetSupportsUnmapNumericOk
 
-`func (o *DrivesResourceInner) GetSupportsUnmapNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetSupportsUnmapNumericOk() (*int64, bool)`
 
 GetSupportsUnmapNumericOk returns a tuple with the SupportsUnmapNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSupportsUnmapNumeric
 
-`func (o *DrivesResourceInner) SetSupportsUnmapNumeric(v int32)`
+`func (o *DrivesResourceInner) SetSupportsUnmapNumeric(v int64)`
 
 SetSupportsUnmapNumeric sets SupportsUnmapNumeric field to given value.
 
@@ -2822,20 +2822,20 @@ HasTemperature returns a boolean if a field has been set.
 
 ### GetTemperatureNumeric
 
-`func (o *DrivesResourceInner) GetTemperatureNumeric() int32`
+`func (o *DrivesResourceInner) GetTemperatureNumeric() int64`
 
 GetTemperatureNumeric returns the TemperatureNumeric field if non-nil, zero value otherwise.
 
 ### GetTemperatureNumericOk
 
-`func (o *DrivesResourceInner) GetTemperatureNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetTemperatureNumericOk() (*int64, bool)`
 
 GetTemperatureNumericOk returns a tuple with the TemperatureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTemperatureNumeric
 
-`func (o *DrivesResourceInner) SetTemperatureNumeric(v int32)`
+`func (o *DrivesResourceInner) SetTemperatureNumeric(v int64)`
 
 SetTemperatureNumeric sets TemperatureNumeric field to given value.
 
@@ -2872,20 +2872,20 @@ HasTemperatureStatus returns a boolean if a field has been set.
 
 ### GetTemperatureStatusNumeric
 
-`func (o *DrivesResourceInner) GetTemperatureStatusNumeric() int32`
+`func (o *DrivesResourceInner) GetTemperatureStatusNumeric() int64`
 
 GetTemperatureStatusNumeric returns the TemperatureStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetTemperatureStatusNumericOk
 
-`func (o *DrivesResourceInner) GetTemperatureStatusNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetTemperatureStatusNumericOk() (*int64, bool)`
 
 GetTemperatureStatusNumericOk returns a tuple with the TemperatureStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTemperatureStatusNumeric
 
-`func (o *DrivesResourceInner) SetTemperatureStatusNumeric(v int32)`
+`func (o *DrivesResourceInner) SetTemperatureStatusNumeric(v int64)`
 
 SetTemperatureStatusNumeric sets TemperatureStatusNumeric field to given value.
 
@@ -2922,20 +2922,20 @@ HasTotalDataTransferred returns a boolean if a field has been set.
 
 ### GetTotalDataTransferredNumeric
 
-`func (o *DrivesResourceInner) GetTotalDataTransferredNumeric() int32`
+`func (o *DrivesResourceInner) GetTotalDataTransferredNumeric() int64`
 
 GetTotalDataTransferredNumeric returns the TotalDataTransferredNumeric field if non-nil, zero value otherwise.
 
 ### GetTotalDataTransferredNumericOk
 
-`func (o *DrivesResourceInner) GetTotalDataTransferredNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetTotalDataTransferredNumericOk() (*int64, bool)`
 
 GetTotalDataTransferredNumericOk returns a tuple with the TotalDataTransferredNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalDataTransferredNumeric
 
-`func (o *DrivesResourceInner) SetTotalDataTransferredNumeric(v int32)`
+`func (o *DrivesResourceInner) SetTotalDataTransferredNumeric(v int64)`
 
 SetTotalDataTransferredNumeric sets TotalDataTransferredNumeric field to given value.
 
@@ -2972,20 +2972,20 @@ HasTransferRate returns a boolean if a field has been set.
 
 ### GetTransferRateNumeric
 
-`func (o *DrivesResourceInner) GetTransferRateNumeric() int32`
+`func (o *DrivesResourceInner) GetTransferRateNumeric() int64`
 
 GetTransferRateNumeric returns the TransferRateNumeric field if non-nil, zero value otherwise.
 
 ### GetTransferRateNumericOk
 
-`func (o *DrivesResourceInner) GetTransferRateNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetTransferRateNumericOk() (*int64, bool)`
 
 GetTransferRateNumericOk returns a tuple with the TransferRateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTransferRateNumeric
 
-`func (o *DrivesResourceInner) SetTransferRateNumeric(v int32)`
+`func (o *DrivesResourceInner) SetTransferRateNumeric(v int64)`
 
 SetTransferRateNumeric sets TransferRateNumeric field to given value.
 
@@ -3022,20 +3022,20 @@ HasType returns a boolean if a field has been set.
 
 ### GetTypeNumeric
 
-`func (o *DrivesResourceInner) GetTypeNumeric() int32`
+`func (o *DrivesResourceInner) GetTypeNumeric() int64`
 
 GetTypeNumeric returns the TypeNumeric field if non-nil, zero value otherwise.
 
 ### GetTypeNumericOk
 
-`func (o *DrivesResourceInner) GetTypeNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetTypeNumericOk() (*int64, bool)`
 
 GetTypeNumericOk returns a tuple with the TypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTypeNumeric
 
-`func (o *DrivesResourceInner) SetTypeNumeric(v int32)`
+`func (o *DrivesResourceInner) SetTypeNumeric(v int64)`
 
 SetTypeNumeric sets TypeNumeric field to given value.
 
@@ -3097,20 +3097,20 @@ HasUsage returns a boolean if a field has been set.
 
 ### GetUsageNumeric
 
-`func (o *DrivesResourceInner) GetUsageNumeric() int32`
+`func (o *DrivesResourceInner) GetUsageNumeric() int64`
 
 GetUsageNumeric returns the UsageNumeric field if non-nil, zero value otherwise.
 
 ### GetUsageNumericOk
 
-`func (o *DrivesResourceInner) GetUsageNumericOk() (*int32, bool)`
+`func (o *DrivesResourceInner) GetUsageNumericOk() (*int64, bool)`
 
 GetUsageNumericOk returns a tuple with the UsageNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUsageNumeric
 
-`func (o *DrivesResourceInner) SetUsageNumeric(v int32)`
+`func (o *DrivesResourceInner) SetUsageNumeric(v int64)`
 
 SetUsageNumeric sets UsageNumeric field to given value.
 

@@ -23,27 +23,27 @@ type PowerSuppliesResourceInner struct {
 	Meta                      *string `json:"meta,omitempty"`
 	ConfigurationSerialnumber *string `json:"configuration-serialnumber,omitempty"`
 	DashLevel                 *string `json:"dash-level,omitempty"`
-	Dc12i                     *int32  `json:"dc12i,omitempty"`
-	Dc12v                     *int32  `json:"dc12v,omitempty"`
-	Dc33v                     *int32  `json:"dc33v,omitempty"`
-	Dc5i                      *int32  `json:"dc5i,omitempty"`
-	Dc5v                      *int32  `json:"dc5v,omitempty"`
-	Dctemp                    *int32  `json:"dctemp,omitempty"`
+	Dc12i                     *int64  `json:"dc12i,omitempty"`
+	Dc12v                     *int64  `json:"dc12v,omitempty"`
+	Dc33v                     *int64  `json:"dc33v,omitempty"`
+	Dc5i                      *int64  `json:"dc5i,omitempty"`
+	Dc5v                      *int64  `json:"dc5v,omitempty"`
+	Dctemp                    *int64  `json:"dctemp,omitempty"`
 	Description               *string `json:"description,omitempty"`
-	DomId                     *int32  `json:"dom-id,omitempty"`
+	DomId                     *int64  `json:"dom-id,omitempty"`
 	DurableId                 *string `json:"durable-id,omitempty"`
-	EnclosureId               *int32  `json:"enclosure-id,omitempty"`
+	EnclosureId               *int64  `json:"enclosure-id,omitempty"`
 	EnclosuresUrl             *string `json:"enclosures-url,omitempty"`
 	FruShortname              *string `json:"fru-shortname,omitempty"`
 	// Firmware version of the FRU
 	FwRevision           *string `json:"fw-revision,omitempty"`
 	Health               *string `json:"health,omitempty"`
-	HealthNumeric        *int32  `json:"health-numeric,omitempty"`
+	HealthNumeric        *int64  `json:"health-numeric,omitempty"`
 	HealthReason         *string `json:"health-reason,omitempty"`
 	HealthRecommendation *string `json:"health-recommendation,omitempty"`
 	Location             *string `json:"location,omitempty"`
 	MfgDate              *string `json:"mfg-date,omitempty"`
-	MfgDateNumeric       *int32  `json:"mfg-date-numeric,omitempty"`
+	MfgDateNumeric       *int64  `json:"mfg-date-numeric,omitempty"`
 	MfgLocation          *string `json:"mfg-location,omitempty"`
 	MfgVendorId          *string `json:"mfg-vendor-id,omitempty"`
 	Model                *string `json:"model,omitempty"`
@@ -52,12 +52,12 @@ type PowerSuppliesResourceInner struct {
 	// Position of the component in the enclosure
 	Position *string `json:"position,omitempty"`
 	// Position of the component in the enclosure( In numeric form )
-	PositionNumeric *int32 `json:"position-numeric,omitempty"`
+	PositionNumeric *int64 `json:"position-numeric,omitempty"`
 	// Current revision for this FRU
 	Revision      *string `json:"revision,omitempty"`
 	SerialNumber  *string `json:"serial-number,omitempty"`
 	Status        *string `json:"status,omitempty"`
-	StatusNumeric *int32  `json:"status-numeric,omitempty"`
+	StatusNumeric *int64  `json:"status-numeric,omitempty"`
 	// The resource URL
 	Url    *string            `json:"url,omitempty"`
 	Vendor *string            `json:"vendor,omitempty"`
@@ -210,9 +210,9 @@ func (o *PowerSuppliesResourceInner) SetDashLevel(v string) {
 }
 
 // GetDc12i returns the Dc12i field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetDc12i() int32 {
+func (o *PowerSuppliesResourceInner) GetDc12i() int64 {
 	if o == nil || IsNil(o.Dc12i) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Dc12i
@@ -220,7 +220,7 @@ func (o *PowerSuppliesResourceInner) GetDc12i() int32 {
 
 // GetDc12iOk returns a tuple with the Dc12i field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetDc12iOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetDc12iOk() (*int64, bool) {
 	if o == nil || IsNil(o.Dc12i) {
 		return nil, false
 	}
@@ -236,15 +236,15 @@ func (o *PowerSuppliesResourceInner) HasDc12i() bool {
 	return false
 }
 
-// SetDc12i gets a reference to the given int32 and assigns it to the Dc12i field.
-func (o *PowerSuppliesResourceInner) SetDc12i(v int32) {
+// SetDc12i gets a reference to the given int64 and assigns it to the Dc12i field.
+func (o *PowerSuppliesResourceInner) SetDc12i(v int64) {
 	o.Dc12i = &v
 }
 
 // GetDc12v returns the Dc12v field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetDc12v() int32 {
+func (o *PowerSuppliesResourceInner) GetDc12v() int64 {
 	if o == nil || IsNil(o.Dc12v) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Dc12v
@@ -252,7 +252,7 @@ func (o *PowerSuppliesResourceInner) GetDc12v() int32 {
 
 // GetDc12vOk returns a tuple with the Dc12v field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetDc12vOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetDc12vOk() (*int64, bool) {
 	if o == nil || IsNil(o.Dc12v) {
 		return nil, false
 	}
@@ -268,15 +268,15 @@ func (o *PowerSuppliesResourceInner) HasDc12v() bool {
 	return false
 }
 
-// SetDc12v gets a reference to the given int32 and assigns it to the Dc12v field.
-func (o *PowerSuppliesResourceInner) SetDc12v(v int32) {
+// SetDc12v gets a reference to the given int64 and assigns it to the Dc12v field.
+func (o *PowerSuppliesResourceInner) SetDc12v(v int64) {
 	o.Dc12v = &v
 }
 
 // GetDc33v returns the Dc33v field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetDc33v() int32 {
+func (o *PowerSuppliesResourceInner) GetDc33v() int64 {
 	if o == nil || IsNil(o.Dc33v) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Dc33v
@@ -284,7 +284,7 @@ func (o *PowerSuppliesResourceInner) GetDc33v() int32 {
 
 // GetDc33vOk returns a tuple with the Dc33v field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetDc33vOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetDc33vOk() (*int64, bool) {
 	if o == nil || IsNil(o.Dc33v) {
 		return nil, false
 	}
@@ -300,15 +300,15 @@ func (o *PowerSuppliesResourceInner) HasDc33v() bool {
 	return false
 }
 
-// SetDc33v gets a reference to the given int32 and assigns it to the Dc33v field.
-func (o *PowerSuppliesResourceInner) SetDc33v(v int32) {
+// SetDc33v gets a reference to the given int64 and assigns it to the Dc33v field.
+func (o *PowerSuppliesResourceInner) SetDc33v(v int64) {
 	o.Dc33v = &v
 }
 
 // GetDc5i returns the Dc5i field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetDc5i() int32 {
+func (o *PowerSuppliesResourceInner) GetDc5i() int64 {
 	if o == nil || IsNil(o.Dc5i) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Dc5i
@@ -316,7 +316,7 @@ func (o *PowerSuppliesResourceInner) GetDc5i() int32 {
 
 // GetDc5iOk returns a tuple with the Dc5i field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetDc5iOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetDc5iOk() (*int64, bool) {
 	if o == nil || IsNil(o.Dc5i) {
 		return nil, false
 	}
@@ -332,15 +332,15 @@ func (o *PowerSuppliesResourceInner) HasDc5i() bool {
 	return false
 }
 
-// SetDc5i gets a reference to the given int32 and assigns it to the Dc5i field.
-func (o *PowerSuppliesResourceInner) SetDc5i(v int32) {
+// SetDc5i gets a reference to the given int64 and assigns it to the Dc5i field.
+func (o *PowerSuppliesResourceInner) SetDc5i(v int64) {
 	o.Dc5i = &v
 }
 
 // GetDc5v returns the Dc5v field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetDc5v() int32 {
+func (o *PowerSuppliesResourceInner) GetDc5v() int64 {
 	if o == nil || IsNil(o.Dc5v) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Dc5v
@@ -348,7 +348,7 @@ func (o *PowerSuppliesResourceInner) GetDc5v() int32 {
 
 // GetDc5vOk returns a tuple with the Dc5v field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetDc5vOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetDc5vOk() (*int64, bool) {
 	if o == nil || IsNil(o.Dc5v) {
 		return nil, false
 	}
@@ -364,15 +364,15 @@ func (o *PowerSuppliesResourceInner) HasDc5v() bool {
 	return false
 }
 
-// SetDc5v gets a reference to the given int32 and assigns it to the Dc5v field.
-func (o *PowerSuppliesResourceInner) SetDc5v(v int32) {
+// SetDc5v gets a reference to the given int64 and assigns it to the Dc5v field.
+func (o *PowerSuppliesResourceInner) SetDc5v(v int64) {
 	o.Dc5v = &v
 }
 
 // GetDctemp returns the Dctemp field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetDctemp() int32 {
+func (o *PowerSuppliesResourceInner) GetDctemp() int64 {
 	if o == nil || IsNil(o.Dctemp) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Dctemp
@@ -380,7 +380,7 @@ func (o *PowerSuppliesResourceInner) GetDctemp() int32 {
 
 // GetDctempOk returns a tuple with the Dctemp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetDctempOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetDctempOk() (*int64, bool) {
 	if o == nil || IsNil(o.Dctemp) {
 		return nil, false
 	}
@@ -396,8 +396,8 @@ func (o *PowerSuppliesResourceInner) HasDctemp() bool {
 	return false
 }
 
-// SetDctemp gets a reference to the given int32 and assigns it to the Dctemp field.
-func (o *PowerSuppliesResourceInner) SetDctemp(v int32) {
+// SetDctemp gets a reference to the given int64 and assigns it to the Dctemp field.
+func (o *PowerSuppliesResourceInner) SetDctemp(v int64) {
 	o.Dctemp = &v
 }
 
@@ -434,9 +434,9 @@ func (o *PowerSuppliesResourceInner) SetDescription(v string) {
 }
 
 // GetDomId returns the DomId field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetDomId() int32 {
+func (o *PowerSuppliesResourceInner) GetDomId() int64 {
 	if o == nil || IsNil(o.DomId) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.DomId
@@ -444,7 +444,7 @@ func (o *PowerSuppliesResourceInner) GetDomId() int32 {
 
 // GetDomIdOk returns a tuple with the DomId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetDomIdOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetDomIdOk() (*int64, bool) {
 	if o == nil || IsNil(o.DomId) {
 		return nil, false
 	}
@@ -460,8 +460,8 @@ func (o *PowerSuppliesResourceInner) HasDomId() bool {
 	return false
 }
 
-// SetDomId gets a reference to the given int32 and assigns it to the DomId field.
-func (o *PowerSuppliesResourceInner) SetDomId(v int32) {
+// SetDomId gets a reference to the given int64 and assigns it to the DomId field.
+func (o *PowerSuppliesResourceInner) SetDomId(v int64) {
 	o.DomId = &v
 }
 
@@ -498,9 +498,9 @@ func (o *PowerSuppliesResourceInner) SetDurableId(v string) {
 }
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetEnclosureId() int32 {
+func (o *PowerSuppliesResourceInner) GetEnclosureId() int64 {
 	if o == nil || IsNil(o.EnclosureId) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.EnclosureId
@@ -508,7 +508,7 @@ func (o *PowerSuppliesResourceInner) GetEnclosureId() int32 {
 
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetEnclosureIdOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetEnclosureIdOk() (*int64, bool) {
 	if o == nil || IsNil(o.EnclosureId) {
 		return nil, false
 	}
@@ -524,8 +524,8 @@ func (o *PowerSuppliesResourceInner) HasEnclosureId() bool {
 	return false
 }
 
-// SetEnclosureId gets a reference to the given int32 and assigns it to the EnclosureId field.
-func (o *PowerSuppliesResourceInner) SetEnclosureId(v int32) {
+// SetEnclosureId gets a reference to the given int64 and assigns it to the EnclosureId field.
+func (o *PowerSuppliesResourceInner) SetEnclosureId(v int64) {
 	o.EnclosureId = &v
 }
 
@@ -658,9 +658,9 @@ func (o *PowerSuppliesResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetHealthNumeric() int32 {
+func (o *PowerSuppliesResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HealthNumeric
@@ -668,7 +668,7 @@ func (o *PowerSuppliesResourceInner) GetHealthNumeric() int32 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetHealthNumericOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetHealthNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -684,8 +684,8 @@ func (o *PowerSuppliesResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
-// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
-func (o *PowerSuppliesResourceInner) SetHealthNumeric(v int32) {
+// SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
+func (o *PowerSuppliesResourceInner) SetHealthNumeric(v int64) {
 	o.HealthNumeric = &v
 }
 
@@ -818,9 +818,9 @@ func (o *PowerSuppliesResourceInner) SetMfgDate(v string) {
 }
 
 // GetMfgDateNumeric returns the MfgDateNumeric field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetMfgDateNumeric() int32 {
+func (o *PowerSuppliesResourceInner) GetMfgDateNumeric() int64 {
 	if o == nil || IsNil(o.MfgDateNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MfgDateNumeric
@@ -828,7 +828,7 @@ func (o *PowerSuppliesResourceInner) GetMfgDateNumeric() int32 {
 
 // GetMfgDateNumericOk returns a tuple with the MfgDateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetMfgDateNumericOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetMfgDateNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.MfgDateNumeric) {
 		return nil, false
 	}
@@ -844,8 +844,8 @@ func (o *PowerSuppliesResourceInner) HasMfgDateNumeric() bool {
 	return false
 }
 
-// SetMfgDateNumeric gets a reference to the given int32 and assigns it to the MfgDateNumeric field.
-func (o *PowerSuppliesResourceInner) SetMfgDateNumeric(v int32) {
+// SetMfgDateNumeric gets a reference to the given int64 and assigns it to the MfgDateNumeric field.
+func (o *PowerSuppliesResourceInner) SetMfgDateNumeric(v int64) {
 	o.MfgDateNumeric = &v
 }
 
@@ -1042,9 +1042,9 @@ func (o *PowerSuppliesResourceInner) SetPosition(v string) {
 }
 
 // GetPositionNumeric returns the PositionNumeric field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetPositionNumeric() int32 {
+func (o *PowerSuppliesResourceInner) GetPositionNumeric() int64 {
 	if o == nil || IsNil(o.PositionNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PositionNumeric
@@ -1052,7 +1052,7 @@ func (o *PowerSuppliesResourceInner) GetPositionNumeric() int32 {
 
 // GetPositionNumericOk returns a tuple with the PositionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetPositionNumericOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetPositionNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.PositionNumeric) {
 		return nil, false
 	}
@@ -1068,8 +1068,8 @@ func (o *PowerSuppliesResourceInner) HasPositionNumeric() bool {
 	return false
 }
 
-// SetPositionNumeric gets a reference to the given int32 and assigns it to the PositionNumeric field.
-func (o *PowerSuppliesResourceInner) SetPositionNumeric(v int32) {
+// SetPositionNumeric gets a reference to the given int64 and assigns it to the PositionNumeric field.
+func (o *PowerSuppliesResourceInner) SetPositionNumeric(v int64) {
 	o.PositionNumeric = &v
 }
 
@@ -1170,9 +1170,9 @@ func (o *PowerSuppliesResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
-func (o *PowerSuppliesResourceInner) GetStatusNumeric() int32 {
+func (o *PowerSuppliesResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StatusNumeric
@@ -1180,7 +1180,7 @@ func (o *PowerSuppliesResourceInner) GetStatusNumeric() int32 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerSuppliesResourceInner) GetStatusNumericOk() (*int32, bool) {
+func (o *PowerSuppliesResourceInner) GetStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -1196,8 +1196,8 @@ func (o *PowerSuppliesResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
-// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
-func (o *PowerSuppliesResourceInner) SetStatusNumeric(v int32) {
+// SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
+func (o *PowerSuppliesResourceInner) SetStatusNumeric(v int64) {
 	o.StatusNumeric = &v
 }
 

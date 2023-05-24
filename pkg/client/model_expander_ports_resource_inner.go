@@ -22,22 +22,22 @@ type ExpanderPortsResourceInner struct {
 	ObjectName           *string `json:"object-name,omitempty"`
 	Meta                 *string `json:"meta,omitempty"`
 	Controller           *string `json:"controller,omitempty"`
-	ControllerNumeric    *int32  `json:"controller-numeric,omitempty"`
+	ControllerNumeric    *int64  `json:"controller-numeric,omitempty"`
 	DurableId            *string `json:"durable-id,omitempty"`
-	EnclosureId          *int32  `json:"enclosure-id,omitempty"`
+	EnclosureId          *int64  `json:"enclosure-id,omitempty"`
 	Health               *string `json:"health,omitempty"`
-	HealthNumeric        *int32  `json:"health-numeric,omitempty"`
+	HealthNumeric        *int64  `json:"health-numeric,omitempty"`
 	HealthReason         *string `json:"health-reason,omitempty"`
 	HealthRecommendation *string `json:"health-recommendation,omitempty"`
 	Name                 *string `json:"name,omitempty"`
 	// Port number for this SAS port
-	SasPortIndex *int32 `json:"sas-port-index,omitempty"`
+	SasPortIndex *int64 `json:"sas-port-index,omitempty"`
 	// The type of SAS port
 	SasPortType *string `json:"sas-port-type,omitempty"`
 	// The type of SAS port( In numeric form )
-	SasPortTypeNumeric *int32  `json:"sas-port-type-numeric,omitempty"`
+	SasPortTypeNumeric *int64  `json:"sas-port-type-numeric,omitempty"`
 	Status             *string `json:"status,omitempty"`
-	StatusNumeric      *int32  `json:"status-numeric,omitempty"`
+	StatusNumeric      *int64  `json:"status-numeric,omitempty"`
 }
 
 // NewExpanderPortsResourceInner instantiates a new ExpanderPortsResourceInner object
@@ -154,9 +154,9 @@ func (o *ExpanderPortsResourceInner) SetController(v string) {
 }
 
 // GetControllerNumeric returns the ControllerNumeric field value if set, zero value otherwise.
-func (o *ExpanderPortsResourceInner) GetControllerNumeric() int32 {
+func (o *ExpanderPortsResourceInner) GetControllerNumeric() int64 {
 	if o == nil || IsNil(o.ControllerNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ControllerNumeric
@@ -164,7 +164,7 @@ func (o *ExpanderPortsResourceInner) GetControllerNumeric() int32 {
 
 // GetControllerNumericOk returns a tuple with the ControllerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpanderPortsResourceInner) GetControllerNumericOk() (*int32, bool) {
+func (o *ExpanderPortsResourceInner) GetControllerNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ControllerNumeric) {
 		return nil, false
 	}
@@ -180,8 +180,8 @@ func (o *ExpanderPortsResourceInner) HasControllerNumeric() bool {
 	return false
 }
 
-// SetControllerNumeric gets a reference to the given int32 and assigns it to the ControllerNumeric field.
-func (o *ExpanderPortsResourceInner) SetControllerNumeric(v int32) {
+// SetControllerNumeric gets a reference to the given int64 and assigns it to the ControllerNumeric field.
+func (o *ExpanderPortsResourceInner) SetControllerNumeric(v int64) {
 	o.ControllerNumeric = &v
 }
 
@@ -218,9 +218,9 @@ func (o *ExpanderPortsResourceInner) SetDurableId(v string) {
 }
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
-func (o *ExpanderPortsResourceInner) GetEnclosureId() int32 {
+func (o *ExpanderPortsResourceInner) GetEnclosureId() int64 {
 	if o == nil || IsNil(o.EnclosureId) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.EnclosureId
@@ -228,7 +228,7 @@ func (o *ExpanderPortsResourceInner) GetEnclosureId() int32 {
 
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpanderPortsResourceInner) GetEnclosureIdOk() (*int32, bool) {
+func (o *ExpanderPortsResourceInner) GetEnclosureIdOk() (*int64, bool) {
 	if o == nil || IsNil(o.EnclosureId) {
 		return nil, false
 	}
@@ -244,8 +244,8 @@ func (o *ExpanderPortsResourceInner) HasEnclosureId() bool {
 	return false
 }
 
-// SetEnclosureId gets a reference to the given int32 and assigns it to the EnclosureId field.
-func (o *ExpanderPortsResourceInner) SetEnclosureId(v int32) {
+// SetEnclosureId gets a reference to the given int64 and assigns it to the EnclosureId field.
+func (o *ExpanderPortsResourceInner) SetEnclosureId(v int64) {
 	o.EnclosureId = &v
 }
 
@@ -282,9 +282,9 @@ func (o *ExpanderPortsResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
-func (o *ExpanderPortsResourceInner) GetHealthNumeric() int32 {
+func (o *ExpanderPortsResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HealthNumeric
@@ -292,7 +292,7 @@ func (o *ExpanderPortsResourceInner) GetHealthNumeric() int32 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpanderPortsResourceInner) GetHealthNumericOk() (*int32, bool) {
+func (o *ExpanderPortsResourceInner) GetHealthNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -308,8 +308,8 @@ func (o *ExpanderPortsResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
-// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
-func (o *ExpanderPortsResourceInner) SetHealthNumeric(v int32) {
+// SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
+func (o *ExpanderPortsResourceInner) SetHealthNumeric(v int64) {
 	o.HealthNumeric = &v
 }
 
@@ -410,9 +410,9 @@ func (o *ExpanderPortsResourceInner) SetName(v string) {
 }
 
 // GetSasPortIndex returns the SasPortIndex field value if set, zero value otherwise.
-func (o *ExpanderPortsResourceInner) GetSasPortIndex() int32 {
+func (o *ExpanderPortsResourceInner) GetSasPortIndex() int64 {
 	if o == nil || IsNil(o.SasPortIndex) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SasPortIndex
@@ -420,7 +420,7 @@ func (o *ExpanderPortsResourceInner) GetSasPortIndex() int32 {
 
 // GetSasPortIndexOk returns a tuple with the SasPortIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpanderPortsResourceInner) GetSasPortIndexOk() (*int32, bool) {
+func (o *ExpanderPortsResourceInner) GetSasPortIndexOk() (*int64, bool) {
 	if o == nil || IsNil(o.SasPortIndex) {
 		return nil, false
 	}
@@ -436,8 +436,8 @@ func (o *ExpanderPortsResourceInner) HasSasPortIndex() bool {
 	return false
 }
 
-// SetSasPortIndex gets a reference to the given int32 and assigns it to the SasPortIndex field.
-func (o *ExpanderPortsResourceInner) SetSasPortIndex(v int32) {
+// SetSasPortIndex gets a reference to the given int64 and assigns it to the SasPortIndex field.
+func (o *ExpanderPortsResourceInner) SetSasPortIndex(v int64) {
 	o.SasPortIndex = &v
 }
 
@@ -474,9 +474,9 @@ func (o *ExpanderPortsResourceInner) SetSasPortType(v string) {
 }
 
 // GetSasPortTypeNumeric returns the SasPortTypeNumeric field value if set, zero value otherwise.
-func (o *ExpanderPortsResourceInner) GetSasPortTypeNumeric() int32 {
+func (o *ExpanderPortsResourceInner) GetSasPortTypeNumeric() int64 {
 	if o == nil || IsNil(o.SasPortTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SasPortTypeNumeric
@@ -484,7 +484,7 @@ func (o *ExpanderPortsResourceInner) GetSasPortTypeNumeric() int32 {
 
 // GetSasPortTypeNumericOk returns a tuple with the SasPortTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpanderPortsResourceInner) GetSasPortTypeNumericOk() (*int32, bool) {
+func (o *ExpanderPortsResourceInner) GetSasPortTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.SasPortTypeNumeric) {
 		return nil, false
 	}
@@ -500,8 +500,8 @@ func (o *ExpanderPortsResourceInner) HasSasPortTypeNumeric() bool {
 	return false
 }
 
-// SetSasPortTypeNumeric gets a reference to the given int32 and assigns it to the SasPortTypeNumeric field.
-func (o *ExpanderPortsResourceInner) SetSasPortTypeNumeric(v int32) {
+// SetSasPortTypeNumeric gets a reference to the given int64 and assigns it to the SasPortTypeNumeric field.
+func (o *ExpanderPortsResourceInner) SetSasPortTypeNumeric(v int64) {
 	o.SasPortTypeNumeric = &v
 }
 
@@ -538,9 +538,9 @@ func (o *ExpanderPortsResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
-func (o *ExpanderPortsResourceInner) GetStatusNumeric() int32 {
+func (o *ExpanderPortsResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StatusNumeric
@@ -548,7 +548,7 @@ func (o *ExpanderPortsResourceInner) GetStatusNumeric() int32 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpanderPortsResourceInner) GetStatusNumericOk() (*int32, bool) {
+func (o *ExpanderPortsResourceInner) GetStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -564,8 +564,8 @@ func (o *ExpanderPortsResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
-// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
-func (o *ExpanderPortsResourceInner) SetStatusNumeric(v int32) {
+// SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
+func (o *ExpanderPortsResourceInner) SetStatusNumeric(v int64) {
 	o.StatusNumeric = &v
 }
 

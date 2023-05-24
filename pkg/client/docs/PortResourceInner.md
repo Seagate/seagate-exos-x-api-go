@@ -7,23 +7,23 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **ActualSpeed** | Pointer to **string** | Actual speed for this port | [optional] 
-**ActualSpeedNumeric** | Pointer to **int32** | Actual speed for this port( In numeric form ) | [optional] 
+**ActualSpeedNumeric** | Pointer to **int64** | Actual speed for this port( In numeric form ) | [optional] 
 **ConfiguredSpeed** | Pointer to **string** |  | [optional] 
-**ConfiguredSpeedNumeric** | Pointer to **int32** |  | [optional] 
+**ConfiguredSpeedNumeric** | Pointer to **int64** |  | [optional] 
 **Controller** | Pointer to **string** |  | [optional] 
-**ControllerNumeric** | Pointer to **int32** |  | [optional] 
+**ControllerNumeric** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
-**FanOut** | Pointer to **int32** |  | [optional] 
+**FanOut** | Pointer to **int64** |  | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **Media** | Pointer to **string** | Type of connection media used for this port | [optional] 
 **Port** | Pointer to **string** |  | [optional] 
 **PortType** | Pointer to **string** | Port Type (FC, iSCSI, SAS) | [optional] 
-**PortTypeNumeric** | Pointer to **int32** | Port Type (FC, iSCSI, SAS)( In numeric form ) | [optional] 
+**PortTypeNumeric** | Pointer to **int64** | Port Type (FC, iSCSI, SAS)( In numeric form ) | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
-**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**StatusNumeric** | Pointer to **int64** |  | [optional] 
 **TargetId** | Pointer to **string** | WWPN or IQN of the host port | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **SasPort** | Pointer to [**[]SasPortResourceInner**](SasPortResourceInner.md) |  | [optional] 
@@ -124,20 +124,20 @@ HasActualSpeed returns a boolean if a field has been set.
 
 ### GetActualSpeedNumeric
 
-`func (o *PortResourceInner) GetActualSpeedNumeric() int32`
+`func (o *PortResourceInner) GetActualSpeedNumeric() int64`
 
 GetActualSpeedNumeric returns the ActualSpeedNumeric field if non-nil, zero value otherwise.
 
 ### GetActualSpeedNumericOk
 
-`func (o *PortResourceInner) GetActualSpeedNumericOk() (*int32, bool)`
+`func (o *PortResourceInner) GetActualSpeedNumericOk() (*int64, bool)`
 
 GetActualSpeedNumericOk returns a tuple with the ActualSpeedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetActualSpeedNumeric
 
-`func (o *PortResourceInner) SetActualSpeedNumeric(v int32)`
+`func (o *PortResourceInner) SetActualSpeedNumeric(v int64)`
 
 SetActualSpeedNumeric sets ActualSpeedNumeric field to given value.
 
@@ -174,20 +174,20 @@ HasConfiguredSpeed returns a boolean if a field has been set.
 
 ### GetConfiguredSpeedNumeric
 
-`func (o *PortResourceInner) GetConfiguredSpeedNumeric() int32`
+`func (o *PortResourceInner) GetConfiguredSpeedNumeric() int64`
 
 GetConfiguredSpeedNumeric returns the ConfiguredSpeedNumeric field if non-nil, zero value otherwise.
 
 ### GetConfiguredSpeedNumericOk
 
-`func (o *PortResourceInner) GetConfiguredSpeedNumericOk() (*int32, bool)`
+`func (o *PortResourceInner) GetConfiguredSpeedNumericOk() (*int64, bool)`
 
 GetConfiguredSpeedNumericOk returns a tuple with the ConfiguredSpeedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConfiguredSpeedNumeric
 
-`func (o *PortResourceInner) SetConfiguredSpeedNumeric(v int32)`
+`func (o *PortResourceInner) SetConfiguredSpeedNumeric(v int64)`
 
 SetConfiguredSpeedNumeric sets ConfiguredSpeedNumeric field to given value.
 
@@ -224,20 +224,20 @@ HasController returns a boolean if a field has been set.
 
 ### GetControllerNumeric
 
-`func (o *PortResourceInner) GetControllerNumeric() int32`
+`func (o *PortResourceInner) GetControllerNumeric() int64`
 
 GetControllerNumeric returns the ControllerNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerNumericOk
 
-`func (o *PortResourceInner) GetControllerNumericOk() (*int32, bool)`
+`func (o *PortResourceInner) GetControllerNumericOk() (*int64, bool)`
 
 GetControllerNumericOk returns a tuple with the ControllerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerNumeric
 
-`func (o *PortResourceInner) SetControllerNumeric(v int32)`
+`func (o *PortResourceInner) SetControllerNumeric(v int64)`
 
 SetControllerNumeric sets ControllerNumeric field to given value.
 
@@ -274,20 +274,20 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetFanOut
 
-`func (o *PortResourceInner) GetFanOut() int32`
+`func (o *PortResourceInner) GetFanOut() int64`
 
 GetFanOut returns the FanOut field if non-nil, zero value otherwise.
 
 ### GetFanOutOk
 
-`func (o *PortResourceInner) GetFanOutOk() (*int32, bool)`
+`func (o *PortResourceInner) GetFanOutOk() (*int64, bool)`
 
 GetFanOutOk returns a tuple with the FanOut field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFanOut
 
-`func (o *PortResourceInner) SetFanOut(v int32)`
+`func (o *PortResourceInner) SetFanOut(v int64)`
 
 SetFanOut sets FanOut field to given value.
 
@@ -324,20 +324,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *PortResourceInner) GetHealthNumeric() int32`
+`func (o *PortResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *PortResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *PortResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *PortResourceInner) SetHealthNumeric(v int32)`
+`func (o *PortResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -474,20 +474,20 @@ HasPortType returns a boolean if a field has been set.
 
 ### GetPortTypeNumeric
 
-`func (o *PortResourceInner) GetPortTypeNumeric() int32`
+`func (o *PortResourceInner) GetPortTypeNumeric() int64`
 
 GetPortTypeNumeric returns the PortTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetPortTypeNumericOk
 
-`func (o *PortResourceInner) GetPortTypeNumericOk() (*int32, bool)`
+`func (o *PortResourceInner) GetPortTypeNumericOk() (*int64, bool)`
 
 GetPortTypeNumericOk returns a tuple with the PortTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPortTypeNumeric
 
-`func (o *PortResourceInner) SetPortTypeNumeric(v int32)`
+`func (o *PortResourceInner) SetPortTypeNumeric(v int64)`
 
 SetPortTypeNumeric sets PortTypeNumeric field to given value.
 
@@ -524,20 +524,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
-`func (o *PortResourceInner) GetStatusNumeric() int32`
+`func (o *PortResourceInner) GetStatusNumeric() int64`
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
-`func (o *PortResourceInner) GetStatusNumericOk() (*int32, bool)`
+`func (o *PortResourceInner) GetStatusNumericOk() (*int64, bool)`
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
-`func (o *PortResourceInner) SetStatusNumeric(v int32)`
+`func (o *PortResourceInner) SetStatusNumeric(v int64)`
 
 SetStatusNumeric sets StatusNumeric field to given value.
 

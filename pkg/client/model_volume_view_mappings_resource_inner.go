@@ -24,10 +24,10 @@ type VolumeViewMappingsResourceInner struct {
 	// Access rights for this volume
 	Access *string `json:"access,omitempty"`
 	// Access rights for this volume( In numeric form )
-	AccessNumeric      *int32  `json:"access-numeric,omitempty"`
+	AccessNumeric      *int64  `json:"access-numeric,omitempty"`
 	DurableId          *string `json:"durable-id,omitempty"`
 	HostProfile        *string `json:"host-profile,omitempty"`
-	HostProfileNumeric *int32  `json:"host-profile-numeric,omitempty"`
+	HostProfileNumeric *int64  `json:"host-profile-numeric,omitempty"`
 	// WWPN or IQN or Host Serial Number or Host Group Serial Number
 	Identifier    *string `json:"identifier,omitempty"`
 	InitiatorsUrl *string `json:"initiators-url,omitempty"`
@@ -154,9 +154,9 @@ func (o *VolumeViewMappingsResourceInner) SetAccess(v string) {
 }
 
 // GetAccessNumeric returns the AccessNumeric field value if set, zero value otherwise.
-func (o *VolumeViewMappingsResourceInner) GetAccessNumeric() int32 {
+func (o *VolumeViewMappingsResourceInner) GetAccessNumeric() int64 {
 	if o == nil || IsNil(o.AccessNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.AccessNumeric
@@ -164,7 +164,7 @@ func (o *VolumeViewMappingsResourceInner) GetAccessNumeric() int32 {
 
 // GetAccessNumericOk returns a tuple with the AccessNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumeViewMappingsResourceInner) GetAccessNumericOk() (*int32, bool) {
+func (o *VolumeViewMappingsResourceInner) GetAccessNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.AccessNumeric) {
 		return nil, false
 	}
@@ -180,8 +180,8 @@ func (o *VolumeViewMappingsResourceInner) HasAccessNumeric() bool {
 	return false
 }
 
-// SetAccessNumeric gets a reference to the given int32 and assigns it to the AccessNumeric field.
-func (o *VolumeViewMappingsResourceInner) SetAccessNumeric(v int32) {
+// SetAccessNumeric gets a reference to the given int64 and assigns it to the AccessNumeric field.
+func (o *VolumeViewMappingsResourceInner) SetAccessNumeric(v int64) {
 	o.AccessNumeric = &v
 }
 
@@ -250,9 +250,9 @@ func (o *VolumeViewMappingsResourceInner) SetHostProfile(v string) {
 }
 
 // GetHostProfileNumeric returns the HostProfileNumeric field value if set, zero value otherwise.
-func (o *VolumeViewMappingsResourceInner) GetHostProfileNumeric() int32 {
+func (o *VolumeViewMappingsResourceInner) GetHostProfileNumeric() int64 {
 	if o == nil || IsNil(o.HostProfileNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HostProfileNumeric
@@ -260,7 +260,7 @@ func (o *VolumeViewMappingsResourceInner) GetHostProfileNumeric() int32 {
 
 // GetHostProfileNumericOk returns a tuple with the HostProfileNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumeViewMappingsResourceInner) GetHostProfileNumericOk() (*int32, bool) {
+func (o *VolumeViewMappingsResourceInner) GetHostProfileNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HostProfileNumeric) {
 		return nil, false
 	}
@@ -276,8 +276,8 @@ func (o *VolumeViewMappingsResourceInner) HasHostProfileNumeric() bool {
 	return false
 }
 
-// SetHostProfileNumeric gets a reference to the given int32 and assigns it to the HostProfileNumeric field.
-func (o *VolumeViewMappingsResourceInner) SetHostProfileNumeric(v int32) {
+// SetHostProfileNumeric gets a reference to the given int64 and assigns it to the HostProfileNumeric field.
+func (o *VolumeViewMappingsResourceInner) SetHostProfileNumeric(v int64) {
 	o.HostProfileNumeric = &v
 }
 

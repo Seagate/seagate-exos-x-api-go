@@ -10,23 +10,23 @@ Name | Type | Description | Notes
 **ExtendedStatus** | Pointer to **string** | Extended status (bits) | [optional] 
 **FwRevision** | Pointer to **string** | Firmware version of the FRU | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **HwRevision** | Pointer to **string** | Hardware version of the FRU | [optional] 
 **Location** | Pointer to **string** |  | [optional] 
 **LocatorLed** | Pointer to **string** | Indicates whether the locator LED is on | [optional] 
-**LocatorLedNumeric** | Pointer to **int32** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
+**LocatorLedNumeric** | Pointer to **int64** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **PartNumber** | Pointer to **string** |  | [optional] 
 **Position** | Pointer to **string** | Position of the component in the enclosure | [optional] 
-**PositionNumeric** | Pointer to **int32** | Position of the component in the enclosure( In numeric form ) | [optional] 
+**PositionNumeric** | Pointer to **int64** | Position of the component in the enclosure( In numeric form ) | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
-**Speed** | Pointer to **int32** |  | [optional] 
+**Speed** | Pointer to **int64** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
-**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**StatusNumeric** | Pointer to **int64** |  | [optional] 
 **StatusSes** | Pointer to **string** | SES Common status | [optional] 
-**StatusSesNumeric** | Pointer to **int32** | SES Common status( In numeric form ) | [optional] 
+**StatusSesNumeric** | Pointer to **int64** | SES Common status( In numeric form ) | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
 
 ## Methods
@@ -200,20 +200,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *FanResourceInner) GetHealthNumeric() int32`
+`func (o *FanResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *FanResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *FanResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *FanResourceInner) SetHealthNumeric(v int32)`
+`func (o *FanResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -350,20 +350,20 @@ HasLocatorLed returns a boolean if a field has been set.
 
 ### GetLocatorLedNumeric
 
-`func (o *FanResourceInner) GetLocatorLedNumeric() int32`
+`func (o *FanResourceInner) GetLocatorLedNumeric() int64`
 
 GetLocatorLedNumeric returns the LocatorLedNumeric field if non-nil, zero value otherwise.
 
 ### GetLocatorLedNumericOk
 
-`func (o *FanResourceInner) GetLocatorLedNumericOk() (*int32, bool)`
+`func (o *FanResourceInner) GetLocatorLedNumericOk() (*int64, bool)`
 
 GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocatorLedNumeric
 
-`func (o *FanResourceInner) SetLocatorLedNumeric(v int32)`
+`func (o *FanResourceInner) SetLocatorLedNumeric(v int64)`
 
 SetLocatorLedNumeric sets LocatorLedNumeric field to given value.
 
@@ -450,20 +450,20 @@ HasPosition returns a boolean if a field has been set.
 
 ### GetPositionNumeric
 
-`func (o *FanResourceInner) GetPositionNumeric() int32`
+`func (o *FanResourceInner) GetPositionNumeric() int64`
 
 GetPositionNumeric returns the PositionNumeric field if non-nil, zero value otherwise.
 
 ### GetPositionNumericOk
 
-`func (o *FanResourceInner) GetPositionNumericOk() (*int32, bool)`
+`func (o *FanResourceInner) GetPositionNumericOk() (*int64, bool)`
 
 GetPositionNumericOk returns a tuple with the PositionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPositionNumeric
 
-`func (o *FanResourceInner) SetPositionNumeric(v int32)`
+`func (o *FanResourceInner) SetPositionNumeric(v int64)`
 
 SetPositionNumeric sets PositionNumeric field to given value.
 
@@ -500,20 +500,20 @@ HasSerialNumber returns a boolean if a field has been set.
 
 ### GetSpeed
 
-`func (o *FanResourceInner) GetSpeed() int32`
+`func (o *FanResourceInner) GetSpeed() int64`
 
 GetSpeed returns the Speed field if non-nil, zero value otherwise.
 
 ### GetSpeedOk
 
-`func (o *FanResourceInner) GetSpeedOk() (*int32, bool)`
+`func (o *FanResourceInner) GetSpeedOk() (*int64, bool)`
 
 GetSpeedOk returns a tuple with the Speed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSpeed
 
-`func (o *FanResourceInner) SetSpeed(v int32)`
+`func (o *FanResourceInner) SetSpeed(v int64)`
 
 SetSpeed sets Speed field to given value.
 
@@ -550,20 +550,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
-`func (o *FanResourceInner) GetStatusNumeric() int32`
+`func (o *FanResourceInner) GetStatusNumeric() int64`
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
-`func (o *FanResourceInner) GetStatusNumericOk() (*int32, bool)`
+`func (o *FanResourceInner) GetStatusNumericOk() (*int64, bool)`
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
-`func (o *FanResourceInner) SetStatusNumeric(v int32)`
+`func (o *FanResourceInner) SetStatusNumeric(v int64)`
 
 SetStatusNumeric sets StatusNumeric field to given value.
 
@@ -600,20 +600,20 @@ HasStatusSes returns a boolean if a field has been set.
 
 ### GetStatusSesNumeric
 
-`func (o *FanResourceInner) GetStatusSesNumeric() int32`
+`func (o *FanResourceInner) GetStatusSesNumeric() int64`
 
 GetStatusSesNumeric returns the StatusSesNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusSesNumericOk
 
-`func (o *FanResourceInner) GetStatusSesNumericOk() (*int32, bool)`
+`func (o *FanResourceInner) GetStatusSesNumericOk() (*int64, bool)`
 
 GetStatusSesNumericOk returns a tuple with the StatusSesNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusSesNumeric
 
-`func (o *FanResourceInner) SetStatusSesNumeric(v int32)`
+`func (o *FanResourceInner) SetStatusSesNumeric(v int64)`
 
 SetStatusSesNumeric sets StatusSesNumeric field to given value.
 

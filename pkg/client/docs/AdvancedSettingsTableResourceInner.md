@@ -7,81 +7,81 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **AutoMap** | Pointer to **string** |  | [optional] 
-**AutoMapNumeric** | Pointer to **int32** |  | [optional] 
+**AutoMapNumeric** | Pointer to **int64** |  | [optional] 
 **AutoStallRecovery** | Pointer to **string** | Provides detection of when hung controllers are preventing IO from completing | [optional] 
-**AutoStallRecoveryNumeric** | Pointer to **int32** | Provides detection of when hung controllers are preventing IO from completing( In numeric form ) | [optional] 
+**AutoStallRecoveryNumeric** | Pointer to **int64** | Provides detection of when hung controllers are preventing IO from completing( In numeric form ) | [optional] 
 **AutoUnmap** | Pointer to **string** |  | [optional] 
-**AutoUnmapNumeric** | Pointer to **int32** |  | [optional] 
+**AutoUnmapNumeric** | Pointer to **int64** |  | [optional] 
 **AutoWriteBack** | Pointer to **string** | Data is cached to memory before being written to disk | [optional] 
-**AutoWriteBackNumeric** | Pointer to **int32** | Data is cached to memory before being written to disk( In numeric form ) | [optional] 
+**AutoWriteBackNumeric** | Pointer to **int64** | Data is cached to memory before being written to disk( In numeric form ) | [optional] 
 **BackgroundScrub** | Pointer to **string** | Low priority disk group scrub | [optional] 
-**BackgroundScrubInterval** | Pointer to **int32** | Disk group scrub start interval | [optional] 
-**BackgroundScrubNumeric** | Pointer to **int32** | Low priority disk group scrub( In numeric form ) | [optional] 
+**BackgroundScrubInterval** | Pointer to **int64** | Disk group scrub start interval | [optional] 
+**BackgroundScrubNumeric** | Pointer to **int64** | Low priority disk group scrub( In numeric form ) | [optional] 
 **CacheFlushTimeout** | Pointer to **string** |  | [optional] 
-**CacheFlushTimeoutNumeric** | Pointer to **int32** |  | [optional] 
+**CacheFlushTimeoutNumeric** | Pointer to **int64** |  | [optional] 
 **ControllerFailure** | Pointer to **string** |  | [optional] 
-**ControllerFailureNumeric** | Pointer to **int32** |  | [optional] 
+**ControllerFailureNumeric** | Pointer to **int64** |  | [optional] 
 **DefaultMapping** | Pointer to **string** |  | [optional] 
-**DefaultMappingNumeric** | Pointer to **int32** |  | [optional] 
+**DefaultMappingNumeric** | Pointer to **int64** |  | [optional] 
 **DeleteOverride** | Pointer to **string** | Bypass checks when deleting a pool. | [optional] 
-**DeleteOverrideNumeric** | Pointer to **int32** | Bypass checks when deleting a pool.( In numeric form ) | [optional] 
-**DiskDsdDelay** | Pointer to **int32** |  | [optional] 
+**DeleteOverrideNumeric** | Pointer to **int64** | Bypass checks when deleting a pool.( In numeric form ) | [optional] 
+**DiskDsdDelay** | Pointer to **int64** |  | [optional] 
 **DiskDsdEnable** | Pointer to **string** |  | [optional] 
-**DiskDsdEnableNumeric** | Pointer to **int32** |  | [optional] 
+**DiskDsdEnableNumeric** | Pointer to **int64** |  | [optional] 
 **DiskFirmwareUpdate** | Pointer to **string** |  | [optional] 
-**DiskFirmwareUpdateNumeric** | Pointer to **int32** |  | [optional] 
+**DiskFirmwareUpdateNumeric** | Pointer to **int64** |  | [optional] 
 **DynamicSpares** | Pointer to **string** | If enabled, replaces failed disks in a degraded vdisk with properly sized available disks | [optional] 
 **EmpPollRate** | Pointer to **string** |  | [optional] 
 **FanFailure** | Pointer to **string** |  | [optional] 
-**FanFailureNumeric** | Pointer to **int32** |  | [optional] 
+**FanFailureNumeric** | Pointer to **int64** |  | [optional] 
 **HedgedReadsTimeout** | Pointer to **string** |  | [optional] 
-**HedgedReadsTimeoutNumeric** | Pointer to **int32** |  | [optional] 
+**HedgedReadsTimeoutNumeric** | Pointer to **int64** |  | [optional] 
 **HostCacheControl** | Pointer to **string** | Whether hosts can change the system&#39;s write-back cache setting | [optional] 
-**HostCacheControlNumeric** | Pointer to **int32** | Whether hosts can change the system&#39;s write-back cache setting( In numeric form ) | [optional] 
+**HostCacheControlNumeric** | Pointer to **int64** | Whether hosts can change the system&#39;s write-back cache setting( In numeric form ) | [optional] 
 **IndependentCache** | Pointer to **string** |  | [optional] 
-**IndependentCacheNumeric** | Pointer to **int32** |  | [optional] 
+**IndependentCacheNumeric** | Pointer to **int64** |  | [optional] 
 **LargePools** | Pointer to **string** |  | [optional] 
-**LargePoolsNumeric** | Pointer to **int32** |  | [optional] 
+**LargePoolsNumeric** | Pointer to **int64** |  | [optional] 
 **ManagedLogs** | Pointer to **string** |  | [optional] 
-**ManagedLogsNumeric** | Pointer to **int32** |  | [optional] 
+**ManagedLogsNumeric** | Pointer to **int64** |  | [optional] 
 **MemoryCardFailure** | Pointer to **string** |  | [optional] 
-**MemoryCardFailureNumeric** | Pointer to **int32** |  | [optional] 
+**MemoryCardFailureNumeric** | Pointer to **int64** |  | [optional] 
 **MissingLunResponse** | Pointer to **string** |  | [optional] 
-**MissingLunResponseNumeric** | Pointer to **int32** |  | [optional] 
+**MissingLunResponseNumeric** | Pointer to **int64** |  | [optional] 
 **PartnerFirmwareUpgrade** | Pointer to **string** | Indicates whether automated update of firmware of other controller is enabled | [optional] 
-**PartnerFirmwareUpgradeNumeric** | Pointer to **int32** | Indicates whether automated update of firmware of other controller is enabled( In numeric form ) | [optional] 
+**PartnerFirmwareUpgradeNumeric** | Pointer to **int64** | Indicates whether automated update of firmware of other controller is enabled( In numeric form ) | [optional] 
 **PartnerNotify** | Pointer to **string** | Indicates whether the write-through trigger is enabled | [optional] 
-**PartnerNotifyNumeric** | Pointer to **int32** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
+**PartnerNotifyNumeric** | Pointer to **int64** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
 **PcieHotplug** | Pointer to **string** |  | [optional] 
-**PcieHotplugNumeric** | Pointer to **int32** |  | [optional] 
+**PcieHotplugNumeric** | Pointer to **int64** |  | [optional] 
 **PowerSupplyFailure** | Pointer to **string** | Indicates whether the write-through trigger is enabled | [optional] 
-**PowerSupplyFailureNumeric** | Pointer to **int32** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
+**PowerSupplyFailureNumeric** | Pointer to **int64** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
 **RandomIoPerformanceOptimization** | Pointer to **string** |  | [optional] 
-**RandomIoPerformanceOptimizationNumeric** | Pointer to **int32** |  | [optional] 
+**RandomIoPerformanceOptimizationNumeric** | Pointer to **int64** |  | [optional] 
 **Remanufacture** | Pointer to **string** |  | [optional] 
-**RemanufactureNumeric** | Pointer to **int32** |  | [optional] 
+**RemanufactureNumeric** | Pointer to **int64** |  | [optional] 
 **RestartOnCapiFail** | Pointer to **string** |  | [optional] 
-**RestartOnCapiFailNumeric** | Pointer to **int32** |  | [optional] 
+**RestartOnCapiFailNumeric** | Pointer to **int64** |  | [optional] 
 **ScrubSchedule** | Pointer to **string** |  | [optional] 
-**ScrubScheduleNumeric** | Pointer to **int32** |  | [optional] 
+**ScrubScheduleNumeric** | Pointer to **int64** |  | [optional] 
 **SingleController** | Pointer to **string** |  | [optional] 
-**SingleControllerNumeric** | Pointer to **int32** |  | [optional] 
+**SingleControllerNumeric** | Pointer to **int64** |  | [optional] 
 **SlotAffinity** | Pointer to **string** |  | [optional] 
-**SlotAffinityNumeric** | Pointer to **int32** |  | [optional] 
+**SlotAffinityNumeric** | Pointer to **int64** |  | [optional] 
 **SlowDiskDetection** | Pointer to **string** |  | [optional] 
-**SlowDiskDetectionNumeric** | Pointer to **int32** |  | [optional] 
+**SlowDiskDetectionNumeric** | Pointer to **int64** |  | [optional] 
 **Smart** | Pointer to **string** |  | [optional] 
-**SmartNumeric** | Pointer to **int32** |  | [optional] 
+**SmartNumeric** | Pointer to **int64** |  | [optional] 
 **SsdConcurrentAccess** | Pointer to **string** |  | [optional] 
-**SsdConcurrentAccessNumeric** | Pointer to **int32** |  | [optional] 
+**SsdConcurrentAccessNumeric** | Pointer to **int64** |  | [optional] 
 **SuperCapFailure** | Pointer to **string** | Indicates whether the write-through trigger is enabled | [optional] 
-**SuperCapFailureNumeric** | Pointer to **int32** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
+**SuperCapFailureNumeric** | Pointer to **int64** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
 **SyncCacheMode** | Pointer to **string** |  | [optional] 
-**SyncCacheModeNumeric** | Pointer to **int32** |  | [optional] 
+**SyncCacheModeNumeric** | Pointer to **int64** |  | [optional] 
 **TemperatureExceeded** | Pointer to **string** | Indicates whether the write-through trigger is enabled | [optional] 
-**TemperatureExceededNumeric** | Pointer to **int32** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
+**TemperatureExceededNumeric** | Pointer to **int64** | Indicates whether the write-through trigger is enabled( In numeric form ) | [optional] 
 **UtilityPriority** | Pointer to **string** | Configured processing priority for utilities | [optional] 
-**UtilityPriorityNumeric** | Pointer to **int32** | Configured processing priority for utilities( In numeric form ) | [optional] 
+**UtilityPriorityNumeric** | Pointer to **int64** | Configured processing priority for utilities( In numeric form ) | [optional] 
 
 ## Methods
 
@@ -179,20 +179,20 @@ HasAutoMap returns a boolean if a field has been set.
 
 ### GetAutoMapNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumeric() int64`
 
 GetAutoMapNumeric returns the AutoMapNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoMapNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumericOk() (*int64, bool)`
 
 GetAutoMapNumericOk returns a tuple with the AutoMapNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoMapNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetAutoMapNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetAutoMapNumeric(v int64)`
 
 SetAutoMapNumeric sets AutoMapNumeric field to given value.
 
@@ -229,20 +229,20 @@ HasAutoStallRecovery returns a boolean if a field has been set.
 
 ### GetAutoStallRecoveryNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumeric() int64`
 
 GetAutoStallRecoveryNumeric returns the AutoStallRecoveryNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoStallRecoveryNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumericOk() (*int64, bool)`
 
 GetAutoStallRecoveryNumericOk returns a tuple with the AutoStallRecoveryNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoStallRecoveryNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetAutoStallRecoveryNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetAutoStallRecoveryNumeric(v int64)`
 
 SetAutoStallRecoveryNumeric sets AutoStallRecoveryNumeric field to given value.
 
@@ -279,20 +279,20 @@ HasAutoUnmap returns a boolean if a field has been set.
 
 ### GetAutoUnmapNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumeric() int64`
 
 GetAutoUnmapNumeric returns the AutoUnmapNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoUnmapNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumericOk() (*int64, bool)`
 
 GetAutoUnmapNumericOk returns a tuple with the AutoUnmapNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoUnmapNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetAutoUnmapNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetAutoUnmapNumeric(v int64)`
 
 SetAutoUnmapNumeric sets AutoUnmapNumeric field to given value.
 
@@ -329,20 +329,20 @@ HasAutoWriteBack returns a boolean if a field has been set.
 
 ### GetAutoWriteBackNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumeric() int64`
 
 GetAutoWriteBackNumeric returns the AutoWriteBackNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoWriteBackNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumericOk() (*int64, bool)`
 
 GetAutoWriteBackNumericOk returns a tuple with the AutoWriteBackNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoWriteBackNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetAutoWriteBackNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetAutoWriteBackNumeric(v int64)`
 
 SetAutoWriteBackNumeric sets AutoWriteBackNumeric field to given value.
 
@@ -379,20 +379,20 @@ HasBackgroundScrub returns a boolean if a field has been set.
 
 ### GetBackgroundScrubInterval
 
-`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubInterval() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubInterval() int64`
 
 GetBackgroundScrubInterval returns the BackgroundScrubInterval field if non-nil, zero value otherwise.
 
 ### GetBackgroundScrubIntervalOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubIntervalOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubIntervalOk() (*int64, bool)`
 
 GetBackgroundScrubIntervalOk returns a tuple with the BackgroundScrubInterval field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBackgroundScrubInterval
 
-`func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubInterval(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubInterval(v int64)`
 
 SetBackgroundScrubInterval sets BackgroundScrubInterval field to given value.
 
@@ -404,20 +404,20 @@ HasBackgroundScrubInterval returns a boolean if a field has been set.
 
 ### GetBackgroundScrubNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumeric() int64`
 
 GetBackgroundScrubNumeric returns the BackgroundScrubNumeric field if non-nil, zero value otherwise.
 
 ### GetBackgroundScrubNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumericOk() (*int64, bool)`
 
 GetBackgroundScrubNumericOk returns a tuple with the BackgroundScrubNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBackgroundScrubNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubNumeric(v int64)`
 
 SetBackgroundScrubNumeric sets BackgroundScrubNumeric field to given value.
 
@@ -454,20 +454,20 @@ HasCacheFlushTimeout returns a boolean if a field has been set.
 
 ### GetCacheFlushTimeoutNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumeric() int64`
 
 GetCacheFlushTimeoutNumeric returns the CacheFlushTimeoutNumeric field if non-nil, zero value otherwise.
 
 ### GetCacheFlushTimeoutNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumericOk() (*int64, bool)`
 
 GetCacheFlushTimeoutNumericOk returns a tuple with the CacheFlushTimeoutNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheFlushTimeoutNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetCacheFlushTimeoutNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetCacheFlushTimeoutNumeric(v int64)`
 
 SetCacheFlushTimeoutNumeric sets CacheFlushTimeoutNumeric field to given value.
 
@@ -504,20 +504,20 @@ HasControllerFailure returns a boolean if a field has been set.
 
 ### GetControllerFailureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumeric() int64`
 
 GetControllerFailureNumeric returns the ControllerFailureNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerFailureNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumericOk() (*int64, bool)`
 
 GetControllerFailureNumericOk returns a tuple with the ControllerFailureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerFailureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetControllerFailureNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetControllerFailureNumeric(v int64)`
 
 SetControllerFailureNumeric sets ControllerFailureNumeric field to given value.
 
@@ -554,20 +554,20 @@ HasDefaultMapping returns a boolean if a field has been set.
 
 ### GetDefaultMappingNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumeric() int64`
 
 GetDefaultMappingNumeric returns the DefaultMappingNumeric field if non-nil, zero value otherwise.
 
 ### GetDefaultMappingNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumericOk() (*int64, bool)`
 
 GetDefaultMappingNumericOk returns a tuple with the DefaultMappingNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDefaultMappingNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetDefaultMappingNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetDefaultMappingNumeric(v int64)`
 
 SetDefaultMappingNumeric sets DefaultMappingNumeric field to given value.
 
@@ -604,20 +604,20 @@ HasDeleteOverride returns a boolean if a field has been set.
 
 ### GetDeleteOverrideNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumeric() int64`
 
 GetDeleteOverrideNumeric returns the DeleteOverrideNumeric field if non-nil, zero value otherwise.
 
 ### GetDeleteOverrideNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumericOk() (*int64, bool)`
 
 GetDeleteOverrideNumericOk returns a tuple with the DeleteOverrideNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDeleteOverrideNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetDeleteOverrideNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetDeleteOverrideNumeric(v int64)`
 
 SetDeleteOverrideNumeric sets DeleteOverrideNumeric field to given value.
 
@@ -629,20 +629,20 @@ HasDeleteOverrideNumeric returns a boolean if a field has been set.
 
 ### GetDiskDsdDelay
 
-`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelay() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelay() int64`
 
 GetDiskDsdDelay returns the DiskDsdDelay field if non-nil, zero value otherwise.
 
 ### GetDiskDsdDelayOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelayOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelayOk() (*int64, bool)`
 
 GetDiskDsdDelayOk returns a tuple with the DiskDsdDelay field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskDsdDelay
 
-`func (o *AdvancedSettingsTableResourceInner) SetDiskDsdDelay(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetDiskDsdDelay(v int64)`
 
 SetDiskDsdDelay sets DiskDsdDelay field to given value.
 
@@ -679,20 +679,20 @@ HasDiskDsdEnable returns a boolean if a field has been set.
 
 ### GetDiskDsdEnableNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumeric() int64`
 
 GetDiskDsdEnableNumeric returns the DiskDsdEnableNumeric field if non-nil, zero value otherwise.
 
 ### GetDiskDsdEnableNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumericOk() (*int64, bool)`
 
 GetDiskDsdEnableNumericOk returns a tuple with the DiskDsdEnableNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskDsdEnableNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetDiskDsdEnableNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetDiskDsdEnableNumeric(v int64)`
 
 SetDiskDsdEnableNumeric sets DiskDsdEnableNumeric field to given value.
 
@@ -729,20 +729,20 @@ HasDiskFirmwareUpdate returns a boolean if a field has been set.
 
 ### GetDiskFirmwareUpdateNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumeric() int64`
 
 GetDiskFirmwareUpdateNumeric returns the DiskFirmwareUpdateNumeric field if non-nil, zero value otherwise.
 
 ### GetDiskFirmwareUpdateNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumericOk() (*int64, bool)`
 
 GetDiskFirmwareUpdateNumericOk returns a tuple with the DiskFirmwareUpdateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskFirmwareUpdateNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetDiskFirmwareUpdateNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetDiskFirmwareUpdateNumeric(v int64)`
 
 SetDiskFirmwareUpdateNumeric sets DiskFirmwareUpdateNumeric field to given value.
 
@@ -829,20 +829,20 @@ HasFanFailure returns a boolean if a field has been set.
 
 ### GetFanFailureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumeric() int64`
 
 GetFanFailureNumeric returns the FanFailureNumeric field if non-nil, zero value otherwise.
 
 ### GetFanFailureNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumericOk() (*int64, bool)`
 
 GetFanFailureNumericOk returns a tuple with the FanFailureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFanFailureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetFanFailureNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetFanFailureNumeric(v int64)`
 
 SetFanFailureNumeric sets FanFailureNumeric field to given value.
 
@@ -879,20 +879,20 @@ HasHedgedReadsTimeout returns a boolean if a field has been set.
 
 ### GetHedgedReadsTimeoutNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumeric() int64`
 
 GetHedgedReadsTimeoutNumeric returns the HedgedReadsTimeoutNumeric field if non-nil, zero value otherwise.
 
 ### GetHedgedReadsTimeoutNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumericOk() (*int64, bool)`
 
 GetHedgedReadsTimeoutNumericOk returns a tuple with the HedgedReadsTimeoutNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHedgedReadsTimeoutNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetHedgedReadsTimeoutNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetHedgedReadsTimeoutNumeric(v int64)`
 
 SetHedgedReadsTimeoutNumeric sets HedgedReadsTimeoutNumeric field to given value.
 
@@ -929,20 +929,20 @@ HasHostCacheControl returns a boolean if a field has been set.
 
 ### GetHostCacheControlNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumeric() int64`
 
 GetHostCacheControlNumeric returns the HostCacheControlNumeric field if non-nil, zero value otherwise.
 
 ### GetHostCacheControlNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumericOk() (*int64, bool)`
 
 GetHostCacheControlNumericOk returns a tuple with the HostCacheControlNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostCacheControlNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetHostCacheControlNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetHostCacheControlNumeric(v int64)`
 
 SetHostCacheControlNumeric sets HostCacheControlNumeric field to given value.
 
@@ -979,20 +979,20 @@ HasIndependentCache returns a boolean if a field has been set.
 
 ### GetIndependentCacheNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumeric() int64`
 
 GetIndependentCacheNumeric returns the IndependentCacheNumeric field if non-nil, zero value otherwise.
 
 ### GetIndependentCacheNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumericOk() (*int64, bool)`
 
 GetIndependentCacheNumericOk returns a tuple with the IndependentCacheNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIndependentCacheNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetIndependentCacheNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetIndependentCacheNumeric(v int64)`
 
 SetIndependentCacheNumeric sets IndependentCacheNumeric field to given value.
 
@@ -1029,20 +1029,20 @@ HasLargePools returns a boolean if a field has been set.
 
 ### GetLargePoolsNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumeric() int64`
 
 GetLargePoolsNumeric returns the LargePoolsNumeric field if non-nil, zero value otherwise.
 
 ### GetLargePoolsNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumericOk() (*int64, bool)`
 
 GetLargePoolsNumericOk returns a tuple with the LargePoolsNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLargePoolsNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetLargePoolsNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetLargePoolsNumeric(v int64)`
 
 SetLargePoolsNumeric sets LargePoolsNumeric field to given value.
 
@@ -1079,20 +1079,20 @@ HasManagedLogs returns a boolean if a field has been set.
 
 ### GetManagedLogsNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumeric() int64`
 
 GetManagedLogsNumeric returns the ManagedLogsNumeric field if non-nil, zero value otherwise.
 
 ### GetManagedLogsNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumericOk() (*int64, bool)`
 
 GetManagedLogsNumericOk returns a tuple with the ManagedLogsNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetManagedLogsNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetManagedLogsNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetManagedLogsNumeric(v int64)`
 
 SetManagedLogsNumeric sets ManagedLogsNumeric field to given value.
 
@@ -1129,20 +1129,20 @@ HasMemoryCardFailure returns a boolean if a field has been set.
 
 ### GetMemoryCardFailureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumeric() int64`
 
 GetMemoryCardFailureNumeric returns the MemoryCardFailureNumeric field if non-nil, zero value otherwise.
 
 ### GetMemoryCardFailureNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumericOk() (*int64, bool)`
 
 GetMemoryCardFailureNumericOk returns a tuple with the MemoryCardFailureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemoryCardFailureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetMemoryCardFailureNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetMemoryCardFailureNumeric(v int64)`
 
 SetMemoryCardFailureNumeric sets MemoryCardFailureNumeric field to given value.
 
@@ -1179,20 +1179,20 @@ HasMissingLunResponse returns a boolean if a field has been set.
 
 ### GetMissingLunResponseNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumeric() int64`
 
 GetMissingLunResponseNumeric returns the MissingLunResponseNumeric field if non-nil, zero value otherwise.
 
 ### GetMissingLunResponseNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumericOk() (*int64, bool)`
 
 GetMissingLunResponseNumericOk returns a tuple with the MissingLunResponseNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMissingLunResponseNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetMissingLunResponseNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetMissingLunResponseNumeric(v int64)`
 
 SetMissingLunResponseNumeric sets MissingLunResponseNumeric field to given value.
 
@@ -1229,20 +1229,20 @@ HasPartnerFirmwareUpgrade returns a boolean if a field has been set.
 
 ### GetPartnerFirmwareUpgradeNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumeric() int64`
 
 GetPartnerFirmwareUpgradeNumeric returns the PartnerFirmwareUpgradeNumeric field if non-nil, zero value otherwise.
 
 ### GetPartnerFirmwareUpgradeNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumericOk() (*int64, bool)`
 
 GetPartnerFirmwareUpgradeNumericOk returns a tuple with the PartnerFirmwareUpgradeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPartnerFirmwareUpgradeNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetPartnerFirmwareUpgradeNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetPartnerFirmwareUpgradeNumeric(v int64)`
 
 SetPartnerFirmwareUpgradeNumeric sets PartnerFirmwareUpgradeNumeric field to given value.
 
@@ -1279,20 +1279,20 @@ HasPartnerNotify returns a boolean if a field has been set.
 
 ### GetPartnerNotifyNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumeric() int64`
 
 GetPartnerNotifyNumeric returns the PartnerNotifyNumeric field if non-nil, zero value otherwise.
 
 ### GetPartnerNotifyNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumericOk() (*int64, bool)`
 
 GetPartnerNotifyNumericOk returns a tuple with the PartnerNotifyNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPartnerNotifyNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetPartnerNotifyNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetPartnerNotifyNumeric(v int64)`
 
 SetPartnerNotifyNumeric sets PartnerNotifyNumeric field to given value.
 
@@ -1329,20 +1329,20 @@ HasPcieHotplug returns a boolean if a field has been set.
 
 ### GetPcieHotplugNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumeric() int64`
 
 GetPcieHotplugNumeric returns the PcieHotplugNumeric field if non-nil, zero value otherwise.
 
 ### GetPcieHotplugNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumericOk() (*int64, bool)`
 
 GetPcieHotplugNumericOk returns a tuple with the PcieHotplugNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPcieHotplugNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetPcieHotplugNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetPcieHotplugNumeric(v int64)`
 
 SetPcieHotplugNumeric sets PcieHotplugNumeric field to given value.
 
@@ -1379,20 +1379,20 @@ HasPowerSupplyFailure returns a boolean if a field has been set.
 
 ### GetPowerSupplyFailureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumeric() int64`
 
 GetPowerSupplyFailureNumeric returns the PowerSupplyFailureNumeric field if non-nil, zero value otherwise.
 
 ### GetPowerSupplyFailureNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumericOk() (*int64, bool)`
 
 GetPowerSupplyFailureNumericOk returns a tuple with the PowerSupplyFailureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPowerSupplyFailureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetPowerSupplyFailureNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetPowerSupplyFailureNumeric(v int64)`
 
 SetPowerSupplyFailureNumeric sets PowerSupplyFailureNumeric field to given value.
 
@@ -1429,20 +1429,20 @@ HasRandomIoPerformanceOptimization returns a boolean if a field has been set.
 
 ### GetRandomIoPerformanceOptimizationNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumeric() int64`
 
 GetRandomIoPerformanceOptimizationNumeric returns the RandomIoPerformanceOptimizationNumeric field if non-nil, zero value otherwise.
 
 ### GetRandomIoPerformanceOptimizationNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumericOk() (*int64, bool)`
 
 GetRandomIoPerformanceOptimizationNumericOk returns a tuple with the RandomIoPerformanceOptimizationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRandomIoPerformanceOptimizationNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetRandomIoPerformanceOptimizationNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetRandomIoPerformanceOptimizationNumeric(v int64)`
 
 SetRandomIoPerformanceOptimizationNumeric sets RandomIoPerformanceOptimizationNumeric field to given value.
 
@@ -1479,20 +1479,20 @@ HasRemanufacture returns a boolean if a field has been set.
 
 ### GetRemanufactureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumeric() int64`
 
 GetRemanufactureNumeric returns the RemanufactureNumeric field if non-nil, zero value otherwise.
 
 ### GetRemanufactureNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumericOk() (*int64, bool)`
 
 GetRemanufactureNumericOk returns a tuple with the RemanufactureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRemanufactureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetRemanufactureNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetRemanufactureNumeric(v int64)`
 
 SetRemanufactureNumeric sets RemanufactureNumeric field to given value.
 
@@ -1529,20 +1529,20 @@ HasRestartOnCapiFail returns a boolean if a field has been set.
 
 ### GetRestartOnCapiFailNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumeric() int64`
 
 GetRestartOnCapiFailNumeric returns the RestartOnCapiFailNumeric field if non-nil, zero value otherwise.
 
 ### GetRestartOnCapiFailNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumericOk() (*int64, bool)`
 
 GetRestartOnCapiFailNumericOk returns a tuple with the RestartOnCapiFailNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRestartOnCapiFailNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetRestartOnCapiFailNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetRestartOnCapiFailNumeric(v int64)`
 
 SetRestartOnCapiFailNumeric sets RestartOnCapiFailNumeric field to given value.
 
@@ -1579,20 +1579,20 @@ HasScrubSchedule returns a boolean if a field has been set.
 
 ### GetScrubScheduleNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumeric() int64`
 
 GetScrubScheduleNumeric returns the ScrubScheduleNumeric field if non-nil, zero value otherwise.
 
 ### GetScrubScheduleNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumericOk() (*int64, bool)`
 
 GetScrubScheduleNumericOk returns a tuple with the ScrubScheduleNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScrubScheduleNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetScrubScheduleNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetScrubScheduleNumeric(v int64)`
 
 SetScrubScheduleNumeric sets ScrubScheduleNumeric field to given value.
 
@@ -1629,20 +1629,20 @@ HasSingleController returns a boolean if a field has been set.
 
 ### GetSingleControllerNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumeric() int64`
 
 GetSingleControllerNumeric returns the SingleControllerNumeric field if non-nil, zero value otherwise.
 
 ### GetSingleControllerNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumericOk() (*int64, bool)`
 
 GetSingleControllerNumericOk returns a tuple with the SingleControllerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSingleControllerNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetSingleControllerNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetSingleControllerNumeric(v int64)`
 
 SetSingleControllerNumeric sets SingleControllerNumeric field to given value.
 
@@ -1679,20 +1679,20 @@ HasSlotAffinity returns a boolean if a field has been set.
 
 ### GetSlotAffinityNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumeric() int64`
 
 GetSlotAffinityNumeric returns the SlotAffinityNumeric field if non-nil, zero value otherwise.
 
 ### GetSlotAffinityNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumericOk() (*int64, bool)`
 
 GetSlotAffinityNumericOk returns a tuple with the SlotAffinityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlotAffinityNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetSlotAffinityNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetSlotAffinityNumeric(v int64)`
 
 SetSlotAffinityNumeric sets SlotAffinityNumeric field to given value.
 
@@ -1729,20 +1729,20 @@ HasSlowDiskDetection returns a boolean if a field has been set.
 
 ### GetSlowDiskDetectionNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumeric() int64`
 
 GetSlowDiskDetectionNumeric returns the SlowDiskDetectionNumeric field if non-nil, zero value otherwise.
 
 ### GetSlowDiskDetectionNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumericOk() (*int64, bool)`
 
 GetSlowDiskDetectionNumericOk returns a tuple with the SlowDiskDetectionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlowDiskDetectionNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetSlowDiskDetectionNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetSlowDiskDetectionNumeric(v int64)`
 
 SetSlowDiskDetectionNumeric sets SlowDiskDetectionNumeric field to given value.
 
@@ -1779,20 +1779,20 @@ HasSmart returns a boolean if a field has been set.
 
 ### GetSmartNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetSmartNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetSmartNumeric() int64`
 
 GetSmartNumeric returns the SmartNumeric field if non-nil, zero value otherwise.
 
 ### GetSmartNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetSmartNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetSmartNumericOk() (*int64, bool)`
 
 GetSmartNumericOk returns a tuple with the SmartNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSmartNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetSmartNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetSmartNumeric(v int64)`
 
 SetSmartNumeric sets SmartNumeric field to given value.
 
@@ -1829,20 +1829,20 @@ HasSsdConcurrentAccess returns a boolean if a field has been set.
 
 ### GetSsdConcurrentAccessNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumeric() int64`
 
 GetSsdConcurrentAccessNumeric returns the SsdConcurrentAccessNumeric field if non-nil, zero value otherwise.
 
 ### GetSsdConcurrentAccessNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumericOk() (*int64, bool)`
 
 GetSsdConcurrentAccessNumericOk returns a tuple with the SsdConcurrentAccessNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSsdConcurrentAccessNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetSsdConcurrentAccessNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetSsdConcurrentAccessNumeric(v int64)`
 
 SetSsdConcurrentAccessNumeric sets SsdConcurrentAccessNumeric field to given value.
 
@@ -1879,20 +1879,20 @@ HasSuperCapFailure returns a boolean if a field has been set.
 
 ### GetSuperCapFailureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumeric() int64`
 
 GetSuperCapFailureNumeric returns the SuperCapFailureNumeric field if non-nil, zero value otherwise.
 
 ### GetSuperCapFailureNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumericOk() (*int64, bool)`
 
 GetSuperCapFailureNumericOk returns a tuple with the SuperCapFailureNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSuperCapFailureNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetSuperCapFailureNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetSuperCapFailureNumeric(v int64)`
 
 SetSuperCapFailureNumeric sets SuperCapFailureNumeric field to given value.
 
@@ -1929,20 +1929,20 @@ HasSyncCacheMode returns a boolean if a field has been set.
 
 ### GetSyncCacheModeNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumeric() int64`
 
 GetSyncCacheModeNumeric returns the SyncCacheModeNumeric field if non-nil, zero value otherwise.
 
 ### GetSyncCacheModeNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumericOk() (*int64, bool)`
 
 GetSyncCacheModeNumericOk returns a tuple with the SyncCacheModeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSyncCacheModeNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetSyncCacheModeNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetSyncCacheModeNumeric(v int64)`
 
 SetSyncCacheModeNumeric sets SyncCacheModeNumeric field to given value.
 
@@ -1979,20 +1979,20 @@ HasTemperatureExceeded returns a boolean if a field has been set.
 
 ### GetTemperatureExceededNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumeric() int64`
 
 GetTemperatureExceededNumeric returns the TemperatureExceededNumeric field if non-nil, zero value otherwise.
 
 ### GetTemperatureExceededNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumericOk() (*int64, bool)`
 
 GetTemperatureExceededNumericOk returns a tuple with the TemperatureExceededNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTemperatureExceededNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetTemperatureExceededNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetTemperatureExceededNumeric(v int64)`
 
 SetTemperatureExceededNumeric sets TemperatureExceededNumeric field to given value.
 
@@ -2029,20 +2029,20 @@ HasUtilityPriority returns a boolean if a field has been set.
 
 ### GetUtilityPriorityNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumeric() int32`
+`func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumeric() int64`
 
 GetUtilityPriorityNumeric returns the UtilityPriorityNumeric field if non-nil, zero value otherwise.
 
 ### GetUtilityPriorityNumericOk
 
-`func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumericOk() (*int32, bool)`
+`func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumericOk() (*int64, bool)`
 
 GetUtilityPriorityNumericOk returns a tuple with the UtilityPriorityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUtilityPriorityNumeric
 
-`func (o *AdvancedSettingsTableResourceInner) SetUtilityPriorityNumeric(v int32)`
+`func (o *AdvancedSettingsTableResourceInner) SetUtilityPriorityNumeric(v int64)`
 
 SetUtilityPriorityNumeric sets UtilityPriorityNumeric field to given value.
 

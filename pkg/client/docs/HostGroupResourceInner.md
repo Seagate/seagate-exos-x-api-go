@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
-**MemberCount** | Pointer to **int32** | Number of members | [optional] 
+**MemberCount** | Pointer to **int64** | Number of members | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
@@ -109,20 +109,20 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetMemberCount
 
-`func (o *HostGroupResourceInner) GetMemberCount() int32`
+`func (o *HostGroupResourceInner) GetMemberCount() int64`
 
 GetMemberCount returns the MemberCount field if non-nil, zero value otherwise.
 
 ### GetMemberCountOk
 
-`func (o *HostGroupResourceInner) GetMemberCountOk() (*int32, bool)`
+`func (o *HostGroupResourceInner) GetMemberCountOk() (*int64, bool)`
 
 GetMemberCountOk returns a tuple with the MemberCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemberCount
 
-`func (o *HostGroupResourceInner) SetMemberCount(v int32)`
+`func (o *HostGroupResourceInner) SetMemberCount(v int64)`
 
 SetMemberCount sets MemberCount field to given value.
 

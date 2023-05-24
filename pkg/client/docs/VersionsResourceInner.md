@@ -6,23 +6,23 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
-**BackplaneType** | Pointer to **int32** |  | [optional] 
+**BackplaneType** | Pointer to **int64** |  | [optional] 
 **BuildDate** | Pointer to **string** |  | [optional] 
 **BundleBaseVersion** | Pointer to **string** |  | [optional] 
 **BundleStatus** | Pointer to **string** |  | [optional] 
-**BundleStatusNumeric** | Pointer to **int32** |  | [optional] 
+**BundleStatusNumeric** | Pointer to **int64** |  | [optional] 
 **BundleVersion** | Pointer to **string** |  | [optional] 
 **BundleVersionOnly** | Pointer to **string** |  | [optional] 
 **CapiVersion** | Pointer to **string** |  | [optional] 
 **CtkVersion** | Pointer to **string** | Customization Toolkit (CTK) Version | [optional] 
-**DiskChannelRevision** | Pointer to **int32** |  | [optional] 
+**DiskChannelRevision** | Pointer to **int64** |  | [optional] 
 **EcFw** | Pointer to **string** | The Expander Controller firmware version | [optional] 
 **FwDefaultPlatformBrand** | Pointer to **string** | Default hardware platform brand of the firmware | [optional] 
-**FwDefaultPlatformBrandNumeric** | Pointer to **int32** | Default hardware platform brand of the firmware( In numeric form ) | [optional] 
+**FwDefaultPlatformBrandNumeric** | Pointer to **int64** | Default hardware platform brand of the firmware( In numeric form ) | [optional] 
 **GemVersion** | Pointer to **string** |  | [optional] 
 **HimModel** | Pointer to **string** |  | [optional] 
 **HimRev** | Pointer to **string** |  | [optional] 
-**HostChannelRevision** | Pointer to **int32** |  | [optional] 
+**HostChannelRevision** | Pointer to **int64** |  | [optional] 
 **HwRev** | Pointer to **string** | The main hardware version of the controller | [optional] 
 **McBaseFw** | Pointer to **string** | The Management Controller main (&#39;app&#39;) baselevel firmware version | [optional] 
 **McFw** | Pointer to **string** | The Management Controller main (&#39;app&#39;) firmware version | [optional] 
@@ -116,20 +116,20 @@ HasMeta returns a boolean if a field has been set.
 
 ### GetBackplaneType
 
-`func (o *VersionsResourceInner) GetBackplaneType() int32`
+`func (o *VersionsResourceInner) GetBackplaneType() int64`
 
 GetBackplaneType returns the BackplaneType field if non-nil, zero value otherwise.
 
 ### GetBackplaneTypeOk
 
-`func (o *VersionsResourceInner) GetBackplaneTypeOk() (*int32, bool)`
+`func (o *VersionsResourceInner) GetBackplaneTypeOk() (*int64, bool)`
 
 GetBackplaneTypeOk returns a tuple with the BackplaneType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBackplaneType
 
-`func (o *VersionsResourceInner) SetBackplaneType(v int32)`
+`func (o *VersionsResourceInner) SetBackplaneType(v int64)`
 
 SetBackplaneType sets BackplaneType field to given value.
 
@@ -216,20 +216,20 @@ HasBundleStatus returns a boolean if a field has been set.
 
 ### GetBundleStatusNumeric
 
-`func (o *VersionsResourceInner) GetBundleStatusNumeric() int32`
+`func (o *VersionsResourceInner) GetBundleStatusNumeric() int64`
 
 GetBundleStatusNumeric returns the BundleStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetBundleStatusNumericOk
 
-`func (o *VersionsResourceInner) GetBundleStatusNumericOk() (*int32, bool)`
+`func (o *VersionsResourceInner) GetBundleStatusNumericOk() (*int64, bool)`
 
 GetBundleStatusNumericOk returns a tuple with the BundleStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBundleStatusNumeric
 
-`func (o *VersionsResourceInner) SetBundleStatusNumeric(v int32)`
+`func (o *VersionsResourceInner) SetBundleStatusNumeric(v int64)`
 
 SetBundleStatusNumeric sets BundleStatusNumeric field to given value.
 
@@ -341,20 +341,20 @@ HasCtkVersion returns a boolean if a field has been set.
 
 ### GetDiskChannelRevision
 
-`func (o *VersionsResourceInner) GetDiskChannelRevision() int32`
+`func (o *VersionsResourceInner) GetDiskChannelRevision() int64`
 
 GetDiskChannelRevision returns the DiskChannelRevision field if non-nil, zero value otherwise.
 
 ### GetDiskChannelRevisionOk
 
-`func (o *VersionsResourceInner) GetDiskChannelRevisionOk() (*int32, bool)`
+`func (o *VersionsResourceInner) GetDiskChannelRevisionOk() (*int64, bool)`
 
 GetDiskChannelRevisionOk returns a tuple with the DiskChannelRevision field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskChannelRevision
 
-`func (o *VersionsResourceInner) SetDiskChannelRevision(v int32)`
+`func (o *VersionsResourceInner) SetDiskChannelRevision(v int64)`
 
 SetDiskChannelRevision sets DiskChannelRevision field to given value.
 
@@ -416,20 +416,20 @@ HasFwDefaultPlatformBrand returns a boolean if a field has been set.
 
 ### GetFwDefaultPlatformBrandNumeric
 
-`func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumeric() int32`
+`func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumeric() int64`
 
 GetFwDefaultPlatformBrandNumeric returns the FwDefaultPlatformBrandNumeric field if non-nil, zero value otherwise.
 
 ### GetFwDefaultPlatformBrandNumericOk
 
-`func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumericOk() (*int32, bool)`
+`func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumericOk() (*int64, bool)`
 
 GetFwDefaultPlatformBrandNumericOk returns a tuple with the FwDefaultPlatformBrandNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFwDefaultPlatformBrandNumeric
 
-`func (o *VersionsResourceInner) SetFwDefaultPlatformBrandNumeric(v int32)`
+`func (o *VersionsResourceInner) SetFwDefaultPlatformBrandNumeric(v int64)`
 
 SetFwDefaultPlatformBrandNumeric sets FwDefaultPlatformBrandNumeric field to given value.
 
@@ -516,20 +516,20 @@ HasHimRev returns a boolean if a field has been set.
 
 ### GetHostChannelRevision
 
-`func (o *VersionsResourceInner) GetHostChannelRevision() int32`
+`func (o *VersionsResourceInner) GetHostChannelRevision() int64`
 
 GetHostChannelRevision returns the HostChannelRevision field if non-nil, zero value otherwise.
 
 ### GetHostChannelRevisionOk
 
-`func (o *VersionsResourceInner) GetHostChannelRevisionOk() (*int32, bool)`
+`func (o *VersionsResourceInner) GetHostChannelRevisionOk() (*int64, bool)`
 
 GetHostChannelRevisionOk returns a tuple with the HostChannelRevision field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostChannelRevision
 
-`func (o *VersionsResourceInner) SetHostChannelRevision(v int32)`
+`func (o *VersionsResourceInner) SetHostChannelRevision(v int64)`
 
 SetHostChannelRevision sets HostChannelRevision field to given value.
 

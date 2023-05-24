@@ -22,19 +22,19 @@ type ControllerCacheParametersResourceInner struct {
 	ObjectName              *string `json:"object-name,omitempty"`
 	Meta                    *string `json:"meta,omitempty"`
 	CacheFlush              *string `json:"cache-flush,omitempty"`
-	CacheFlushNumeric       *int32  `json:"cache-flush-numeric,omitempty"`
+	CacheFlushNumeric       *int64  `json:"cache-flush-numeric,omitempty"`
 	ControllerId            *string `json:"controller-id,omitempty"`
-	ControllerIdNumeric     *int32  `json:"controller-id-numeric,omitempty"`
+	ControllerIdNumeric     *int64  `json:"controller-id-numeric,omitempty"`
 	DurableId               *string `json:"durable-id,omitempty"`
 	MemoryCardHealth        *string `json:"memory-card-health,omitempty"`
-	MemoryCardHealthNumeric *int32  `json:"memory-card-health-numeric,omitempty"`
+	MemoryCardHealthNumeric *int64  `json:"memory-card-health-numeric,omitempty"`
 	MemoryCardStatus        *string `json:"memory-card-status,omitempty"`
-	MemoryCardStatusNumeric *int32  `json:"memory-card-status-numeric,omitempty"`
+	MemoryCardStatusNumeric *int64  `json:"memory-card-status-numeric,omitempty"`
 	Name                    *string `json:"name,omitempty"`
 	// Indicates whether disk write-back cache is enabled
 	WriteBackStatus *string `json:"write-back-status,omitempty"`
 	// Indicates whether disk write-back cache is enabled( In numeric form )
-	WriteBackStatusNumeric *int32 `json:"write-back-status-numeric,omitempty"`
+	WriteBackStatusNumeric *int64 `json:"write-back-status-numeric,omitempty"`
 }
 
 // NewControllerCacheParametersResourceInner instantiates a new ControllerCacheParametersResourceInner object
@@ -151,9 +151,9 @@ func (o *ControllerCacheParametersResourceInner) SetCacheFlush(v string) {
 }
 
 // GetCacheFlushNumeric returns the CacheFlushNumeric field value if set, zero value otherwise.
-func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int32 {
+func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int64 {
 	if o == nil || IsNil(o.CacheFlushNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CacheFlushNumeric
@@ -161,7 +161,7 @@ func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int32 {
 
 // GetCacheFlushNumericOk returns a tuple with the CacheFlushNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumericOk() (*int32, bool) {
+func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CacheFlushNumeric) {
 		return nil, false
 	}
@@ -177,8 +177,8 @@ func (o *ControllerCacheParametersResourceInner) HasCacheFlushNumeric() bool {
 	return false
 }
 
-// SetCacheFlushNumeric gets a reference to the given int32 and assigns it to the CacheFlushNumeric field.
-func (o *ControllerCacheParametersResourceInner) SetCacheFlushNumeric(v int32) {
+// SetCacheFlushNumeric gets a reference to the given int64 and assigns it to the CacheFlushNumeric field.
+func (o *ControllerCacheParametersResourceInner) SetCacheFlushNumeric(v int64) {
 	o.CacheFlushNumeric = &v
 }
 
@@ -215,9 +215,9 @@ func (o *ControllerCacheParametersResourceInner) SetControllerId(v string) {
 }
 
 // GetControllerIdNumeric returns the ControllerIdNumeric field value if set, zero value otherwise.
-func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int32 {
+func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int64 {
 	if o == nil || IsNil(o.ControllerIdNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ControllerIdNumeric
@@ -225,7 +225,7 @@ func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int32 
 
 // GetControllerIdNumericOk returns a tuple with the ControllerIdNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ControllerCacheParametersResourceInner) GetControllerIdNumericOk() (*int32, bool) {
+func (o *ControllerCacheParametersResourceInner) GetControllerIdNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ControllerIdNumeric) {
 		return nil, false
 	}
@@ -241,8 +241,8 @@ func (o *ControllerCacheParametersResourceInner) HasControllerIdNumeric() bool {
 	return false
 }
 
-// SetControllerIdNumeric gets a reference to the given int32 and assigns it to the ControllerIdNumeric field.
-func (o *ControllerCacheParametersResourceInner) SetControllerIdNumeric(v int32) {
+// SetControllerIdNumeric gets a reference to the given int64 and assigns it to the ControllerIdNumeric field.
+func (o *ControllerCacheParametersResourceInner) SetControllerIdNumeric(v int64) {
 	o.ControllerIdNumeric = &v
 }
 
@@ -311,9 +311,9 @@ func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealth(v string) {
 }
 
 // GetMemoryCardHealthNumeric returns the MemoryCardHealthNumeric field value if set, zero value otherwise.
-func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() int32 {
+func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() int64 {
 	if o == nil || IsNil(o.MemoryCardHealthNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MemoryCardHealthNumeric
@@ -321,7 +321,7 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() in
 
 // GetMemoryCardHealthNumericOk returns a tuple with the MemoryCardHealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumericOk() (*int32, bool) {
+func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.MemoryCardHealthNumeric) {
 		return nil, false
 	}
@@ -337,8 +337,8 @@ func (o *ControllerCacheParametersResourceInner) HasMemoryCardHealthNumeric() bo
 	return false
 }
 
-// SetMemoryCardHealthNumeric gets a reference to the given int32 and assigns it to the MemoryCardHealthNumeric field.
-func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealthNumeric(v int32) {
+// SetMemoryCardHealthNumeric gets a reference to the given int64 and assigns it to the MemoryCardHealthNumeric field.
+func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealthNumeric(v int64) {
 	o.MemoryCardHealthNumeric = &v
 }
 
@@ -375,9 +375,9 @@ func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatus(v string) {
 }
 
 // GetMemoryCardStatusNumeric returns the MemoryCardStatusNumeric field value if set, zero value otherwise.
-func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() int32 {
+func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() int64 {
 	if o == nil || IsNil(o.MemoryCardStatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MemoryCardStatusNumeric
@@ -385,7 +385,7 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() in
 
 // GetMemoryCardStatusNumericOk returns a tuple with the MemoryCardStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumericOk() (*int32, bool) {
+func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.MemoryCardStatusNumeric) {
 		return nil, false
 	}
@@ -401,8 +401,8 @@ func (o *ControllerCacheParametersResourceInner) HasMemoryCardStatusNumeric() bo
 	return false
 }
 
-// SetMemoryCardStatusNumeric gets a reference to the given int32 and assigns it to the MemoryCardStatusNumeric field.
-func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatusNumeric(v int32) {
+// SetMemoryCardStatusNumeric gets a reference to the given int64 and assigns it to the MemoryCardStatusNumeric field.
+func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatusNumeric(v int64) {
 	o.MemoryCardStatusNumeric = &v
 }
 
@@ -471,9 +471,9 @@ func (o *ControllerCacheParametersResourceInner) SetWriteBackStatus(v string) {
 }
 
 // GetWriteBackStatusNumeric returns the WriteBackStatusNumeric field value if set, zero value otherwise.
-func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int32 {
+func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int64 {
 	if o == nil || IsNil(o.WriteBackStatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.WriteBackStatusNumeric
@@ -481,7 +481,7 @@ func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int
 
 // GetWriteBackStatusNumericOk returns a tuple with the WriteBackStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumericOk() (*int32, bool) {
+func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.WriteBackStatusNumeric) {
 		return nil, false
 	}
@@ -497,8 +497,8 @@ func (o *ControllerCacheParametersResourceInner) HasWriteBackStatusNumeric() boo
 	return false
 }
 
-// SetWriteBackStatusNumeric gets a reference to the given int32 and assigns it to the WriteBackStatusNumeric field.
-func (o *ControllerCacheParametersResourceInner) SetWriteBackStatusNumeric(v int32) {
+// SetWriteBackStatusNumeric gets a reference to the given int64 and assigns it to the WriteBackStatusNumeric field.
+func (o *ControllerCacheParametersResourceInner) SetWriteBackStatusNumeric(v int64) {
 	o.WriteBackStatusNumeric = &v
 }
 

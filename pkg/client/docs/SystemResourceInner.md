@@ -8,27 +8,27 @@ Name | Type | Description | Notes
 **Meta** | Pointer to **string** |  | [optional] 
 **ConfigurationSelector** | Pointer to **string** |  | [optional] 
 **CurrentNodeWwn** | Pointer to **string** |  | [optional] 
-**EnclosureCount** | Pointer to **int32** |  | [optional] 
+**EnclosureCount** | Pointer to **int64** |  | [optional] 
 **FdeSecurityStatus** | Pointer to **string** |  | [optional] 
-**FdeSecurityStatusNumeric** | Pointer to **int32** |  | [optional] 
+**FdeSecurityStatusNumeric** | Pointer to **int64** |  | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
 **MidplaneSerialNumber** | Pointer to **string** | Serial number of the enclosure | [optional] 
 **OtherMCStatus** | Pointer to **string** | Identifies the availability of the partner MC | [optional] 
-**OtherMCStatusNumeric** | Pointer to **int32** | Identifies the availability of the partner MC( In numeric form ) | [optional] 
+**OtherMCStatusNumeric** | Pointer to **int64** | Identifies the availability of the partner MC( In numeric form ) | [optional] 
 **PfuStatus** | Pointer to **string** |  | [optional] 
-**PfuStatusNumeric** | Pointer to **int32** |  | [optional] 
+**PfuStatusNumeric** | Pointer to **int64** |  | [optional] 
 **PlatformBrand** | Pointer to **string** | HW Platform Brand | [optional] 
-**PlatformBrandNumeric** | Pointer to **int32** | HW Platform Brand( In numeric form ) | [optional] 
+**PlatformBrandNumeric** | Pointer to **int64** | HW Platform Brand( In numeric form ) | [optional] 
 **PlatformType** | Pointer to **string** | HW Platform Type | [optional] 
-**PlatformTypeNumeric** | Pointer to **int32** | HW Platform Type( In numeric form ) | [optional] 
+**PlatformTypeNumeric** | Pointer to **int64** | HW Platform Type( In numeric form ) | [optional] 
 **ProductBrand** | Pointer to **string** |  | [optional] 
 **ProductId** | Pointer to **string** |  | [optional] 
 **ScsiProductId** | Pointer to **string** | SCSI Product ID | [optional] 
 **ScsiVendorId** | Pointer to **string** | SCSI vendor name | [optional] 
 **SecuritySystemManagement** | Pointer to **string** |  | [optional] 
-**SecuritySystemManagementNumeric** | Pointer to **int32** |  | [optional] 
+**SecuritySystemManagementNumeric** | Pointer to **int64** |  | [optional] 
 **SupportedLocales** | Pointer to **string** |  | [optional] 
 **SystemContact** | Pointer to **string** | User-defined contact for this system | [optional] 
 **SystemInformation** | Pointer to **string** |  | [optional] 
@@ -159,20 +159,20 @@ HasCurrentNodeWwn returns a boolean if a field has been set.
 
 ### GetEnclosureCount
 
-`func (o *SystemResourceInner) GetEnclosureCount() int32`
+`func (o *SystemResourceInner) GetEnclosureCount() int64`
 
 GetEnclosureCount returns the EnclosureCount field if non-nil, zero value otherwise.
 
 ### GetEnclosureCountOk
 
-`func (o *SystemResourceInner) GetEnclosureCountOk() (*int32, bool)`
+`func (o *SystemResourceInner) GetEnclosureCountOk() (*int64, bool)`
 
 GetEnclosureCountOk returns a tuple with the EnclosureCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureCount
 
-`func (o *SystemResourceInner) SetEnclosureCount(v int32)`
+`func (o *SystemResourceInner) SetEnclosureCount(v int64)`
 
 SetEnclosureCount sets EnclosureCount field to given value.
 
@@ -209,20 +209,20 @@ HasFdeSecurityStatus returns a boolean if a field has been set.
 
 ### GetFdeSecurityStatusNumeric
 
-`func (o *SystemResourceInner) GetFdeSecurityStatusNumeric() int32`
+`func (o *SystemResourceInner) GetFdeSecurityStatusNumeric() int64`
 
 GetFdeSecurityStatusNumeric returns the FdeSecurityStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetFdeSecurityStatusNumericOk
 
-`func (o *SystemResourceInner) GetFdeSecurityStatusNumericOk() (*int32, bool)`
+`func (o *SystemResourceInner) GetFdeSecurityStatusNumericOk() (*int64, bool)`
 
 GetFdeSecurityStatusNumericOk returns a tuple with the FdeSecurityStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFdeSecurityStatusNumeric
 
-`func (o *SystemResourceInner) SetFdeSecurityStatusNumeric(v int32)`
+`func (o *SystemResourceInner) SetFdeSecurityStatusNumeric(v int64)`
 
 SetFdeSecurityStatusNumeric sets FdeSecurityStatusNumeric field to given value.
 
@@ -259,20 +259,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *SystemResourceInner) GetHealthNumeric() int32`
+`func (o *SystemResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *SystemResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *SystemResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *SystemResourceInner) SetHealthNumeric(v int32)`
+`func (o *SystemResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -359,20 +359,20 @@ HasOtherMCStatus returns a boolean if a field has been set.
 
 ### GetOtherMCStatusNumeric
 
-`func (o *SystemResourceInner) GetOtherMCStatusNumeric() int32`
+`func (o *SystemResourceInner) GetOtherMCStatusNumeric() int64`
 
 GetOtherMCStatusNumeric returns the OtherMCStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetOtherMCStatusNumericOk
 
-`func (o *SystemResourceInner) GetOtherMCStatusNumericOk() (*int32, bool)`
+`func (o *SystemResourceInner) GetOtherMCStatusNumericOk() (*int64, bool)`
 
 GetOtherMCStatusNumericOk returns a tuple with the OtherMCStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOtherMCStatusNumeric
 
-`func (o *SystemResourceInner) SetOtherMCStatusNumeric(v int32)`
+`func (o *SystemResourceInner) SetOtherMCStatusNumeric(v int64)`
 
 SetOtherMCStatusNumeric sets OtherMCStatusNumeric field to given value.
 
@@ -409,20 +409,20 @@ HasPfuStatus returns a boolean if a field has been set.
 
 ### GetPfuStatusNumeric
 
-`func (o *SystemResourceInner) GetPfuStatusNumeric() int32`
+`func (o *SystemResourceInner) GetPfuStatusNumeric() int64`
 
 GetPfuStatusNumeric returns the PfuStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetPfuStatusNumericOk
 
-`func (o *SystemResourceInner) GetPfuStatusNumericOk() (*int32, bool)`
+`func (o *SystemResourceInner) GetPfuStatusNumericOk() (*int64, bool)`
 
 GetPfuStatusNumericOk returns a tuple with the PfuStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPfuStatusNumeric
 
-`func (o *SystemResourceInner) SetPfuStatusNumeric(v int32)`
+`func (o *SystemResourceInner) SetPfuStatusNumeric(v int64)`
 
 SetPfuStatusNumeric sets PfuStatusNumeric field to given value.
 
@@ -459,20 +459,20 @@ HasPlatformBrand returns a boolean if a field has been set.
 
 ### GetPlatformBrandNumeric
 
-`func (o *SystemResourceInner) GetPlatformBrandNumeric() int32`
+`func (o *SystemResourceInner) GetPlatformBrandNumeric() int64`
 
 GetPlatformBrandNumeric returns the PlatformBrandNumeric field if non-nil, zero value otherwise.
 
 ### GetPlatformBrandNumericOk
 
-`func (o *SystemResourceInner) GetPlatformBrandNumericOk() (*int32, bool)`
+`func (o *SystemResourceInner) GetPlatformBrandNumericOk() (*int64, bool)`
 
 GetPlatformBrandNumericOk returns a tuple with the PlatformBrandNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlatformBrandNumeric
 
-`func (o *SystemResourceInner) SetPlatformBrandNumeric(v int32)`
+`func (o *SystemResourceInner) SetPlatformBrandNumeric(v int64)`
 
 SetPlatformBrandNumeric sets PlatformBrandNumeric field to given value.
 
@@ -509,20 +509,20 @@ HasPlatformType returns a boolean if a field has been set.
 
 ### GetPlatformTypeNumeric
 
-`func (o *SystemResourceInner) GetPlatformTypeNumeric() int32`
+`func (o *SystemResourceInner) GetPlatformTypeNumeric() int64`
 
 GetPlatformTypeNumeric returns the PlatformTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetPlatformTypeNumericOk
 
-`func (o *SystemResourceInner) GetPlatformTypeNumericOk() (*int32, bool)`
+`func (o *SystemResourceInner) GetPlatformTypeNumericOk() (*int64, bool)`
 
 GetPlatformTypeNumericOk returns a tuple with the PlatformTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlatformTypeNumeric
 
-`func (o *SystemResourceInner) SetPlatformTypeNumeric(v int32)`
+`func (o *SystemResourceInner) SetPlatformTypeNumeric(v int64)`
 
 SetPlatformTypeNumeric sets PlatformTypeNumeric field to given value.
 
@@ -659,20 +659,20 @@ HasSecuritySystemManagement returns a boolean if a field has been set.
 
 ### GetSecuritySystemManagementNumeric
 
-`func (o *SystemResourceInner) GetSecuritySystemManagementNumeric() int32`
+`func (o *SystemResourceInner) GetSecuritySystemManagementNumeric() int64`
 
 GetSecuritySystemManagementNumeric returns the SecuritySystemManagementNumeric field if non-nil, zero value otherwise.
 
 ### GetSecuritySystemManagementNumericOk
 
-`func (o *SystemResourceInner) GetSecuritySystemManagementNumericOk() (*int32, bool)`
+`func (o *SystemResourceInner) GetSecuritySystemManagementNumericOk() (*int64, bool)`
 
 GetSecuritySystemManagementNumericOk returns a tuple with the SecuritySystemManagementNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSecuritySystemManagementNumeric
 
-`func (o *SystemResourceInner) SetSecuritySystemManagementNumeric(v int32)`
+`func (o *SystemResourceInner) SetSecuritySystemManagementNumeric(v int64)`
 
 SetSecuritySystemManagementNumeric sets SecuritySystemManagementNumeric field to given value.
 

@@ -23,7 +23,7 @@ type InitiatorViewResourceInner struct {
 	Meta               *string                   `json:"meta,omitempty"`
 	HbaNickname        *string                   `json:"hba-nickname,omitempty"`
 	HostProfile        *string                   `json:"host-profile,omitempty"`
-	HostProfileNumeric *int32                    `json:"host-profile-numeric,omitempty"`
+	HostProfileNumeric *int64                    `json:"host-profile-numeric,omitempty"`
 	Id                 *string                   `json:"id,omitempty"`
 	VolumeView         []VolumeViewResourceInner `json:"volume-view,omitempty"`
 }
@@ -174,9 +174,9 @@ func (o *InitiatorViewResourceInner) SetHostProfile(v string) {
 }
 
 // GetHostProfileNumeric returns the HostProfileNumeric field value if set, zero value otherwise.
-func (o *InitiatorViewResourceInner) GetHostProfileNumeric() int32 {
+func (o *InitiatorViewResourceInner) GetHostProfileNumeric() int64 {
 	if o == nil || IsNil(o.HostProfileNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HostProfileNumeric
@@ -184,7 +184,7 @@ func (o *InitiatorViewResourceInner) GetHostProfileNumeric() int32 {
 
 // GetHostProfileNumericOk returns a tuple with the HostProfileNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InitiatorViewResourceInner) GetHostProfileNumericOk() (*int32, bool) {
+func (o *InitiatorViewResourceInner) GetHostProfileNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HostProfileNumeric) {
 		return nil, false
 	}
@@ -200,8 +200,8 @@ func (o *InitiatorViewResourceInner) HasHostProfileNumeric() bool {
 	return false
 }
 
-// SetHostProfileNumeric gets a reference to the given int32 and assigns it to the HostProfileNumeric field.
-func (o *InitiatorViewResourceInner) SetHostProfileNumeric(v int32) {
+// SetHostProfileNumeric gets a reference to the given int64 and assigns it to the HostProfileNumeric field.
+func (o *InitiatorViewResourceInner) SetHostProfileNumeric(v int64) {
 	o.HostProfileNumeric = &v
 }
 

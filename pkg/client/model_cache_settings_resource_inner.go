@@ -21,15 +21,15 @@ var _ MappedNullable = &CacheSettingsResourceInner{}
 type CacheSettingsResourceInner struct {
 	ObjectName     *string `json:"object-name,omitempty"`
 	Meta           *string `json:"meta,omitempty"`
-	CacheBlockSize *int32  `json:"cache-block-size,omitempty"`
+	CacheBlockSize *int64  `json:"cache-block-size,omitempty"`
 	// Storage system operation mode (redundancy mode)
 	OperationMode *string `json:"operation-mode,omitempty"`
 	// Storage system operation mode (redundancy mode)( In numeric form )
-	OperationModeNumeric *int32 `json:"operation-mode-numeric,omitempty"`
+	OperationModeNumeric *int64 `json:"operation-mode-numeric,omitempty"`
 	// Used to describe the Host Protection Information
 	PiFormat *string `json:"pi-format,omitempty"`
 	// Used to describe the Host Protection Information( In numeric form )
-	PiFormatNumeric           *int32                                   `json:"pi-format-numeric,omitempty"`
+	PiFormatNumeric           *int64                                   `json:"pi-format-numeric,omitempty"`
 	ControllerCacheParameters []ControllerCacheParametersResourceInner `json:"controller-cache-parameters,omitempty"`
 }
 
@@ -115,9 +115,9 @@ func (o *CacheSettingsResourceInner) SetMeta(v string) {
 }
 
 // GetCacheBlockSize returns the CacheBlockSize field value if set, zero value otherwise.
-func (o *CacheSettingsResourceInner) GetCacheBlockSize() int32 {
+func (o *CacheSettingsResourceInner) GetCacheBlockSize() int64 {
 	if o == nil || IsNil(o.CacheBlockSize) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CacheBlockSize
@@ -125,7 +125,7 @@ func (o *CacheSettingsResourceInner) GetCacheBlockSize() int32 {
 
 // GetCacheBlockSizeOk returns a tuple with the CacheBlockSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CacheSettingsResourceInner) GetCacheBlockSizeOk() (*int32, bool) {
+func (o *CacheSettingsResourceInner) GetCacheBlockSizeOk() (*int64, bool) {
 	if o == nil || IsNil(o.CacheBlockSize) {
 		return nil, false
 	}
@@ -141,8 +141,8 @@ func (o *CacheSettingsResourceInner) HasCacheBlockSize() bool {
 	return false
 }
 
-// SetCacheBlockSize gets a reference to the given int32 and assigns it to the CacheBlockSize field.
-func (o *CacheSettingsResourceInner) SetCacheBlockSize(v int32) {
+// SetCacheBlockSize gets a reference to the given int64 and assigns it to the CacheBlockSize field.
+func (o *CacheSettingsResourceInner) SetCacheBlockSize(v int64) {
 	o.CacheBlockSize = &v
 }
 
@@ -179,9 +179,9 @@ func (o *CacheSettingsResourceInner) SetOperationMode(v string) {
 }
 
 // GetOperationModeNumeric returns the OperationModeNumeric field value if set, zero value otherwise.
-func (o *CacheSettingsResourceInner) GetOperationModeNumeric() int32 {
+func (o *CacheSettingsResourceInner) GetOperationModeNumeric() int64 {
 	if o == nil || IsNil(o.OperationModeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.OperationModeNumeric
@@ -189,7 +189,7 @@ func (o *CacheSettingsResourceInner) GetOperationModeNumeric() int32 {
 
 // GetOperationModeNumericOk returns a tuple with the OperationModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CacheSettingsResourceInner) GetOperationModeNumericOk() (*int32, bool) {
+func (o *CacheSettingsResourceInner) GetOperationModeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.OperationModeNumeric) {
 		return nil, false
 	}
@@ -205,8 +205,8 @@ func (o *CacheSettingsResourceInner) HasOperationModeNumeric() bool {
 	return false
 }
 
-// SetOperationModeNumeric gets a reference to the given int32 and assigns it to the OperationModeNumeric field.
-func (o *CacheSettingsResourceInner) SetOperationModeNumeric(v int32) {
+// SetOperationModeNumeric gets a reference to the given int64 and assigns it to the OperationModeNumeric field.
+func (o *CacheSettingsResourceInner) SetOperationModeNumeric(v int64) {
 	o.OperationModeNumeric = &v
 }
 
@@ -243,9 +243,9 @@ func (o *CacheSettingsResourceInner) SetPiFormat(v string) {
 }
 
 // GetPiFormatNumeric returns the PiFormatNumeric field value if set, zero value otherwise.
-func (o *CacheSettingsResourceInner) GetPiFormatNumeric() int32 {
+func (o *CacheSettingsResourceInner) GetPiFormatNumeric() int64 {
 	if o == nil || IsNil(o.PiFormatNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PiFormatNumeric
@@ -253,7 +253,7 @@ func (o *CacheSettingsResourceInner) GetPiFormatNumeric() int32 {
 
 // GetPiFormatNumericOk returns a tuple with the PiFormatNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CacheSettingsResourceInner) GetPiFormatNumericOk() (*int32, bool) {
+func (o *CacheSettingsResourceInner) GetPiFormatNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.PiFormatNumeric) {
 		return nil, false
 	}
@@ -269,8 +269,8 @@ func (o *CacheSettingsResourceInner) HasPiFormatNumeric() bool {
 	return false
 }
 
-// SetPiFormatNumeric gets a reference to the given int32 and assigns it to the PiFormatNumeric field.
-func (o *CacheSettingsResourceInner) SetPiFormatNumeric(v int32) {
+// SetPiFormatNumeric gets a reference to the given int64 and assigns it to the PiFormatNumeric field.
+func (o *CacheSettingsResourceInner) SetPiFormatNumeric(v int64) {
 	o.PiFormatNumeric = &v
 }
 

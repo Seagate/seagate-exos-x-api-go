@@ -398,7 +398,7 @@ func (s *Specification) AddMetaProperties(ctx context.Context, config *common.Co
 	s.Resources(5, "meta:")
 	s.Resources(6, "type: string")
 
-	// Next all all the properties, but do so in a sorted manner
+	// Next export all the properties, but do so in a sorted manner
 	// The meta command does not produce the same property order every time, hence the desire to sort for consistency
 	if len(properties) > 0 {
 
@@ -434,6 +434,10 @@ func (s *Specification) AddMetaProperties(ctx context.Context, config *common.Co
 			logger.V(4).Info("properties", "key", newkey, "type", datatype, "description", description)
 			s.Resources(5, fmt.Sprintf("%s:", newkey))
 			s.Resources(6, fmt.Sprintf("type: %s", datatype))
+			if datatype == "integer" {
+				// add special formatting to support very large integers
+				s.Resources(6, fmt.Sprintf("format: %s", "int64"))
+			}
 			if description != nil {
 				s.Resources(6, fmt.Sprintf("description: %s", description))
 			}

@@ -7,21 +7,21 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **AffinitySize** | Pointer to **string** |  | [optional] 
-**AffinitySizeNumeric** | Pointer to **int32** |  | [optional] 
+**AffinitySizeNumeric** | Pointer to **int64** |  | [optional] 
 **AllocatedSize** | Pointer to **string** |  | [optional] 
-**AllocatedSizeNumeric** | Pointer to **int32** |  | [optional] 
+**AllocatedSizeNumeric** | Pointer to **int64** |  | [optional] 
 **AvailableSize** | Pointer to **string** |  | [optional] 
-**AvailableSizeNumeric** | Pointer to **int32** |  | [optional] 
-**Diskcount** | Pointer to **int32** | Number of disks | [optional] 
+**AvailableSizeNumeric** | Pointer to **int64** |  | [optional] 
+**Diskcount** | Pointer to **int64** | Number of disks | [optional] 
 **Pool** | Pointer to **string** | Pool | [optional] 
-**PoolPercentage** | Pointer to **int32** | Portion of the virtual pool used by this disk group | [optional] 
+**PoolPercentage** | Pointer to **int64** | Portion of the virtual pool used by this disk group | [optional] 
 **RawSize** | Pointer to **string** |  | [optional] 
-**RawSizeNumeric** | Pointer to **int32** |  | [optional] 
+**RawSizeNumeric** | Pointer to **int64** |  | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
 **Tier** | Pointer to **string** |  | [optional] 
-**TierNumeric** | Pointer to **int32** |  | [optional] 
+**TierNumeric** | Pointer to **int64** |  | [optional] 
 **TotalSize** | Pointer to **string** | The total size formatted using the session settings for base, precision, and units | [optional] 
-**TotalSizeNumeric** | Pointer to **int32** | The total size formatted using the session settings for base, precision, and units( In numeric form ) | [optional] 
+**TotalSizeNumeric** | Pointer to **int64** | The total size formatted using the session settings for base, precision, and units( In numeric form ) | [optional] 
 
 ## Methods
 
@@ -119,20 +119,20 @@ HasAffinitySize returns a boolean if a field has been set.
 
 ### GetAffinitySizeNumeric
 
-`func (o *TiersResourceInner) GetAffinitySizeNumeric() int32`
+`func (o *TiersResourceInner) GetAffinitySizeNumeric() int64`
 
 GetAffinitySizeNumeric returns the AffinitySizeNumeric field if non-nil, zero value otherwise.
 
 ### GetAffinitySizeNumericOk
 
-`func (o *TiersResourceInner) GetAffinitySizeNumericOk() (*int32, bool)`
+`func (o *TiersResourceInner) GetAffinitySizeNumericOk() (*int64, bool)`
 
 GetAffinitySizeNumericOk returns a tuple with the AffinitySizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAffinitySizeNumeric
 
-`func (o *TiersResourceInner) SetAffinitySizeNumeric(v int32)`
+`func (o *TiersResourceInner) SetAffinitySizeNumeric(v int64)`
 
 SetAffinitySizeNumeric sets AffinitySizeNumeric field to given value.
 
@@ -169,20 +169,20 @@ HasAllocatedSize returns a boolean if a field has been set.
 
 ### GetAllocatedSizeNumeric
 
-`func (o *TiersResourceInner) GetAllocatedSizeNumeric() int32`
+`func (o *TiersResourceInner) GetAllocatedSizeNumeric() int64`
 
 GetAllocatedSizeNumeric returns the AllocatedSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetAllocatedSizeNumericOk
 
-`func (o *TiersResourceInner) GetAllocatedSizeNumericOk() (*int32, bool)`
+`func (o *TiersResourceInner) GetAllocatedSizeNumericOk() (*int64, bool)`
 
 GetAllocatedSizeNumericOk returns a tuple with the AllocatedSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllocatedSizeNumeric
 
-`func (o *TiersResourceInner) SetAllocatedSizeNumeric(v int32)`
+`func (o *TiersResourceInner) SetAllocatedSizeNumeric(v int64)`
 
 SetAllocatedSizeNumeric sets AllocatedSizeNumeric field to given value.
 
@@ -219,20 +219,20 @@ HasAvailableSize returns a boolean if a field has been set.
 
 ### GetAvailableSizeNumeric
 
-`func (o *TiersResourceInner) GetAvailableSizeNumeric() int32`
+`func (o *TiersResourceInner) GetAvailableSizeNumeric() int64`
 
 GetAvailableSizeNumeric returns the AvailableSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetAvailableSizeNumericOk
 
-`func (o *TiersResourceInner) GetAvailableSizeNumericOk() (*int32, bool)`
+`func (o *TiersResourceInner) GetAvailableSizeNumericOk() (*int64, bool)`
 
 GetAvailableSizeNumericOk returns a tuple with the AvailableSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAvailableSizeNumeric
 
-`func (o *TiersResourceInner) SetAvailableSizeNumeric(v int32)`
+`func (o *TiersResourceInner) SetAvailableSizeNumeric(v int64)`
 
 SetAvailableSizeNumeric sets AvailableSizeNumeric field to given value.
 
@@ -244,20 +244,20 @@ HasAvailableSizeNumeric returns a boolean if a field has been set.
 
 ### GetDiskcount
 
-`func (o *TiersResourceInner) GetDiskcount() int32`
+`func (o *TiersResourceInner) GetDiskcount() int64`
 
 GetDiskcount returns the Diskcount field if non-nil, zero value otherwise.
 
 ### GetDiskcountOk
 
-`func (o *TiersResourceInner) GetDiskcountOk() (*int32, bool)`
+`func (o *TiersResourceInner) GetDiskcountOk() (*int64, bool)`
 
 GetDiskcountOk returns a tuple with the Diskcount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskcount
 
-`func (o *TiersResourceInner) SetDiskcount(v int32)`
+`func (o *TiersResourceInner) SetDiskcount(v int64)`
 
 SetDiskcount sets Diskcount field to given value.
 
@@ -294,20 +294,20 @@ HasPool returns a boolean if a field has been set.
 
 ### GetPoolPercentage
 
-`func (o *TiersResourceInner) GetPoolPercentage() int32`
+`func (o *TiersResourceInner) GetPoolPercentage() int64`
 
 GetPoolPercentage returns the PoolPercentage field if non-nil, zero value otherwise.
 
 ### GetPoolPercentageOk
 
-`func (o *TiersResourceInner) GetPoolPercentageOk() (*int32, bool)`
+`func (o *TiersResourceInner) GetPoolPercentageOk() (*int64, bool)`
 
 GetPoolPercentageOk returns a tuple with the PoolPercentage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPoolPercentage
 
-`func (o *TiersResourceInner) SetPoolPercentage(v int32)`
+`func (o *TiersResourceInner) SetPoolPercentage(v int64)`
 
 SetPoolPercentage sets PoolPercentage field to given value.
 
@@ -344,20 +344,20 @@ HasRawSize returns a boolean if a field has been set.
 
 ### GetRawSizeNumeric
 
-`func (o *TiersResourceInner) GetRawSizeNumeric() int32`
+`func (o *TiersResourceInner) GetRawSizeNumeric() int64`
 
 GetRawSizeNumeric returns the RawSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetRawSizeNumericOk
 
-`func (o *TiersResourceInner) GetRawSizeNumericOk() (*int32, bool)`
+`func (o *TiersResourceInner) GetRawSizeNumericOk() (*int64, bool)`
 
 GetRawSizeNumericOk returns a tuple with the RawSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRawSizeNumeric
 
-`func (o *TiersResourceInner) SetRawSizeNumeric(v int32)`
+`func (o *TiersResourceInner) SetRawSizeNumeric(v int64)`
 
 SetRawSizeNumeric sets RawSizeNumeric field to given value.
 
@@ -419,20 +419,20 @@ HasTier returns a boolean if a field has been set.
 
 ### GetTierNumeric
 
-`func (o *TiersResourceInner) GetTierNumeric() int32`
+`func (o *TiersResourceInner) GetTierNumeric() int64`
 
 GetTierNumeric returns the TierNumeric field if non-nil, zero value otherwise.
 
 ### GetTierNumericOk
 
-`func (o *TiersResourceInner) GetTierNumericOk() (*int32, bool)`
+`func (o *TiersResourceInner) GetTierNumericOk() (*int64, bool)`
 
 GetTierNumericOk returns a tuple with the TierNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTierNumeric
 
-`func (o *TiersResourceInner) SetTierNumeric(v int32)`
+`func (o *TiersResourceInner) SetTierNumeric(v int64)`
 
 SetTierNumeric sets TierNumeric field to given value.
 
@@ -469,20 +469,20 @@ HasTotalSize returns a boolean if a field has been set.
 
 ### GetTotalSizeNumeric
 
-`func (o *TiersResourceInner) GetTotalSizeNumeric() int32`
+`func (o *TiersResourceInner) GetTotalSizeNumeric() int64`
 
 GetTotalSizeNumeric returns the TotalSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetTotalSizeNumericOk
 
-`func (o *TiersResourceInner) GetTotalSizeNumericOk() (*int32, bool)`
+`func (o *TiersResourceInner) GetTotalSizeNumericOk() (*int64, bool)`
 
 GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalSizeNumeric
 
-`func (o *TiersResourceInner) SetTotalSizeNumeric(v int32)`
+`func (o *TiersResourceInner) SetTotalSizeNumeric(v int64)`
 
 SetTotalSizeNumeric sets TotalSizeNumeric field to given value.
 

@@ -26,7 +26,7 @@ type HostResourceInner struct {
 	GroupKey  *string `json:"group-key,omitempty"`
 	HostGroup *string `json:"host-group,omitempty"`
 	// Number of members
-	MemberCount  *int32                   `json:"member-count,omitempty"`
+	MemberCount  *int64                   `json:"member-count,omitempty"`
 	Name         *string                  `json:"name,omitempty"`
 	SerialNumber *string                  `json:"serial-number,omitempty"`
 	Initiator    []InitiatorResourceInner `json:"initiator,omitempty"`
@@ -210,9 +210,9 @@ func (o *HostResourceInner) SetHostGroup(v string) {
 }
 
 // GetMemberCount returns the MemberCount field value if set, zero value otherwise.
-func (o *HostResourceInner) GetMemberCount() int32 {
+func (o *HostResourceInner) GetMemberCount() int64 {
 	if o == nil || IsNil(o.MemberCount) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MemberCount
@@ -220,7 +220,7 @@ func (o *HostResourceInner) GetMemberCount() int32 {
 
 // GetMemberCountOk returns a tuple with the MemberCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *HostResourceInner) GetMemberCountOk() (*int32, bool) {
+func (o *HostResourceInner) GetMemberCountOk() (*int64, bool) {
 	if o == nil || IsNil(o.MemberCount) {
 		return nil, false
 	}
@@ -236,8 +236,8 @@ func (o *HostResourceInner) HasMemberCount() bool {
 	return false
 }
 
-// SetMemberCount gets a reference to the given int32 and assigns it to the MemberCount field.
-func (o *HostResourceInner) SetMemberCount(v int32) {
+// SetMemberCount gets a reference to the given int64 and assigns it to the MemberCount field.
+func (o *HostResourceInner) SetMemberCount(v int64) {
 	o.MemberCount = &v
 }
 

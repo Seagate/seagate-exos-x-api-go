@@ -22,97 +22,97 @@ type DiskGroupsResourceInner struct {
 	ObjectName                 *string `json:"object-name,omitempty"`
 	Meta                       *string `json:"meta,omitempty"`
 	ActualSpareCapacity        *string `json:"actual-spare-capacity,omitempty"`
-	ActualSpareCapacityNumeric *int32  `json:"actual-spare-capacity-numeric,omitempty"`
+	ActualSpareCapacityNumeric *int64  `json:"actual-spare-capacity-numeric,omitempty"`
 	// Number of pages allocated
-	AllocatedPages *int32 `json:"allocated-pages,omitempty"`
+	AllocatedPages *int64 `json:"allocated-pages,omitempty"`
 	// Disk interface type
 	ArrayDriveType *string `json:"array-drive-type,omitempty"`
 	// Disk interface type( In numeric form )
-	ArrayDriveTypeNumeric *int32 `json:"array-drive-type-numeric,omitempty"`
+	ArrayDriveTypeNumeric *int64 `json:"array-drive-type-numeric,omitempty"`
 	// Available pages
-	AvailablePages *int32 `json:"available-pages,omitempty"`
+	AvailablePages *int64 `json:"available-pages,omitempty"`
 	// The size in blocks
-	Blocks                *int32  `json:"blocks,omitempty"`
-	Blocksize             *int32  `json:"blocksize,omitempty"`
-	CacheFlushPeriod      *int32  `json:"cache-flush-period,omitempty"`
+	Blocks                *int64  `json:"blocks,omitempty"`
+	Blocksize             *int64  `json:"blocksize,omitempty"`
+	CacheFlushPeriod      *int64  `json:"cache-flush-period,omitempty"`
 	CacheReadAhead        *string `json:"cache-read-ahead,omitempty"`
-	CacheReadAheadNumeric *int32  `json:"cache-read-ahead-numeric,omitempty"`
+	CacheReadAheadNumeric *int64  `json:"cache-read-ahead-numeric,omitempty"`
 	// Smallest block of usable space
 	Chunksize               *string `json:"chunksize,omitempty"`
 	CreateDate              *string `json:"create-date,omitempty"`
-	CreateDateNumeric       *int32  `json:"create-date-numeric,omitempty"`
+	CreateDateNumeric       *int64  `json:"create-date-numeric,omitempty"`
 	CriticalCapacity        *string `json:"critical-capacity,omitempty"`
-	CriticalCapacityNumeric *int32  `json:"critical-capacity-numeric,omitempty"`
+	CriticalCapacityNumeric *int64  `json:"critical-capacity-numeric,omitempty"`
 	CurrentJob              *string `json:"current-job,omitempty"`
 	CurrentJobCompletion    *string `json:"current-job-completion,omitempty"`
-	CurrentJobNumeric       *int32  `json:"current-job-numeric,omitempty"`
+	CurrentJobNumeric       *int64  `json:"current-job-numeric,omitempty"`
 	DegradedCapacity        *string `json:"degraded-capacity,omitempty"`
-	DegradedCapacityNumeric *int32  `json:"degraded-capacity-numeric,omitempty"`
+	DegradedCapacityNumeric *int64  `json:"degraded-capacity-numeric,omitempty"`
 	// Disk interface Description
 	DiskDescription *string `json:"disk-description,omitempty"`
 	// Disk interface Description( In numeric form )
-	DiskDescriptionNumeric    *int32  `json:"disk-description-numeric,omitempty"`
-	DiskDsdDelayVdisk         *int32  `json:"disk-dsd-delay-vdisk,omitempty"`
+	DiskDescriptionNumeric    *int64  `json:"disk-description-numeric,omitempty"`
+	DiskDsdDelayVdisk         *int64  `json:"disk-dsd-delay-vdisk,omitempty"`
 	DiskDsdEnableVdisk        *string `json:"disk-dsd-enable-vdisk,omitempty"`
-	DiskDsdEnableVdiskNumeric *int32  `json:"disk-dsd-enable-vdisk-numeric,omitempty"`
+	DiskDsdEnableVdiskNumeric *int64  `json:"disk-dsd-enable-vdisk-numeric,omitempty"`
 	// Number of disks
-	Diskcount *int32 `json:"diskcount,omitempty"`
+	Diskcount *int64 `json:"diskcount,omitempty"`
 	// Extended status (bits)
-	ExtendedStatus *int32 `json:"extended-status,omitempty"`
+	ExtendedStatus *int64 `json:"extended-status,omitempty"`
 	// Amount of free space in the vdisk
 	Freespace *string `json:"freespace,omitempty"`
 	// Amount of free space in the vdisk( In numeric form )
-	FreespaceNumeric                 *int32  `json:"freespace-numeric,omitempty"`
+	FreespaceNumeric                 *int64  `json:"freespace-numeric,omitempty"`
 	Health                           *string `json:"health,omitempty"`
-	HealthNumeric                    *int32  `json:"health-numeric,omitempty"`
+	HealthNumeric                    *int64  `json:"health-numeric,omitempty"`
 	HealthReason                     *string `json:"health-reason,omitempty"`
-	HealthReasonNumeric              *int32  `json:"health-reason-numeric,omitempty"`
+	HealthReasonNumeric              *int64  `json:"health-reason-numeric,omitempty"`
 	HealthRecommendation             *string `json:"health-recommendation,omitempty"`
-	HealthRecommendationNumeric      *int32  `json:"health-recommendation-numeric,omitempty"`
-	InterleavedVolumeCount           *int32  `json:"interleaved-volume-count,omitempty"`
+	HealthRecommendationNumeric      *int64  `json:"health-recommendation-numeric,omitempty"`
+	InterleavedVolumeCount           *int64  `json:"interleaved-volume-count,omitempty"`
 	IsJobAutoAbortable               *string `json:"is-job-auto-abortable,omitempty"`
-	IsJobAutoAbortableNumeric        *int32  `json:"is-job-auto-abortable-numeric,omitempty"`
+	IsJobAutoAbortableNumeric        *int64  `json:"is-job-auto-abortable-numeric,omitempty"`
 	JobRunning                       *string `json:"job-running,omitempty"`
 	LargestFreePartitionSpace        *string `json:"largest-free-partition-space,omitempty"`
-	LargestFreePartitionSpaceNumeric *int32  `json:"largest-free-partition-space-numeric,omitempty"`
-	LinearVolumeBoundary             *int32  `json:"linear-volume-boundary,omitempty"`
+	LargestFreePartitionSpaceNumeric *int64  `json:"largest-free-partition-space-numeric,omitempty"`
+	LinearVolumeBoundary             *int64  `json:"linear-volume-boundary,omitempty"`
 	// Logical Unit Number
-	Lun *int32 `json:"lun,omitempty"`
+	Lun *int64 `json:"lun,omitempty"`
 	// Disk Group Metadata Capacity
 	MetadataSize *string `json:"metadata-size,omitempty"`
 	// Disk Group Metadata Capacity( In numeric form )
-	MetadataSizeNumeric *int32 `json:"metadata-size-numeric,omitempty"`
+	MetadataSizeNumeric *int64 `json:"metadata-size-numeric,omitempty"`
 	// Smallest disk size that can be used for this disk group
 	MinDriveSize *string `json:"min-drive-size,omitempty"`
 	// Smallest disk size that can be used for this disk group( In numeric form )
-	MinDriveSizeNumeric *int32  `json:"min-drive-size-numeric,omitempty"`
+	MinDriveSizeNumeric *int64  `json:"min-drive-size-numeric,omitempty"`
 	Name                *string `json:"name,omitempty"`
 	// LBA used for the next volume that will be created
 	NewPartitionLba *string `json:"new-partition-lba,omitempty"`
 	// LBA used for the next volume that will be created( In numeric form )
-	NewPartitionLbaNumeric *int32 `json:"new-partition-lba-numeric,omitempty"`
+	NewPartitionLbaNumeric *int64 `json:"new-partition-lba-numeric,omitempty"`
 	// Number of volumes in this vdisk
-	NumArrayPartitions *int32 `json:"num-array-partitions,omitempty"`
+	NumArrayPartitions *int64 `json:"num-array-partitions,omitempty"`
 	// Number of disks in the RAID 10 or 50 subgroup
-	NumDrivesPerLowLevelArray *int32  `json:"num-drives-per-low-level-array,omitempty"`
-	NumExpansionPartitions    *int32  `json:"num-expansion-partitions,omitempty"`
-	NumPartitionSegments      *int32  `json:"num-partition-segments,omitempty"`
+	NumDrivesPerLowLevelArray *int64  `json:"num-drives-per-low-level-array,omitempty"`
+	NumExpansionPartitions    *int64  `json:"num-expansion-partitions,omitempty"`
+	NumPartitionSegments      *int64  `json:"num-partition-segments,omitempty"`
 	Overhead                  *string `json:"overhead,omitempty"`
-	OverheadNumeric           *int32  `json:"overhead-numeric,omitempty"`
+	OverheadNumeric           *int64  `json:"overhead-numeric,omitempty"`
 	// Controller owning the component
 	Owner *string `json:"owner,omitempty"`
 	// Controller owning the component( In numeric form )
-	OwnerNumeric *int32 `json:"owner-numeric,omitempty"`
+	OwnerNumeric *int64 `json:"owner-numeric,omitempty"`
 	// Disk group performance rank within the virtual pool
-	PerformanceRank *int32 `json:"performance-rank,omitempty"`
+	PerformanceRank *int64 `json:"performance-rank,omitempty"`
 	// Pool
 	Pool *string `json:"pool,omitempty"`
 	// Portion of the virtual pool used by this disk group
-	PoolPercentage *int32 `json:"pool-percentage,omitempty"`
+	PoolPercentage *int64 `json:"pool-percentage,omitempty"`
 	// Pool Sector Format
 	PoolSectorFormat *string `json:"pool-sector-format,omitempty"`
 	// Pool Sector Format( In numeric form )
-	PoolSectorFormatNumeric *int32 `json:"pool-sector-format-numeric,omitempty"`
+	PoolSectorFormatNumeric *int64 `json:"pool-sector-format-numeric,omitempty"`
 	// Serial number of the pool
 	PoolSerialNumber *string `json:"pool-serial-number,omitempty"`
 	// URL for associated Storage Pool
@@ -120,49 +120,49 @@ type DiskGroupsResourceInner struct {
 	// Configured owner
 	PreferredOwner *string `json:"preferred-owner,omitempty"`
 	// Configured owner( In numeric form )
-	PreferredOwnerNumeric *int32 `json:"preferred-owner-numeric,omitempty"`
+	PreferredOwnerNumeric *int64 `json:"preferred-owner-numeric,omitempty"`
 	// RAID level
 	Raidtype *string `json:"raidtype,omitempty"`
 	// RAID level( In numeric form )
-	RaidtypeNumeric *int32  `json:"raidtype-numeric,omitempty"`
+	RaidtypeNumeric *int64  `json:"raidtype-numeric,omitempty"`
 	RawSize         *string `json:"raw-size,omitempty"`
-	RawSizeNumeric  *int32  `json:"raw-size-numeric,omitempty"`
+	RawSizeNumeric  *int64  `json:"raw-size-numeric,omitempty"`
 	// Indicates whether read-ahead cache mode is enabled
 	ReadAheadEnabled *string `json:"read-ahead-enabled,omitempty"`
 	// Indicates whether read-ahead cache mode is enabled( In numeric form )
-	ReadAheadEnabledNumeric *int32 `json:"read-ahead-enabled-numeric,omitempty"`
+	ReadAheadEnabledNumeric *int64 `json:"read-ahead-enabled-numeric,omitempty"`
 	// Preferred duration for vdisk scrub utility
-	ScrubDurationGoal *int32  `json:"scrub-duration-goal,omitempty"`
+	ScrubDurationGoal *int64  `json:"scrub-duration-goal,omitempty"`
 	SerialNumber      *string `json:"serial-number,omitempty"`
 	// The size or capacity formatted with the current session base, precision, and units
 	Size *string `json:"size,omitempty"`
 	// The size or capacity formatted with the current session base, precision, and units( In numeric form )
-	SizeNumeric *int32 `json:"size-numeric,omitempty"`
+	SizeNumeric *int64 `json:"size-numeric,omitempty"`
 	// Number of spare disks currently configured
-	Sparecount    *int32  `json:"sparecount,omitempty"`
+	Sparecount    *int64  `json:"sparecount,omitempty"`
 	Spear         *string `json:"spear,omitempty"`
-	SpearNumeric  *int32  `json:"spear-numeric,omitempty"`
+	SpearNumeric  *int64  `json:"spear-numeric,omitempty"`
 	Status        *string `json:"status,omitempty"`
-	StatusNumeric *int32  `json:"status-numeric,omitempty"`
+	StatusNumeric *int64  `json:"status-numeric,omitempty"`
 	// Disk group tier assignment for tiered migration
 	StorageTier *string `json:"storage-tier,omitempty"`
 	// Disk group tier assignment for tiered migration( In numeric form )
-	StorageTierNumeric *int32 `json:"storage-tier-numeric,omitempty"`
+	StorageTierNumeric *int64 `json:"storage-tier-numeric,omitempty"`
 	// Storage type
 	StorageType *string `json:"storage-type,omitempty"`
 	// Storage type( In numeric form )
-	StorageTypeNumeric         *int32  `json:"storage-type-numeric,omitempty"`
+	StorageTypeNumeric         *int64  `json:"storage-type-numeric,omitempty"`
 	StripeWidth                *string `json:"stripe-width,omitempty"`
-	StripeWidthNumeric         *int32  `json:"stripe-width-numeric,omitempty"`
+	StripeWidthNumeric         *int64  `json:"stripe-width-numeric,omitempty"`
 	TargetSpareCapacity        *string `json:"target-spare-capacity,omitempty"`
-	TargetSpareCapacityNumeric *int32  `json:"target-spare-capacity-numeric,omitempty"`
-	TotalPages                 *int32  `json:"total-pages,omitempty"`
+	TargetSpareCapacityNumeric *int64  `json:"target-spare-capacity-numeric,omitempty"`
+	TotalPages                 *int64  `json:"total-pages,omitempty"`
 	// The resource URL
 	Url *string `json:"url,omitempty"`
 	// Indicates whether disk write-back cache is enabled
 	WriteBackEnabled *string `json:"write-back-enabled,omitempty"`
 	// Indicates whether disk write-back cache is enabled( In numeric form )
-	WriteBackEnabledNumeric *int32 `json:"write-back-enabled-numeric,omitempty"`
+	WriteBackEnabledNumeric *int64 `json:"write-back-enabled-numeric,omitempty"`
 }
 
 // NewDiskGroupsResourceInner instantiates a new DiskGroupsResourceInner object
@@ -279,9 +279,9 @@ func (o *DiskGroupsResourceInner) SetActualSpareCapacity(v string) {
 }
 
 // GetActualSpareCapacityNumeric returns the ActualSpareCapacityNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumeric() int64 {
 	if o == nil || IsNil(o.ActualSpareCapacityNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ActualSpareCapacityNumeric
@@ -289,7 +289,7 @@ func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumeric() int32 {
 
 // GetActualSpareCapacityNumericOk returns a tuple with the ActualSpareCapacityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ActualSpareCapacityNumeric) {
 		return nil, false
 	}
@@ -305,15 +305,15 @@ func (o *DiskGroupsResourceInner) HasActualSpareCapacityNumeric() bool {
 	return false
 }
 
-// SetActualSpareCapacityNumeric gets a reference to the given int32 and assigns it to the ActualSpareCapacityNumeric field.
-func (o *DiskGroupsResourceInner) SetActualSpareCapacityNumeric(v int32) {
+// SetActualSpareCapacityNumeric gets a reference to the given int64 and assigns it to the ActualSpareCapacityNumeric field.
+func (o *DiskGroupsResourceInner) SetActualSpareCapacityNumeric(v int64) {
 	o.ActualSpareCapacityNumeric = &v
 }
 
 // GetAllocatedPages returns the AllocatedPages field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetAllocatedPages() int32 {
+func (o *DiskGroupsResourceInner) GetAllocatedPages() int64 {
 	if o == nil || IsNil(o.AllocatedPages) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.AllocatedPages
@@ -321,7 +321,7 @@ func (o *DiskGroupsResourceInner) GetAllocatedPages() int32 {
 
 // GetAllocatedPagesOk returns a tuple with the AllocatedPages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetAllocatedPagesOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetAllocatedPagesOk() (*int64, bool) {
 	if o == nil || IsNil(o.AllocatedPages) {
 		return nil, false
 	}
@@ -337,8 +337,8 @@ func (o *DiskGroupsResourceInner) HasAllocatedPages() bool {
 	return false
 }
 
-// SetAllocatedPages gets a reference to the given int32 and assigns it to the AllocatedPages field.
-func (o *DiskGroupsResourceInner) SetAllocatedPages(v int32) {
+// SetAllocatedPages gets a reference to the given int64 and assigns it to the AllocatedPages field.
+func (o *DiskGroupsResourceInner) SetAllocatedPages(v int64) {
 	o.AllocatedPages = &v
 }
 
@@ -375,9 +375,9 @@ func (o *DiskGroupsResourceInner) SetArrayDriveType(v string) {
 }
 
 // GetArrayDriveTypeNumeric returns the ArrayDriveTypeNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumeric() int64 {
 	if o == nil || IsNil(o.ArrayDriveTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ArrayDriveTypeNumeric
@@ -385,7 +385,7 @@ func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumeric() int32 {
 
 // GetArrayDriveTypeNumericOk returns a tuple with the ArrayDriveTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ArrayDriveTypeNumeric) {
 		return nil, false
 	}
@@ -401,15 +401,15 @@ func (o *DiskGroupsResourceInner) HasArrayDriveTypeNumeric() bool {
 	return false
 }
 
-// SetArrayDriveTypeNumeric gets a reference to the given int32 and assigns it to the ArrayDriveTypeNumeric field.
-func (o *DiskGroupsResourceInner) SetArrayDriveTypeNumeric(v int32) {
+// SetArrayDriveTypeNumeric gets a reference to the given int64 and assigns it to the ArrayDriveTypeNumeric field.
+func (o *DiskGroupsResourceInner) SetArrayDriveTypeNumeric(v int64) {
 	o.ArrayDriveTypeNumeric = &v
 }
 
 // GetAvailablePages returns the AvailablePages field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetAvailablePages() int32 {
+func (o *DiskGroupsResourceInner) GetAvailablePages() int64 {
 	if o == nil || IsNil(o.AvailablePages) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.AvailablePages
@@ -417,7 +417,7 @@ func (o *DiskGroupsResourceInner) GetAvailablePages() int32 {
 
 // GetAvailablePagesOk returns a tuple with the AvailablePages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetAvailablePagesOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetAvailablePagesOk() (*int64, bool) {
 	if o == nil || IsNil(o.AvailablePages) {
 		return nil, false
 	}
@@ -433,15 +433,15 @@ func (o *DiskGroupsResourceInner) HasAvailablePages() bool {
 	return false
 }
 
-// SetAvailablePages gets a reference to the given int32 and assigns it to the AvailablePages field.
-func (o *DiskGroupsResourceInner) SetAvailablePages(v int32) {
+// SetAvailablePages gets a reference to the given int64 and assigns it to the AvailablePages field.
+func (o *DiskGroupsResourceInner) SetAvailablePages(v int64) {
 	o.AvailablePages = &v
 }
 
 // GetBlocks returns the Blocks field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetBlocks() int32 {
+func (o *DiskGroupsResourceInner) GetBlocks() int64 {
 	if o == nil || IsNil(o.Blocks) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Blocks
@@ -449,7 +449,7 @@ func (o *DiskGroupsResourceInner) GetBlocks() int32 {
 
 // GetBlocksOk returns a tuple with the Blocks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetBlocksOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetBlocksOk() (*int64, bool) {
 	if o == nil || IsNil(o.Blocks) {
 		return nil, false
 	}
@@ -465,15 +465,15 @@ func (o *DiskGroupsResourceInner) HasBlocks() bool {
 	return false
 }
 
-// SetBlocks gets a reference to the given int32 and assigns it to the Blocks field.
-func (o *DiskGroupsResourceInner) SetBlocks(v int32) {
+// SetBlocks gets a reference to the given int64 and assigns it to the Blocks field.
+func (o *DiskGroupsResourceInner) SetBlocks(v int64) {
 	o.Blocks = &v
 }
 
 // GetBlocksize returns the Blocksize field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetBlocksize() int32 {
+func (o *DiskGroupsResourceInner) GetBlocksize() int64 {
 	if o == nil || IsNil(o.Blocksize) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Blocksize
@@ -481,7 +481,7 @@ func (o *DiskGroupsResourceInner) GetBlocksize() int32 {
 
 // GetBlocksizeOk returns a tuple with the Blocksize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetBlocksizeOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetBlocksizeOk() (*int64, bool) {
 	if o == nil || IsNil(o.Blocksize) {
 		return nil, false
 	}
@@ -497,15 +497,15 @@ func (o *DiskGroupsResourceInner) HasBlocksize() bool {
 	return false
 }
 
-// SetBlocksize gets a reference to the given int32 and assigns it to the Blocksize field.
-func (o *DiskGroupsResourceInner) SetBlocksize(v int32) {
+// SetBlocksize gets a reference to the given int64 and assigns it to the Blocksize field.
+func (o *DiskGroupsResourceInner) SetBlocksize(v int64) {
 	o.Blocksize = &v
 }
 
 // GetCacheFlushPeriod returns the CacheFlushPeriod field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetCacheFlushPeriod() int32 {
+func (o *DiskGroupsResourceInner) GetCacheFlushPeriod() int64 {
 	if o == nil || IsNil(o.CacheFlushPeriod) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CacheFlushPeriod
@@ -513,7 +513,7 @@ func (o *DiskGroupsResourceInner) GetCacheFlushPeriod() int32 {
 
 // GetCacheFlushPeriodOk returns a tuple with the CacheFlushPeriod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetCacheFlushPeriodOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetCacheFlushPeriodOk() (*int64, bool) {
 	if o == nil || IsNil(o.CacheFlushPeriod) {
 		return nil, false
 	}
@@ -529,8 +529,8 @@ func (o *DiskGroupsResourceInner) HasCacheFlushPeriod() bool {
 	return false
 }
 
-// SetCacheFlushPeriod gets a reference to the given int32 and assigns it to the CacheFlushPeriod field.
-func (o *DiskGroupsResourceInner) SetCacheFlushPeriod(v int32) {
+// SetCacheFlushPeriod gets a reference to the given int64 and assigns it to the CacheFlushPeriod field.
+func (o *DiskGroupsResourceInner) SetCacheFlushPeriod(v int64) {
 	o.CacheFlushPeriod = &v
 }
 
@@ -567,9 +567,9 @@ func (o *DiskGroupsResourceInner) SetCacheReadAhead(v string) {
 }
 
 // GetCacheReadAheadNumeric returns the CacheReadAheadNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetCacheReadAheadNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetCacheReadAheadNumeric() int64 {
 	if o == nil || IsNil(o.CacheReadAheadNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CacheReadAheadNumeric
@@ -577,7 +577,7 @@ func (o *DiskGroupsResourceInner) GetCacheReadAheadNumeric() int32 {
 
 // GetCacheReadAheadNumericOk returns a tuple with the CacheReadAheadNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetCacheReadAheadNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetCacheReadAheadNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CacheReadAheadNumeric) {
 		return nil, false
 	}
@@ -593,8 +593,8 @@ func (o *DiskGroupsResourceInner) HasCacheReadAheadNumeric() bool {
 	return false
 }
 
-// SetCacheReadAheadNumeric gets a reference to the given int32 and assigns it to the CacheReadAheadNumeric field.
-func (o *DiskGroupsResourceInner) SetCacheReadAheadNumeric(v int32) {
+// SetCacheReadAheadNumeric gets a reference to the given int64 and assigns it to the CacheReadAheadNumeric field.
+func (o *DiskGroupsResourceInner) SetCacheReadAheadNumeric(v int64) {
 	o.CacheReadAheadNumeric = &v
 }
 
@@ -663,9 +663,9 @@ func (o *DiskGroupsResourceInner) SetCreateDate(v string) {
 }
 
 // GetCreateDateNumeric returns the CreateDateNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetCreateDateNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetCreateDateNumeric() int64 {
 	if o == nil || IsNil(o.CreateDateNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CreateDateNumeric
@@ -673,7 +673,7 @@ func (o *DiskGroupsResourceInner) GetCreateDateNumeric() int32 {
 
 // GetCreateDateNumericOk returns a tuple with the CreateDateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetCreateDateNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetCreateDateNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CreateDateNumeric) {
 		return nil, false
 	}
@@ -689,8 +689,8 @@ func (o *DiskGroupsResourceInner) HasCreateDateNumeric() bool {
 	return false
 }
 
-// SetCreateDateNumeric gets a reference to the given int32 and assigns it to the CreateDateNumeric field.
-func (o *DiskGroupsResourceInner) SetCreateDateNumeric(v int32) {
+// SetCreateDateNumeric gets a reference to the given int64 and assigns it to the CreateDateNumeric field.
+func (o *DiskGroupsResourceInner) SetCreateDateNumeric(v int64) {
 	o.CreateDateNumeric = &v
 }
 
@@ -727,9 +727,9 @@ func (o *DiskGroupsResourceInner) SetCriticalCapacity(v string) {
 }
 
 // GetCriticalCapacityNumeric returns the CriticalCapacityNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetCriticalCapacityNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetCriticalCapacityNumeric() int64 {
 	if o == nil || IsNil(o.CriticalCapacityNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CriticalCapacityNumeric
@@ -737,7 +737,7 @@ func (o *DiskGroupsResourceInner) GetCriticalCapacityNumeric() int32 {
 
 // GetCriticalCapacityNumericOk returns a tuple with the CriticalCapacityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetCriticalCapacityNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetCriticalCapacityNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CriticalCapacityNumeric) {
 		return nil, false
 	}
@@ -753,8 +753,8 @@ func (o *DiskGroupsResourceInner) HasCriticalCapacityNumeric() bool {
 	return false
 }
 
-// SetCriticalCapacityNumeric gets a reference to the given int32 and assigns it to the CriticalCapacityNumeric field.
-func (o *DiskGroupsResourceInner) SetCriticalCapacityNumeric(v int32) {
+// SetCriticalCapacityNumeric gets a reference to the given int64 and assigns it to the CriticalCapacityNumeric field.
+func (o *DiskGroupsResourceInner) SetCriticalCapacityNumeric(v int64) {
 	o.CriticalCapacityNumeric = &v
 }
 
@@ -823,9 +823,9 @@ func (o *DiskGroupsResourceInner) SetCurrentJobCompletion(v string) {
 }
 
 // GetCurrentJobNumeric returns the CurrentJobNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetCurrentJobNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetCurrentJobNumeric() int64 {
 	if o == nil || IsNil(o.CurrentJobNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CurrentJobNumeric
@@ -833,7 +833,7 @@ func (o *DiskGroupsResourceInner) GetCurrentJobNumeric() int32 {
 
 // GetCurrentJobNumericOk returns a tuple with the CurrentJobNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetCurrentJobNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetCurrentJobNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CurrentJobNumeric) {
 		return nil, false
 	}
@@ -849,8 +849,8 @@ func (o *DiskGroupsResourceInner) HasCurrentJobNumeric() bool {
 	return false
 }
 
-// SetCurrentJobNumeric gets a reference to the given int32 and assigns it to the CurrentJobNumeric field.
-func (o *DiskGroupsResourceInner) SetCurrentJobNumeric(v int32) {
+// SetCurrentJobNumeric gets a reference to the given int64 and assigns it to the CurrentJobNumeric field.
+func (o *DiskGroupsResourceInner) SetCurrentJobNumeric(v int64) {
 	o.CurrentJobNumeric = &v
 }
 
@@ -887,9 +887,9 @@ func (o *DiskGroupsResourceInner) SetDegradedCapacity(v string) {
 }
 
 // GetDegradedCapacityNumeric returns the DegradedCapacityNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetDegradedCapacityNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetDegradedCapacityNumeric() int64 {
 	if o == nil || IsNil(o.DegradedCapacityNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.DegradedCapacityNumeric
@@ -897,7 +897,7 @@ func (o *DiskGroupsResourceInner) GetDegradedCapacityNumeric() int32 {
 
 // GetDegradedCapacityNumericOk returns a tuple with the DegradedCapacityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetDegradedCapacityNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetDegradedCapacityNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.DegradedCapacityNumeric) {
 		return nil, false
 	}
@@ -913,8 +913,8 @@ func (o *DiskGroupsResourceInner) HasDegradedCapacityNumeric() bool {
 	return false
 }
 
-// SetDegradedCapacityNumeric gets a reference to the given int32 and assigns it to the DegradedCapacityNumeric field.
-func (o *DiskGroupsResourceInner) SetDegradedCapacityNumeric(v int32) {
+// SetDegradedCapacityNumeric gets a reference to the given int64 and assigns it to the DegradedCapacityNumeric field.
+func (o *DiskGroupsResourceInner) SetDegradedCapacityNumeric(v int64) {
 	o.DegradedCapacityNumeric = &v
 }
 
@@ -951,9 +951,9 @@ func (o *DiskGroupsResourceInner) SetDiskDescription(v string) {
 }
 
 // GetDiskDescriptionNumeric returns the DiskDescriptionNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetDiskDescriptionNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetDiskDescriptionNumeric() int64 {
 	if o == nil || IsNil(o.DiskDescriptionNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.DiskDescriptionNumeric
@@ -961,7 +961,7 @@ func (o *DiskGroupsResourceInner) GetDiskDescriptionNumeric() int32 {
 
 // GetDiskDescriptionNumericOk returns a tuple with the DiskDescriptionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetDiskDescriptionNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetDiskDescriptionNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.DiskDescriptionNumeric) {
 		return nil, false
 	}
@@ -977,15 +977,15 @@ func (o *DiskGroupsResourceInner) HasDiskDescriptionNumeric() bool {
 	return false
 }
 
-// SetDiskDescriptionNumeric gets a reference to the given int32 and assigns it to the DiskDescriptionNumeric field.
-func (o *DiskGroupsResourceInner) SetDiskDescriptionNumeric(v int32) {
+// SetDiskDescriptionNumeric gets a reference to the given int64 and assigns it to the DiskDescriptionNumeric field.
+func (o *DiskGroupsResourceInner) SetDiskDescriptionNumeric(v int64) {
 	o.DiskDescriptionNumeric = &v
 }
 
 // GetDiskDsdDelayVdisk returns the DiskDsdDelayVdisk field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdisk() int32 {
+func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdisk() int64 {
 	if o == nil || IsNil(o.DiskDsdDelayVdisk) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.DiskDsdDelayVdisk
@@ -993,7 +993,7 @@ func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdisk() int32 {
 
 // GetDiskDsdDelayVdiskOk returns a tuple with the DiskDsdDelayVdisk field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdiskOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdiskOk() (*int64, bool) {
 	if o == nil || IsNil(o.DiskDsdDelayVdisk) {
 		return nil, false
 	}
@@ -1009,8 +1009,8 @@ func (o *DiskGroupsResourceInner) HasDiskDsdDelayVdisk() bool {
 	return false
 }
 
-// SetDiskDsdDelayVdisk gets a reference to the given int32 and assigns it to the DiskDsdDelayVdisk field.
-func (o *DiskGroupsResourceInner) SetDiskDsdDelayVdisk(v int32) {
+// SetDiskDsdDelayVdisk gets a reference to the given int64 and assigns it to the DiskDsdDelayVdisk field.
+func (o *DiskGroupsResourceInner) SetDiskDsdDelayVdisk(v int64) {
 	o.DiskDsdDelayVdisk = &v
 }
 
@@ -1047,9 +1047,9 @@ func (o *DiskGroupsResourceInner) SetDiskDsdEnableVdisk(v string) {
 }
 
 // GetDiskDsdEnableVdiskNumeric returns the DiskDsdEnableVdiskNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumeric() int64 {
 	if o == nil || IsNil(o.DiskDsdEnableVdiskNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.DiskDsdEnableVdiskNumeric
@@ -1057,7 +1057,7 @@ func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumeric() int32 {
 
 // GetDiskDsdEnableVdiskNumericOk returns a tuple with the DiskDsdEnableVdiskNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.DiskDsdEnableVdiskNumeric) {
 		return nil, false
 	}
@@ -1073,15 +1073,15 @@ func (o *DiskGroupsResourceInner) HasDiskDsdEnableVdiskNumeric() bool {
 	return false
 }
 
-// SetDiskDsdEnableVdiskNumeric gets a reference to the given int32 and assigns it to the DiskDsdEnableVdiskNumeric field.
-func (o *DiskGroupsResourceInner) SetDiskDsdEnableVdiskNumeric(v int32) {
+// SetDiskDsdEnableVdiskNumeric gets a reference to the given int64 and assigns it to the DiskDsdEnableVdiskNumeric field.
+func (o *DiskGroupsResourceInner) SetDiskDsdEnableVdiskNumeric(v int64) {
 	o.DiskDsdEnableVdiskNumeric = &v
 }
 
 // GetDiskcount returns the Diskcount field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetDiskcount() int32 {
+func (o *DiskGroupsResourceInner) GetDiskcount() int64 {
 	if o == nil || IsNil(o.Diskcount) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Diskcount
@@ -1089,7 +1089,7 @@ func (o *DiskGroupsResourceInner) GetDiskcount() int32 {
 
 // GetDiskcountOk returns a tuple with the Diskcount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetDiskcountOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetDiskcountOk() (*int64, bool) {
 	if o == nil || IsNil(o.Diskcount) {
 		return nil, false
 	}
@@ -1105,15 +1105,15 @@ func (o *DiskGroupsResourceInner) HasDiskcount() bool {
 	return false
 }
 
-// SetDiskcount gets a reference to the given int32 and assigns it to the Diskcount field.
-func (o *DiskGroupsResourceInner) SetDiskcount(v int32) {
+// SetDiskcount gets a reference to the given int64 and assigns it to the Diskcount field.
+func (o *DiskGroupsResourceInner) SetDiskcount(v int64) {
 	o.Diskcount = &v
 }
 
 // GetExtendedStatus returns the ExtendedStatus field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetExtendedStatus() int32 {
+func (o *DiskGroupsResourceInner) GetExtendedStatus() int64 {
 	if o == nil || IsNil(o.ExtendedStatus) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ExtendedStatus
@@ -1121,7 +1121,7 @@ func (o *DiskGroupsResourceInner) GetExtendedStatus() int32 {
 
 // GetExtendedStatusOk returns a tuple with the ExtendedStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetExtendedStatusOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetExtendedStatusOk() (*int64, bool) {
 	if o == nil || IsNil(o.ExtendedStatus) {
 		return nil, false
 	}
@@ -1137,8 +1137,8 @@ func (o *DiskGroupsResourceInner) HasExtendedStatus() bool {
 	return false
 }
 
-// SetExtendedStatus gets a reference to the given int32 and assigns it to the ExtendedStatus field.
-func (o *DiskGroupsResourceInner) SetExtendedStatus(v int32) {
+// SetExtendedStatus gets a reference to the given int64 and assigns it to the ExtendedStatus field.
+func (o *DiskGroupsResourceInner) SetExtendedStatus(v int64) {
 	o.ExtendedStatus = &v
 }
 
@@ -1175,9 +1175,9 @@ func (o *DiskGroupsResourceInner) SetFreespace(v string) {
 }
 
 // GetFreespaceNumeric returns the FreespaceNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetFreespaceNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetFreespaceNumeric() int64 {
 	if o == nil || IsNil(o.FreespaceNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.FreespaceNumeric
@@ -1185,7 +1185,7 @@ func (o *DiskGroupsResourceInner) GetFreespaceNumeric() int32 {
 
 // GetFreespaceNumericOk returns a tuple with the FreespaceNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetFreespaceNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetFreespaceNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.FreespaceNumeric) {
 		return nil, false
 	}
@@ -1201,8 +1201,8 @@ func (o *DiskGroupsResourceInner) HasFreespaceNumeric() bool {
 	return false
 }
 
-// SetFreespaceNumeric gets a reference to the given int32 and assigns it to the FreespaceNumeric field.
-func (o *DiskGroupsResourceInner) SetFreespaceNumeric(v int32) {
+// SetFreespaceNumeric gets a reference to the given int64 and assigns it to the FreespaceNumeric field.
+func (o *DiskGroupsResourceInner) SetFreespaceNumeric(v int64) {
 	o.FreespaceNumeric = &v
 }
 
@@ -1239,9 +1239,9 @@ func (o *DiskGroupsResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetHealthNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HealthNumeric
@@ -1249,7 +1249,7 @@ func (o *DiskGroupsResourceInner) GetHealthNumeric() int32 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetHealthNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetHealthNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -1265,8 +1265,8 @@ func (o *DiskGroupsResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
-// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
-func (o *DiskGroupsResourceInner) SetHealthNumeric(v int32) {
+// SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
+func (o *DiskGroupsResourceInner) SetHealthNumeric(v int64) {
 	o.HealthNumeric = &v
 }
 
@@ -1303,9 +1303,9 @@ func (o *DiskGroupsResourceInner) SetHealthReason(v string) {
 }
 
 // GetHealthReasonNumeric returns the HealthReasonNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetHealthReasonNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetHealthReasonNumeric() int64 {
 	if o == nil || IsNil(o.HealthReasonNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HealthReasonNumeric
@@ -1313,7 +1313,7 @@ func (o *DiskGroupsResourceInner) GetHealthReasonNumeric() int32 {
 
 // GetHealthReasonNumericOk returns a tuple with the HealthReasonNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetHealthReasonNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetHealthReasonNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HealthReasonNumeric) {
 		return nil, false
 	}
@@ -1329,8 +1329,8 @@ func (o *DiskGroupsResourceInner) HasHealthReasonNumeric() bool {
 	return false
 }
 
-// SetHealthReasonNumeric gets a reference to the given int32 and assigns it to the HealthReasonNumeric field.
-func (o *DiskGroupsResourceInner) SetHealthReasonNumeric(v int32) {
+// SetHealthReasonNumeric gets a reference to the given int64 and assigns it to the HealthReasonNumeric field.
+func (o *DiskGroupsResourceInner) SetHealthReasonNumeric(v int64) {
 	o.HealthReasonNumeric = &v
 }
 
@@ -1367,9 +1367,9 @@ func (o *DiskGroupsResourceInner) SetHealthRecommendation(v string) {
 }
 
 // GetHealthRecommendationNumeric returns the HealthRecommendationNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetHealthRecommendationNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetHealthRecommendationNumeric() int64 {
 	if o == nil || IsNil(o.HealthRecommendationNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HealthRecommendationNumeric
@@ -1377,7 +1377,7 @@ func (o *DiskGroupsResourceInner) GetHealthRecommendationNumeric() int32 {
 
 // GetHealthRecommendationNumericOk returns a tuple with the HealthRecommendationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetHealthRecommendationNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetHealthRecommendationNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HealthRecommendationNumeric) {
 		return nil, false
 	}
@@ -1393,15 +1393,15 @@ func (o *DiskGroupsResourceInner) HasHealthRecommendationNumeric() bool {
 	return false
 }
 
-// SetHealthRecommendationNumeric gets a reference to the given int32 and assigns it to the HealthRecommendationNumeric field.
-func (o *DiskGroupsResourceInner) SetHealthRecommendationNumeric(v int32) {
+// SetHealthRecommendationNumeric gets a reference to the given int64 and assigns it to the HealthRecommendationNumeric field.
+func (o *DiskGroupsResourceInner) SetHealthRecommendationNumeric(v int64) {
 	o.HealthRecommendationNumeric = &v
 }
 
 // GetInterleavedVolumeCount returns the InterleavedVolumeCount field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetInterleavedVolumeCount() int32 {
+func (o *DiskGroupsResourceInner) GetInterleavedVolumeCount() int64 {
 	if o == nil || IsNil(o.InterleavedVolumeCount) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.InterleavedVolumeCount
@@ -1409,7 +1409,7 @@ func (o *DiskGroupsResourceInner) GetInterleavedVolumeCount() int32 {
 
 // GetInterleavedVolumeCountOk returns a tuple with the InterleavedVolumeCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetInterleavedVolumeCountOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetInterleavedVolumeCountOk() (*int64, bool) {
 	if o == nil || IsNil(o.InterleavedVolumeCount) {
 		return nil, false
 	}
@@ -1425,8 +1425,8 @@ func (o *DiskGroupsResourceInner) HasInterleavedVolumeCount() bool {
 	return false
 }
 
-// SetInterleavedVolumeCount gets a reference to the given int32 and assigns it to the InterleavedVolumeCount field.
-func (o *DiskGroupsResourceInner) SetInterleavedVolumeCount(v int32) {
+// SetInterleavedVolumeCount gets a reference to the given int64 and assigns it to the InterleavedVolumeCount field.
+func (o *DiskGroupsResourceInner) SetInterleavedVolumeCount(v int64) {
 	o.InterleavedVolumeCount = &v
 }
 
@@ -1463,9 +1463,9 @@ func (o *DiskGroupsResourceInner) SetIsJobAutoAbortable(v string) {
 }
 
 // GetIsJobAutoAbortableNumeric returns the IsJobAutoAbortableNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumeric() int64 {
 	if o == nil || IsNil(o.IsJobAutoAbortableNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.IsJobAutoAbortableNumeric
@@ -1473,7 +1473,7 @@ func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumeric() int32 {
 
 // GetIsJobAutoAbortableNumericOk returns a tuple with the IsJobAutoAbortableNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.IsJobAutoAbortableNumeric) {
 		return nil, false
 	}
@@ -1489,8 +1489,8 @@ func (o *DiskGroupsResourceInner) HasIsJobAutoAbortableNumeric() bool {
 	return false
 }
 
-// SetIsJobAutoAbortableNumeric gets a reference to the given int32 and assigns it to the IsJobAutoAbortableNumeric field.
-func (o *DiskGroupsResourceInner) SetIsJobAutoAbortableNumeric(v int32) {
+// SetIsJobAutoAbortableNumeric gets a reference to the given int64 and assigns it to the IsJobAutoAbortableNumeric field.
+func (o *DiskGroupsResourceInner) SetIsJobAutoAbortableNumeric(v int64) {
 	o.IsJobAutoAbortableNumeric = &v
 }
 
@@ -1559,9 +1559,9 @@ func (o *DiskGroupsResourceInner) SetLargestFreePartitionSpace(v string) {
 }
 
 // GetLargestFreePartitionSpaceNumeric returns the LargestFreePartitionSpaceNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumeric() int64 {
 	if o == nil || IsNil(o.LargestFreePartitionSpaceNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.LargestFreePartitionSpaceNumeric
@@ -1569,7 +1569,7 @@ func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumeric() int32 {
 
 // GetLargestFreePartitionSpaceNumericOk returns a tuple with the LargestFreePartitionSpaceNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.LargestFreePartitionSpaceNumeric) {
 		return nil, false
 	}
@@ -1585,15 +1585,15 @@ func (o *DiskGroupsResourceInner) HasLargestFreePartitionSpaceNumeric() bool {
 	return false
 }
 
-// SetLargestFreePartitionSpaceNumeric gets a reference to the given int32 and assigns it to the LargestFreePartitionSpaceNumeric field.
-func (o *DiskGroupsResourceInner) SetLargestFreePartitionSpaceNumeric(v int32) {
+// SetLargestFreePartitionSpaceNumeric gets a reference to the given int64 and assigns it to the LargestFreePartitionSpaceNumeric field.
+func (o *DiskGroupsResourceInner) SetLargestFreePartitionSpaceNumeric(v int64) {
 	o.LargestFreePartitionSpaceNumeric = &v
 }
 
 // GetLinearVolumeBoundary returns the LinearVolumeBoundary field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetLinearVolumeBoundary() int32 {
+func (o *DiskGroupsResourceInner) GetLinearVolumeBoundary() int64 {
 	if o == nil || IsNil(o.LinearVolumeBoundary) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.LinearVolumeBoundary
@@ -1601,7 +1601,7 @@ func (o *DiskGroupsResourceInner) GetLinearVolumeBoundary() int32 {
 
 // GetLinearVolumeBoundaryOk returns a tuple with the LinearVolumeBoundary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetLinearVolumeBoundaryOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetLinearVolumeBoundaryOk() (*int64, bool) {
 	if o == nil || IsNil(o.LinearVolumeBoundary) {
 		return nil, false
 	}
@@ -1617,15 +1617,15 @@ func (o *DiskGroupsResourceInner) HasLinearVolumeBoundary() bool {
 	return false
 }
 
-// SetLinearVolumeBoundary gets a reference to the given int32 and assigns it to the LinearVolumeBoundary field.
-func (o *DiskGroupsResourceInner) SetLinearVolumeBoundary(v int32) {
+// SetLinearVolumeBoundary gets a reference to the given int64 and assigns it to the LinearVolumeBoundary field.
+func (o *DiskGroupsResourceInner) SetLinearVolumeBoundary(v int64) {
 	o.LinearVolumeBoundary = &v
 }
 
 // GetLun returns the Lun field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetLun() int32 {
+func (o *DiskGroupsResourceInner) GetLun() int64 {
 	if o == nil || IsNil(o.Lun) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Lun
@@ -1633,7 +1633,7 @@ func (o *DiskGroupsResourceInner) GetLun() int32 {
 
 // GetLunOk returns a tuple with the Lun field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetLunOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetLunOk() (*int64, bool) {
 	if o == nil || IsNil(o.Lun) {
 		return nil, false
 	}
@@ -1649,8 +1649,8 @@ func (o *DiskGroupsResourceInner) HasLun() bool {
 	return false
 }
 
-// SetLun gets a reference to the given int32 and assigns it to the Lun field.
-func (o *DiskGroupsResourceInner) SetLun(v int32) {
+// SetLun gets a reference to the given int64 and assigns it to the Lun field.
+func (o *DiskGroupsResourceInner) SetLun(v int64) {
 	o.Lun = &v
 }
 
@@ -1687,9 +1687,9 @@ func (o *DiskGroupsResourceInner) SetMetadataSize(v string) {
 }
 
 // GetMetadataSizeNumeric returns the MetadataSizeNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetMetadataSizeNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetMetadataSizeNumeric() int64 {
 	if o == nil || IsNil(o.MetadataSizeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MetadataSizeNumeric
@@ -1697,7 +1697,7 @@ func (o *DiskGroupsResourceInner) GetMetadataSizeNumeric() int32 {
 
 // GetMetadataSizeNumericOk returns a tuple with the MetadataSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetMetadataSizeNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetMetadataSizeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.MetadataSizeNumeric) {
 		return nil, false
 	}
@@ -1713,8 +1713,8 @@ func (o *DiskGroupsResourceInner) HasMetadataSizeNumeric() bool {
 	return false
 }
 
-// SetMetadataSizeNumeric gets a reference to the given int32 and assigns it to the MetadataSizeNumeric field.
-func (o *DiskGroupsResourceInner) SetMetadataSizeNumeric(v int32) {
+// SetMetadataSizeNumeric gets a reference to the given int64 and assigns it to the MetadataSizeNumeric field.
+func (o *DiskGroupsResourceInner) SetMetadataSizeNumeric(v int64) {
 	o.MetadataSizeNumeric = &v
 }
 
@@ -1751,9 +1751,9 @@ func (o *DiskGroupsResourceInner) SetMinDriveSize(v string) {
 }
 
 // GetMinDriveSizeNumeric returns the MinDriveSizeNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetMinDriveSizeNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetMinDriveSizeNumeric() int64 {
 	if o == nil || IsNil(o.MinDriveSizeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MinDriveSizeNumeric
@@ -1761,7 +1761,7 @@ func (o *DiskGroupsResourceInner) GetMinDriveSizeNumeric() int32 {
 
 // GetMinDriveSizeNumericOk returns a tuple with the MinDriveSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetMinDriveSizeNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetMinDriveSizeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.MinDriveSizeNumeric) {
 		return nil, false
 	}
@@ -1777,8 +1777,8 @@ func (o *DiskGroupsResourceInner) HasMinDriveSizeNumeric() bool {
 	return false
 }
 
-// SetMinDriveSizeNumeric gets a reference to the given int32 and assigns it to the MinDriveSizeNumeric field.
-func (o *DiskGroupsResourceInner) SetMinDriveSizeNumeric(v int32) {
+// SetMinDriveSizeNumeric gets a reference to the given int64 and assigns it to the MinDriveSizeNumeric field.
+func (o *DiskGroupsResourceInner) SetMinDriveSizeNumeric(v int64) {
 	o.MinDriveSizeNumeric = &v
 }
 
@@ -1847,9 +1847,9 @@ func (o *DiskGroupsResourceInner) SetNewPartitionLba(v string) {
 }
 
 // GetNewPartitionLbaNumeric returns the NewPartitionLbaNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumeric() int64 {
 	if o == nil || IsNil(o.NewPartitionLbaNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NewPartitionLbaNumeric
@@ -1857,7 +1857,7 @@ func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumeric() int32 {
 
 // GetNewPartitionLbaNumericOk returns a tuple with the NewPartitionLbaNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.NewPartitionLbaNumeric) {
 		return nil, false
 	}
@@ -1873,15 +1873,15 @@ func (o *DiskGroupsResourceInner) HasNewPartitionLbaNumeric() bool {
 	return false
 }
 
-// SetNewPartitionLbaNumeric gets a reference to the given int32 and assigns it to the NewPartitionLbaNumeric field.
-func (o *DiskGroupsResourceInner) SetNewPartitionLbaNumeric(v int32) {
+// SetNewPartitionLbaNumeric gets a reference to the given int64 and assigns it to the NewPartitionLbaNumeric field.
+func (o *DiskGroupsResourceInner) SetNewPartitionLbaNumeric(v int64) {
 	o.NewPartitionLbaNumeric = &v
 }
 
 // GetNumArrayPartitions returns the NumArrayPartitions field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetNumArrayPartitions() int32 {
+func (o *DiskGroupsResourceInner) GetNumArrayPartitions() int64 {
 	if o == nil || IsNil(o.NumArrayPartitions) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NumArrayPartitions
@@ -1889,7 +1889,7 @@ func (o *DiskGroupsResourceInner) GetNumArrayPartitions() int32 {
 
 // GetNumArrayPartitionsOk returns a tuple with the NumArrayPartitions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetNumArrayPartitionsOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetNumArrayPartitionsOk() (*int64, bool) {
 	if o == nil || IsNil(o.NumArrayPartitions) {
 		return nil, false
 	}
@@ -1905,15 +1905,15 @@ func (o *DiskGroupsResourceInner) HasNumArrayPartitions() bool {
 	return false
 }
 
-// SetNumArrayPartitions gets a reference to the given int32 and assigns it to the NumArrayPartitions field.
-func (o *DiskGroupsResourceInner) SetNumArrayPartitions(v int32) {
+// SetNumArrayPartitions gets a reference to the given int64 and assigns it to the NumArrayPartitions field.
+func (o *DiskGroupsResourceInner) SetNumArrayPartitions(v int64) {
 	o.NumArrayPartitions = &v
 }
 
 // GetNumDrivesPerLowLevelArray returns the NumDrivesPerLowLevelArray field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArray() int32 {
+func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArray() int64 {
 	if o == nil || IsNil(o.NumDrivesPerLowLevelArray) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NumDrivesPerLowLevelArray
@@ -1921,7 +1921,7 @@ func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArray() int32 {
 
 // GetNumDrivesPerLowLevelArrayOk returns a tuple with the NumDrivesPerLowLevelArray field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArrayOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArrayOk() (*int64, bool) {
 	if o == nil || IsNil(o.NumDrivesPerLowLevelArray) {
 		return nil, false
 	}
@@ -1937,15 +1937,15 @@ func (o *DiskGroupsResourceInner) HasNumDrivesPerLowLevelArray() bool {
 	return false
 }
 
-// SetNumDrivesPerLowLevelArray gets a reference to the given int32 and assigns it to the NumDrivesPerLowLevelArray field.
-func (o *DiskGroupsResourceInner) SetNumDrivesPerLowLevelArray(v int32) {
+// SetNumDrivesPerLowLevelArray gets a reference to the given int64 and assigns it to the NumDrivesPerLowLevelArray field.
+func (o *DiskGroupsResourceInner) SetNumDrivesPerLowLevelArray(v int64) {
 	o.NumDrivesPerLowLevelArray = &v
 }
 
 // GetNumExpansionPartitions returns the NumExpansionPartitions field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetNumExpansionPartitions() int32 {
+func (o *DiskGroupsResourceInner) GetNumExpansionPartitions() int64 {
 	if o == nil || IsNil(o.NumExpansionPartitions) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NumExpansionPartitions
@@ -1953,7 +1953,7 @@ func (o *DiskGroupsResourceInner) GetNumExpansionPartitions() int32 {
 
 // GetNumExpansionPartitionsOk returns a tuple with the NumExpansionPartitions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetNumExpansionPartitionsOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetNumExpansionPartitionsOk() (*int64, bool) {
 	if o == nil || IsNil(o.NumExpansionPartitions) {
 		return nil, false
 	}
@@ -1969,15 +1969,15 @@ func (o *DiskGroupsResourceInner) HasNumExpansionPartitions() bool {
 	return false
 }
 
-// SetNumExpansionPartitions gets a reference to the given int32 and assigns it to the NumExpansionPartitions field.
-func (o *DiskGroupsResourceInner) SetNumExpansionPartitions(v int32) {
+// SetNumExpansionPartitions gets a reference to the given int64 and assigns it to the NumExpansionPartitions field.
+func (o *DiskGroupsResourceInner) SetNumExpansionPartitions(v int64) {
 	o.NumExpansionPartitions = &v
 }
 
 // GetNumPartitionSegments returns the NumPartitionSegments field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetNumPartitionSegments() int32 {
+func (o *DiskGroupsResourceInner) GetNumPartitionSegments() int64 {
 	if o == nil || IsNil(o.NumPartitionSegments) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NumPartitionSegments
@@ -1985,7 +1985,7 @@ func (o *DiskGroupsResourceInner) GetNumPartitionSegments() int32 {
 
 // GetNumPartitionSegmentsOk returns a tuple with the NumPartitionSegments field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetNumPartitionSegmentsOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetNumPartitionSegmentsOk() (*int64, bool) {
 	if o == nil || IsNil(o.NumPartitionSegments) {
 		return nil, false
 	}
@@ -2001,8 +2001,8 @@ func (o *DiskGroupsResourceInner) HasNumPartitionSegments() bool {
 	return false
 }
 
-// SetNumPartitionSegments gets a reference to the given int32 and assigns it to the NumPartitionSegments field.
-func (o *DiskGroupsResourceInner) SetNumPartitionSegments(v int32) {
+// SetNumPartitionSegments gets a reference to the given int64 and assigns it to the NumPartitionSegments field.
+func (o *DiskGroupsResourceInner) SetNumPartitionSegments(v int64) {
 	o.NumPartitionSegments = &v
 }
 
@@ -2039,9 +2039,9 @@ func (o *DiskGroupsResourceInner) SetOverhead(v string) {
 }
 
 // GetOverheadNumeric returns the OverheadNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetOverheadNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetOverheadNumeric() int64 {
 	if o == nil || IsNil(o.OverheadNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.OverheadNumeric
@@ -2049,7 +2049,7 @@ func (o *DiskGroupsResourceInner) GetOverheadNumeric() int32 {
 
 // GetOverheadNumericOk returns a tuple with the OverheadNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetOverheadNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetOverheadNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.OverheadNumeric) {
 		return nil, false
 	}
@@ -2065,8 +2065,8 @@ func (o *DiskGroupsResourceInner) HasOverheadNumeric() bool {
 	return false
 }
 
-// SetOverheadNumeric gets a reference to the given int32 and assigns it to the OverheadNumeric field.
-func (o *DiskGroupsResourceInner) SetOverheadNumeric(v int32) {
+// SetOverheadNumeric gets a reference to the given int64 and assigns it to the OverheadNumeric field.
+func (o *DiskGroupsResourceInner) SetOverheadNumeric(v int64) {
 	o.OverheadNumeric = &v
 }
 
@@ -2103,9 +2103,9 @@ func (o *DiskGroupsResourceInner) SetOwner(v string) {
 }
 
 // GetOwnerNumeric returns the OwnerNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetOwnerNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetOwnerNumeric() int64 {
 	if o == nil || IsNil(o.OwnerNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.OwnerNumeric
@@ -2113,7 +2113,7 @@ func (o *DiskGroupsResourceInner) GetOwnerNumeric() int32 {
 
 // GetOwnerNumericOk returns a tuple with the OwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetOwnerNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetOwnerNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.OwnerNumeric) {
 		return nil, false
 	}
@@ -2129,15 +2129,15 @@ func (o *DiskGroupsResourceInner) HasOwnerNumeric() bool {
 	return false
 }
 
-// SetOwnerNumeric gets a reference to the given int32 and assigns it to the OwnerNumeric field.
-func (o *DiskGroupsResourceInner) SetOwnerNumeric(v int32) {
+// SetOwnerNumeric gets a reference to the given int64 and assigns it to the OwnerNumeric field.
+func (o *DiskGroupsResourceInner) SetOwnerNumeric(v int64) {
 	o.OwnerNumeric = &v
 }
 
 // GetPerformanceRank returns the PerformanceRank field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetPerformanceRank() int32 {
+func (o *DiskGroupsResourceInner) GetPerformanceRank() int64 {
 	if o == nil || IsNil(o.PerformanceRank) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PerformanceRank
@@ -2145,7 +2145,7 @@ func (o *DiskGroupsResourceInner) GetPerformanceRank() int32 {
 
 // GetPerformanceRankOk returns a tuple with the PerformanceRank field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetPerformanceRankOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetPerformanceRankOk() (*int64, bool) {
 	if o == nil || IsNil(o.PerformanceRank) {
 		return nil, false
 	}
@@ -2161,8 +2161,8 @@ func (o *DiskGroupsResourceInner) HasPerformanceRank() bool {
 	return false
 }
 
-// SetPerformanceRank gets a reference to the given int32 and assigns it to the PerformanceRank field.
-func (o *DiskGroupsResourceInner) SetPerformanceRank(v int32) {
+// SetPerformanceRank gets a reference to the given int64 and assigns it to the PerformanceRank field.
+func (o *DiskGroupsResourceInner) SetPerformanceRank(v int64) {
 	o.PerformanceRank = &v
 }
 
@@ -2199,9 +2199,9 @@ func (o *DiskGroupsResourceInner) SetPool(v string) {
 }
 
 // GetPoolPercentage returns the PoolPercentage field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetPoolPercentage() int32 {
+func (o *DiskGroupsResourceInner) GetPoolPercentage() int64 {
 	if o == nil || IsNil(o.PoolPercentage) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PoolPercentage
@@ -2209,7 +2209,7 @@ func (o *DiskGroupsResourceInner) GetPoolPercentage() int32 {
 
 // GetPoolPercentageOk returns a tuple with the PoolPercentage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetPoolPercentageOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetPoolPercentageOk() (*int64, bool) {
 	if o == nil || IsNil(o.PoolPercentage) {
 		return nil, false
 	}
@@ -2225,8 +2225,8 @@ func (o *DiskGroupsResourceInner) HasPoolPercentage() bool {
 	return false
 }
 
-// SetPoolPercentage gets a reference to the given int32 and assigns it to the PoolPercentage field.
-func (o *DiskGroupsResourceInner) SetPoolPercentage(v int32) {
+// SetPoolPercentage gets a reference to the given int64 and assigns it to the PoolPercentage field.
+func (o *DiskGroupsResourceInner) SetPoolPercentage(v int64) {
 	o.PoolPercentage = &v
 }
 
@@ -2263,9 +2263,9 @@ func (o *DiskGroupsResourceInner) SetPoolSectorFormat(v string) {
 }
 
 // GetPoolSectorFormatNumeric returns the PoolSectorFormatNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumeric() int64 {
 	if o == nil || IsNil(o.PoolSectorFormatNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PoolSectorFormatNumeric
@@ -2273,7 +2273,7 @@ func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumeric() int32 {
 
 // GetPoolSectorFormatNumericOk returns a tuple with the PoolSectorFormatNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.PoolSectorFormatNumeric) {
 		return nil, false
 	}
@@ -2289,8 +2289,8 @@ func (o *DiskGroupsResourceInner) HasPoolSectorFormatNumeric() bool {
 	return false
 }
 
-// SetPoolSectorFormatNumeric gets a reference to the given int32 and assigns it to the PoolSectorFormatNumeric field.
-func (o *DiskGroupsResourceInner) SetPoolSectorFormatNumeric(v int32) {
+// SetPoolSectorFormatNumeric gets a reference to the given int64 and assigns it to the PoolSectorFormatNumeric field.
+func (o *DiskGroupsResourceInner) SetPoolSectorFormatNumeric(v int64) {
 	o.PoolSectorFormatNumeric = &v
 }
 
@@ -2391,9 +2391,9 @@ func (o *DiskGroupsResourceInner) SetPreferredOwner(v string) {
 }
 
 // GetPreferredOwnerNumeric returns the PreferredOwnerNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetPreferredOwnerNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetPreferredOwnerNumeric() int64 {
 	if o == nil || IsNil(o.PreferredOwnerNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PreferredOwnerNumeric
@@ -2401,7 +2401,7 @@ func (o *DiskGroupsResourceInner) GetPreferredOwnerNumeric() int32 {
 
 // GetPreferredOwnerNumericOk returns a tuple with the PreferredOwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetPreferredOwnerNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetPreferredOwnerNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.PreferredOwnerNumeric) {
 		return nil, false
 	}
@@ -2417,8 +2417,8 @@ func (o *DiskGroupsResourceInner) HasPreferredOwnerNumeric() bool {
 	return false
 }
 
-// SetPreferredOwnerNumeric gets a reference to the given int32 and assigns it to the PreferredOwnerNumeric field.
-func (o *DiskGroupsResourceInner) SetPreferredOwnerNumeric(v int32) {
+// SetPreferredOwnerNumeric gets a reference to the given int64 and assigns it to the PreferredOwnerNumeric field.
+func (o *DiskGroupsResourceInner) SetPreferredOwnerNumeric(v int64) {
 	o.PreferredOwnerNumeric = &v
 }
 
@@ -2455,9 +2455,9 @@ func (o *DiskGroupsResourceInner) SetRaidtype(v string) {
 }
 
 // GetRaidtypeNumeric returns the RaidtypeNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetRaidtypeNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetRaidtypeNumeric() int64 {
 	if o == nil || IsNil(o.RaidtypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RaidtypeNumeric
@@ -2465,7 +2465,7 @@ func (o *DiskGroupsResourceInner) GetRaidtypeNumeric() int32 {
 
 // GetRaidtypeNumericOk returns a tuple with the RaidtypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetRaidtypeNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetRaidtypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.RaidtypeNumeric) {
 		return nil, false
 	}
@@ -2481,8 +2481,8 @@ func (o *DiskGroupsResourceInner) HasRaidtypeNumeric() bool {
 	return false
 }
 
-// SetRaidtypeNumeric gets a reference to the given int32 and assigns it to the RaidtypeNumeric field.
-func (o *DiskGroupsResourceInner) SetRaidtypeNumeric(v int32) {
+// SetRaidtypeNumeric gets a reference to the given int64 and assigns it to the RaidtypeNumeric field.
+func (o *DiskGroupsResourceInner) SetRaidtypeNumeric(v int64) {
 	o.RaidtypeNumeric = &v
 }
 
@@ -2519,9 +2519,9 @@ func (o *DiskGroupsResourceInner) SetRawSize(v string) {
 }
 
 // GetRawSizeNumeric returns the RawSizeNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetRawSizeNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetRawSizeNumeric() int64 {
 	if o == nil || IsNil(o.RawSizeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RawSizeNumeric
@@ -2529,7 +2529,7 @@ func (o *DiskGroupsResourceInner) GetRawSizeNumeric() int32 {
 
 // GetRawSizeNumericOk returns a tuple with the RawSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetRawSizeNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetRawSizeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.RawSizeNumeric) {
 		return nil, false
 	}
@@ -2545,8 +2545,8 @@ func (o *DiskGroupsResourceInner) HasRawSizeNumeric() bool {
 	return false
 }
 
-// SetRawSizeNumeric gets a reference to the given int32 and assigns it to the RawSizeNumeric field.
-func (o *DiskGroupsResourceInner) SetRawSizeNumeric(v int32) {
+// SetRawSizeNumeric gets a reference to the given int64 and assigns it to the RawSizeNumeric field.
+func (o *DiskGroupsResourceInner) SetRawSizeNumeric(v int64) {
 	o.RawSizeNumeric = &v
 }
 
@@ -2583,9 +2583,9 @@ func (o *DiskGroupsResourceInner) SetReadAheadEnabled(v string) {
 }
 
 // GetReadAheadEnabledNumeric returns the ReadAheadEnabledNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumeric() int64 {
 	if o == nil || IsNil(o.ReadAheadEnabledNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ReadAheadEnabledNumeric
@@ -2593,7 +2593,7 @@ func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumeric() int32 {
 
 // GetReadAheadEnabledNumericOk returns a tuple with the ReadAheadEnabledNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ReadAheadEnabledNumeric) {
 		return nil, false
 	}
@@ -2609,15 +2609,15 @@ func (o *DiskGroupsResourceInner) HasReadAheadEnabledNumeric() bool {
 	return false
 }
 
-// SetReadAheadEnabledNumeric gets a reference to the given int32 and assigns it to the ReadAheadEnabledNumeric field.
-func (o *DiskGroupsResourceInner) SetReadAheadEnabledNumeric(v int32) {
+// SetReadAheadEnabledNumeric gets a reference to the given int64 and assigns it to the ReadAheadEnabledNumeric field.
+func (o *DiskGroupsResourceInner) SetReadAheadEnabledNumeric(v int64) {
 	o.ReadAheadEnabledNumeric = &v
 }
 
 // GetScrubDurationGoal returns the ScrubDurationGoal field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetScrubDurationGoal() int32 {
+func (o *DiskGroupsResourceInner) GetScrubDurationGoal() int64 {
 	if o == nil || IsNil(o.ScrubDurationGoal) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ScrubDurationGoal
@@ -2625,7 +2625,7 @@ func (o *DiskGroupsResourceInner) GetScrubDurationGoal() int32 {
 
 // GetScrubDurationGoalOk returns a tuple with the ScrubDurationGoal field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetScrubDurationGoalOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetScrubDurationGoalOk() (*int64, bool) {
 	if o == nil || IsNil(o.ScrubDurationGoal) {
 		return nil, false
 	}
@@ -2641,8 +2641,8 @@ func (o *DiskGroupsResourceInner) HasScrubDurationGoal() bool {
 	return false
 }
 
-// SetScrubDurationGoal gets a reference to the given int32 and assigns it to the ScrubDurationGoal field.
-func (o *DiskGroupsResourceInner) SetScrubDurationGoal(v int32) {
+// SetScrubDurationGoal gets a reference to the given int64 and assigns it to the ScrubDurationGoal field.
+func (o *DiskGroupsResourceInner) SetScrubDurationGoal(v int64) {
 	o.ScrubDurationGoal = &v
 }
 
@@ -2711,9 +2711,9 @@ func (o *DiskGroupsResourceInner) SetSize(v string) {
 }
 
 // GetSizeNumeric returns the SizeNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetSizeNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetSizeNumeric() int64 {
 	if o == nil || IsNil(o.SizeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SizeNumeric
@@ -2721,7 +2721,7 @@ func (o *DiskGroupsResourceInner) GetSizeNumeric() int32 {
 
 // GetSizeNumericOk returns a tuple with the SizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetSizeNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetSizeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.SizeNumeric) {
 		return nil, false
 	}
@@ -2737,15 +2737,15 @@ func (o *DiskGroupsResourceInner) HasSizeNumeric() bool {
 	return false
 }
 
-// SetSizeNumeric gets a reference to the given int32 and assigns it to the SizeNumeric field.
-func (o *DiskGroupsResourceInner) SetSizeNumeric(v int32) {
+// SetSizeNumeric gets a reference to the given int64 and assigns it to the SizeNumeric field.
+func (o *DiskGroupsResourceInner) SetSizeNumeric(v int64) {
 	o.SizeNumeric = &v
 }
 
 // GetSparecount returns the Sparecount field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetSparecount() int32 {
+func (o *DiskGroupsResourceInner) GetSparecount() int64 {
 	if o == nil || IsNil(o.Sparecount) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Sparecount
@@ -2753,7 +2753,7 @@ func (o *DiskGroupsResourceInner) GetSparecount() int32 {
 
 // GetSparecountOk returns a tuple with the Sparecount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetSparecountOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetSparecountOk() (*int64, bool) {
 	if o == nil || IsNil(o.Sparecount) {
 		return nil, false
 	}
@@ -2769,8 +2769,8 @@ func (o *DiskGroupsResourceInner) HasSparecount() bool {
 	return false
 }
 
-// SetSparecount gets a reference to the given int32 and assigns it to the Sparecount field.
-func (o *DiskGroupsResourceInner) SetSparecount(v int32) {
+// SetSparecount gets a reference to the given int64 and assigns it to the Sparecount field.
+func (o *DiskGroupsResourceInner) SetSparecount(v int64) {
 	o.Sparecount = &v
 }
 
@@ -2807,9 +2807,9 @@ func (o *DiskGroupsResourceInner) SetSpear(v string) {
 }
 
 // GetSpearNumeric returns the SpearNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetSpearNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetSpearNumeric() int64 {
 	if o == nil || IsNil(o.SpearNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SpearNumeric
@@ -2817,7 +2817,7 @@ func (o *DiskGroupsResourceInner) GetSpearNumeric() int32 {
 
 // GetSpearNumericOk returns a tuple with the SpearNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetSpearNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetSpearNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.SpearNumeric) {
 		return nil, false
 	}
@@ -2833,8 +2833,8 @@ func (o *DiskGroupsResourceInner) HasSpearNumeric() bool {
 	return false
 }
 
-// SetSpearNumeric gets a reference to the given int32 and assigns it to the SpearNumeric field.
-func (o *DiskGroupsResourceInner) SetSpearNumeric(v int32) {
+// SetSpearNumeric gets a reference to the given int64 and assigns it to the SpearNumeric field.
+func (o *DiskGroupsResourceInner) SetSpearNumeric(v int64) {
 	o.SpearNumeric = &v
 }
 
@@ -2871,9 +2871,9 @@ func (o *DiskGroupsResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetStatusNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StatusNumeric
@@ -2881,7 +2881,7 @@ func (o *DiskGroupsResourceInner) GetStatusNumeric() int32 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetStatusNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -2897,8 +2897,8 @@ func (o *DiskGroupsResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
-// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
-func (o *DiskGroupsResourceInner) SetStatusNumeric(v int32) {
+// SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
+func (o *DiskGroupsResourceInner) SetStatusNumeric(v int64) {
 	o.StatusNumeric = &v
 }
 
@@ -2935,9 +2935,9 @@ func (o *DiskGroupsResourceInner) SetStorageTier(v string) {
 }
 
 // GetStorageTierNumeric returns the StorageTierNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetStorageTierNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetStorageTierNumeric() int64 {
 	if o == nil || IsNil(o.StorageTierNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StorageTierNumeric
@@ -2945,7 +2945,7 @@ func (o *DiskGroupsResourceInner) GetStorageTierNumeric() int32 {
 
 // GetStorageTierNumericOk returns a tuple with the StorageTierNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetStorageTierNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetStorageTierNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StorageTierNumeric) {
 		return nil, false
 	}
@@ -2961,8 +2961,8 @@ func (o *DiskGroupsResourceInner) HasStorageTierNumeric() bool {
 	return false
 }
 
-// SetStorageTierNumeric gets a reference to the given int32 and assigns it to the StorageTierNumeric field.
-func (o *DiskGroupsResourceInner) SetStorageTierNumeric(v int32) {
+// SetStorageTierNumeric gets a reference to the given int64 and assigns it to the StorageTierNumeric field.
+func (o *DiskGroupsResourceInner) SetStorageTierNumeric(v int64) {
 	o.StorageTierNumeric = &v
 }
 
@@ -2999,9 +2999,9 @@ func (o *DiskGroupsResourceInner) SetStorageType(v string) {
 }
 
 // GetStorageTypeNumeric returns the StorageTypeNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetStorageTypeNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetStorageTypeNumeric() int64 {
 	if o == nil || IsNil(o.StorageTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StorageTypeNumeric
@@ -3009,7 +3009,7 @@ func (o *DiskGroupsResourceInner) GetStorageTypeNumeric() int32 {
 
 // GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetStorageTypeNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetStorageTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StorageTypeNumeric) {
 		return nil, false
 	}
@@ -3025,8 +3025,8 @@ func (o *DiskGroupsResourceInner) HasStorageTypeNumeric() bool {
 	return false
 }
 
-// SetStorageTypeNumeric gets a reference to the given int32 and assigns it to the StorageTypeNumeric field.
-func (o *DiskGroupsResourceInner) SetStorageTypeNumeric(v int32) {
+// SetStorageTypeNumeric gets a reference to the given int64 and assigns it to the StorageTypeNumeric field.
+func (o *DiskGroupsResourceInner) SetStorageTypeNumeric(v int64) {
 	o.StorageTypeNumeric = &v
 }
 
@@ -3063,9 +3063,9 @@ func (o *DiskGroupsResourceInner) SetStripeWidth(v string) {
 }
 
 // GetStripeWidthNumeric returns the StripeWidthNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetStripeWidthNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetStripeWidthNumeric() int64 {
 	if o == nil || IsNil(o.StripeWidthNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StripeWidthNumeric
@@ -3073,7 +3073,7 @@ func (o *DiskGroupsResourceInner) GetStripeWidthNumeric() int32 {
 
 // GetStripeWidthNumericOk returns a tuple with the StripeWidthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetStripeWidthNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetStripeWidthNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StripeWidthNumeric) {
 		return nil, false
 	}
@@ -3089,8 +3089,8 @@ func (o *DiskGroupsResourceInner) HasStripeWidthNumeric() bool {
 	return false
 }
 
-// SetStripeWidthNumeric gets a reference to the given int32 and assigns it to the StripeWidthNumeric field.
-func (o *DiskGroupsResourceInner) SetStripeWidthNumeric(v int32) {
+// SetStripeWidthNumeric gets a reference to the given int64 and assigns it to the StripeWidthNumeric field.
+func (o *DiskGroupsResourceInner) SetStripeWidthNumeric(v int64) {
 	o.StripeWidthNumeric = &v
 }
 
@@ -3127,9 +3127,9 @@ func (o *DiskGroupsResourceInner) SetTargetSpareCapacity(v string) {
 }
 
 // GetTargetSpareCapacityNumeric returns the TargetSpareCapacityNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumeric() int64 {
 	if o == nil || IsNil(o.TargetSpareCapacityNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TargetSpareCapacityNumeric
@@ -3137,7 +3137,7 @@ func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumeric() int32 {
 
 // GetTargetSpareCapacityNumericOk returns a tuple with the TargetSpareCapacityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.TargetSpareCapacityNumeric) {
 		return nil, false
 	}
@@ -3153,15 +3153,15 @@ func (o *DiskGroupsResourceInner) HasTargetSpareCapacityNumeric() bool {
 	return false
 }
 
-// SetTargetSpareCapacityNumeric gets a reference to the given int32 and assigns it to the TargetSpareCapacityNumeric field.
-func (o *DiskGroupsResourceInner) SetTargetSpareCapacityNumeric(v int32) {
+// SetTargetSpareCapacityNumeric gets a reference to the given int64 and assigns it to the TargetSpareCapacityNumeric field.
+func (o *DiskGroupsResourceInner) SetTargetSpareCapacityNumeric(v int64) {
 	o.TargetSpareCapacityNumeric = &v
 }
 
 // GetTotalPages returns the TotalPages field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetTotalPages() int32 {
+func (o *DiskGroupsResourceInner) GetTotalPages() int64 {
 	if o == nil || IsNil(o.TotalPages) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TotalPages
@@ -3169,7 +3169,7 @@ func (o *DiskGroupsResourceInner) GetTotalPages() int32 {
 
 // GetTotalPagesOk returns a tuple with the TotalPages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetTotalPagesOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetTotalPagesOk() (*int64, bool) {
 	if o == nil || IsNil(o.TotalPages) {
 		return nil, false
 	}
@@ -3185,8 +3185,8 @@ func (o *DiskGroupsResourceInner) HasTotalPages() bool {
 	return false
 }
 
-// SetTotalPages gets a reference to the given int32 and assigns it to the TotalPages field.
-func (o *DiskGroupsResourceInner) SetTotalPages(v int32) {
+// SetTotalPages gets a reference to the given int64 and assigns it to the TotalPages field.
+func (o *DiskGroupsResourceInner) SetTotalPages(v int64) {
 	o.TotalPages = &v
 }
 
@@ -3255,9 +3255,9 @@ func (o *DiskGroupsResourceInner) SetWriteBackEnabled(v string) {
 }
 
 // GetWriteBackEnabledNumeric returns the WriteBackEnabledNumeric field value if set, zero value otherwise.
-func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumeric() int32 {
+func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumeric() int64 {
 	if o == nil || IsNil(o.WriteBackEnabledNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.WriteBackEnabledNumeric
@@ -3265,7 +3265,7 @@ func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumeric() int32 {
 
 // GetWriteBackEnabledNumericOk returns a tuple with the WriteBackEnabledNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumericOk() (*int32, bool) {
+func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.WriteBackEnabledNumeric) {
 		return nil, false
 	}
@@ -3281,8 +3281,8 @@ func (o *DiskGroupsResourceInner) HasWriteBackEnabledNumeric() bool {
 	return false
 }
 
-// SetWriteBackEnabledNumeric gets a reference to the given int32 and assigns it to the WriteBackEnabledNumeric field.
-func (o *DiskGroupsResourceInner) SetWriteBackEnabledNumeric(v int32) {
+// SetWriteBackEnabledNumeric gets a reference to the given int64 and assigns it to the WriteBackEnabledNumeric field.
+func (o *DiskGroupsResourceInner) SetWriteBackEnabledNumeric(v int64) {
 	o.WriteBackEnabledNumeric = &v
 }
 

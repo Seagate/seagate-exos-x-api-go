@@ -24,12 +24,12 @@ type EnclosuresResourceInner struct {
 	// IOM Board model
 	BoardModel *string `json:"board-model,omitempty"`
 	// IOM Board model( In numeric form )
-	BoardModelNumeric       *int32  `json:"board-model-numeric,omitempty"`
-	Columns                 *int32  `json:"columns,omitempty"`
+	BoardModelNumeric       *int64  `json:"board-model-numeric,omitempty"`
+	Columns                 *int64  `json:"columns,omitempty"`
 	DashLevel               *string `json:"dash-level,omitempty"`
 	Description             *string `json:"description,omitempty"`
 	DriveOrientation        *string `json:"drive-orientation,omitempty"`
-	DriveOrientationNumeric *int32  `json:"drive-orientation-numeric,omitempty"`
+	DriveOrientationNumeric *int64  `json:"drive-orientation-numeric,omitempty"`
 	DurableId               *string `json:"durable-id,omitempty"`
 	EmpA                    *string `json:"emp-a,omitempty"`
 	EmpABusid               *string `json:"emp-a-busid,omitempty"`
@@ -44,8 +44,8 @@ type EnclosuresResourceInner struct {
 	EmpBRev                     *string `json:"emp-b-rev,omitempty"`
 	EmpBTargetid                *string `json:"emp-b-targetid,omitempty"`
 	EnclosureArrangement        *string `json:"enclosure-arrangement,omitempty"`
-	EnclosureArrangementNumeric *int32  `json:"enclosure-arrangement-numeric,omitempty"`
-	EnclosureId                 *int32  `json:"enclosure-id,omitempty"`
+	EnclosureArrangementNumeric *int64  `json:"enclosure-arrangement-numeric,omitempty"`
+	EnclosureId                 *int64  `json:"enclosure-id,omitempty"`
 	EnclosurePower              *string `json:"enclosure-power,omitempty"`
 	// Enclosure World Wide Name
 	EnclosureWwn *string `json:"enclosure-wwn,omitempty"`
@@ -57,57 +57,57 @@ type EnclosuresResourceInner struct {
 	GemVersionA          *string `json:"gem-version-a,omitempty"`
 	GemVersionB          *string `json:"gem-version-b,omitempty"`
 	Health               *string `json:"health,omitempty"`
-	HealthNumeric        *int32  `json:"health-numeric,omitempty"`
+	HealthNumeric        *int64  `json:"health-numeric,omitempty"`
 	HealthReason         *string `json:"health-reason,omitempty"`
 	HealthRecommendation *string `json:"health-recommendation,omitempty"`
 	IomType              *string `json:"iom-type,omitempty"`
-	IomTypeNumeric       *int32  `json:"iom-type-numeric,omitempty"`
+	IomTypeNumeric       *int64  `json:"iom-type-numeric,omitempty"`
 	Location             *string `json:"location,omitempty"`
 	// Indicates whether the locator LED is on
 	LocatorLed *string `json:"locator-led,omitempty"`
 	// Indicates whether the locator LED is on( In numeric form )
-	LocatorLedNumeric *int32  `json:"locator-led-numeric,omitempty"`
+	LocatorLedNumeric *int64  `json:"locator-led-numeric,omitempty"`
 	MfgDate           *string `json:"mfg-date,omitempty"`
-	MfgDateNumeric    *int32  `json:"mfg-date-numeric,omitempty"`
+	MfgDateNumeric    *int64  `json:"mfg-date-numeric,omitempty"`
 	MfgLocation       *string `json:"mfg-location,omitempty"`
 	// Revision level of midplane
-	MidplaneRev *int32 `json:"midplane-rev,omitempty"`
+	MidplaneRev *int64 `json:"midplane-rev,omitempty"`
 	// Serial number of the enclosure
 	MidplaneSerialNumber *string `json:"midplane-serial-number,omitempty"`
 	// Type of midplane
 	MidplaneType *string `json:"midplane-type,omitempty"`
 	// Type of midplane( In numeric form )
-	MidplaneTypeNumeric *int32  `json:"midplane-type-numeric,omitempty"`
+	MidplaneTypeNumeric *int64  `json:"midplane-type-numeric,omitempty"`
 	Model               *string `json:"model,omitempty"`
 	Name                *string `json:"name,omitempty"`
 	// Number of fans in the enclosure
-	NumberOfCoolingsElements *int32 `json:"number-of-coolings-elements,omitempty"`
+	NumberOfCoolingsElements *int64 `json:"number-of-coolings-elements,omitempty"`
 	// Number of disks in the enclosure
-	NumberOfDisks *int32 `json:"number-of-disks,omitempty"`
+	NumberOfDisks *int64 `json:"number-of-disks,omitempty"`
 	// Number of power supplies in the enclosure
-	NumberOfPowerSupplies *int32  `json:"number-of-power-supplies,omitempty"`
+	NumberOfPowerSupplies *int64  `json:"number-of-power-supplies,omitempty"`
 	PartNumber            *string `json:"part-number,omitempty"`
 	// Enclosure is capable of using PCIe version 2
 	Pcie2Capable *string `json:"pcie2-capable,omitempty"`
 	// Enclosure is capable of using PCIe version 2( In numeric form )
-	Pcie2CapableNumeric *int32 `json:"pcie2-capable-numeric,omitempty"`
+	Pcie2CapableNumeric *int64 `json:"pcie2-capable-numeric,omitempty"`
 	// HW Platform Type
 	PlatformType *string `json:"platform-type,omitempty"`
 	// HW Platform Type( In numeric form )
-	PlatformTypeNumeric *int32 `json:"platform-type-numeric,omitempty"`
-	RackNumber          *int32 `json:"rack-number,omitempty"`
-	RackPosition        *int32 `json:"rack-position,omitempty"`
+	PlatformTypeNumeric *int64 `json:"platform-type-numeric,omitempty"`
+	RackNumber          *int64 `json:"rack-number,omitempty"`
+	RackPosition        *int64 `json:"rack-position,omitempty"`
 	// Current revision for this FRU
 	Revision *string `json:"revision,omitempty"`
-	Rows     *int32  `json:"rows,omitempty"`
+	Rows     *int64  `json:"rows,omitempty"`
 	// The number of disk slots in this enclosure
-	Slots         *int32  `json:"slots,omitempty"`
+	Slots         *int64  `json:"slots,omitempty"`
 	Status        *string `json:"status,omitempty"`
-	StatusNumeric *int32  `json:"status-numeric,omitempty"`
+	StatusNumeric *int64  `json:"status-numeric,omitempty"`
 	// Type of component in this enclosure
 	Type *string `json:"type,omitempty"`
 	// Type of component in this enclosure( In numeric form )
-	TypeNumeric *int32 `json:"type-numeric,omitempty"`
+	TypeNumeric *int64 `json:"type-numeric,omitempty"`
 	// The resource URL
 	Url           *string                      `json:"url,omitempty"`
 	Vendor        *string                      `json:"vendor,omitempty"`
@@ -229,9 +229,9 @@ func (o *EnclosuresResourceInner) SetBoardModel(v string) {
 }
 
 // GetBoardModelNumeric returns the BoardModelNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetBoardModelNumeric() int32 {
+func (o *EnclosuresResourceInner) GetBoardModelNumeric() int64 {
 	if o == nil || IsNil(o.BoardModelNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.BoardModelNumeric
@@ -239,7 +239,7 @@ func (o *EnclosuresResourceInner) GetBoardModelNumeric() int32 {
 
 // GetBoardModelNumericOk returns a tuple with the BoardModelNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetBoardModelNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetBoardModelNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.BoardModelNumeric) {
 		return nil, false
 	}
@@ -255,15 +255,15 @@ func (o *EnclosuresResourceInner) HasBoardModelNumeric() bool {
 	return false
 }
 
-// SetBoardModelNumeric gets a reference to the given int32 and assigns it to the BoardModelNumeric field.
-func (o *EnclosuresResourceInner) SetBoardModelNumeric(v int32) {
+// SetBoardModelNumeric gets a reference to the given int64 and assigns it to the BoardModelNumeric field.
+func (o *EnclosuresResourceInner) SetBoardModelNumeric(v int64) {
 	o.BoardModelNumeric = &v
 }
 
 // GetColumns returns the Columns field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetColumns() int32 {
+func (o *EnclosuresResourceInner) GetColumns() int64 {
 	if o == nil || IsNil(o.Columns) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Columns
@@ -271,7 +271,7 @@ func (o *EnclosuresResourceInner) GetColumns() int32 {
 
 // GetColumnsOk returns a tuple with the Columns field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetColumnsOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetColumnsOk() (*int64, bool) {
 	if o == nil || IsNil(o.Columns) {
 		return nil, false
 	}
@@ -287,8 +287,8 @@ func (o *EnclosuresResourceInner) HasColumns() bool {
 	return false
 }
 
-// SetColumns gets a reference to the given int32 and assigns it to the Columns field.
-func (o *EnclosuresResourceInner) SetColumns(v int32) {
+// SetColumns gets a reference to the given int64 and assigns it to the Columns field.
+func (o *EnclosuresResourceInner) SetColumns(v int64) {
 	o.Columns = &v
 }
 
@@ -389,9 +389,9 @@ func (o *EnclosuresResourceInner) SetDriveOrientation(v string) {
 }
 
 // GetDriveOrientationNumeric returns the DriveOrientationNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int32 {
+func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int64 {
 	if o == nil || IsNil(o.DriveOrientationNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.DriveOrientationNumeric
@@ -399,7 +399,7 @@ func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int32 {
 
 // GetDriveOrientationNumericOk returns a tuple with the DriveOrientationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetDriveOrientationNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetDriveOrientationNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.DriveOrientationNumeric) {
 		return nil, false
 	}
@@ -415,8 +415,8 @@ func (o *EnclosuresResourceInner) HasDriveOrientationNumeric() bool {
 	return false
 }
 
-// SetDriveOrientationNumeric gets a reference to the given int32 and assigns it to the DriveOrientationNumeric field.
-func (o *EnclosuresResourceInner) SetDriveOrientationNumeric(v int32) {
+// SetDriveOrientationNumeric gets a reference to the given int64 and assigns it to the DriveOrientationNumeric field.
+func (o *EnclosuresResourceInner) SetDriveOrientationNumeric(v int64) {
 	o.DriveOrientationNumeric = &v
 }
 
@@ -805,9 +805,9 @@ func (o *EnclosuresResourceInner) SetEnclosureArrangement(v string) {
 }
 
 // GetEnclosureArrangementNumeric returns the EnclosureArrangementNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int32 {
+func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int64 {
 	if o == nil || IsNil(o.EnclosureArrangementNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.EnclosureArrangementNumeric
@@ -815,7 +815,7 @@ func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int32 {
 
 // GetEnclosureArrangementNumericOk returns a tuple with the EnclosureArrangementNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetEnclosureArrangementNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetEnclosureArrangementNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.EnclosureArrangementNumeric) {
 		return nil, false
 	}
@@ -831,15 +831,15 @@ func (o *EnclosuresResourceInner) HasEnclosureArrangementNumeric() bool {
 	return false
 }
 
-// SetEnclosureArrangementNumeric gets a reference to the given int32 and assigns it to the EnclosureArrangementNumeric field.
-func (o *EnclosuresResourceInner) SetEnclosureArrangementNumeric(v int32) {
+// SetEnclosureArrangementNumeric gets a reference to the given int64 and assigns it to the EnclosureArrangementNumeric field.
+func (o *EnclosuresResourceInner) SetEnclosureArrangementNumeric(v int64) {
 	o.EnclosureArrangementNumeric = &v
 }
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetEnclosureId() int32 {
+func (o *EnclosuresResourceInner) GetEnclosureId() int64 {
 	if o == nil || IsNil(o.EnclosureId) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.EnclosureId
@@ -847,7 +847,7 @@ func (o *EnclosuresResourceInner) GetEnclosureId() int32 {
 
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetEnclosureIdOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetEnclosureIdOk() (*int64, bool) {
 	if o == nil || IsNil(o.EnclosureId) {
 		return nil, false
 	}
@@ -863,8 +863,8 @@ func (o *EnclosuresResourceInner) HasEnclosureId() bool {
 	return false
 }
 
-// SetEnclosureId gets a reference to the given int32 and assigns it to the EnclosureId field.
-func (o *EnclosuresResourceInner) SetEnclosureId(v int32) {
+// SetEnclosureId gets a reference to the given int64 and assigns it to the EnclosureId field.
+func (o *EnclosuresResourceInner) SetEnclosureId(v int64) {
 	o.EnclosureId = &v
 }
 
@@ -1157,9 +1157,9 @@ func (o *EnclosuresResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetHealthNumeric() int32 {
+func (o *EnclosuresResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HealthNumeric
@@ -1167,7 +1167,7 @@ func (o *EnclosuresResourceInner) GetHealthNumeric() int32 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetHealthNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetHealthNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -1183,8 +1183,8 @@ func (o *EnclosuresResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
-// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
-func (o *EnclosuresResourceInner) SetHealthNumeric(v int32) {
+// SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
+func (o *EnclosuresResourceInner) SetHealthNumeric(v int64) {
 	o.HealthNumeric = &v
 }
 
@@ -1285,9 +1285,9 @@ func (o *EnclosuresResourceInner) SetIomType(v string) {
 }
 
 // GetIomTypeNumeric returns the IomTypeNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetIomTypeNumeric() int32 {
+func (o *EnclosuresResourceInner) GetIomTypeNumeric() int64 {
 	if o == nil || IsNil(o.IomTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.IomTypeNumeric
@@ -1295,7 +1295,7 @@ func (o *EnclosuresResourceInner) GetIomTypeNumeric() int32 {
 
 // GetIomTypeNumericOk returns a tuple with the IomTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetIomTypeNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetIomTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.IomTypeNumeric) {
 		return nil, false
 	}
@@ -1311,8 +1311,8 @@ func (o *EnclosuresResourceInner) HasIomTypeNumeric() bool {
 	return false
 }
 
-// SetIomTypeNumeric gets a reference to the given int32 and assigns it to the IomTypeNumeric field.
-func (o *EnclosuresResourceInner) SetIomTypeNumeric(v int32) {
+// SetIomTypeNumeric gets a reference to the given int64 and assigns it to the IomTypeNumeric field.
+func (o *EnclosuresResourceInner) SetIomTypeNumeric(v int64) {
 	o.IomTypeNumeric = &v
 }
 
@@ -1381,9 +1381,9 @@ func (o *EnclosuresResourceInner) SetLocatorLed(v string) {
 }
 
 // GetLocatorLedNumeric returns the LocatorLedNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int32 {
+func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int64 {
 	if o == nil || IsNil(o.LocatorLedNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.LocatorLedNumeric
@@ -1391,7 +1391,7 @@ func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int32 {
 
 // GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetLocatorLedNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetLocatorLedNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.LocatorLedNumeric) {
 		return nil, false
 	}
@@ -1407,8 +1407,8 @@ func (o *EnclosuresResourceInner) HasLocatorLedNumeric() bool {
 	return false
 }
 
-// SetLocatorLedNumeric gets a reference to the given int32 and assigns it to the LocatorLedNumeric field.
-func (o *EnclosuresResourceInner) SetLocatorLedNumeric(v int32) {
+// SetLocatorLedNumeric gets a reference to the given int64 and assigns it to the LocatorLedNumeric field.
+func (o *EnclosuresResourceInner) SetLocatorLedNumeric(v int64) {
 	o.LocatorLedNumeric = &v
 }
 
@@ -1445,9 +1445,9 @@ func (o *EnclosuresResourceInner) SetMfgDate(v string) {
 }
 
 // GetMfgDateNumeric returns the MfgDateNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetMfgDateNumeric() int32 {
+func (o *EnclosuresResourceInner) GetMfgDateNumeric() int64 {
 	if o == nil || IsNil(o.MfgDateNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MfgDateNumeric
@@ -1455,7 +1455,7 @@ func (o *EnclosuresResourceInner) GetMfgDateNumeric() int32 {
 
 // GetMfgDateNumericOk returns a tuple with the MfgDateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetMfgDateNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetMfgDateNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.MfgDateNumeric) {
 		return nil, false
 	}
@@ -1471,8 +1471,8 @@ func (o *EnclosuresResourceInner) HasMfgDateNumeric() bool {
 	return false
 }
 
-// SetMfgDateNumeric gets a reference to the given int32 and assigns it to the MfgDateNumeric field.
-func (o *EnclosuresResourceInner) SetMfgDateNumeric(v int32) {
+// SetMfgDateNumeric gets a reference to the given int64 and assigns it to the MfgDateNumeric field.
+func (o *EnclosuresResourceInner) SetMfgDateNumeric(v int64) {
 	o.MfgDateNumeric = &v
 }
 
@@ -1509,9 +1509,9 @@ func (o *EnclosuresResourceInner) SetMfgLocation(v string) {
 }
 
 // GetMidplaneRev returns the MidplaneRev field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetMidplaneRev() int32 {
+func (o *EnclosuresResourceInner) GetMidplaneRev() int64 {
 	if o == nil || IsNil(o.MidplaneRev) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MidplaneRev
@@ -1519,7 +1519,7 @@ func (o *EnclosuresResourceInner) GetMidplaneRev() int32 {
 
 // GetMidplaneRevOk returns a tuple with the MidplaneRev field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetMidplaneRevOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetMidplaneRevOk() (*int64, bool) {
 	if o == nil || IsNil(o.MidplaneRev) {
 		return nil, false
 	}
@@ -1535,8 +1535,8 @@ func (o *EnclosuresResourceInner) HasMidplaneRev() bool {
 	return false
 }
 
-// SetMidplaneRev gets a reference to the given int32 and assigns it to the MidplaneRev field.
-func (o *EnclosuresResourceInner) SetMidplaneRev(v int32) {
+// SetMidplaneRev gets a reference to the given int64 and assigns it to the MidplaneRev field.
+func (o *EnclosuresResourceInner) SetMidplaneRev(v int64) {
 	o.MidplaneRev = &v
 }
 
@@ -1605,9 +1605,9 @@ func (o *EnclosuresResourceInner) SetMidplaneType(v string) {
 }
 
 // GetMidplaneTypeNumeric returns the MidplaneTypeNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int32 {
+func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int64 {
 	if o == nil || IsNil(o.MidplaneTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MidplaneTypeNumeric
@@ -1615,7 +1615,7 @@ func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int32 {
 
 // GetMidplaneTypeNumericOk returns a tuple with the MidplaneTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetMidplaneTypeNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetMidplaneTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.MidplaneTypeNumeric) {
 		return nil, false
 	}
@@ -1631,8 +1631,8 @@ func (o *EnclosuresResourceInner) HasMidplaneTypeNumeric() bool {
 	return false
 }
 
-// SetMidplaneTypeNumeric gets a reference to the given int32 and assigns it to the MidplaneTypeNumeric field.
-func (o *EnclosuresResourceInner) SetMidplaneTypeNumeric(v int32) {
+// SetMidplaneTypeNumeric gets a reference to the given int64 and assigns it to the MidplaneTypeNumeric field.
+func (o *EnclosuresResourceInner) SetMidplaneTypeNumeric(v int64) {
 	o.MidplaneTypeNumeric = &v
 }
 
@@ -1701,9 +1701,9 @@ func (o *EnclosuresResourceInner) SetName(v string) {
 }
 
 // GetNumberOfCoolingsElements returns the NumberOfCoolingsElements field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int32 {
+func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int64 {
 	if o == nil || IsNil(o.NumberOfCoolingsElements) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NumberOfCoolingsElements
@@ -1711,7 +1711,7 @@ func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int32 {
 
 // GetNumberOfCoolingsElementsOk returns a tuple with the NumberOfCoolingsElements field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetNumberOfCoolingsElementsOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetNumberOfCoolingsElementsOk() (*int64, bool) {
 	if o == nil || IsNil(o.NumberOfCoolingsElements) {
 		return nil, false
 	}
@@ -1727,15 +1727,15 @@ func (o *EnclosuresResourceInner) HasNumberOfCoolingsElements() bool {
 	return false
 }
 
-// SetNumberOfCoolingsElements gets a reference to the given int32 and assigns it to the NumberOfCoolingsElements field.
-func (o *EnclosuresResourceInner) SetNumberOfCoolingsElements(v int32) {
+// SetNumberOfCoolingsElements gets a reference to the given int64 and assigns it to the NumberOfCoolingsElements field.
+func (o *EnclosuresResourceInner) SetNumberOfCoolingsElements(v int64) {
 	o.NumberOfCoolingsElements = &v
 }
 
 // GetNumberOfDisks returns the NumberOfDisks field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetNumberOfDisks() int32 {
+func (o *EnclosuresResourceInner) GetNumberOfDisks() int64 {
 	if o == nil || IsNil(o.NumberOfDisks) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NumberOfDisks
@@ -1743,7 +1743,7 @@ func (o *EnclosuresResourceInner) GetNumberOfDisks() int32 {
 
 // GetNumberOfDisksOk returns a tuple with the NumberOfDisks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetNumberOfDisksOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetNumberOfDisksOk() (*int64, bool) {
 	if o == nil || IsNil(o.NumberOfDisks) {
 		return nil, false
 	}
@@ -1759,15 +1759,15 @@ func (o *EnclosuresResourceInner) HasNumberOfDisks() bool {
 	return false
 }
 
-// SetNumberOfDisks gets a reference to the given int32 and assigns it to the NumberOfDisks field.
-func (o *EnclosuresResourceInner) SetNumberOfDisks(v int32) {
+// SetNumberOfDisks gets a reference to the given int64 and assigns it to the NumberOfDisks field.
+func (o *EnclosuresResourceInner) SetNumberOfDisks(v int64) {
 	o.NumberOfDisks = &v
 }
 
 // GetNumberOfPowerSupplies returns the NumberOfPowerSupplies field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int32 {
+func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int64 {
 	if o == nil || IsNil(o.NumberOfPowerSupplies) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NumberOfPowerSupplies
@@ -1775,7 +1775,7 @@ func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int32 {
 
 // GetNumberOfPowerSuppliesOk returns a tuple with the NumberOfPowerSupplies field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetNumberOfPowerSuppliesOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetNumberOfPowerSuppliesOk() (*int64, bool) {
 	if o == nil || IsNil(o.NumberOfPowerSupplies) {
 		return nil, false
 	}
@@ -1791,8 +1791,8 @@ func (o *EnclosuresResourceInner) HasNumberOfPowerSupplies() bool {
 	return false
 }
 
-// SetNumberOfPowerSupplies gets a reference to the given int32 and assigns it to the NumberOfPowerSupplies field.
-func (o *EnclosuresResourceInner) SetNumberOfPowerSupplies(v int32) {
+// SetNumberOfPowerSupplies gets a reference to the given int64 and assigns it to the NumberOfPowerSupplies field.
+func (o *EnclosuresResourceInner) SetNumberOfPowerSupplies(v int64) {
 	o.NumberOfPowerSupplies = &v
 }
 
@@ -1861,9 +1861,9 @@ func (o *EnclosuresResourceInner) SetPcie2Capable(v string) {
 }
 
 // GetPcie2CapableNumeric returns the Pcie2CapableNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int32 {
+func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int64 {
 	if o == nil || IsNil(o.Pcie2CapableNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Pcie2CapableNumeric
@@ -1871,7 +1871,7 @@ func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int32 {
 
 // GetPcie2CapableNumericOk returns a tuple with the Pcie2CapableNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetPcie2CapableNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetPcie2CapableNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.Pcie2CapableNumeric) {
 		return nil, false
 	}
@@ -1887,8 +1887,8 @@ func (o *EnclosuresResourceInner) HasPcie2CapableNumeric() bool {
 	return false
 }
 
-// SetPcie2CapableNumeric gets a reference to the given int32 and assigns it to the Pcie2CapableNumeric field.
-func (o *EnclosuresResourceInner) SetPcie2CapableNumeric(v int32) {
+// SetPcie2CapableNumeric gets a reference to the given int64 and assigns it to the Pcie2CapableNumeric field.
+func (o *EnclosuresResourceInner) SetPcie2CapableNumeric(v int64) {
 	o.Pcie2CapableNumeric = &v
 }
 
@@ -1925,9 +1925,9 @@ func (o *EnclosuresResourceInner) SetPlatformType(v string) {
 }
 
 // GetPlatformTypeNumeric returns the PlatformTypeNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int32 {
+func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int64 {
 	if o == nil || IsNil(o.PlatformTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PlatformTypeNumeric
@@ -1935,7 +1935,7 @@ func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int32 {
 
 // GetPlatformTypeNumericOk returns a tuple with the PlatformTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetPlatformTypeNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetPlatformTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.PlatformTypeNumeric) {
 		return nil, false
 	}
@@ -1951,15 +1951,15 @@ func (o *EnclosuresResourceInner) HasPlatformTypeNumeric() bool {
 	return false
 }
 
-// SetPlatformTypeNumeric gets a reference to the given int32 and assigns it to the PlatformTypeNumeric field.
-func (o *EnclosuresResourceInner) SetPlatformTypeNumeric(v int32) {
+// SetPlatformTypeNumeric gets a reference to the given int64 and assigns it to the PlatformTypeNumeric field.
+func (o *EnclosuresResourceInner) SetPlatformTypeNumeric(v int64) {
 	o.PlatformTypeNumeric = &v
 }
 
 // GetRackNumber returns the RackNumber field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetRackNumber() int32 {
+func (o *EnclosuresResourceInner) GetRackNumber() int64 {
 	if o == nil || IsNil(o.RackNumber) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RackNumber
@@ -1967,7 +1967,7 @@ func (o *EnclosuresResourceInner) GetRackNumber() int32 {
 
 // GetRackNumberOk returns a tuple with the RackNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetRackNumberOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetRackNumberOk() (*int64, bool) {
 	if o == nil || IsNil(o.RackNumber) {
 		return nil, false
 	}
@@ -1983,15 +1983,15 @@ func (o *EnclosuresResourceInner) HasRackNumber() bool {
 	return false
 }
 
-// SetRackNumber gets a reference to the given int32 and assigns it to the RackNumber field.
-func (o *EnclosuresResourceInner) SetRackNumber(v int32) {
+// SetRackNumber gets a reference to the given int64 and assigns it to the RackNumber field.
+func (o *EnclosuresResourceInner) SetRackNumber(v int64) {
 	o.RackNumber = &v
 }
 
 // GetRackPosition returns the RackPosition field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetRackPosition() int32 {
+func (o *EnclosuresResourceInner) GetRackPosition() int64 {
 	if o == nil || IsNil(o.RackPosition) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RackPosition
@@ -1999,7 +1999,7 @@ func (o *EnclosuresResourceInner) GetRackPosition() int32 {
 
 // GetRackPositionOk returns a tuple with the RackPosition field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetRackPositionOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetRackPositionOk() (*int64, bool) {
 	if o == nil || IsNil(o.RackPosition) {
 		return nil, false
 	}
@@ -2015,8 +2015,8 @@ func (o *EnclosuresResourceInner) HasRackPosition() bool {
 	return false
 }
 
-// SetRackPosition gets a reference to the given int32 and assigns it to the RackPosition field.
-func (o *EnclosuresResourceInner) SetRackPosition(v int32) {
+// SetRackPosition gets a reference to the given int64 and assigns it to the RackPosition field.
+func (o *EnclosuresResourceInner) SetRackPosition(v int64) {
 	o.RackPosition = &v
 }
 
@@ -2053,9 +2053,9 @@ func (o *EnclosuresResourceInner) SetRevision(v string) {
 }
 
 // GetRows returns the Rows field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetRows() int32 {
+func (o *EnclosuresResourceInner) GetRows() int64 {
 	if o == nil || IsNil(o.Rows) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Rows
@@ -2063,7 +2063,7 @@ func (o *EnclosuresResourceInner) GetRows() int32 {
 
 // GetRowsOk returns a tuple with the Rows field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetRowsOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetRowsOk() (*int64, bool) {
 	if o == nil || IsNil(o.Rows) {
 		return nil, false
 	}
@@ -2079,15 +2079,15 @@ func (o *EnclosuresResourceInner) HasRows() bool {
 	return false
 }
 
-// SetRows gets a reference to the given int32 and assigns it to the Rows field.
-func (o *EnclosuresResourceInner) SetRows(v int32) {
+// SetRows gets a reference to the given int64 and assigns it to the Rows field.
+func (o *EnclosuresResourceInner) SetRows(v int64) {
 	o.Rows = &v
 }
 
 // GetSlots returns the Slots field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetSlots() int32 {
+func (o *EnclosuresResourceInner) GetSlots() int64 {
 	if o == nil || IsNil(o.Slots) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Slots
@@ -2095,7 +2095,7 @@ func (o *EnclosuresResourceInner) GetSlots() int32 {
 
 // GetSlotsOk returns a tuple with the Slots field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetSlotsOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetSlotsOk() (*int64, bool) {
 	if o == nil || IsNil(o.Slots) {
 		return nil, false
 	}
@@ -2111,8 +2111,8 @@ func (o *EnclosuresResourceInner) HasSlots() bool {
 	return false
 }
 
-// SetSlots gets a reference to the given int32 and assigns it to the Slots field.
-func (o *EnclosuresResourceInner) SetSlots(v int32) {
+// SetSlots gets a reference to the given int64 and assigns it to the Slots field.
+func (o *EnclosuresResourceInner) SetSlots(v int64) {
 	o.Slots = &v
 }
 
@@ -2149,9 +2149,9 @@ func (o *EnclosuresResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetStatusNumeric() int32 {
+func (o *EnclosuresResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StatusNumeric
@@ -2159,7 +2159,7 @@ func (o *EnclosuresResourceInner) GetStatusNumeric() int32 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetStatusNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -2175,8 +2175,8 @@ func (o *EnclosuresResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
-// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
-func (o *EnclosuresResourceInner) SetStatusNumeric(v int32) {
+// SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
+func (o *EnclosuresResourceInner) SetStatusNumeric(v int64) {
 	o.StatusNumeric = &v
 }
 
@@ -2213,9 +2213,9 @@ func (o *EnclosuresResourceInner) SetType(v string) {
 }
 
 // GetTypeNumeric returns the TypeNumeric field value if set, zero value otherwise.
-func (o *EnclosuresResourceInner) GetTypeNumeric() int32 {
+func (o *EnclosuresResourceInner) GetTypeNumeric() int64 {
 	if o == nil || IsNil(o.TypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TypeNumeric
@@ -2223,7 +2223,7 @@ func (o *EnclosuresResourceInner) GetTypeNumeric() int32 {
 
 // GetTypeNumericOk returns a tuple with the TypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EnclosuresResourceInner) GetTypeNumericOk() (*int32, bool) {
+func (o *EnclosuresResourceInner) GetTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.TypeNumeric) {
 		return nil, false
 	}
@@ -2239,8 +2239,8 @@ func (o *EnclosuresResourceInner) HasTypeNumeric() bool {
 	return false
 }
 
-// SetTypeNumeric gets a reference to the given int32 and assigns it to the TypeNumeric field.
-func (o *EnclosuresResourceInner) SetTypeNumeric(v int32) {
+// SetTypeNumeric gets a reference to the given int64 and assigns it to the TypeNumeric field.
+func (o *EnclosuresResourceInner) SetTypeNumeric(v int64) {
 	o.TypeNumeric = &v
 }
 

@@ -7,100 +7,100 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **ActualSpareCapacity** | Pointer to **string** |  | [optional] 
-**ActualSpareCapacityNumeric** | Pointer to **int32** |  | [optional] 
-**AllocatedPages** | Pointer to **int32** | Number of pages allocated | [optional] 
+**ActualSpareCapacityNumeric** | Pointer to **int64** |  | [optional] 
+**AllocatedPages** | Pointer to **int64** | Number of pages allocated | [optional] 
 **ArrayDriveType** | Pointer to **string** | Disk interface type | [optional] 
-**ArrayDriveTypeNumeric** | Pointer to **int32** | Disk interface type( In numeric form ) | [optional] 
-**AvailablePages** | Pointer to **int32** | Available pages | [optional] 
-**Blocks** | Pointer to **int32** | The size in blocks | [optional] 
-**Blocksize** | Pointer to **int32** |  | [optional] 
-**CacheFlushPeriod** | Pointer to **int32** |  | [optional] 
+**ArrayDriveTypeNumeric** | Pointer to **int64** | Disk interface type( In numeric form ) | [optional] 
+**AvailablePages** | Pointer to **int64** | Available pages | [optional] 
+**Blocks** | Pointer to **int64** | The size in blocks | [optional] 
+**Blocksize** | Pointer to **int64** |  | [optional] 
+**CacheFlushPeriod** | Pointer to **int64** |  | [optional] 
 **CacheReadAhead** | Pointer to **string** |  | [optional] 
-**CacheReadAheadNumeric** | Pointer to **int32** |  | [optional] 
+**CacheReadAheadNumeric** | Pointer to **int64** |  | [optional] 
 **Chunksize** | Pointer to **string** | Smallest block of usable space | [optional] 
 **CreateDate** | Pointer to **string** |  | [optional] 
-**CreateDateNumeric** | Pointer to **int32** |  | [optional] 
+**CreateDateNumeric** | Pointer to **int64** |  | [optional] 
 **CriticalCapacity** | Pointer to **string** |  | [optional] 
-**CriticalCapacityNumeric** | Pointer to **int32** |  | [optional] 
+**CriticalCapacityNumeric** | Pointer to **int64** |  | [optional] 
 **CurrentJob** | Pointer to **string** |  | [optional] 
 **CurrentJobCompletion** | Pointer to **string** |  | [optional] 
-**CurrentJobNumeric** | Pointer to **int32** |  | [optional] 
+**CurrentJobNumeric** | Pointer to **int64** |  | [optional] 
 **DegradedCapacity** | Pointer to **string** |  | [optional] 
-**DegradedCapacityNumeric** | Pointer to **int32** |  | [optional] 
+**DegradedCapacityNumeric** | Pointer to **int64** |  | [optional] 
 **DiskDescription** | Pointer to **string** | Disk interface Description | [optional] 
-**DiskDescriptionNumeric** | Pointer to **int32** | Disk interface Description( In numeric form ) | [optional] 
-**DiskDsdDelayVdisk** | Pointer to **int32** |  | [optional] 
+**DiskDescriptionNumeric** | Pointer to **int64** | Disk interface Description( In numeric form ) | [optional] 
+**DiskDsdDelayVdisk** | Pointer to **int64** |  | [optional] 
 **DiskDsdEnableVdisk** | Pointer to **string** |  | [optional] 
-**DiskDsdEnableVdiskNumeric** | Pointer to **int32** |  | [optional] 
-**Diskcount** | Pointer to **int32** | Number of disks | [optional] 
-**ExtendedStatus** | Pointer to **int32** | Extended status (bits) | [optional] 
+**DiskDsdEnableVdiskNumeric** | Pointer to **int64** |  | [optional] 
+**Diskcount** | Pointer to **int64** | Number of disks | [optional] 
+**ExtendedStatus** | Pointer to **int64** | Extended status (bits) | [optional] 
 **Freespace** | Pointer to **string** | Amount of free space in the vdisk | [optional] 
-**FreespaceNumeric** | Pointer to **int32** | Amount of free space in the vdisk( In numeric form ) | [optional] 
+**FreespaceNumeric** | Pointer to **int64** | Amount of free space in the vdisk( In numeric form ) | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
-**HealthReasonNumeric** | Pointer to **int32** |  | [optional] 
+**HealthReasonNumeric** | Pointer to **int64** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
-**HealthRecommendationNumeric** | Pointer to **int32** |  | [optional] 
-**InterleavedVolumeCount** | Pointer to **int32** |  | [optional] 
+**HealthRecommendationNumeric** | Pointer to **int64** |  | [optional] 
+**InterleavedVolumeCount** | Pointer to **int64** |  | [optional] 
 **IsJobAutoAbortable** | Pointer to **string** |  | [optional] 
-**IsJobAutoAbortableNumeric** | Pointer to **int32** |  | [optional] 
+**IsJobAutoAbortableNumeric** | Pointer to **int64** |  | [optional] 
 **JobRunning** | Pointer to **string** |  | [optional] 
 **LargestFreePartitionSpace** | Pointer to **string** |  | [optional] 
-**LargestFreePartitionSpaceNumeric** | Pointer to **int32** |  | [optional] 
-**LinearVolumeBoundary** | Pointer to **int32** |  | [optional] 
-**Lun** | Pointer to **int32** | Logical Unit Number | [optional] 
+**LargestFreePartitionSpaceNumeric** | Pointer to **int64** |  | [optional] 
+**LinearVolumeBoundary** | Pointer to **int64** |  | [optional] 
+**Lun** | Pointer to **int64** | Logical Unit Number | [optional] 
 **MetadataSize** | Pointer to **string** | Disk Group Metadata Capacity | [optional] 
-**MetadataSizeNumeric** | Pointer to **int32** | Disk Group Metadata Capacity( In numeric form ) | [optional] 
+**MetadataSizeNumeric** | Pointer to **int64** | Disk Group Metadata Capacity( In numeric form ) | [optional] 
 **MinDriveSize** | Pointer to **string** | Smallest disk size that can be used for this disk group | [optional] 
-**MinDriveSizeNumeric** | Pointer to **int32** | Smallest disk size that can be used for this disk group( In numeric form ) | [optional] 
+**MinDriveSizeNumeric** | Pointer to **int64** | Smallest disk size that can be used for this disk group( In numeric form ) | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **NewPartitionLba** | Pointer to **string** | LBA used for the next volume that will be created | [optional] 
-**NewPartitionLbaNumeric** | Pointer to **int32** | LBA used for the next volume that will be created( In numeric form ) | [optional] 
-**NumArrayPartitions** | Pointer to **int32** | Number of volumes in this vdisk | [optional] 
-**NumDrivesPerLowLevelArray** | Pointer to **int32** | Number of disks in the RAID 10 or 50 subgroup | [optional] 
-**NumExpansionPartitions** | Pointer to **int32** |  | [optional] 
-**NumPartitionSegments** | Pointer to **int32** |  | [optional] 
+**NewPartitionLbaNumeric** | Pointer to **int64** | LBA used for the next volume that will be created( In numeric form ) | [optional] 
+**NumArrayPartitions** | Pointer to **int64** | Number of volumes in this vdisk | [optional] 
+**NumDrivesPerLowLevelArray** | Pointer to **int64** | Number of disks in the RAID 10 or 50 subgroup | [optional] 
+**NumExpansionPartitions** | Pointer to **int64** |  | [optional] 
+**NumPartitionSegments** | Pointer to **int64** |  | [optional] 
 **Overhead** | Pointer to **string** |  | [optional] 
-**OverheadNumeric** | Pointer to **int32** |  | [optional] 
+**OverheadNumeric** | Pointer to **int64** |  | [optional] 
 **Owner** | Pointer to **string** | Controller owning the component | [optional] 
-**OwnerNumeric** | Pointer to **int32** | Controller owning the component( In numeric form ) | [optional] 
-**PerformanceRank** | Pointer to **int32** | Disk group performance rank within the virtual pool | [optional] 
+**OwnerNumeric** | Pointer to **int64** | Controller owning the component( In numeric form ) | [optional] 
+**PerformanceRank** | Pointer to **int64** | Disk group performance rank within the virtual pool | [optional] 
 **Pool** | Pointer to **string** | Pool | [optional] 
-**PoolPercentage** | Pointer to **int32** | Portion of the virtual pool used by this disk group | [optional] 
+**PoolPercentage** | Pointer to **int64** | Portion of the virtual pool used by this disk group | [optional] 
 **PoolSectorFormat** | Pointer to **string** | Pool Sector Format | [optional] 
-**PoolSectorFormatNumeric** | Pointer to **int32** | Pool Sector Format( In numeric form ) | [optional] 
+**PoolSectorFormatNumeric** | Pointer to **int64** | Pool Sector Format( In numeric form ) | [optional] 
 **PoolSerialNumber** | Pointer to **string** | Serial number of the pool | [optional] 
 **PoolsUrl** | Pointer to **string** | URL for associated Storage Pool | [optional] 
 **PreferredOwner** | Pointer to **string** | Configured owner | [optional] 
-**PreferredOwnerNumeric** | Pointer to **int32** | Configured owner( In numeric form ) | [optional] 
+**PreferredOwnerNumeric** | Pointer to **int64** | Configured owner( In numeric form ) | [optional] 
 **Raidtype** | Pointer to **string** | RAID level | [optional] 
-**RaidtypeNumeric** | Pointer to **int32** | RAID level( In numeric form ) | [optional] 
+**RaidtypeNumeric** | Pointer to **int64** | RAID level( In numeric form ) | [optional] 
 **RawSize** | Pointer to **string** |  | [optional] 
-**RawSizeNumeric** | Pointer to **int32** |  | [optional] 
+**RawSizeNumeric** | Pointer to **int64** |  | [optional] 
 **ReadAheadEnabled** | Pointer to **string** | Indicates whether read-ahead cache mode is enabled | [optional] 
-**ReadAheadEnabledNumeric** | Pointer to **int32** | Indicates whether read-ahead cache mode is enabled( In numeric form ) | [optional] 
-**ScrubDurationGoal** | Pointer to **int32** | Preferred duration for vdisk scrub utility | [optional] 
+**ReadAheadEnabledNumeric** | Pointer to **int64** | Indicates whether read-ahead cache mode is enabled( In numeric form ) | [optional] 
+**ScrubDurationGoal** | Pointer to **int64** | Preferred duration for vdisk scrub utility | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
 **Size** | Pointer to **string** | The size or capacity formatted with the current session base, precision, and units | [optional] 
-**SizeNumeric** | Pointer to **int32** | The size or capacity formatted with the current session base, precision, and units( In numeric form ) | [optional] 
-**Sparecount** | Pointer to **int32** | Number of spare disks currently configured | [optional] 
+**SizeNumeric** | Pointer to **int64** | The size or capacity formatted with the current session base, precision, and units( In numeric form ) | [optional] 
+**Sparecount** | Pointer to **int64** | Number of spare disks currently configured | [optional] 
 **Spear** | Pointer to **string** |  | [optional] 
-**SpearNumeric** | Pointer to **int32** |  | [optional] 
+**SpearNumeric** | Pointer to **int64** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
-**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**StatusNumeric** | Pointer to **int64** |  | [optional] 
 **StorageTier** | Pointer to **string** | Disk group tier assignment for tiered migration | [optional] 
-**StorageTierNumeric** | Pointer to **int32** | Disk group tier assignment for tiered migration( In numeric form ) | [optional] 
+**StorageTierNumeric** | Pointer to **int64** | Disk group tier assignment for tiered migration( In numeric form ) | [optional] 
 **StorageType** | Pointer to **string** | Storage type | [optional] 
-**StorageTypeNumeric** | Pointer to **int32** | Storage type( In numeric form ) | [optional] 
+**StorageTypeNumeric** | Pointer to **int64** | Storage type( In numeric form ) | [optional] 
 **StripeWidth** | Pointer to **string** |  | [optional] 
-**StripeWidthNumeric** | Pointer to **int32** |  | [optional] 
+**StripeWidthNumeric** | Pointer to **int64** |  | [optional] 
 **TargetSpareCapacity** | Pointer to **string** |  | [optional] 
-**TargetSpareCapacityNumeric** | Pointer to **int32** |  | [optional] 
-**TotalPages** | Pointer to **int32** |  | [optional] 
+**TargetSpareCapacityNumeric** | Pointer to **int64** |  | [optional] 
+**TotalPages** | Pointer to **int64** |  | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **WriteBackEnabled** | Pointer to **string** | Indicates whether disk write-back cache is enabled | [optional] 
-**WriteBackEnabledNumeric** | Pointer to **int32** | Indicates whether disk write-back cache is enabled( In numeric form ) | [optional] 
+**WriteBackEnabledNumeric** | Pointer to **int64** | Indicates whether disk write-back cache is enabled( In numeric form ) | [optional] 
 
 ## Methods
 
@@ -198,20 +198,20 @@ HasActualSpareCapacity returns a boolean if a field has been set.
 
 ### GetActualSpareCapacityNumeric
 
-`func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumeric() int64`
 
 GetActualSpareCapacityNumeric returns the ActualSpareCapacityNumeric field if non-nil, zero value otherwise.
 
 ### GetActualSpareCapacityNumericOk
 
-`func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetActualSpareCapacityNumericOk() (*int64, bool)`
 
 GetActualSpareCapacityNumericOk returns a tuple with the ActualSpareCapacityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetActualSpareCapacityNumeric
 
-`func (o *DiskGroupsResourceInner) SetActualSpareCapacityNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetActualSpareCapacityNumeric(v int64)`
 
 SetActualSpareCapacityNumeric sets ActualSpareCapacityNumeric field to given value.
 
@@ -223,20 +223,20 @@ HasActualSpareCapacityNumeric returns a boolean if a field has been set.
 
 ### GetAllocatedPages
 
-`func (o *DiskGroupsResourceInner) GetAllocatedPages() int32`
+`func (o *DiskGroupsResourceInner) GetAllocatedPages() int64`
 
 GetAllocatedPages returns the AllocatedPages field if non-nil, zero value otherwise.
 
 ### GetAllocatedPagesOk
 
-`func (o *DiskGroupsResourceInner) GetAllocatedPagesOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetAllocatedPagesOk() (*int64, bool)`
 
 GetAllocatedPagesOk returns a tuple with the AllocatedPages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllocatedPages
 
-`func (o *DiskGroupsResourceInner) SetAllocatedPages(v int32)`
+`func (o *DiskGroupsResourceInner) SetAllocatedPages(v int64)`
 
 SetAllocatedPages sets AllocatedPages field to given value.
 
@@ -273,20 +273,20 @@ HasArrayDriveType returns a boolean if a field has been set.
 
 ### GetArrayDriveTypeNumeric
 
-`func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumeric() int64`
 
 GetArrayDriveTypeNumeric returns the ArrayDriveTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetArrayDriveTypeNumericOk
 
-`func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetArrayDriveTypeNumericOk() (*int64, bool)`
 
 GetArrayDriveTypeNumericOk returns a tuple with the ArrayDriveTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetArrayDriveTypeNumeric
 
-`func (o *DiskGroupsResourceInner) SetArrayDriveTypeNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetArrayDriveTypeNumeric(v int64)`
 
 SetArrayDriveTypeNumeric sets ArrayDriveTypeNumeric field to given value.
 
@@ -298,20 +298,20 @@ HasArrayDriveTypeNumeric returns a boolean if a field has been set.
 
 ### GetAvailablePages
 
-`func (o *DiskGroupsResourceInner) GetAvailablePages() int32`
+`func (o *DiskGroupsResourceInner) GetAvailablePages() int64`
 
 GetAvailablePages returns the AvailablePages field if non-nil, zero value otherwise.
 
 ### GetAvailablePagesOk
 
-`func (o *DiskGroupsResourceInner) GetAvailablePagesOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetAvailablePagesOk() (*int64, bool)`
 
 GetAvailablePagesOk returns a tuple with the AvailablePages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAvailablePages
 
-`func (o *DiskGroupsResourceInner) SetAvailablePages(v int32)`
+`func (o *DiskGroupsResourceInner) SetAvailablePages(v int64)`
 
 SetAvailablePages sets AvailablePages field to given value.
 
@@ -323,20 +323,20 @@ HasAvailablePages returns a boolean if a field has been set.
 
 ### GetBlocks
 
-`func (o *DiskGroupsResourceInner) GetBlocks() int32`
+`func (o *DiskGroupsResourceInner) GetBlocks() int64`
 
 GetBlocks returns the Blocks field if non-nil, zero value otherwise.
 
 ### GetBlocksOk
 
-`func (o *DiskGroupsResourceInner) GetBlocksOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetBlocksOk() (*int64, bool)`
 
 GetBlocksOk returns a tuple with the Blocks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlocks
 
-`func (o *DiskGroupsResourceInner) SetBlocks(v int32)`
+`func (o *DiskGroupsResourceInner) SetBlocks(v int64)`
 
 SetBlocks sets Blocks field to given value.
 
@@ -348,20 +348,20 @@ HasBlocks returns a boolean if a field has been set.
 
 ### GetBlocksize
 
-`func (o *DiskGroupsResourceInner) GetBlocksize() int32`
+`func (o *DiskGroupsResourceInner) GetBlocksize() int64`
 
 GetBlocksize returns the Blocksize field if non-nil, zero value otherwise.
 
 ### GetBlocksizeOk
 
-`func (o *DiskGroupsResourceInner) GetBlocksizeOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetBlocksizeOk() (*int64, bool)`
 
 GetBlocksizeOk returns a tuple with the Blocksize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlocksize
 
-`func (o *DiskGroupsResourceInner) SetBlocksize(v int32)`
+`func (o *DiskGroupsResourceInner) SetBlocksize(v int64)`
 
 SetBlocksize sets Blocksize field to given value.
 
@@ -373,20 +373,20 @@ HasBlocksize returns a boolean if a field has been set.
 
 ### GetCacheFlushPeriod
 
-`func (o *DiskGroupsResourceInner) GetCacheFlushPeriod() int32`
+`func (o *DiskGroupsResourceInner) GetCacheFlushPeriod() int64`
 
 GetCacheFlushPeriod returns the CacheFlushPeriod field if non-nil, zero value otherwise.
 
 ### GetCacheFlushPeriodOk
 
-`func (o *DiskGroupsResourceInner) GetCacheFlushPeriodOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetCacheFlushPeriodOk() (*int64, bool)`
 
 GetCacheFlushPeriodOk returns a tuple with the CacheFlushPeriod field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheFlushPeriod
 
-`func (o *DiskGroupsResourceInner) SetCacheFlushPeriod(v int32)`
+`func (o *DiskGroupsResourceInner) SetCacheFlushPeriod(v int64)`
 
 SetCacheFlushPeriod sets CacheFlushPeriod field to given value.
 
@@ -423,20 +423,20 @@ HasCacheReadAhead returns a boolean if a field has been set.
 
 ### GetCacheReadAheadNumeric
 
-`func (o *DiskGroupsResourceInner) GetCacheReadAheadNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetCacheReadAheadNumeric() int64`
 
 GetCacheReadAheadNumeric returns the CacheReadAheadNumeric field if non-nil, zero value otherwise.
 
 ### GetCacheReadAheadNumericOk
 
-`func (o *DiskGroupsResourceInner) GetCacheReadAheadNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetCacheReadAheadNumericOk() (*int64, bool)`
 
 GetCacheReadAheadNumericOk returns a tuple with the CacheReadAheadNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheReadAheadNumeric
 
-`func (o *DiskGroupsResourceInner) SetCacheReadAheadNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetCacheReadAheadNumeric(v int64)`
 
 SetCacheReadAheadNumeric sets CacheReadAheadNumeric field to given value.
 
@@ -498,20 +498,20 @@ HasCreateDate returns a boolean if a field has been set.
 
 ### GetCreateDateNumeric
 
-`func (o *DiskGroupsResourceInner) GetCreateDateNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetCreateDateNumeric() int64`
 
 GetCreateDateNumeric returns the CreateDateNumeric field if non-nil, zero value otherwise.
 
 ### GetCreateDateNumericOk
 
-`func (o *DiskGroupsResourceInner) GetCreateDateNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetCreateDateNumericOk() (*int64, bool)`
 
 GetCreateDateNumericOk returns a tuple with the CreateDateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreateDateNumeric
 
-`func (o *DiskGroupsResourceInner) SetCreateDateNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetCreateDateNumeric(v int64)`
 
 SetCreateDateNumeric sets CreateDateNumeric field to given value.
 
@@ -548,20 +548,20 @@ HasCriticalCapacity returns a boolean if a field has been set.
 
 ### GetCriticalCapacityNumeric
 
-`func (o *DiskGroupsResourceInner) GetCriticalCapacityNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetCriticalCapacityNumeric() int64`
 
 GetCriticalCapacityNumeric returns the CriticalCapacityNumeric field if non-nil, zero value otherwise.
 
 ### GetCriticalCapacityNumericOk
 
-`func (o *DiskGroupsResourceInner) GetCriticalCapacityNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetCriticalCapacityNumericOk() (*int64, bool)`
 
 GetCriticalCapacityNumericOk returns a tuple with the CriticalCapacityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCriticalCapacityNumeric
 
-`func (o *DiskGroupsResourceInner) SetCriticalCapacityNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetCriticalCapacityNumeric(v int64)`
 
 SetCriticalCapacityNumeric sets CriticalCapacityNumeric field to given value.
 
@@ -623,20 +623,20 @@ HasCurrentJobCompletion returns a boolean if a field has been set.
 
 ### GetCurrentJobNumeric
 
-`func (o *DiskGroupsResourceInner) GetCurrentJobNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetCurrentJobNumeric() int64`
 
 GetCurrentJobNumeric returns the CurrentJobNumeric field if non-nil, zero value otherwise.
 
 ### GetCurrentJobNumericOk
 
-`func (o *DiskGroupsResourceInner) GetCurrentJobNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetCurrentJobNumericOk() (*int64, bool)`
 
 GetCurrentJobNumericOk returns a tuple with the CurrentJobNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCurrentJobNumeric
 
-`func (o *DiskGroupsResourceInner) SetCurrentJobNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetCurrentJobNumeric(v int64)`
 
 SetCurrentJobNumeric sets CurrentJobNumeric field to given value.
 
@@ -673,20 +673,20 @@ HasDegradedCapacity returns a boolean if a field has been set.
 
 ### GetDegradedCapacityNumeric
 
-`func (o *DiskGroupsResourceInner) GetDegradedCapacityNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetDegradedCapacityNumeric() int64`
 
 GetDegradedCapacityNumeric returns the DegradedCapacityNumeric field if non-nil, zero value otherwise.
 
 ### GetDegradedCapacityNumericOk
 
-`func (o *DiskGroupsResourceInner) GetDegradedCapacityNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetDegradedCapacityNumericOk() (*int64, bool)`
 
 GetDegradedCapacityNumericOk returns a tuple with the DegradedCapacityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDegradedCapacityNumeric
 
-`func (o *DiskGroupsResourceInner) SetDegradedCapacityNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetDegradedCapacityNumeric(v int64)`
 
 SetDegradedCapacityNumeric sets DegradedCapacityNumeric field to given value.
 
@@ -723,20 +723,20 @@ HasDiskDescription returns a boolean if a field has been set.
 
 ### GetDiskDescriptionNumeric
 
-`func (o *DiskGroupsResourceInner) GetDiskDescriptionNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetDiskDescriptionNumeric() int64`
 
 GetDiskDescriptionNumeric returns the DiskDescriptionNumeric field if non-nil, zero value otherwise.
 
 ### GetDiskDescriptionNumericOk
 
-`func (o *DiskGroupsResourceInner) GetDiskDescriptionNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetDiskDescriptionNumericOk() (*int64, bool)`
 
 GetDiskDescriptionNumericOk returns a tuple with the DiskDescriptionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskDescriptionNumeric
 
-`func (o *DiskGroupsResourceInner) SetDiskDescriptionNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetDiskDescriptionNumeric(v int64)`
 
 SetDiskDescriptionNumeric sets DiskDescriptionNumeric field to given value.
 
@@ -748,20 +748,20 @@ HasDiskDescriptionNumeric returns a boolean if a field has been set.
 
 ### GetDiskDsdDelayVdisk
 
-`func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdisk() int32`
+`func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdisk() int64`
 
 GetDiskDsdDelayVdisk returns the DiskDsdDelayVdisk field if non-nil, zero value otherwise.
 
 ### GetDiskDsdDelayVdiskOk
 
-`func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdiskOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetDiskDsdDelayVdiskOk() (*int64, bool)`
 
 GetDiskDsdDelayVdiskOk returns a tuple with the DiskDsdDelayVdisk field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskDsdDelayVdisk
 
-`func (o *DiskGroupsResourceInner) SetDiskDsdDelayVdisk(v int32)`
+`func (o *DiskGroupsResourceInner) SetDiskDsdDelayVdisk(v int64)`
 
 SetDiskDsdDelayVdisk sets DiskDsdDelayVdisk field to given value.
 
@@ -798,20 +798,20 @@ HasDiskDsdEnableVdisk returns a boolean if a field has been set.
 
 ### GetDiskDsdEnableVdiskNumeric
 
-`func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumeric() int64`
 
 GetDiskDsdEnableVdiskNumeric returns the DiskDsdEnableVdiskNumeric field if non-nil, zero value otherwise.
 
 ### GetDiskDsdEnableVdiskNumericOk
 
-`func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetDiskDsdEnableVdiskNumericOk() (*int64, bool)`
 
 GetDiskDsdEnableVdiskNumericOk returns a tuple with the DiskDsdEnableVdiskNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskDsdEnableVdiskNumeric
 
-`func (o *DiskGroupsResourceInner) SetDiskDsdEnableVdiskNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetDiskDsdEnableVdiskNumeric(v int64)`
 
 SetDiskDsdEnableVdiskNumeric sets DiskDsdEnableVdiskNumeric field to given value.
 
@@ -823,20 +823,20 @@ HasDiskDsdEnableVdiskNumeric returns a boolean if a field has been set.
 
 ### GetDiskcount
 
-`func (o *DiskGroupsResourceInner) GetDiskcount() int32`
+`func (o *DiskGroupsResourceInner) GetDiskcount() int64`
 
 GetDiskcount returns the Diskcount field if non-nil, zero value otherwise.
 
 ### GetDiskcountOk
 
-`func (o *DiskGroupsResourceInner) GetDiskcountOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetDiskcountOk() (*int64, bool)`
 
 GetDiskcountOk returns a tuple with the Diskcount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskcount
 
-`func (o *DiskGroupsResourceInner) SetDiskcount(v int32)`
+`func (o *DiskGroupsResourceInner) SetDiskcount(v int64)`
 
 SetDiskcount sets Diskcount field to given value.
 
@@ -848,20 +848,20 @@ HasDiskcount returns a boolean if a field has been set.
 
 ### GetExtendedStatus
 
-`func (o *DiskGroupsResourceInner) GetExtendedStatus() int32`
+`func (o *DiskGroupsResourceInner) GetExtendedStatus() int64`
 
 GetExtendedStatus returns the ExtendedStatus field if non-nil, zero value otherwise.
 
 ### GetExtendedStatusOk
 
-`func (o *DiskGroupsResourceInner) GetExtendedStatusOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetExtendedStatusOk() (*int64, bool)`
 
 GetExtendedStatusOk returns a tuple with the ExtendedStatus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtendedStatus
 
-`func (o *DiskGroupsResourceInner) SetExtendedStatus(v int32)`
+`func (o *DiskGroupsResourceInner) SetExtendedStatus(v int64)`
 
 SetExtendedStatus sets ExtendedStatus field to given value.
 
@@ -898,20 +898,20 @@ HasFreespace returns a boolean if a field has been set.
 
 ### GetFreespaceNumeric
 
-`func (o *DiskGroupsResourceInner) GetFreespaceNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetFreespaceNumeric() int64`
 
 GetFreespaceNumeric returns the FreespaceNumeric field if non-nil, zero value otherwise.
 
 ### GetFreespaceNumericOk
 
-`func (o *DiskGroupsResourceInner) GetFreespaceNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetFreespaceNumericOk() (*int64, bool)`
 
 GetFreespaceNumericOk returns a tuple with the FreespaceNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFreespaceNumeric
 
-`func (o *DiskGroupsResourceInner) SetFreespaceNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetFreespaceNumeric(v int64)`
 
 SetFreespaceNumeric sets FreespaceNumeric field to given value.
 
@@ -948,20 +948,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *DiskGroupsResourceInner) GetHealthNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *DiskGroupsResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *DiskGroupsResourceInner) SetHealthNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -998,20 +998,20 @@ HasHealthReason returns a boolean if a field has been set.
 
 ### GetHealthReasonNumeric
 
-`func (o *DiskGroupsResourceInner) GetHealthReasonNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetHealthReasonNumeric() int64`
 
 GetHealthReasonNumeric returns the HealthReasonNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthReasonNumericOk
 
-`func (o *DiskGroupsResourceInner) GetHealthReasonNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetHealthReasonNumericOk() (*int64, bool)`
 
 GetHealthReasonNumericOk returns a tuple with the HealthReasonNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthReasonNumeric
 
-`func (o *DiskGroupsResourceInner) SetHealthReasonNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetHealthReasonNumeric(v int64)`
 
 SetHealthReasonNumeric sets HealthReasonNumeric field to given value.
 
@@ -1048,20 +1048,20 @@ HasHealthRecommendation returns a boolean if a field has been set.
 
 ### GetHealthRecommendationNumeric
 
-`func (o *DiskGroupsResourceInner) GetHealthRecommendationNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetHealthRecommendationNumeric() int64`
 
 GetHealthRecommendationNumeric returns the HealthRecommendationNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthRecommendationNumericOk
 
-`func (o *DiskGroupsResourceInner) GetHealthRecommendationNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetHealthRecommendationNumericOk() (*int64, bool)`
 
 GetHealthRecommendationNumericOk returns a tuple with the HealthRecommendationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthRecommendationNumeric
 
-`func (o *DiskGroupsResourceInner) SetHealthRecommendationNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetHealthRecommendationNumeric(v int64)`
 
 SetHealthRecommendationNumeric sets HealthRecommendationNumeric field to given value.
 
@@ -1073,20 +1073,20 @@ HasHealthRecommendationNumeric returns a boolean if a field has been set.
 
 ### GetInterleavedVolumeCount
 
-`func (o *DiskGroupsResourceInner) GetInterleavedVolumeCount() int32`
+`func (o *DiskGroupsResourceInner) GetInterleavedVolumeCount() int64`
 
 GetInterleavedVolumeCount returns the InterleavedVolumeCount field if non-nil, zero value otherwise.
 
 ### GetInterleavedVolumeCountOk
 
-`func (o *DiskGroupsResourceInner) GetInterleavedVolumeCountOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetInterleavedVolumeCountOk() (*int64, bool)`
 
 GetInterleavedVolumeCountOk returns a tuple with the InterleavedVolumeCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInterleavedVolumeCount
 
-`func (o *DiskGroupsResourceInner) SetInterleavedVolumeCount(v int32)`
+`func (o *DiskGroupsResourceInner) SetInterleavedVolumeCount(v int64)`
 
 SetInterleavedVolumeCount sets InterleavedVolumeCount field to given value.
 
@@ -1123,20 +1123,20 @@ HasIsJobAutoAbortable returns a boolean if a field has been set.
 
 ### GetIsJobAutoAbortableNumeric
 
-`func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumeric() int64`
 
 GetIsJobAutoAbortableNumeric returns the IsJobAutoAbortableNumeric field if non-nil, zero value otherwise.
 
 ### GetIsJobAutoAbortableNumericOk
 
-`func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetIsJobAutoAbortableNumericOk() (*int64, bool)`
 
 GetIsJobAutoAbortableNumericOk returns a tuple with the IsJobAutoAbortableNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIsJobAutoAbortableNumeric
 
-`func (o *DiskGroupsResourceInner) SetIsJobAutoAbortableNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetIsJobAutoAbortableNumeric(v int64)`
 
 SetIsJobAutoAbortableNumeric sets IsJobAutoAbortableNumeric field to given value.
 
@@ -1198,20 +1198,20 @@ HasLargestFreePartitionSpace returns a boolean if a field has been set.
 
 ### GetLargestFreePartitionSpaceNumeric
 
-`func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumeric() int64`
 
 GetLargestFreePartitionSpaceNumeric returns the LargestFreePartitionSpaceNumeric field if non-nil, zero value otherwise.
 
 ### GetLargestFreePartitionSpaceNumericOk
 
-`func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetLargestFreePartitionSpaceNumericOk() (*int64, bool)`
 
 GetLargestFreePartitionSpaceNumericOk returns a tuple with the LargestFreePartitionSpaceNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLargestFreePartitionSpaceNumeric
 
-`func (o *DiskGroupsResourceInner) SetLargestFreePartitionSpaceNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetLargestFreePartitionSpaceNumeric(v int64)`
 
 SetLargestFreePartitionSpaceNumeric sets LargestFreePartitionSpaceNumeric field to given value.
 
@@ -1223,20 +1223,20 @@ HasLargestFreePartitionSpaceNumeric returns a boolean if a field has been set.
 
 ### GetLinearVolumeBoundary
 
-`func (o *DiskGroupsResourceInner) GetLinearVolumeBoundary() int32`
+`func (o *DiskGroupsResourceInner) GetLinearVolumeBoundary() int64`
 
 GetLinearVolumeBoundary returns the LinearVolumeBoundary field if non-nil, zero value otherwise.
 
 ### GetLinearVolumeBoundaryOk
 
-`func (o *DiskGroupsResourceInner) GetLinearVolumeBoundaryOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetLinearVolumeBoundaryOk() (*int64, bool)`
 
 GetLinearVolumeBoundaryOk returns a tuple with the LinearVolumeBoundary field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLinearVolumeBoundary
 
-`func (o *DiskGroupsResourceInner) SetLinearVolumeBoundary(v int32)`
+`func (o *DiskGroupsResourceInner) SetLinearVolumeBoundary(v int64)`
 
 SetLinearVolumeBoundary sets LinearVolumeBoundary field to given value.
 
@@ -1248,20 +1248,20 @@ HasLinearVolumeBoundary returns a boolean if a field has been set.
 
 ### GetLun
 
-`func (o *DiskGroupsResourceInner) GetLun() int32`
+`func (o *DiskGroupsResourceInner) GetLun() int64`
 
 GetLun returns the Lun field if non-nil, zero value otherwise.
 
 ### GetLunOk
 
-`func (o *DiskGroupsResourceInner) GetLunOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetLunOk() (*int64, bool)`
 
 GetLunOk returns a tuple with the Lun field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLun
 
-`func (o *DiskGroupsResourceInner) SetLun(v int32)`
+`func (o *DiskGroupsResourceInner) SetLun(v int64)`
 
 SetLun sets Lun field to given value.
 
@@ -1298,20 +1298,20 @@ HasMetadataSize returns a boolean if a field has been set.
 
 ### GetMetadataSizeNumeric
 
-`func (o *DiskGroupsResourceInner) GetMetadataSizeNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetMetadataSizeNumeric() int64`
 
 GetMetadataSizeNumeric returns the MetadataSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetMetadataSizeNumericOk
 
-`func (o *DiskGroupsResourceInner) GetMetadataSizeNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetMetadataSizeNumericOk() (*int64, bool)`
 
 GetMetadataSizeNumericOk returns a tuple with the MetadataSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMetadataSizeNumeric
 
-`func (o *DiskGroupsResourceInner) SetMetadataSizeNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetMetadataSizeNumeric(v int64)`
 
 SetMetadataSizeNumeric sets MetadataSizeNumeric field to given value.
 
@@ -1348,20 +1348,20 @@ HasMinDriveSize returns a boolean if a field has been set.
 
 ### GetMinDriveSizeNumeric
 
-`func (o *DiskGroupsResourceInner) GetMinDriveSizeNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetMinDriveSizeNumeric() int64`
 
 GetMinDriveSizeNumeric returns the MinDriveSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetMinDriveSizeNumericOk
 
-`func (o *DiskGroupsResourceInner) GetMinDriveSizeNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetMinDriveSizeNumericOk() (*int64, bool)`
 
 GetMinDriveSizeNumericOk returns a tuple with the MinDriveSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMinDriveSizeNumeric
 
-`func (o *DiskGroupsResourceInner) SetMinDriveSizeNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetMinDriveSizeNumeric(v int64)`
 
 SetMinDriveSizeNumeric sets MinDriveSizeNumeric field to given value.
 
@@ -1423,20 +1423,20 @@ HasNewPartitionLba returns a boolean if a field has been set.
 
 ### GetNewPartitionLbaNumeric
 
-`func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumeric() int64`
 
 GetNewPartitionLbaNumeric returns the NewPartitionLbaNumeric field if non-nil, zero value otherwise.
 
 ### GetNewPartitionLbaNumericOk
 
-`func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetNewPartitionLbaNumericOk() (*int64, bool)`
 
 GetNewPartitionLbaNumericOk returns a tuple with the NewPartitionLbaNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNewPartitionLbaNumeric
 
-`func (o *DiskGroupsResourceInner) SetNewPartitionLbaNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetNewPartitionLbaNumeric(v int64)`
 
 SetNewPartitionLbaNumeric sets NewPartitionLbaNumeric field to given value.
 
@@ -1448,20 +1448,20 @@ HasNewPartitionLbaNumeric returns a boolean if a field has been set.
 
 ### GetNumArrayPartitions
 
-`func (o *DiskGroupsResourceInner) GetNumArrayPartitions() int32`
+`func (o *DiskGroupsResourceInner) GetNumArrayPartitions() int64`
 
 GetNumArrayPartitions returns the NumArrayPartitions field if non-nil, zero value otherwise.
 
 ### GetNumArrayPartitionsOk
 
-`func (o *DiskGroupsResourceInner) GetNumArrayPartitionsOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetNumArrayPartitionsOk() (*int64, bool)`
 
 GetNumArrayPartitionsOk returns a tuple with the NumArrayPartitions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumArrayPartitions
 
-`func (o *DiskGroupsResourceInner) SetNumArrayPartitions(v int32)`
+`func (o *DiskGroupsResourceInner) SetNumArrayPartitions(v int64)`
 
 SetNumArrayPartitions sets NumArrayPartitions field to given value.
 
@@ -1473,20 +1473,20 @@ HasNumArrayPartitions returns a boolean if a field has been set.
 
 ### GetNumDrivesPerLowLevelArray
 
-`func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArray() int32`
+`func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArray() int64`
 
 GetNumDrivesPerLowLevelArray returns the NumDrivesPerLowLevelArray field if non-nil, zero value otherwise.
 
 ### GetNumDrivesPerLowLevelArrayOk
 
-`func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArrayOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetNumDrivesPerLowLevelArrayOk() (*int64, bool)`
 
 GetNumDrivesPerLowLevelArrayOk returns a tuple with the NumDrivesPerLowLevelArray field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumDrivesPerLowLevelArray
 
-`func (o *DiskGroupsResourceInner) SetNumDrivesPerLowLevelArray(v int32)`
+`func (o *DiskGroupsResourceInner) SetNumDrivesPerLowLevelArray(v int64)`
 
 SetNumDrivesPerLowLevelArray sets NumDrivesPerLowLevelArray field to given value.
 
@@ -1498,20 +1498,20 @@ HasNumDrivesPerLowLevelArray returns a boolean if a field has been set.
 
 ### GetNumExpansionPartitions
 
-`func (o *DiskGroupsResourceInner) GetNumExpansionPartitions() int32`
+`func (o *DiskGroupsResourceInner) GetNumExpansionPartitions() int64`
 
 GetNumExpansionPartitions returns the NumExpansionPartitions field if non-nil, zero value otherwise.
 
 ### GetNumExpansionPartitionsOk
 
-`func (o *DiskGroupsResourceInner) GetNumExpansionPartitionsOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetNumExpansionPartitionsOk() (*int64, bool)`
 
 GetNumExpansionPartitionsOk returns a tuple with the NumExpansionPartitions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumExpansionPartitions
 
-`func (o *DiskGroupsResourceInner) SetNumExpansionPartitions(v int32)`
+`func (o *DiskGroupsResourceInner) SetNumExpansionPartitions(v int64)`
 
 SetNumExpansionPartitions sets NumExpansionPartitions field to given value.
 
@@ -1523,20 +1523,20 @@ HasNumExpansionPartitions returns a boolean if a field has been set.
 
 ### GetNumPartitionSegments
 
-`func (o *DiskGroupsResourceInner) GetNumPartitionSegments() int32`
+`func (o *DiskGroupsResourceInner) GetNumPartitionSegments() int64`
 
 GetNumPartitionSegments returns the NumPartitionSegments field if non-nil, zero value otherwise.
 
 ### GetNumPartitionSegmentsOk
 
-`func (o *DiskGroupsResourceInner) GetNumPartitionSegmentsOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetNumPartitionSegmentsOk() (*int64, bool)`
 
 GetNumPartitionSegmentsOk returns a tuple with the NumPartitionSegments field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumPartitionSegments
 
-`func (o *DiskGroupsResourceInner) SetNumPartitionSegments(v int32)`
+`func (o *DiskGroupsResourceInner) SetNumPartitionSegments(v int64)`
 
 SetNumPartitionSegments sets NumPartitionSegments field to given value.
 
@@ -1573,20 +1573,20 @@ HasOverhead returns a boolean if a field has been set.
 
 ### GetOverheadNumeric
 
-`func (o *DiskGroupsResourceInner) GetOverheadNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetOverheadNumeric() int64`
 
 GetOverheadNumeric returns the OverheadNumeric field if non-nil, zero value otherwise.
 
 ### GetOverheadNumericOk
 
-`func (o *DiskGroupsResourceInner) GetOverheadNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetOverheadNumericOk() (*int64, bool)`
 
 GetOverheadNumericOk returns a tuple with the OverheadNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOverheadNumeric
 
-`func (o *DiskGroupsResourceInner) SetOverheadNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetOverheadNumeric(v int64)`
 
 SetOverheadNumeric sets OverheadNumeric field to given value.
 
@@ -1623,20 +1623,20 @@ HasOwner returns a boolean if a field has been set.
 
 ### GetOwnerNumeric
 
-`func (o *DiskGroupsResourceInner) GetOwnerNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetOwnerNumeric() int64`
 
 GetOwnerNumeric returns the OwnerNumeric field if non-nil, zero value otherwise.
 
 ### GetOwnerNumericOk
 
-`func (o *DiskGroupsResourceInner) GetOwnerNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetOwnerNumericOk() (*int64, bool)`
 
 GetOwnerNumericOk returns a tuple with the OwnerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOwnerNumeric
 
-`func (o *DiskGroupsResourceInner) SetOwnerNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetOwnerNumeric(v int64)`
 
 SetOwnerNumeric sets OwnerNumeric field to given value.
 
@@ -1648,20 +1648,20 @@ HasOwnerNumeric returns a boolean if a field has been set.
 
 ### GetPerformanceRank
 
-`func (o *DiskGroupsResourceInner) GetPerformanceRank() int32`
+`func (o *DiskGroupsResourceInner) GetPerformanceRank() int64`
 
 GetPerformanceRank returns the PerformanceRank field if non-nil, zero value otherwise.
 
 ### GetPerformanceRankOk
 
-`func (o *DiskGroupsResourceInner) GetPerformanceRankOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetPerformanceRankOk() (*int64, bool)`
 
 GetPerformanceRankOk returns a tuple with the PerformanceRank field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPerformanceRank
 
-`func (o *DiskGroupsResourceInner) SetPerformanceRank(v int32)`
+`func (o *DiskGroupsResourceInner) SetPerformanceRank(v int64)`
 
 SetPerformanceRank sets PerformanceRank field to given value.
 
@@ -1698,20 +1698,20 @@ HasPool returns a boolean if a field has been set.
 
 ### GetPoolPercentage
 
-`func (o *DiskGroupsResourceInner) GetPoolPercentage() int32`
+`func (o *DiskGroupsResourceInner) GetPoolPercentage() int64`
 
 GetPoolPercentage returns the PoolPercentage field if non-nil, zero value otherwise.
 
 ### GetPoolPercentageOk
 
-`func (o *DiskGroupsResourceInner) GetPoolPercentageOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetPoolPercentageOk() (*int64, bool)`
 
 GetPoolPercentageOk returns a tuple with the PoolPercentage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPoolPercentage
 
-`func (o *DiskGroupsResourceInner) SetPoolPercentage(v int32)`
+`func (o *DiskGroupsResourceInner) SetPoolPercentage(v int64)`
 
 SetPoolPercentage sets PoolPercentage field to given value.
 
@@ -1748,20 +1748,20 @@ HasPoolSectorFormat returns a boolean if a field has been set.
 
 ### GetPoolSectorFormatNumeric
 
-`func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumeric() int64`
 
 GetPoolSectorFormatNumeric returns the PoolSectorFormatNumeric field if non-nil, zero value otherwise.
 
 ### GetPoolSectorFormatNumericOk
 
-`func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetPoolSectorFormatNumericOk() (*int64, bool)`
 
 GetPoolSectorFormatNumericOk returns a tuple with the PoolSectorFormatNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPoolSectorFormatNumeric
 
-`func (o *DiskGroupsResourceInner) SetPoolSectorFormatNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetPoolSectorFormatNumeric(v int64)`
 
 SetPoolSectorFormatNumeric sets PoolSectorFormatNumeric field to given value.
 
@@ -1848,20 +1848,20 @@ HasPreferredOwner returns a boolean if a field has been set.
 
 ### GetPreferredOwnerNumeric
 
-`func (o *DiskGroupsResourceInner) GetPreferredOwnerNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetPreferredOwnerNumeric() int64`
 
 GetPreferredOwnerNumeric returns the PreferredOwnerNumeric field if non-nil, zero value otherwise.
 
 ### GetPreferredOwnerNumericOk
 
-`func (o *DiskGroupsResourceInner) GetPreferredOwnerNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetPreferredOwnerNumericOk() (*int64, bool)`
 
 GetPreferredOwnerNumericOk returns a tuple with the PreferredOwnerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPreferredOwnerNumeric
 
-`func (o *DiskGroupsResourceInner) SetPreferredOwnerNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetPreferredOwnerNumeric(v int64)`
 
 SetPreferredOwnerNumeric sets PreferredOwnerNumeric field to given value.
 
@@ -1898,20 +1898,20 @@ HasRaidtype returns a boolean if a field has been set.
 
 ### GetRaidtypeNumeric
 
-`func (o *DiskGroupsResourceInner) GetRaidtypeNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetRaidtypeNumeric() int64`
 
 GetRaidtypeNumeric returns the RaidtypeNumeric field if non-nil, zero value otherwise.
 
 ### GetRaidtypeNumericOk
 
-`func (o *DiskGroupsResourceInner) GetRaidtypeNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetRaidtypeNumericOk() (*int64, bool)`
 
 GetRaidtypeNumericOk returns a tuple with the RaidtypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRaidtypeNumeric
 
-`func (o *DiskGroupsResourceInner) SetRaidtypeNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetRaidtypeNumeric(v int64)`
 
 SetRaidtypeNumeric sets RaidtypeNumeric field to given value.
 
@@ -1948,20 +1948,20 @@ HasRawSize returns a boolean if a field has been set.
 
 ### GetRawSizeNumeric
 
-`func (o *DiskGroupsResourceInner) GetRawSizeNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetRawSizeNumeric() int64`
 
 GetRawSizeNumeric returns the RawSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetRawSizeNumericOk
 
-`func (o *DiskGroupsResourceInner) GetRawSizeNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetRawSizeNumericOk() (*int64, bool)`
 
 GetRawSizeNumericOk returns a tuple with the RawSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRawSizeNumeric
 
-`func (o *DiskGroupsResourceInner) SetRawSizeNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetRawSizeNumeric(v int64)`
 
 SetRawSizeNumeric sets RawSizeNumeric field to given value.
 
@@ -1998,20 +1998,20 @@ HasReadAheadEnabled returns a boolean if a field has been set.
 
 ### GetReadAheadEnabledNumeric
 
-`func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumeric() int64`
 
 GetReadAheadEnabledNumeric returns the ReadAheadEnabledNumeric field if non-nil, zero value otherwise.
 
 ### GetReadAheadEnabledNumericOk
 
-`func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetReadAheadEnabledNumericOk() (*int64, bool)`
 
 GetReadAheadEnabledNumericOk returns a tuple with the ReadAheadEnabledNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReadAheadEnabledNumeric
 
-`func (o *DiskGroupsResourceInner) SetReadAheadEnabledNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetReadAheadEnabledNumeric(v int64)`
 
 SetReadAheadEnabledNumeric sets ReadAheadEnabledNumeric field to given value.
 
@@ -2023,20 +2023,20 @@ HasReadAheadEnabledNumeric returns a boolean if a field has been set.
 
 ### GetScrubDurationGoal
 
-`func (o *DiskGroupsResourceInner) GetScrubDurationGoal() int32`
+`func (o *DiskGroupsResourceInner) GetScrubDurationGoal() int64`
 
 GetScrubDurationGoal returns the ScrubDurationGoal field if non-nil, zero value otherwise.
 
 ### GetScrubDurationGoalOk
 
-`func (o *DiskGroupsResourceInner) GetScrubDurationGoalOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetScrubDurationGoalOk() (*int64, bool)`
 
 GetScrubDurationGoalOk returns a tuple with the ScrubDurationGoal field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScrubDurationGoal
 
-`func (o *DiskGroupsResourceInner) SetScrubDurationGoal(v int32)`
+`func (o *DiskGroupsResourceInner) SetScrubDurationGoal(v int64)`
 
 SetScrubDurationGoal sets ScrubDurationGoal field to given value.
 
@@ -2098,20 +2098,20 @@ HasSize returns a boolean if a field has been set.
 
 ### GetSizeNumeric
 
-`func (o *DiskGroupsResourceInner) GetSizeNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetSizeNumeric() int64`
 
 GetSizeNumeric returns the SizeNumeric field if non-nil, zero value otherwise.
 
 ### GetSizeNumericOk
 
-`func (o *DiskGroupsResourceInner) GetSizeNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetSizeNumericOk() (*int64, bool)`
 
 GetSizeNumericOk returns a tuple with the SizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSizeNumeric
 
-`func (o *DiskGroupsResourceInner) SetSizeNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetSizeNumeric(v int64)`
 
 SetSizeNumeric sets SizeNumeric field to given value.
 
@@ -2123,20 +2123,20 @@ HasSizeNumeric returns a boolean if a field has been set.
 
 ### GetSparecount
 
-`func (o *DiskGroupsResourceInner) GetSparecount() int32`
+`func (o *DiskGroupsResourceInner) GetSparecount() int64`
 
 GetSparecount returns the Sparecount field if non-nil, zero value otherwise.
 
 ### GetSparecountOk
 
-`func (o *DiskGroupsResourceInner) GetSparecountOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetSparecountOk() (*int64, bool)`
 
 GetSparecountOk returns a tuple with the Sparecount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSparecount
 
-`func (o *DiskGroupsResourceInner) SetSparecount(v int32)`
+`func (o *DiskGroupsResourceInner) SetSparecount(v int64)`
 
 SetSparecount sets Sparecount field to given value.
 
@@ -2173,20 +2173,20 @@ HasSpear returns a boolean if a field has been set.
 
 ### GetSpearNumeric
 
-`func (o *DiskGroupsResourceInner) GetSpearNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetSpearNumeric() int64`
 
 GetSpearNumeric returns the SpearNumeric field if non-nil, zero value otherwise.
 
 ### GetSpearNumericOk
 
-`func (o *DiskGroupsResourceInner) GetSpearNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetSpearNumericOk() (*int64, bool)`
 
 GetSpearNumericOk returns a tuple with the SpearNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSpearNumeric
 
-`func (o *DiskGroupsResourceInner) SetSpearNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetSpearNumeric(v int64)`
 
 SetSpearNumeric sets SpearNumeric field to given value.
 
@@ -2223,20 +2223,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
-`func (o *DiskGroupsResourceInner) GetStatusNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetStatusNumeric() int64`
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
-`func (o *DiskGroupsResourceInner) GetStatusNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetStatusNumericOk() (*int64, bool)`
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
-`func (o *DiskGroupsResourceInner) SetStatusNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetStatusNumeric(v int64)`
 
 SetStatusNumeric sets StatusNumeric field to given value.
 
@@ -2273,20 +2273,20 @@ HasStorageTier returns a boolean if a field has been set.
 
 ### GetStorageTierNumeric
 
-`func (o *DiskGroupsResourceInner) GetStorageTierNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetStorageTierNumeric() int64`
 
 GetStorageTierNumeric returns the StorageTierNumeric field if non-nil, zero value otherwise.
 
 ### GetStorageTierNumericOk
 
-`func (o *DiskGroupsResourceInner) GetStorageTierNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetStorageTierNumericOk() (*int64, bool)`
 
 GetStorageTierNumericOk returns a tuple with the StorageTierNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStorageTierNumeric
 
-`func (o *DiskGroupsResourceInner) SetStorageTierNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetStorageTierNumeric(v int64)`
 
 SetStorageTierNumeric sets StorageTierNumeric field to given value.
 
@@ -2323,20 +2323,20 @@ HasStorageType returns a boolean if a field has been set.
 
 ### GetStorageTypeNumeric
 
-`func (o *DiskGroupsResourceInner) GetStorageTypeNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetStorageTypeNumeric() int64`
 
 GetStorageTypeNumeric returns the StorageTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetStorageTypeNumericOk
 
-`func (o *DiskGroupsResourceInner) GetStorageTypeNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetStorageTypeNumericOk() (*int64, bool)`
 
 GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStorageTypeNumeric
 
-`func (o *DiskGroupsResourceInner) SetStorageTypeNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetStorageTypeNumeric(v int64)`
 
 SetStorageTypeNumeric sets StorageTypeNumeric field to given value.
 
@@ -2373,20 +2373,20 @@ HasStripeWidth returns a boolean if a field has been set.
 
 ### GetStripeWidthNumeric
 
-`func (o *DiskGroupsResourceInner) GetStripeWidthNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetStripeWidthNumeric() int64`
 
 GetStripeWidthNumeric returns the StripeWidthNumeric field if non-nil, zero value otherwise.
 
 ### GetStripeWidthNumericOk
 
-`func (o *DiskGroupsResourceInner) GetStripeWidthNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetStripeWidthNumericOk() (*int64, bool)`
 
 GetStripeWidthNumericOk returns a tuple with the StripeWidthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStripeWidthNumeric
 
-`func (o *DiskGroupsResourceInner) SetStripeWidthNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetStripeWidthNumeric(v int64)`
 
 SetStripeWidthNumeric sets StripeWidthNumeric field to given value.
 
@@ -2423,20 +2423,20 @@ HasTargetSpareCapacity returns a boolean if a field has been set.
 
 ### GetTargetSpareCapacityNumeric
 
-`func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumeric() int64`
 
 GetTargetSpareCapacityNumeric returns the TargetSpareCapacityNumeric field if non-nil, zero value otherwise.
 
 ### GetTargetSpareCapacityNumericOk
 
-`func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetTargetSpareCapacityNumericOk() (*int64, bool)`
 
 GetTargetSpareCapacityNumericOk returns a tuple with the TargetSpareCapacityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTargetSpareCapacityNumeric
 
-`func (o *DiskGroupsResourceInner) SetTargetSpareCapacityNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetTargetSpareCapacityNumeric(v int64)`
 
 SetTargetSpareCapacityNumeric sets TargetSpareCapacityNumeric field to given value.
 
@@ -2448,20 +2448,20 @@ HasTargetSpareCapacityNumeric returns a boolean if a field has been set.
 
 ### GetTotalPages
 
-`func (o *DiskGroupsResourceInner) GetTotalPages() int32`
+`func (o *DiskGroupsResourceInner) GetTotalPages() int64`
 
 GetTotalPages returns the TotalPages field if non-nil, zero value otherwise.
 
 ### GetTotalPagesOk
 
-`func (o *DiskGroupsResourceInner) GetTotalPagesOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetTotalPagesOk() (*int64, bool)`
 
 GetTotalPagesOk returns a tuple with the TotalPages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalPages
 
-`func (o *DiskGroupsResourceInner) SetTotalPages(v int32)`
+`func (o *DiskGroupsResourceInner) SetTotalPages(v int64)`
 
 SetTotalPages sets TotalPages field to given value.
 
@@ -2523,20 +2523,20 @@ HasWriteBackEnabled returns a boolean if a field has been set.
 
 ### GetWriteBackEnabledNumeric
 
-`func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumeric() int32`
+`func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumeric() int64`
 
 GetWriteBackEnabledNumeric returns the WriteBackEnabledNumeric field if non-nil, zero value otherwise.
 
 ### GetWriteBackEnabledNumericOk
 
-`func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumericOk() (*int32, bool)`
+`func (o *DiskGroupsResourceInner) GetWriteBackEnabledNumericOk() (*int64, bool)`
 
 GetWriteBackEnabledNumericOk returns a tuple with the WriteBackEnabledNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWriteBackEnabledNumeric
 
-`func (o *DiskGroupsResourceInner) SetWriteBackEnabledNumeric(v int32)`
+`func (o *DiskGroupsResourceInner) SetWriteBackEnabledNumeric(v int64)`
 
 SetWriteBackEnabledNumeric sets WriteBackEnabledNumeric field to given value.
 

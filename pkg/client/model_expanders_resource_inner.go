@@ -21,24 +21,24 @@ var _ MappedNullable = &ExpandersResourceInner{}
 type ExpandersResourceInner struct {
 	ObjectName  *string `json:"object-name,omitempty"`
 	Meta        *string `json:"meta,omitempty"`
-	DomId       *int32  `json:"dom-id,omitempty"`
-	DrawerId    *int32  `json:"drawer-id,omitempty"`
+	DomId       *int64  `json:"dom-id,omitempty"`
+	DrawerId    *int64  `json:"drawer-id,omitempty"`
 	DurableId   *string `json:"durable-id,omitempty"`
-	EnclosureId *int32  `json:"enclosure-id,omitempty"`
+	EnclosureId *int64  `json:"enclosure-id,omitempty"`
 	// Extended status (bits)
 	ExtendedStatus *string `json:"extended-status,omitempty"`
 	// Firmware version of the FRU
 	FwRevision           *string `json:"fw-revision,omitempty"`
 	Health               *string `json:"health,omitempty"`
-	HealthNumeric        *int32  `json:"health-numeric,omitempty"`
+	HealthNumeric        *int64  `json:"health-numeric,omitempty"`
 	HealthReason         *string `json:"health-reason,omitempty"`
 	HealthRecommendation *string `json:"health-recommendation,omitempty"`
 	Location             *string `json:"location,omitempty"`
 	Name                 *string `json:"name,omitempty"`
 	PathId               *string `json:"path-id,omitempty"`
-	PathIdNumeric        *int32  `json:"path-id-numeric,omitempty"`
+	PathIdNumeric        *int64  `json:"path-id-numeric,omitempty"`
 	Status               *string `json:"status,omitempty"`
-	StatusNumeric        *int32  `json:"status-numeric,omitempty"`
+	StatusNumeric        *int64  `json:"status-numeric,omitempty"`
 }
 
 // NewExpandersResourceInner instantiates a new ExpandersResourceInner object
@@ -123,9 +123,9 @@ func (o *ExpandersResourceInner) SetMeta(v string) {
 }
 
 // GetDomId returns the DomId field value if set, zero value otherwise.
-func (o *ExpandersResourceInner) GetDomId() int32 {
+func (o *ExpandersResourceInner) GetDomId() int64 {
 	if o == nil || IsNil(o.DomId) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.DomId
@@ -133,7 +133,7 @@ func (o *ExpandersResourceInner) GetDomId() int32 {
 
 // GetDomIdOk returns a tuple with the DomId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpandersResourceInner) GetDomIdOk() (*int32, bool) {
+func (o *ExpandersResourceInner) GetDomIdOk() (*int64, bool) {
 	if o == nil || IsNil(o.DomId) {
 		return nil, false
 	}
@@ -149,15 +149,15 @@ func (o *ExpandersResourceInner) HasDomId() bool {
 	return false
 }
 
-// SetDomId gets a reference to the given int32 and assigns it to the DomId field.
-func (o *ExpandersResourceInner) SetDomId(v int32) {
+// SetDomId gets a reference to the given int64 and assigns it to the DomId field.
+func (o *ExpandersResourceInner) SetDomId(v int64) {
 	o.DomId = &v
 }
 
 // GetDrawerId returns the DrawerId field value if set, zero value otherwise.
-func (o *ExpandersResourceInner) GetDrawerId() int32 {
+func (o *ExpandersResourceInner) GetDrawerId() int64 {
 	if o == nil || IsNil(o.DrawerId) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.DrawerId
@@ -165,7 +165,7 @@ func (o *ExpandersResourceInner) GetDrawerId() int32 {
 
 // GetDrawerIdOk returns a tuple with the DrawerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpandersResourceInner) GetDrawerIdOk() (*int32, bool) {
+func (o *ExpandersResourceInner) GetDrawerIdOk() (*int64, bool) {
 	if o == nil || IsNil(o.DrawerId) {
 		return nil, false
 	}
@@ -181,8 +181,8 @@ func (o *ExpandersResourceInner) HasDrawerId() bool {
 	return false
 }
 
-// SetDrawerId gets a reference to the given int32 and assigns it to the DrawerId field.
-func (o *ExpandersResourceInner) SetDrawerId(v int32) {
+// SetDrawerId gets a reference to the given int64 and assigns it to the DrawerId field.
+func (o *ExpandersResourceInner) SetDrawerId(v int64) {
 	o.DrawerId = &v
 }
 
@@ -219,9 +219,9 @@ func (o *ExpandersResourceInner) SetDurableId(v string) {
 }
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
-func (o *ExpandersResourceInner) GetEnclosureId() int32 {
+func (o *ExpandersResourceInner) GetEnclosureId() int64 {
 	if o == nil || IsNil(o.EnclosureId) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.EnclosureId
@@ -229,7 +229,7 @@ func (o *ExpandersResourceInner) GetEnclosureId() int32 {
 
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpandersResourceInner) GetEnclosureIdOk() (*int32, bool) {
+func (o *ExpandersResourceInner) GetEnclosureIdOk() (*int64, bool) {
 	if o == nil || IsNil(o.EnclosureId) {
 		return nil, false
 	}
@@ -245,8 +245,8 @@ func (o *ExpandersResourceInner) HasEnclosureId() bool {
 	return false
 }
 
-// SetEnclosureId gets a reference to the given int32 and assigns it to the EnclosureId field.
-func (o *ExpandersResourceInner) SetEnclosureId(v int32) {
+// SetEnclosureId gets a reference to the given int64 and assigns it to the EnclosureId field.
+func (o *ExpandersResourceInner) SetEnclosureId(v int64) {
 	o.EnclosureId = &v
 }
 
@@ -347,9 +347,9 @@ func (o *ExpandersResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
-func (o *ExpandersResourceInner) GetHealthNumeric() int32 {
+func (o *ExpandersResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HealthNumeric
@@ -357,7 +357,7 @@ func (o *ExpandersResourceInner) GetHealthNumeric() int32 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpandersResourceInner) GetHealthNumericOk() (*int32, bool) {
+func (o *ExpandersResourceInner) GetHealthNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -373,8 +373,8 @@ func (o *ExpandersResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
-// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
-func (o *ExpandersResourceInner) SetHealthNumeric(v int32) {
+// SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
+func (o *ExpandersResourceInner) SetHealthNumeric(v int64) {
 	o.HealthNumeric = &v
 }
 
@@ -539,9 +539,9 @@ func (o *ExpandersResourceInner) SetPathId(v string) {
 }
 
 // GetPathIdNumeric returns the PathIdNumeric field value if set, zero value otherwise.
-func (o *ExpandersResourceInner) GetPathIdNumeric() int32 {
+func (o *ExpandersResourceInner) GetPathIdNumeric() int64 {
 	if o == nil || IsNil(o.PathIdNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PathIdNumeric
@@ -549,7 +549,7 @@ func (o *ExpandersResourceInner) GetPathIdNumeric() int32 {
 
 // GetPathIdNumericOk returns a tuple with the PathIdNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpandersResourceInner) GetPathIdNumericOk() (*int32, bool) {
+func (o *ExpandersResourceInner) GetPathIdNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.PathIdNumeric) {
 		return nil, false
 	}
@@ -565,8 +565,8 @@ func (o *ExpandersResourceInner) HasPathIdNumeric() bool {
 	return false
 }
 
-// SetPathIdNumeric gets a reference to the given int32 and assigns it to the PathIdNumeric field.
-func (o *ExpandersResourceInner) SetPathIdNumeric(v int32) {
+// SetPathIdNumeric gets a reference to the given int64 and assigns it to the PathIdNumeric field.
+func (o *ExpandersResourceInner) SetPathIdNumeric(v int64) {
 	o.PathIdNumeric = &v
 }
 
@@ -603,9 +603,9 @@ func (o *ExpandersResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
-func (o *ExpandersResourceInner) GetStatusNumeric() int32 {
+func (o *ExpandersResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StatusNumeric
@@ -613,7 +613,7 @@ func (o *ExpandersResourceInner) GetStatusNumeric() int32 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExpandersResourceInner) GetStatusNumericOk() (*int32, bool) {
+func (o *ExpandersResourceInner) GetStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -629,8 +629,8 @@ func (o *ExpandersResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
-// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
-func (o *ExpandersResourceInner) SetStatusNumeric(v int32) {
+// SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
+func (o *ExpandersResourceInner) SetStatusNumeric(v int64) {
 	o.StatusNumeric = &v
 }
 

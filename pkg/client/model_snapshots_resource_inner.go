@@ -28,53 +28,53 @@ type SnapshotsResourceInner struct {
 	// The resource URL of the root of the snapshot tree
 	BaseVolumesUrl          *string `json:"base-volumes-url,omitempty"`
 	CreationDateTime        *string `json:"creation-date-time,omitempty"`
-	CreationDateTimeNumeric *int32  `json:"creation-date-time-numeric,omitempty"`
+	CreationDateTimeNumeric *int64  `json:"creation-date-time-numeric,omitempty"`
 	DurableId               *string `json:"durable-id,omitempty"`
 	// Source volume for snapshots
 	MasterVolumeName *string `json:"master-volume-name,omitempty"`
 	Name             *string `json:"name,omitempty"`
-	NumChildren      *int32  `json:"num-children,omitempty"`
-	NumSnapsTree     *int32  `json:"num-snaps-tree,omitempty"`
+	NumChildren      *int64  `json:"num-children,omitempty"`
+	NumSnapsTree     *int64  `json:"num-snaps-tree,omitempty"`
 	// Attribute priority
 	PriorityValue *string `json:"priority-value,omitempty"`
 	// Retention priority of the snapshot or children
 	RetentionPriority *string `json:"retention-priority,omitempty"`
 	// Retention priority of the snapshot or children( In numeric form )
-	RetentionPriorityNumeric *int32  `json:"retention-priority-numeric,omitempty"`
+	RetentionPriorityNumeric *int64  `json:"retention-priority-numeric,omitempty"`
 	SerialNumber             *string `json:"serial-number,omitempty"`
 	Shareddata               *string `json:"shareddata,omitempty"`
-	ShareddataNumeric        *int32  `json:"shareddata-numeric,omitempty"`
+	ShareddataNumeric        *int64  `json:"shareddata-numeric,omitempty"`
 	// Amount of snapshot data associated with this volume
 	SnapData *string `json:"snap-data,omitempty"`
 	// Amount of snapshot data associated with this volume( In numeric form )
-	SnapDataNumeric *int32 `json:"snap-data-numeric,omitempty"`
+	SnapDataNumeric *int64 `json:"snap-data-numeric,omitempty"`
 	// User-defined name of the snap pool
 	SnapPoolName *string `json:"snap-pool-name,omitempty"`
 	// Associated snapshot type
 	SnapshotType *string `json:"snapshot-type,omitempty"`
 	// Associated snapshot type( In numeric form )
-	SnapshotTypeNumeric *int32  `json:"snapshot-type-numeric,omitempty"`
+	SnapshotTypeNumeric *int64  `json:"snapshot-type-numeric,omitempty"`
 	Status              *string `json:"status,omitempty"`
-	StatusNumeric       *int32  `json:"status-numeric,omitempty"`
+	StatusNumeric       *int64  `json:"status-numeric,omitempty"`
 	// Probable cause for the current status
 	StatusReason *string `json:"status-reason,omitempty"`
 	// Probable cause for the current status( In numeric form )
-	StatusReasonNumeric *int32 `json:"status-reason-numeric,omitempty"`
+	StatusReasonNumeric *int64 `json:"status-reason-numeric,omitempty"`
 	// User-defined name for the pool
 	StoragePoolName *string `json:"storage-pool-name,omitempty"`
 	StoragePoolsUrl *string `json:"storage-pools-url,omitempty"`
 	// Storage type
 	StorageType *string `json:"storage-type,omitempty"`
 	// Storage type( In numeric form )
-	StorageTypeNumeric *int32 `json:"storage-type-numeric,omitempty"`
+	StorageTypeNumeric *int64 `json:"storage-type-numeric,omitempty"`
 	// The total size formatted using the session settings for base, precision, and units
 	TotalSize *string `json:"total-size,omitempty"`
 	// The total size formatted using the session settings for base, precision, and units( In numeric form )
-	TotalSizeNumeric *int32 `json:"total-size-numeric,omitempty"`
+	TotalSizeNumeric *int64 `json:"total-size-numeric,omitempty"`
 	// Amount of preserved and write data that is unique to the snapshot
 	Uniquedata *string `json:"uniquedata,omitempty"`
 	// Amount of preserved and write data that is unique to the snapshot( In numeric form )
-	UniquedataNumeric *int32 `json:"uniquedata-numeric,omitempty"`
+	UniquedataNumeric *int64 `json:"uniquedata-numeric,omitempty"`
 	// The resource URL
 	Url *string `json:"url,omitempty"`
 	// User-assigned priority
@@ -295,9 +295,9 @@ func (o *SnapshotsResourceInner) SetCreationDateTime(v string) {
 }
 
 // GetCreationDateTimeNumeric returns the CreationDateTimeNumeric field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetCreationDateTimeNumeric() int32 {
+func (o *SnapshotsResourceInner) GetCreationDateTimeNumeric() int64 {
 	if o == nil || IsNil(o.CreationDateTimeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CreationDateTimeNumeric
@@ -305,7 +305,7 @@ func (o *SnapshotsResourceInner) GetCreationDateTimeNumeric() int32 {
 
 // GetCreationDateTimeNumericOk returns a tuple with the CreationDateTimeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetCreationDateTimeNumericOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetCreationDateTimeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CreationDateTimeNumeric) {
 		return nil, false
 	}
@@ -321,8 +321,8 @@ func (o *SnapshotsResourceInner) HasCreationDateTimeNumeric() bool {
 	return false
 }
 
-// SetCreationDateTimeNumeric gets a reference to the given int32 and assigns it to the CreationDateTimeNumeric field.
-func (o *SnapshotsResourceInner) SetCreationDateTimeNumeric(v int32) {
+// SetCreationDateTimeNumeric gets a reference to the given int64 and assigns it to the CreationDateTimeNumeric field.
+func (o *SnapshotsResourceInner) SetCreationDateTimeNumeric(v int64) {
 	o.CreationDateTimeNumeric = &v
 }
 
@@ -423,9 +423,9 @@ func (o *SnapshotsResourceInner) SetName(v string) {
 }
 
 // GetNumChildren returns the NumChildren field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetNumChildren() int32 {
+func (o *SnapshotsResourceInner) GetNumChildren() int64 {
 	if o == nil || IsNil(o.NumChildren) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NumChildren
@@ -433,7 +433,7 @@ func (o *SnapshotsResourceInner) GetNumChildren() int32 {
 
 // GetNumChildrenOk returns a tuple with the NumChildren field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetNumChildrenOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetNumChildrenOk() (*int64, bool) {
 	if o == nil || IsNil(o.NumChildren) {
 		return nil, false
 	}
@@ -449,15 +449,15 @@ func (o *SnapshotsResourceInner) HasNumChildren() bool {
 	return false
 }
 
-// SetNumChildren gets a reference to the given int32 and assigns it to the NumChildren field.
-func (o *SnapshotsResourceInner) SetNumChildren(v int32) {
+// SetNumChildren gets a reference to the given int64 and assigns it to the NumChildren field.
+func (o *SnapshotsResourceInner) SetNumChildren(v int64) {
 	o.NumChildren = &v
 }
 
 // GetNumSnapsTree returns the NumSnapsTree field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetNumSnapsTree() int32 {
+func (o *SnapshotsResourceInner) GetNumSnapsTree() int64 {
 	if o == nil || IsNil(o.NumSnapsTree) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NumSnapsTree
@@ -465,7 +465,7 @@ func (o *SnapshotsResourceInner) GetNumSnapsTree() int32 {
 
 // GetNumSnapsTreeOk returns a tuple with the NumSnapsTree field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetNumSnapsTreeOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetNumSnapsTreeOk() (*int64, bool) {
 	if o == nil || IsNil(o.NumSnapsTree) {
 		return nil, false
 	}
@@ -481,8 +481,8 @@ func (o *SnapshotsResourceInner) HasNumSnapsTree() bool {
 	return false
 }
 
-// SetNumSnapsTree gets a reference to the given int32 and assigns it to the NumSnapsTree field.
-func (o *SnapshotsResourceInner) SetNumSnapsTree(v int32) {
+// SetNumSnapsTree gets a reference to the given int64 and assigns it to the NumSnapsTree field.
+func (o *SnapshotsResourceInner) SetNumSnapsTree(v int64) {
 	o.NumSnapsTree = &v
 }
 
@@ -551,9 +551,9 @@ func (o *SnapshotsResourceInner) SetRetentionPriority(v string) {
 }
 
 // GetRetentionPriorityNumeric returns the RetentionPriorityNumeric field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetRetentionPriorityNumeric() int32 {
+func (o *SnapshotsResourceInner) GetRetentionPriorityNumeric() int64 {
 	if o == nil || IsNil(o.RetentionPriorityNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RetentionPriorityNumeric
@@ -561,7 +561,7 @@ func (o *SnapshotsResourceInner) GetRetentionPriorityNumeric() int32 {
 
 // GetRetentionPriorityNumericOk returns a tuple with the RetentionPriorityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetRetentionPriorityNumericOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetRetentionPriorityNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.RetentionPriorityNumeric) {
 		return nil, false
 	}
@@ -577,8 +577,8 @@ func (o *SnapshotsResourceInner) HasRetentionPriorityNumeric() bool {
 	return false
 }
 
-// SetRetentionPriorityNumeric gets a reference to the given int32 and assigns it to the RetentionPriorityNumeric field.
-func (o *SnapshotsResourceInner) SetRetentionPriorityNumeric(v int32) {
+// SetRetentionPriorityNumeric gets a reference to the given int64 and assigns it to the RetentionPriorityNumeric field.
+func (o *SnapshotsResourceInner) SetRetentionPriorityNumeric(v int64) {
 	o.RetentionPriorityNumeric = &v
 }
 
@@ -647,9 +647,9 @@ func (o *SnapshotsResourceInner) SetShareddata(v string) {
 }
 
 // GetShareddataNumeric returns the ShareddataNumeric field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetShareddataNumeric() int32 {
+func (o *SnapshotsResourceInner) GetShareddataNumeric() int64 {
 	if o == nil || IsNil(o.ShareddataNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ShareddataNumeric
@@ -657,7 +657,7 @@ func (o *SnapshotsResourceInner) GetShareddataNumeric() int32 {
 
 // GetShareddataNumericOk returns a tuple with the ShareddataNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetShareddataNumericOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetShareddataNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ShareddataNumeric) {
 		return nil, false
 	}
@@ -673,8 +673,8 @@ func (o *SnapshotsResourceInner) HasShareddataNumeric() bool {
 	return false
 }
 
-// SetShareddataNumeric gets a reference to the given int32 and assigns it to the ShareddataNumeric field.
-func (o *SnapshotsResourceInner) SetShareddataNumeric(v int32) {
+// SetShareddataNumeric gets a reference to the given int64 and assigns it to the ShareddataNumeric field.
+func (o *SnapshotsResourceInner) SetShareddataNumeric(v int64) {
 	o.ShareddataNumeric = &v
 }
 
@@ -711,9 +711,9 @@ func (o *SnapshotsResourceInner) SetSnapData(v string) {
 }
 
 // GetSnapDataNumeric returns the SnapDataNumeric field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetSnapDataNumeric() int32 {
+func (o *SnapshotsResourceInner) GetSnapDataNumeric() int64 {
 	if o == nil || IsNil(o.SnapDataNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SnapDataNumeric
@@ -721,7 +721,7 @@ func (o *SnapshotsResourceInner) GetSnapDataNumeric() int32 {
 
 // GetSnapDataNumericOk returns a tuple with the SnapDataNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetSnapDataNumericOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetSnapDataNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.SnapDataNumeric) {
 		return nil, false
 	}
@@ -737,8 +737,8 @@ func (o *SnapshotsResourceInner) HasSnapDataNumeric() bool {
 	return false
 }
 
-// SetSnapDataNumeric gets a reference to the given int32 and assigns it to the SnapDataNumeric field.
-func (o *SnapshotsResourceInner) SetSnapDataNumeric(v int32) {
+// SetSnapDataNumeric gets a reference to the given int64 and assigns it to the SnapDataNumeric field.
+func (o *SnapshotsResourceInner) SetSnapDataNumeric(v int64) {
 	o.SnapDataNumeric = &v
 }
 
@@ -807,9 +807,9 @@ func (o *SnapshotsResourceInner) SetSnapshotType(v string) {
 }
 
 // GetSnapshotTypeNumeric returns the SnapshotTypeNumeric field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetSnapshotTypeNumeric() int32 {
+func (o *SnapshotsResourceInner) GetSnapshotTypeNumeric() int64 {
 	if o == nil || IsNil(o.SnapshotTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SnapshotTypeNumeric
@@ -817,7 +817,7 @@ func (o *SnapshotsResourceInner) GetSnapshotTypeNumeric() int32 {
 
 // GetSnapshotTypeNumericOk returns a tuple with the SnapshotTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetSnapshotTypeNumericOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetSnapshotTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.SnapshotTypeNumeric) {
 		return nil, false
 	}
@@ -833,8 +833,8 @@ func (o *SnapshotsResourceInner) HasSnapshotTypeNumeric() bool {
 	return false
 }
 
-// SetSnapshotTypeNumeric gets a reference to the given int32 and assigns it to the SnapshotTypeNumeric field.
-func (o *SnapshotsResourceInner) SetSnapshotTypeNumeric(v int32) {
+// SetSnapshotTypeNumeric gets a reference to the given int64 and assigns it to the SnapshotTypeNumeric field.
+func (o *SnapshotsResourceInner) SetSnapshotTypeNumeric(v int64) {
 	o.SnapshotTypeNumeric = &v
 }
 
@@ -871,9 +871,9 @@ func (o *SnapshotsResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetStatusNumeric() int32 {
+func (o *SnapshotsResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StatusNumeric
@@ -881,7 +881,7 @@ func (o *SnapshotsResourceInner) GetStatusNumeric() int32 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetStatusNumericOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -897,8 +897,8 @@ func (o *SnapshotsResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
-// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
-func (o *SnapshotsResourceInner) SetStatusNumeric(v int32) {
+// SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
+func (o *SnapshotsResourceInner) SetStatusNumeric(v int64) {
 	o.StatusNumeric = &v
 }
 
@@ -935,9 +935,9 @@ func (o *SnapshotsResourceInner) SetStatusReason(v string) {
 }
 
 // GetStatusReasonNumeric returns the StatusReasonNumeric field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetStatusReasonNumeric() int32 {
+func (o *SnapshotsResourceInner) GetStatusReasonNumeric() int64 {
 	if o == nil || IsNil(o.StatusReasonNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StatusReasonNumeric
@@ -945,7 +945,7 @@ func (o *SnapshotsResourceInner) GetStatusReasonNumeric() int32 {
 
 // GetStatusReasonNumericOk returns a tuple with the StatusReasonNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetStatusReasonNumericOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetStatusReasonNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StatusReasonNumeric) {
 		return nil, false
 	}
@@ -961,8 +961,8 @@ func (o *SnapshotsResourceInner) HasStatusReasonNumeric() bool {
 	return false
 }
 
-// SetStatusReasonNumeric gets a reference to the given int32 and assigns it to the StatusReasonNumeric field.
-func (o *SnapshotsResourceInner) SetStatusReasonNumeric(v int32) {
+// SetStatusReasonNumeric gets a reference to the given int64 and assigns it to the StatusReasonNumeric field.
+func (o *SnapshotsResourceInner) SetStatusReasonNumeric(v int64) {
 	o.StatusReasonNumeric = &v
 }
 
@@ -1063,9 +1063,9 @@ func (o *SnapshotsResourceInner) SetStorageType(v string) {
 }
 
 // GetStorageTypeNumeric returns the StorageTypeNumeric field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetStorageTypeNumeric() int32 {
+func (o *SnapshotsResourceInner) GetStorageTypeNumeric() int64 {
 	if o == nil || IsNil(o.StorageTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StorageTypeNumeric
@@ -1073,7 +1073,7 @@ func (o *SnapshotsResourceInner) GetStorageTypeNumeric() int32 {
 
 // GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetStorageTypeNumericOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetStorageTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StorageTypeNumeric) {
 		return nil, false
 	}
@@ -1089,8 +1089,8 @@ func (o *SnapshotsResourceInner) HasStorageTypeNumeric() bool {
 	return false
 }
 
-// SetStorageTypeNumeric gets a reference to the given int32 and assigns it to the StorageTypeNumeric field.
-func (o *SnapshotsResourceInner) SetStorageTypeNumeric(v int32) {
+// SetStorageTypeNumeric gets a reference to the given int64 and assigns it to the StorageTypeNumeric field.
+func (o *SnapshotsResourceInner) SetStorageTypeNumeric(v int64) {
 	o.StorageTypeNumeric = &v
 }
 
@@ -1127,9 +1127,9 @@ func (o *SnapshotsResourceInner) SetTotalSize(v string) {
 }
 
 // GetTotalSizeNumeric returns the TotalSizeNumeric field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetTotalSizeNumeric() int32 {
+func (o *SnapshotsResourceInner) GetTotalSizeNumeric() int64 {
 	if o == nil || IsNil(o.TotalSizeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TotalSizeNumeric
@@ -1137,7 +1137,7 @@ func (o *SnapshotsResourceInner) GetTotalSizeNumeric() int32 {
 
 // GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetTotalSizeNumericOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetTotalSizeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.TotalSizeNumeric) {
 		return nil, false
 	}
@@ -1153,8 +1153,8 @@ func (o *SnapshotsResourceInner) HasTotalSizeNumeric() bool {
 	return false
 }
 
-// SetTotalSizeNumeric gets a reference to the given int32 and assigns it to the TotalSizeNumeric field.
-func (o *SnapshotsResourceInner) SetTotalSizeNumeric(v int32) {
+// SetTotalSizeNumeric gets a reference to the given int64 and assigns it to the TotalSizeNumeric field.
+func (o *SnapshotsResourceInner) SetTotalSizeNumeric(v int64) {
 	o.TotalSizeNumeric = &v
 }
 
@@ -1191,9 +1191,9 @@ func (o *SnapshotsResourceInner) SetUniquedata(v string) {
 }
 
 // GetUniquedataNumeric returns the UniquedataNumeric field value if set, zero value otherwise.
-func (o *SnapshotsResourceInner) GetUniquedataNumeric() int32 {
+func (o *SnapshotsResourceInner) GetUniquedataNumeric() int64 {
 	if o == nil || IsNil(o.UniquedataNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.UniquedataNumeric
@@ -1201,7 +1201,7 @@ func (o *SnapshotsResourceInner) GetUniquedataNumeric() int32 {
 
 // GetUniquedataNumericOk returns a tuple with the UniquedataNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SnapshotsResourceInner) GetUniquedataNumericOk() (*int32, bool) {
+func (o *SnapshotsResourceInner) GetUniquedataNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.UniquedataNumeric) {
 		return nil, false
 	}
@@ -1217,8 +1217,8 @@ func (o *SnapshotsResourceInner) HasUniquedataNumeric() bool {
 	return false
 }
 
-// SetUniquedataNumeric gets a reference to the given int32 and assigns it to the UniquedataNumeric field.
-func (o *SnapshotsResourceInner) SetUniquedataNumeric(v int32) {
+// SetUniquedataNumeric gets a reference to the given int64 and assigns it to the UniquedataNumeric field.
+func (o *SnapshotsResourceInner) SetUniquedataNumeric(v int64) {
 	o.UniquedataNumeric = &v
 }
 

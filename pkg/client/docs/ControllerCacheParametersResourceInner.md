@@ -7,17 +7,17 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **CacheFlush** | Pointer to **string** |  | [optional] 
-**CacheFlushNumeric** | Pointer to **int32** |  | [optional] 
+**CacheFlushNumeric** | Pointer to **int64** |  | [optional] 
 **ControllerId** | Pointer to **string** |  | [optional] 
-**ControllerIdNumeric** | Pointer to **int32** |  | [optional] 
+**ControllerIdNumeric** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **MemoryCardHealth** | Pointer to **string** |  | [optional] 
-**MemoryCardHealthNumeric** | Pointer to **int32** |  | [optional] 
+**MemoryCardHealthNumeric** | Pointer to **int64** |  | [optional] 
 **MemoryCardStatus** | Pointer to **string** |  | [optional] 
-**MemoryCardStatusNumeric** | Pointer to **int32** |  | [optional] 
+**MemoryCardStatusNumeric** | Pointer to **int64** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **WriteBackStatus** | Pointer to **string** | Indicates whether disk write-back cache is enabled | [optional] 
-**WriteBackStatusNumeric** | Pointer to **int32** | Indicates whether disk write-back cache is enabled( In numeric form ) | [optional] 
+**WriteBackStatusNumeric** | Pointer to **int64** | Indicates whether disk write-back cache is enabled( In numeric form ) | [optional] 
 
 ## Methods
 
@@ -115,20 +115,20 @@ HasCacheFlush returns a boolean if a field has been set.
 
 ### GetCacheFlushNumeric
 
-`func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int32`
+`func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int64`
 
 GetCacheFlushNumeric returns the CacheFlushNumeric field if non-nil, zero value otherwise.
 
 ### GetCacheFlushNumericOk
 
-`func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumericOk() (*int32, bool)`
+`func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumericOk() (*int64, bool)`
 
 GetCacheFlushNumericOk returns a tuple with the CacheFlushNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheFlushNumeric
 
-`func (o *ControllerCacheParametersResourceInner) SetCacheFlushNumeric(v int32)`
+`func (o *ControllerCacheParametersResourceInner) SetCacheFlushNumeric(v int64)`
 
 SetCacheFlushNumeric sets CacheFlushNumeric field to given value.
 
@@ -165,20 +165,20 @@ HasControllerId returns a boolean if a field has been set.
 
 ### GetControllerIdNumeric
 
-`func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int32`
+`func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int64`
 
 GetControllerIdNumeric returns the ControllerIdNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerIdNumericOk
 
-`func (o *ControllerCacheParametersResourceInner) GetControllerIdNumericOk() (*int32, bool)`
+`func (o *ControllerCacheParametersResourceInner) GetControllerIdNumericOk() (*int64, bool)`
 
 GetControllerIdNumericOk returns a tuple with the ControllerIdNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerIdNumeric
 
-`func (o *ControllerCacheParametersResourceInner) SetControllerIdNumeric(v int32)`
+`func (o *ControllerCacheParametersResourceInner) SetControllerIdNumeric(v int64)`
 
 SetControllerIdNumeric sets ControllerIdNumeric field to given value.
 
@@ -240,20 +240,20 @@ HasMemoryCardHealth returns a boolean if a field has been set.
 
 ### GetMemoryCardHealthNumeric
 
-`func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() int32`
+`func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() int64`
 
 GetMemoryCardHealthNumeric returns the MemoryCardHealthNumeric field if non-nil, zero value otherwise.
 
 ### GetMemoryCardHealthNumericOk
 
-`func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumericOk() (*int32, bool)`
+`func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumericOk() (*int64, bool)`
 
 GetMemoryCardHealthNumericOk returns a tuple with the MemoryCardHealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemoryCardHealthNumeric
 
-`func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealthNumeric(v int32)`
+`func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealthNumeric(v int64)`
 
 SetMemoryCardHealthNumeric sets MemoryCardHealthNumeric field to given value.
 
@@ -290,20 +290,20 @@ HasMemoryCardStatus returns a boolean if a field has been set.
 
 ### GetMemoryCardStatusNumeric
 
-`func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() int32`
+`func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() int64`
 
 GetMemoryCardStatusNumeric returns the MemoryCardStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetMemoryCardStatusNumericOk
 
-`func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumericOk() (*int32, bool)`
+`func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumericOk() (*int64, bool)`
 
 GetMemoryCardStatusNumericOk returns a tuple with the MemoryCardStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemoryCardStatusNumeric
 
-`func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatusNumeric(v int32)`
+`func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatusNumeric(v int64)`
 
 SetMemoryCardStatusNumeric sets MemoryCardStatusNumeric field to given value.
 
@@ -365,20 +365,20 @@ HasWriteBackStatus returns a boolean if a field has been set.
 
 ### GetWriteBackStatusNumeric
 
-`func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int32`
+`func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int64`
 
 GetWriteBackStatusNumeric returns the WriteBackStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetWriteBackStatusNumericOk
 
-`func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumericOk() (*int32, bool)`
+`func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumericOk() (*int64, bool)`
 
 GetWriteBackStatusNumericOk returns a tuple with the WriteBackStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWriteBackStatusNumeric
 
-`func (o *ControllerCacheParametersResourceInner) SetWriteBackStatusNumeric(v int32)`
+`func (o *ControllerCacheParametersResourceInner) SetWriteBackStatusNumeric(v int64)`
 
 SetWriteBackStatusNumeric sets WriteBackStatusNumeric field to given value.
 

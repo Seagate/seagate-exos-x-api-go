@@ -6,25 +6,25 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
-**ActiveVersion** | Pointer to **int32** | Currently assigned IP version | [optional] 
+**ActiveVersion** | Pointer to **int64** | Currently assigned IP version | [optional] 
 **AddressingMode** | Pointer to **string** | The way in which an IP address should be obtained | [optional] 
-**AddressingModeNumeric** | Pointer to **int32** | The way in which an IP address should be obtained( In numeric form ) | [optional] 
+**AddressingModeNumeric** | Pointer to **int64** | The way in which an IP address should be obtained( In numeric form ) | [optional] 
 **AutoNegotiation** | Pointer to **string** |  | [optional] 
-**AutoNegotiationNumeric** | Pointer to **int32** |  | [optional] 
+**AutoNegotiationNumeric** | Pointer to **int64** |  | [optional] 
 **DuplexMode** | Pointer to **string** | Type of duplex mode that is specified | [optional] 
-**DuplexModeNumeric** | Pointer to **int32** | Type of duplex mode that is specified( In numeric form ) | [optional] 
+**DuplexModeNumeric** | Pointer to **int64** | Type of duplex mode that is specified( In numeric form ) | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **Gateway** | Pointer to **string** |  | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **IpAddress** | Pointer to **string** |  | [optional] 
 **LinkSpeed** | Pointer to **string** | Link speed associated with this ethernet port | [optional] 
-**LinkSpeedNumeric** | Pointer to **int32** | Link speed associated with this ethernet port( In numeric form ) | [optional] 
+**LinkSpeedNumeric** | Pointer to **int64** | Link speed associated with this ethernet port( In numeric form ) | [optional] 
 **MacAddress** | Pointer to **string** | MAC address for the network port | [optional] 
 **PingBroadcast** | Pointer to **string** |  | [optional] 
-**PingBroadcastNumeric** | Pointer to **int32** |  | [optional] 
+**PingBroadcastNumeric** | Pointer to **int64** |  | [optional] 
 **SubnetMask** | Pointer to **string** | Network port subnet mask | [optional] 
 
 ## Methods
@@ -98,20 +98,20 @@ HasMeta returns a boolean if a field has been set.
 
 ### GetActiveVersion
 
-`func (o *NetworkParametersResourceInner) GetActiveVersion() int32`
+`func (o *NetworkParametersResourceInner) GetActiveVersion() int64`
 
 GetActiveVersion returns the ActiveVersion field if non-nil, zero value otherwise.
 
 ### GetActiveVersionOk
 
-`func (o *NetworkParametersResourceInner) GetActiveVersionOk() (*int32, bool)`
+`func (o *NetworkParametersResourceInner) GetActiveVersionOk() (*int64, bool)`
 
 GetActiveVersionOk returns a tuple with the ActiveVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetActiveVersion
 
-`func (o *NetworkParametersResourceInner) SetActiveVersion(v int32)`
+`func (o *NetworkParametersResourceInner) SetActiveVersion(v int64)`
 
 SetActiveVersion sets ActiveVersion field to given value.
 
@@ -148,20 +148,20 @@ HasAddressingMode returns a boolean if a field has been set.
 
 ### GetAddressingModeNumeric
 
-`func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int32`
+`func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int64`
 
 GetAddressingModeNumeric returns the AddressingModeNumeric field if non-nil, zero value otherwise.
 
 ### GetAddressingModeNumericOk
 
-`func (o *NetworkParametersResourceInner) GetAddressingModeNumericOk() (*int32, bool)`
+`func (o *NetworkParametersResourceInner) GetAddressingModeNumericOk() (*int64, bool)`
 
 GetAddressingModeNumericOk returns a tuple with the AddressingModeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAddressingModeNumeric
 
-`func (o *NetworkParametersResourceInner) SetAddressingModeNumeric(v int32)`
+`func (o *NetworkParametersResourceInner) SetAddressingModeNumeric(v int64)`
 
 SetAddressingModeNumeric sets AddressingModeNumeric field to given value.
 
@@ -198,20 +198,20 @@ HasAutoNegotiation returns a boolean if a field has been set.
 
 ### GetAutoNegotiationNumeric
 
-`func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int32`
+`func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int64`
 
 GetAutoNegotiationNumeric returns the AutoNegotiationNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoNegotiationNumericOk
 
-`func (o *NetworkParametersResourceInner) GetAutoNegotiationNumericOk() (*int32, bool)`
+`func (o *NetworkParametersResourceInner) GetAutoNegotiationNumericOk() (*int64, bool)`
 
 GetAutoNegotiationNumericOk returns a tuple with the AutoNegotiationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoNegotiationNumeric
 
-`func (o *NetworkParametersResourceInner) SetAutoNegotiationNumeric(v int32)`
+`func (o *NetworkParametersResourceInner) SetAutoNegotiationNumeric(v int64)`
 
 SetAutoNegotiationNumeric sets AutoNegotiationNumeric field to given value.
 
@@ -248,20 +248,20 @@ HasDuplexMode returns a boolean if a field has been set.
 
 ### GetDuplexModeNumeric
 
-`func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int32`
+`func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int64`
 
 GetDuplexModeNumeric returns the DuplexModeNumeric field if non-nil, zero value otherwise.
 
 ### GetDuplexModeNumericOk
 
-`func (o *NetworkParametersResourceInner) GetDuplexModeNumericOk() (*int32, bool)`
+`func (o *NetworkParametersResourceInner) GetDuplexModeNumericOk() (*int64, bool)`
 
 GetDuplexModeNumericOk returns a tuple with the DuplexModeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDuplexModeNumeric
 
-`func (o *NetworkParametersResourceInner) SetDuplexModeNumeric(v int32)`
+`func (o *NetworkParametersResourceInner) SetDuplexModeNumeric(v int64)`
 
 SetDuplexModeNumeric sets DuplexModeNumeric field to given value.
 
@@ -348,20 +348,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *NetworkParametersResourceInner) GetHealthNumeric() int32`
+`func (o *NetworkParametersResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *NetworkParametersResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *NetworkParametersResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *NetworkParametersResourceInner) SetHealthNumeric(v int32)`
+`func (o *NetworkParametersResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -473,20 +473,20 @@ HasLinkSpeed returns a boolean if a field has been set.
 
 ### GetLinkSpeedNumeric
 
-`func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int32`
+`func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int64`
 
 GetLinkSpeedNumeric returns the LinkSpeedNumeric field if non-nil, zero value otherwise.
 
 ### GetLinkSpeedNumericOk
 
-`func (o *NetworkParametersResourceInner) GetLinkSpeedNumericOk() (*int32, bool)`
+`func (o *NetworkParametersResourceInner) GetLinkSpeedNumericOk() (*int64, bool)`
 
 GetLinkSpeedNumericOk returns a tuple with the LinkSpeedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLinkSpeedNumeric
 
-`func (o *NetworkParametersResourceInner) SetLinkSpeedNumeric(v int32)`
+`func (o *NetworkParametersResourceInner) SetLinkSpeedNumeric(v int64)`
 
 SetLinkSpeedNumeric sets LinkSpeedNumeric field to given value.
 
@@ -548,20 +548,20 @@ HasPingBroadcast returns a boolean if a field has been set.
 
 ### GetPingBroadcastNumeric
 
-`func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int32`
+`func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int64`
 
 GetPingBroadcastNumeric returns the PingBroadcastNumeric field if non-nil, zero value otherwise.
 
 ### GetPingBroadcastNumericOk
 
-`func (o *NetworkParametersResourceInner) GetPingBroadcastNumericOk() (*int32, bool)`
+`func (o *NetworkParametersResourceInner) GetPingBroadcastNumericOk() (*int64, bool)`
 
 GetPingBroadcastNumericOk returns a tuple with the PingBroadcastNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPingBroadcastNumeric
 
-`func (o *NetworkParametersResourceInner) SetPingBroadcastNumeric(v int32)`
+`func (o *NetworkParametersResourceInner) SetPingBroadcastNumeric(v int64)`
 
 SetPingBroadcastNumeric sets PingBroadcastNumeric field to given value.
 

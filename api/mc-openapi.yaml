@@ -864,16 +864,19 @@ components:
             type: string
           controller-a-status-numeric:
             type: integer
+            format: int64
           controller-b-serial-number:
             type: string
           controller-b-status:
             type: string
           controller-b-status-numeric:
             type: integer
+            format: int64
           local-ready:
             type: string
           local-ready-numeric:
             type: integer
+            format: int64
           local-reason:
             type: string
           other-MC-status:
@@ -881,11 +884,13 @@ components:
             description: Identifies the availability of the partner MC
           other-MC-status-numeric:
             type: integer
+            format: int64
             description: Identifies the availability of the partner MC( In numeric form )
           other-ready:
             type: string
           other-ready-numeric:
             type: integer
+            format: int64
           other-reason:
             type: string
           redundancy-mode:
@@ -893,17 +898,20 @@ components:
             description: Mode in which the controllers are operating
           redundancy-mode-numeric:
             type: integer
+            format: int64
             description: Mode in which the controllers are operating( In numeric form )
           redundancy-status:
             type: string
             description: Current operational state of the controllers
           redundancy-status-numeric:
             type: integer
+            format: int64
             description: Current operational state of the controllers( In numeric form )
           system-ready:
             type: string
           system-ready-numeric:
             type: integer
+            format: int64
     systemResource:
       type: array
       minItems: 1
@@ -921,14 +929,17 @@ components:
             type: string
           enclosure-count:
             type: integer
+            format: int64
           fde-security-status:
             type: string
           fde-security-status-numeric:
             type: integer
+            format: int64
           health:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           midplane-serial-number:
@@ -939,22 +950,26 @@ components:
             description: Identifies the availability of the partner MC
           other-MC-status-numeric:
             type: integer
+            format: int64
             description: Identifies the availability of the partner MC( In numeric form )
           pfuStatus:
             type: string
           pfuStatus-numeric:
             type: integer
+            format: int64
           platform-brand:
             type: string
             description: HW Platform Brand
           platform-brand-numeric:
             type: integer
+            format: int64
             description: HW Platform Brand( In numeric form )
           platform-type:
             type: string
             description: HW Platform Type
           platform-type-numeric:
             type: integer
+            format: int64
             description: HW Platform Type( In numeric form )
           product-brand:
             type: string
@@ -970,6 +985,7 @@ components:
             type: string
           security-system-management-numeric:
             type: integer
+            format: int64
           supported-locales:
             type: string
           system-contact:
@@ -1013,6 +1029,7 @@ components:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-recommendation:
@@ -1027,6 +1044,7 @@ components:
             description: Indicates whether the locator LED is on
           locator-led-numeric:
             type: integer
+            format: int64
             description: Indicates whether the locator LED is on( In numeric form )
           name:
             type: string
@@ -1037,20 +1055,24 @@ components:
             description: Position of the component in the enclosure
           position-numeric:
             type: integer
+            format: int64
             description: Position of the component in the enclosure( In numeric form )
           serial-number:
             type: string
           speed:
             type: integer
+            format: int64
           status:
             type: string
           status-numeric:
             type: integer
+            format: int64
           status-ses:
             type: string
             description: SES Common status
           status-ses-numeric:
             type: integer
+            format: int64
             description: SES Common status( In numeric form )
           url:
             type: string
@@ -1071,30 +1093,36 @@ components:
             description: Allocate Reserved Pages First
           allocate-reserved-pages-first-numeric:
             type: integer
+            format: int64
             description: Allocate Reserved Pages First( In numeric form )
           allocated-size:
             type: string
           allocated-size-numeric:
             type: integer
+            format: int64
           allowed-storage-tiers:
             type: string
             description: Allowed Virtual Pool Tiers
           allowed-storage-tiers-numeric:
             type: integer
+            format: int64
             description: Allowed Virtual Pool Tiers( In numeric form )
           attributes:
             type: string
             description: Indicates if the disk is single-pathed
           blocks:
             type: integer
+            format: int64
             description: The size in blocks
           blocksize:
             type: integer
+            format: int64
           cache-optimization:
             type: string
             description: Whether cache is optimized for sequential and random reads, or sequential only
           cache-optimization-numeric:
             type: integer
+            format: int64
             description: Whether cache is optimized for sequential and random reads, or sequential only( In numeric form )
           capabilities:
             type: string
@@ -1104,6 +1132,7 @@ components:
             type: string
           compression-numeric:
             type: integer
+            format: int64
           container-name:
             type: string
             description: Container Name
@@ -1114,24 +1143,29 @@ components:
             type: string
           creation-date-time-numeric:
             type: integer
+            format: int64
           cs-copy-dest:
             type: string
           cs-copy-dest-numeric:
             type: integer
+            format: int64
           cs-copy-src:
             type: string
           cs-copy-src-numeric:
             type: integer
+            format: int64
           cs-primary:
             type: string
           cs-primary-numeric:
             type: integer
+            format: int64
           cs-replication-role:
             type: string
           cs-secondary:
             type: string
           cs-secondary-numeric:
             type: integer
+            format: int64
           durable-id:
             type: string
           group-key:
@@ -1141,6 +1175,7 @@ components:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-recommendation:
@@ -1149,58 +1184,68 @@ components:
             type: string
           interleaved-numeric:
             type: integer
+            format: int64
           large-virtual-extents:
             type: string
             description: Sequentially optimize zone allocation for virtual volume
           large-virtual-extents-numeric:
             type: integer
+            format: int64
             description: Sequentially optimize zone allocation for virtual volume( In numeric form )
           metadata-in-use:
             type: string
             description: Pool Metadata currently being used by volume
           metadata-in-use-numeric:
             type: integer
+            format: int64
             description: Pool Metadata currently being used by volume( In numeric form )
           owner:
             type: string
             description: Controller owning the component
           owner-numeric:
             type: integer
+            format: int64
             description: Controller owning the component( In numeric form )
           pi-format:
             type: string
             description: Used to describe the Host Protection Information
           pi-format-numeric:
             type: integer
+            format: int64
             description: Used to describe the Host Protection Information( In numeric form )
           preferred-owner:
             type: string
             description: Configured owner
           preferred-owner-numeric:
             type: integer
+            format: int64
             description: Configured owner( In numeric form )
           progress:
             type: string
             description: Progress in percent for the volume-copy operation
           progress-numeric:
             type: integer
+            format: int64
             description: Progress in percent for the volume-copy operation( In numeric form )
           raidtype:
             type: string
             description: RAID level
           raidtype-numeric:
             type: integer
+            format: int64
             description: RAID level( In numeric form )
           read-ahead-size:
             type: string
             description: Read-ahead cache setting
           read-ahead-size-numeric:
             type: integer
+            format: int64
             description: Read-ahead cache setting( In numeric form )
           replication-set:
             type: string
           reserved-size-in-pages:
             type: integer
+            format: int64
             description: Reserved Size In Pages
           serial-number:
             type: string
@@ -1209,6 +1254,7 @@ components:
             description: The size or capacity formatted with the current session base, precision, and units
           size-numeric:
             type: integer
+            format: int64
             description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
           snap-pool:
             type: string
@@ -1220,6 +1266,7 @@ components:
             description: Retention priority of the snapshot
           snapshot-retention-priority-numeric:
             type: integer
+            format: int64
             description: Retention priority of the snapshot( In numeric form )
           storage-pool-name:
             type: string
@@ -1231,6 +1278,7 @@ components:
             description: Storage type
           storage-type-numeric:
             type: integer
+            format: int64
             description: Storage type( In numeric form )
           threshold-percent-of-pool:
             type: string
@@ -1239,11 +1287,13 @@ components:
             type: string
           tier-affinity-numeric:
             type: integer
+            format: int64
           total-size:
             type: string
             description: The total size formatted using the session settings for base, precision, and units
           total-size-numeric:
             type: integer
+            format: int64
             description: The total size formatted using the session settings for base, precision, and units( In numeric form )
           url:
             type: string
@@ -1258,6 +1308,7 @@ components:
             type: string
           volume-class-numeric:
             type: integer
+            format: int64
           volume-description:
             type: string
             description: Provides a user-defined volume identifier
@@ -1274,23 +1325,27 @@ components:
             type: string
           volume-qualifier-numeric:
             type: integer
+            format: int64
           volume-type:
             type: string
             description: Indicates whether the volume is being used for Snapshots
           volume-type-numeric:
             type: integer
+            format: int64
             description: Indicates whether the volume is being used for Snapshots( In numeric form )
           volume-usage-type:
             type: string
             description: Indicates the usage of volume
           volume-usage-type-numeric:
             type: integer
+            format: int64
             description: Indicates the usage of volume( In numeric form )
           write-policy:
             type: string
             description: The write-back cache mode
           write-policy-numeric:
             type: integer
+            format: int64
             description: The write-back cache mode( In numeric form )
           wwn:
             type: string
@@ -1300,6 +1355,7 @@ components:
             description: Zero Init Page On Allocation
           zero-init-page-on-allocation-numeric:
             type: integer
+            format: int64
             description: Zero Init Page On Allocation( In numeric form )
     power-suppliesResource:
       type: array
@@ -1318,24 +1374,32 @@ components:
             type: string
           dc12i:
             type: integer
+            format: int64
           dc12v:
             type: integer
+            format: int64
           dc33v:
             type: integer
+            format: int64
           dc5i:
             type: integer
+            format: int64
           dc5v:
             type: integer
+            format: int64
           dctemp:
             type: integer
+            format: int64
           description:
             type: string
           dom-id:
             type: integer
+            format: int64
           durable-id:
             type: string
           enclosure-id:
             type: integer
+            format: int64
           enclosures-url:
             type: string
           fru-shortname:
@@ -1347,6 +1411,7 @@ components:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-recommendation:
@@ -1357,6 +1422,7 @@ components:
             type: string
           mfg-date-numeric:
             type: integer
+            format: int64
           mfg-location:
             type: string
           mfg-vendor-id:
@@ -1372,6 +1438,7 @@ components:
             description: Position of the component in the enclosure
           position-numeric:
             type: integer
+            format: int64
             description: Position of the component in the enclosure( In numeric form )
           revision:
             type: string
@@ -1382,6 +1449,7 @@ components:
             type: string
           status-numeric:
             type: integer
+            format: int64
           url:
             type: string
             description: The resource URL
@@ -1406,6 +1474,7 @@ components:
             type: string
           certificate-status-numeric:
             type: integer
+            format: int64
           certificate-text:
             type: string
           certificate-time:
@@ -1414,6 +1483,7 @@ components:
             type: string
           controller-numeric:
             type: integer
+            format: int64
     disk-groupsResource:
       type: array
       minItems: 1
@@ -1429,29 +1499,37 @@ components:
             type: string
           actual-spare-capacity-numeric:
             type: integer
+            format: int64
           allocated-pages:
             type: integer
+            format: int64
             description: Number of pages allocated
           array-drive-type:
             type: string
             description: Disk interface type
           array-drive-type-numeric:
             type: integer
+            format: int64
             description: Disk interface type( In numeric form )
           available-pages:
             type: integer
+            format: int64
             description: Available pages
           blocks:
             type: integer
+            format: int64
             description: The size in blocks
           blocksize:
             type: integer
+            format: int64
           cache-flush-period:
             type: integer
+            format: int64
           cache-read-ahead:
             type: string
           cache-read-ahead-numeric:
             type: integer
+            format: int64
           chunksize:
             type: string
             description: Smallest block of usable space
@@ -1459,84 +1537,104 @@ components:
             type: string
           create-date-numeric:
             type: integer
+            format: int64
           critical-capacity:
             type: string
           critical-capacity-numeric:
             type: integer
+            format: int64
           current-job:
             type: string
           current-job-completion:
             type: string
           current-job-numeric:
             type: integer
+            format: int64
           degraded-capacity:
             type: string
           degraded-capacity-numeric:
             type: integer
+            format: int64
           disk-description:
             type: string
             description: Disk interface Description
           disk-description-numeric:
             type: integer
+            format: int64
             description: Disk interface Description( In numeric form )
           disk-dsd-delay-vdisk:
             type: integer
+            format: int64
           disk-dsd-enable-vdisk:
             type: string
           disk-dsd-enable-vdisk-numeric:
             type: integer
+            format: int64
           diskcount:
             type: integer
+            format: int64
             description: Number of disks
           extended-status:
             type: integer
+            format: int64
             description: Extended status (bits)
           freespace:
             type: string
             description: Amount of free space in the vdisk
           freespace-numeric:
             type: integer
+            format: int64
             description: Amount of free space in the vdisk( In numeric form )
           health:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-reason-numeric:
             type: integer
+            format: int64
           health-recommendation:
             type: string
           health-recommendation-numeric:
             type: integer
+            format: int64
           interleaved-volume-count:
             type: integer
+            format: int64
           is-job-auto-abortable:
             type: string
           is-job-auto-abortable-numeric:
             type: integer
+            format: int64
           job-running:
             type: string
           largest-free-partition-space:
             type: string
           largest-free-partition-space-numeric:
             type: integer
+            format: int64
           linear-volume-boundary:
             type: integer
+            format: int64
           lun:
             type: integer
+            format: int64
             description: Logical Unit Number
           metadata-size:
             type: string
             description: Disk Group Metadata Capacity
           metadata-size-numeric:
             type: integer
+            format: int64
             description: Disk Group Metadata Capacity( In numeric form )
           min-drive-size:
             type: string
             description: Smallest disk size that can be used for this disk group
           min-drive-size-numeric:
             type: integer
+            format: int64
             description: Smallest disk size that can be used for this disk group( In numeric form )
           name:
             type: string
@@ -1545,41 +1643,51 @@ components:
             description: LBA used for the next volume that will be created
           new-partition-lba-numeric:
             type: integer
+            format: int64
             description: LBA used for the next volume that will be created( In numeric form )
           num-array-partitions:
             type: integer
+            format: int64
             description: Number of volumes in this vdisk
           num-drives-per-low-level-array:
             type: integer
+            format: int64
             description: Number of disks in the RAID 10 or 50 subgroup
           num-expansion-partitions:
             type: integer
+            format: int64
           num-partition-segments:
             type: integer
+            format: int64
           overhead:
             type: string
           overhead-numeric:
             type: integer
+            format: int64
           owner:
             type: string
             description: Controller owning the component
           owner-numeric:
             type: integer
+            format: int64
             description: Controller owning the component( In numeric form )
           performance-rank:
             type: integer
+            format: int64
             description: Disk group performance rank within the virtual pool
           pool:
             type: string
             description: Pool
           pool-percentage:
             type: integer
+            format: int64
             description: Portion of the virtual pool used by this disk group
           pool-sector-format:
             type: string
             description: Pool Sector Format
           pool-sector-format-numeric:
             type: integer
+            format: int64
             description: Pool Sector Format( In numeric form )
           pool-serial-number:
             type: string
@@ -1592,25 +1700,30 @@ components:
             description: Configured owner
           preferred-owner-numeric:
             type: integer
+            format: int64
             description: Configured owner( In numeric form )
           raidtype:
             type: string
             description: RAID level
           raidtype-numeric:
             type: integer
+            format: int64
             description: RAID level( In numeric form )
           raw-size:
             type: string
           raw-size-numeric:
             type: integer
+            format: int64
           read-ahead-enabled:
             type: string
             description: Indicates whether read-ahead cache mode is enabled
           read-ahead-enabled-numeric:
             type: integer
+            format: int64
             description: Indicates whether read-ahead cache mode is enabled( In numeric form )
           scrub-duration-goal:
             type: integer
+            format: int64
             description: Preferred duration for vdisk scrub utility
           serial-number:
             type: string
@@ -1619,40 +1732,49 @@ components:
             description: The size or capacity formatted with the current session base, precision, and units
           size-numeric:
             type: integer
+            format: int64
             description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
           sparecount:
             type: integer
+            format: int64
             description: Number of spare disks currently configured
           spear:
             type: string
           spear-numeric:
             type: integer
+            format: int64
           status:
             type: string
           status-numeric:
             type: integer
+            format: int64
           storage-tier:
             type: string
             description: Disk group tier assignment for tiered migration
           storage-tier-numeric:
             type: integer
+            format: int64
             description: Disk group tier assignment for tiered migration( In numeric form )
           storage-type:
             type: string
             description: Storage type
           storage-type-numeric:
             type: integer
+            format: int64
             description: Storage type( In numeric form )
           stripe-width:
             type: string
           stripe-width-numeric:
             type: integer
+            format: int64
           target-spare-capacity:
             type: string
           target-spare-capacity-numeric:
             type: integer
+            format: int64
           total-pages:
             type: integer
+            format: int64
           url:
             type: string
             description: The resource URL
@@ -1661,6 +1783,7 @@ components:
             description: Indicates whether disk write-back cache is enabled
           write-back-enabled-numeric:
             type: integer
+            format: int64
             description: Indicates whether disk write-back cache is enabled( In numeric form )
     tiersResource:
       type: array
@@ -1677,38 +1800,46 @@ components:
             type: string
           affinity-size-numeric:
             type: integer
+            format: int64
           allocated-size:
             type: string
           allocated-size-numeric:
             type: integer
+            format: int64
           available-size:
             type: string
           available-size-numeric:
             type: integer
+            format: int64
           diskcount:
             type: integer
+            format: int64
             description: Number of disks
           pool:
             type: string
             description: Pool
           pool-percentage:
             type: integer
+            format: int64
             description: Portion of the virtual pool used by this disk group
           raw-size:
             type: string
           raw-size-numeric:
             type: integer
+            format: int64
           serial-number:
             type: string
           tier:
             type: string
           tier-numeric:
             type: integer
+            format: int64
           total-size:
             type: string
             description: The total size formatted using the session settings for base, precision, and units
           total-size-numeric:
             type: integer
+            format: int64
             description: The total size formatted using the session settings for base, precision, and units( In numeric form )
     poolsResource:
       type: array
@@ -1723,35 +1854,44 @@ components:
             type: string
           allocated-pages:
             type: integer
+            format: int64
             description: Number of pages allocated
           available-pages:
             type: integer
+            format: int64
             description: Available pages
           available-rfc-size:
             type: string
           available-rfc-size-numeric:
             type: integer
+            format: int64
           blocksize:
             type: integer
+            format: int64
           compression-efficiency:
             type: string
           disk-groups-count:
             type: integer
+            format: int64
           extended-status:
             type: integer
+            format: int64
             description: Extended status (bits)
           health:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-reason-numeric:
             type: integer
+            format: int64
           health-recommendation:
             type: string
           health-recommendation-numeric:
             type: integer
+            format: int64
           high-threshold:
             type: string
             description: High threshold percentage
@@ -1759,6 +1899,7 @@ components:
             type: string
           idle-page-check-numeric:
             type: integer
+            format: int64
           low-threshold:
             type: string
             description: Low threshold percentage
@@ -1767,24 +1908,28 @@ components:
             description: Pool Metadata currently in use
           metadata-allocated-numeric:
             type: integer
+            format: int64
             description: Pool Metadata currently in use( In numeric form )
           metadata-available:
             type: string
             description: Pool Metadata available capacity
           metadata-available-numeric:
             type: integer
+            format: int64
             description: Pool Metadata available capacity( In numeric form )
           metadata-total-size:
             type: string
             description: Disk Group Metadata Total Size
           metadata-total-size-numeric:
             type: integer
+            format: int64
             description: Disk Group Metadata Total Size( In numeric form )
           metadata-vol-size:
             type: string
             description: Size of the storage pool metadata volume
           metadata-vol-size-numeric:
             type: integer
+            format: int64
             description: Size of the storage pool metadata volume( In numeric form )
           middle-threshold:
             type: string
@@ -1794,6 +1939,7 @@ components:
             description: Migration between tiers
           migration-numeric:
             type: integer
+            format: int64
             description: Migration between tiers( In numeric form )
           name:
             type: string
@@ -1801,77 +1947,92 @@ components:
             type: string
           over-committed-numeric:
             type: integer
+            format: int64
           overcommit:
             type: string
           overcommit-numeric:
             type: integer
+            format: int64
           owner:
             type: string
             description: Controller owning the component
           owner-numeric:
             type: integer
+            format: int64
             description: Controller owning the component( In numeric form )
           page-size:
             type: string
             description: Page size in blocks
           page-size-numeric:
             type: integer
+            format: int64
             description: Page size in blocks( In numeric form )
           pool-sector-format:
             type: string
             description: Pool Sector Format
           pool-sector-format-numeric:
             type: integer
+            format: int64
             description: Pool Sector Format( In numeric form )
           preferred-owner:
             type: string
             description: Configured owner
           preferred-owner-numeric:
             type: integer
+            format: int64
             description: Configured owner( In numeric form )
           read-flash-cache:
             type: string
           read-flash-cache-numeric:
             type: integer
+            format: int64
           rebalance:
             type: string
             description: Rebalance within the tier
           rebalance-numeric:
             type: integer
+            format: int64
             description: Rebalance within the tier( In numeric form )
           reserved-size:
             type: string
           reserved-size-numeric:
             type: integer
+            format: int64
           reserved-unalloc-size:
             type: string
           reserved-unalloc-size-numeric:
             type: integer
+            format: int64
           serial-number:
             type: string
           snap-size:
             type: string
           snap-size-numeric:
             type: integer
+            format: int64
           storage-type:
             type: string
             description: Storage type
           storage-type-numeric:
             type: integer
+            format: int64
             description: Storage type( In numeric form )
           total-avail:
             type: string
           total-avail-numeric:
             type: integer
+            format: int64
           total-rfc-size:
             type: string
           total-rfc-size-numeric:
             type: integer
+            format: int64
           total-size:
             type: string
             description: The total size formatted using the session settings for base, precision, and units
           total-size-numeric:
             type: integer
+            format: int64
             description: The total size formatted using the session settings for base, precision, and units( In numeric form )
           url:
             type: string
@@ -1880,13 +2041,16 @@ components:
             type: string
           utility-running-numeric:
             type: integer
+            format: int64
           volumes:
             type: integer
+            format: int64
           zero-scan:
             type: string
             description: Scan for zero-value pages
           zero-scan-numeric:
             type: integer
+            format: int64
             description: Scan for zero-value pages( In numeric form )
           disk-groups:
             $ref: '#/components/schemas/disk-groupsResource'
@@ -1907,33 +2071,42 @@ components:
             type: string
           architecture-numeric:
             type: integer
+            format: int64
           assurance-level:
             type: string
           assurance-level-numeric:
             type: integer
+            format: int64
           attributes:
             type: string
             description: Indicates if the disk is single-pathed
           attributes-numeric:
             type: integer
+            format: int64
             description: Indicates if the disk is single-pathed( In numeric form )
           avg-rsp-time:
             type: integer
+            format: int64
           blink:
             type: integer
+            format: int64
             description: Indicates whether the locator LED is on
           blocks:
             type: integer
+            format: int64
             description: The size in blocks
           blocksize:
             type: integer
+            format: int64
           container-index:
             type: integer
+            format: int64
           copyback-state:
             type: string
             description: Copyback State
           copyback-state-numeric:
             type: integer
+            format: int64
             description: Copyback State( In numeric form )
           current-job-completion:
             type: string
@@ -1941,21 +2114,27 @@ components:
             type: string
           description-numeric:
             type: integer
+            format: int64
           disk-dsd-count:
             type: integer
+            format: int64
           disk-group:
             type: string
             description: Disk Group details
           drawer-id:
             type: integer
+            format: int64
           drive-down-code:
             type: integer
+            format: int64
           dual-port:
             type: integer
+            format: int64
           durable-id:
             type: string
           enclosure-id:
             type: integer
+            format: int64
           enclosure-wwn:
             type: string
             description: Enclosure World Wide Name
@@ -1963,77 +2142,97 @@ components:
             type: string
           error:
             type: integer
+            format: int64
           extended-status:
             type: integer
+            format: int64
             description: Extended status (bits)
           fc-p1-channel:
             type: integer
+            format: int64
           fc-p1-device-id:
             type: integer
+            format: int64
           fc-p1-node-wwn:
             type: string
           fc-p1-port-wwn:
             type: string
           fc-p1-unit-number:
             type: integer
+            format: int64
           fc-p2-channel:
             type: integer
+            format: int64
           fc-p2-device-id:
             type: integer
+            format: int64
           fc-p2-node-wwn:
             type: string
           fc-p2-port-wwn:
             type: string
           fc-p2-unit-number:
             type: integer
+            format: int64
           fde-config-time:
             type: string
           fde-config-time-numeric:
             type: integer
+            format: int64
           fde-state:
             type: string
           fde-state-numeric:
             type: integer
+            format: int64
           fips-capable:
             type: string
           fips-capable-numeric:
             type: integer
+            format: int64
           firmware-update-status:
             type: string
           firmware-update-status-numeric:
             type: integer
+            format: int64
           health:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-reason-numeric:
             type: integer
+            format: int64
           health-recommendation:
             type: string
           health-recommendation-numeric:
             type: integer
+            format: int64
           import-lock-key-id:
             type: string
           index:
             type: integer
+            format: int64
           interface:
             type: string
           interface-numeric:
             type: integer
+            format: int64
           job-running:
             type: string
           job-running-numeric:
             type: integer
+            format: int64
           kmip-state:
             type: string
           kmip-state-numeric:
             type: integer
+            format: int64
           led-status:
             type: string
           led-status-numeric:
             type: integer
+            format: int64
           location:
             type: string
           locator-led:
@@ -2041,89 +2240,110 @@ components:
             description: Indicates whether the locator LED is on
           locator-led-numeric:
             type: integer
+            format: int64
             description: Indicates whether the locator LED is on( In numeric form )
           lock-key-id:
             type: string
           member-index:
             type: integer
+            format: int64
             description: Index for this disk in the vdisk list
           model:
             type: string
           num-depopped-heads:
             type: integer
+            format: int64
             description: Number of depopulated heads
           number-of-ios:
             type: integer
+            format: int64
           owner:
             type: string
             description: Controller owning the component
           owner-numeric:
             type: integer
+            format: int64
             description: Controller owning the component( In numeric form )
           pi-formatted:
             type: string
             description: Used to describe the Disk Protection Information
           pi-formatted-numeric:
             type: integer
+            format: int64
             description: Used to describe the Disk Protection Information( In numeric form )
           port:
             type: integer
+            format: int64
           power-on-hours:
             type: integer
+            format: int64
           recon-state:
             type: string
             description: Reconstruction State
           recon-state-numeric:
             type: integer
+            format: int64
             description: Reconstruction State( In numeric form )
           remanufacture:
             type: string
           remanufacture-numeric:
             type: integer
+            format: int64
           revision:
             type: string
             description: Current revision for this FRU
           rpm:
             type: integer
+            format: int64
             description: Vendor-specified disk speed in thousands of revolutions per minute
           scsi-id:
             type: integer
+            format: int64
             description: SCSI ID assigned to this disk for the primary channel
           secondary-channel:
             type: integer
+            format: int64
             description: SCSI ID assigned to this disk for the secondary channel
           sector-format:
             type: string
           sector-format-numeric:
             type: integer
+            format: int64
           serial-number:
             type: string
           single-ported:
             type: string
           single-ported-numeric:
             type: integer
+            format: int64
           size:
             type: string
             description: The size or capacity formatted with the current session base, precision, and units
           size-numeric:
             type: integer
+            format: int64
             description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
           slot:
             type: integer
+            format: int64
             description: The slot number where the disk is located
           smart:
             type: string
           smart-numeric:
             type: integer
+            format: int64
           speed:
             type: integer
+            format: int64
           spun-down:
             type: integer
+            format: int64
             description: Indicates a drive is spun down
           ssd-life-left:
             type: string
           ssd-life-left-numeric:
             type: integer
+            format: int64
           state:
             type: string
           status:
@@ -2136,34 +2356,41 @@ components:
             description: Disk group tier assignment for tiered migration
           storage-tier-numeric:
             type: integer
+            format: int64
             description: Disk group tier assignment for tiered migration( In numeric form )
           supports-unmap:
             type: string
           supports-unmap-numeric:
             type: integer
+            format: int64
           temperature:
             type: string
           temperature-numeric:
             type: integer
+            format: int64
           temperature-status:
             type: string
           temperature-status-numeric:
             type: integer
+            format: int64
           total-data-transferred:
             type: string
           total-data-transferred-numeric:
             type: integer
+            format: int64
           transfer-rate:
             type: string
             description: Transfer rate of the disk
           transfer-rate-numeric:
             type: integer
+            format: int64
             description: Transfer rate of the disk( In numeric form )
           type:
             type: string
             description: The type of disk
           type-numeric:
             type: integer
+            format: int64
             description: The type of disk( In numeric form )
           url:
             type: string
@@ -2173,6 +2400,7 @@ components:
             description: Disk usage
           usage-numeric:
             type: integer
+            format: int64
             description: Disk usage
           vendor:
             type: string
@@ -2194,59 +2422,72 @@ components:
             type: string
           auto-map-numeric:
             type: integer
+            format: int64
           auto-stall-recovery:
             type: string
             description: Provides detection of when hung controllers are preventing IO from completing
           auto-stall-recovery-numeric:
             type: integer
+            format: int64
             description: Provides detection of when hung controllers are preventing IO from completing( In numeric form )
           auto-unmap:
             type: string
           auto-unmap-numeric:
             type: integer
+            format: int64
           auto-write-back:
             type: string
             description: Data is cached to memory before being written to disk
           auto-write-back-numeric:
             type: integer
+            format: int64
             description: Data is cached to memory before being written to disk( In numeric form )
           background-scrub:
             type: string
             description: Low priority disk group scrub
           background-scrub-interval:
             type: integer
+            format: int64
             description: Disk group scrub start interval
           background-scrub-numeric:
             type: integer
+            format: int64
             description: Low priority disk group scrub( In numeric form )
           cache-flush-timeout:
             type: string
           cache-flush-timeout-numeric:
             type: integer
+            format: int64
           controller-failure:
             type: string
           controller-failure-numeric:
             type: integer
+            format: int64
           default-mapping:
             type: string
           default-mapping-numeric:
             type: integer
+            format: int64
           delete-override:
             type: string
             description: Bypass checks when deleting a pool.
           delete-override-numeric:
             type: integer
+            format: int64
             description: Bypass checks when deleting a pool.( In numeric form )
           disk-dsd-delay:
             type: integer
+            format: int64
           disk-dsd-enable:
             type: string
           disk-dsd-enable-numeric:
             type: integer
+            format: int64
           disk-firmware-update:
             type: string
           disk-firmware-update-numeric:
             type: integer
+            format: int64
           dynamic-spares:
             type: string
             description: If enabled, replaces failed disks in a degraded vdisk with properly sized available disks
@@ -2256,115 +2497,140 @@ components:
             type: string
           fan-failure-numeric:
             type: integer
+            format: int64
           hedged-reads-timeout:
             type: string
           hedged-reads-timeout-numeric:
             type: integer
+            format: int64
           host-cache-control:
             type: string
             description: Whether hosts can change the system's write-back cache setting
           host-cache-control-numeric:
             type: integer
+            format: int64
             description: Whether hosts can change the system's write-back cache setting( In numeric form )
           independent-cache:
             type: string
           independent-cache-numeric:
             type: integer
+            format: int64
           large-pools:
             type: string
           large-pools-numeric:
             type: integer
+            format: int64
           managed-logs:
             type: string
           managed-logs-numeric:
             type: integer
+            format: int64
           memory-card-failure:
             type: string
           memory-card-failure-numeric:
             type: integer
+            format: int64
           missing-lun-response:
             type: string
           missing-lun-response-numeric:
             type: integer
+            format: int64
           partner-firmware-upgrade:
             type: string
             description: Indicates whether automated update of firmware of other controller is enabled
           partner-firmware-upgrade-numeric:
             type: integer
+            format: int64
             description: Indicates whether automated update of firmware of other controller is enabled( In numeric form )
           partner-notify:
             type: string
             description: Indicates whether the write-through trigger is enabled
           partner-notify-numeric:
             type: integer
+            format: int64
             description: Indicates whether the write-through trigger is enabled( In numeric form )
           pcie-hotplug:
             type: string
           pcie-hotplug-numeric:
             type: integer
+            format: int64
           power-supply-failure:
             type: string
             description: Indicates whether the write-through trigger is enabled
           power-supply-failure-numeric:
             type: integer
+            format: int64
             description: Indicates whether the write-through trigger is enabled( In numeric form )
           random-io-performance-optimization:
             type: string
           random-io-performance-optimization-numeric:
             type: integer
+            format: int64
           remanufacture:
             type: string
           remanufacture-numeric:
             type: integer
+            format: int64
           restart-on-capi-fail:
             type: string
           restart-on-capi-fail-numeric:
             type: integer
+            format: int64
           scrub-schedule:
             type: string
           scrub-schedule-numeric:
             type: integer
+            format: int64
           single-controller:
             type: string
           single-controller-numeric:
             type: integer
+            format: int64
           slot-affinity:
             type: string
           slot-affinity-numeric:
             type: integer
+            format: int64
           slow-disk-detection:
             type: string
           slow-disk-detection-numeric:
             type: integer
+            format: int64
           smart:
             type: string
           smart-numeric:
             type: integer
+            format: int64
           ssd-concurrent-access:
             type: string
           ssd-concurrent-access-numeric:
             type: integer
+            format: int64
           super-cap-failure:
             type: string
             description: Indicates whether the write-through trigger is enabled
           super-cap-failure-numeric:
             type: integer
+            format: int64
             description: Indicates whether the write-through trigger is enabled( In numeric form )
           sync-cache-mode:
             type: string
           sync-cache-mode-numeric:
             type: integer
+            format: int64
           temperature-exceeded:
             type: string
             description: Indicates whether the write-through trigger is enabled
           temperature-exceeded-numeric:
             type: integer
+            format: int64
             description: Indicates whether the write-through trigger is enabled( In numeric form )
           utility-priority:
             type: string
             description: Configured processing priority for utilities
           utility-priority-numeric:
             type: integer
+            format: int64
             description: Configured processing priority for utilities( In numeric form )
     controller-cache-parametersResource:
       type: array
@@ -2381,20 +2647,24 @@ components:
             type: string
           cache-flush-numeric:
             type: integer
+            format: int64
           controller-id:
             type: string
           controller-id-numeric:
             type: integer
+            format: int64
           durable-id:
             type: string
           memory-card-health:
             type: string
           memory-card-health-numeric:
             type: integer
+            format: int64
           memory-card-status:
             type: string
           memory-card-status-numeric:
             type: integer
+            format: int64
           name:
             type: string
           write-back-status:
@@ -2402,6 +2672,7 @@ components:
             description: Indicates whether disk write-back cache is enabled
           write-back-status-numeric:
             type: integer
+            format: int64
             description: Indicates whether disk write-back cache is enabled( In numeric form )
     cache-settingsResource:
       type: array
@@ -2416,17 +2687,20 @@ components:
             type: string
           cache-block-size:
             type: integer
+            format: int64
           operation-mode:
             type: string
             description: Storage system operation mode (redundancy mode)
           operation-mode-numeric:
             type: integer
+            format: int64
             description: Storage system operation mode (redundancy mode)( In numeric form )
           pi-format:
             type: string
             description: Used to describe the Host Protection Information
           pi-format-numeric:
             type: integer
+            format: int64
             description: Used to describe the Host Protection Information( In numeric form )
           controller-cache-parameters:
             $ref: '#/components/schemas/controller-cache-parametersResource'
@@ -2449,6 +2723,7 @@ components:
             type: string
           host-bus-type-numeric:
             type: integer
+            format: int64
           host-id:
             type: string
           host-key:
@@ -2456,8 +2731,10 @@ components:
             description: Durable ID of a Host
           host-port-bits-a:
             type: integer
+            format: int64
           host-port-bits-b:
             type: integer
+            format: int64
           id:
             type: string
           mapped:
@@ -2469,6 +2746,7 @@ components:
             type: string
           profile-numeric:
             type: integer
+            format: int64
           url:
             type: string
             description: The resource URL
@@ -2492,6 +2770,7 @@ components:
             type: string
           member-count:
             type: integer
+            format: int64
             description: Number of members
           name:
             type: string
@@ -2514,6 +2793,7 @@ components:
             type: string
           member-count:
             type: integer
+            format: int64
             description: Number of members
           name:
             type: string
@@ -2537,22 +2817,26 @@ components:
             type: string
           active-version:
             type: integer
+            format: int64
             description: Currently assigned IP version
           addressing-mode:
             type: string
             description: The way in which an IP address should be obtained
           addressing-mode-numeric:
             type: integer
+            format: int64
             description: The way in which an IP address should be obtained( In numeric form )
           auto-negotiation:
             type: string
           auto-negotiation-numeric:
             type: integer
+            format: int64
           duplex-mode:
             type: string
             description: Type of duplex mode that is specified
           duplex-mode-numeric:
             type: integer
+            format: int64
             description: Type of duplex mode that is specified( In numeric form )
           durable-id:
             type: string
@@ -2562,6 +2846,7 @@ components:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-recommendation:
@@ -2573,6 +2858,7 @@ components:
             description: Link speed associated with this ethernet port
           link-speed-numeric:
             type: integer
+            format: int64
             description: Link speed associated with this ethernet port( In numeric form )
           mac-address:
             type: string
@@ -2581,6 +2867,7 @@ components:
             type: string
           ping-broadcast-numeric:
             type: integer
+            format: int64
           subnet-mask:
             type: string
             description: Network port subnet mask
@@ -2599,17 +2886,22 @@ components:
             type: string
           configured-topology-numeric:
             type: integer
+            format: int64
           sas-active-lanes:
             type: integer
+            format: int64
             description: Number of currently active PHY lanes for the SAS port
           sas-disabled-lanes:
             type: integer
+            format: int64
             description: Number of disabled PHY lanes for the SAS port
           sas-lanes-expected:
             type: integer
+            format: int64
             description: Expected number of active PHY lanes for the SAS port
           width:
             type: integer
+            format: int64
             description: Number of PHY lanes for the SAS port
     portResource:
       type: array
@@ -2627,23 +2919,28 @@ components:
             description: Actual speed for this port
           actual-speed-numeric:
             type: integer
+            format: int64
             description: Actual speed for this port( In numeric form )
           configured-speed:
             type: string
           configured-speed-numeric:
             type: integer
+            format: int64
           controller:
             type: string
           controller-numeric:
             type: integer
+            format: int64
           durable-id:
             type: string
           fan-out:
             type: integer
+            format: int64
           health:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-recommendation:
@@ -2658,11 +2955,13 @@ components:
             description: Port Type (FC, iSCSI, SAS)
           port-type-numeric:
             type: integer
+            format: int64
             description: Port Type (FC, iSCSI, SAS)( In numeric form )
           status:
             type: string
           status-numeric:
             type: integer
+            format: int64
           target-id:
             type: string
             description: WWPN or IQN of the host port
@@ -2686,14 +2985,17 @@ components:
             type: string
           controller-numeric:
             type: integer
+            format: int64
           durable-id:
             type: string
           enclosure-id:
             type: integer
+            format: int64
           health:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-recommendation:
@@ -2702,17 +3004,20 @@ components:
             type: string
           sas-port-index:
             type: integer
+            format: int64
             description: Port number for this SAS port
           sas-port-type:
             type: string
             description: The type of SAS port
           sas-port-type-numeric:
             type: integer
+            format: int64
             description: The type of SAS port( In numeric form )
           status:
             type: string
           status-numeric:
             type: integer
+            format: int64
     expandersResource:
       type: array
       minItems: 1
@@ -2726,12 +3031,15 @@ components:
             type: string
           dom-id:
             type: integer
+            format: int64
           drawer-id:
             type: integer
+            format: int64
           durable-id:
             type: string
           enclosure-id:
             type: integer
+            format: int64
           extended-status:
             type: string
             description: Extended status (bits)
@@ -2742,6 +3050,7 @@ components:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-recommendation:
@@ -2754,10 +3063,12 @@ components:
             type: string
           path-id-numeric:
             type: integer
+            format: int64
           status:
             type: string
           status-numeric:
             type: integer
+            format: int64
     controllersResource:
       type: array
       minItems: 1
@@ -2774,17 +3085,21 @@ components:
             description: IPv6 Address autoconfiguration
           autoconfig-numeric:
             type: integer
+            format: int64
             description: IPv6 Address autoconfiguration( In numeric form )
           cache-lock:
             type: string
           cache-lock-numeric:
             type: integer
+            format: int64
           cache-memory-size:
             type: integer
+            format: int64
           controller-id:
             type: string
           controller-id-numeric:
             type: integer
+            format: int64
           cpld-version:
             type: string
             description: Complex Programmable Logic Device
@@ -2796,42 +3111,53 @@ components:
             type: string
           disks:
             type: integer
+            format: int64
           drive-bus-type:
             type: string
           drive-bus-type-numeric:
             type: integer
+            format: int64
           drive-channels:
             type: integer
+            format: int64
           durable-id:
             type: string
           fail-over-reason:
             type: string
           fail-over-reason-numeric:
             type: integer
+            format: int64
           failed-over:
             type: string
           failed-over-numeric:
             type: integer
+            format: int64
           fram-disabled-0:
             type: string
           fram-disabled-0-numeric:
             type: integer
+            format: int64
           fram-disabled-1:
             type: string
           fram-disabled-1-numeric:
             type: integer
+            format: int64
           fram-model-0:
             type: string
           fram-model-0-numeric:
             type: integer
+            format: int64
           fram-model-1:
             type: string
           fram-model-1-numeric:
             type: integer
+            format: int64
           fram-version-0:
             type: integer
+            format: int64
           fram-version-1:
             type: integer
+            format: int64
           fru-shortname:
             type: string
           hardware-version:
@@ -2840,12 +3166,14 @@ components:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-recommendation:
             type: string
           host-ports:
             type: integer
+            format: int64
           internal-serial-number:
             type: string
             description: Internal Controller Serial Number
@@ -2861,6 +3189,7 @@ components:
             type: string
           ip6-auto-address-source-numeric:
             type: integer
+            format: int64
           ip6-auto-gateway:
             type: string
           ip6-link-local-address:
@@ -2888,6 +3217,7 @@ components:
             description: Indicates whether the locator LED is on
           locator-led-numeric:
             type: integer
+            format: int64
             description: Indicates whether the locator LED is on( In numeric form )
           mac-address:
             type: string
@@ -2896,6 +3226,7 @@ components:
             type: string
           mfg-date-numeric:
             type: integer
+            format: int64
           mfg-location:
             type: string
           mfg-vendor-id:
@@ -2906,11 +3237,13 @@ components:
             type: string
           multicore-numeric:
             type: integer
+            format: int64
           node-wwn:
             type: string
             description: World Wide Node Name of the system
           number-of-storage-pools:
             type: integer
+            format: int64
             description: Number of Virtual Pools per Controller
           part-number:
             type: string
@@ -2918,29 +3251,34 @@ components:
             type: string
           phy-isolation-numeric:
             type: integer
+            format: int64
           platform-type:
             type: string
             description: HW Platform Type
           platform-type-numeric:
             type: integer
+            format: int64
             description: HW Platform Type( In numeric form )
           position:
             type: string
             description: Position of the component in the enclosure
           position-numeric:
             type: integer
+            format: int64
             description: Position of the component in the enclosure( In numeric form )
           redundancy-mode:
             type: string
             description: Mode in which the controllers are operating
           redundancy-mode-numeric:
             type: integer
+            format: int64
             description: Mode in which the controllers are operating( In numeric form )
           redundancy-status:
             type: string
             description: Current operational state of the controllers
           redundancy-status-numeric:
             type: integer
+            format: int64
             description: Current operational state of the controllers( In numeric form )
           revision:
             type: string
@@ -2950,9 +3288,11 @@ components:
             description: FRU rotation
           rotation-numeric:
             type: integer
+            format: int64
             description: FRU rotation( In numeric form )
           sc-cpu-speed:
             type: integer
+            format: int64
             description: Storage Controller processor speed
           sc-cpu-type:
             type: string
@@ -2966,13 +3306,16 @@ components:
             type: string
           ssd-alt-path-io-count:
             type: integer
+            format: int64
             description: IO count before sending to alt ssd path
           status:
             type: string
           status-numeric:
             type: integer
+            format: int64
           system-memory-size:
             type: integer
+            format: int64
           url:
             type: string
             description: The resource URL
@@ -2980,11 +3323,13 @@ components:
             type: string
           virtual-disks:
             type: integer
+            format: int64
           write-policy:
             type: string
             description: The write-back cache mode
           write-policy-numeric:
             type: integer
+            format: int64
             description: The write-back cache mode( In numeric form )
           network-parameters:
             $ref: '#/components/schemas/network-parametersResource'
@@ -3010,9 +3355,11 @@ components:
             description: IOM Board model
           board-model-numeric:
             type: integer
+            format: int64
             description: IOM Board model( In numeric form )
           columns:
             type: integer
+            format: int64
           dash-level:
             type: string
           description:
@@ -3021,6 +3368,7 @@ components:
             type: string
           drive-orientation-numeric:
             type: integer
+            format: int64
           durable-id:
             type: string
           emp-a:
@@ -3049,8 +3397,10 @@ components:
             type: string
           enclosure-arrangement-numeric:
             type: integer
+            format: int64
           enclosure-id:
             type: integer
+            format: int64
           enclosure-power:
             type: string
           enclosure-wwn:
@@ -3073,6 +3423,7 @@ components:
             type: string
           health-numeric:
             type: integer
+            format: int64
           health-reason:
             type: string
           health-recommendation:
@@ -3081,6 +3432,7 @@ components:
             type: string
           iom-type-numeric:
             type: integer
+            format: int64
           location:
             type: string
           locator-led:
@@ -3088,15 +3440,18 @@ components:
             description: Indicates whether the locator LED is on
           locator-led-numeric:
             type: integer
+            format: int64
             description: Indicates whether the locator LED is on( In numeric form )
           mfg-date:
             type: string
           mfg-date-numeric:
             type: integer
+            format: int64
           mfg-location:
             type: string
           midplane-rev:
             type: integer
+            format: int64
             description: Revision level of midplane
           midplane-serial-number:
             type: string
@@ -3106,6 +3461,7 @@ components:
             description: Type of midplane
           midplane-type-numeric:
             type: integer
+            format: int64
             description: Type of midplane( In numeric form )
           model:
             type: string
@@ -3113,12 +3469,15 @@ components:
             type: string
           number-of-coolings-elements:
             type: integer
+            format: int64
             description: Number of fans in the enclosure
           number-of-disks:
             type: integer
+            format: int64
             description: Number of disks in the enclosure
           number-of-power-supplies:
             type: integer
+            format: int64
             description: Number of power supplies in the enclosure
           part-number:
             type: string
@@ -3127,34 +3486,42 @@ components:
             description: Enclosure is capable of using PCIe version 2
           pcie2-capable-numeric:
             type: integer
+            format: int64
             description: Enclosure is capable of using PCIe version 2( In numeric form )
           platform-type:
             type: string
             description: HW Platform Type
           platform-type-numeric:
             type: integer
+            format: int64
             description: HW Platform Type( In numeric form )
           rack-number:
             type: integer
+            format: int64
           rack-position:
             type: integer
+            format: int64
           revision:
             type: string
             description: Current revision for this FRU
           rows:
             type: integer
+            format: int64
           slots:
             type: integer
+            format: int64
             description: The number of disk slots in this enclosure
           status:
             type: string
           status-numeric:
             type: integer
+            format: int64
           type:
             type: string
             description: Type of component in this enclosure
           type-numeric:
             type: integer
+            format: int64
             description: Type of component in this enclosure( In numeric form )
           url:
             type: string
@@ -3178,6 +3545,7 @@ components:
             type: string
           backplane-type:
             type: integer
+            format: int64
           build-date:
             type: string
           bundle-base-version:
@@ -3186,6 +3554,7 @@ components:
             type: string
           bundle-status-numeric:
             type: integer
+            format: int64
           bundle-version:
             type: string
           bundle-version-only:
@@ -3197,6 +3566,7 @@ components:
             description: Customization Toolkit (CTK) Version
           disk-channel_revision:
             type: integer
+            format: int64
           ec-fw:
             type: string
             description: The Expander Controller firmware version
@@ -3205,6 +3575,7 @@ components:
             description: Default hardware platform brand of the firmware
           fw-default-platform-brand-numeric:
             type: integer
+            format: int64
             description: Default hardware platform brand of the firmware( In numeric form )
           gem-version:
             type: string
@@ -3214,6 +3585,7 @@ components:
             type: string
           host-channel_revision:
             type: integer
+            format: int64
           hw-rev:
             type: string
             description: The main hardware version of the controller
@@ -3307,6 +3679,7 @@ components:
             description: Access rights for this volume
           access-numeric:
             type: integer
+            format: int64
             description: Access rights for this volume( In numeric form )
           durable-id:
             type: string
@@ -3314,6 +3687,7 @@ components:
             type: string
           host-profile-numeric:
             type: integer
+            format: int64
           identifier:
             type: string
             description: WWPN or IQN or Host Serial Number or Host Group Serial Number
@@ -3375,6 +3749,7 @@ components:
             type: string
           host-profile-numeric:
             type: integer
+            format: int64
           id:
             type: string
           volume-view:
@@ -3403,6 +3778,7 @@ components:
             type: string
           creation-date-time-numeric:
             type: integer
+            format: int64
           durable-id:
             type: string
           master-volume-name:
@@ -3412,8 +3788,10 @@ components:
             type: string
           num-children:
             type: integer
+            format: int64
           num-snaps-tree:
             type: integer
+            format: int64
           priority-value:
             type: string
             description: Attribute priority
@@ -3422,6 +3800,7 @@ components:
             description: Retention priority of the snapshot or children
           retention-priority-numeric:
             type: integer
+            format: int64
             description: Retention priority of the snapshot or children( In numeric form )
           serial-number:
             type: string
@@ -3429,11 +3808,13 @@ components:
             type: string
           shareddata-numeric:
             type: integer
+            format: int64
           snap-data:
             type: string
             description: Amount of snapshot data associated with this volume
           snap-data-numeric:
             type: integer
+            format: int64
             description: Amount of snapshot data associated with this volume( In numeric form )
           snap-pool-name:
             type: string
@@ -3443,16 +3824,19 @@ components:
             description: Associated snapshot type
           snapshot-type-numeric:
             type: integer
+            format: int64
             description: Associated snapshot type( In numeric form )
           status:
             type: string
           status-numeric:
             type: integer
+            format: int64
           status-reason:
             type: string
             description: Probable cause for the current status
           status-reason-numeric:
             type: integer
+            format: int64
             description: Probable cause for the current status( In numeric form )
           storage-pool-name:
             type: string
@@ -3464,18 +3848,21 @@ components:
             description: Storage type
           storage-type-numeric:
             type: integer
+            format: int64
             description: Storage type( In numeric form )
           total-size:
             type: string
             description: The total size formatted using the session settings for base, precision, and units
           total-size-numeric:
             type: integer
+            format: int64
             description: The total size formatted using the session settings for base, precision, and units( In numeric form )
           uniquedata:
             type: string
             description: Amount of preserved and write data that is unique to the snapshot
           uniquedata-numeric:
             type: integer
+            format: int64
             description: Amount of preserved and write data that is unique to the snapshot( In numeric form )
           url:
             type: string

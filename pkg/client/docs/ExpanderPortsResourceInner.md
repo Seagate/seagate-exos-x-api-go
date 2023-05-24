@@ -7,19 +7,19 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **Controller** | Pointer to **string** |  | [optional] 
-**ControllerNumeric** | Pointer to **int32** |  | [optional] 
+**ControllerNumeric** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
-**EnclosureId** | Pointer to **int32** |  | [optional] 
+**EnclosureId** | Pointer to **int64** |  | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
-**SasPortIndex** | Pointer to **int32** | Port number for this SAS port | [optional] 
+**SasPortIndex** | Pointer to **int64** | Port number for this SAS port | [optional] 
 **SasPortType** | Pointer to **string** | The type of SAS port | [optional] 
-**SasPortTypeNumeric** | Pointer to **int32** | The type of SAS port( In numeric form ) | [optional] 
+**SasPortTypeNumeric** | Pointer to **int64** | The type of SAS port( In numeric form ) | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
-**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**StatusNumeric** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
@@ -117,20 +117,20 @@ HasController returns a boolean if a field has been set.
 
 ### GetControllerNumeric
 
-`func (o *ExpanderPortsResourceInner) GetControllerNumeric() int32`
+`func (o *ExpanderPortsResourceInner) GetControllerNumeric() int64`
 
 GetControllerNumeric returns the ControllerNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerNumericOk
 
-`func (o *ExpanderPortsResourceInner) GetControllerNumericOk() (*int32, bool)`
+`func (o *ExpanderPortsResourceInner) GetControllerNumericOk() (*int64, bool)`
 
 GetControllerNumericOk returns a tuple with the ControllerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerNumeric
 
-`func (o *ExpanderPortsResourceInner) SetControllerNumeric(v int32)`
+`func (o *ExpanderPortsResourceInner) SetControllerNumeric(v int64)`
 
 SetControllerNumeric sets ControllerNumeric field to given value.
 
@@ -167,20 +167,20 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetEnclosureId
 
-`func (o *ExpanderPortsResourceInner) GetEnclosureId() int32`
+`func (o *ExpanderPortsResourceInner) GetEnclosureId() int64`
 
 GetEnclosureId returns the EnclosureId field if non-nil, zero value otherwise.
 
 ### GetEnclosureIdOk
 
-`func (o *ExpanderPortsResourceInner) GetEnclosureIdOk() (*int32, bool)`
+`func (o *ExpanderPortsResourceInner) GetEnclosureIdOk() (*int64, bool)`
 
 GetEnclosureIdOk returns a tuple with the EnclosureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureId
 
-`func (o *ExpanderPortsResourceInner) SetEnclosureId(v int32)`
+`func (o *ExpanderPortsResourceInner) SetEnclosureId(v int64)`
 
 SetEnclosureId sets EnclosureId field to given value.
 
@@ -217,20 +217,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *ExpanderPortsResourceInner) GetHealthNumeric() int32`
+`func (o *ExpanderPortsResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *ExpanderPortsResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *ExpanderPortsResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *ExpanderPortsResourceInner) SetHealthNumeric(v int32)`
+`func (o *ExpanderPortsResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -317,20 +317,20 @@ HasName returns a boolean if a field has been set.
 
 ### GetSasPortIndex
 
-`func (o *ExpanderPortsResourceInner) GetSasPortIndex() int32`
+`func (o *ExpanderPortsResourceInner) GetSasPortIndex() int64`
 
 GetSasPortIndex returns the SasPortIndex field if non-nil, zero value otherwise.
 
 ### GetSasPortIndexOk
 
-`func (o *ExpanderPortsResourceInner) GetSasPortIndexOk() (*int32, bool)`
+`func (o *ExpanderPortsResourceInner) GetSasPortIndexOk() (*int64, bool)`
 
 GetSasPortIndexOk returns a tuple with the SasPortIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSasPortIndex
 
-`func (o *ExpanderPortsResourceInner) SetSasPortIndex(v int32)`
+`func (o *ExpanderPortsResourceInner) SetSasPortIndex(v int64)`
 
 SetSasPortIndex sets SasPortIndex field to given value.
 
@@ -367,20 +367,20 @@ HasSasPortType returns a boolean if a field has been set.
 
 ### GetSasPortTypeNumeric
 
-`func (o *ExpanderPortsResourceInner) GetSasPortTypeNumeric() int32`
+`func (o *ExpanderPortsResourceInner) GetSasPortTypeNumeric() int64`
 
 GetSasPortTypeNumeric returns the SasPortTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetSasPortTypeNumericOk
 
-`func (o *ExpanderPortsResourceInner) GetSasPortTypeNumericOk() (*int32, bool)`
+`func (o *ExpanderPortsResourceInner) GetSasPortTypeNumericOk() (*int64, bool)`
 
 GetSasPortTypeNumericOk returns a tuple with the SasPortTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSasPortTypeNumeric
 
-`func (o *ExpanderPortsResourceInner) SetSasPortTypeNumeric(v int32)`
+`func (o *ExpanderPortsResourceInner) SetSasPortTypeNumeric(v int64)`
 
 SetSasPortTypeNumeric sets SasPortTypeNumeric field to given value.
 
@@ -417,20 +417,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
-`func (o *ExpanderPortsResourceInner) GetStatusNumeric() int32`
+`func (o *ExpanderPortsResourceInner) GetStatusNumeric() int64`
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
-`func (o *ExpanderPortsResourceInner) GetStatusNumericOk() (*int32, bool)`
+`func (o *ExpanderPortsResourceInner) GetStatusNumericOk() (*int64, bool)`
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
-`func (o *ExpanderPortsResourceInner) SetStatusNumeric(v int32)`
+`func (o *ExpanderPortsResourceInner) SetStatusNumeric(v int64)`
 
 SetStatusNumeric sets StatusNumeric field to given value.
 

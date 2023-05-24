@@ -6,73 +6,73 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
-**AllocatedPages** | Pointer to **int32** | Number of pages allocated | [optional] 
-**AvailablePages** | Pointer to **int32** | Available pages | [optional] 
+**AllocatedPages** | Pointer to **int64** | Number of pages allocated | [optional] 
+**AvailablePages** | Pointer to **int64** | Available pages | [optional] 
 **AvailableRfcSize** | Pointer to **string** |  | [optional] 
-**AvailableRfcSizeNumeric** | Pointer to **int32** |  | [optional] 
-**Blocksize** | Pointer to **int32** |  | [optional] 
+**AvailableRfcSizeNumeric** | Pointer to **int64** |  | [optional] 
+**Blocksize** | Pointer to **int64** |  | [optional] 
 **CompressionEfficiency** | Pointer to **string** |  | [optional] 
-**DiskGroupsCount** | Pointer to **int32** |  | [optional] 
-**ExtendedStatus** | Pointer to **int32** | Extended status (bits) | [optional] 
+**DiskGroupsCount** | Pointer to **int64** |  | [optional] 
+**ExtendedStatus** | Pointer to **int64** | Extended status (bits) | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
-**HealthReasonNumeric** | Pointer to **int32** |  | [optional] 
+**HealthReasonNumeric** | Pointer to **int64** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
-**HealthRecommendationNumeric** | Pointer to **int32** |  | [optional] 
+**HealthRecommendationNumeric** | Pointer to **int64** |  | [optional] 
 **HighThreshold** | Pointer to **string** | High threshold percentage | [optional] 
 **IdlePageCheck** | Pointer to **string** |  | [optional] 
-**IdlePageCheckNumeric** | Pointer to **int32** |  | [optional] 
+**IdlePageCheckNumeric** | Pointer to **int64** |  | [optional] 
 **LowThreshold** | Pointer to **string** | Low threshold percentage | [optional] 
 **MetadataAllocated** | Pointer to **string** | Pool Metadata currently in use | [optional] 
-**MetadataAllocatedNumeric** | Pointer to **int32** | Pool Metadata currently in use( In numeric form ) | [optional] 
+**MetadataAllocatedNumeric** | Pointer to **int64** | Pool Metadata currently in use( In numeric form ) | [optional] 
 **MetadataAvailable** | Pointer to **string** | Pool Metadata available capacity | [optional] 
-**MetadataAvailableNumeric** | Pointer to **int32** | Pool Metadata available capacity( In numeric form ) | [optional] 
+**MetadataAvailableNumeric** | Pointer to **int64** | Pool Metadata available capacity( In numeric form ) | [optional] 
 **MetadataTotalSize** | Pointer to **string** | Disk Group Metadata Total Size | [optional] 
-**MetadataTotalSizeNumeric** | Pointer to **int32** | Disk Group Metadata Total Size( In numeric form ) | [optional] 
+**MetadataTotalSizeNumeric** | Pointer to **int64** | Disk Group Metadata Total Size( In numeric form ) | [optional] 
 **MetadataVolSize** | Pointer to **string** | Size of the storage pool metadata volume | [optional] 
-**MetadataVolSizeNumeric** | Pointer to **int32** | Size of the storage pool metadata volume( In numeric form ) | [optional] 
+**MetadataVolSizeNumeric** | Pointer to **int64** | Size of the storage pool metadata volume( In numeric form ) | [optional] 
 **MiddleThreshold** | Pointer to **string** | Middle threshold percentage | [optional] 
 **Migration** | Pointer to **string** | Migration between tiers | [optional] 
-**MigrationNumeric** | Pointer to **int32** | Migration between tiers( In numeric form ) | [optional] 
+**MigrationNumeric** | Pointer to **int64** | Migration between tiers( In numeric form ) | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **OverCommitted** | Pointer to **string** |  | [optional] 
-**OverCommittedNumeric** | Pointer to **int32** |  | [optional] 
+**OverCommittedNumeric** | Pointer to **int64** |  | [optional] 
 **Overcommit** | Pointer to **string** |  | [optional] 
-**OvercommitNumeric** | Pointer to **int32** |  | [optional] 
+**OvercommitNumeric** | Pointer to **int64** |  | [optional] 
 **Owner** | Pointer to **string** | Controller owning the component | [optional] 
-**OwnerNumeric** | Pointer to **int32** | Controller owning the component( In numeric form ) | [optional] 
+**OwnerNumeric** | Pointer to **int64** | Controller owning the component( In numeric form ) | [optional] 
 **PageSize** | Pointer to **string** | Page size in blocks | [optional] 
-**PageSizeNumeric** | Pointer to **int32** | Page size in blocks( In numeric form ) | [optional] 
+**PageSizeNumeric** | Pointer to **int64** | Page size in blocks( In numeric form ) | [optional] 
 **PoolSectorFormat** | Pointer to **string** | Pool Sector Format | [optional] 
-**PoolSectorFormatNumeric** | Pointer to **int32** | Pool Sector Format( In numeric form ) | [optional] 
+**PoolSectorFormatNumeric** | Pointer to **int64** | Pool Sector Format( In numeric form ) | [optional] 
 **PreferredOwner** | Pointer to **string** | Configured owner | [optional] 
-**PreferredOwnerNumeric** | Pointer to **int32** | Configured owner( In numeric form ) | [optional] 
+**PreferredOwnerNumeric** | Pointer to **int64** | Configured owner( In numeric form ) | [optional] 
 **ReadFlashCache** | Pointer to **string** |  | [optional] 
-**ReadFlashCacheNumeric** | Pointer to **int32** |  | [optional] 
+**ReadFlashCacheNumeric** | Pointer to **int64** |  | [optional] 
 **Rebalance** | Pointer to **string** | Rebalance within the tier | [optional] 
-**RebalanceNumeric** | Pointer to **int32** | Rebalance within the tier( In numeric form ) | [optional] 
+**RebalanceNumeric** | Pointer to **int64** | Rebalance within the tier( In numeric form ) | [optional] 
 **ReservedSize** | Pointer to **string** |  | [optional] 
-**ReservedSizeNumeric** | Pointer to **int32** |  | [optional] 
+**ReservedSizeNumeric** | Pointer to **int64** |  | [optional] 
 **ReservedUnallocSize** | Pointer to **string** |  | [optional] 
-**ReservedUnallocSizeNumeric** | Pointer to **int32** |  | [optional] 
+**ReservedUnallocSizeNumeric** | Pointer to **int64** |  | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
 **SnapSize** | Pointer to **string** |  | [optional] 
-**SnapSizeNumeric** | Pointer to **int32** |  | [optional] 
+**SnapSizeNumeric** | Pointer to **int64** |  | [optional] 
 **StorageType** | Pointer to **string** | Storage type | [optional] 
-**StorageTypeNumeric** | Pointer to **int32** | Storage type( In numeric form ) | [optional] 
+**StorageTypeNumeric** | Pointer to **int64** | Storage type( In numeric form ) | [optional] 
 **TotalAvail** | Pointer to **string** |  | [optional] 
-**TotalAvailNumeric** | Pointer to **int32** |  | [optional] 
+**TotalAvailNumeric** | Pointer to **int64** |  | [optional] 
 **TotalRfcSize** | Pointer to **string** |  | [optional] 
-**TotalRfcSizeNumeric** | Pointer to **int32** |  | [optional] 
+**TotalRfcSizeNumeric** | Pointer to **int64** |  | [optional] 
 **TotalSize** | Pointer to **string** | The total size formatted using the session settings for base, precision, and units | [optional] 
-**TotalSizeNumeric** | Pointer to **int32** | The total size formatted using the session settings for base, precision, and units( In numeric form ) | [optional] 
+**TotalSizeNumeric** | Pointer to **int64** | The total size formatted using the session settings for base, precision, and units( In numeric form ) | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **UtilityRunning** | Pointer to **string** |  | [optional] 
-**UtilityRunningNumeric** | Pointer to **int32** |  | [optional] 
-**Volumes** | Pointer to **int32** |  | [optional] 
+**UtilityRunningNumeric** | Pointer to **int64** |  | [optional] 
+**Volumes** | Pointer to **int64** |  | [optional] 
 **ZeroScan** | Pointer to **string** | Scan for zero-value pages | [optional] 
-**ZeroScanNumeric** | Pointer to **int32** | Scan for zero-value pages( In numeric form ) | [optional] 
+**ZeroScanNumeric** | Pointer to **int64** | Scan for zero-value pages( In numeric form ) | [optional] 
 **DiskGroups** | Pointer to [**[]DiskGroupsResourceInner**](DiskGroupsResourceInner.md) |  | [optional] 
 **Tiers** | Pointer to [**[]TiersResourceInner**](TiersResourceInner.md) |  | [optional] 
 
@@ -147,20 +147,20 @@ HasMeta returns a boolean if a field has been set.
 
 ### GetAllocatedPages
 
-`func (o *PoolsResourceInner) GetAllocatedPages() int32`
+`func (o *PoolsResourceInner) GetAllocatedPages() int64`
 
 GetAllocatedPages returns the AllocatedPages field if non-nil, zero value otherwise.
 
 ### GetAllocatedPagesOk
 
-`func (o *PoolsResourceInner) GetAllocatedPagesOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetAllocatedPagesOk() (*int64, bool)`
 
 GetAllocatedPagesOk returns a tuple with the AllocatedPages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllocatedPages
 
-`func (o *PoolsResourceInner) SetAllocatedPages(v int32)`
+`func (o *PoolsResourceInner) SetAllocatedPages(v int64)`
 
 SetAllocatedPages sets AllocatedPages field to given value.
 
@@ -172,20 +172,20 @@ HasAllocatedPages returns a boolean if a field has been set.
 
 ### GetAvailablePages
 
-`func (o *PoolsResourceInner) GetAvailablePages() int32`
+`func (o *PoolsResourceInner) GetAvailablePages() int64`
 
 GetAvailablePages returns the AvailablePages field if non-nil, zero value otherwise.
 
 ### GetAvailablePagesOk
 
-`func (o *PoolsResourceInner) GetAvailablePagesOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetAvailablePagesOk() (*int64, bool)`
 
 GetAvailablePagesOk returns a tuple with the AvailablePages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAvailablePages
 
-`func (o *PoolsResourceInner) SetAvailablePages(v int32)`
+`func (o *PoolsResourceInner) SetAvailablePages(v int64)`
 
 SetAvailablePages sets AvailablePages field to given value.
 
@@ -222,20 +222,20 @@ HasAvailableRfcSize returns a boolean if a field has been set.
 
 ### GetAvailableRfcSizeNumeric
 
-`func (o *PoolsResourceInner) GetAvailableRfcSizeNumeric() int32`
+`func (o *PoolsResourceInner) GetAvailableRfcSizeNumeric() int64`
 
 GetAvailableRfcSizeNumeric returns the AvailableRfcSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetAvailableRfcSizeNumericOk
 
-`func (o *PoolsResourceInner) GetAvailableRfcSizeNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetAvailableRfcSizeNumericOk() (*int64, bool)`
 
 GetAvailableRfcSizeNumericOk returns a tuple with the AvailableRfcSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAvailableRfcSizeNumeric
 
-`func (o *PoolsResourceInner) SetAvailableRfcSizeNumeric(v int32)`
+`func (o *PoolsResourceInner) SetAvailableRfcSizeNumeric(v int64)`
 
 SetAvailableRfcSizeNumeric sets AvailableRfcSizeNumeric field to given value.
 
@@ -247,20 +247,20 @@ HasAvailableRfcSizeNumeric returns a boolean if a field has been set.
 
 ### GetBlocksize
 
-`func (o *PoolsResourceInner) GetBlocksize() int32`
+`func (o *PoolsResourceInner) GetBlocksize() int64`
 
 GetBlocksize returns the Blocksize field if non-nil, zero value otherwise.
 
 ### GetBlocksizeOk
 
-`func (o *PoolsResourceInner) GetBlocksizeOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetBlocksizeOk() (*int64, bool)`
 
 GetBlocksizeOk returns a tuple with the Blocksize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBlocksize
 
-`func (o *PoolsResourceInner) SetBlocksize(v int32)`
+`func (o *PoolsResourceInner) SetBlocksize(v int64)`
 
 SetBlocksize sets Blocksize field to given value.
 
@@ -297,20 +297,20 @@ HasCompressionEfficiency returns a boolean if a field has been set.
 
 ### GetDiskGroupsCount
 
-`func (o *PoolsResourceInner) GetDiskGroupsCount() int32`
+`func (o *PoolsResourceInner) GetDiskGroupsCount() int64`
 
 GetDiskGroupsCount returns the DiskGroupsCount field if non-nil, zero value otherwise.
 
 ### GetDiskGroupsCountOk
 
-`func (o *PoolsResourceInner) GetDiskGroupsCountOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetDiskGroupsCountOk() (*int64, bool)`
 
 GetDiskGroupsCountOk returns a tuple with the DiskGroupsCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDiskGroupsCount
 
-`func (o *PoolsResourceInner) SetDiskGroupsCount(v int32)`
+`func (o *PoolsResourceInner) SetDiskGroupsCount(v int64)`
 
 SetDiskGroupsCount sets DiskGroupsCount field to given value.
 
@@ -322,20 +322,20 @@ HasDiskGroupsCount returns a boolean if a field has been set.
 
 ### GetExtendedStatus
 
-`func (o *PoolsResourceInner) GetExtendedStatus() int32`
+`func (o *PoolsResourceInner) GetExtendedStatus() int64`
 
 GetExtendedStatus returns the ExtendedStatus field if non-nil, zero value otherwise.
 
 ### GetExtendedStatusOk
 
-`func (o *PoolsResourceInner) GetExtendedStatusOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetExtendedStatusOk() (*int64, bool)`
 
 GetExtendedStatusOk returns a tuple with the ExtendedStatus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtendedStatus
 
-`func (o *PoolsResourceInner) SetExtendedStatus(v int32)`
+`func (o *PoolsResourceInner) SetExtendedStatus(v int64)`
 
 SetExtendedStatus sets ExtendedStatus field to given value.
 
@@ -372,20 +372,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *PoolsResourceInner) GetHealthNumeric() int32`
+`func (o *PoolsResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *PoolsResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *PoolsResourceInner) SetHealthNumeric(v int32)`
+`func (o *PoolsResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -422,20 +422,20 @@ HasHealthReason returns a boolean if a field has been set.
 
 ### GetHealthReasonNumeric
 
-`func (o *PoolsResourceInner) GetHealthReasonNumeric() int32`
+`func (o *PoolsResourceInner) GetHealthReasonNumeric() int64`
 
 GetHealthReasonNumeric returns the HealthReasonNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthReasonNumericOk
 
-`func (o *PoolsResourceInner) GetHealthReasonNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetHealthReasonNumericOk() (*int64, bool)`
 
 GetHealthReasonNumericOk returns a tuple with the HealthReasonNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthReasonNumeric
 
-`func (o *PoolsResourceInner) SetHealthReasonNumeric(v int32)`
+`func (o *PoolsResourceInner) SetHealthReasonNumeric(v int64)`
 
 SetHealthReasonNumeric sets HealthReasonNumeric field to given value.
 
@@ -472,20 +472,20 @@ HasHealthRecommendation returns a boolean if a field has been set.
 
 ### GetHealthRecommendationNumeric
 
-`func (o *PoolsResourceInner) GetHealthRecommendationNumeric() int32`
+`func (o *PoolsResourceInner) GetHealthRecommendationNumeric() int64`
 
 GetHealthRecommendationNumeric returns the HealthRecommendationNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthRecommendationNumericOk
 
-`func (o *PoolsResourceInner) GetHealthRecommendationNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetHealthRecommendationNumericOk() (*int64, bool)`
 
 GetHealthRecommendationNumericOk returns a tuple with the HealthRecommendationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthRecommendationNumeric
 
-`func (o *PoolsResourceInner) SetHealthRecommendationNumeric(v int32)`
+`func (o *PoolsResourceInner) SetHealthRecommendationNumeric(v int64)`
 
 SetHealthRecommendationNumeric sets HealthRecommendationNumeric field to given value.
 
@@ -547,20 +547,20 @@ HasIdlePageCheck returns a boolean if a field has been set.
 
 ### GetIdlePageCheckNumeric
 
-`func (o *PoolsResourceInner) GetIdlePageCheckNumeric() int32`
+`func (o *PoolsResourceInner) GetIdlePageCheckNumeric() int64`
 
 GetIdlePageCheckNumeric returns the IdlePageCheckNumeric field if non-nil, zero value otherwise.
 
 ### GetIdlePageCheckNumericOk
 
-`func (o *PoolsResourceInner) GetIdlePageCheckNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetIdlePageCheckNumericOk() (*int64, bool)`
 
 GetIdlePageCheckNumericOk returns a tuple with the IdlePageCheckNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIdlePageCheckNumeric
 
-`func (o *PoolsResourceInner) SetIdlePageCheckNumeric(v int32)`
+`func (o *PoolsResourceInner) SetIdlePageCheckNumeric(v int64)`
 
 SetIdlePageCheckNumeric sets IdlePageCheckNumeric field to given value.
 
@@ -622,20 +622,20 @@ HasMetadataAllocated returns a boolean if a field has been set.
 
 ### GetMetadataAllocatedNumeric
 
-`func (o *PoolsResourceInner) GetMetadataAllocatedNumeric() int32`
+`func (o *PoolsResourceInner) GetMetadataAllocatedNumeric() int64`
 
 GetMetadataAllocatedNumeric returns the MetadataAllocatedNumeric field if non-nil, zero value otherwise.
 
 ### GetMetadataAllocatedNumericOk
 
-`func (o *PoolsResourceInner) GetMetadataAllocatedNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetMetadataAllocatedNumericOk() (*int64, bool)`
 
 GetMetadataAllocatedNumericOk returns a tuple with the MetadataAllocatedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMetadataAllocatedNumeric
 
-`func (o *PoolsResourceInner) SetMetadataAllocatedNumeric(v int32)`
+`func (o *PoolsResourceInner) SetMetadataAllocatedNumeric(v int64)`
 
 SetMetadataAllocatedNumeric sets MetadataAllocatedNumeric field to given value.
 
@@ -672,20 +672,20 @@ HasMetadataAvailable returns a boolean if a field has been set.
 
 ### GetMetadataAvailableNumeric
 
-`func (o *PoolsResourceInner) GetMetadataAvailableNumeric() int32`
+`func (o *PoolsResourceInner) GetMetadataAvailableNumeric() int64`
 
 GetMetadataAvailableNumeric returns the MetadataAvailableNumeric field if non-nil, zero value otherwise.
 
 ### GetMetadataAvailableNumericOk
 
-`func (o *PoolsResourceInner) GetMetadataAvailableNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetMetadataAvailableNumericOk() (*int64, bool)`
 
 GetMetadataAvailableNumericOk returns a tuple with the MetadataAvailableNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMetadataAvailableNumeric
 
-`func (o *PoolsResourceInner) SetMetadataAvailableNumeric(v int32)`
+`func (o *PoolsResourceInner) SetMetadataAvailableNumeric(v int64)`
 
 SetMetadataAvailableNumeric sets MetadataAvailableNumeric field to given value.
 
@@ -722,20 +722,20 @@ HasMetadataTotalSize returns a boolean if a field has been set.
 
 ### GetMetadataTotalSizeNumeric
 
-`func (o *PoolsResourceInner) GetMetadataTotalSizeNumeric() int32`
+`func (o *PoolsResourceInner) GetMetadataTotalSizeNumeric() int64`
 
 GetMetadataTotalSizeNumeric returns the MetadataTotalSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetMetadataTotalSizeNumericOk
 
-`func (o *PoolsResourceInner) GetMetadataTotalSizeNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetMetadataTotalSizeNumericOk() (*int64, bool)`
 
 GetMetadataTotalSizeNumericOk returns a tuple with the MetadataTotalSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMetadataTotalSizeNumeric
 
-`func (o *PoolsResourceInner) SetMetadataTotalSizeNumeric(v int32)`
+`func (o *PoolsResourceInner) SetMetadataTotalSizeNumeric(v int64)`
 
 SetMetadataTotalSizeNumeric sets MetadataTotalSizeNumeric field to given value.
 
@@ -772,20 +772,20 @@ HasMetadataVolSize returns a boolean if a field has been set.
 
 ### GetMetadataVolSizeNumeric
 
-`func (o *PoolsResourceInner) GetMetadataVolSizeNumeric() int32`
+`func (o *PoolsResourceInner) GetMetadataVolSizeNumeric() int64`
 
 GetMetadataVolSizeNumeric returns the MetadataVolSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetMetadataVolSizeNumericOk
 
-`func (o *PoolsResourceInner) GetMetadataVolSizeNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetMetadataVolSizeNumericOk() (*int64, bool)`
 
 GetMetadataVolSizeNumericOk returns a tuple with the MetadataVolSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMetadataVolSizeNumeric
 
-`func (o *PoolsResourceInner) SetMetadataVolSizeNumeric(v int32)`
+`func (o *PoolsResourceInner) SetMetadataVolSizeNumeric(v int64)`
 
 SetMetadataVolSizeNumeric sets MetadataVolSizeNumeric field to given value.
 
@@ -847,20 +847,20 @@ HasMigration returns a boolean if a field has been set.
 
 ### GetMigrationNumeric
 
-`func (o *PoolsResourceInner) GetMigrationNumeric() int32`
+`func (o *PoolsResourceInner) GetMigrationNumeric() int64`
 
 GetMigrationNumeric returns the MigrationNumeric field if non-nil, zero value otherwise.
 
 ### GetMigrationNumericOk
 
-`func (o *PoolsResourceInner) GetMigrationNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetMigrationNumericOk() (*int64, bool)`
 
 GetMigrationNumericOk returns a tuple with the MigrationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMigrationNumeric
 
-`func (o *PoolsResourceInner) SetMigrationNumeric(v int32)`
+`func (o *PoolsResourceInner) SetMigrationNumeric(v int64)`
 
 SetMigrationNumeric sets MigrationNumeric field to given value.
 
@@ -922,20 +922,20 @@ HasOverCommitted returns a boolean if a field has been set.
 
 ### GetOverCommittedNumeric
 
-`func (o *PoolsResourceInner) GetOverCommittedNumeric() int32`
+`func (o *PoolsResourceInner) GetOverCommittedNumeric() int64`
 
 GetOverCommittedNumeric returns the OverCommittedNumeric field if non-nil, zero value otherwise.
 
 ### GetOverCommittedNumericOk
 
-`func (o *PoolsResourceInner) GetOverCommittedNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetOverCommittedNumericOk() (*int64, bool)`
 
 GetOverCommittedNumericOk returns a tuple with the OverCommittedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOverCommittedNumeric
 
-`func (o *PoolsResourceInner) SetOverCommittedNumeric(v int32)`
+`func (o *PoolsResourceInner) SetOverCommittedNumeric(v int64)`
 
 SetOverCommittedNumeric sets OverCommittedNumeric field to given value.
 
@@ -972,20 +972,20 @@ HasOvercommit returns a boolean if a field has been set.
 
 ### GetOvercommitNumeric
 
-`func (o *PoolsResourceInner) GetOvercommitNumeric() int32`
+`func (o *PoolsResourceInner) GetOvercommitNumeric() int64`
 
 GetOvercommitNumeric returns the OvercommitNumeric field if non-nil, zero value otherwise.
 
 ### GetOvercommitNumericOk
 
-`func (o *PoolsResourceInner) GetOvercommitNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetOvercommitNumericOk() (*int64, bool)`
 
 GetOvercommitNumericOk returns a tuple with the OvercommitNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOvercommitNumeric
 
-`func (o *PoolsResourceInner) SetOvercommitNumeric(v int32)`
+`func (o *PoolsResourceInner) SetOvercommitNumeric(v int64)`
 
 SetOvercommitNumeric sets OvercommitNumeric field to given value.
 
@@ -1022,20 +1022,20 @@ HasOwner returns a boolean if a field has been set.
 
 ### GetOwnerNumeric
 
-`func (o *PoolsResourceInner) GetOwnerNumeric() int32`
+`func (o *PoolsResourceInner) GetOwnerNumeric() int64`
 
 GetOwnerNumeric returns the OwnerNumeric field if non-nil, zero value otherwise.
 
 ### GetOwnerNumericOk
 
-`func (o *PoolsResourceInner) GetOwnerNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetOwnerNumericOk() (*int64, bool)`
 
 GetOwnerNumericOk returns a tuple with the OwnerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOwnerNumeric
 
-`func (o *PoolsResourceInner) SetOwnerNumeric(v int32)`
+`func (o *PoolsResourceInner) SetOwnerNumeric(v int64)`
 
 SetOwnerNumeric sets OwnerNumeric field to given value.
 
@@ -1072,20 +1072,20 @@ HasPageSize returns a boolean if a field has been set.
 
 ### GetPageSizeNumeric
 
-`func (o *PoolsResourceInner) GetPageSizeNumeric() int32`
+`func (o *PoolsResourceInner) GetPageSizeNumeric() int64`
 
 GetPageSizeNumeric returns the PageSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetPageSizeNumericOk
 
-`func (o *PoolsResourceInner) GetPageSizeNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetPageSizeNumericOk() (*int64, bool)`
 
 GetPageSizeNumericOk returns a tuple with the PageSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPageSizeNumeric
 
-`func (o *PoolsResourceInner) SetPageSizeNumeric(v int32)`
+`func (o *PoolsResourceInner) SetPageSizeNumeric(v int64)`
 
 SetPageSizeNumeric sets PageSizeNumeric field to given value.
 
@@ -1122,20 +1122,20 @@ HasPoolSectorFormat returns a boolean if a field has been set.
 
 ### GetPoolSectorFormatNumeric
 
-`func (o *PoolsResourceInner) GetPoolSectorFormatNumeric() int32`
+`func (o *PoolsResourceInner) GetPoolSectorFormatNumeric() int64`
 
 GetPoolSectorFormatNumeric returns the PoolSectorFormatNumeric field if non-nil, zero value otherwise.
 
 ### GetPoolSectorFormatNumericOk
 
-`func (o *PoolsResourceInner) GetPoolSectorFormatNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetPoolSectorFormatNumericOk() (*int64, bool)`
 
 GetPoolSectorFormatNumericOk returns a tuple with the PoolSectorFormatNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPoolSectorFormatNumeric
 
-`func (o *PoolsResourceInner) SetPoolSectorFormatNumeric(v int32)`
+`func (o *PoolsResourceInner) SetPoolSectorFormatNumeric(v int64)`
 
 SetPoolSectorFormatNumeric sets PoolSectorFormatNumeric field to given value.
 
@@ -1172,20 +1172,20 @@ HasPreferredOwner returns a boolean if a field has been set.
 
 ### GetPreferredOwnerNumeric
 
-`func (o *PoolsResourceInner) GetPreferredOwnerNumeric() int32`
+`func (o *PoolsResourceInner) GetPreferredOwnerNumeric() int64`
 
 GetPreferredOwnerNumeric returns the PreferredOwnerNumeric field if non-nil, zero value otherwise.
 
 ### GetPreferredOwnerNumericOk
 
-`func (o *PoolsResourceInner) GetPreferredOwnerNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetPreferredOwnerNumericOk() (*int64, bool)`
 
 GetPreferredOwnerNumericOk returns a tuple with the PreferredOwnerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPreferredOwnerNumeric
 
-`func (o *PoolsResourceInner) SetPreferredOwnerNumeric(v int32)`
+`func (o *PoolsResourceInner) SetPreferredOwnerNumeric(v int64)`
 
 SetPreferredOwnerNumeric sets PreferredOwnerNumeric field to given value.
 
@@ -1222,20 +1222,20 @@ HasReadFlashCache returns a boolean if a field has been set.
 
 ### GetReadFlashCacheNumeric
 
-`func (o *PoolsResourceInner) GetReadFlashCacheNumeric() int32`
+`func (o *PoolsResourceInner) GetReadFlashCacheNumeric() int64`
 
 GetReadFlashCacheNumeric returns the ReadFlashCacheNumeric field if non-nil, zero value otherwise.
 
 ### GetReadFlashCacheNumericOk
 
-`func (o *PoolsResourceInner) GetReadFlashCacheNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetReadFlashCacheNumericOk() (*int64, bool)`
 
 GetReadFlashCacheNumericOk returns a tuple with the ReadFlashCacheNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReadFlashCacheNumeric
 
-`func (o *PoolsResourceInner) SetReadFlashCacheNumeric(v int32)`
+`func (o *PoolsResourceInner) SetReadFlashCacheNumeric(v int64)`
 
 SetReadFlashCacheNumeric sets ReadFlashCacheNumeric field to given value.
 
@@ -1272,20 +1272,20 @@ HasRebalance returns a boolean if a field has been set.
 
 ### GetRebalanceNumeric
 
-`func (o *PoolsResourceInner) GetRebalanceNumeric() int32`
+`func (o *PoolsResourceInner) GetRebalanceNumeric() int64`
 
 GetRebalanceNumeric returns the RebalanceNumeric field if non-nil, zero value otherwise.
 
 ### GetRebalanceNumericOk
 
-`func (o *PoolsResourceInner) GetRebalanceNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetRebalanceNumericOk() (*int64, bool)`
 
 GetRebalanceNumericOk returns a tuple with the RebalanceNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRebalanceNumeric
 
-`func (o *PoolsResourceInner) SetRebalanceNumeric(v int32)`
+`func (o *PoolsResourceInner) SetRebalanceNumeric(v int64)`
 
 SetRebalanceNumeric sets RebalanceNumeric field to given value.
 
@@ -1322,20 +1322,20 @@ HasReservedSize returns a boolean if a field has been set.
 
 ### GetReservedSizeNumeric
 
-`func (o *PoolsResourceInner) GetReservedSizeNumeric() int32`
+`func (o *PoolsResourceInner) GetReservedSizeNumeric() int64`
 
 GetReservedSizeNumeric returns the ReservedSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetReservedSizeNumericOk
 
-`func (o *PoolsResourceInner) GetReservedSizeNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetReservedSizeNumericOk() (*int64, bool)`
 
 GetReservedSizeNumericOk returns a tuple with the ReservedSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReservedSizeNumeric
 
-`func (o *PoolsResourceInner) SetReservedSizeNumeric(v int32)`
+`func (o *PoolsResourceInner) SetReservedSizeNumeric(v int64)`
 
 SetReservedSizeNumeric sets ReservedSizeNumeric field to given value.
 
@@ -1372,20 +1372,20 @@ HasReservedUnallocSize returns a boolean if a field has been set.
 
 ### GetReservedUnallocSizeNumeric
 
-`func (o *PoolsResourceInner) GetReservedUnallocSizeNumeric() int32`
+`func (o *PoolsResourceInner) GetReservedUnallocSizeNumeric() int64`
 
 GetReservedUnallocSizeNumeric returns the ReservedUnallocSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetReservedUnallocSizeNumericOk
 
-`func (o *PoolsResourceInner) GetReservedUnallocSizeNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetReservedUnallocSizeNumericOk() (*int64, bool)`
 
 GetReservedUnallocSizeNumericOk returns a tuple with the ReservedUnallocSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReservedUnallocSizeNumeric
 
-`func (o *PoolsResourceInner) SetReservedUnallocSizeNumeric(v int32)`
+`func (o *PoolsResourceInner) SetReservedUnallocSizeNumeric(v int64)`
 
 SetReservedUnallocSizeNumeric sets ReservedUnallocSizeNumeric field to given value.
 
@@ -1447,20 +1447,20 @@ HasSnapSize returns a boolean if a field has been set.
 
 ### GetSnapSizeNumeric
 
-`func (o *PoolsResourceInner) GetSnapSizeNumeric() int32`
+`func (o *PoolsResourceInner) GetSnapSizeNumeric() int64`
 
 GetSnapSizeNumeric returns the SnapSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetSnapSizeNumericOk
 
-`func (o *PoolsResourceInner) GetSnapSizeNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetSnapSizeNumericOk() (*int64, bool)`
 
 GetSnapSizeNumericOk returns a tuple with the SnapSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSnapSizeNumeric
 
-`func (o *PoolsResourceInner) SetSnapSizeNumeric(v int32)`
+`func (o *PoolsResourceInner) SetSnapSizeNumeric(v int64)`
 
 SetSnapSizeNumeric sets SnapSizeNumeric field to given value.
 
@@ -1497,20 +1497,20 @@ HasStorageType returns a boolean if a field has been set.
 
 ### GetStorageTypeNumeric
 
-`func (o *PoolsResourceInner) GetStorageTypeNumeric() int32`
+`func (o *PoolsResourceInner) GetStorageTypeNumeric() int64`
 
 GetStorageTypeNumeric returns the StorageTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetStorageTypeNumericOk
 
-`func (o *PoolsResourceInner) GetStorageTypeNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetStorageTypeNumericOk() (*int64, bool)`
 
 GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStorageTypeNumeric
 
-`func (o *PoolsResourceInner) SetStorageTypeNumeric(v int32)`
+`func (o *PoolsResourceInner) SetStorageTypeNumeric(v int64)`
 
 SetStorageTypeNumeric sets StorageTypeNumeric field to given value.
 
@@ -1547,20 +1547,20 @@ HasTotalAvail returns a boolean if a field has been set.
 
 ### GetTotalAvailNumeric
 
-`func (o *PoolsResourceInner) GetTotalAvailNumeric() int32`
+`func (o *PoolsResourceInner) GetTotalAvailNumeric() int64`
 
 GetTotalAvailNumeric returns the TotalAvailNumeric field if non-nil, zero value otherwise.
 
 ### GetTotalAvailNumericOk
 
-`func (o *PoolsResourceInner) GetTotalAvailNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetTotalAvailNumericOk() (*int64, bool)`
 
 GetTotalAvailNumericOk returns a tuple with the TotalAvailNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalAvailNumeric
 
-`func (o *PoolsResourceInner) SetTotalAvailNumeric(v int32)`
+`func (o *PoolsResourceInner) SetTotalAvailNumeric(v int64)`
 
 SetTotalAvailNumeric sets TotalAvailNumeric field to given value.
 
@@ -1597,20 +1597,20 @@ HasTotalRfcSize returns a boolean if a field has been set.
 
 ### GetTotalRfcSizeNumeric
 
-`func (o *PoolsResourceInner) GetTotalRfcSizeNumeric() int32`
+`func (o *PoolsResourceInner) GetTotalRfcSizeNumeric() int64`
 
 GetTotalRfcSizeNumeric returns the TotalRfcSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetTotalRfcSizeNumericOk
 
-`func (o *PoolsResourceInner) GetTotalRfcSizeNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetTotalRfcSizeNumericOk() (*int64, bool)`
 
 GetTotalRfcSizeNumericOk returns a tuple with the TotalRfcSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalRfcSizeNumeric
 
-`func (o *PoolsResourceInner) SetTotalRfcSizeNumeric(v int32)`
+`func (o *PoolsResourceInner) SetTotalRfcSizeNumeric(v int64)`
 
 SetTotalRfcSizeNumeric sets TotalRfcSizeNumeric field to given value.
 
@@ -1647,20 +1647,20 @@ HasTotalSize returns a boolean if a field has been set.
 
 ### GetTotalSizeNumeric
 
-`func (o *PoolsResourceInner) GetTotalSizeNumeric() int32`
+`func (o *PoolsResourceInner) GetTotalSizeNumeric() int64`
 
 GetTotalSizeNumeric returns the TotalSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetTotalSizeNumericOk
 
-`func (o *PoolsResourceInner) GetTotalSizeNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetTotalSizeNumericOk() (*int64, bool)`
 
 GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalSizeNumeric
 
-`func (o *PoolsResourceInner) SetTotalSizeNumeric(v int32)`
+`func (o *PoolsResourceInner) SetTotalSizeNumeric(v int64)`
 
 SetTotalSizeNumeric sets TotalSizeNumeric field to given value.
 
@@ -1722,20 +1722,20 @@ HasUtilityRunning returns a boolean if a field has been set.
 
 ### GetUtilityRunningNumeric
 
-`func (o *PoolsResourceInner) GetUtilityRunningNumeric() int32`
+`func (o *PoolsResourceInner) GetUtilityRunningNumeric() int64`
 
 GetUtilityRunningNumeric returns the UtilityRunningNumeric field if non-nil, zero value otherwise.
 
 ### GetUtilityRunningNumericOk
 
-`func (o *PoolsResourceInner) GetUtilityRunningNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetUtilityRunningNumericOk() (*int64, bool)`
 
 GetUtilityRunningNumericOk returns a tuple with the UtilityRunningNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUtilityRunningNumeric
 
-`func (o *PoolsResourceInner) SetUtilityRunningNumeric(v int32)`
+`func (o *PoolsResourceInner) SetUtilityRunningNumeric(v int64)`
 
 SetUtilityRunningNumeric sets UtilityRunningNumeric field to given value.
 
@@ -1747,20 +1747,20 @@ HasUtilityRunningNumeric returns a boolean if a field has been set.
 
 ### GetVolumes
 
-`func (o *PoolsResourceInner) GetVolumes() int32`
+`func (o *PoolsResourceInner) GetVolumes() int64`
 
 GetVolumes returns the Volumes field if non-nil, zero value otherwise.
 
 ### GetVolumesOk
 
-`func (o *PoolsResourceInner) GetVolumesOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetVolumesOk() (*int64, bool)`
 
 GetVolumesOk returns a tuple with the Volumes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVolumes
 
-`func (o *PoolsResourceInner) SetVolumes(v int32)`
+`func (o *PoolsResourceInner) SetVolumes(v int64)`
 
 SetVolumes sets Volumes field to given value.
 
@@ -1797,20 +1797,20 @@ HasZeroScan returns a boolean if a field has been set.
 
 ### GetZeroScanNumeric
 
-`func (o *PoolsResourceInner) GetZeroScanNumeric() int32`
+`func (o *PoolsResourceInner) GetZeroScanNumeric() int64`
 
 GetZeroScanNumeric returns the ZeroScanNumeric field if non-nil, zero value otherwise.
 
 ### GetZeroScanNumericOk
 
-`func (o *PoolsResourceInner) GetZeroScanNumericOk() (*int32, bool)`
+`func (o *PoolsResourceInner) GetZeroScanNumericOk() (*int64, bool)`
 
 GetZeroScanNumericOk returns a tuple with the ZeroScanNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetZeroScanNumeric
 
-`func (o *PoolsResourceInner) SetZeroScanNumeric(v int32)`
+`func (o *PoolsResourceInner) SetZeroScanNumeric(v int64)`
 
 SetZeroScanNumeric sets ZeroScanNumeric field to given value.
 

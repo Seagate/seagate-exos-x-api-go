@@ -10,35 +10,35 @@ Name | Type | Description | Notes
 **BaseVolume** | Pointer to **string** | The root of the snapshot tree | [optional] 
 **BaseVolumesUrl** | Pointer to **string** | The resource URL of the root of the snapshot tree | [optional] 
 **CreationDateTime** | Pointer to **string** |  | [optional] 
-**CreationDateTimeNumeric** | Pointer to **int32** |  | [optional] 
+**CreationDateTimeNumeric** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **MasterVolumeName** | Pointer to **string** | Source volume for snapshots | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
-**NumChildren** | Pointer to **int32** |  | [optional] 
-**NumSnapsTree** | Pointer to **int32** |  | [optional] 
+**NumChildren** | Pointer to **int64** |  | [optional] 
+**NumSnapsTree** | Pointer to **int64** |  | [optional] 
 **PriorityValue** | Pointer to **string** | Attribute priority | [optional] 
 **RetentionPriority** | Pointer to **string** | Retention priority of the snapshot or children | [optional] 
-**RetentionPriorityNumeric** | Pointer to **int32** | Retention priority of the snapshot or children( In numeric form ) | [optional] 
+**RetentionPriorityNumeric** | Pointer to **int64** | Retention priority of the snapshot or children( In numeric form ) | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
 **Shareddata** | Pointer to **string** |  | [optional] 
-**ShareddataNumeric** | Pointer to **int32** |  | [optional] 
+**ShareddataNumeric** | Pointer to **int64** |  | [optional] 
 **SnapData** | Pointer to **string** | Amount of snapshot data associated with this volume | [optional] 
-**SnapDataNumeric** | Pointer to **int32** | Amount of snapshot data associated with this volume( In numeric form ) | [optional] 
+**SnapDataNumeric** | Pointer to **int64** | Amount of snapshot data associated with this volume( In numeric form ) | [optional] 
 **SnapPoolName** | Pointer to **string** | User-defined name of the snap pool | [optional] 
 **SnapshotType** | Pointer to **string** | Associated snapshot type | [optional] 
-**SnapshotTypeNumeric** | Pointer to **int32** | Associated snapshot type( In numeric form ) | [optional] 
+**SnapshotTypeNumeric** | Pointer to **int64** | Associated snapshot type( In numeric form ) | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
-**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**StatusNumeric** | Pointer to **int64** |  | [optional] 
 **StatusReason** | Pointer to **string** | Probable cause for the current status | [optional] 
-**StatusReasonNumeric** | Pointer to **int32** | Probable cause for the current status( In numeric form ) | [optional] 
+**StatusReasonNumeric** | Pointer to **int64** | Probable cause for the current status( In numeric form ) | [optional] 
 **StoragePoolName** | Pointer to **string** | User-defined name for the pool | [optional] 
 **StoragePoolsUrl** | Pointer to **string** |  | [optional] 
 **StorageType** | Pointer to **string** | Storage type | [optional] 
-**StorageTypeNumeric** | Pointer to **int32** | Storage type( In numeric form ) | [optional] 
+**StorageTypeNumeric** | Pointer to **int64** | Storage type( In numeric form ) | [optional] 
 **TotalSize** | Pointer to **string** | The total size formatted using the session settings for base, precision, and units | [optional] 
-**TotalSizeNumeric** | Pointer to **int32** | The total size formatted using the session settings for base, precision, and units( In numeric form ) | [optional] 
+**TotalSizeNumeric** | Pointer to **int64** | The total size formatted using the session settings for base, precision, and units( In numeric form ) | [optional] 
 **Uniquedata** | Pointer to **string** | Amount of preserved and write data that is unique to the snapshot | [optional] 
-**UniquedataNumeric** | Pointer to **int32** | Amount of preserved and write data that is unique to the snapshot( In numeric form ) | [optional] 
+**UniquedataNumeric** | Pointer to **int64** | Amount of preserved and write data that is unique to the snapshot( In numeric form ) | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **UserPriorityValue** | Pointer to **string** | User-assigned priority | [optional] 
 **VirtualDiskName** | Pointer to **string** | The name of the pool that contains the volume | [optional] 
@@ -215,20 +215,20 @@ HasCreationDateTime returns a boolean if a field has been set.
 
 ### GetCreationDateTimeNumeric
 
-`func (o *SnapshotsResourceInner) GetCreationDateTimeNumeric() int32`
+`func (o *SnapshotsResourceInner) GetCreationDateTimeNumeric() int64`
 
 GetCreationDateTimeNumeric returns the CreationDateTimeNumeric field if non-nil, zero value otherwise.
 
 ### GetCreationDateTimeNumericOk
 
-`func (o *SnapshotsResourceInner) GetCreationDateTimeNumericOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetCreationDateTimeNumericOk() (*int64, bool)`
 
 GetCreationDateTimeNumericOk returns a tuple with the CreationDateTimeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreationDateTimeNumeric
 
-`func (o *SnapshotsResourceInner) SetCreationDateTimeNumeric(v int32)`
+`func (o *SnapshotsResourceInner) SetCreationDateTimeNumeric(v int64)`
 
 SetCreationDateTimeNumeric sets CreationDateTimeNumeric field to given value.
 
@@ -315,20 +315,20 @@ HasName returns a boolean if a field has been set.
 
 ### GetNumChildren
 
-`func (o *SnapshotsResourceInner) GetNumChildren() int32`
+`func (o *SnapshotsResourceInner) GetNumChildren() int64`
 
 GetNumChildren returns the NumChildren field if non-nil, zero value otherwise.
 
 ### GetNumChildrenOk
 
-`func (o *SnapshotsResourceInner) GetNumChildrenOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetNumChildrenOk() (*int64, bool)`
 
 GetNumChildrenOk returns a tuple with the NumChildren field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumChildren
 
-`func (o *SnapshotsResourceInner) SetNumChildren(v int32)`
+`func (o *SnapshotsResourceInner) SetNumChildren(v int64)`
 
 SetNumChildren sets NumChildren field to given value.
 
@@ -340,20 +340,20 @@ HasNumChildren returns a boolean if a field has been set.
 
 ### GetNumSnapsTree
 
-`func (o *SnapshotsResourceInner) GetNumSnapsTree() int32`
+`func (o *SnapshotsResourceInner) GetNumSnapsTree() int64`
 
 GetNumSnapsTree returns the NumSnapsTree field if non-nil, zero value otherwise.
 
 ### GetNumSnapsTreeOk
 
-`func (o *SnapshotsResourceInner) GetNumSnapsTreeOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetNumSnapsTreeOk() (*int64, bool)`
 
 GetNumSnapsTreeOk returns a tuple with the NumSnapsTree field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumSnapsTree
 
-`func (o *SnapshotsResourceInner) SetNumSnapsTree(v int32)`
+`func (o *SnapshotsResourceInner) SetNumSnapsTree(v int64)`
 
 SetNumSnapsTree sets NumSnapsTree field to given value.
 
@@ -415,20 +415,20 @@ HasRetentionPriority returns a boolean if a field has been set.
 
 ### GetRetentionPriorityNumeric
 
-`func (o *SnapshotsResourceInner) GetRetentionPriorityNumeric() int32`
+`func (o *SnapshotsResourceInner) GetRetentionPriorityNumeric() int64`
 
 GetRetentionPriorityNumeric returns the RetentionPriorityNumeric field if non-nil, zero value otherwise.
 
 ### GetRetentionPriorityNumericOk
 
-`func (o *SnapshotsResourceInner) GetRetentionPriorityNumericOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetRetentionPriorityNumericOk() (*int64, bool)`
 
 GetRetentionPriorityNumericOk returns a tuple with the RetentionPriorityNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRetentionPriorityNumeric
 
-`func (o *SnapshotsResourceInner) SetRetentionPriorityNumeric(v int32)`
+`func (o *SnapshotsResourceInner) SetRetentionPriorityNumeric(v int64)`
 
 SetRetentionPriorityNumeric sets RetentionPriorityNumeric field to given value.
 
@@ -490,20 +490,20 @@ HasShareddata returns a boolean if a field has been set.
 
 ### GetShareddataNumeric
 
-`func (o *SnapshotsResourceInner) GetShareddataNumeric() int32`
+`func (o *SnapshotsResourceInner) GetShareddataNumeric() int64`
 
 GetShareddataNumeric returns the ShareddataNumeric field if non-nil, zero value otherwise.
 
 ### GetShareddataNumericOk
 
-`func (o *SnapshotsResourceInner) GetShareddataNumericOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetShareddataNumericOk() (*int64, bool)`
 
 GetShareddataNumericOk returns a tuple with the ShareddataNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetShareddataNumeric
 
-`func (o *SnapshotsResourceInner) SetShareddataNumeric(v int32)`
+`func (o *SnapshotsResourceInner) SetShareddataNumeric(v int64)`
 
 SetShareddataNumeric sets ShareddataNumeric field to given value.
 
@@ -540,20 +540,20 @@ HasSnapData returns a boolean if a field has been set.
 
 ### GetSnapDataNumeric
 
-`func (o *SnapshotsResourceInner) GetSnapDataNumeric() int32`
+`func (o *SnapshotsResourceInner) GetSnapDataNumeric() int64`
 
 GetSnapDataNumeric returns the SnapDataNumeric field if non-nil, zero value otherwise.
 
 ### GetSnapDataNumericOk
 
-`func (o *SnapshotsResourceInner) GetSnapDataNumericOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetSnapDataNumericOk() (*int64, bool)`
 
 GetSnapDataNumericOk returns a tuple with the SnapDataNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSnapDataNumeric
 
-`func (o *SnapshotsResourceInner) SetSnapDataNumeric(v int32)`
+`func (o *SnapshotsResourceInner) SetSnapDataNumeric(v int64)`
 
 SetSnapDataNumeric sets SnapDataNumeric field to given value.
 
@@ -615,20 +615,20 @@ HasSnapshotType returns a boolean if a field has been set.
 
 ### GetSnapshotTypeNumeric
 
-`func (o *SnapshotsResourceInner) GetSnapshotTypeNumeric() int32`
+`func (o *SnapshotsResourceInner) GetSnapshotTypeNumeric() int64`
 
 GetSnapshotTypeNumeric returns the SnapshotTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetSnapshotTypeNumericOk
 
-`func (o *SnapshotsResourceInner) GetSnapshotTypeNumericOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetSnapshotTypeNumericOk() (*int64, bool)`
 
 GetSnapshotTypeNumericOk returns a tuple with the SnapshotTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSnapshotTypeNumeric
 
-`func (o *SnapshotsResourceInner) SetSnapshotTypeNumeric(v int32)`
+`func (o *SnapshotsResourceInner) SetSnapshotTypeNumeric(v int64)`
 
 SetSnapshotTypeNumeric sets SnapshotTypeNumeric field to given value.
 
@@ -665,20 +665,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
-`func (o *SnapshotsResourceInner) GetStatusNumeric() int32`
+`func (o *SnapshotsResourceInner) GetStatusNumeric() int64`
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
-`func (o *SnapshotsResourceInner) GetStatusNumericOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetStatusNumericOk() (*int64, bool)`
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
-`func (o *SnapshotsResourceInner) SetStatusNumeric(v int32)`
+`func (o *SnapshotsResourceInner) SetStatusNumeric(v int64)`
 
 SetStatusNumeric sets StatusNumeric field to given value.
 
@@ -715,20 +715,20 @@ HasStatusReason returns a boolean if a field has been set.
 
 ### GetStatusReasonNumeric
 
-`func (o *SnapshotsResourceInner) GetStatusReasonNumeric() int32`
+`func (o *SnapshotsResourceInner) GetStatusReasonNumeric() int64`
 
 GetStatusReasonNumeric returns the StatusReasonNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusReasonNumericOk
 
-`func (o *SnapshotsResourceInner) GetStatusReasonNumericOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetStatusReasonNumericOk() (*int64, bool)`
 
 GetStatusReasonNumericOk returns a tuple with the StatusReasonNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusReasonNumeric
 
-`func (o *SnapshotsResourceInner) SetStatusReasonNumeric(v int32)`
+`func (o *SnapshotsResourceInner) SetStatusReasonNumeric(v int64)`
 
 SetStatusReasonNumeric sets StatusReasonNumeric field to given value.
 
@@ -815,20 +815,20 @@ HasStorageType returns a boolean if a field has been set.
 
 ### GetStorageTypeNumeric
 
-`func (o *SnapshotsResourceInner) GetStorageTypeNumeric() int32`
+`func (o *SnapshotsResourceInner) GetStorageTypeNumeric() int64`
 
 GetStorageTypeNumeric returns the StorageTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetStorageTypeNumericOk
 
-`func (o *SnapshotsResourceInner) GetStorageTypeNumericOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetStorageTypeNumericOk() (*int64, bool)`
 
 GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStorageTypeNumeric
 
-`func (o *SnapshotsResourceInner) SetStorageTypeNumeric(v int32)`
+`func (o *SnapshotsResourceInner) SetStorageTypeNumeric(v int64)`
 
 SetStorageTypeNumeric sets StorageTypeNumeric field to given value.
 
@@ -865,20 +865,20 @@ HasTotalSize returns a boolean if a field has been set.
 
 ### GetTotalSizeNumeric
 
-`func (o *SnapshotsResourceInner) GetTotalSizeNumeric() int32`
+`func (o *SnapshotsResourceInner) GetTotalSizeNumeric() int64`
 
 GetTotalSizeNumeric returns the TotalSizeNumeric field if non-nil, zero value otherwise.
 
 ### GetTotalSizeNumericOk
 
-`func (o *SnapshotsResourceInner) GetTotalSizeNumericOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetTotalSizeNumericOk() (*int64, bool)`
 
 GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTotalSizeNumeric
 
-`func (o *SnapshotsResourceInner) SetTotalSizeNumeric(v int32)`
+`func (o *SnapshotsResourceInner) SetTotalSizeNumeric(v int64)`
 
 SetTotalSizeNumeric sets TotalSizeNumeric field to given value.
 
@@ -915,20 +915,20 @@ HasUniquedata returns a boolean if a field has been set.
 
 ### GetUniquedataNumeric
 
-`func (o *SnapshotsResourceInner) GetUniquedataNumeric() int32`
+`func (o *SnapshotsResourceInner) GetUniquedataNumeric() int64`
 
 GetUniquedataNumeric returns the UniquedataNumeric field if non-nil, zero value otherwise.
 
 ### GetUniquedataNumericOk
 
-`func (o *SnapshotsResourceInner) GetUniquedataNumericOk() (*int32, bool)`
+`func (o *SnapshotsResourceInner) GetUniquedataNumericOk() (*int64, bool)`
 
 GetUniquedataNumericOk returns a tuple with the UniquedataNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUniquedataNumeric
 
-`func (o *SnapshotsResourceInner) SetUniquedataNumeric(v int32)`
+`func (o *SnapshotsResourceInner) SetUniquedataNumeric(v int64)`
 
 SetUniquedataNumeric sets UniquedataNumeric field to given value.
 

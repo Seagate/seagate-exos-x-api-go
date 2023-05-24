@@ -23,30 +23,30 @@ type RedundancyResourceInner struct {
 	Meta                     *string `json:"meta,omitempty"`
 	ControllerASerialNumber  *string `json:"controller-a-serial-number,omitempty"`
 	ControllerAStatus        *string `json:"controller-a-status,omitempty"`
-	ControllerAStatusNumeric *int32  `json:"controller-a-status-numeric,omitempty"`
+	ControllerAStatusNumeric *int64  `json:"controller-a-status-numeric,omitempty"`
 	ControllerBSerialNumber  *string `json:"controller-b-serial-number,omitempty"`
 	ControllerBStatus        *string `json:"controller-b-status,omitempty"`
-	ControllerBStatusNumeric *int32  `json:"controller-b-status-numeric,omitempty"`
+	ControllerBStatusNumeric *int64  `json:"controller-b-status-numeric,omitempty"`
 	LocalReady               *string `json:"local-ready,omitempty"`
-	LocalReadyNumeric        *int32  `json:"local-ready-numeric,omitempty"`
+	LocalReadyNumeric        *int64  `json:"local-ready-numeric,omitempty"`
 	LocalReason              *string `json:"local-reason,omitempty"`
 	// Identifies the availability of the partner MC
 	OtherMCStatus *string `json:"other-MC-status,omitempty"`
 	// Identifies the availability of the partner MC( In numeric form )
-	OtherMCStatusNumeric *int32  `json:"other-MC-status-numeric,omitempty"`
+	OtherMCStatusNumeric *int64  `json:"other-MC-status-numeric,omitempty"`
 	OtherReady           *string `json:"other-ready,omitempty"`
-	OtherReadyNumeric    *int32  `json:"other-ready-numeric,omitempty"`
+	OtherReadyNumeric    *int64  `json:"other-ready-numeric,omitempty"`
 	OtherReason          *string `json:"other-reason,omitempty"`
 	// Mode in which the controllers are operating
 	RedundancyMode *string `json:"redundancy-mode,omitempty"`
 	// Mode in which the controllers are operating( In numeric form )
-	RedundancyModeNumeric *int32 `json:"redundancy-mode-numeric,omitempty"`
+	RedundancyModeNumeric *int64 `json:"redundancy-mode-numeric,omitempty"`
 	// Current operational state of the controllers
 	RedundancyStatus *string `json:"redundancy-status,omitempty"`
 	// Current operational state of the controllers( In numeric form )
-	RedundancyStatusNumeric *int32  `json:"redundancy-status-numeric,omitempty"`
+	RedundancyStatusNumeric *int64  `json:"redundancy-status-numeric,omitempty"`
 	SystemReady             *string `json:"system-ready,omitempty"`
-	SystemReadyNumeric      *int32  `json:"system-ready-numeric,omitempty"`
+	SystemReadyNumeric      *int64  `json:"system-ready-numeric,omitempty"`
 }
 
 // NewRedundancyResourceInner instantiates a new RedundancyResourceInner object
@@ -195,9 +195,9 @@ func (o *RedundancyResourceInner) SetControllerAStatus(v string) {
 }
 
 // GetControllerAStatusNumeric returns the ControllerAStatusNumeric field value if set, zero value otherwise.
-func (o *RedundancyResourceInner) GetControllerAStatusNumeric() int32 {
+func (o *RedundancyResourceInner) GetControllerAStatusNumeric() int64 {
 	if o == nil || IsNil(o.ControllerAStatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ControllerAStatusNumeric
@@ -205,7 +205,7 @@ func (o *RedundancyResourceInner) GetControllerAStatusNumeric() int32 {
 
 // GetControllerAStatusNumericOk returns a tuple with the ControllerAStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RedundancyResourceInner) GetControllerAStatusNumericOk() (*int32, bool) {
+func (o *RedundancyResourceInner) GetControllerAStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ControllerAStatusNumeric) {
 		return nil, false
 	}
@@ -221,8 +221,8 @@ func (o *RedundancyResourceInner) HasControllerAStatusNumeric() bool {
 	return false
 }
 
-// SetControllerAStatusNumeric gets a reference to the given int32 and assigns it to the ControllerAStatusNumeric field.
-func (o *RedundancyResourceInner) SetControllerAStatusNumeric(v int32) {
+// SetControllerAStatusNumeric gets a reference to the given int64 and assigns it to the ControllerAStatusNumeric field.
+func (o *RedundancyResourceInner) SetControllerAStatusNumeric(v int64) {
 	o.ControllerAStatusNumeric = &v
 }
 
@@ -291,9 +291,9 @@ func (o *RedundancyResourceInner) SetControllerBStatus(v string) {
 }
 
 // GetControllerBStatusNumeric returns the ControllerBStatusNumeric field value if set, zero value otherwise.
-func (o *RedundancyResourceInner) GetControllerBStatusNumeric() int32 {
+func (o *RedundancyResourceInner) GetControllerBStatusNumeric() int64 {
 	if o == nil || IsNil(o.ControllerBStatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ControllerBStatusNumeric
@@ -301,7 +301,7 @@ func (o *RedundancyResourceInner) GetControllerBStatusNumeric() int32 {
 
 // GetControllerBStatusNumericOk returns a tuple with the ControllerBStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RedundancyResourceInner) GetControllerBStatusNumericOk() (*int32, bool) {
+func (o *RedundancyResourceInner) GetControllerBStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ControllerBStatusNumeric) {
 		return nil, false
 	}
@@ -317,8 +317,8 @@ func (o *RedundancyResourceInner) HasControllerBStatusNumeric() bool {
 	return false
 }
 
-// SetControllerBStatusNumeric gets a reference to the given int32 and assigns it to the ControllerBStatusNumeric field.
-func (o *RedundancyResourceInner) SetControllerBStatusNumeric(v int32) {
+// SetControllerBStatusNumeric gets a reference to the given int64 and assigns it to the ControllerBStatusNumeric field.
+func (o *RedundancyResourceInner) SetControllerBStatusNumeric(v int64) {
 	o.ControllerBStatusNumeric = &v
 }
 
@@ -355,9 +355,9 @@ func (o *RedundancyResourceInner) SetLocalReady(v string) {
 }
 
 // GetLocalReadyNumeric returns the LocalReadyNumeric field value if set, zero value otherwise.
-func (o *RedundancyResourceInner) GetLocalReadyNumeric() int32 {
+func (o *RedundancyResourceInner) GetLocalReadyNumeric() int64 {
 	if o == nil || IsNil(o.LocalReadyNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.LocalReadyNumeric
@@ -365,7 +365,7 @@ func (o *RedundancyResourceInner) GetLocalReadyNumeric() int32 {
 
 // GetLocalReadyNumericOk returns a tuple with the LocalReadyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RedundancyResourceInner) GetLocalReadyNumericOk() (*int32, bool) {
+func (o *RedundancyResourceInner) GetLocalReadyNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.LocalReadyNumeric) {
 		return nil, false
 	}
@@ -381,8 +381,8 @@ func (o *RedundancyResourceInner) HasLocalReadyNumeric() bool {
 	return false
 }
 
-// SetLocalReadyNumeric gets a reference to the given int32 and assigns it to the LocalReadyNumeric field.
-func (o *RedundancyResourceInner) SetLocalReadyNumeric(v int32) {
+// SetLocalReadyNumeric gets a reference to the given int64 and assigns it to the LocalReadyNumeric field.
+func (o *RedundancyResourceInner) SetLocalReadyNumeric(v int64) {
 	o.LocalReadyNumeric = &v
 }
 
@@ -451,9 +451,9 @@ func (o *RedundancyResourceInner) SetOtherMCStatus(v string) {
 }
 
 // GetOtherMCStatusNumeric returns the OtherMCStatusNumeric field value if set, zero value otherwise.
-func (o *RedundancyResourceInner) GetOtherMCStatusNumeric() int32 {
+func (o *RedundancyResourceInner) GetOtherMCStatusNumeric() int64 {
 	if o == nil || IsNil(o.OtherMCStatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.OtherMCStatusNumeric
@@ -461,7 +461,7 @@ func (o *RedundancyResourceInner) GetOtherMCStatusNumeric() int32 {
 
 // GetOtherMCStatusNumericOk returns a tuple with the OtherMCStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RedundancyResourceInner) GetOtherMCStatusNumericOk() (*int32, bool) {
+func (o *RedundancyResourceInner) GetOtherMCStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.OtherMCStatusNumeric) {
 		return nil, false
 	}
@@ -477,8 +477,8 @@ func (o *RedundancyResourceInner) HasOtherMCStatusNumeric() bool {
 	return false
 }
 
-// SetOtherMCStatusNumeric gets a reference to the given int32 and assigns it to the OtherMCStatusNumeric field.
-func (o *RedundancyResourceInner) SetOtherMCStatusNumeric(v int32) {
+// SetOtherMCStatusNumeric gets a reference to the given int64 and assigns it to the OtherMCStatusNumeric field.
+func (o *RedundancyResourceInner) SetOtherMCStatusNumeric(v int64) {
 	o.OtherMCStatusNumeric = &v
 }
 
@@ -515,9 +515,9 @@ func (o *RedundancyResourceInner) SetOtherReady(v string) {
 }
 
 // GetOtherReadyNumeric returns the OtherReadyNumeric field value if set, zero value otherwise.
-func (o *RedundancyResourceInner) GetOtherReadyNumeric() int32 {
+func (o *RedundancyResourceInner) GetOtherReadyNumeric() int64 {
 	if o == nil || IsNil(o.OtherReadyNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.OtherReadyNumeric
@@ -525,7 +525,7 @@ func (o *RedundancyResourceInner) GetOtherReadyNumeric() int32 {
 
 // GetOtherReadyNumericOk returns a tuple with the OtherReadyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RedundancyResourceInner) GetOtherReadyNumericOk() (*int32, bool) {
+func (o *RedundancyResourceInner) GetOtherReadyNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.OtherReadyNumeric) {
 		return nil, false
 	}
@@ -541,8 +541,8 @@ func (o *RedundancyResourceInner) HasOtherReadyNumeric() bool {
 	return false
 }
 
-// SetOtherReadyNumeric gets a reference to the given int32 and assigns it to the OtherReadyNumeric field.
-func (o *RedundancyResourceInner) SetOtherReadyNumeric(v int32) {
+// SetOtherReadyNumeric gets a reference to the given int64 and assigns it to the OtherReadyNumeric field.
+func (o *RedundancyResourceInner) SetOtherReadyNumeric(v int64) {
 	o.OtherReadyNumeric = &v
 }
 
@@ -611,9 +611,9 @@ func (o *RedundancyResourceInner) SetRedundancyMode(v string) {
 }
 
 // GetRedundancyModeNumeric returns the RedundancyModeNumeric field value if set, zero value otherwise.
-func (o *RedundancyResourceInner) GetRedundancyModeNumeric() int32 {
+func (o *RedundancyResourceInner) GetRedundancyModeNumeric() int64 {
 	if o == nil || IsNil(o.RedundancyModeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RedundancyModeNumeric
@@ -621,7 +621,7 @@ func (o *RedundancyResourceInner) GetRedundancyModeNumeric() int32 {
 
 // GetRedundancyModeNumericOk returns a tuple with the RedundancyModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RedundancyResourceInner) GetRedundancyModeNumericOk() (*int32, bool) {
+func (o *RedundancyResourceInner) GetRedundancyModeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.RedundancyModeNumeric) {
 		return nil, false
 	}
@@ -637,8 +637,8 @@ func (o *RedundancyResourceInner) HasRedundancyModeNumeric() bool {
 	return false
 }
 
-// SetRedundancyModeNumeric gets a reference to the given int32 and assigns it to the RedundancyModeNumeric field.
-func (o *RedundancyResourceInner) SetRedundancyModeNumeric(v int32) {
+// SetRedundancyModeNumeric gets a reference to the given int64 and assigns it to the RedundancyModeNumeric field.
+func (o *RedundancyResourceInner) SetRedundancyModeNumeric(v int64) {
 	o.RedundancyModeNumeric = &v
 }
 
@@ -675,9 +675,9 @@ func (o *RedundancyResourceInner) SetRedundancyStatus(v string) {
 }
 
 // GetRedundancyStatusNumeric returns the RedundancyStatusNumeric field value if set, zero value otherwise.
-func (o *RedundancyResourceInner) GetRedundancyStatusNumeric() int32 {
+func (o *RedundancyResourceInner) GetRedundancyStatusNumeric() int64 {
 	if o == nil || IsNil(o.RedundancyStatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RedundancyStatusNumeric
@@ -685,7 +685,7 @@ func (o *RedundancyResourceInner) GetRedundancyStatusNumeric() int32 {
 
 // GetRedundancyStatusNumericOk returns a tuple with the RedundancyStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RedundancyResourceInner) GetRedundancyStatusNumericOk() (*int32, bool) {
+func (o *RedundancyResourceInner) GetRedundancyStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.RedundancyStatusNumeric) {
 		return nil, false
 	}
@@ -701,8 +701,8 @@ func (o *RedundancyResourceInner) HasRedundancyStatusNumeric() bool {
 	return false
 }
 
-// SetRedundancyStatusNumeric gets a reference to the given int32 and assigns it to the RedundancyStatusNumeric field.
-func (o *RedundancyResourceInner) SetRedundancyStatusNumeric(v int32) {
+// SetRedundancyStatusNumeric gets a reference to the given int64 and assigns it to the RedundancyStatusNumeric field.
+func (o *RedundancyResourceInner) SetRedundancyStatusNumeric(v int64) {
 	o.RedundancyStatusNumeric = &v
 }
 
@@ -739,9 +739,9 @@ func (o *RedundancyResourceInner) SetSystemReady(v string) {
 }
 
 // GetSystemReadyNumeric returns the SystemReadyNumeric field value if set, zero value otherwise.
-func (o *RedundancyResourceInner) GetSystemReadyNumeric() int32 {
+func (o *RedundancyResourceInner) GetSystemReadyNumeric() int64 {
 	if o == nil || IsNil(o.SystemReadyNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SystemReadyNumeric
@@ -749,7 +749,7 @@ func (o *RedundancyResourceInner) GetSystemReadyNumeric() int32 {
 
 // GetSystemReadyNumericOk returns a tuple with the SystemReadyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RedundancyResourceInner) GetSystemReadyNumericOk() (*int32, bool) {
+func (o *RedundancyResourceInner) GetSystemReadyNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.SystemReadyNumeric) {
 		return nil, false
 	}
@@ -765,8 +765,8 @@ func (o *RedundancyResourceInner) HasSystemReadyNumeric() bool {
 	return false
 }
 
-// SetSystemReadyNumeric gets a reference to the given int32 and assigns it to the SystemReadyNumeric field.
-func (o *RedundancyResourceInner) SetSystemReadyNumeric(v int32) {
+// SetSystemReadyNumeric gets a reference to the given int64 and assigns it to the SystemReadyNumeric field.
+func (o *RedundancyResourceInner) SetSystemReadyNumeric(v int64) {
 	o.SystemReadyNumeric = &v
 }
 

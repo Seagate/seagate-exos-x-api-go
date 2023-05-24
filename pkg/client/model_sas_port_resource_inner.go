@@ -22,15 +22,15 @@ type SasPortResourceInner struct {
 	ObjectName                *string `json:"object-name,omitempty"`
 	Meta                      *string `json:"meta,omitempty"`
 	ConfiguredTopology        *string `json:"configured-topology,omitempty"`
-	ConfiguredTopologyNumeric *int32  `json:"configured-topology-numeric,omitempty"`
+	ConfiguredTopologyNumeric *int64  `json:"configured-topology-numeric,omitempty"`
 	// Number of currently active PHY lanes for the SAS port
-	SasActiveLanes *int32 `json:"sas-active-lanes,omitempty"`
+	SasActiveLanes *int64 `json:"sas-active-lanes,omitempty"`
 	// Number of disabled PHY lanes for the SAS port
-	SasDisabledLanes *int32 `json:"sas-disabled-lanes,omitempty"`
+	SasDisabledLanes *int64 `json:"sas-disabled-lanes,omitempty"`
 	// Expected number of active PHY lanes for the SAS port
-	SasLanesExpected *int32 `json:"sas-lanes-expected,omitempty"`
+	SasLanesExpected *int64 `json:"sas-lanes-expected,omitempty"`
 	// Number of PHY lanes for the SAS port
-	Width *int32 `json:"width,omitempty"`
+	Width *int64 `json:"width,omitempty"`
 }
 
 // NewSasPortResourceInner instantiates a new SasPortResourceInner object
@@ -147,9 +147,9 @@ func (o *SasPortResourceInner) SetConfiguredTopology(v string) {
 }
 
 // GetConfiguredTopologyNumeric returns the ConfiguredTopologyNumeric field value if set, zero value otherwise.
-func (o *SasPortResourceInner) GetConfiguredTopologyNumeric() int32 {
+func (o *SasPortResourceInner) GetConfiguredTopologyNumeric() int64 {
 	if o == nil || IsNil(o.ConfiguredTopologyNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ConfiguredTopologyNumeric
@@ -157,7 +157,7 @@ func (o *SasPortResourceInner) GetConfiguredTopologyNumeric() int32 {
 
 // GetConfiguredTopologyNumericOk returns a tuple with the ConfiguredTopologyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SasPortResourceInner) GetConfiguredTopologyNumericOk() (*int32, bool) {
+func (o *SasPortResourceInner) GetConfiguredTopologyNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ConfiguredTopologyNumeric) {
 		return nil, false
 	}
@@ -173,15 +173,15 @@ func (o *SasPortResourceInner) HasConfiguredTopologyNumeric() bool {
 	return false
 }
 
-// SetConfiguredTopologyNumeric gets a reference to the given int32 and assigns it to the ConfiguredTopologyNumeric field.
-func (o *SasPortResourceInner) SetConfiguredTopologyNumeric(v int32) {
+// SetConfiguredTopologyNumeric gets a reference to the given int64 and assigns it to the ConfiguredTopologyNumeric field.
+func (o *SasPortResourceInner) SetConfiguredTopologyNumeric(v int64) {
 	o.ConfiguredTopologyNumeric = &v
 }
 
 // GetSasActiveLanes returns the SasActiveLanes field value if set, zero value otherwise.
-func (o *SasPortResourceInner) GetSasActiveLanes() int32 {
+func (o *SasPortResourceInner) GetSasActiveLanes() int64 {
 	if o == nil || IsNil(o.SasActiveLanes) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SasActiveLanes
@@ -189,7 +189,7 @@ func (o *SasPortResourceInner) GetSasActiveLanes() int32 {
 
 // GetSasActiveLanesOk returns a tuple with the SasActiveLanes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SasPortResourceInner) GetSasActiveLanesOk() (*int32, bool) {
+func (o *SasPortResourceInner) GetSasActiveLanesOk() (*int64, bool) {
 	if o == nil || IsNil(o.SasActiveLanes) {
 		return nil, false
 	}
@@ -205,15 +205,15 @@ func (o *SasPortResourceInner) HasSasActiveLanes() bool {
 	return false
 }
 
-// SetSasActiveLanes gets a reference to the given int32 and assigns it to the SasActiveLanes field.
-func (o *SasPortResourceInner) SetSasActiveLanes(v int32) {
+// SetSasActiveLanes gets a reference to the given int64 and assigns it to the SasActiveLanes field.
+func (o *SasPortResourceInner) SetSasActiveLanes(v int64) {
 	o.SasActiveLanes = &v
 }
 
 // GetSasDisabledLanes returns the SasDisabledLanes field value if set, zero value otherwise.
-func (o *SasPortResourceInner) GetSasDisabledLanes() int32 {
+func (o *SasPortResourceInner) GetSasDisabledLanes() int64 {
 	if o == nil || IsNil(o.SasDisabledLanes) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SasDisabledLanes
@@ -221,7 +221,7 @@ func (o *SasPortResourceInner) GetSasDisabledLanes() int32 {
 
 // GetSasDisabledLanesOk returns a tuple with the SasDisabledLanes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SasPortResourceInner) GetSasDisabledLanesOk() (*int32, bool) {
+func (o *SasPortResourceInner) GetSasDisabledLanesOk() (*int64, bool) {
 	if o == nil || IsNil(o.SasDisabledLanes) {
 		return nil, false
 	}
@@ -237,15 +237,15 @@ func (o *SasPortResourceInner) HasSasDisabledLanes() bool {
 	return false
 }
 
-// SetSasDisabledLanes gets a reference to the given int32 and assigns it to the SasDisabledLanes field.
-func (o *SasPortResourceInner) SetSasDisabledLanes(v int32) {
+// SetSasDisabledLanes gets a reference to the given int64 and assigns it to the SasDisabledLanes field.
+func (o *SasPortResourceInner) SetSasDisabledLanes(v int64) {
 	o.SasDisabledLanes = &v
 }
 
 // GetSasLanesExpected returns the SasLanesExpected field value if set, zero value otherwise.
-func (o *SasPortResourceInner) GetSasLanesExpected() int32 {
+func (o *SasPortResourceInner) GetSasLanesExpected() int64 {
 	if o == nil || IsNil(o.SasLanesExpected) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SasLanesExpected
@@ -253,7 +253,7 @@ func (o *SasPortResourceInner) GetSasLanesExpected() int32 {
 
 // GetSasLanesExpectedOk returns a tuple with the SasLanesExpected field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SasPortResourceInner) GetSasLanesExpectedOk() (*int32, bool) {
+func (o *SasPortResourceInner) GetSasLanesExpectedOk() (*int64, bool) {
 	if o == nil || IsNil(o.SasLanesExpected) {
 		return nil, false
 	}
@@ -269,15 +269,15 @@ func (o *SasPortResourceInner) HasSasLanesExpected() bool {
 	return false
 }
 
-// SetSasLanesExpected gets a reference to the given int32 and assigns it to the SasLanesExpected field.
-func (o *SasPortResourceInner) SetSasLanesExpected(v int32) {
+// SetSasLanesExpected gets a reference to the given int64 and assigns it to the SasLanesExpected field.
+func (o *SasPortResourceInner) SetSasLanesExpected(v int64) {
 	o.SasLanesExpected = &v
 }
 
 // GetWidth returns the Width field value if set, zero value otherwise.
-func (o *SasPortResourceInner) GetWidth() int32 {
+func (o *SasPortResourceInner) GetWidth() int64 {
 	if o == nil || IsNil(o.Width) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Width
@@ -285,7 +285,7 @@ func (o *SasPortResourceInner) GetWidth() int32 {
 
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SasPortResourceInner) GetWidthOk() (*int32, bool) {
+func (o *SasPortResourceInner) GetWidthOk() (*int64, bool) {
 	if o == nil || IsNil(o.Width) {
 		return nil, false
 	}
@@ -301,8 +301,8 @@ func (o *SasPortResourceInner) HasWidth() bool {
 	return false
 }
 
-// SetWidth gets a reference to the given int32 and assigns it to the Width field.
-func (o *SasPortResourceInner) SetWidth(v int32) {
+// SetWidth gets a reference to the given int64 and assigns it to the Width field.
+func (o *SasPortResourceInner) SetWidth(v int64) {
 	o.Width = &v
 }
 

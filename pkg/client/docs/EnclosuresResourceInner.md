@@ -7,12 +7,12 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **BoardModel** | Pointer to **string** | IOM Board model | [optional] 
-**BoardModelNumeric** | Pointer to **int32** | IOM Board model( In numeric form ) | [optional] 
-**Columns** | Pointer to **int32** |  | [optional] 
+**BoardModelNumeric** | Pointer to **int64** | IOM Board model( In numeric form ) | [optional] 
+**Columns** | Pointer to **int64** |  | [optional] 
 **DashLevel** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **DriveOrientation** | Pointer to **string** |  | [optional] 
-**DriveOrientationNumeric** | Pointer to **int32** |  | [optional] 
+**DriveOrientationNumeric** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **EmpA** | Pointer to **string** |  | [optional] 
 **EmpABusid** | Pointer to **string** |  | [optional] 
@@ -25,8 +25,8 @@ Name | Type | Description | Notes
 **EmpBRev** | Pointer to **string** | Enclosure Management Processor | [optional] 
 **EmpBTargetid** | Pointer to **string** |  | [optional] 
 **EnclosureArrangement** | Pointer to **string** |  | [optional] 
-**EnclosureArrangementNumeric** | Pointer to **int32** |  | [optional] 
-**EnclosureId** | Pointer to **int32** |  | [optional] 
+**EnclosureArrangementNumeric** | Pointer to **int64** |  | [optional] 
+**EnclosureId** | Pointer to **int64** |  | [optional] 
 **EnclosurePower** | Pointer to **string** |  | [optional] 
 **EnclosureWwn** | Pointer to **string** | Enclosure World Wide Name | [optional] 
 **ExtendedStatus** | Pointer to **string** | Extended status (bits) | [optional] 
@@ -36,40 +36,40 @@ Name | Type | Description | Notes
 **GemVersionA** | Pointer to **string** |  | [optional] 
 **GemVersionB** | Pointer to **string** |  | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **IomType** | Pointer to **string** |  | [optional] 
-**IomTypeNumeric** | Pointer to **int32** |  | [optional] 
+**IomTypeNumeric** | Pointer to **int64** |  | [optional] 
 **Location** | Pointer to **string** |  | [optional] 
 **LocatorLed** | Pointer to **string** | Indicates whether the locator LED is on | [optional] 
-**LocatorLedNumeric** | Pointer to **int32** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
+**LocatorLedNumeric** | Pointer to **int64** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
 **MfgDate** | Pointer to **string** |  | [optional] 
-**MfgDateNumeric** | Pointer to **int32** |  | [optional] 
+**MfgDateNumeric** | Pointer to **int64** |  | [optional] 
 **MfgLocation** | Pointer to **string** |  | [optional] 
-**MidplaneRev** | Pointer to **int32** | Revision level of midplane | [optional] 
+**MidplaneRev** | Pointer to **int64** | Revision level of midplane | [optional] 
 **MidplaneSerialNumber** | Pointer to **string** | Serial number of the enclosure | [optional] 
 **MidplaneType** | Pointer to **string** | Type of midplane | [optional] 
-**MidplaneTypeNumeric** | Pointer to **int32** | Type of midplane( In numeric form ) | [optional] 
+**MidplaneTypeNumeric** | Pointer to **int64** | Type of midplane( In numeric form ) | [optional] 
 **Model** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
-**NumberOfCoolingsElements** | Pointer to **int32** | Number of fans in the enclosure | [optional] 
-**NumberOfDisks** | Pointer to **int32** | Number of disks in the enclosure | [optional] 
-**NumberOfPowerSupplies** | Pointer to **int32** | Number of power supplies in the enclosure | [optional] 
+**NumberOfCoolingsElements** | Pointer to **int64** | Number of fans in the enclosure | [optional] 
+**NumberOfDisks** | Pointer to **int64** | Number of disks in the enclosure | [optional] 
+**NumberOfPowerSupplies** | Pointer to **int64** | Number of power supplies in the enclosure | [optional] 
 **PartNumber** | Pointer to **string** |  | [optional] 
 **Pcie2Capable** | Pointer to **string** | Enclosure is capable of using PCIe version 2 | [optional] 
-**Pcie2CapableNumeric** | Pointer to **int32** | Enclosure is capable of using PCIe version 2( In numeric form ) | [optional] 
+**Pcie2CapableNumeric** | Pointer to **int64** | Enclosure is capable of using PCIe version 2( In numeric form ) | [optional] 
 **PlatformType** | Pointer to **string** | HW Platform Type | [optional] 
-**PlatformTypeNumeric** | Pointer to **int32** | HW Platform Type( In numeric form ) | [optional] 
-**RackNumber** | Pointer to **int32** |  | [optional] 
-**RackPosition** | Pointer to **int32** |  | [optional] 
+**PlatformTypeNumeric** | Pointer to **int64** | HW Platform Type( In numeric form ) | [optional] 
+**RackNumber** | Pointer to **int64** |  | [optional] 
+**RackPosition** | Pointer to **int64** |  | [optional] 
 **Revision** | Pointer to **string** | Current revision for this FRU | [optional] 
-**Rows** | Pointer to **int32** |  | [optional] 
-**Slots** | Pointer to **int32** | The number of disk slots in this enclosure | [optional] 
+**Rows** | Pointer to **int64** |  | [optional] 
+**Slots** | Pointer to **int64** | The number of disk slots in this enclosure | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
-**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**StatusNumeric** | Pointer to **int64** |  | [optional] 
 **Type** | Pointer to **string** | Type of component in this enclosure | [optional] 
-**TypeNumeric** | Pointer to **int32** | Type of component in this enclosure( In numeric form ) | [optional] 
+**TypeNumeric** | Pointer to **int64** | Type of component in this enclosure( In numeric form ) | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **Vendor** | Pointer to **string** |  | [optional] 
 **Controllers** | Pointer to [**[]ControllersResourceInner**](ControllersResourceInner.md) |  | [optional] 
@@ -171,20 +171,20 @@ HasBoardModel returns a boolean if a field has been set.
 
 ### GetBoardModelNumeric
 
-`func (o *EnclosuresResourceInner) GetBoardModelNumeric() int32`
+`func (o *EnclosuresResourceInner) GetBoardModelNumeric() int64`
 
 GetBoardModelNumeric returns the BoardModelNumeric field if non-nil, zero value otherwise.
 
 ### GetBoardModelNumericOk
 
-`func (o *EnclosuresResourceInner) GetBoardModelNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetBoardModelNumericOk() (*int64, bool)`
 
 GetBoardModelNumericOk returns a tuple with the BoardModelNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBoardModelNumeric
 
-`func (o *EnclosuresResourceInner) SetBoardModelNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetBoardModelNumeric(v int64)`
 
 SetBoardModelNumeric sets BoardModelNumeric field to given value.
 
@@ -196,20 +196,20 @@ HasBoardModelNumeric returns a boolean if a field has been set.
 
 ### GetColumns
 
-`func (o *EnclosuresResourceInner) GetColumns() int32`
+`func (o *EnclosuresResourceInner) GetColumns() int64`
 
 GetColumns returns the Columns field if non-nil, zero value otherwise.
 
 ### GetColumnsOk
 
-`func (o *EnclosuresResourceInner) GetColumnsOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetColumnsOk() (*int64, bool)`
 
 GetColumnsOk returns a tuple with the Columns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetColumns
 
-`func (o *EnclosuresResourceInner) SetColumns(v int32)`
+`func (o *EnclosuresResourceInner) SetColumns(v int64)`
 
 SetColumns sets Columns field to given value.
 
@@ -296,20 +296,20 @@ HasDriveOrientation returns a boolean if a field has been set.
 
 ### GetDriveOrientationNumeric
 
-`func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int32`
+`func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int64`
 
 GetDriveOrientationNumeric returns the DriveOrientationNumeric field if non-nil, zero value otherwise.
 
 ### GetDriveOrientationNumericOk
 
-`func (o *EnclosuresResourceInner) GetDriveOrientationNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetDriveOrientationNumericOk() (*int64, bool)`
 
 GetDriveOrientationNumericOk returns a tuple with the DriveOrientationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDriveOrientationNumeric
 
-`func (o *EnclosuresResourceInner) SetDriveOrientationNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetDriveOrientationNumeric(v int64)`
 
 SetDriveOrientationNumeric sets DriveOrientationNumeric field to given value.
 
@@ -621,20 +621,20 @@ HasEnclosureArrangement returns a boolean if a field has been set.
 
 ### GetEnclosureArrangementNumeric
 
-`func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int32`
+`func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int64`
 
 GetEnclosureArrangementNumeric returns the EnclosureArrangementNumeric field if non-nil, zero value otherwise.
 
 ### GetEnclosureArrangementNumericOk
 
-`func (o *EnclosuresResourceInner) GetEnclosureArrangementNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetEnclosureArrangementNumericOk() (*int64, bool)`
 
 GetEnclosureArrangementNumericOk returns a tuple with the EnclosureArrangementNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureArrangementNumeric
 
-`func (o *EnclosuresResourceInner) SetEnclosureArrangementNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetEnclosureArrangementNumeric(v int64)`
 
 SetEnclosureArrangementNumeric sets EnclosureArrangementNumeric field to given value.
 
@@ -646,20 +646,20 @@ HasEnclosureArrangementNumeric returns a boolean if a field has been set.
 
 ### GetEnclosureId
 
-`func (o *EnclosuresResourceInner) GetEnclosureId() int32`
+`func (o *EnclosuresResourceInner) GetEnclosureId() int64`
 
 GetEnclosureId returns the EnclosureId field if non-nil, zero value otherwise.
 
 ### GetEnclosureIdOk
 
-`func (o *EnclosuresResourceInner) GetEnclosureIdOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetEnclosureIdOk() (*int64, bool)`
 
 GetEnclosureIdOk returns a tuple with the EnclosureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureId
 
-`func (o *EnclosuresResourceInner) SetEnclosureId(v int32)`
+`func (o *EnclosuresResourceInner) SetEnclosureId(v int64)`
 
 SetEnclosureId sets EnclosureId field to given value.
 
@@ -896,20 +896,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *EnclosuresResourceInner) GetHealthNumeric() int32`
+`func (o *EnclosuresResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *EnclosuresResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *EnclosuresResourceInner) SetHealthNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -996,20 +996,20 @@ HasIomType returns a boolean if a field has been set.
 
 ### GetIomTypeNumeric
 
-`func (o *EnclosuresResourceInner) GetIomTypeNumeric() int32`
+`func (o *EnclosuresResourceInner) GetIomTypeNumeric() int64`
 
 GetIomTypeNumeric returns the IomTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetIomTypeNumericOk
 
-`func (o *EnclosuresResourceInner) GetIomTypeNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetIomTypeNumericOk() (*int64, bool)`
 
 GetIomTypeNumericOk returns a tuple with the IomTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIomTypeNumeric
 
-`func (o *EnclosuresResourceInner) SetIomTypeNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetIomTypeNumeric(v int64)`
 
 SetIomTypeNumeric sets IomTypeNumeric field to given value.
 
@@ -1071,20 +1071,20 @@ HasLocatorLed returns a boolean if a field has been set.
 
 ### GetLocatorLedNumeric
 
-`func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int32`
+`func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int64`
 
 GetLocatorLedNumeric returns the LocatorLedNumeric field if non-nil, zero value otherwise.
 
 ### GetLocatorLedNumericOk
 
-`func (o *EnclosuresResourceInner) GetLocatorLedNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetLocatorLedNumericOk() (*int64, bool)`
 
 GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocatorLedNumeric
 
-`func (o *EnclosuresResourceInner) SetLocatorLedNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetLocatorLedNumeric(v int64)`
 
 SetLocatorLedNumeric sets LocatorLedNumeric field to given value.
 
@@ -1121,20 +1121,20 @@ HasMfgDate returns a boolean if a field has been set.
 
 ### GetMfgDateNumeric
 
-`func (o *EnclosuresResourceInner) GetMfgDateNumeric() int32`
+`func (o *EnclosuresResourceInner) GetMfgDateNumeric() int64`
 
 GetMfgDateNumeric returns the MfgDateNumeric field if non-nil, zero value otherwise.
 
 ### GetMfgDateNumericOk
 
-`func (o *EnclosuresResourceInner) GetMfgDateNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetMfgDateNumericOk() (*int64, bool)`
 
 GetMfgDateNumericOk returns a tuple with the MfgDateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMfgDateNumeric
 
-`func (o *EnclosuresResourceInner) SetMfgDateNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetMfgDateNumeric(v int64)`
 
 SetMfgDateNumeric sets MfgDateNumeric field to given value.
 
@@ -1171,20 +1171,20 @@ HasMfgLocation returns a boolean if a field has been set.
 
 ### GetMidplaneRev
 
-`func (o *EnclosuresResourceInner) GetMidplaneRev() int32`
+`func (o *EnclosuresResourceInner) GetMidplaneRev() int64`
 
 GetMidplaneRev returns the MidplaneRev field if non-nil, zero value otherwise.
 
 ### GetMidplaneRevOk
 
-`func (o *EnclosuresResourceInner) GetMidplaneRevOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetMidplaneRevOk() (*int64, bool)`
 
 GetMidplaneRevOk returns a tuple with the MidplaneRev field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMidplaneRev
 
-`func (o *EnclosuresResourceInner) SetMidplaneRev(v int32)`
+`func (o *EnclosuresResourceInner) SetMidplaneRev(v int64)`
 
 SetMidplaneRev sets MidplaneRev field to given value.
 
@@ -1246,20 +1246,20 @@ HasMidplaneType returns a boolean if a field has been set.
 
 ### GetMidplaneTypeNumeric
 
-`func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int32`
+`func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int64`
 
 GetMidplaneTypeNumeric returns the MidplaneTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetMidplaneTypeNumericOk
 
-`func (o *EnclosuresResourceInner) GetMidplaneTypeNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetMidplaneTypeNumericOk() (*int64, bool)`
 
 GetMidplaneTypeNumericOk returns a tuple with the MidplaneTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMidplaneTypeNumeric
 
-`func (o *EnclosuresResourceInner) SetMidplaneTypeNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetMidplaneTypeNumeric(v int64)`
 
 SetMidplaneTypeNumeric sets MidplaneTypeNumeric field to given value.
 
@@ -1321,20 +1321,20 @@ HasName returns a boolean if a field has been set.
 
 ### GetNumberOfCoolingsElements
 
-`func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int32`
+`func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int64`
 
 GetNumberOfCoolingsElements returns the NumberOfCoolingsElements field if non-nil, zero value otherwise.
 
 ### GetNumberOfCoolingsElementsOk
 
-`func (o *EnclosuresResourceInner) GetNumberOfCoolingsElementsOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetNumberOfCoolingsElementsOk() (*int64, bool)`
 
 GetNumberOfCoolingsElementsOk returns a tuple with the NumberOfCoolingsElements field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumberOfCoolingsElements
 
-`func (o *EnclosuresResourceInner) SetNumberOfCoolingsElements(v int32)`
+`func (o *EnclosuresResourceInner) SetNumberOfCoolingsElements(v int64)`
 
 SetNumberOfCoolingsElements sets NumberOfCoolingsElements field to given value.
 
@@ -1346,20 +1346,20 @@ HasNumberOfCoolingsElements returns a boolean if a field has been set.
 
 ### GetNumberOfDisks
 
-`func (o *EnclosuresResourceInner) GetNumberOfDisks() int32`
+`func (o *EnclosuresResourceInner) GetNumberOfDisks() int64`
 
 GetNumberOfDisks returns the NumberOfDisks field if non-nil, zero value otherwise.
 
 ### GetNumberOfDisksOk
 
-`func (o *EnclosuresResourceInner) GetNumberOfDisksOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetNumberOfDisksOk() (*int64, bool)`
 
 GetNumberOfDisksOk returns a tuple with the NumberOfDisks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumberOfDisks
 
-`func (o *EnclosuresResourceInner) SetNumberOfDisks(v int32)`
+`func (o *EnclosuresResourceInner) SetNumberOfDisks(v int64)`
 
 SetNumberOfDisks sets NumberOfDisks field to given value.
 
@@ -1371,20 +1371,20 @@ HasNumberOfDisks returns a boolean if a field has been set.
 
 ### GetNumberOfPowerSupplies
 
-`func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int32`
+`func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int64`
 
 GetNumberOfPowerSupplies returns the NumberOfPowerSupplies field if non-nil, zero value otherwise.
 
 ### GetNumberOfPowerSuppliesOk
 
-`func (o *EnclosuresResourceInner) GetNumberOfPowerSuppliesOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetNumberOfPowerSuppliesOk() (*int64, bool)`
 
 GetNumberOfPowerSuppliesOk returns a tuple with the NumberOfPowerSupplies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumberOfPowerSupplies
 
-`func (o *EnclosuresResourceInner) SetNumberOfPowerSupplies(v int32)`
+`func (o *EnclosuresResourceInner) SetNumberOfPowerSupplies(v int64)`
 
 SetNumberOfPowerSupplies sets NumberOfPowerSupplies field to given value.
 
@@ -1446,20 +1446,20 @@ HasPcie2Capable returns a boolean if a field has been set.
 
 ### GetPcie2CapableNumeric
 
-`func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int32`
+`func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int64`
 
 GetPcie2CapableNumeric returns the Pcie2CapableNumeric field if non-nil, zero value otherwise.
 
 ### GetPcie2CapableNumericOk
 
-`func (o *EnclosuresResourceInner) GetPcie2CapableNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetPcie2CapableNumericOk() (*int64, bool)`
 
 GetPcie2CapableNumericOk returns a tuple with the Pcie2CapableNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPcie2CapableNumeric
 
-`func (o *EnclosuresResourceInner) SetPcie2CapableNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetPcie2CapableNumeric(v int64)`
 
 SetPcie2CapableNumeric sets Pcie2CapableNumeric field to given value.
 
@@ -1496,20 +1496,20 @@ HasPlatformType returns a boolean if a field has been set.
 
 ### GetPlatformTypeNumeric
 
-`func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int32`
+`func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int64`
 
 GetPlatformTypeNumeric returns the PlatformTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetPlatformTypeNumericOk
 
-`func (o *EnclosuresResourceInner) GetPlatformTypeNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetPlatformTypeNumericOk() (*int64, bool)`
 
 GetPlatformTypeNumericOk returns a tuple with the PlatformTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlatformTypeNumeric
 
-`func (o *EnclosuresResourceInner) SetPlatformTypeNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetPlatformTypeNumeric(v int64)`
 
 SetPlatformTypeNumeric sets PlatformTypeNumeric field to given value.
 
@@ -1521,20 +1521,20 @@ HasPlatformTypeNumeric returns a boolean if a field has been set.
 
 ### GetRackNumber
 
-`func (o *EnclosuresResourceInner) GetRackNumber() int32`
+`func (o *EnclosuresResourceInner) GetRackNumber() int64`
 
 GetRackNumber returns the RackNumber field if non-nil, zero value otherwise.
 
 ### GetRackNumberOk
 
-`func (o *EnclosuresResourceInner) GetRackNumberOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetRackNumberOk() (*int64, bool)`
 
 GetRackNumberOk returns a tuple with the RackNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRackNumber
 
-`func (o *EnclosuresResourceInner) SetRackNumber(v int32)`
+`func (o *EnclosuresResourceInner) SetRackNumber(v int64)`
 
 SetRackNumber sets RackNumber field to given value.
 
@@ -1546,20 +1546,20 @@ HasRackNumber returns a boolean if a field has been set.
 
 ### GetRackPosition
 
-`func (o *EnclosuresResourceInner) GetRackPosition() int32`
+`func (o *EnclosuresResourceInner) GetRackPosition() int64`
 
 GetRackPosition returns the RackPosition field if non-nil, zero value otherwise.
 
 ### GetRackPositionOk
 
-`func (o *EnclosuresResourceInner) GetRackPositionOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetRackPositionOk() (*int64, bool)`
 
 GetRackPositionOk returns a tuple with the RackPosition field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRackPosition
 
-`func (o *EnclosuresResourceInner) SetRackPosition(v int32)`
+`func (o *EnclosuresResourceInner) SetRackPosition(v int64)`
 
 SetRackPosition sets RackPosition field to given value.
 
@@ -1596,20 +1596,20 @@ HasRevision returns a boolean if a field has been set.
 
 ### GetRows
 
-`func (o *EnclosuresResourceInner) GetRows() int32`
+`func (o *EnclosuresResourceInner) GetRows() int64`
 
 GetRows returns the Rows field if non-nil, zero value otherwise.
 
 ### GetRowsOk
 
-`func (o *EnclosuresResourceInner) GetRowsOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetRowsOk() (*int64, bool)`
 
 GetRowsOk returns a tuple with the Rows field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRows
 
-`func (o *EnclosuresResourceInner) SetRows(v int32)`
+`func (o *EnclosuresResourceInner) SetRows(v int64)`
 
 SetRows sets Rows field to given value.
 
@@ -1621,20 +1621,20 @@ HasRows returns a boolean if a field has been set.
 
 ### GetSlots
 
-`func (o *EnclosuresResourceInner) GetSlots() int32`
+`func (o *EnclosuresResourceInner) GetSlots() int64`
 
 GetSlots returns the Slots field if non-nil, zero value otherwise.
 
 ### GetSlotsOk
 
-`func (o *EnclosuresResourceInner) GetSlotsOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetSlotsOk() (*int64, bool)`
 
 GetSlotsOk returns a tuple with the Slots field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlots
 
-`func (o *EnclosuresResourceInner) SetSlots(v int32)`
+`func (o *EnclosuresResourceInner) SetSlots(v int64)`
 
 SetSlots sets Slots field to given value.
 
@@ -1671,20 +1671,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
-`func (o *EnclosuresResourceInner) GetStatusNumeric() int32`
+`func (o *EnclosuresResourceInner) GetStatusNumeric() int64`
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
-`func (o *EnclosuresResourceInner) GetStatusNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetStatusNumericOk() (*int64, bool)`
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
-`func (o *EnclosuresResourceInner) SetStatusNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetStatusNumeric(v int64)`
 
 SetStatusNumeric sets StatusNumeric field to given value.
 
@@ -1721,20 +1721,20 @@ HasType returns a boolean if a field has been set.
 
 ### GetTypeNumeric
 
-`func (o *EnclosuresResourceInner) GetTypeNumeric() int32`
+`func (o *EnclosuresResourceInner) GetTypeNumeric() int64`
 
 GetTypeNumeric returns the TypeNumeric field if non-nil, zero value otherwise.
 
 ### GetTypeNumericOk
 
-`func (o *EnclosuresResourceInner) GetTypeNumericOk() (*int32, bool)`
+`func (o *EnclosuresResourceInner) GetTypeNumericOk() (*int64, bool)`
 
 GetTypeNumericOk returns a tuple with the TypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTypeNumeric
 
-`func (o *EnclosuresResourceInner) SetTypeNumeric(v int32)`
+`func (o *EnclosuresResourceInner) SetTypeNumeric(v int64)`
 
 SetTypeNumeric sets TypeNumeric field to given value.
 

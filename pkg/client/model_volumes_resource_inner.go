@@ -24,112 +24,112 @@ type VolumesResourceInner struct {
 	// Allocate Reserved Pages First
 	AllocateReservedPagesFirst *string `json:"allocate-reserved-pages-first,omitempty"`
 	// Allocate Reserved Pages First( In numeric form )
-	AllocateReservedPagesFirstNumeric *int32  `json:"allocate-reserved-pages-first-numeric,omitempty"`
+	AllocateReservedPagesFirstNumeric *int64  `json:"allocate-reserved-pages-first-numeric,omitempty"`
 	AllocatedSize                     *string `json:"allocated-size,omitempty"`
-	AllocatedSizeNumeric              *int32  `json:"allocated-size-numeric,omitempty"`
+	AllocatedSizeNumeric              *int64  `json:"allocated-size-numeric,omitempty"`
 	// Allowed Virtual Pool Tiers
 	AllowedStorageTiers *string `json:"allowed-storage-tiers,omitempty"`
 	// Allowed Virtual Pool Tiers( In numeric form )
-	AllowedStorageTiersNumeric *int32 `json:"allowed-storage-tiers-numeric,omitempty"`
+	AllowedStorageTiersNumeric *int64 `json:"allowed-storage-tiers-numeric,omitempty"`
 	// Indicates if the disk is single-pathed
 	Attributes *string `json:"attributes,omitempty"`
 	// The size in blocks
-	Blocks    *int32 `json:"blocks,omitempty"`
-	Blocksize *int32 `json:"blocksize,omitempty"`
+	Blocks    *int64 `json:"blocks,omitempty"`
+	Blocksize *int64 `json:"blocksize,omitempty"`
 	// Whether cache is optimized for sequential and random reads, or sequential only
 	CacheOptimization *string `json:"cache-optimization,omitempty"`
 	// Whether cache is optimized for sequential and random reads, or sequential only( In numeric form )
-	CacheOptimizationNumeric *int32  `json:"cache-optimization-numeric,omitempty"`
+	CacheOptimizationNumeric *int64  `json:"cache-optimization-numeric,omitempty"`
 	Capabilities             *string `json:"capabilities,omitempty"`
 	Compression              *string `json:"compression,omitempty"`
 	CompressionEfficiency    *string `json:"compression-efficiency,omitempty"`
-	CompressionNumeric       *int32  `json:"compression-numeric,omitempty"`
+	CompressionNumeric       *int64  `json:"compression-numeric,omitempty"`
 	// Container Name
 	ContainerName *string `json:"container-name,omitempty"`
 	// Container Serial Number
 	ContainerSerial         *string `json:"container-serial,omitempty"`
 	CreationDateTime        *string `json:"creation-date-time,omitempty"`
-	CreationDateTimeNumeric *int32  `json:"creation-date-time-numeric,omitempty"`
+	CreationDateTimeNumeric *int64  `json:"creation-date-time-numeric,omitempty"`
 	CsCopyDest              *string `json:"cs-copy-dest,omitempty"`
-	CsCopyDestNumeric       *int32  `json:"cs-copy-dest-numeric,omitempty"`
+	CsCopyDestNumeric       *int64  `json:"cs-copy-dest-numeric,omitempty"`
 	CsCopySrc               *string `json:"cs-copy-src,omitempty"`
-	CsCopySrcNumeric        *int32  `json:"cs-copy-src-numeric,omitempty"`
+	CsCopySrcNumeric        *int64  `json:"cs-copy-src-numeric,omitempty"`
 	CsPrimary               *string `json:"cs-primary,omitempty"`
-	CsPrimaryNumeric        *int32  `json:"cs-primary-numeric,omitempty"`
+	CsPrimaryNumeric        *int64  `json:"cs-primary-numeric,omitempty"`
 	CsReplicationRole       *string `json:"cs-replication-role,omitempty"`
 	CsSecondary             *string `json:"cs-secondary,omitempty"`
-	CsSecondaryNumeric      *int32  `json:"cs-secondary-numeric,omitempty"`
+	CsSecondaryNumeric      *int64  `json:"cs-secondary-numeric,omitempty"`
 	DurableId               *string `json:"durable-id,omitempty"`
 	// Durable ID of a Management Group
 	GroupKey             *string `json:"group-key,omitempty"`
 	Health               *string `json:"health,omitempty"`
-	HealthNumeric        *int32  `json:"health-numeric,omitempty"`
+	HealthNumeric        *int64  `json:"health-numeric,omitempty"`
 	HealthReason         *string `json:"health-reason,omitempty"`
 	HealthRecommendation *string `json:"health-recommendation,omitempty"`
 	Interleaved          *string `json:"interleaved,omitempty"`
-	InterleavedNumeric   *int32  `json:"interleaved-numeric,omitempty"`
+	InterleavedNumeric   *int64  `json:"interleaved-numeric,omitempty"`
 	// Sequentially optimize zone allocation for virtual volume
 	LargeVirtualExtents *string `json:"large-virtual-extents,omitempty"`
 	// Sequentially optimize zone allocation for virtual volume( In numeric form )
-	LargeVirtualExtentsNumeric *int32 `json:"large-virtual-extents-numeric,omitempty"`
+	LargeVirtualExtentsNumeric *int64 `json:"large-virtual-extents-numeric,omitempty"`
 	// Pool Metadata currently being used by volume
 	MetadataInUse *string `json:"metadata-in-use,omitempty"`
 	// Pool Metadata currently being used by volume( In numeric form )
-	MetadataInUseNumeric *int32 `json:"metadata-in-use-numeric,omitempty"`
+	MetadataInUseNumeric *int64 `json:"metadata-in-use-numeric,omitempty"`
 	// Controller owning the component
 	Owner *string `json:"owner,omitempty"`
 	// Controller owning the component( In numeric form )
-	OwnerNumeric *int32 `json:"owner-numeric,omitempty"`
+	OwnerNumeric *int64 `json:"owner-numeric,omitempty"`
 	// Used to describe the Host Protection Information
 	PiFormat *string `json:"pi-format,omitempty"`
 	// Used to describe the Host Protection Information( In numeric form )
-	PiFormatNumeric *int32 `json:"pi-format-numeric,omitempty"`
+	PiFormatNumeric *int64 `json:"pi-format-numeric,omitempty"`
 	// Configured owner
 	PreferredOwner *string `json:"preferred-owner,omitempty"`
 	// Configured owner( In numeric form )
-	PreferredOwnerNumeric *int32 `json:"preferred-owner-numeric,omitempty"`
+	PreferredOwnerNumeric *int64 `json:"preferred-owner-numeric,omitempty"`
 	// Progress in percent for the volume-copy operation
 	Progress *string `json:"progress,omitempty"`
 	// Progress in percent for the volume-copy operation( In numeric form )
-	ProgressNumeric *int32 `json:"progress-numeric,omitempty"`
+	ProgressNumeric *int64 `json:"progress-numeric,omitempty"`
 	// RAID level
 	Raidtype *string `json:"raidtype,omitempty"`
 	// RAID level( In numeric form )
-	RaidtypeNumeric *int32 `json:"raidtype-numeric,omitempty"`
+	RaidtypeNumeric *int64 `json:"raidtype-numeric,omitempty"`
 	// Read-ahead cache setting
 	ReadAheadSize *string `json:"read-ahead-size,omitempty"`
 	// Read-ahead cache setting( In numeric form )
-	ReadAheadSizeNumeric *int32  `json:"read-ahead-size-numeric,omitempty"`
+	ReadAheadSizeNumeric *int64  `json:"read-ahead-size-numeric,omitempty"`
 	ReplicationSet       *string `json:"replication-set,omitempty"`
 	// Reserved Size In Pages
-	ReservedSizeInPages *int32  `json:"reserved-size-in-pages,omitempty"`
+	ReservedSizeInPages *int64  `json:"reserved-size-in-pages,omitempty"`
 	SerialNumber        *string `json:"serial-number,omitempty"`
 	// The size or capacity formatted with the current session base, precision, and units
 	Size *string `json:"size,omitempty"`
 	// The size or capacity formatted with the current session base, precision, and units( In numeric form )
-	SizeNumeric *int32 `json:"size-numeric,omitempty"`
+	SizeNumeric *int64 `json:"size-numeric,omitempty"`
 	// Snap pool associated with this volume
 	SnapPool *string `json:"snap-pool,omitempty"`
 	Snapshot *string `json:"snapshot,omitempty"`
 	// Retention priority of the snapshot
 	SnapshotRetentionPriority *string `json:"snapshot-retention-priority,omitempty"`
 	// Retention priority of the snapshot( In numeric form )
-	SnapshotRetentionPriorityNumeric *int32 `json:"snapshot-retention-priority-numeric,omitempty"`
+	SnapshotRetentionPriorityNumeric *int64 `json:"snapshot-retention-priority-numeric,omitempty"`
 	// User-defined name for the pool
 	StoragePoolName *string `json:"storage-pool-name,omitempty"`
 	StoragePoolsUrl *string `json:"storage-pools-url,omitempty"`
 	// Storage type
 	StorageType *string `json:"storage-type,omitempty"`
 	// Storage type( In numeric form )
-	StorageTypeNumeric *int32 `json:"storage-type-numeric,omitempty"`
+	StorageTypeNumeric *int64 `json:"storage-type-numeric,omitempty"`
 	// Threshold Percent of Pool
 	ThresholdPercentOfPool *string `json:"threshold-percent-of-pool,omitempty"`
 	TierAffinity           *string `json:"tier-affinity,omitempty"`
-	TierAffinityNumeric    *int32  `json:"tier-affinity-numeric,omitempty"`
+	TierAffinityNumeric    *int64  `json:"tier-affinity-numeric,omitempty"`
 	// The total size formatted using the session settings for base, precision, and units
 	TotalSize *string `json:"total-size,omitempty"`
 	// The total size formatted using the session settings for base, precision, and units( In numeric form )
-	TotalSizeNumeric *int32 `json:"total-size-numeric,omitempty"`
+	TotalSizeNumeric *int64 `json:"total-size-numeric,omitempty"`
 	// The resource URL
 	Url *string `json:"url,omitempty"`
 	// The name of the pool that contains the volume
@@ -137,7 +137,7 @@ type VolumesResourceInner struct {
 	// Unique serial number for the disk group
 	VirtualDiskSerial  *string `json:"virtual-disk-serial,omitempty"`
 	VolumeClass        *string `json:"volume-class,omitempty"`
-	VolumeClassNumeric *int32  `json:"volume-class-numeric,omitempty"`
+	VolumeClassNumeric *int64  `json:"volume-class-numeric,omitempty"`
 	// Provides a user-defined volume identifier
 	VolumeDescription *string `json:"volume-description,omitempty"`
 	// Volume Group
@@ -147,25 +147,25 @@ type VolumesResourceInner struct {
 	// Serial number of the associated volume
 	VolumeParent           *string `json:"volume-parent,omitempty"`
 	VolumeQualifier        *string `json:"volume-qualifier,omitempty"`
-	VolumeQualifierNumeric *int32  `json:"volume-qualifier-numeric,omitempty"`
+	VolumeQualifierNumeric *int64  `json:"volume-qualifier-numeric,omitempty"`
 	// Indicates whether the volume is being used for Snapshots
 	VolumeType *string `json:"volume-type,omitempty"`
 	// Indicates whether the volume is being used for Snapshots( In numeric form )
-	VolumeTypeNumeric *int32 `json:"volume-type-numeric,omitempty"`
+	VolumeTypeNumeric *int64 `json:"volume-type-numeric,omitempty"`
 	// Indicates the usage of volume
 	VolumeUsageType *string `json:"volume-usage-type,omitempty"`
 	// Indicates the usage of volume( In numeric form )
-	VolumeUsageTypeNumeric *int32 `json:"volume-usage-type-numeric,omitempty"`
+	VolumeUsageTypeNumeric *int64 `json:"volume-usage-type-numeric,omitempty"`
 	// The write-back cache mode
 	WritePolicy *string `json:"write-policy,omitempty"`
 	// The write-back cache mode( In numeric form )
-	WritePolicyNumeric *int32 `json:"write-policy-numeric,omitempty"`
+	WritePolicyNumeric *int64 `json:"write-policy-numeric,omitempty"`
 	// World Wide Name
 	Wwn *string `json:"wwn,omitempty"`
 	// Zero Init Page On Allocation
 	ZeroInitPageOnAllocation *string `json:"zero-init-page-on-allocation,omitempty"`
 	// Zero Init Page On Allocation( In numeric form )
-	ZeroInitPageOnAllocationNumeric *int32 `json:"zero-init-page-on-allocation-numeric,omitempty"`
+	ZeroInitPageOnAllocationNumeric *int64 `json:"zero-init-page-on-allocation-numeric,omitempty"`
 }
 
 // NewVolumesResourceInner instantiates a new VolumesResourceInner object
@@ -282,9 +282,9 @@ func (o *VolumesResourceInner) SetAllocateReservedPagesFirst(v string) {
 }
 
 // GetAllocateReservedPagesFirstNumeric returns the AllocateReservedPagesFirstNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumeric() int32 {
+func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumeric() int64 {
 	if o == nil || IsNil(o.AllocateReservedPagesFirstNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.AllocateReservedPagesFirstNumeric
@@ -292,7 +292,7 @@ func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumeric() int32 {
 
 // GetAllocateReservedPagesFirstNumericOk returns a tuple with the AllocateReservedPagesFirstNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.AllocateReservedPagesFirstNumeric) {
 		return nil, false
 	}
@@ -308,8 +308,8 @@ func (o *VolumesResourceInner) HasAllocateReservedPagesFirstNumeric() bool {
 	return false
 }
 
-// SetAllocateReservedPagesFirstNumeric gets a reference to the given int32 and assigns it to the AllocateReservedPagesFirstNumeric field.
-func (o *VolumesResourceInner) SetAllocateReservedPagesFirstNumeric(v int32) {
+// SetAllocateReservedPagesFirstNumeric gets a reference to the given int64 and assigns it to the AllocateReservedPagesFirstNumeric field.
+func (o *VolumesResourceInner) SetAllocateReservedPagesFirstNumeric(v int64) {
 	o.AllocateReservedPagesFirstNumeric = &v
 }
 
@@ -346,9 +346,9 @@ func (o *VolumesResourceInner) SetAllocatedSize(v string) {
 }
 
 // GetAllocatedSizeNumeric returns the AllocatedSizeNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetAllocatedSizeNumeric() int32 {
+func (o *VolumesResourceInner) GetAllocatedSizeNumeric() int64 {
 	if o == nil || IsNil(o.AllocatedSizeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.AllocatedSizeNumeric
@@ -356,7 +356,7 @@ func (o *VolumesResourceInner) GetAllocatedSizeNumeric() int32 {
 
 // GetAllocatedSizeNumericOk returns a tuple with the AllocatedSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetAllocatedSizeNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetAllocatedSizeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.AllocatedSizeNumeric) {
 		return nil, false
 	}
@@ -372,8 +372,8 @@ func (o *VolumesResourceInner) HasAllocatedSizeNumeric() bool {
 	return false
 }
 
-// SetAllocatedSizeNumeric gets a reference to the given int32 and assigns it to the AllocatedSizeNumeric field.
-func (o *VolumesResourceInner) SetAllocatedSizeNumeric(v int32) {
+// SetAllocatedSizeNumeric gets a reference to the given int64 and assigns it to the AllocatedSizeNumeric field.
+func (o *VolumesResourceInner) SetAllocatedSizeNumeric(v int64) {
 	o.AllocatedSizeNumeric = &v
 }
 
@@ -410,9 +410,9 @@ func (o *VolumesResourceInner) SetAllowedStorageTiers(v string) {
 }
 
 // GetAllowedStorageTiersNumeric returns the AllowedStorageTiersNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetAllowedStorageTiersNumeric() int32 {
+func (o *VolumesResourceInner) GetAllowedStorageTiersNumeric() int64 {
 	if o == nil || IsNil(o.AllowedStorageTiersNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.AllowedStorageTiersNumeric
@@ -420,7 +420,7 @@ func (o *VolumesResourceInner) GetAllowedStorageTiersNumeric() int32 {
 
 // GetAllowedStorageTiersNumericOk returns a tuple with the AllowedStorageTiersNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetAllowedStorageTiersNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetAllowedStorageTiersNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.AllowedStorageTiersNumeric) {
 		return nil, false
 	}
@@ -436,8 +436,8 @@ func (o *VolumesResourceInner) HasAllowedStorageTiersNumeric() bool {
 	return false
 }
 
-// SetAllowedStorageTiersNumeric gets a reference to the given int32 and assigns it to the AllowedStorageTiersNumeric field.
-func (o *VolumesResourceInner) SetAllowedStorageTiersNumeric(v int32) {
+// SetAllowedStorageTiersNumeric gets a reference to the given int64 and assigns it to the AllowedStorageTiersNumeric field.
+func (o *VolumesResourceInner) SetAllowedStorageTiersNumeric(v int64) {
 	o.AllowedStorageTiersNumeric = &v
 }
 
@@ -474,9 +474,9 @@ func (o *VolumesResourceInner) SetAttributes(v string) {
 }
 
 // GetBlocks returns the Blocks field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetBlocks() int32 {
+func (o *VolumesResourceInner) GetBlocks() int64 {
 	if o == nil || IsNil(o.Blocks) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Blocks
@@ -484,7 +484,7 @@ func (o *VolumesResourceInner) GetBlocks() int32 {
 
 // GetBlocksOk returns a tuple with the Blocks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetBlocksOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetBlocksOk() (*int64, bool) {
 	if o == nil || IsNil(o.Blocks) {
 		return nil, false
 	}
@@ -500,15 +500,15 @@ func (o *VolumesResourceInner) HasBlocks() bool {
 	return false
 }
 
-// SetBlocks gets a reference to the given int32 and assigns it to the Blocks field.
-func (o *VolumesResourceInner) SetBlocks(v int32) {
+// SetBlocks gets a reference to the given int64 and assigns it to the Blocks field.
+func (o *VolumesResourceInner) SetBlocks(v int64) {
 	o.Blocks = &v
 }
 
 // GetBlocksize returns the Blocksize field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetBlocksize() int32 {
+func (o *VolumesResourceInner) GetBlocksize() int64 {
 	if o == nil || IsNil(o.Blocksize) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Blocksize
@@ -516,7 +516,7 @@ func (o *VolumesResourceInner) GetBlocksize() int32 {
 
 // GetBlocksizeOk returns a tuple with the Blocksize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetBlocksizeOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetBlocksizeOk() (*int64, bool) {
 	if o == nil || IsNil(o.Blocksize) {
 		return nil, false
 	}
@@ -532,8 +532,8 @@ func (o *VolumesResourceInner) HasBlocksize() bool {
 	return false
 }
 
-// SetBlocksize gets a reference to the given int32 and assigns it to the Blocksize field.
-func (o *VolumesResourceInner) SetBlocksize(v int32) {
+// SetBlocksize gets a reference to the given int64 and assigns it to the Blocksize field.
+func (o *VolumesResourceInner) SetBlocksize(v int64) {
 	o.Blocksize = &v
 }
 
@@ -570,9 +570,9 @@ func (o *VolumesResourceInner) SetCacheOptimization(v string) {
 }
 
 // GetCacheOptimizationNumeric returns the CacheOptimizationNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetCacheOptimizationNumeric() int32 {
+func (o *VolumesResourceInner) GetCacheOptimizationNumeric() int64 {
 	if o == nil || IsNil(o.CacheOptimizationNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CacheOptimizationNumeric
@@ -580,7 +580,7 @@ func (o *VolumesResourceInner) GetCacheOptimizationNumeric() int32 {
 
 // GetCacheOptimizationNumericOk returns a tuple with the CacheOptimizationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetCacheOptimizationNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetCacheOptimizationNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CacheOptimizationNumeric) {
 		return nil, false
 	}
@@ -596,8 +596,8 @@ func (o *VolumesResourceInner) HasCacheOptimizationNumeric() bool {
 	return false
 }
 
-// SetCacheOptimizationNumeric gets a reference to the given int32 and assigns it to the CacheOptimizationNumeric field.
-func (o *VolumesResourceInner) SetCacheOptimizationNumeric(v int32) {
+// SetCacheOptimizationNumeric gets a reference to the given int64 and assigns it to the CacheOptimizationNumeric field.
+func (o *VolumesResourceInner) SetCacheOptimizationNumeric(v int64) {
 	o.CacheOptimizationNumeric = &v
 }
 
@@ -698,9 +698,9 @@ func (o *VolumesResourceInner) SetCompressionEfficiency(v string) {
 }
 
 // GetCompressionNumeric returns the CompressionNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetCompressionNumeric() int32 {
+func (o *VolumesResourceInner) GetCompressionNumeric() int64 {
 	if o == nil || IsNil(o.CompressionNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CompressionNumeric
@@ -708,7 +708,7 @@ func (o *VolumesResourceInner) GetCompressionNumeric() int32 {
 
 // GetCompressionNumericOk returns a tuple with the CompressionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetCompressionNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetCompressionNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CompressionNumeric) {
 		return nil, false
 	}
@@ -724,8 +724,8 @@ func (o *VolumesResourceInner) HasCompressionNumeric() bool {
 	return false
 }
 
-// SetCompressionNumeric gets a reference to the given int32 and assigns it to the CompressionNumeric field.
-func (o *VolumesResourceInner) SetCompressionNumeric(v int32) {
+// SetCompressionNumeric gets a reference to the given int64 and assigns it to the CompressionNumeric field.
+func (o *VolumesResourceInner) SetCompressionNumeric(v int64) {
 	o.CompressionNumeric = &v
 }
 
@@ -826,9 +826,9 @@ func (o *VolumesResourceInner) SetCreationDateTime(v string) {
 }
 
 // GetCreationDateTimeNumeric returns the CreationDateTimeNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetCreationDateTimeNumeric() int32 {
+func (o *VolumesResourceInner) GetCreationDateTimeNumeric() int64 {
 	if o == nil || IsNil(o.CreationDateTimeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CreationDateTimeNumeric
@@ -836,7 +836,7 @@ func (o *VolumesResourceInner) GetCreationDateTimeNumeric() int32 {
 
 // GetCreationDateTimeNumericOk returns a tuple with the CreationDateTimeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetCreationDateTimeNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetCreationDateTimeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CreationDateTimeNumeric) {
 		return nil, false
 	}
@@ -852,8 +852,8 @@ func (o *VolumesResourceInner) HasCreationDateTimeNumeric() bool {
 	return false
 }
 
-// SetCreationDateTimeNumeric gets a reference to the given int32 and assigns it to the CreationDateTimeNumeric field.
-func (o *VolumesResourceInner) SetCreationDateTimeNumeric(v int32) {
+// SetCreationDateTimeNumeric gets a reference to the given int64 and assigns it to the CreationDateTimeNumeric field.
+func (o *VolumesResourceInner) SetCreationDateTimeNumeric(v int64) {
 	o.CreationDateTimeNumeric = &v
 }
 
@@ -890,9 +890,9 @@ func (o *VolumesResourceInner) SetCsCopyDest(v string) {
 }
 
 // GetCsCopyDestNumeric returns the CsCopyDestNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetCsCopyDestNumeric() int32 {
+func (o *VolumesResourceInner) GetCsCopyDestNumeric() int64 {
 	if o == nil || IsNil(o.CsCopyDestNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CsCopyDestNumeric
@@ -900,7 +900,7 @@ func (o *VolumesResourceInner) GetCsCopyDestNumeric() int32 {
 
 // GetCsCopyDestNumericOk returns a tuple with the CsCopyDestNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetCsCopyDestNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetCsCopyDestNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CsCopyDestNumeric) {
 		return nil, false
 	}
@@ -916,8 +916,8 @@ func (o *VolumesResourceInner) HasCsCopyDestNumeric() bool {
 	return false
 }
 
-// SetCsCopyDestNumeric gets a reference to the given int32 and assigns it to the CsCopyDestNumeric field.
-func (o *VolumesResourceInner) SetCsCopyDestNumeric(v int32) {
+// SetCsCopyDestNumeric gets a reference to the given int64 and assigns it to the CsCopyDestNumeric field.
+func (o *VolumesResourceInner) SetCsCopyDestNumeric(v int64) {
 	o.CsCopyDestNumeric = &v
 }
 
@@ -954,9 +954,9 @@ func (o *VolumesResourceInner) SetCsCopySrc(v string) {
 }
 
 // GetCsCopySrcNumeric returns the CsCopySrcNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetCsCopySrcNumeric() int32 {
+func (o *VolumesResourceInner) GetCsCopySrcNumeric() int64 {
 	if o == nil || IsNil(o.CsCopySrcNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CsCopySrcNumeric
@@ -964,7 +964,7 @@ func (o *VolumesResourceInner) GetCsCopySrcNumeric() int32 {
 
 // GetCsCopySrcNumericOk returns a tuple with the CsCopySrcNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetCsCopySrcNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetCsCopySrcNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CsCopySrcNumeric) {
 		return nil, false
 	}
@@ -980,8 +980,8 @@ func (o *VolumesResourceInner) HasCsCopySrcNumeric() bool {
 	return false
 }
 
-// SetCsCopySrcNumeric gets a reference to the given int32 and assigns it to the CsCopySrcNumeric field.
-func (o *VolumesResourceInner) SetCsCopySrcNumeric(v int32) {
+// SetCsCopySrcNumeric gets a reference to the given int64 and assigns it to the CsCopySrcNumeric field.
+func (o *VolumesResourceInner) SetCsCopySrcNumeric(v int64) {
 	o.CsCopySrcNumeric = &v
 }
 
@@ -1018,9 +1018,9 @@ func (o *VolumesResourceInner) SetCsPrimary(v string) {
 }
 
 // GetCsPrimaryNumeric returns the CsPrimaryNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetCsPrimaryNumeric() int32 {
+func (o *VolumesResourceInner) GetCsPrimaryNumeric() int64 {
 	if o == nil || IsNil(o.CsPrimaryNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CsPrimaryNumeric
@@ -1028,7 +1028,7 @@ func (o *VolumesResourceInner) GetCsPrimaryNumeric() int32 {
 
 // GetCsPrimaryNumericOk returns a tuple with the CsPrimaryNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetCsPrimaryNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetCsPrimaryNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CsPrimaryNumeric) {
 		return nil, false
 	}
@@ -1044,8 +1044,8 @@ func (o *VolumesResourceInner) HasCsPrimaryNumeric() bool {
 	return false
 }
 
-// SetCsPrimaryNumeric gets a reference to the given int32 and assigns it to the CsPrimaryNumeric field.
-func (o *VolumesResourceInner) SetCsPrimaryNumeric(v int32) {
+// SetCsPrimaryNumeric gets a reference to the given int64 and assigns it to the CsPrimaryNumeric field.
+func (o *VolumesResourceInner) SetCsPrimaryNumeric(v int64) {
 	o.CsPrimaryNumeric = &v
 }
 
@@ -1114,9 +1114,9 @@ func (o *VolumesResourceInner) SetCsSecondary(v string) {
 }
 
 // GetCsSecondaryNumeric returns the CsSecondaryNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetCsSecondaryNumeric() int32 {
+func (o *VolumesResourceInner) GetCsSecondaryNumeric() int64 {
 	if o == nil || IsNil(o.CsSecondaryNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CsSecondaryNumeric
@@ -1124,7 +1124,7 @@ func (o *VolumesResourceInner) GetCsSecondaryNumeric() int32 {
 
 // GetCsSecondaryNumericOk returns a tuple with the CsSecondaryNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetCsSecondaryNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetCsSecondaryNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CsSecondaryNumeric) {
 		return nil, false
 	}
@@ -1140,8 +1140,8 @@ func (o *VolumesResourceInner) HasCsSecondaryNumeric() bool {
 	return false
 }
 
-// SetCsSecondaryNumeric gets a reference to the given int32 and assigns it to the CsSecondaryNumeric field.
-func (o *VolumesResourceInner) SetCsSecondaryNumeric(v int32) {
+// SetCsSecondaryNumeric gets a reference to the given int64 and assigns it to the CsSecondaryNumeric field.
+func (o *VolumesResourceInner) SetCsSecondaryNumeric(v int64) {
 	o.CsSecondaryNumeric = &v
 }
 
@@ -1242,9 +1242,9 @@ func (o *VolumesResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetHealthNumeric() int32 {
+func (o *VolumesResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HealthNumeric
@@ -1252,7 +1252,7 @@ func (o *VolumesResourceInner) GetHealthNumeric() int32 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetHealthNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetHealthNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -1268,8 +1268,8 @@ func (o *VolumesResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
-// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
-func (o *VolumesResourceInner) SetHealthNumeric(v int32) {
+// SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
+func (o *VolumesResourceInner) SetHealthNumeric(v int64) {
 	o.HealthNumeric = &v
 }
 
@@ -1370,9 +1370,9 @@ func (o *VolumesResourceInner) SetInterleaved(v string) {
 }
 
 // GetInterleavedNumeric returns the InterleavedNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetInterleavedNumeric() int32 {
+func (o *VolumesResourceInner) GetInterleavedNumeric() int64 {
 	if o == nil || IsNil(o.InterleavedNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.InterleavedNumeric
@@ -1380,7 +1380,7 @@ func (o *VolumesResourceInner) GetInterleavedNumeric() int32 {
 
 // GetInterleavedNumericOk returns a tuple with the InterleavedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetInterleavedNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetInterleavedNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.InterleavedNumeric) {
 		return nil, false
 	}
@@ -1396,8 +1396,8 @@ func (o *VolumesResourceInner) HasInterleavedNumeric() bool {
 	return false
 }
 
-// SetInterleavedNumeric gets a reference to the given int32 and assigns it to the InterleavedNumeric field.
-func (o *VolumesResourceInner) SetInterleavedNumeric(v int32) {
+// SetInterleavedNumeric gets a reference to the given int64 and assigns it to the InterleavedNumeric field.
+func (o *VolumesResourceInner) SetInterleavedNumeric(v int64) {
 	o.InterleavedNumeric = &v
 }
 
@@ -1434,9 +1434,9 @@ func (o *VolumesResourceInner) SetLargeVirtualExtents(v string) {
 }
 
 // GetLargeVirtualExtentsNumeric returns the LargeVirtualExtentsNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetLargeVirtualExtentsNumeric() int32 {
+func (o *VolumesResourceInner) GetLargeVirtualExtentsNumeric() int64 {
 	if o == nil || IsNil(o.LargeVirtualExtentsNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.LargeVirtualExtentsNumeric
@@ -1444,7 +1444,7 @@ func (o *VolumesResourceInner) GetLargeVirtualExtentsNumeric() int32 {
 
 // GetLargeVirtualExtentsNumericOk returns a tuple with the LargeVirtualExtentsNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetLargeVirtualExtentsNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetLargeVirtualExtentsNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.LargeVirtualExtentsNumeric) {
 		return nil, false
 	}
@@ -1460,8 +1460,8 @@ func (o *VolumesResourceInner) HasLargeVirtualExtentsNumeric() bool {
 	return false
 }
 
-// SetLargeVirtualExtentsNumeric gets a reference to the given int32 and assigns it to the LargeVirtualExtentsNumeric field.
-func (o *VolumesResourceInner) SetLargeVirtualExtentsNumeric(v int32) {
+// SetLargeVirtualExtentsNumeric gets a reference to the given int64 and assigns it to the LargeVirtualExtentsNumeric field.
+func (o *VolumesResourceInner) SetLargeVirtualExtentsNumeric(v int64) {
 	o.LargeVirtualExtentsNumeric = &v
 }
 
@@ -1498,9 +1498,9 @@ func (o *VolumesResourceInner) SetMetadataInUse(v string) {
 }
 
 // GetMetadataInUseNumeric returns the MetadataInUseNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetMetadataInUseNumeric() int32 {
+func (o *VolumesResourceInner) GetMetadataInUseNumeric() int64 {
 	if o == nil || IsNil(o.MetadataInUseNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MetadataInUseNumeric
@@ -1508,7 +1508,7 @@ func (o *VolumesResourceInner) GetMetadataInUseNumeric() int32 {
 
 // GetMetadataInUseNumericOk returns a tuple with the MetadataInUseNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetMetadataInUseNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetMetadataInUseNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.MetadataInUseNumeric) {
 		return nil, false
 	}
@@ -1524,8 +1524,8 @@ func (o *VolumesResourceInner) HasMetadataInUseNumeric() bool {
 	return false
 }
 
-// SetMetadataInUseNumeric gets a reference to the given int32 and assigns it to the MetadataInUseNumeric field.
-func (o *VolumesResourceInner) SetMetadataInUseNumeric(v int32) {
+// SetMetadataInUseNumeric gets a reference to the given int64 and assigns it to the MetadataInUseNumeric field.
+func (o *VolumesResourceInner) SetMetadataInUseNumeric(v int64) {
 	o.MetadataInUseNumeric = &v
 }
 
@@ -1562,9 +1562,9 @@ func (o *VolumesResourceInner) SetOwner(v string) {
 }
 
 // GetOwnerNumeric returns the OwnerNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetOwnerNumeric() int32 {
+func (o *VolumesResourceInner) GetOwnerNumeric() int64 {
 	if o == nil || IsNil(o.OwnerNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.OwnerNumeric
@@ -1572,7 +1572,7 @@ func (o *VolumesResourceInner) GetOwnerNumeric() int32 {
 
 // GetOwnerNumericOk returns a tuple with the OwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetOwnerNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetOwnerNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.OwnerNumeric) {
 		return nil, false
 	}
@@ -1588,8 +1588,8 @@ func (o *VolumesResourceInner) HasOwnerNumeric() bool {
 	return false
 }
 
-// SetOwnerNumeric gets a reference to the given int32 and assigns it to the OwnerNumeric field.
-func (o *VolumesResourceInner) SetOwnerNumeric(v int32) {
+// SetOwnerNumeric gets a reference to the given int64 and assigns it to the OwnerNumeric field.
+func (o *VolumesResourceInner) SetOwnerNumeric(v int64) {
 	o.OwnerNumeric = &v
 }
 
@@ -1626,9 +1626,9 @@ func (o *VolumesResourceInner) SetPiFormat(v string) {
 }
 
 // GetPiFormatNumeric returns the PiFormatNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetPiFormatNumeric() int32 {
+func (o *VolumesResourceInner) GetPiFormatNumeric() int64 {
 	if o == nil || IsNil(o.PiFormatNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PiFormatNumeric
@@ -1636,7 +1636,7 @@ func (o *VolumesResourceInner) GetPiFormatNumeric() int32 {
 
 // GetPiFormatNumericOk returns a tuple with the PiFormatNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetPiFormatNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetPiFormatNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.PiFormatNumeric) {
 		return nil, false
 	}
@@ -1652,8 +1652,8 @@ func (o *VolumesResourceInner) HasPiFormatNumeric() bool {
 	return false
 }
 
-// SetPiFormatNumeric gets a reference to the given int32 and assigns it to the PiFormatNumeric field.
-func (o *VolumesResourceInner) SetPiFormatNumeric(v int32) {
+// SetPiFormatNumeric gets a reference to the given int64 and assigns it to the PiFormatNumeric field.
+func (o *VolumesResourceInner) SetPiFormatNumeric(v int64) {
 	o.PiFormatNumeric = &v
 }
 
@@ -1690,9 +1690,9 @@ func (o *VolumesResourceInner) SetPreferredOwner(v string) {
 }
 
 // GetPreferredOwnerNumeric returns the PreferredOwnerNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetPreferredOwnerNumeric() int32 {
+func (o *VolumesResourceInner) GetPreferredOwnerNumeric() int64 {
 	if o == nil || IsNil(o.PreferredOwnerNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PreferredOwnerNumeric
@@ -1700,7 +1700,7 @@ func (o *VolumesResourceInner) GetPreferredOwnerNumeric() int32 {
 
 // GetPreferredOwnerNumericOk returns a tuple with the PreferredOwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetPreferredOwnerNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetPreferredOwnerNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.PreferredOwnerNumeric) {
 		return nil, false
 	}
@@ -1716,8 +1716,8 @@ func (o *VolumesResourceInner) HasPreferredOwnerNumeric() bool {
 	return false
 }
 
-// SetPreferredOwnerNumeric gets a reference to the given int32 and assigns it to the PreferredOwnerNumeric field.
-func (o *VolumesResourceInner) SetPreferredOwnerNumeric(v int32) {
+// SetPreferredOwnerNumeric gets a reference to the given int64 and assigns it to the PreferredOwnerNumeric field.
+func (o *VolumesResourceInner) SetPreferredOwnerNumeric(v int64) {
 	o.PreferredOwnerNumeric = &v
 }
 
@@ -1754,9 +1754,9 @@ func (o *VolumesResourceInner) SetProgress(v string) {
 }
 
 // GetProgressNumeric returns the ProgressNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetProgressNumeric() int32 {
+func (o *VolumesResourceInner) GetProgressNumeric() int64 {
 	if o == nil || IsNil(o.ProgressNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ProgressNumeric
@@ -1764,7 +1764,7 @@ func (o *VolumesResourceInner) GetProgressNumeric() int32 {
 
 // GetProgressNumericOk returns a tuple with the ProgressNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetProgressNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetProgressNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ProgressNumeric) {
 		return nil, false
 	}
@@ -1780,8 +1780,8 @@ func (o *VolumesResourceInner) HasProgressNumeric() bool {
 	return false
 }
 
-// SetProgressNumeric gets a reference to the given int32 and assigns it to the ProgressNumeric field.
-func (o *VolumesResourceInner) SetProgressNumeric(v int32) {
+// SetProgressNumeric gets a reference to the given int64 and assigns it to the ProgressNumeric field.
+func (o *VolumesResourceInner) SetProgressNumeric(v int64) {
 	o.ProgressNumeric = &v
 }
 
@@ -1818,9 +1818,9 @@ func (o *VolumesResourceInner) SetRaidtype(v string) {
 }
 
 // GetRaidtypeNumeric returns the RaidtypeNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetRaidtypeNumeric() int32 {
+func (o *VolumesResourceInner) GetRaidtypeNumeric() int64 {
 	if o == nil || IsNil(o.RaidtypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RaidtypeNumeric
@@ -1828,7 +1828,7 @@ func (o *VolumesResourceInner) GetRaidtypeNumeric() int32 {
 
 // GetRaidtypeNumericOk returns a tuple with the RaidtypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetRaidtypeNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetRaidtypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.RaidtypeNumeric) {
 		return nil, false
 	}
@@ -1844,8 +1844,8 @@ func (o *VolumesResourceInner) HasRaidtypeNumeric() bool {
 	return false
 }
 
-// SetRaidtypeNumeric gets a reference to the given int32 and assigns it to the RaidtypeNumeric field.
-func (o *VolumesResourceInner) SetRaidtypeNumeric(v int32) {
+// SetRaidtypeNumeric gets a reference to the given int64 and assigns it to the RaidtypeNumeric field.
+func (o *VolumesResourceInner) SetRaidtypeNumeric(v int64) {
 	o.RaidtypeNumeric = &v
 }
 
@@ -1882,9 +1882,9 @@ func (o *VolumesResourceInner) SetReadAheadSize(v string) {
 }
 
 // GetReadAheadSizeNumeric returns the ReadAheadSizeNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetReadAheadSizeNumeric() int32 {
+func (o *VolumesResourceInner) GetReadAheadSizeNumeric() int64 {
 	if o == nil || IsNil(o.ReadAheadSizeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ReadAheadSizeNumeric
@@ -1892,7 +1892,7 @@ func (o *VolumesResourceInner) GetReadAheadSizeNumeric() int32 {
 
 // GetReadAheadSizeNumericOk returns a tuple with the ReadAheadSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetReadAheadSizeNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetReadAheadSizeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ReadAheadSizeNumeric) {
 		return nil, false
 	}
@@ -1908,8 +1908,8 @@ func (o *VolumesResourceInner) HasReadAheadSizeNumeric() bool {
 	return false
 }
 
-// SetReadAheadSizeNumeric gets a reference to the given int32 and assigns it to the ReadAheadSizeNumeric field.
-func (o *VolumesResourceInner) SetReadAheadSizeNumeric(v int32) {
+// SetReadAheadSizeNumeric gets a reference to the given int64 and assigns it to the ReadAheadSizeNumeric field.
+func (o *VolumesResourceInner) SetReadAheadSizeNumeric(v int64) {
 	o.ReadAheadSizeNumeric = &v
 }
 
@@ -1946,9 +1946,9 @@ func (o *VolumesResourceInner) SetReplicationSet(v string) {
 }
 
 // GetReservedSizeInPages returns the ReservedSizeInPages field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetReservedSizeInPages() int32 {
+func (o *VolumesResourceInner) GetReservedSizeInPages() int64 {
 	if o == nil || IsNil(o.ReservedSizeInPages) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ReservedSizeInPages
@@ -1956,7 +1956,7 @@ func (o *VolumesResourceInner) GetReservedSizeInPages() int32 {
 
 // GetReservedSizeInPagesOk returns a tuple with the ReservedSizeInPages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetReservedSizeInPagesOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetReservedSizeInPagesOk() (*int64, bool) {
 	if o == nil || IsNil(o.ReservedSizeInPages) {
 		return nil, false
 	}
@@ -1972,8 +1972,8 @@ func (o *VolumesResourceInner) HasReservedSizeInPages() bool {
 	return false
 }
 
-// SetReservedSizeInPages gets a reference to the given int32 and assigns it to the ReservedSizeInPages field.
-func (o *VolumesResourceInner) SetReservedSizeInPages(v int32) {
+// SetReservedSizeInPages gets a reference to the given int64 and assigns it to the ReservedSizeInPages field.
+func (o *VolumesResourceInner) SetReservedSizeInPages(v int64) {
 	o.ReservedSizeInPages = &v
 }
 
@@ -2042,9 +2042,9 @@ func (o *VolumesResourceInner) SetSize(v string) {
 }
 
 // GetSizeNumeric returns the SizeNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetSizeNumeric() int32 {
+func (o *VolumesResourceInner) GetSizeNumeric() int64 {
 	if o == nil || IsNil(o.SizeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SizeNumeric
@@ -2052,7 +2052,7 @@ func (o *VolumesResourceInner) GetSizeNumeric() int32 {
 
 // GetSizeNumericOk returns a tuple with the SizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetSizeNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetSizeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.SizeNumeric) {
 		return nil, false
 	}
@@ -2068,8 +2068,8 @@ func (o *VolumesResourceInner) HasSizeNumeric() bool {
 	return false
 }
 
-// SetSizeNumeric gets a reference to the given int32 and assigns it to the SizeNumeric field.
-func (o *VolumesResourceInner) SetSizeNumeric(v int32) {
+// SetSizeNumeric gets a reference to the given int64 and assigns it to the SizeNumeric field.
+func (o *VolumesResourceInner) SetSizeNumeric(v int64) {
 	o.SizeNumeric = &v
 }
 
@@ -2170,9 +2170,9 @@ func (o *VolumesResourceInner) SetSnapshotRetentionPriority(v string) {
 }
 
 // GetSnapshotRetentionPriorityNumeric returns the SnapshotRetentionPriorityNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumeric() int32 {
+func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumeric() int64 {
 	if o == nil || IsNil(o.SnapshotRetentionPriorityNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SnapshotRetentionPriorityNumeric
@@ -2180,7 +2180,7 @@ func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumeric() int32 {
 
 // GetSnapshotRetentionPriorityNumericOk returns a tuple with the SnapshotRetentionPriorityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.SnapshotRetentionPriorityNumeric) {
 		return nil, false
 	}
@@ -2196,8 +2196,8 @@ func (o *VolumesResourceInner) HasSnapshotRetentionPriorityNumeric() bool {
 	return false
 }
 
-// SetSnapshotRetentionPriorityNumeric gets a reference to the given int32 and assigns it to the SnapshotRetentionPriorityNumeric field.
-func (o *VolumesResourceInner) SetSnapshotRetentionPriorityNumeric(v int32) {
+// SetSnapshotRetentionPriorityNumeric gets a reference to the given int64 and assigns it to the SnapshotRetentionPriorityNumeric field.
+func (o *VolumesResourceInner) SetSnapshotRetentionPriorityNumeric(v int64) {
 	o.SnapshotRetentionPriorityNumeric = &v
 }
 
@@ -2298,9 +2298,9 @@ func (o *VolumesResourceInner) SetStorageType(v string) {
 }
 
 // GetStorageTypeNumeric returns the StorageTypeNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetStorageTypeNumeric() int32 {
+func (o *VolumesResourceInner) GetStorageTypeNumeric() int64 {
 	if o == nil || IsNil(o.StorageTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StorageTypeNumeric
@@ -2308,7 +2308,7 @@ func (o *VolumesResourceInner) GetStorageTypeNumeric() int32 {
 
 // GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetStorageTypeNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetStorageTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StorageTypeNumeric) {
 		return nil, false
 	}
@@ -2324,8 +2324,8 @@ func (o *VolumesResourceInner) HasStorageTypeNumeric() bool {
 	return false
 }
 
-// SetStorageTypeNumeric gets a reference to the given int32 and assigns it to the StorageTypeNumeric field.
-func (o *VolumesResourceInner) SetStorageTypeNumeric(v int32) {
+// SetStorageTypeNumeric gets a reference to the given int64 and assigns it to the StorageTypeNumeric field.
+func (o *VolumesResourceInner) SetStorageTypeNumeric(v int64) {
 	o.StorageTypeNumeric = &v
 }
 
@@ -2394,9 +2394,9 @@ func (o *VolumesResourceInner) SetTierAffinity(v string) {
 }
 
 // GetTierAffinityNumeric returns the TierAffinityNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetTierAffinityNumeric() int32 {
+func (o *VolumesResourceInner) GetTierAffinityNumeric() int64 {
 	if o == nil || IsNil(o.TierAffinityNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TierAffinityNumeric
@@ -2404,7 +2404,7 @@ func (o *VolumesResourceInner) GetTierAffinityNumeric() int32 {
 
 // GetTierAffinityNumericOk returns a tuple with the TierAffinityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetTierAffinityNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetTierAffinityNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.TierAffinityNumeric) {
 		return nil, false
 	}
@@ -2420,8 +2420,8 @@ func (o *VolumesResourceInner) HasTierAffinityNumeric() bool {
 	return false
 }
 
-// SetTierAffinityNumeric gets a reference to the given int32 and assigns it to the TierAffinityNumeric field.
-func (o *VolumesResourceInner) SetTierAffinityNumeric(v int32) {
+// SetTierAffinityNumeric gets a reference to the given int64 and assigns it to the TierAffinityNumeric field.
+func (o *VolumesResourceInner) SetTierAffinityNumeric(v int64) {
 	o.TierAffinityNumeric = &v
 }
 
@@ -2458,9 +2458,9 @@ func (o *VolumesResourceInner) SetTotalSize(v string) {
 }
 
 // GetTotalSizeNumeric returns the TotalSizeNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetTotalSizeNumeric() int32 {
+func (o *VolumesResourceInner) GetTotalSizeNumeric() int64 {
 	if o == nil || IsNil(o.TotalSizeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TotalSizeNumeric
@@ -2468,7 +2468,7 @@ func (o *VolumesResourceInner) GetTotalSizeNumeric() int32 {
 
 // GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetTotalSizeNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetTotalSizeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.TotalSizeNumeric) {
 		return nil, false
 	}
@@ -2484,8 +2484,8 @@ func (o *VolumesResourceInner) HasTotalSizeNumeric() bool {
 	return false
 }
 
-// SetTotalSizeNumeric gets a reference to the given int32 and assigns it to the TotalSizeNumeric field.
-func (o *VolumesResourceInner) SetTotalSizeNumeric(v int32) {
+// SetTotalSizeNumeric gets a reference to the given int64 and assigns it to the TotalSizeNumeric field.
+func (o *VolumesResourceInner) SetTotalSizeNumeric(v int64) {
 	o.TotalSizeNumeric = &v
 }
 
@@ -2618,9 +2618,9 @@ func (o *VolumesResourceInner) SetVolumeClass(v string) {
 }
 
 // GetVolumeClassNumeric returns the VolumeClassNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetVolumeClassNumeric() int32 {
+func (o *VolumesResourceInner) GetVolumeClassNumeric() int64 {
 	if o == nil || IsNil(o.VolumeClassNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.VolumeClassNumeric
@@ -2628,7 +2628,7 @@ func (o *VolumesResourceInner) GetVolumeClassNumeric() int32 {
 
 // GetVolumeClassNumericOk returns a tuple with the VolumeClassNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetVolumeClassNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetVolumeClassNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.VolumeClassNumeric) {
 		return nil, false
 	}
@@ -2644,8 +2644,8 @@ func (o *VolumesResourceInner) HasVolumeClassNumeric() bool {
 	return false
 }
 
-// SetVolumeClassNumeric gets a reference to the given int32 and assigns it to the VolumeClassNumeric field.
-func (o *VolumesResourceInner) SetVolumeClassNumeric(v int32) {
+// SetVolumeClassNumeric gets a reference to the given int64 and assigns it to the VolumeClassNumeric field.
+func (o *VolumesResourceInner) SetVolumeClassNumeric(v int64) {
 	o.VolumeClassNumeric = &v
 }
 
@@ -2810,9 +2810,9 @@ func (o *VolumesResourceInner) SetVolumeQualifier(v string) {
 }
 
 // GetVolumeQualifierNumeric returns the VolumeQualifierNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetVolumeQualifierNumeric() int32 {
+func (o *VolumesResourceInner) GetVolumeQualifierNumeric() int64 {
 	if o == nil || IsNil(o.VolumeQualifierNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.VolumeQualifierNumeric
@@ -2820,7 +2820,7 @@ func (o *VolumesResourceInner) GetVolumeQualifierNumeric() int32 {
 
 // GetVolumeQualifierNumericOk returns a tuple with the VolumeQualifierNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetVolumeQualifierNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetVolumeQualifierNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.VolumeQualifierNumeric) {
 		return nil, false
 	}
@@ -2836,8 +2836,8 @@ func (o *VolumesResourceInner) HasVolumeQualifierNumeric() bool {
 	return false
 }
 
-// SetVolumeQualifierNumeric gets a reference to the given int32 and assigns it to the VolumeQualifierNumeric field.
-func (o *VolumesResourceInner) SetVolumeQualifierNumeric(v int32) {
+// SetVolumeQualifierNumeric gets a reference to the given int64 and assigns it to the VolumeQualifierNumeric field.
+func (o *VolumesResourceInner) SetVolumeQualifierNumeric(v int64) {
 	o.VolumeQualifierNumeric = &v
 }
 
@@ -2874,9 +2874,9 @@ func (o *VolumesResourceInner) SetVolumeType(v string) {
 }
 
 // GetVolumeTypeNumeric returns the VolumeTypeNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetVolumeTypeNumeric() int32 {
+func (o *VolumesResourceInner) GetVolumeTypeNumeric() int64 {
 	if o == nil || IsNil(o.VolumeTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.VolumeTypeNumeric
@@ -2884,7 +2884,7 @@ func (o *VolumesResourceInner) GetVolumeTypeNumeric() int32 {
 
 // GetVolumeTypeNumericOk returns a tuple with the VolumeTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetVolumeTypeNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetVolumeTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.VolumeTypeNumeric) {
 		return nil, false
 	}
@@ -2900,8 +2900,8 @@ func (o *VolumesResourceInner) HasVolumeTypeNumeric() bool {
 	return false
 }
 
-// SetVolumeTypeNumeric gets a reference to the given int32 and assigns it to the VolumeTypeNumeric field.
-func (o *VolumesResourceInner) SetVolumeTypeNumeric(v int32) {
+// SetVolumeTypeNumeric gets a reference to the given int64 and assigns it to the VolumeTypeNumeric field.
+func (o *VolumesResourceInner) SetVolumeTypeNumeric(v int64) {
 	o.VolumeTypeNumeric = &v
 }
 
@@ -2938,9 +2938,9 @@ func (o *VolumesResourceInner) SetVolumeUsageType(v string) {
 }
 
 // GetVolumeUsageTypeNumeric returns the VolumeUsageTypeNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetVolumeUsageTypeNumeric() int32 {
+func (o *VolumesResourceInner) GetVolumeUsageTypeNumeric() int64 {
 	if o == nil || IsNil(o.VolumeUsageTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.VolumeUsageTypeNumeric
@@ -2948,7 +2948,7 @@ func (o *VolumesResourceInner) GetVolumeUsageTypeNumeric() int32 {
 
 // GetVolumeUsageTypeNumericOk returns a tuple with the VolumeUsageTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetVolumeUsageTypeNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetVolumeUsageTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.VolumeUsageTypeNumeric) {
 		return nil, false
 	}
@@ -2964,8 +2964,8 @@ func (o *VolumesResourceInner) HasVolumeUsageTypeNumeric() bool {
 	return false
 }
 
-// SetVolumeUsageTypeNumeric gets a reference to the given int32 and assigns it to the VolumeUsageTypeNumeric field.
-func (o *VolumesResourceInner) SetVolumeUsageTypeNumeric(v int32) {
+// SetVolumeUsageTypeNumeric gets a reference to the given int64 and assigns it to the VolumeUsageTypeNumeric field.
+func (o *VolumesResourceInner) SetVolumeUsageTypeNumeric(v int64) {
 	o.VolumeUsageTypeNumeric = &v
 }
 
@@ -3002,9 +3002,9 @@ func (o *VolumesResourceInner) SetWritePolicy(v string) {
 }
 
 // GetWritePolicyNumeric returns the WritePolicyNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetWritePolicyNumeric() int32 {
+func (o *VolumesResourceInner) GetWritePolicyNumeric() int64 {
 	if o == nil || IsNil(o.WritePolicyNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.WritePolicyNumeric
@@ -3012,7 +3012,7 @@ func (o *VolumesResourceInner) GetWritePolicyNumeric() int32 {
 
 // GetWritePolicyNumericOk returns a tuple with the WritePolicyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetWritePolicyNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetWritePolicyNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.WritePolicyNumeric) {
 		return nil, false
 	}
@@ -3028,8 +3028,8 @@ func (o *VolumesResourceInner) HasWritePolicyNumeric() bool {
 	return false
 }
 
-// SetWritePolicyNumeric gets a reference to the given int32 and assigns it to the WritePolicyNumeric field.
-func (o *VolumesResourceInner) SetWritePolicyNumeric(v int32) {
+// SetWritePolicyNumeric gets a reference to the given int64 and assigns it to the WritePolicyNumeric field.
+func (o *VolumesResourceInner) SetWritePolicyNumeric(v int64) {
 	o.WritePolicyNumeric = &v
 }
 
@@ -3098,9 +3098,9 @@ func (o *VolumesResourceInner) SetZeroInitPageOnAllocation(v string) {
 }
 
 // GetZeroInitPageOnAllocationNumeric returns the ZeroInitPageOnAllocationNumeric field value if set, zero value otherwise.
-func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumeric() int32 {
+func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumeric() int64 {
 	if o == nil || IsNil(o.ZeroInitPageOnAllocationNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ZeroInitPageOnAllocationNumeric
@@ -3108,7 +3108,7 @@ func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumeric() int32 {
 
 // GetZeroInitPageOnAllocationNumericOk returns a tuple with the ZeroInitPageOnAllocationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumericOk() (*int32, bool) {
+func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ZeroInitPageOnAllocationNumeric) {
 		return nil, false
 	}
@@ -3124,8 +3124,8 @@ func (o *VolumesResourceInner) HasZeroInitPageOnAllocationNumeric() bool {
 	return false
 }
 
-// SetZeroInitPageOnAllocationNumeric gets a reference to the given int32 and assigns it to the ZeroInitPageOnAllocationNumeric field.
-func (o *VolumesResourceInner) SetZeroInitPageOnAllocationNumeric(v int32) {
+// SetZeroInitPageOnAllocationNumeric gets a reference to the given int64 and assigns it to the ZeroInitPageOnAllocationNumeric field.
+func (o *VolumesResourceInner) SetZeroInitPageOnAllocationNumeric(v int64) {
 	o.ZeroInitPageOnAllocationNumeric = &v
 }
 

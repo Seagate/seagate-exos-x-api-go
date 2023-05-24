@@ -7,49 +7,49 @@ Name | Type | Description | Notes
 **ObjectName** | Pointer to **string** |  | [optional] 
 **Meta** | Pointer to **string** |  | [optional] 
 **Autoconfig** | Pointer to **string** | IPv6 Address autoconfiguration | [optional] 
-**AutoconfigNumeric** | Pointer to **int32** | IPv6 Address autoconfiguration( In numeric form ) | [optional] 
+**AutoconfigNumeric** | Pointer to **int64** | IPv6 Address autoconfiguration( In numeric form ) | [optional] 
 **CacheLock** | Pointer to **string** |  | [optional] 
-**CacheLockNumeric** | Pointer to **int32** |  | [optional] 
-**CacheMemorySize** | Pointer to **int32** |  | [optional] 
+**CacheLockNumeric** | Pointer to **int64** |  | [optional] 
+**CacheMemorySize** | Pointer to **int64** |  | [optional] 
 **ControllerId** | Pointer to **string** |  | [optional] 
-**ControllerIdNumeric** | Pointer to **int32** |  | [optional] 
+**ControllerIdNumeric** | Pointer to **int64** |  | [optional] 
 **CpldVersion** | Pointer to **string** | Complex Programmable Logic Device | [optional] 
 **DashLevel** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Dhcpv6** | Pointer to **string** |  | [optional] 
-**Disks** | Pointer to **int32** |  | [optional] 
+**Disks** | Pointer to **int64** |  | [optional] 
 **DriveBusType** | Pointer to **string** |  | [optional] 
-**DriveBusTypeNumeric** | Pointer to **int32** |  | [optional] 
-**DriveChannels** | Pointer to **int32** |  | [optional] 
+**DriveBusTypeNumeric** | Pointer to **int64** |  | [optional] 
+**DriveChannels** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **FailOverReason** | Pointer to **string** |  | [optional] 
-**FailOverReasonNumeric** | Pointer to **int32** |  | [optional] 
+**FailOverReasonNumeric** | Pointer to **int64** |  | [optional] 
 **FailedOver** | Pointer to **string** |  | [optional] 
-**FailedOverNumeric** | Pointer to **int32** |  | [optional] 
+**FailedOverNumeric** | Pointer to **int64** |  | [optional] 
 **FramDisabled0** | Pointer to **string** |  | [optional] 
-**FramDisabled0Numeric** | Pointer to **int32** |  | [optional] 
+**FramDisabled0Numeric** | Pointer to **int64** |  | [optional] 
 **FramDisabled1** | Pointer to **string** |  | [optional] 
-**FramDisabled1Numeric** | Pointer to **int32** |  | [optional] 
+**FramDisabled1Numeric** | Pointer to **int64** |  | [optional] 
 **FramModel0** | Pointer to **string** |  | [optional] 
-**FramModel0Numeric** | Pointer to **int32** |  | [optional] 
+**FramModel0Numeric** | Pointer to **int64** |  | [optional] 
 **FramModel1** | Pointer to **string** |  | [optional] 
-**FramModel1Numeric** | Pointer to **int32** |  | [optional] 
-**FramVersion0** | Pointer to **int32** |  | [optional] 
-**FramVersion1** | Pointer to **int32** |  | [optional] 
+**FramModel1Numeric** | Pointer to **int64** |  | [optional] 
+**FramVersion0** | Pointer to **int64** |  | [optional] 
+**FramVersion1** | Pointer to **int64** |  | [optional] 
 **FruShortname** | Pointer to **string** |  | [optional] 
 **HardwareVersion** | Pointer to **string** |  | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
-**HostPorts** | Pointer to **int32** |  | [optional] 
+**HostPorts** | Pointer to **int64** |  | [optional] 
 **InternalSerialNumber** | Pointer to **string** | Internal Controller Serial Number | [optional] 
 **IpAddress** | Pointer to **string** |  | [optional] 
 **IpGateway** | Pointer to **string** |  | [optional] 
 **IpSubnetMask** | Pointer to **string** |  | [optional] 
 **Ip6AutoAddress** | Pointer to **string** |  | [optional] 
 **Ip6AutoAddressSource** | Pointer to **string** |  | [optional] 
-**Ip6AutoAddressSourceNumeric** | Pointer to **int32** |  | [optional] 
+**Ip6AutoAddressSourceNumeric** | Pointer to **int64** |  | [optional] 
 **Ip6AutoGateway** | Pointer to **string** |  | [optional] 
 **Ip6LinkLocalAddress** | Pointer to **string** |  | [optional] 
 **Ip6LinkLocalGateway** | Pointer to **string** |  | [optional] 
@@ -62,45 +62,45 @@ Name | Type | Description | Notes
 **Ip64Address** | Pointer to **string** |  | [optional] 
 **Ip64Gateway** | Pointer to **string** |  | [optional] 
 **LocatorLed** | Pointer to **string** | Indicates whether the locator LED is on | [optional] 
-**LocatorLedNumeric** | Pointer to **int32** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
+**LocatorLedNumeric** | Pointer to **int64** | Indicates whether the locator LED is on( In numeric form ) | [optional] 
 **MacAddress** | Pointer to **string** | MAC address for the network port | [optional] 
 **MfgDate** | Pointer to **string** |  | [optional] 
-**MfgDateNumeric** | Pointer to **int32** |  | [optional] 
+**MfgDateNumeric** | Pointer to **int64** |  | [optional] 
 **MfgLocation** | Pointer to **string** |  | [optional] 
 **MfgVendorId** | Pointer to **string** |  | [optional] 
 **Model** | Pointer to **string** |  | [optional] 
 **Multicore** | Pointer to **string** |  | [optional] 
-**MulticoreNumeric** | Pointer to **int32** |  | [optional] 
+**MulticoreNumeric** | Pointer to **int64** |  | [optional] 
 **NodeWwn** | Pointer to **string** | World Wide Node Name of the system | [optional] 
-**NumberOfStoragePools** | Pointer to **int32** | Number of Virtual Pools per Controller | [optional] 
+**NumberOfStoragePools** | Pointer to **int64** | Number of Virtual Pools per Controller | [optional] 
 **PartNumber** | Pointer to **string** |  | [optional] 
 **PhyIsolation** | Pointer to **string** |  | [optional] 
-**PhyIsolationNumeric** | Pointer to **int32** |  | [optional] 
+**PhyIsolationNumeric** | Pointer to **int64** |  | [optional] 
 **PlatformType** | Pointer to **string** | HW Platform Type | [optional] 
-**PlatformTypeNumeric** | Pointer to **int32** | HW Platform Type( In numeric form ) | [optional] 
+**PlatformTypeNumeric** | Pointer to **int64** | HW Platform Type( In numeric form ) | [optional] 
 **Position** | Pointer to **string** | Position of the component in the enclosure | [optional] 
-**PositionNumeric** | Pointer to **int32** | Position of the component in the enclosure( In numeric form ) | [optional] 
+**PositionNumeric** | Pointer to **int64** | Position of the component in the enclosure( In numeric form ) | [optional] 
 **RedundancyMode** | Pointer to **string** | Mode in which the controllers are operating | [optional] 
-**RedundancyModeNumeric** | Pointer to **int32** | Mode in which the controllers are operating( In numeric form ) | [optional] 
+**RedundancyModeNumeric** | Pointer to **int64** | Mode in which the controllers are operating( In numeric form ) | [optional] 
 **RedundancyStatus** | Pointer to **string** | Current operational state of the controllers | [optional] 
-**RedundancyStatusNumeric** | Pointer to **int32** | Current operational state of the controllers( In numeric form ) | [optional] 
+**RedundancyStatusNumeric** | Pointer to **int64** | Current operational state of the controllers( In numeric form ) | [optional] 
 **Revision** | Pointer to **string** | Current revision for this FRU | [optional] 
 **Rotation** | Pointer to **string** | FRU rotation | [optional] 
-**RotationNumeric** | Pointer to **int32** | FRU rotation( In numeric form ) | [optional] 
-**ScCpuSpeed** | Pointer to **int32** | Storage Controller processor speed | [optional] 
+**RotationNumeric** | Pointer to **int64** | FRU rotation( In numeric form ) | [optional] 
+**ScCpuSpeed** | Pointer to **int64** | Storage Controller processor speed | [optional] 
 **ScCpuType** | Pointer to **string** | The Storage Controller processor type | [optional] 
 **ScFw** | Pointer to **string** | The Storage Controller main (&#39;app&#39;) firmware version | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
 **SlaacIp** | Pointer to **string** |  | [optional] 
-**SsdAltPathIoCount** | Pointer to **int32** | IO count before sending to alt ssd path | [optional] 
+**SsdAltPathIoCount** | Pointer to **int64** | IO count before sending to alt ssd path | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
-**StatusNumeric** | Pointer to **int32** |  | [optional] 
-**SystemMemorySize** | Pointer to **int32** |  | [optional] 
+**StatusNumeric** | Pointer to **int64** |  | [optional] 
+**SystemMemorySize** | Pointer to **int64** |  | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **Vendor** | Pointer to **string** |  | [optional] 
-**VirtualDisks** | Pointer to **int32** |  | [optional] 
+**VirtualDisks** | Pointer to **int64** |  | [optional] 
 **WritePolicy** | Pointer to **string** | The write-back cache mode | [optional] 
-**WritePolicyNumeric** | Pointer to **int32** | The write-back cache mode( In numeric form ) | [optional] 
+**WritePolicyNumeric** | Pointer to **int64** | The write-back cache mode( In numeric form ) | [optional] 
 **NetworkParameters** | Pointer to [**[]NetworkParametersResourceInner**](NetworkParametersResourceInner.md) |  | [optional] 
 **Port** | Pointer to [**[]PortResourceInner**](PortResourceInner.md) |  | [optional] 
 **ExpanderPorts** | Pointer to [**[]ExpanderPortsResourceInner**](ExpanderPortsResourceInner.md) |  | [optional] 
@@ -202,20 +202,20 @@ HasAutoconfig returns a boolean if a field has been set.
 
 ### GetAutoconfigNumeric
 
-`func (o *ControllersResourceInner) GetAutoconfigNumeric() int32`
+`func (o *ControllersResourceInner) GetAutoconfigNumeric() int64`
 
 GetAutoconfigNumeric returns the AutoconfigNumeric field if non-nil, zero value otherwise.
 
 ### GetAutoconfigNumericOk
 
-`func (o *ControllersResourceInner) GetAutoconfigNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetAutoconfigNumericOk() (*int64, bool)`
 
 GetAutoconfigNumericOk returns a tuple with the AutoconfigNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutoconfigNumeric
 
-`func (o *ControllersResourceInner) SetAutoconfigNumeric(v int32)`
+`func (o *ControllersResourceInner) SetAutoconfigNumeric(v int64)`
 
 SetAutoconfigNumeric sets AutoconfigNumeric field to given value.
 
@@ -252,20 +252,20 @@ HasCacheLock returns a boolean if a field has been set.
 
 ### GetCacheLockNumeric
 
-`func (o *ControllersResourceInner) GetCacheLockNumeric() int32`
+`func (o *ControllersResourceInner) GetCacheLockNumeric() int64`
 
 GetCacheLockNumeric returns the CacheLockNumeric field if non-nil, zero value otherwise.
 
 ### GetCacheLockNumericOk
 
-`func (o *ControllersResourceInner) GetCacheLockNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetCacheLockNumericOk() (*int64, bool)`
 
 GetCacheLockNumericOk returns a tuple with the CacheLockNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheLockNumeric
 
-`func (o *ControllersResourceInner) SetCacheLockNumeric(v int32)`
+`func (o *ControllersResourceInner) SetCacheLockNumeric(v int64)`
 
 SetCacheLockNumeric sets CacheLockNumeric field to given value.
 
@@ -277,20 +277,20 @@ HasCacheLockNumeric returns a boolean if a field has been set.
 
 ### GetCacheMemorySize
 
-`func (o *ControllersResourceInner) GetCacheMemorySize() int32`
+`func (o *ControllersResourceInner) GetCacheMemorySize() int64`
 
 GetCacheMemorySize returns the CacheMemorySize field if non-nil, zero value otherwise.
 
 ### GetCacheMemorySizeOk
 
-`func (o *ControllersResourceInner) GetCacheMemorySizeOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetCacheMemorySizeOk() (*int64, bool)`
 
 GetCacheMemorySizeOk returns a tuple with the CacheMemorySize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCacheMemorySize
 
-`func (o *ControllersResourceInner) SetCacheMemorySize(v int32)`
+`func (o *ControllersResourceInner) SetCacheMemorySize(v int64)`
 
 SetCacheMemorySize sets CacheMemorySize field to given value.
 
@@ -327,20 +327,20 @@ HasControllerId returns a boolean if a field has been set.
 
 ### GetControllerIdNumeric
 
-`func (o *ControllersResourceInner) GetControllerIdNumeric() int32`
+`func (o *ControllersResourceInner) GetControllerIdNumeric() int64`
 
 GetControllerIdNumeric returns the ControllerIdNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerIdNumericOk
 
-`func (o *ControllersResourceInner) GetControllerIdNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetControllerIdNumericOk() (*int64, bool)`
 
 GetControllerIdNumericOk returns a tuple with the ControllerIdNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerIdNumeric
 
-`func (o *ControllersResourceInner) SetControllerIdNumeric(v int32)`
+`func (o *ControllersResourceInner) SetControllerIdNumeric(v int64)`
 
 SetControllerIdNumeric sets ControllerIdNumeric field to given value.
 
@@ -452,20 +452,20 @@ HasDhcpv6 returns a boolean if a field has been set.
 
 ### GetDisks
 
-`func (o *ControllersResourceInner) GetDisks() int32`
+`func (o *ControllersResourceInner) GetDisks() int64`
 
 GetDisks returns the Disks field if non-nil, zero value otherwise.
 
 ### GetDisksOk
 
-`func (o *ControllersResourceInner) GetDisksOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetDisksOk() (*int64, bool)`
 
 GetDisksOk returns a tuple with the Disks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDisks
 
-`func (o *ControllersResourceInner) SetDisks(v int32)`
+`func (o *ControllersResourceInner) SetDisks(v int64)`
 
 SetDisks sets Disks field to given value.
 
@@ -502,20 +502,20 @@ HasDriveBusType returns a boolean if a field has been set.
 
 ### GetDriveBusTypeNumeric
 
-`func (o *ControllersResourceInner) GetDriveBusTypeNumeric() int32`
+`func (o *ControllersResourceInner) GetDriveBusTypeNumeric() int64`
 
 GetDriveBusTypeNumeric returns the DriveBusTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetDriveBusTypeNumericOk
 
-`func (o *ControllersResourceInner) GetDriveBusTypeNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetDriveBusTypeNumericOk() (*int64, bool)`
 
 GetDriveBusTypeNumericOk returns a tuple with the DriveBusTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDriveBusTypeNumeric
 
-`func (o *ControllersResourceInner) SetDriveBusTypeNumeric(v int32)`
+`func (o *ControllersResourceInner) SetDriveBusTypeNumeric(v int64)`
 
 SetDriveBusTypeNumeric sets DriveBusTypeNumeric field to given value.
 
@@ -527,20 +527,20 @@ HasDriveBusTypeNumeric returns a boolean if a field has been set.
 
 ### GetDriveChannels
 
-`func (o *ControllersResourceInner) GetDriveChannels() int32`
+`func (o *ControllersResourceInner) GetDriveChannels() int64`
 
 GetDriveChannels returns the DriveChannels field if non-nil, zero value otherwise.
 
 ### GetDriveChannelsOk
 
-`func (o *ControllersResourceInner) GetDriveChannelsOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetDriveChannelsOk() (*int64, bool)`
 
 GetDriveChannelsOk returns a tuple with the DriveChannels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDriveChannels
 
-`func (o *ControllersResourceInner) SetDriveChannels(v int32)`
+`func (o *ControllersResourceInner) SetDriveChannels(v int64)`
 
 SetDriveChannels sets DriveChannels field to given value.
 
@@ -602,20 +602,20 @@ HasFailOverReason returns a boolean if a field has been set.
 
 ### GetFailOverReasonNumeric
 
-`func (o *ControllersResourceInner) GetFailOverReasonNumeric() int32`
+`func (o *ControllersResourceInner) GetFailOverReasonNumeric() int64`
 
 GetFailOverReasonNumeric returns the FailOverReasonNumeric field if non-nil, zero value otherwise.
 
 ### GetFailOverReasonNumericOk
 
-`func (o *ControllersResourceInner) GetFailOverReasonNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetFailOverReasonNumericOk() (*int64, bool)`
 
 GetFailOverReasonNumericOk returns a tuple with the FailOverReasonNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFailOverReasonNumeric
 
-`func (o *ControllersResourceInner) SetFailOverReasonNumeric(v int32)`
+`func (o *ControllersResourceInner) SetFailOverReasonNumeric(v int64)`
 
 SetFailOverReasonNumeric sets FailOverReasonNumeric field to given value.
 
@@ -652,20 +652,20 @@ HasFailedOver returns a boolean if a field has been set.
 
 ### GetFailedOverNumeric
 
-`func (o *ControllersResourceInner) GetFailedOverNumeric() int32`
+`func (o *ControllersResourceInner) GetFailedOverNumeric() int64`
 
 GetFailedOverNumeric returns the FailedOverNumeric field if non-nil, zero value otherwise.
 
 ### GetFailedOverNumericOk
 
-`func (o *ControllersResourceInner) GetFailedOverNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetFailedOverNumericOk() (*int64, bool)`
 
 GetFailedOverNumericOk returns a tuple with the FailedOverNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFailedOverNumeric
 
-`func (o *ControllersResourceInner) SetFailedOverNumeric(v int32)`
+`func (o *ControllersResourceInner) SetFailedOverNumeric(v int64)`
 
 SetFailedOverNumeric sets FailedOverNumeric field to given value.
 
@@ -702,20 +702,20 @@ HasFramDisabled0 returns a boolean if a field has been set.
 
 ### GetFramDisabled0Numeric
 
-`func (o *ControllersResourceInner) GetFramDisabled0Numeric() int32`
+`func (o *ControllersResourceInner) GetFramDisabled0Numeric() int64`
 
 GetFramDisabled0Numeric returns the FramDisabled0Numeric field if non-nil, zero value otherwise.
 
 ### GetFramDisabled0NumericOk
 
-`func (o *ControllersResourceInner) GetFramDisabled0NumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetFramDisabled0NumericOk() (*int64, bool)`
 
 GetFramDisabled0NumericOk returns a tuple with the FramDisabled0Numeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFramDisabled0Numeric
 
-`func (o *ControllersResourceInner) SetFramDisabled0Numeric(v int32)`
+`func (o *ControllersResourceInner) SetFramDisabled0Numeric(v int64)`
 
 SetFramDisabled0Numeric sets FramDisabled0Numeric field to given value.
 
@@ -752,20 +752,20 @@ HasFramDisabled1 returns a boolean if a field has been set.
 
 ### GetFramDisabled1Numeric
 
-`func (o *ControllersResourceInner) GetFramDisabled1Numeric() int32`
+`func (o *ControllersResourceInner) GetFramDisabled1Numeric() int64`
 
 GetFramDisabled1Numeric returns the FramDisabled1Numeric field if non-nil, zero value otherwise.
 
 ### GetFramDisabled1NumericOk
 
-`func (o *ControllersResourceInner) GetFramDisabled1NumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetFramDisabled1NumericOk() (*int64, bool)`
 
 GetFramDisabled1NumericOk returns a tuple with the FramDisabled1Numeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFramDisabled1Numeric
 
-`func (o *ControllersResourceInner) SetFramDisabled1Numeric(v int32)`
+`func (o *ControllersResourceInner) SetFramDisabled1Numeric(v int64)`
 
 SetFramDisabled1Numeric sets FramDisabled1Numeric field to given value.
 
@@ -802,20 +802,20 @@ HasFramModel0 returns a boolean if a field has been set.
 
 ### GetFramModel0Numeric
 
-`func (o *ControllersResourceInner) GetFramModel0Numeric() int32`
+`func (o *ControllersResourceInner) GetFramModel0Numeric() int64`
 
 GetFramModel0Numeric returns the FramModel0Numeric field if non-nil, zero value otherwise.
 
 ### GetFramModel0NumericOk
 
-`func (o *ControllersResourceInner) GetFramModel0NumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetFramModel0NumericOk() (*int64, bool)`
 
 GetFramModel0NumericOk returns a tuple with the FramModel0Numeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFramModel0Numeric
 
-`func (o *ControllersResourceInner) SetFramModel0Numeric(v int32)`
+`func (o *ControllersResourceInner) SetFramModel0Numeric(v int64)`
 
 SetFramModel0Numeric sets FramModel0Numeric field to given value.
 
@@ -852,20 +852,20 @@ HasFramModel1 returns a boolean if a field has been set.
 
 ### GetFramModel1Numeric
 
-`func (o *ControllersResourceInner) GetFramModel1Numeric() int32`
+`func (o *ControllersResourceInner) GetFramModel1Numeric() int64`
 
 GetFramModel1Numeric returns the FramModel1Numeric field if non-nil, zero value otherwise.
 
 ### GetFramModel1NumericOk
 
-`func (o *ControllersResourceInner) GetFramModel1NumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetFramModel1NumericOk() (*int64, bool)`
 
 GetFramModel1NumericOk returns a tuple with the FramModel1Numeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFramModel1Numeric
 
-`func (o *ControllersResourceInner) SetFramModel1Numeric(v int32)`
+`func (o *ControllersResourceInner) SetFramModel1Numeric(v int64)`
 
 SetFramModel1Numeric sets FramModel1Numeric field to given value.
 
@@ -877,20 +877,20 @@ HasFramModel1Numeric returns a boolean if a field has been set.
 
 ### GetFramVersion0
 
-`func (o *ControllersResourceInner) GetFramVersion0() int32`
+`func (o *ControllersResourceInner) GetFramVersion0() int64`
 
 GetFramVersion0 returns the FramVersion0 field if non-nil, zero value otherwise.
 
 ### GetFramVersion0Ok
 
-`func (o *ControllersResourceInner) GetFramVersion0Ok() (*int32, bool)`
+`func (o *ControllersResourceInner) GetFramVersion0Ok() (*int64, bool)`
 
 GetFramVersion0Ok returns a tuple with the FramVersion0 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFramVersion0
 
-`func (o *ControllersResourceInner) SetFramVersion0(v int32)`
+`func (o *ControllersResourceInner) SetFramVersion0(v int64)`
 
 SetFramVersion0 sets FramVersion0 field to given value.
 
@@ -902,20 +902,20 @@ HasFramVersion0 returns a boolean if a field has been set.
 
 ### GetFramVersion1
 
-`func (o *ControllersResourceInner) GetFramVersion1() int32`
+`func (o *ControllersResourceInner) GetFramVersion1() int64`
 
 GetFramVersion1 returns the FramVersion1 field if non-nil, zero value otherwise.
 
 ### GetFramVersion1Ok
 
-`func (o *ControllersResourceInner) GetFramVersion1Ok() (*int32, bool)`
+`func (o *ControllersResourceInner) GetFramVersion1Ok() (*int64, bool)`
 
 GetFramVersion1Ok returns a tuple with the FramVersion1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFramVersion1
 
-`func (o *ControllersResourceInner) SetFramVersion1(v int32)`
+`func (o *ControllersResourceInner) SetFramVersion1(v int64)`
 
 SetFramVersion1 sets FramVersion1 field to given value.
 
@@ -1002,20 +1002,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *ControllersResourceInner) GetHealthNumeric() int32`
+`func (o *ControllersResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *ControllersResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *ControllersResourceInner) SetHealthNumeric(v int32)`
+`func (o *ControllersResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -1077,20 +1077,20 @@ HasHealthRecommendation returns a boolean if a field has been set.
 
 ### GetHostPorts
 
-`func (o *ControllersResourceInner) GetHostPorts() int32`
+`func (o *ControllersResourceInner) GetHostPorts() int64`
 
 GetHostPorts returns the HostPorts field if non-nil, zero value otherwise.
 
 ### GetHostPortsOk
 
-`func (o *ControllersResourceInner) GetHostPortsOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetHostPortsOk() (*int64, bool)`
 
 GetHostPortsOk returns a tuple with the HostPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHostPorts
 
-`func (o *ControllersResourceInner) SetHostPorts(v int32)`
+`func (o *ControllersResourceInner) SetHostPorts(v int64)`
 
 SetHostPorts sets HostPorts field to given value.
 
@@ -1252,20 +1252,20 @@ HasIp6AutoAddressSource returns a boolean if a field has been set.
 
 ### GetIp6AutoAddressSourceNumeric
 
-`func (o *ControllersResourceInner) GetIp6AutoAddressSourceNumeric() int32`
+`func (o *ControllersResourceInner) GetIp6AutoAddressSourceNumeric() int64`
 
 GetIp6AutoAddressSourceNumeric returns the Ip6AutoAddressSourceNumeric field if non-nil, zero value otherwise.
 
 ### GetIp6AutoAddressSourceNumericOk
 
-`func (o *ControllersResourceInner) GetIp6AutoAddressSourceNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetIp6AutoAddressSourceNumericOk() (*int64, bool)`
 
 GetIp6AutoAddressSourceNumericOk returns a tuple with the Ip6AutoAddressSourceNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIp6AutoAddressSourceNumeric
 
-`func (o *ControllersResourceInner) SetIp6AutoAddressSourceNumeric(v int32)`
+`func (o *ControllersResourceInner) SetIp6AutoAddressSourceNumeric(v int64)`
 
 SetIp6AutoAddressSourceNumeric sets Ip6AutoAddressSourceNumeric field to given value.
 
@@ -1577,20 +1577,20 @@ HasLocatorLed returns a boolean if a field has been set.
 
 ### GetLocatorLedNumeric
 
-`func (o *ControllersResourceInner) GetLocatorLedNumeric() int32`
+`func (o *ControllersResourceInner) GetLocatorLedNumeric() int64`
 
 GetLocatorLedNumeric returns the LocatorLedNumeric field if non-nil, zero value otherwise.
 
 ### GetLocatorLedNumericOk
 
-`func (o *ControllersResourceInner) GetLocatorLedNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetLocatorLedNumericOk() (*int64, bool)`
 
 GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocatorLedNumeric
 
-`func (o *ControllersResourceInner) SetLocatorLedNumeric(v int32)`
+`func (o *ControllersResourceInner) SetLocatorLedNumeric(v int64)`
 
 SetLocatorLedNumeric sets LocatorLedNumeric field to given value.
 
@@ -1652,20 +1652,20 @@ HasMfgDate returns a boolean if a field has been set.
 
 ### GetMfgDateNumeric
 
-`func (o *ControllersResourceInner) GetMfgDateNumeric() int32`
+`func (o *ControllersResourceInner) GetMfgDateNumeric() int64`
 
 GetMfgDateNumeric returns the MfgDateNumeric field if non-nil, zero value otherwise.
 
 ### GetMfgDateNumericOk
 
-`func (o *ControllersResourceInner) GetMfgDateNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetMfgDateNumericOk() (*int64, bool)`
 
 GetMfgDateNumericOk returns a tuple with the MfgDateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMfgDateNumeric
 
-`func (o *ControllersResourceInner) SetMfgDateNumeric(v int32)`
+`func (o *ControllersResourceInner) SetMfgDateNumeric(v int64)`
 
 SetMfgDateNumeric sets MfgDateNumeric field to given value.
 
@@ -1777,20 +1777,20 @@ HasMulticore returns a boolean if a field has been set.
 
 ### GetMulticoreNumeric
 
-`func (o *ControllersResourceInner) GetMulticoreNumeric() int32`
+`func (o *ControllersResourceInner) GetMulticoreNumeric() int64`
 
 GetMulticoreNumeric returns the MulticoreNumeric field if non-nil, zero value otherwise.
 
 ### GetMulticoreNumericOk
 
-`func (o *ControllersResourceInner) GetMulticoreNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetMulticoreNumericOk() (*int64, bool)`
 
 GetMulticoreNumericOk returns a tuple with the MulticoreNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMulticoreNumeric
 
-`func (o *ControllersResourceInner) SetMulticoreNumeric(v int32)`
+`func (o *ControllersResourceInner) SetMulticoreNumeric(v int64)`
 
 SetMulticoreNumeric sets MulticoreNumeric field to given value.
 
@@ -1827,20 +1827,20 @@ HasNodeWwn returns a boolean if a field has been set.
 
 ### GetNumberOfStoragePools
 
-`func (o *ControllersResourceInner) GetNumberOfStoragePools() int32`
+`func (o *ControllersResourceInner) GetNumberOfStoragePools() int64`
 
 GetNumberOfStoragePools returns the NumberOfStoragePools field if non-nil, zero value otherwise.
 
 ### GetNumberOfStoragePoolsOk
 
-`func (o *ControllersResourceInner) GetNumberOfStoragePoolsOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetNumberOfStoragePoolsOk() (*int64, bool)`
 
 GetNumberOfStoragePoolsOk returns a tuple with the NumberOfStoragePools field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNumberOfStoragePools
 
-`func (o *ControllersResourceInner) SetNumberOfStoragePools(v int32)`
+`func (o *ControllersResourceInner) SetNumberOfStoragePools(v int64)`
 
 SetNumberOfStoragePools sets NumberOfStoragePools field to given value.
 
@@ -1902,20 +1902,20 @@ HasPhyIsolation returns a boolean if a field has been set.
 
 ### GetPhyIsolationNumeric
 
-`func (o *ControllersResourceInner) GetPhyIsolationNumeric() int32`
+`func (o *ControllersResourceInner) GetPhyIsolationNumeric() int64`
 
 GetPhyIsolationNumeric returns the PhyIsolationNumeric field if non-nil, zero value otherwise.
 
 ### GetPhyIsolationNumericOk
 
-`func (o *ControllersResourceInner) GetPhyIsolationNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetPhyIsolationNumericOk() (*int64, bool)`
 
 GetPhyIsolationNumericOk returns a tuple with the PhyIsolationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPhyIsolationNumeric
 
-`func (o *ControllersResourceInner) SetPhyIsolationNumeric(v int32)`
+`func (o *ControllersResourceInner) SetPhyIsolationNumeric(v int64)`
 
 SetPhyIsolationNumeric sets PhyIsolationNumeric field to given value.
 
@@ -1952,20 +1952,20 @@ HasPlatformType returns a boolean if a field has been set.
 
 ### GetPlatformTypeNumeric
 
-`func (o *ControllersResourceInner) GetPlatformTypeNumeric() int32`
+`func (o *ControllersResourceInner) GetPlatformTypeNumeric() int64`
 
 GetPlatformTypeNumeric returns the PlatformTypeNumeric field if non-nil, zero value otherwise.
 
 ### GetPlatformTypeNumericOk
 
-`func (o *ControllersResourceInner) GetPlatformTypeNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetPlatformTypeNumericOk() (*int64, bool)`
 
 GetPlatformTypeNumericOk returns a tuple with the PlatformTypeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlatformTypeNumeric
 
-`func (o *ControllersResourceInner) SetPlatformTypeNumeric(v int32)`
+`func (o *ControllersResourceInner) SetPlatformTypeNumeric(v int64)`
 
 SetPlatformTypeNumeric sets PlatformTypeNumeric field to given value.
 
@@ -2002,20 +2002,20 @@ HasPosition returns a boolean if a field has been set.
 
 ### GetPositionNumeric
 
-`func (o *ControllersResourceInner) GetPositionNumeric() int32`
+`func (o *ControllersResourceInner) GetPositionNumeric() int64`
 
 GetPositionNumeric returns the PositionNumeric field if non-nil, zero value otherwise.
 
 ### GetPositionNumericOk
 
-`func (o *ControllersResourceInner) GetPositionNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetPositionNumericOk() (*int64, bool)`
 
 GetPositionNumericOk returns a tuple with the PositionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPositionNumeric
 
-`func (o *ControllersResourceInner) SetPositionNumeric(v int32)`
+`func (o *ControllersResourceInner) SetPositionNumeric(v int64)`
 
 SetPositionNumeric sets PositionNumeric field to given value.
 
@@ -2052,20 +2052,20 @@ HasRedundancyMode returns a boolean if a field has been set.
 
 ### GetRedundancyModeNumeric
 
-`func (o *ControllersResourceInner) GetRedundancyModeNumeric() int32`
+`func (o *ControllersResourceInner) GetRedundancyModeNumeric() int64`
 
 GetRedundancyModeNumeric returns the RedundancyModeNumeric field if non-nil, zero value otherwise.
 
 ### GetRedundancyModeNumericOk
 
-`func (o *ControllersResourceInner) GetRedundancyModeNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetRedundancyModeNumericOk() (*int64, bool)`
 
 GetRedundancyModeNumericOk returns a tuple with the RedundancyModeNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRedundancyModeNumeric
 
-`func (o *ControllersResourceInner) SetRedundancyModeNumeric(v int32)`
+`func (o *ControllersResourceInner) SetRedundancyModeNumeric(v int64)`
 
 SetRedundancyModeNumeric sets RedundancyModeNumeric field to given value.
 
@@ -2102,20 +2102,20 @@ HasRedundancyStatus returns a boolean if a field has been set.
 
 ### GetRedundancyStatusNumeric
 
-`func (o *ControllersResourceInner) GetRedundancyStatusNumeric() int32`
+`func (o *ControllersResourceInner) GetRedundancyStatusNumeric() int64`
 
 GetRedundancyStatusNumeric returns the RedundancyStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetRedundancyStatusNumericOk
 
-`func (o *ControllersResourceInner) GetRedundancyStatusNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetRedundancyStatusNumericOk() (*int64, bool)`
 
 GetRedundancyStatusNumericOk returns a tuple with the RedundancyStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRedundancyStatusNumeric
 
-`func (o *ControllersResourceInner) SetRedundancyStatusNumeric(v int32)`
+`func (o *ControllersResourceInner) SetRedundancyStatusNumeric(v int64)`
 
 SetRedundancyStatusNumeric sets RedundancyStatusNumeric field to given value.
 
@@ -2177,20 +2177,20 @@ HasRotation returns a boolean if a field has been set.
 
 ### GetRotationNumeric
 
-`func (o *ControllersResourceInner) GetRotationNumeric() int32`
+`func (o *ControllersResourceInner) GetRotationNumeric() int64`
 
 GetRotationNumeric returns the RotationNumeric field if non-nil, zero value otherwise.
 
 ### GetRotationNumericOk
 
-`func (o *ControllersResourceInner) GetRotationNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetRotationNumericOk() (*int64, bool)`
 
 GetRotationNumericOk returns a tuple with the RotationNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRotationNumeric
 
-`func (o *ControllersResourceInner) SetRotationNumeric(v int32)`
+`func (o *ControllersResourceInner) SetRotationNumeric(v int64)`
 
 SetRotationNumeric sets RotationNumeric field to given value.
 
@@ -2202,20 +2202,20 @@ HasRotationNumeric returns a boolean if a field has been set.
 
 ### GetScCpuSpeed
 
-`func (o *ControllersResourceInner) GetScCpuSpeed() int32`
+`func (o *ControllersResourceInner) GetScCpuSpeed() int64`
 
 GetScCpuSpeed returns the ScCpuSpeed field if non-nil, zero value otherwise.
 
 ### GetScCpuSpeedOk
 
-`func (o *ControllersResourceInner) GetScCpuSpeedOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetScCpuSpeedOk() (*int64, bool)`
 
 GetScCpuSpeedOk returns a tuple with the ScCpuSpeed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScCpuSpeed
 
-`func (o *ControllersResourceInner) SetScCpuSpeed(v int32)`
+`func (o *ControllersResourceInner) SetScCpuSpeed(v int64)`
 
 SetScCpuSpeed sets ScCpuSpeed field to given value.
 
@@ -2327,20 +2327,20 @@ HasSlaacIp returns a boolean if a field has been set.
 
 ### GetSsdAltPathIoCount
 
-`func (o *ControllersResourceInner) GetSsdAltPathIoCount() int32`
+`func (o *ControllersResourceInner) GetSsdAltPathIoCount() int64`
 
 GetSsdAltPathIoCount returns the SsdAltPathIoCount field if non-nil, zero value otherwise.
 
 ### GetSsdAltPathIoCountOk
 
-`func (o *ControllersResourceInner) GetSsdAltPathIoCountOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetSsdAltPathIoCountOk() (*int64, bool)`
 
 GetSsdAltPathIoCountOk returns a tuple with the SsdAltPathIoCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSsdAltPathIoCount
 
-`func (o *ControllersResourceInner) SetSsdAltPathIoCount(v int32)`
+`func (o *ControllersResourceInner) SetSsdAltPathIoCount(v int64)`
 
 SetSsdAltPathIoCount sets SsdAltPathIoCount field to given value.
 
@@ -2377,20 +2377,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
-`func (o *ControllersResourceInner) GetStatusNumeric() int32`
+`func (o *ControllersResourceInner) GetStatusNumeric() int64`
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
-`func (o *ControllersResourceInner) GetStatusNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetStatusNumericOk() (*int64, bool)`
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
-`func (o *ControllersResourceInner) SetStatusNumeric(v int32)`
+`func (o *ControllersResourceInner) SetStatusNumeric(v int64)`
 
 SetStatusNumeric sets StatusNumeric field to given value.
 
@@ -2402,20 +2402,20 @@ HasStatusNumeric returns a boolean if a field has been set.
 
 ### GetSystemMemorySize
 
-`func (o *ControllersResourceInner) GetSystemMemorySize() int32`
+`func (o *ControllersResourceInner) GetSystemMemorySize() int64`
 
 GetSystemMemorySize returns the SystemMemorySize field if non-nil, zero value otherwise.
 
 ### GetSystemMemorySizeOk
 
-`func (o *ControllersResourceInner) GetSystemMemorySizeOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetSystemMemorySizeOk() (*int64, bool)`
 
 GetSystemMemorySizeOk returns a tuple with the SystemMemorySize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSystemMemorySize
 
-`func (o *ControllersResourceInner) SetSystemMemorySize(v int32)`
+`func (o *ControllersResourceInner) SetSystemMemorySize(v int64)`
 
 SetSystemMemorySize sets SystemMemorySize field to given value.
 
@@ -2477,20 +2477,20 @@ HasVendor returns a boolean if a field has been set.
 
 ### GetVirtualDisks
 
-`func (o *ControllersResourceInner) GetVirtualDisks() int32`
+`func (o *ControllersResourceInner) GetVirtualDisks() int64`
 
 GetVirtualDisks returns the VirtualDisks field if non-nil, zero value otherwise.
 
 ### GetVirtualDisksOk
 
-`func (o *ControllersResourceInner) GetVirtualDisksOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetVirtualDisksOk() (*int64, bool)`
 
 GetVirtualDisksOk returns a tuple with the VirtualDisks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVirtualDisks
 
-`func (o *ControllersResourceInner) SetVirtualDisks(v int32)`
+`func (o *ControllersResourceInner) SetVirtualDisks(v int64)`
 
 SetVirtualDisks sets VirtualDisks field to given value.
 
@@ -2527,20 +2527,20 @@ HasWritePolicy returns a boolean if a field has been set.
 
 ### GetWritePolicyNumeric
 
-`func (o *ControllersResourceInner) GetWritePolicyNumeric() int32`
+`func (o *ControllersResourceInner) GetWritePolicyNumeric() int64`
 
 GetWritePolicyNumeric returns the WritePolicyNumeric field if non-nil, zero value otherwise.
 
 ### GetWritePolicyNumericOk
 
-`func (o *ControllersResourceInner) GetWritePolicyNumericOk() (*int32, bool)`
+`func (o *ControllersResourceInner) GetWritePolicyNumericOk() (*int64, bool)`
 
 GetWritePolicyNumericOk returns a tuple with the WritePolicyNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWritePolicyNumeric
 
-`func (o *ControllersResourceInner) SetWritePolicyNumeric(v int32)`
+`func (o *ControllersResourceInner) SetWritePolicyNumeric(v int64)`
 
 SetWritePolicyNumeric sets WritePolicyNumeric field to given value.
 

@@ -24,15 +24,15 @@ type PortResourceInner struct {
 	// Actual speed for this port
 	ActualSpeed *string `json:"actual-speed,omitempty"`
 	// Actual speed for this port( In numeric form )
-	ActualSpeedNumeric     *int32  `json:"actual-speed-numeric,omitempty"`
+	ActualSpeedNumeric     *int64  `json:"actual-speed-numeric,omitempty"`
 	ConfiguredSpeed        *string `json:"configured-speed,omitempty"`
-	ConfiguredSpeedNumeric *int32  `json:"configured-speed-numeric,omitempty"`
+	ConfiguredSpeedNumeric *int64  `json:"configured-speed-numeric,omitempty"`
 	Controller             *string `json:"controller,omitempty"`
-	ControllerNumeric      *int32  `json:"controller-numeric,omitempty"`
+	ControllerNumeric      *int64  `json:"controller-numeric,omitempty"`
 	DurableId              *string `json:"durable-id,omitempty"`
-	FanOut                 *int32  `json:"fan-out,omitempty"`
+	FanOut                 *int64  `json:"fan-out,omitempty"`
 	Health                 *string `json:"health,omitempty"`
-	HealthNumeric          *int32  `json:"health-numeric,omitempty"`
+	HealthNumeric          *int64  `json:"health-numeric,omitempty"`
 	HealthReason           *string `json:"health-reason,omitempty"`
 	HealthRecommendation   *string `json:"health-recommendation,omitempty"`
 	// Type of connection media used for this port
@@ -41,9 +41,9 @@ type PortResourceInner struct {
 	// Port Type (FC, iSCSI, SAS)
 	PortType *string `json:"port-type,omitempty"`
 	// Port Type (FC, iSCSI, SAS)( In numeric form )
-	PortTypeNumeric *int32  `json:"port-type-numeric,omitempty"`
+	PortTypeNumeric *int64  `json:"port-type-numeric,omitempty"`
 	Status          *string `json:"status,omitempty"`
-	StatusNumeric   *int32  `json:"status-numeric,omitempty"`
+	StatusNumeric   *int64  `json:"status-numeric,omitempty"`
 	// WWPN or IQN of the host port
 	TargetId *string `json:"target-id,omitempty"`
 	// The resource URL
@@ -165,9 +165,9 @@ func (o *PortResourceInner) SetActualSpeed(v string) {
 }
 
 // GetActualSpeedNumeric returns the ActualSpeedNumeric field value if set, zero value otherwise.
-func (o *PortResourceInner) GetActualSpeedNumeric() int32 {
+func (o *PortResourceInner) GetActualSpeedNumeric() int64 {
 	if o == nil || IsNil(o.ActualSpeedNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ActualSpeedNumeric
@@ -175,7 +175,7 @@ func (o *PortResourceInner) GetActualSpeedNumeric() int32 {
 
 // GetActualSpeedNumericOk returns a tuple with the ActualSpeedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PortResourceInner) GetActualSpeedNumericOk() (*int32, bool) {
+func (o *PortResourceInner) GetActualSpeedNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ActualSpeedNumeric) {
 		return nil, false
 	}
@@ -191,8 +191,8 @@ func (o *PortResourceInner) HasActualSpeedNumeric() bool {
 	return false
 }
 
-// SetActualSpeedNumeric gets a reference to the given int32 and assigns it to the ActualSpeedNumeric field.
-func (o *PortResourceInner) SetActualSpeedNumeric(v int32) {
+// SetActualSpeedNumeric gets a reference to the given int64 and assigns it to the ActualSpeedNumeric field.
+func (o *PortResourceInner) SetActualSpeedNumeric(v int64) {
 	o.ActualSpeedNumeric = &v
 }
 
@@ -229,9 +229,9 @@ func (o *PortResourceInner) SetConfiguredSpeed(v string) {
 }
 
 // GetConfiguredSpeedNumeric returns the ConfiguredSpeedNumeric field value if set, zero value otherwise.
-func (o *PortResourceInner) GetConfiguredSpeedNumeric() int32 {
+func (o *PortResourceInner) GetConfiguredSpeedNumeric() int64 {
 	if o == nil || IsNil(o.ConfiguredSpeedNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ConfiguredSpeedNumeric
@@ -239,7 +239,7 @@ func (o *PortResourceInner) GetConfiguredSpeedNumeric() int32 {
 
 // GetConfiguredSpeedNumericOk returns a tuple with the ConfiguredSpeedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PortResourceInner) GetConfiguredSpeedNumericOk() (*int32, bool) {
+func (o *PortResourceInner) GetConfiguredSpeedNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ConfiguredSpeedNumeric) {
 		return nil, false
 	}
@@ -255,8 +255,8 @@ func (o *PortResourceInner) HasConfiguredSpeedNumeric() bool {
 	return false
 }
 
-// SetConfiguredSpeedNumeric gets a reference to the given int32 and assigns it to the ConfiguredSpeedNumeric field.
-func (o *PortResourceInner) SetConfiguredSpeedNumeric(v int32) {
+// SetConfiguredSpeedNumeric gets a reference to the given int64 and assigns it to the ConfiguredSpeedNumeric field.
+func (o *PortResourceInner) SetConfiguredSpeedNumeric(v int64) {
 	o.ConfiguredSpeedNumeric = &v
 }
 
@@ -293,9 +293,9 @@ func (o *PortResourceInner) SetController(v string) {
 }
 
 // GetControllerNumeric returns the ControllerNumeric field value if set, zero value otherwise.
-func (o *PortResourceInner) GetControllerNumeric() int32 {
+func (o *PortResourceInner) GetControllerNumeric() int64 {
 	if o == nil || IsNil(o.ControllerNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ControllerNumeric
@@ -303,7 +303,7 @@ func (o *PortResourceInner) GetControllerNumeric() int32 {
 
 // GetControllerNumericOk returns a tuple with the ControllerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PortResourceInner) GetControllerNumericOk() (*int32, bool) {
+func (o *PortResourceInner) GetControllerNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ControllerNumeric) {
 		return nil, false
 	}
@@ -319,8 +319,8 @@ func (o *PortResourceInner) HasControllerNumeric() bool {
 	return false
 }
 
-// SetControllerNumeric gets a reference to the given int32 and assigns it to the ControllerNumeric field.
-func (o *PortResourceInner) SetControllerNumeric(v int32) {
+// SetControllerNumeric gets a reference to the given int64 and assigns it to the ControllerNumeric field.
+func (o *PortResourceInner) SetControllerNumeric(v int64) {
 	o.ControllerNumeric = &v
 }
 
@@ -357,9 +357,9 @@ func (o *PortResourceInner) SetDurableId(v string) {
 }
 
 // GetFanOut returns the FanOut field value if set, zero value otherwise.
-func (o *PortResourceInner) GetFanOut() int32 {
+func (o *PortResourceInner) GetFanOut() int64 {
 	if o == nil || IsNil(o.FanOut) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.FanOut
@@ -367,7 +367,7 @@ func (o *PortResourceInner) GetFanOut() int32 {
 
 // GetFanOutOk returns a tuple with the FanOut field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PortResourceInner) GetFanOutOk() (*int32, bool) {
+func (o *PortResourceInner) GetFanOutOk() (*int64, bool) {
 	if o == nil || IsNil(o.FanOut) {
 		return nil, false
 	}
@@ -383,8 +383,8 @@ func (o *PortResourceInner) HasFanOut() bool {
 	return false
 }
 
-// SetFanOut gets a reference to the given int32 and assigns it to the FanOut field.
-func (o *PortResourceInner) SetFanOut(v int32) {
+// SetFanOut gets a reference to the given int64 and assigns it to the FanOut field.
+func (o *PortResourceInner) SetFanOut(v int64) {
 	o.FanOut = &v
 }
 
@@ -421,9 +421,9 @@ func (o *PortResourceInner) SetHealth(v string) {
 }
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
-func (o *PortResourceInner) GetHealthNumeric() int32 {
+func (o *PortResourceInner) GetHealthNumeric() int64 {
 	if o == nil || IsNil(o.HealthNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.HealthNumeric
@@ -431,7 +431,7 @@ func (o *PortResourceInner) GetHealthNumeric() int32 {
 
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PortResourceInner) GetHealthNumericOk() (*int32, bool) {
+func (o *PortResourceInner) GetHealthNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
@@ -447,8 +447,8 @@ func (o *PortResourceInner) HasHealthNumeric() bool {
 	return false
 }
 
-// SetHealthNumeric gets a reference to the given int32 and assigns it to the HealthNumeric field.
-func (o *PortResourceInner) SetHealthNumeric(v int32) {
+// SetHealthNumeric gets a reference to the given int64 and assigns it to the HealthNumeric field.
+func (o *PortResourceInner) SetHealthNumeric(v int64) {
 	o.HealthNumeric = &v
 }
 
@@ -613,9 +613,9 @@ func (o *PortResourceInner) SetPortType(v string) {
 }
 
 // GetPortTypeNumeric returns the PortTypeNumeric field value if set, zero value otherwise.
-func (o *PortResourceInner) GetPortTypeNumeric() int32 {
+func (o *PortResourceInner) GetPortTypeNumeric() int64 {
 	if o == nil || IsNil(o.PortTypeNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PortTypeNumeric
@@ -623,7 +623,7 @@ func (o *PortResourceInner) GetPortTypeNumeric() int32 {
 
 // GetPortTypeNumericOk returns a tuple with the PortTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PortResourceInner) GetPortTypeNumericOk() (*int32, bool) {
+func (o *PortResourceInner) GetPortTypeNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.PortTypeNumeric) {
 		return nil, false
 	}
@@ -639,8 +639,8 @@ func (o *PortResourceInner) HasPortTypeNumeric() bool {
 	return false
 }
 
-// SetPortTypeNumeric gets a reference to the given int32 and assigns it to the PortTypeNumeric field.
-func (o *PortResourceInner) SetPortTypeNumeric(v int32) {
+// SetPortTypeNumeric gets a reference to the given int64 and assigns it to the PortTypeNumeric field.
+func (o *PortResourceInner) SetPortTypeNumeric(v int64) {
 	o.PortTypeNumeric = &v
 }
 
@@ -677,9 +677,9 @@ func (o *PortResourceInner) SetStatus(v string) {
 }
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
-func (o *PortResourceInner) GetStatusNumeric() int32 {
+func (o *PortResourceInner) GetStatusNumeric() int64 {
 	if o == nil || IsNil(o.StatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.StatusNumeric
@@ -687,7 +687,7 @@ func (o *PortResourceInner) GetStatusNumeric() int32 {
 
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PortResourceInner) GetStatusNumericOk() (*int32, bool) {
+func (o *PortResourceInner) GetStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
@@ -703,8 +703,8 @@ func (o *PortResourceInner) HasStatusNumeric() bool {
 	return false
 }
 
-// SetStatusNumeric gets a reference to the given int32 and assigns it to the StatusNumeric field.
-func (o *PortResourceInner) SetStatusNumeric(v int32) {
+// SetStatusNumeric gets a reference to the given int64 and assigns it to the StatusNumeric field.
+func (o *PortResourceInner) SetStatusNumeric(v int64) {
 	o.StatusNumeric = &v
 }
 

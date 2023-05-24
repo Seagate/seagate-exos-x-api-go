@@ -8,37 +8,37 @@ Name | Type | Description | Notes
 **Meta** | Pointer to **string** |  | [optional] 
 **ConfigurationSerialnumber** | Pointer to **string** |  | [optional] 
 **DashLevel** | Pointer to **string** |  | [optional] 
-**Dc12i** | Pointer to **int32** |  | [optional] 
-**Dc12v** | Pointer to **int32** |  | [optional] 
-**Dc33v** | Pointer to **int32** |  | [optional] 
-**Dc5i** | Pointer to **int32** |  | [optional] 
-**Dc5v** | Pointer to **int32** |  | [optional] 
-**Dctemp** | Pointer to **int32** |  | [optional] 
+**Dc12i** | Pointer to **int64** |  | [optional] 
+**Dc12v** | Pointer to **int64** |  | [optional] 
+**Dc33v** | Pointer to **int64** |  | [optional] 
+**Dc5i** | Pointer to **int64** |  | [optional] 
+**Dc5v** | Pointer to **int64** |  | [optional] 
+**Dctemp** | Pointer to **int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
-**DomId** | Pointer to **int32** |  | [optional] 
+**DomId** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
-**EnclosureId** | Pointer to **int32** |  | [optional] 
+**EnclosureId** | Pointer to **int64** |  | [optional] 
 **EnclosuresUrl** | Pointer to **string** |  | [optional] 
 **FruShortname** | Pointer to **string** |  | [optional] 
 **FwRevision** | Pointer to **string** | Firmware version of the FRU | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
-**HealthNumeric** | Pointer to **int32** |  | [optional] 
+**HealthNumeric** | Pointer to **int64** |  | [optional] 
 **HealthReason** | Pointer to **string** |  | [optional] 
 **HealthRecommendation** | Pointer to **string** |  | [optional] 
 **Location** | Pointer to **string** |  | [optional] 
 **MfgDate** | Pointer to **string** |  | [optional] 
-**MfgDateNumeric** | Pointer to **int32** |  | [optional] 
+**MfgDateNumeric** | Pointer to **int64** |  | [optional] 
 **MfgLocation** | Pointer to **string** |  | [optional] 
 **MfgVendorId** | Pointer to **string** |  | [optional] 
 **Model** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **PartNumber** | Pointer to **string** |  | [optional] 
 **Position** | Pointer to **string** | Position of the component in the enclosure | [optional] 
-**PositionNumeric** | Pointer to **int32** | Position of the component in the enclosure( In numeric form ) | [optional] 
+**PositionNumeric** | Pointer to **int64** | Position of the component in the enclosure( In numeric form ) | [optional] 
 **Revision** | Pointer to **string** | Current revision for this FRU | [optional] 
 **SerialNumber** | Pointer to **string** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
-**StatusNumeric** | Pointer to **int32** |  | [optional] 
+**StatusNumeric** | Pointer to **int64** |  | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
 **Vendor** | Pointer to **string** |  | [optional] 
 **Fan** | Pointer to [**[]FanResourceInner**](FanResourceInner.md) |  | [optional] 
@@ -164,20 +164,20 @@ HasDashLevel returns a boolean if a field has been set.
 
 ### GetDc12i
 
-`func (o *PowerSuppliesResourceInner) GetDc12i() int32`
+`func (o *PowerSuppliesResourceInner) GetDc12i() int64`
 
 GetDc12i returns the Dc12i field if non-nil, zero value otherwise.
 
 ### GetDc12iOk
 
-`func (o *PowerSuppliesResourceInner) GetDc12iOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetDc12iOk() (*int64, bool)`
 
 GetDc12iOk returns a tuple with the Dc12i field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDc12i
 
-`func (o *PowerSuppliesResourceInner) SetDc12i(v int32)`
+`func (o *PowerSuppliesResourceInner) SetDc12i(v int64)`
 
 SetDc12i sets Dc12i field to given value.
 
@@ -189,20 +189,20 @@ HasDc12i returns a boolean if a field has been set.
 
 ### GetDc12v
 
-`func (o *PowerSuppliesResourceInner) GetDc12v() int32`
+`func (o *PowerSuppliesResourceInner) GetDc12v() int64`
 
 GetDc12v returns the Dc12v field if non-nil, zero value otherwise.
 
 ### GetDc12vOk
 
-`func (o *PowerSuppliesResourceInner) GetDc12vOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetDc12vOk() (*int64, bool)`
 
 GetDc12vOk returns a tuple with the Dc12v field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDc12v
 
-`func (o *PowerSuppliesResourceInner) SetDc12v(v int32)`
+`func (o *PowerSuppliesResourceInner) SetDc12v(v int64)`
 
 SetDc12v sets Dc12v field to given value.
 
@@ -214,20 +214,20 @@ HasDc12v returns a boolean if a field has been set.
 
 ### GetDc33v
 
-`func (o *PowerSuppliesResourceInner) GetDc33v() int32`
+`func (o *PowerSuppliesResourceInner) GetDc33v() int64`
 
 GetDc33v returns the Dc33v field if non-nil, zero value otherwise.
 
 ### GetDc33vOk
 
-`func (o *PowerSuppliesResourceInner) GetDc33vOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetDc33vOk() (*int64, bool)`
 
 GetDc33vOk returns a tuple with the Dc33v field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDc33v
 
-`func (o *PowerSuppliesResourceInner) SetDc33v(v int32)`
+`func (o *PowerSuppliesResourceInner) SetDc33v(v int64)`
 
 SetDc33v sets Dc33v field to given value.
 
@@ -239,20 +239,20 @@ HasDc33v returns a boolean if a field has been set.
 
 ### GetDc5i
 
-`func (o *PowerSuppliesResourceInner) GetDc5i() int32`
+`func (o *PowerSuppliesResourceInner) GetDc5i() int64`
 
 GetDc5i returns the Dc5i field if non-nil, zero value otherwise.
 
 ### GetDc5iOk
 
-`func (o *PowerSuppliesResourceInner) GetDc5iOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetDc5iOk() (*int64, bool)`
 
 GetDc5iOk returns a tuple with the Dc5i field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDc5i
 
-`func (o *PowerSuppliesResourceInner) SetDc5i(v int32)`
+`func (o *PowerSuppliesResourceInner) SetDc5i(v int64)`
 
 SetDc5i sets Dc5i field to given value.
 
@@ -264,20 +264,20 @@ HasDc5i returns a boolean if a field has been set.
 
 ### GetDc5v
 
-`func (o *PowerSuppliesResourceInner) GetDc5v() int32`
+`func (o *PowerSuppliesResourceInner) GetDc5v() int64`
 
 GetDc5v returns the Dc5v field if non-nil, zero value otherwise.
 
 ### GetDc5vOk
 
-`func (o *PowerSuppliesResourceInner) GetDc5vOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetDc5vOk() (*int64, bool)`
 
 GetDc5vOk returns a tuple with the Dc5v field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDc5v
 
-`func (o *PowerSuppliesResourceInner) SetDc5v(v int32)`
+`func (o *PowerSuppliesResourceInner) SetDc5v(v int64)`
 
 SetDc5v sets Dc5v field to given value.
 
@@ -289,20 +289,20 @@ HasDc5v returns a boolean if a field has been set.
 
 ### GetDctemp
 
-`func (o *PowerSuppliesResourceInner) GetDctemp() int32`
+`func (o *PowerSuppliesResourceInner) GetDctemp() int64`
 
 GetDctemp returns the Dctemp field if non-nil, zero value otherwise.
 
 ### GetDctempOk
 
-`func (o *PowerSuppliesResourceInner) GetDctempOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetDctempOk() (*int64, bool)`
 
 GetDctempOk returns a tuple with the Dctemp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDctemp
 
-`func (o *PowerSuppliesResourceInner) SetDctemp(v int32)`
+`func (o *PowerSuppliesResourceInner) SetDctemp(v int64)`
 
 SetDctemp sets Dctemp field to given value.
 
@@ -339,20 +339,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetDomId
 
-`func (o *PowerSuppliesResourceInner) GetDomId() int32`
+`func (o *PowerSuppliesResourceInner) GetDomId() int64`
 
 GetDomId returns the DomId field if non-nil, zero value otherwise.
 
 ### GetDomIdOk
 
-`func (o *PowerSuppliesResourceInner) GetDomIdOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetDomIdOk() (*int64, bool)`
 
 GetDomIdOk returns a tuple with the DomId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDomId
 
-`func (o *PowerSuppliesResourceInner) SetDomId(v int32)`
+`func (o *PowerSuppliesResourceInner) SetDomId(v int64)`
 
 SetDomId sets DomId field to given value.
 
@@ -389,20 +389,20 @@ HasDurableId returns a boolean if a field has been set.
 
 ### GetEnclosureId
 
-`func (o *PowerSuppliesResourceInner) GetEnclosureId() int32`
+`func (o *PowerSuppliesResourceInner) GetEnclosureId() int64`
 
 GetEnclosureId returns the EnclosureId field if non-nil, zero value otherwise.
 
 ### GetEnclosureIdOk
 
-`func (o *PowerSuppliesResourceInner) GetEnclosureIdOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetEnclosureIdOk() (*int64, bool)`
 
 GetEnclosureIdOk returns a tuple with the EnclosureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnclosureId
 
-`func (o *PowerSuppliesResourceInner) SetEnclosureId(v int32)`
+`func (o *PowerSuppliesResourceInner) SetEnclosureId(v int64)`
 
 SetEnclosureId sets EnclosureId field to given value.
 
@@ -514,20 +514,20 @@ HasHealth returns a boolean if a field has been set.
 
 ### GetHealthNumeric
 
-`func (o *PowerSuppliesResourceInner) GetHealthNumeric() int32`
+`func (o *PowerSuppliesResourceInner) GetHealthNumeric() int64`
 
 GetHealthNumeric returns the HealthNumeric field if non-nil, zero value otherwise.
 
 ### GetHealthNumericOk
 
-`func (o *PowerSuppliesResourceInner) GetHealthNumericOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetHealthNumericOk() (*int64, bool)`
 
 GetHealthNumericOk returns a tuple with the HealthNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHealthNumeric
 
-`func (o *PowerSuppliesResourceInner) SetHealthNumeric(v int32)`
+`func (o *PowerSuppliesResourceInner) SetHealthNumeric(v int64)`
 
 SetHealthNumeric sets HealthNumeric field to given value.
 
@@ -639,20 +639,20 @@ HasMfgDate returns a boolean if a field has been set.
 
 ### GetMfgDateNumeric
 
-`func (o *PowerSuppliesResourceInner) GetMfgDateNumeric() int32`
+`func (o *PowerSuppliesResourceInner) GetMfgDateNumeric() int64`
 
 GetMfgDateNumeric returns the MfgDateNumeric field if non-nil, zero value otherwise.
 
 ### GetMfgDateNumericOk
 
-`func (o *PowerSuppliesResourceInner) GetMfgDateNumericOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetMfgDateNumericOk() (*int64, bool)`
 
 GetMfgDateNumericOk returns a tuple with the MfgDateNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMfgDateNumeric
 
-`func (o *PowerSuppliesResourceInner) SetMfgDateNumeric(v int32)`
+`func (o *PowerSuppliesResourceInner) SetMfgDateNumeric(v int64)`
 
 SetMfgDateNumeric sets MfgDateNumeric field to given value.
 
@@ -814,20 +814,20 @@ HasPosition returns a boolean if a field has been set.
 
 ### GetPositionNumeric
 
-`func (o *PowerSuppliesResourceInner) GetPositionNumeric() int32`
+`func (o *PowerSuppliesResourceInner) GetPositionNumeric() int64`
 
 GetPositionNumeric returns the PositionNumeric field if non-nil, zero value otherwise.
 
 ### GetPositionNumericOk
 
-`func (o *PowerSuppliesResourceInner) GetPositionNumericOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetPositionNumericOk() (*int64, bool)`
 
 GetPositionNumericOk returns a tuple with the PositionNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPositionNumeric
 
-`func (o *PowerSuppliesResourceInner) SetPositionNumeric(v int32)`
+`func (o *PowerSuppliesResourceInner) SetPositionNumeric(v int64)`
 
 SetPositionNumeric sets PositionNumeric field to given value.
 
@@ -914,20 +914,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetStatusNumeric
 
-`func (o *PowerSuppliesResourceInner) GetStatusNumeric() int32`
+`func (o *PowerSuppliesResourceInner) GetStatusNumeric() int64`
 
 GetStatusNumeric returns the StatusNumeric field if non-nil, zero value otherwise.
 
 ### GetStatusNumericOk
 
-`func (o *PowerSuppliesResourceInner) GetStatusNumericOk() (*int32, bool)`
+`func (o *PowerSuppliesResourceInner) GetStatusNumericOk() (*int64, bool)`
 
 GetStatusNumericOk returns a tuple with the StatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatusNumeric
 
-`func (o *PowerSuppliesResourceInner) SetStatusNumeric(v int32)`
+`func (o *PowerSuppliesResourceInner) SetStatusNumeric(v int64)`
 
 SetStatusNumeric sets StatusNumeric field to given value.
 

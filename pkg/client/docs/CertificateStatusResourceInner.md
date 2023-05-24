@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **Meta** | Pointer to **string** |  | [optional] 
 **CertificateSignature** | Pointer to **string** |  | [optional] 
 **CertificateStatus** | Pointer to **string** |  | [optional] 
-**CertificateStatusNumeric** | Pointer to **int32** |  | [optional] 
+**CertificateStatusNumeric** | Pointer to **int64** |  | [optional] 
 **CertificateText** | Pointer to **string** |  | [optional] 
 **CertificateTime** | Pointer to **string** |  | [optional] 
 **Controller** | Pointer to **string** |  | [optional] 
-**ControllerNumeric** | Pointer to **int32** |  | [optional] 
+**ControllerNumeric** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
@@ -135,20 +135,20 @@ HasCertificateStatus returns a boolean if a field has been set.
 
 ### GetCertificateStatusNumeric
 
-`func (o *CertificateStatusResourceInner) GetCertificateStatusNumeric() int32`
+`func (o *CertificateStatusResourceInner) GetCertificateStatusNumeric() int64`
 
 GetCertificateStatusNumeric returns the CertificateStatusNumeric field if non-nil, zero value otherwise.
 
 ### GetCertificateStatusNumericOk
 
-`func (o *CertificateStatusResourceInner) GetCertificateStatusNumericOk() (*int32, bool)`
+`func (o *CertificateStatusResourceInner) GetCertificateStatusNumericOk() (*int64, bool)`
 
 GetCertificateStatusNumericOk returns a tuple with the CertificateStatusNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCertificateStatusNumeric
 
-`func (o *CertificateStatusResourceInner) SetCertificateStatusNumeric(v int32)`
+`func (o *CertificateStatusResourceInner) SetCertificateStatusNumeric(v int64)`
 
 SetCertificateStatusNumeric sets CertificateStatusNumeric field to given value.
 
@@ -235,20 +235,20 @@ HasController returns a boolean if a field has been set.
 
 ### GetControllerNumeric
 
-`func (o *CertificateStatusResourceInner) GetControllerNumeric() int32`
+`func (o *CertificateStatusResourceInner) GetControllerNumeric() int64`
 
 GetControllerNumeric returns the ControllerNumeric field if non-nil, zero value otherwise.
 
 ### GetControllerNumericOk
 
-`func (o *CertificateStatusResourceInner) GetControllerNumericOk() (*int32, bool)`
+`func (o *CertificateStatusResourceInner) GetControllerNumericOk() (*int64, bool)`
 
 GetControllerNumericOk returns a tuple with the ControllerNumeric field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetControllerNumeric
 
-`func (o *CertificateStatusResourceInner) SetControllerNumeric(v int32)`
+`func (o *CertificateStatusResourceInner) SetControllerNumeric(v int64)`
 
 SetControllerNumeric sets ControllerNumeric field to given value.
 

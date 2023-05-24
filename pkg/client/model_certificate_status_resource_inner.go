@@ -23,11 +23,11 @@ type CertificateStatusResourceInner struct {
 	Meta                     *string `json:"meta,omitempty"`
 	CertificateSignature     *string `json:"certificate-signature,omitempty"`
 	CertificateStatus        *string `json:"certificate-status,omitempty"`
-	CertificateStatusNumeric *int32  `json:"certificate-status-numeric,omitempty"`
+	CertificateStatusNumeric *int64  `json:"certificate-status-numeric,omitempty"`
 	CertificateText          *string `json:"certificate-text,omitempty"`
 	CertificateTime          *string `json:"certificate-time,omitempty"`
 	Controller               *string `json:"controller,omitempty"`
-	ControllerNumeric        *int32  `json:"controller-numeric,omitempty"`
+	ControllerNumeric        *int64  `json:"controller-numeric,omitempty"`
 }
 
 // NewCertificateStatusResourceInner instantiates a new CertificateStatusResourceInner object
@@ -176,9 +176,9 @@ func (o *CertificateStatusResourceInner) SetCertificateStatus(v string) {
 }
 
 // GetCertificateStatusNumeric returns the CertificateStatusNumeric field value if set, zero value otherwise.
-func (o *CertificateStatusResourceInner) GetCertificateStatusNumeric() int32 {
+func (o *CertificateStatusResourceInner) GetCertificateStatusNumeric() int64 {
 	if o == nil || IsNil(o.CertificateStatusNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CertificateStatusNumeric
@@ -186,7 +186,7 @@ func (o *CertificateStatusResourceInner) GetCertificateStatusNumeric() int32 {
 
 // GetCertificateStatusNumericOk returns a tuple with the CertificateStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CertificateStatusResourceInner) GetCertificateStatusNumericOk() (*int32, bool) {
+func (o *CertificateStatusResourceInner) GetCertificateStatusNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.CertificateStatusNumeric) {
 		return nil, false
 	}
@@ -202,8 +202,8 @@ func (o *CertificateStatusResourceInner) HasCertificateStatusNumeric() bool {
 	return false
 }
 
-// SetCertificateStatusNumeric gets a reference to the given int32 and assigns it to the CertificateStatusNumeric field.
-func (o *CertificateStatusResourceInner) SetCertificateStatusNumeric(v int32) {
+// SetCertificateStatusNumeric gets a reference to the given int64 and assigns it to the CertificateStatusNumeric field.
+func (o *CertificateStatusResourceInner) SetCertificateStatusNumeric(v int64) {
 	o.CertificateStatusNumeric = &v
 }
 
@@ -304,9 +304,9 @@ func (o *CertificateStatusResourceInner) SetController(v string) {
 }
 
 // GetControllerNumeric returns the ControllerNumeric field value if set, zero value otherwise.
-func (o *CertificateStatusResourceInner) GetControllerNumeric() int32 {
+func (o *CertificateStatusResourceInner) GetControllerNumeric() int64 {
 	if o == nil || IsNil(o.ControllerNumeric) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ControllerNumeric
@@ -314,7 +314,7 @@ func (o *CertificateStatusResourceInner) GetControllerNumeric() int32 {
 
 // GetControllerNumericOk returns a tuple with the ControllerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CertificateStatusResourceInner) GetControllerNumericOk() (*int32, bool) {
+func (o *CertificateStatusResourceInner) GetControllerNumericOk() (*int64, bool) {
 	if o == nil || IsNil(o.ControllerNumeric) {
 		return nil, false
 	}
@@ -330,8 +330,8 @@ func (o *CertificateStatusResourceInner) HasControllerNumeric() bool {
 	return false
 }
 
-// SetControllerNumeric gets a reference to the given int32 and assigns it to the ControllerNumeric field.
-func (o *CertificateStatusResourceInner) SetControllerNumeric(v int32) {
+// SetControllerNumeric gets a reference to the given int64 and assigns it to the ControllerNumeric field.
+func (o *CertificateStatusResourceInner) SetControllerNumeric(v int64) {
 	o.ControllerNumeric = &v
 }
 
