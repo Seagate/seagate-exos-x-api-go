@@ -26,6 +26,8 @@ Name | Type | Description | Notes
 **StatusNumeric** | Pointer to **int64** |  | [optional] 
 **TargetId** | Pointer to **string** | WWPN or IQN of the host port | [optional] 
 **Url** | Pointer to **string** | The resource URL | [optional] 
+**FcPort** | Pointer to [**[]FcPortResourceInner**](FcPortResourceInner.md) |  | [optional] 
+**IscsiPort** | Pointer to [**[]IscsiPortResourceInner**](IscsiPortResourceInner.md) |  | [optional] 
 **SasPort** | Pointer to [**[]SasPortResourceInner**](SasPortResourceInner.md) |  | [optional] 
 
 ## Methods
@@ -596,6 +598,56 @@ SetUrl sets Url field to given value.
 `func (o *PortResourceInner) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
+
+### GetFcPort
+
+`func (o *PortResourceInner) GetFcPort() []FcPortResourceInner`
+
+GetFcPort returns the FcPort field if non-nil, zero value otherwise.
+
+### GetFcPortOk
+
+`func (o *PortResourceInner) GetFcPortOk() (*[]FcPortResourceInner, bool)`
+
+GetFcPortOk returns a tuple with the FcPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFcPort
+
+`func (o *PortResourceInner) SetFcPort(v []FcPortResourceInner)`
+
+SetFcPort sets FcPort field to given value.
+
+### HasFcPort
+
+`func (o *PortResourceInner) HasFcPort() bool`
+
+HasFcPort returns a boolean if a field has been set.
+
+### GetIscsiPort
+
+`func (o *PortResourceInner) GetIscsiPort() []IscsiPortResourceInner`
+
+GetIscsiPort returns the IscsiPort field if non-nil, zero value otherwise.
+
+### GetIscsiPortOk
+
+`func (o *PortResourceInner) GetIscsiPortOk() (*[]IscsiPortResourceInner, bool)`
+
+GetIscsiPortOk returns a tuple with the IscsiPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIscsiPort
+
+`func (o *PortResourceInner) SetIscsiPort(v []IscsiPortResourceInner)`
+
+SetIscsiPort sets IscsiPort field to given value.
+
+### HasIscsiPort
+
+`func (o *PortResourceInner) HasIscsiPort() bool`
+
+HasIscsiPort returns a boolean if a field has been set.
 
 ### GetSasPort
 

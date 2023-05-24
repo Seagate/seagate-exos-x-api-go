@@ -14,5 +14,23 @@
             "program": "${workspaceFolder}/cmd/api-regression/main.go",
             "args": ["-debug", "4", "-config", "i1.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v2System"]
         },
+        {
+            "name": "generator",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/internal/generator/cmd/main.go", 
+            "args": ["-config", "internal/generator/generator.conf"]
+        },
+        {
+            "name": "validator",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/internal/validator/cmd/main.go", 
+            "args": ["-config", "internal/validator/validator.conf"]
+        },
       ]
 }

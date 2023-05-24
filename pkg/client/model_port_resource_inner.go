@@ -47,8 +47,10 @@ type PortResourceInner struct {
 	// WWPN or IQN of the host port
 	TargetId *string `json:"target-id,omitempty"`
 	// The resource URL
-	Url     *string                `json:"url,omitempty"`
-	SasPort []SasPortResourceInner `json:"sas-port,omitempty"`
+	Url       *string                  `json:"url,omitempty"`
+	FcPort    []FcPortResourceInner    `json:"fc-port,omitempty"`
+	IscsiPort []IscsiPortResourceInner `json:"iscsi-port,omitempty"`
+	SasPort   []SasPortResourceInner   `json:"sas-port,omitempty"`
 }
 
 // NewPortResourceInner instantiates a new PortResourceInner object
@@ -772,6 +774,70 @@ func (o *PortResourceInner) SetUrl(v string) {
 	o.Url = &v
 }
 
+// GetFcPort returns the FcPort field value if set, zero value otherwise.
+func (o *PortResourceInner) GetFcPort() []FcPortResourceInner {
+	if o == nil || IsNil(o.FcPort) {
+		var ret []FcPortResourceInner
+		return ret
+	}
+	return o.FcPort
+}
+
+// GetFcPortOk returns a tuple with the FcPort field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PortResourceInner) GetFcPortOk() ([]FcPortResourceInner, bool) {
+	if o == nil || IsNil(o.FcPort) {
+		return nil, false
+	}
+	return o.FcPort, true
+}
+
+// HasFcPort returns a boolean if a field has been set.
+func (o *PortResourceInner) HasFcPort() bool {
+	if o != nil && !IsNil(o.FcPort) {
+		return true
+	}
+
+	return false
+}
+
+// SetFcPort gets a reference to the given []FcPortResourceInner and assigns it to the FcPort field.
+func (o *PortResourceInner) SetFcPort(v []FcPortResourceInner) {
+	o.FcPort = v
+}
+
+// GetIscsiPort returns the IscsiPort field value if set, zero value otherwise.
+func (o *PortResourceInner) GetIscsiPort() []IscsiPortResourceInner {
+	if o == nil || IsNil(o.IscsiPort) {
+		var ret []IscsiPortResourceInner
+		return ret
+	}
+	return o.IscsiPort
+}
+
+// GetIscsiPortOk returns a tuple with the IscsiPort field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PortResourceInner) GetIscsiPortOk() ([]IscsiPortResourceInner, bool) {
+	if o == nil || IsNil(o.IscsiPort) {
+		return nil, false
+	}
+	return o.IscsiPort, true
+}
+
+// HasIscsiPort returns a boolean if a field has been set.
+func (o *PortResourceInner) HasIscsiPort() bool {
+	if o != nil && !IsNil(o.IscsiPort) {
+		return true
+	}
+
+	return false
+}
+
+// SetIscsiPort gets a reference to the given []IscsiPortResourceInner and assigns it to the IscsiPort field.
+func (o *PortResourceInner) SetIscsiPort(v []IscsiPortResourceInner) {
+	o.IscsiPort = v
+}
+
 // GetSasPort returns the SasPort field value if set, zero value otherwise.
 func (o *PortResourceInner) GetSasPort() []SasPortResourceInner {
 	if o == nil || IsNil(o.SasPort) {
@@ -879,6 +945,12 @@ func (o PortResourceInner) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Url) {
 		toSerialize["url"] = o.Url
+	}
+	if !IsNil(o.FcPort) {
+		toSerialize["fc-port"] = o.FcPort
+	}
+	if !IsNil(o.IscsiPort) {
+		toSerialize["iscsi-port"] = o.IscsiPort
 	}
 	if !IsNil(o.SasPort) {
 		toSerialize["sas-port"] = o.SasPort

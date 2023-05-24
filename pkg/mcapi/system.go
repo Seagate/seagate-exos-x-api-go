@@ -67,14 +67,11 @@ func AddSystem(url string, client *Client) error {
 					TargetId: port.GetTargetId(),
 				}
 				if port.GetPortType() == "iSCSI" {
-					// TODO: Add iSCSI port support
-					// for _, obj3 := range obj2.Objects {
-					// 	if obj3.Name == "port-details" {
-					// 		p.IPAddress = obj3.PropertiesMap["ip-address"].Data
-					// 		p.Present = obj3.PropertiesMap["sfp-present"].Data
-					// 		p.Compliance = obj3.PropertiesMap["sfp-ethernet-compliance"].Data
-					// 	}
-					// }
+					for _, i := range port.GetIscsiPort() {
+						p.IPAddress = i.GetIpAddress()
+						p.Present = i.GetSfpPresent()
+						p.Compliance = i.GetSfpEthernetCompliance()
+					}
 				}
 				s.Ports = append(s.Ports, p)
 			}
@@ -98,21 +95,21 @@ func AddSystem(url string, client *Client) error {
 
 	// Extract and store pool data
 	s.Pools = nil
-	pools, httpRes, err := client.apiClient.DefaultApi.ShowPoolsGet(client.Ctx).Execute()
+	diskgroups, httpRes, err := client.apiClient.DefaultApi.ShowDiskGroupsGet(client.Ctx).Execute()
 
 	if err != nil {
-		klog.ErrorS(err, "show pools")
+		klog.ErrorS(err, "show disk-groups")
 		return err
 	}
 
 	if err == nil && httpRes.StatusCode == http.StatusOK {
-		for _, pool := range pools.GetPools() {
-			klog.V(2).Info("++ Adding", "pool", pool.GetName())
+		for _, diskgroup := range diskgroups.GetDiskGroups() {
+			klog.V(2).Info("++ Adding", "diskgroup pool", diskgroup.GetPool())
 			s.Pools = append(s.Pools,
 				common.PoolType{
-					Name:         pool.GetName(),
-					SerialNumber: pool.GetSerialNumber(),
-					Type:         pool.GetStorageType(),
+					Name:         diskgroup.GetPool(),
+					SerialNumber: diskgroup.GetPoolSerialNumber(),
+					Type:         diskgroup.GetStorageType(),
 				})
 		}
 	}

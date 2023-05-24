@@ -2889,6 +2889,108 @@ components:
           subnet-mask:
             type: string
             description: Network port subnet mask
+    fc-portResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          configured-topology:
+            type: string
+          configured-topology-numeric:
+            type: integer
+            format: int64
+          primary-loop-id:
+            type: string
+            description: Primary loop ID for this port
+          sfp-part-number:
+            type: string
+          sfp-present:
+            type: string
+          sfp-present-numeric:
+            type: integer
+            format: int64
+          sfp-revision:
+            type: string
+          sfp-status:
+            type: string
+          sfp-status-numeric:
+            type: integer
+            format: int64
+          sfp-supported-speeds:
+            type: string
+          sfp-supported-speeds-numeric:
+            type: integer
+            format: int64
+          sfp-vendor:
+            type: string
+    iscsi-portResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          default-router:
+            type: string
+          gateway:
+            type: string
+          ip-address:
+            type: string
+          ip-version:
+            type: string
+          link-local-address:
+            type: string
+            description: IPv6 Link-Local Address
+          mac-address:
+            type: string
+            description: Primary MAC address for the port
+          netmask:
+            type: string
+            description: Netmask of the iSCSI IP address for this port
+          sfp-10G-compliance:
+            type: string
+          sfp-10G-compliance-numeric:
+            type: integer
+            format: int64
+          sfp-cable-length:
+            type: integer
+            format: int64
+          sfp-cable-technology:
+            type: string
+          sfp-cable-technology-numeric:
+            type: integer
+            format: int64
+          sfp-ethernet-compliance:
+            type: string
+          sfp-ethernet-compliance-numeric:
+            type: integer
+            format: int64
+          sfp-part-number:
+            type: string
+          sfp-present:
+            type: string
+          sfp-present-numeric:
+            type: integer
+            format: int64
+          sfp-revision:
+            type: string
+          sfp-status:
+            type: string
+          sfp-status-numeric:
+            type: integer
+            format: int64
+          sfp-vendor:
+            type: string
     sas-portResource:
       type: array
       minItems: 1
@@ -2986,6 +3088,10 @@ components:
           url:
             type: string
             description: The resource URL
+          fc-port:
+            $ref: '#/components/schemas/fc-portResource'
+          iscsi-port:
+            $ref: '#/components/schemas/iscsi-portResource'
           sas-port:
             $ref: '#/components/schemas/sas-portResource'
     expander-portsResource:
