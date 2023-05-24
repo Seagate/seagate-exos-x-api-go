@@ -224,6 +224,24 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/statusObject'
+  # /show/disk-groups
+  /show/disk-groups:
+    get:
+      description: Execute /show/disk-groups command
+      operationId: ShowDisk-GroupsGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/disk-groupsObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
   # /show/enclosures
   /show/enclosures:
     get:
@@ -3954,6 +3972,13 @@ components:
           $ref: '#/components/schemas/statusResource'
         host-group:
           $ref: '#/components/schemas/host-groupResource'
+    disk-groupsObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        disk-groups:
+          $ref: '#/components/schemas/disk-groupsResource'
     enclosuresObject:
       type: object
       properties:

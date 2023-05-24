@@ -72,6 +72,10 @@ commands:
       nested:
       - name: initiator
 
+  - path: /show/disk-groups
+    meta: disk-groups
+    include: status
+
   - path: /show/enclosures
     meta: enclosures
     include: status
@@ -97,6 +101,8 @@ commands:
     - name: network-parameters
     - name: port
       nested:
+      - name: fc-port
+      - name: iscsi-port
       - name: sas-port
     - name: expander-ports
       nested:

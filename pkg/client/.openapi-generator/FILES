@@ -15,6 +15,7 @@ docs/ControllerCacheParametersResourceInner.md
 docs/ControllersObject.md
 docs/ControllersResourceInner.md
 docs/DefaultApi.md
+docs/DiskGroupsObject.md
 docs/DiskGroupsResourceInner.md
 docs/DrivesObject.md
 docs/DrivesResourceInner.md
@@ -64,6 +65,7 @@ model_certificate_status_resource_inner.go
 model_controller_cache_parameters_resource_inner.go
 model_controllers_object.go
 model_controllers_resource_inner.go
+model_disk_groups_object.go
 model_disk_groups_resource_inner.go
 model_drives_object.go
 model_drives_resource_inner.go

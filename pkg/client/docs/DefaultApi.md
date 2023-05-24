@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**ShowCacheParametersGet**](DefaultApi.md#ShowCacheParametersGet) | **Get** /show/cache-parameters | 
 [**ShowCertificateGet**](DefaultApi.md#ShowCertificateGet) | **Get** /show/certificate | 
 [**ShowControllersGet**](DefaultApi.md#ShowControllersGet) | **Get** /show/controllers | 
+[**ShowDiskGroupsGet**](DefaultApi.md#ShowDiskGroupsGet) | **Get** /show/disk-groups | 
 [**ShowDisksGet**](DefaultApi.md#ShowDisksGet) | **Get** /show/disks | 
 [**ShowEnclosuresGet**](DefaultApi.md#ShowEnclosuresGet) | **Get** /show/enclosures | 
 [**ShowFansGet**](DefaultApi.md#ShowFansGet) | **Get** /show/fans | 
@@ -1145,6 +1146,67 @@ Other parameters are passed through a pointer to a apiShowControllersGetRequest 
 ### Return type
 
 [**ControllersObject**](ControllersObject.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ShowDiskGroupsGet
+
+> DiskGroupsObject ShowDiskGroupsGet(ctx).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.ShowDiskGroupsGet(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowDiskGroupsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ShowDiskGroupsGet`: DiskGroupsObject
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowDiskGroupsGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiShowDiskGroupsGetRequest struct via the builder pattern
+
+
+### Return type
+
+[**DiskGroupsObject**](DiskGroupsObject.md)
 
 ### Authorization
 

@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ShowCacheParametersGet**](docs/DefaultApi.md#showcacheparametersget) | **Get** /show/cache-parameters | 
 *DefaultApi* | [**ShowCertificateGet**](docs/DefaultApi.md#showcertificateget) | **Get** /show/certificate | 
 *DefaultApi* | [**ShowControllersGet**](docs/DefaultApi.md#showcontrollersget) | **Get** /show/controllers | 
+*DefaultApi* | [**ShowDiskGroupsGet**](docs/DefaultApi.md#showdiskgroupsget) | **Get** /show/disk-groups | 
 *DefaultApi* | [**ShowDisksGet**](docs/DefaultApi.md#showdisksget) | **Get** /show/disks | 
 *DefaultApi* | [**ShowEnclosuresGet**](docs/DefaultApi.md#showenclosuresget) | **Get** /show/enclosures | 
 *DefaultApi* | [**ShowFansGet**](docs/DefaultApi.md#showfansget) | **Get** /show/fans | 
@@ -127,6 +128,7 @@ Class | Method | HTTP request | Description
  - [ControllerCacheParametersResourceInner](docs/ControllerCacheParametersResourceInner.md)
  - [ControllersObject](docs/ControllersObject.md)
  - [ControllersResourceInner](docs/ControllersResourceInner.md)
+ - [DiskGroupsObject](docs/DiskGroupsObject.md)
  - [DiskGroupsResourceInner](docs/DiskGroupsResourceInner.md)
  - [DrivesObject](docs/DrivesObject.md)
  - [DrivesResourceInner](docs/DrivesResourceInner.md)
