@@ -15,17 +15,20 @@ exceptions:
 commands:
   - path: /show/system
     meta: system
-    include: status
+    include:
+    - status
     nested:
     - name: redundancy
 
   - path: /show/fans
     meta: fan
-    include: status
+    include:
+    - status
 
   - path: /show/volumes
     meta: volumes
-    include: status
+    include:
+    - status
     options:
     - flag: names
       type: string
@@ -35,38 +38,45 @@ commands:
 
   - path: /show/power-supplies
     meta: power-supplies
-    include: status
+    include:
+    - status
     nested:
     - name: fan
 
   - path: /show/certificate
     meta: certificate-status
-    include: status
+    include:
+    - status
 
   - path: /show/pools
     meta: pools
-    include: status
+    include:
+    - status
     nested:
     - name: disk-groups
     - name: tiers
 
   - path: /show/disks
     meta: drives
-    include: status
+    include:
+    - status
 
   - path: /show/advanced-settings
     meta: advanced-settings-table
-    include: status
+    include:
+    - status
 
   - path: /show/cache-parameters
     meta: cache-settings
-    include: status
+    include:
+    - status
     nested:
     - name: controller-cache-parameters
 
   - path: /show/host-groups
     meta: host-group
-    include: status
+    include:
+    - status
     nested:
     - name: host
       nested:
@@ -74,11 +84,13 @@ commands:
 
   - path: /show/disk-groups
     meta: disk-groups
-    include: status
+    include:
+    - status
 
   - path: /show/enclosures
     meta: enclosures
-    include: status
+    include:
+    - status
     nested:
     - name: controllers
       nested:
@@ -98,7 +110,8 @@ commands:
 
   - path: /show/controllers
     meta: controllers
-    include: status
+    include:
+    - status
     nested:
     - name: network-parameters
     - name: port
@@ -113,26 +126,29 @@ commands:
 
   - path: /show/versions
     meta: versions
-    include: status
+    include:
+    - status
 
   - path: /show/versions/detail
     meta: versions
-    include: status
+    include:
+    - status
 
   - path: /show/maps
-    meta: volume-group-view
-    include: status
-
-  - path: /show/maps
-    meta: volume-group-view
-    include: status
+    meta: volume-view
+    include:
+    - status
+    - volume-group-view
     nested:
-    - name: volume-view
-      nested:
-      - name: volume-view-mappings
-    - name: host-view
-      nested:
-      - name: volume-view-mappings
+    - name: volume-view-mappings
+
+  - path: /show/maps
+    meta: volume-view
+    include:
+    - status
+    - volume-group-view
+    nested:
+    - name: volume-view-mappings
     options:
     - flag: names
       type: string
@@ -141,20 +157,34 @@ commands:
       description: A comma-separated list of the names or serial numbers of the volumes. A name that includes a space must be enclosed in double quotes.
 
   - path: /show/maps/initiator
-    meta: initiator-view
-    include: status
+    meta: hosts-view
+    include:
+    - status
     nested:
-    - name: volume-view
-      nested:
-      - name: volume-view-mappings
+    - name: host-view-mappings
+    options:
+    - flag: names
+      type: string
+      required: false
+      keyword-required: false
+      description: Optional. A comma-separated list of the names or serial numbers of host-type items (initiators, hosts, and host groups) or volume-type items (volumes and volume groups) for which to show mappings.
+
+  - path: /show/maps/all
+    meta: volume-view
+    include:
+    - status
+    nested:
+    - name: volume-view-mappings
 
   - path: /show/initiators
     meta: initiator
-    include: status
+    include:
+    - status
 
   - path: /show/initiator
     meta: initiator
-    include: status
+    include:
+    - status
     options:
     - flag: names
       type: string
@@ -164,11 +194,13 @@ commands:
 
   - path: /show/snapshots
     meta: snapshots
-    include: status
+    include:
+    - status
 
   - path: /show/snapshots
     meta: snapshots
-    include: status
+    include:
+    - status
     options:
     - flag: volume
       type: string
@@ -178,7 +210,8 @@ commands:
 
   - path: /show/snapshots
     meta: snapshots
-    include: status
+    include:
+    - status
     options:
     - flag: pattern
       type: string
@@ -188,7 +221,8 @@ commands:
 
   - path: /create/volume
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: pool
       type: string
@@ -211,7 +245,8 @@ commands:
 
   - path: /delete/volumes
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: names
       type: string
@@ -221,7 +256,8 @@ commands:
 
   - path: /create/snapshots
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: volumes
       type: string
@@ -235,7 +271,8 @@ commands:
 
   - path: /copy/volume
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: destination-pool
       type: string
@@ -253,7 +290,8 @@ commands:
 
   - path: /delete/initiator-nickname
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: name
       type: string
@@ -263,7 +301,8 @@ commands:
 
   - path: /delete/hosts
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: names
       type: string
@@ -272,7 +311,8 @@ commands:
 
   - path: /delete/snapshot
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: names
       type: string
@@ -281,7 +321,8 @@ commands:
 
   - path: /expand/volume
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: size
       type: string
@@ -294,7 +335,8 @@ commands:
 
   - path: /set/initiator
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: id
       type: string
@@ -307,7 +349,8 @@ commands:
 
   - path: /map/volume
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: access
       type: string
@@ -328,7 +371,8 @@ commands:
 
   - path: /unmap/volume
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: initiator
       type: string
@@ -341,7 +385,8 @@ commands:
 
   - path: /unmap/volume
     meta: status
-    include: status
+    include:
+    - status
     options:
     - flag: names
       type: string

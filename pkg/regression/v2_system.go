@@ -25,7 +25,7 @@ var _ = DescribeRegression("System Testing (v2)", func(tc *TestContext) {
 		Expect(err).To(BeNil())
 	})
 
-	Describe("v2System", func() {
+	Describe("v2SystemTest", func() {
 		It("should successfully init the system info", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)

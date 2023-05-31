@@ -9,7 +9,7 @@ import (
 	"k8s.io/klog/v2"
 )
 
-var _ = DescribeRegression("Volume Testing", func(tc *TestContext) {
+var _ = DescribeRegression("Volume Testing (v1)", func(tc *TestContext) {
 	var (
 		client     *storageapi.Client = nil
 		volname1                      = "apitest_1"
@@ -31,7 +31,7 @@ var _ = DescribeRegression("Volume Testing", func(tc *TestContext) {
 		Expect(err).To(BeNil())
 	})
 
-	Describe("VolumeTest", func() {
+	Describe("v1VolumeTest", func() {
 		It("should successfully create the volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
@@ -78,8 +78,8 @@ var _ = DescribeRegression("Volume Testing", func(tc *TestContext) {
 		It("should be able to publish/map volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
-			lun, err := client.PublishVolume(volname1, []string{client.Initiator})
-			logger.V(3).Info("PublishVolume", "name", volname1, "lun", lun)
+			lun, err := client.PublishVolume(volname1, []string{tc.Config.StorageController.Initiator})
+			logger.V(3).Info("PublishVolume", "name", volname1, "lun", lun, "initiator", tc.Config.StorageController.Initiator)
 			Expect(err).To(BeNil())
 			Expect(lun).ToNot(Equal(0))
 		})
@@ -87,8 +87,8 @@ var _ = DescribeRegression("Volume Testing", func(tc *TestContext) {
 		It("should be able to unmap volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
-			status, err := client.UnmapVolume(volname1, client.Initiator)
-			logger.V(3).Info("UnmapVolume", "name", volname1, "response", status.ResponseTypeNumeric)
+			status, err := client.UnmapVolume(volname1, tc.Config.StorageController.Initiator)
+			logger.V(3).Info("UnmapVolume", "name", volname1, "initiator", tc.Config.StorageController.Initiator, "response", status.ResponseTypeNumeric)
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(0))
 		})
@@ -111,8 +111,8 @@ var _ = DescribeRegression("Volume Testing", func(tc *TestContext) {
 		It("should be able to copy the volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
-			status, err := client.CopyVolume(volname1, volname2, client.PoolName)
-			logger.V(3).Info("CopyVolume", "from", volname1, "to", volname2, "status", status.ResponseTypeNumeric)
+			status, err := client.CopyVolume(volname1, volname2, tc.Config.StorageController.Pool)
+			logger.V(3).Info("CopyVolume", "from", volname1, "to", volname2, "pool", tc.Config.StorageController.Pool, "status", status.ResponseTypeNumeric)
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(0))
 

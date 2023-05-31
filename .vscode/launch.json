@@ -12,7 +12,7 @@
             "mode": "auto",
             "cwd": "${workspaceFolder}",
             "program": "${workspaceFolder}/cmd/api-regression/main.go",
-            "args": ["-debug", "4", "-config", "i1.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v2System"]
+            "args": ["-debug", "4", "-config", "i1.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v2Volume"]
         },
         {
             "name": "generator",

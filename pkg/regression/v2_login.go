@@ -10,13 +10,13 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-var _ = DescribeRegression("API Login Testing (v2)", func(tc *TestContext) {
+var _ = DescribeRegression("Login Testing (v2)", func(tc *TestContext) {
 
 	var (
 		client *storageapi.Client
 	)
 
-	Describe("v2Login", func() {
+	Describe("v2LoginTest", func() {
 
 		It("should be able to log into storage controller", func() {
 			client = storageapi.NewClient()

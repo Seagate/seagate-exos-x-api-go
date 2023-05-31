@@ -515,6 +515,16 @@ func (s *Specification) AddCommand(ctx context.Context, config *common.Config, c
 	s.Paths(7, "schema:")
 	s.Paths(8, "$ref: '#/components/schemas/statusObject'")
 
+	// If specified in the input yaml, generate spec lines for all include data types
+	if len(command.Include) > 0 {
+		for _, include := range command.Include {
+			err := s.AddMetaProperties(ctx, config, include, nil, exceptions)
+			if err != nil {
+				return fmt.Errorf("unable to add meta (properties) from /meta command for (%s)", include)
+			}
+		}
+	}
+
 	// If specified in the input yaml, generate spec lines for the resource and add a reference link
 	err := s.AddMetaProperties(ctx, config, command.Meta, command.Nested, exceptions)
 	if err != nil {
@@ -532,10 +542,12 @@ func (s *Specification) AddCommand(ctx context.Context, config *common.Config, c
 		s.Objects(3, "properties:")
 
 		// If specified in the input yaml, add a link to any included resource before defining this resource's object properties
-		if command.Include != "" {
-			logger.V(3).Info("add ref", "name", fmt.Sprintf("%sResource:", command.Include))
-			s.Objects(4, fmt.Sprintf("%s:", command.Include))
-			s.Objects(5, fmt.Sprintf("$ref: '#/components/schemas/%sResource'", command.Include))
+		if len(command.Include) > 0 {
+			for _, include := range command.Include {
+				logger.V(3).Info("add include ref", "name", fmt.Sprintf("%sResource:", include))
+				s.Objects(4, fmt.Sprintf("%s:", include))
+				s.Objects(5, fmt.Sprintf("$ref: '#/components/schemas/%sResource'", include))
+			}
 		}
 
 		// Add link to meta resource reference

@@ -414,6 +414,8 @@ func (client *Client) CheckVolumeExists(volumeID string, size int64) (bool, erro
 // PublishVolume: Attach a volume to an initiator
 func (client *Client) PublishVolume(volumeId string, initiators []string) (string, error) {
 
+	klog.V(0).InfoS("publish volume", "volume", volumeId, "initiators", initiators)
+
 	hostNames, apistatus, err := client.GetVolumeMapsHostNames(volumeId)
 	if err != nil {
 		if apistatus != nil && apistatus.ReturnCode == common.VolumeNotFoundErrorCode {

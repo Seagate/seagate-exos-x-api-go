@@ -326,7 +326,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/volume-group-viewObject'
+                $ref: '#/components/schemas/volume-viewObject'
           description: OK
         "401":
           content:
@@ -351,7 +351,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/volume-group-viewObject'
+                $ref: '#/components/schemas/volume-viewObject'
           description: OK
         "401":
           content:
@@ -359,16 +359,41 @@ paths:
               schema:
                 $ref: '#/components/schemas/statusObject'
           description: Unauthorized
-  /show/maps/initiator:
+  /show/maps/initiator/{namesOption}:
     get:
       description: Execute /show/maps/initiator command
-      operationId: ShowMapsInitiatorGet
+      operationId: ShowMapsInitiatorNamesGet
+      parameters:
+      - explode: false
+        in: path
+        name: namesOption
+        required: true
+        schema:
+          type: string
+        style: simple
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/initiator-viewObject'
+                $ref: '#/components/schemas/hosts-viewObject'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+          description: Unauthorized
+  /show/maps/all:
+    get:
+      description: Execute /show/maps/all command
+      operationId: ShowMapsAllGet
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/volume-viewObject'
           description: OK
         "401":
           content:
@@ -1201,9 +1226,15 @@ components:
       maxItems: 1024
       minItems: 1
       type: array
-    initiator-viewResource:
+    host-view-mappingsResource:
       items:
-        $ref: '#/components/schemas/initiator_viewResource_inner'
+        $ref: '#/components/schemas/host_view_mappingsResource_inner'
+      maxItems: 1024
+      minItems: 1
+      type: array
+    hosts-viewResource:
+      items:
+        $ref: '#/components/schemas/hosts_viewResource_inner'
       maxItems: 1024
       minItems: 1
       type: array
@@ -64538,8 +64569,399 @@ components:
           minItems: 1
           type: array
       type: object
-    volume-group-viewObject:
+    volume-viewObject:
       example:
+        volume-view:
+        - volume-view-mappings:
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          object-name: object-name
+          meta: meta
+          volume-name: volume-name
+          durable-id: durable-id
+          volume-serial: volume-serial
+          volumes-url: volumes-url
+          url: url
+        - volume-view-mappings:
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          object-name: object-name
+          meta: meta
+          volume-name: volume-name
+          durable-id: durable-id
+          volume-serial: volume-serial
+          volumes-url: volumes-url
+          url: url
+        - volume-view-mappings:
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          object-name: object-name
+          meta: meta
+          volume-name: volume-name
+          durable-id: durable-id
+          volume-serial: volume-serial
+          volumes-url: volumes-url
+          url: url
+        - volume-view-mappings:
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          object-name: object-name
+          meta: meta
+          volume-name: volume-name
+          durable-id: durable-id
+          volume-serial: volume-serial
+          volumes-url: volumes-url
+          url: url
+        - volume-view-mappings:
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          - identifier: identifier
+            access: access
+            host-profile-numeric: 6
+            lun: lun
+            object-name: object-name
+            ports: ports
+            access-numeric: 0
+            meta: meta
+            nickname: nickname
+            durable-id: durable-id
+            initiators-url: initiators-url
+            parent-id: parent-id
+            host-profile: host-profile
+            mapped-id: mapped-id
+          object-name: object-name
+          meta: meta
+          volume-name: volume-name
+          durable-id: durable-id
+          volume-serial: volume-serial
+          volumes-url: volumes-url
+          url: url
         volume-group-view:
         - group-name: group-name
           object-name: object-name
@@ -64594,1995 +65016,246 @@ components:
           maxItems: 1024
           minItems: 1
           type: array
+        volume-view:
+          items:
+            $ref: '#/components/schemas/volume_viewResource_inner'
+          maxItems: 1024
+          minItems: 1
+          type: array
       type: object
-    initiator-viewObject:
+    hosts-viewObject:
       example:
-        initiator-view:
-        - host-profile-numeric: 0
-          volume-view:
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+        hosts-view:
+        - host-view-mappings:
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
+            ports: ports
           object-name: object-name
+          serial-number: serial-number
           meta: meta
-          id: id
-          host-profile: host-profile
-          hba-nickname: hba-nickname
-        - host-profile-numeric: 0
-          volume-view:
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+          durable-id: durable-id
+          host-name: host-name
+        - host-view-mappings:
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
+            ports: ports
           object-name: object-name
+          serial-number: serial-number
           meta: meta
-          id: id
-          host-profile: host-profile
-          hba-nickname: hba-nickname
-        - host-profile-numeric: 0
-          volume-view:
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+          durable-id: durable-id
+          host-name: host-name
+        - host-view-mappings:
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
+            ports: ports
           object-name: object-name
+          serial-number: serial-number
           meta: meta
-          id: id
-          host-profile: host-profile
-          hba-nickname: hba-nickname
-        - host-profile-numeric: 0
-          volume-view:
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+          durable-id: durable-id
+          host-name: host-name
+        - host-view-mappings:
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
+            ports: ports
           object-name: object-name
+          serial-number: serial-number
           meta: meta
-          id: id
-          host-profile: host-profile
-          hba-nickname: hba-nickname
-        - host-profile-numeric: 0
-          volume-view:
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+          durable-id: durable-id
+          host-name: host-name
+        - host-view-mappings:
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
-          - volume-view-mappings:
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
-            - identifier: identifier
-              access: access
-              host-profile-numeric: 1
-              lun: lun
-              object-name: object-name
-              ports: ports
-              access-numeric: 6
-              meta: meta
-              nickname: nickname
-              durable-id: durable-id
-              initiators-url: initiators-url
-              parent-id: parent-id
-              host-profile: host-profile
-              mapped-id: mapped-id
+            ports: ports
+          - access: access
+            access-numeric: 0
+            lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
-            durable-id: durable-id
             volume-serial: volume-serial
-            volumes-url: volumes-url
-            url: url
+            ports: ports
           object-name: object-name
+          serial-number: serial-number
           meta: meta
-          id: id
-          host-profile: host-profile
-          hba-nickname: hba-nickname
+          durable-id: durable-id
+          host-name: host-name
         status:
         - time-stamp: time-stamp
           time-stamp-numeric: 1
@@ -66600,9 +65273,9 @@ components:
           maxItems: 1
           minItems: 1
           type: array
-        initiator-view:
+        hosts-view:
           items:
-            $ref: '#/components/schemas/initiator_viewResource_inner'
+            $ref: '#/components/schemas/hosts_viewResource_inner'
           maxItems: 1024
           minItems: 1
           type: array
@@ -83039,11 +81712,11 @@ components:
       example:
         identifier: identifier
         access: access
-        host-profile-numeric: 1
+        host-profile-numeric: 6
         lun: lun
         object-name: object-name
         ports: ports
-        access-numeric: 6
+        access-numeric: 0
         meta: meta
         nickname: nickname
         durable-id: durable-id
@@ -83093,11 +81766,11 @@ components:
         volume-view-mappings:
         - identifier: identifier
           access: access
-          host-profile-numeric: 1
+          host-profile-numeric: 6
           lun: lun
           object-name: object-name
           ports: ports
-          access-numeric: 6
+          access-numeric: 0
           meta: meta
           nickname: nickname
           durable-id: durable-id
@@ -83107,11 +81780,11 @@ components:
           mapped-id: mapped-id
         - identifier: identifier
           access: access
-          host-profile-numeric: 1
+          host-profile-numeric: 6
           lun: lun
           object-name: object-name
           ports: ports
-          access-numeric: 6
+          access-numeric: 0
           meta: meta
           nickname: nickname
           durable-id: durable-id
@@ -83121,11 +81794,11 @@ components:
           mapped-id: mapped-id
         - identifier: identifier
           access: access
-          host-profile-numeric: 1
+          host-profile-numeric: 6
           lun: lun
           object-name: object-name
           ports: ports
-          access-numeric: 6
+          access-numeric: 0
           meta: meta
           nickname: nickname
           durable-id: durable-id
@@ -83135,11 +81808,11 @@ components:
           mapped-id: mapped-id
         - identifier: identifier
           access: access
-          host-profile-numeric: 1
+          host-profile-numeric: 6
           lun: lun
           object-name: object-name
           ports: ports
-          access-numeric: 6
+          access-numeric: 0
           meta: meta
           nickname: nickname
           durable-id: durable-id
@@ -83149,11 +81822,11 @@ components:
           mapped-id: mapped-id
         - identifier: identifier
           access: access
-          host-profile-numeric: 1
+          host-profile-numeric: 6
           lun: lun
           object-name: object-name
           ports: ports
-          access-numeric: 6
+          access-numeric: 0
           meta: meta
           nickname: nickname
           durable-id: durable-id
@@ -83194,422 +81867,102 @@ components:
           minItems: 1
           type: array
       type: object
-    initiator_viewResource_inner:
+    host_view_mappingsResource_inner:
       example:
-        host-profile-numeric: 0
-        volume-view:
-        - volume-view-mappings:
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          object-name: object-name
-          meta: meta
-          volume-name: volume-name
-          durable-id: durable-id
-          volume-serial: volume-serial
-          volumes-url: volumes-url
-          url: url
-        - volume-view-mappings:
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          object-name: object-name
-          meta: meta
-          volume-name: volume-name
-          durable-id: durable-id
-          volume-serial: volume-serial
-          volumes-url: volumes-url
-          url: url
-        - volume-view-mappings:
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          object-name: object-name
-          meta: meta
-          volume-name: volume-name
-          durable-id: durable-id
-          volume-serial: volume-serial
-          volumes-url: volumes-url
-          url: url
-        - volume-view-mappings:
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          object-name: object-name
-          meta: meta
-          volume-name: volume-name
-          durable-id: durable-id
-          volume-serial: volume-serial
-          volumes-url: volumes-url
-          url: url
-        - volume-view-mappings:
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          - identifier: identifier
-            access: access
-            host-profile-numeric: 1
-            lun: lun
-            object-name: object-name
-            ports: ports
-            access-numeric: 6
-            meta: meta
-            nickname: nickname
-            durable-id: durable-id
-            initiators-url: initiators-url
-            parent-id: parent-id
-            host-profile: host-profile
-            mapped-id: mapped-id
-          object-name: object-name
-          meta: meta
-          volume-name: volume-name
-          durable-id: durable-id
-          volume-serial: volume-serial
-          volumes-url: volumes-url
-          url: url
+        access: access
+        access-numeric: 0
+        lun: lun
         object-name: object-name
         meta: meta
-        id: id
-        host-profile: host-profile
-        hba-nickname: hba-nickname
+        volume-name: volume-name
+        volume-serial: volume-serial
+        ports: ports
       properties:
         object-name:
           type: string
         meta:
           type: string
-        hba-nickname:
+        access:
+          description: Access rights for this host
           type: string
-        host-profile:
-          type: string
-        host-profile-numeric:
+        access-numeric:
+          description: Access rights for this host( In numeric form )
           format: int64
           type: integer
-        id:
+        lun:
+          description: Logical Unit Number
           type: string
-        volume-view:
+        ports:
+          type: string
+        volume-name:
+          description: User-defined name for the volume
+          type: string
+        volume-serial:
+          description: Unique serial number for the volume
+          type: string
+      type: object
+    hosts_viewResource_inner:
+      example:
+        host-view-mappings:
+        - access: access
+          access-numeric: 0
+          lun: lun
+          object-name: object-name
+          meta: meta
+          volume-name: volume-name
+          volume-serial: volume-serial
+          ports: ports
+        - access: access
+          access-numeric: 0
+          lun: lun
+          object-name: object-name
+          meta: meta
+          volume-name: volume-name
+          volume-serial: volume-serial
+          ports: ports
+        - access: access
+          access-numeric: 0
+          lun: lun
+          object-name: object-name
+          meta: meta
+          volume-name: volume-name
+          volume-serial: volume-serial
+          ports: ports
+        - access: access
+          access-numeric: 0
+          lun: lun
+          object-name: object-name
+          meta: meta
+          volume-name: volume-name
+          volume-serial: volume-serial
+          ports: ports
+        - access: access
+          access-numeric: 0
+          lun: lun
+          object-name: object-name
+          meta: meta
+          volume-name: volume-name
+          volume-serial: volume-serial
+          ports: ports
+        object-name: object-name
+        serial-number: serial-number
+        meta: meta
+        durable-id: durable-id
+        host-name: host-name
+      properties:
+        object-name:
+          type: string
+        meta:
+          type: string
+        durable-id:
+          type: string
+        host-name:
+          type: string
+        serial-number:
+          type: string
+        host-view-mappings:
           items:
-            $ref: '#/components/schemas/volume_viewResource_inner'
+            $ref: '#/components/schemas/host_view_mappingsResource_inner'
           maxItems: 1024
           minItems: 1
           type: array

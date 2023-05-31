@@ -1,8 +1,0 @@
-#
-# Local testing parameters - replace <variables> with correct values, do not commit!
-#
-TEST_STORAGEIP=http:<ipaddress>
-TEST_USERNAME=<username>
-TEST_PASSWORD=<password>
-TEST_INITIATOR=<host-initiator>
-TEST_POOL=<pool>

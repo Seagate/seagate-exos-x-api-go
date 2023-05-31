@@ -101,8 +101,9 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ShowHostGroupsGet**](docs/DefaultApi.md#showhostgroupsget) | **Get** /show/host-groups | 
 *DefaultApi* | [**ShowInitiatorNamesGet**](docs/DefaultApi.md#showinitiatornamesget) | **Get** /show/initiator/{namesOption} | 
 *DefaultApi* | [**ShowInitiatorsGet**](docs/DefaultApi.md#showinitiatorsget) | **Get** /show/initiators | 
+*DefaultApi* | [**ShowMapsAllGet**](docs/DefaultApi.md#showmapsallget) | **Get** /show/maps/all | 
 *DefaultApi* | [**ShowMapsGet**](docs/DefaultApi.md#showmapsget) | **Get** /show/maps | 
-*DefaultApi* | [**ShowMapsInitiatorGet**](docs/DefaultApi.md#showmapsinitiatorget) | **Get** /show/maps/initiator | 
+*DefaultApi* | [**ShowMapsInitiatorNamesGet**](docs/DefaultApi.md#showmapsinitiatornamesget) | **Get** /show/maps/initiator/{namesOption} | 
 *DefaultApi* | [**ShowMapsNamesGet**](docs/DefaultApi.md#showmapsnamesget) | **Get** /show/maps/{namesOption} | 
 *DefaultApi* | [**ShowPoolsGet**](docs/DefaultApi.md#showpoolsget) | **Get** /show/pools | 
 *DefaultApi* | [**ShowPowerSuppliesGet**](docs/DefaultApi.md#showpowersuppliesget) | **Get** /show/power-supplies | 
@@ -142,10 +143,11 @@ Class | Method | HTTP request | Description
  - [HostGroupObject](docs/HostGroupObject.md)
  - [HostGroupResourceInner](docs/HostGroupResourceInner.md)
  - [HostResourceInner](docs/HostResourceInner.md)
+ - [HostViewMappingsResourceInner](docs/HostViewMappingsResourceInner.md)
+ - [HostsViewObject](docs/HostsViewObject.md)
+ - [HostsViewResourceInner](docs/HostsViewResourceInner.md)
  - [InitiatorObject](docs/InitiatorObject.md)
  - [InitiatorResourceInner](docs/InitiatorResourceInner.md)
- - [InitiatorViewObject](docs/InitiatorViewObject.md)
- - [InitiatorViewResourceInner](docs/InitiatorViewResourceInner.md)
  - [IscsiPortResourceInner](docs/IscsiPortResourceInner.md)
  - [NetworkParametersResourceInner](docs/NetworkParametersResourceInner.md)
  - [PoolsObject](docs/PoolsObject.md)
@@ -164,9 +166,9 @@ Class | Method | HTTP request | Description
  - [TiersResourceInner](docs/TiersResourceInner.md)
  - [VersionsObject](docs/VersionsObject.md)
  - [VersionsResourceInner](docs/VersionsResourceInner.md)
- - [VolumeGroupViewObject](docs/VolumeGroupViewObject.md)
  - [VolumeGroupViewResourceInner](docs/VolumeGroupViewResourceInner.md)
  - [VolumeViewMappingsResourceInner](docs/VolumeViewMappingsResourceInner.md)
+ - [VolumeViewObject](docs/VolumeViewObject.md)
  - [VolumeViewResourceInner](docs/VolumeViewResourceInner.md)
  - [VolumesObject](docs/VolumesObject.md)
  - [VolumesResourceInner](docs/VolumesResourceInner.md)

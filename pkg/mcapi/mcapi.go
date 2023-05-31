@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
+	openapiclient "github.com/Seagate/seagate-exos-x-api-go/pkg/client"
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 	"k8s.io/klog/v2"
 )
@@ -62,6 +63,10 @@ func (client *Client) StoreCredentials(ipaddress string, username string, passwo
 // Login: Called to log into the storage controller API
 func (client *Client) Login(ctx context.Context) error {
 
+	if client.Ctx == nil {
+		client.Ctx = ctx
+	}
+
 	config := &common.Config{
 		MCIpAddress: client.Addr,
 		MCUsername:  client.Username,
@@ -81,12 +86,14 @@ func (client *Client) Login(ctx context.Context) error {
 // SessionValid : Determine if a session is valid, if not a login is required
 func (client *Client) SessionValid(addr, username string) bool {
 
+	logger := klog.FromContext(client.Ctx)
+
 	if client.Addr == addr && client.Username == username {
 		if client.SessionKey == "" {
-			klog.V(2).InfoS("session invalid", "sessionkey", client.SessionKey)
+			logger.V(2).Info("session invalid", "sessionkey", client.SessionKey)
 			return false
 		}
-		klog.V(2).InfoS("client is configured", "ipaddress", addr)
+		logger.V(2).Info("client is configured", "ipaddress", addr)
 		return true
 	}
 
@@ -107,4 +114,36 @@ func (client *Client) InitSystemInfo() error {
 	}
 
 	return err
+}
+
+// CreateCommonStatus : create a common API status object based on the OpenAPI client response
+func CreateCommonStatus(response *client.StatusObject) *common.ResponseStatus {
+
+	status := common.ResponseStatus{}
+
+	if response != nil {
+		status.ResponseType = response.Status[0].GetResponseType()
+		status.ResponseTypeNumeric = int(response.Status[0].GetResponseTypeNumeric())
+		status.Response = response.Status[0].GetResponse()
+		status.ReturnCode = int(response.Status[0].GetReturnCode())
+		status.Time = time.Unix(int64(response.Status[0].GetTimeStampNumeric()), 0)
+	}
+
+	return &status
+}
+
+// CreateCommonStatusFromStatus : create a common API status object based on the OpenAPI client response
+func CreateCommonStatusFromStatus(response *openapiclient.StatusResourceInner) *common.ResponseStatus {
+
+	status := common.ResponseStatus{}
+
+	if response != nil {
+		status.ResponseType = response.GetResponseType()
+		status.ResponseTypeNumeric = int(response.GetResponseTypeNumeric())
+		status.Response = response.GetResponse()
+		status.ReturnCode = int(response.GetReturnCode())
+		status.Time = time.Unix(int64(response.GetTimeStampNumeric()), 0)
+	}
+
+	return &status
 }

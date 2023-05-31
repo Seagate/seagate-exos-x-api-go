@@ -29,7 +29,7 @@ type Client struct {
 func NewClient() *Client {
 	return &Client{
 		HTTPClient: http.Client{
-			Timeout: time.Duration(15 * time.Second),
+			Timeout: time.Duration(60 * time.Second),
 			Transport: &http.Transport{
 				// Proxy: http.ProxyURL(proxy),
 				TLSClientConfig: &tls.Config{

@@ -35,6 +35,7 @@ The `api/mc-openapi.yaml` spec includes support for the following items.
 | `show advanced-settings` | Implemented | |
 | `show cache-parameters` | Implemented | |
 | `show host-groups` | Implemented | |
+| `show disk-groups` | Implemented | |
 | `show enclosures` | Implemented | |
 | `show controllers` | Implemented | |
 | `show versions` | Implemented | |

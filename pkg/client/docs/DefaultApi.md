@@ -27,8 +27,9 @@ Method | HTTP request | Description
 [**ShowHostGroupsGet**](DefaultApi.md#ShowHostGroupsGet) | **Get** /show/host-groups | 
 [**ShowInitiatorNamesGet**](DefaultApi.md#ShowInitiatorNamesGet) | **Get** /show/initiator/{namesOption} | 
 [**ShowInitiatorsGet**](DefaultApi.md#ShowInitiatorsGet) | **Get** /show/initiators | 
+[**ShowMapsAllGet**](DefaultApi.md#ShowMapsAllGet) | **Get** /show/maps/all | 
 [**ShowMapsGet**](DefaultApi.md#ShowMapsGet) | **Get** /show/maps | 
-[**ShowMapsInitiatorGet**](DefaultApi.md#ShowMapsInitiatorGet) | **Get** /show/maps/initiator | 
+[**ShowMapsInitiatorNamesGet**](DefaultApi.md#ShowMapsInitiatorNamesGet) | **Get** /show/maps/initiator/{namesOption} | 
 [**ShowMapsNamesGet**](DefaultApi.md#ShowMapsNamesGet) | **Get** /show/maps/{namesOption} | 
 [**ShowPoolsGet**](DefaultApi.md#ShowPoolsGet) | **Get** /show/pools | 
 [**ShowPowerSuppliesGet**](DefaultApi.md#ShowPowerSuppliesGet) | **Get** /show/power-supplies | 
@@ -1597,9 +1598,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## ShowMapsAllGet
+
+> VolumeViewObject ShowMapsAllGet(ctx).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.ShowMapsAllGet(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsAllGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ShowMapsAllGet`: VolumeViewObject
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsAllGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiShowMapsAllGetRequest struct via the builder pattern
+
+
+### Return type
+
+[**VolumeViewObject**](VolumeViewObject.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ShowMapsGet
 
-> VolumeGroupViewObject ShowMapsGet(ctx).Execute()
+> VolumeViewObject ShowMapsGet(ctx).Execute()
 
 
 
@@ -1626,7 +1688,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ShowMapsGet`: VolumeGroupViewObject
+    // response from `ShowMapsGet`: VolumeViewObject
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsGet`: %v\n", resp)
 }
 ```
@@ -1642,7 +1704,7 @@ Other parameters are passed through a pointer to a apiShowMapsGetRequest struct 
 
 ### Return type
 
-[**VolumeGroupViewObject**](VolumeGroupViewObject.md)
+[**VolumeViewObject**](VolumeViewObject.md)
 
 ### Authorization
 
@@ -1658,9 +1720,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## ShowMapsInitiatorGet
+## ShowMapsInitiatorNamesGet
 
-> InitiatorViewObject ShowMapsInitiatorGet(ctx).Execute()
+> HostsViewObject ShowMapsInitiatorNamesGet(ctx, namesOption).Execute()
 
 
 
@@ -1679,31 +1741,40 @@ import (
 )
 
 func main() {
+    namesOption := "namesOption_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultApi.ShowMapsInitiatorGet(context.Background()).Execute()
+    resp, r, err := apiClient.DefaultApi.ShowMapsInitiatorNamesGet(context.Background(), namesOption).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsInitiatorGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsInitiatorNamesGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ShowMapsInitiatorGet`: InitiatorViewObject
-    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsInitiatorGet`: %v\n", resp)
+    // response from `ShowMapsInitiatorNamesGet`: HostsViewObject
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsInitiatorNamesGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**namesOption** | **string** |  | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiShowMapsInitiatorGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiShowMapsInitiatorNamesGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
 
 
 ### Return type
 
-[**InitiatorViewObject**](InitiatorViewObject.md)
+[**HostsViewObject**](HostsViewObject.md)
 
 ### Authorization
 
@@ -1721,7 +1792,7 @@ No authorization required
 
 ## ShowMapsNamesGet
 
-> VolumeGroupViewObject ShowMapsNamesGet(ctx, namesOption).Execute()
+> VolumeViewObject ShowMapsNamesGet(ctx, namesOption).Execute()
 
 
 
@@ -1749,7 +1820,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsNamesGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ShowMapsNamesGet`: VolumeGroupViewObject
+    // response from `ShowMapsNamesGet`: VolumeViewObject
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsNamesGet`: %v\n", resp)
 }
 ```
@@ -1773,7 +1844,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VolumeGroupViewObject**](VolumeGroupViewObject.md)
+[**VolumeViewObject**](VolumeViewObject.md)
 
 ### Authorization
 

@@ -2631,12 +2631,122 @@ func (a *DefaultApiService) ShowInitiatorsGetExecute(r ApiShowInitiatorsGetReque
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiShowMapsAllGetRequest struct {
+	ctx        context.Context
+	ApiService *DefaultApiService
+}
+
+func (r ApiShowMapsAllGetRequest) Execute() (*VolumeViewObject, *http.Response, error) {
+	return r.ApiService.ShowMapsAllGetExecute(r)
+}
+
+/*
+ShowMapsAllGet Method for ShowMapsAllGet
+
+Execute /show/maps/all command
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiShowMapsAllGetRequest
+*/
+func (a *DefaultApiService) ShowMapsAllGet(ctx context.Context) ApiShowMapsAllGetRequest {
+	return ApiShowMapsAllGetRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
+}
+
+// Execute executes the request
+//
+//	@return VolumeViewObject
+func (a *DefaultApiService) ShowMapsAllGetExecute(r ApiShowMapsAllGetRequest) (*VolumeViewObject, *http.Response, error) {
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *VolumeViewObject
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsAllGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/show/maps/all"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 401 {
+			var v StatusObject
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiShowMapsGetRequest struct {
 	ctx        context.Context
 	ApiService *DefaultApiService
 }
 
-func (r ApiShowMapsGetRequest) Execute() (*VolumeGroupViewObject, *http.Response, error) {
+func (r ApiShowMapsGetRequest) Execute() (*VolumeViewObject, *http.Response, error) {
 	return r.ApiService.ShowMapsGetExecute(r)
 }
 
@@ -2657,13 +2767,13 @@ func (a *DefaultApiService) ShowMapsGet(ctx context.Context) ApiShowMapsGetReque
 
 // Execute executes the request
 //
-//	@return VolumeGroupViewObject
-func (a *DefaultApiService) ShowMapsGetExecute(r ApiShowMapsGetRequest) (*VolumeGroupViewObject, *http.Response, error) {
+//	@return VolumeViewObject
+func (a *DefaultApiService) ShowMapsGetExecute(r ApiShowMapsGetRequest) (*VolumeViewObject, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *VolumeGroupViewObject
+		localVarReturnValue *VolumeViewObject
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsGet")
@@ -2741,47 +2851,51 @@ func (a *DefaultApiService) ShowMapsGetExecute(r ApiShowMapsGetRequest) (*Volume
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiShowMapsInitiatorGetRequest struct {
-	ctx        context.Context
-	ApiService *DefaultApiService
+type ApiShowMapsInitiatorNamesGetRequest struct {
+	ctx         context.Context
+	ApiService  *DefaultApiService
+	namesOption string
 }
 
-func (r ApiShowMapsInitiatorGetRequest) Execute() (*InitiatorViewObject, *http.Response, error) {
-	return r.ApiService.ShowMapsInitiatorGetExecute(r)
+func (r ApiShowMapsInitiatorNamesGetRequest) Execute() (*HostsViewObject, *http.Response, error) {
+	return r.ApiService.ShowMapsInitiatorNamesGetExecute(r)
 }
 
 /*
-ShowMapsInitiatorGet Method for ShowMapsInitiatorGet
+ShowMapsInitiatorNamesGet Method for ShowMapsInitiatorNamesGet
 
 Execute /show/maps/initiator command
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiShowMapsInitiatorGetRequest
+	@param namesOption
+	@return ApiShowMapsInitiatorNamesGetRequest
 */
-func (a *DefaultApiService) ShowMapsInitiatorGet(ctx context.Context) ApiShowMapsInitiatorGetRequest {
-	return ApiShowMapsInitiatorGetRequest{
-		ApiService: a,
-		ctx:        ctx,
+func (a *DefaultApiService) ShowMapsInitiatorNamesGet(ctx context.Context, namesOption string) ApiShowMapsInitiatorNamesGetRequest {
+	return ApiShowMapsInitiatorNamesGetRequest{
+		ApiService:  a,
+		ctx:         ctx,
+		namesOption: namesOption,
 	}
 }
 
 // Execute executes the request
 //
-//	@return InitiatorViewObject
-func (a *DefaultApiService) ShowMapsInitiatorGetExecute(r ApiShowMapsInitiatorGetRequest) (*InitiatorViewObject, *http.Response, error) {
+//	@return HostsViewObject
+func (a *DefaultApiService) ShowMapsInitiatorNamesGetExecute(r ApiShowMapsInitiatorNamesGetRequest) (*HostsViewObject, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *InitiatorViewObject
+		localVarReturnValue *HostsViewObject
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsInitiatorGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsInitiatorNamesGet")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/show/maps/initiator"
+	localVarPath := localBasePath + "/show/maps/initiator/{namesOption}"
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2857,7 +2971,7 @@ type ApiShowMapsNamesGetRequest struct {
 	namesOption string
 }
 
-func (r ApiShowMapsNamesGetRequest) Execute() (*VolumeGroupViewObject, *http.Response, error) {
+func (r ApiShowMapsNamesGetRequest) Execute() (*VolumeViewObject, *http.Response, error) {
 	return r.ApiService.ShowMapsNamesGetExecute(r)
 }
 
@@ -2880,13 +2994,13 @@ func (a *DefaultApiService) ShowMapsNamesGet(ctx context.Context, namesOption st
 
 // Execute executes the request
 //
-//	@return VolumeGroupViewObject
-func (a *DefaultApiService) ShowMapsNamesGetExecute(r ApiShowMapsNamesGetRequest) (*VolumeGroupViewObject, *http.Response, error) {
+//	@return VolumeViewObject
+func (a *DefaultApiService) ShowMapsNamesGetExecute(r ApiShowMapsNamesGetRequest) (*VolumeViewObject, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *VolumeGroupViewObject
+		localVarReturnValue *VolumeViewObject
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsNamesGet")
