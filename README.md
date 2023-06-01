@@ -16,7 +16,8 @@ The HTTP API operations are used to execute provisioning and management commands
 
 ## OpenAPI Implementation
 
-This section defines the commands, response status codes, and resource objects implemented in the OpenAPI specification.
+This section defines the commands, response status codes, and resource objects implemented in the OpenAPI specification. This is a superset of what was developed in API v1.
+Commands were added that are being used by other clients needing to interface with the MC Storage Controller API.
 
 The `api/mc-openapi.yaml` spec includes support for the following items.
 
@@ -80,6 +81,8 @@ The `api/mc-openapi.yaml` spec includes support for the following items.
 | `host` | Implemented |
 | `host-group` | Implemented |
 | `network-parameters` | Implemented |
+| `fc-port` | Implemented |
+| `iscsi-port` | Implemented |
 | `sas-port` | Implemented |
 | `port` | Implemented |
 | `expander-ports` | Implemented |
@@ -90,7 +93,9 @@ The `api/mc-openapi.yaml` spec includes support for the following items.
 | `volume-group-view` | Implemented |
 | `volume-view-mappings` | Implemented |
 | `volume-view` | Implemented |
-| `initiator-view` | Implemented |
+| `host-view-mappings` | Implemented |
+| `hosts-view` | Implemented |
+| `initiator-view` | Not Implemented |
 | `snapshots` | Implemented |
 
 ## Generation Steps
@@ -98,9 +103,11 @@ The `api/mc-openapi.yaml` spec includes support for the following items.
 | Command                             | Notes |
 | :---------------------------------- | :------------------------------------------------------------------------ |
 | Update `generator/mc-commands.yaml` | Modify this YAML file which controls MC command generation |
+| `make generator`                    | Builds a generator executable for creating the OpenAPI YAML file |
 | `make rung`                         | Executes: `go run generator/cmd/main.go -config generator/generator.conf` |
 | `make validate`                     | Use `openapi-generator-cli` to validate the MC OpenAPI spec |
 | `make generate`                     | Use `openapi-generator-cli` to generate a Go MC client library |
+| `make validator`                    | Builds a validator executable for testing the generated client library |
 | `make runv`                         | Executes: `go run validator/cmd/main.go -config validator/validator.conf`
 
 **Note:** `validator/cmd/main.go` is used to validate a handful of MC client library commands, extend as desired.
@@ -193,10 +200,12 @@ The suggestion is to create your own configuration file and do not check it into
 There are many options for running Ginkgo test cases, here are a few:
 
 - `make regession` to build the ***api-regression*** executable.
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "Login"` to run only the ***Login*** tests
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "System"` to run only the ***System*** tests
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "Volume"` to run only ***Volume*** tests
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "Snapshot"` to run only ***Snapshot*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v1"` to run all the ***v1*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2"` to run all the ***v2*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Login"` to run only the ***v2 Login*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2System"` to run only the ***v2 System*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Volume"` to run only ***v2 Volume*** tests
+- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Snapshot"` to run only ***v2 Snapshot*** tests
 - `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast` to run only all tests
 
 There are also many command line flags:
