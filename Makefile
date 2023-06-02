@@ -6,6 +6,7 @@ VALIDATOR_APP := validator
 GENERATOR_APP := generator
 OPENAPI_YAML := api/mc-openapi.yaml
 GOFMT_OPTS := gofmt -w .
+REGRESSION_APP := api-regression
 
 help:
 	@echo ""
@@ -26,7 +27,7 @@ help:
 clean:
 	@echo "Clean up..."
 	go clean
-	rm -f $(APP_NAME)
+	rm -f $(APP_NAME) $(VALIDATOR_APP)-app $(GENERATOR_APP)-app $(REGRESSION_APP)
 
 validator: clean
 	@echo "Build local '$(VALIDATOR_APP)-app' executable..."
@@ -65,10 +66,10 @@ regen: rung validate generate runv
 	@echo "Full Regeneration of $(OPENAPI_YAML)"
 
 regression:
-	@echo "Build local api-regression..."
-	go build -o api-regression cmd/api-regression/main.go
+	@echo "Build local $(REGRESSION_APP)..."
+	go build -o api-regression cmd/$(REGRESSION_APP)/main.go
 
 run-regression: regression
-	# ./api-regression -debug 4 -config i1.conf --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v1"
-	# ./api-regression -debug 4 -config i1.conf --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2"
-	./api-regression -debug 4 -config api-regression.conf --ginkgo.v --ginkgo.fail-fast 
+	# ./$(REGRESSION_APP) -debug 4 -config i1.conf --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v1"
+	# ./$(REGRESSION_APP) -debug 4 -config i1.conf --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2"
+	./$(REGRESSION_APP) -debug 4 -config $(REGRESSION_APP).conf --ginkgo.v --ginkgo.fail-fast 
