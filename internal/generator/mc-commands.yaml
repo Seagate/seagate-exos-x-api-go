@@ -220,7 +220,7 @@ commands:
       description: Shows snapshots whose names contain the specified string. The string can include the following wildcards, singly or in combination. (*, ?, [], [xy123])
 
   - path: /create/volume
-    meta: status
+    meta: volumes
     include:
     - status
     options:

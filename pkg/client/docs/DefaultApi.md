@@ -196,7 +196,7 @@ No authorization required
 
 ## CreateVolumePoolSizeTierAffinityNameGet
 
-> StatusObject CreateVolumePoolSizeTierAffinityNameGet(ctx, poolOption, sizeOption, tierAffinityOption, nameOption).Execute()
+> VolumesObject CreateVolumePoolSizeTierAffinityNameGet(ctx, poolOption, sizeOption, tierAffinityOption, nameOption).Execute()
 
 
 
@@ -227,7 +227,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateVolumePoolSizeTierAffinityNameGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateVolumePoolSizeTierAffinityNameGet`: StatusObject
+    // response from `CreateVolumePoolSizeTierAffinityNameGet`: VolumesObject
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateVolumePoolSizeTierAffinityNameGet`: %v\n", resp)
 }
 ```
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StatusObject**](StatusObject.md)
+[**VolumesObject**](VolumesObject.md)
 
 ### Authorization
 

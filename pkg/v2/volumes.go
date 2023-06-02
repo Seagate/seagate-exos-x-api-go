@@ -43,14 +43,35 @@ func (v Volumes) Less(i, j int) bool {
 }
 
 // CreateVolume : creates a volume with the given name, capacity in the given pool
-func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.ResponseStatus, error) {
+func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.VolumeObject, *common.ResponseStatus, error) {
 
 	logger := klog.FromContext(client.Ctx)
 	response, httpRes, err := client.apiClient.DefaultApi.CreateVolumePoolSizeTierAffinityNameGet(client.Ctx, pool, size, ApiTierAffinity, name).Execute()
 	logger.V(2).Info("create volume", "name", name, "http", httpRes.Status)
-	status := CreateCommonStatus(response)
 
-	return status, err
+	status := &common.ResponseStatus{}
+	if response != nil && len(response.GetStatus()) > 0 {
+		status = CreateCommonStatusFromStatus(&response.Status[0])
+	}
+
+	volume := common.VolumeObject{}
+	if response != nil && len(response.GetVolumes()) > 0 {
+		v := response.Volumes[0]
+		volume.ObjectName = v.GetObjectName()
+		volume.Blocks = v.GetBlocks()
+		volume.BlockSize = v.GetBlocksize()
+		volume.Health = v.GetHealth()
+		volume.SizeNumeric = v.GetSizeNumeric()
+		volume.StoragePoolName = v.GetStoragePoolName()
+		volume.StorageType = v.GetStorageType()
+		volume.TierAffinity = v.GetTierAffinity()
+		volume.TotalSize = v.GetTotalSize()
+		volume.VolumeName = v.GetVolumeName()
+		volume.VolumeType = v.GetVolumeType()
+		volume.Wwn = v.GetWwn()
+	}
+
+	return &volume, status, err
 }
 
 // CheckVolumeExists: Return true if a volume already exists

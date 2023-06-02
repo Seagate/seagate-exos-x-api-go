@@ -35,8 +35,8 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 		It("should successfully create the volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
-			status, err := client.CreateVolume(volname1, size, tc.Config.StorageController.Pool, poolType)
-			logger.V(3).Info("CreateVolume", "name", volname1, "size", size, "mc-response", status.ResponseTypeNumeric)
+			volume, status, err := client.CreateVolume(volname1, size, tc.Config.StorageController.Pool, poolType)
+			logger.V(3).Info("CreateVolume", "name", volname1, "size", size, "wwn", volume.Wwn, "mc-response", status.ResponseTypeNumeric)
 
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))

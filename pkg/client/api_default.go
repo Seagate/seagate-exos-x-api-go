@@ -271,7 +271,7 @@ type ApiCreateVolumePoolSizeTierAffinityNameGetRequest struct {
 	nameOption         string
 }
 
-func (r ApiCreateVolumePoolSizeTierAffinityNameGetRequest) Execute() (*StatusObject, *http.Response, error) {
+func (r ApiCreateVolumePoolSizeTierAffinityNameGetRequest) Execute() (*VolumesObject, *http.Response, error) {
 	return r.ApiService.CreateVolumePoolSizeTierAffinityNameGetExecute(r)
 }
 
@@ -300,13 +300,13 @@ func (a *DefaultApiService) CreateVolumePoolSizeTierAffinityNameGet(ctx context.
 
 // Execute executes the request
 //
-//	@return StatusObject
-func (a *DefaultApiService) CreateVolumePoolSizeTierAffinityNameGetExecute(r ApiCreateVolumePoolSizeTierAffinityNameGetRequest) (*StatusObject, *http.Response, error) {
+//	@return VolumesObject
+func (a *DefaultApiService) CreateVolumePoolSizeTierAffinityNameGetExecute(r ApiCreateVolumePoolSizeTierAffinityNameGetRequest) (*VolumesObject, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *StatusObject
+		localVarReturnValue *VolumesObject
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.CreateVolumePoolSizeTierAffinityNameGet")

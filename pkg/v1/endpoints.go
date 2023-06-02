@@ -62,14 +62,34 @@ func (client *Client) GetPoolType(pool string) (string, error) {
 }
 
 // CreateVolume : creates a volume with the given name, capacity in the given pool
-func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.ResponseStatus, error) {
+func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.VolumeObject, *common.ResponseStatus, error) {
+	request := ""
 	if poolType == "Virtual" {
-		_, status, err := client.FormattedRequest("/create/volume/pool/\"%s\"/size/%s/tier-affinity/no-affinity/\"%s\"", pool, size, name)
-		return status, err
+		request = fmt.Sprintf("/create/volume/pool/\"%s\"/size/%s/tier-affinity/no-affinity/\"%s\"", pool, size, name)
 	} else {
-		_, status, err := client.FormattedRequest("/create/volume/pool/\"%s\"/size/%s/tier-affinity/no-affinity/\"%s\"", pool, size, name)
-		return status, err
+		request = fmt.Sprintf("/create/volume/pool/\"%s\"/size/%s/tier-affinity/no-affinity/\"%s\"", pool, size, name)
 	}
+
+	data, status, err := client.FormattedRequest(request)
+
+	// Fill in Volume properties for the volume data object returned
+	volume := common.VolumeObject{}
+	if err == nil && status.ResponseTypeNumeric == 0 && len(data.Objects) > 0 {
+		volume.ObjectName = data.Objects[0].Name
+		volume.Blocks, _ = strconv.ParseInt(data.Objects[0].PropertiesMap["blocks"].Data, 10, 64)
+		volume.BlockSize, _ = strconv.ParseInt(data.Objects[0].PropertiesMap["blocksize"].Data, 10, 64)
+		volume.Health = data.Objects[0].PropertiesMap["health"].Data
+		volume.SizeNumeric, _ = strconv.ParseInt(data.Objects[0].PropertiesMap["size-numeric"].Data, 10, 64)
+		volume.StoragePoolName = data.Objects[0].PropertiesMap["storage-pool-name"].Data
+		volume.StorageType = data.Objects[0].PropertiesMap["storage-type"].Data
+		volume.TierAffinity = data.Objects[0].PropertiesMap["tier-affinity"].Data
+		volume.TotalSize = data.Objects[0].PropertiesMap["total-size"].Data
+		volume.VolumeName = data.Objects[0].PropertiesMap["volume-name"].Data
+		volume.VolumeType = data.Objects[0].PropertiesMap["volume-type"].Data
+		volume.Wwn = data.Objects[0].PropertiesMap["wwn"].Data
+	}
+
+	return &volume, status, err
 }
 
 // GetPortals: Return a list of portals for the storage system
