@@ -6,13 +6,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "api-regression",
+            "name": "api-regression (i1)",
             "type": "go",
             "request": "launch",
             "mode": "auto",
             "cwd": "${workspaceFolder}",
             "program": "${workspaceFolder}/cmd/api-regression/main.go",
             "args": ["-debug", "4", "-config", "i1.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v2Volume"]
+        },
+        {
+            "name": "api-regression (g1)",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/cmd/api-regression/main.go",
+            "args": ["-debug", "4", "-config", "g1.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v2Volume"]
         },
         {
             "name": "generator",

@@ -76,17 +76,60 @@ func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.V
 	volume := common.VolumeObject{}
 	if err == nil && status.ResponseTypeNumeric == 0 && len(data.Objects) > 0 {
 		volume.ObjectName = data.Objects[0].Name
-		volume.Blocks, _ = strconv.ParseInt(data.Objects[0].PropertiesMap["blocks"].Data, 10, 64)
-		volume.BlockSize, _ = strconv.ParseInt(data.Objects[0].PropertiesMap["blocksize"].Data, 10, 64)
-		volume.Health = data.Objects[0].PropertiesMap["health"].Data
-		volume.SizeNumeric, _ = strconv.ParseInt(data.Objects[0].PropertiesMap["size-numeric"].Data, 10, 64)
-		volume.StoragePoolName = data.Objects[0].PropertiesMap["storage-pool-name"].Data
-		volume.StorageType = data.Objects[0].PropertiesMap["storage-type"].Data
-		volume.TierAffinity = data.Objects[0].PropertiesMap["tier-affinity"].Data
-		volume.TotalSize = data.Objects[0].PropertiesMap["total-size"].Data
-		volume.VolumeName = data.Objects[0].PropertiesMap["volume-name"].Data
-		volume.VolumeType = data.Objects[0].PropertiesMap["volume-type"].Data
-		volume.Wwn = data.Objects[0].PropertiesMap["wwn"].Data
+
+		if val, ok := data.Objects[0].PropertiesMap["blocks"]; ok {
+			volume.Blocks, _ = strconv.ParseInt(val.Data, 10, 64)
+		}
+		if val, ok := data.Objects[0].PropertiesMap["blocksize"]; ok {
+			volume.BlockSize, _ = strconv.ParseInt(val.Data, 10, 64)
+		}
+		if val, ok := data.Objects[0].PropertiesMap["health"]; ok {
+			volume.Health = val.Data
+		}
+		if _, ok := data.Objects[0].PropertiesMap["size-numeric"]; ok {
+			volume.SizeNumeric, _ = strconv.ParseInt(data.Objects[0].PropertiesMap["size-numeric"].Data, 10, 64)
+		}
+		if val, ok := data.Objects[0].PropertiesMap["storage-pool-name"]; ok {
+			volume.StoragePoolName = val.Data
+		}
+		if val, ok := data.Objects[0].PropertiesMap["storage-type"]; ok {
+			volume.StorageType = val.Data
+		}
+		if val, ok := data.Objects[0].PropertiesMap["tier-affinity"]; ok {
+			volume.TierAffinity = val.Data
+		}
+		if val, ok := data.Objects[0].PropertiesMap["total-size"]; ok {
+			volume.TotalSize = val.Data
+		}
+		if val, ok := data.Objects[0].PropertiesMap["volume-name"]; ok {
+			volume.VolumeName = val.Data
+		}
+		if val, ok := data.Objects[0].PropertiesMap["volume-type"]; ok {
+			volume.VolumeType = val.Data
+		}
+		if val, ok := data.Objects[0].PropertiesMap["wwn"]; ok {
+			volume.Wwn = val.Data
+		}
+	}
+
+	// For API versions that do not return a representation of the volume object, use ShowVolumes to fill in the data
+	if err == nil && status.ResponseTypeNumeric == 0 && volume.Wwn == "" {
+		volumes, status, err := client.ShowVolumes(name)
+		if err == nil && status.ResponseTypeNumeric == 0 {
+			if len(volumes) > 0 && volumes[0].ObjectName == "volume" {
+				volume.Blocks = volumes[0].Blocks
+				volume.BlockSize = volumes[0].BlockSize
+				volume.Health = volumes[0].Health
+				volume.SizeNumeric = volumes[0].SizeNumeric
+				volume.StoragePoolName = volumes[0].StoragePoolName
+				volume.StorageType = volumes[0].StorageType
+				volume.TierAffinity = volumes[0].TierAffinity
+				volume.TotalSize = volumes[0].TotalSize
+				volume.VolumeName = volumes[0].VolumeName
+				volume.VolumeType = volumes[0].VolumeType
+				volume.Wwn = strings.ToLower(volumes[0].Wwn)
+			}
+		}
 	}
 
 	return &volume, status, err

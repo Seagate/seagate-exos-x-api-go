@@ -40,6 +40,7 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
+			Expect(volume.Wwn).ShouldNot(BeEmpty())
 
 			// Dump volumes
 			response, status, err := client.ShowVolumes(volname1)

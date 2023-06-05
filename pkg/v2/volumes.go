@@ -71,6 +71,26 @@ func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.V
 		volume.Wwn = v.GetWwn()
 	}
 
+	// For API versions that do not return a representation of the volume object, use ShowVolumes to fill in the data
+	if err == nil && status.ResponseTypeNumeric == 0 && volume.Wwn == "" {
+		volumes, status, err := client.ShowVolumes(name)
+		if err == nil && status.ResponseTypeNumeric == 0 {
+			if len(volumes) > 0 && volumes[0].ObjectName == "volume" {
+				volume.Blocks = volumes[0].Blocks
+				volume.BlockSize = volumes[0].BlockSize
+				volume.Health = volumes[0].Health
+				volume.SizeNumeric = volumes[0].SizeNumeric
+				volume.StoragePoolName = volumes[0].StoragePoolName
+				volume.StorageType = volumes[0].StorageType
+				volume.TierAffinity = volumes[0].TierAffinity
+				volume.TotalSize = volumes[0].TotalSize
+				volume.VolumeName = volumes[0].VolumeName
+				volume.VolumeType = volumes[0].VolumeType
+				volume.Wwn = strings.ToLower(volumes[0].Wwn)
+			}
+		}
+	}
+
 	return &volume, status, err
 }
 
