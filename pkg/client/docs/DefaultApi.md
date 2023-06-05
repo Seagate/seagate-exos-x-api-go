@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**DeleteSnapshotNamesGet**](DefaultApi.md#DeleteSnapshotNamesGet) | **Get** /delete/snapshot/{namesOption} | 
 [**DeleteVolumesNamesGet**](DefaultApi.md#DeleteVolumesNamesGet) | **Get** /delete/volumes/{namesOption} | 
 [**ExpandVolumeSizeNameGet**](DefaultApi.md#ExpandVolumeSizeNameGet) | **Get** /expand/volume/size/{sizeOption}/{nameOption} | 
-[**LoginGetByHash**](DefaultApi.md#LoginGetByHash) | **Get** /login/{loginHash} | 
+[**LoginGet**](DefaultApi.md#LoginGet) | **Get** /login | 
 [**MapVolumeAccessLunInitiatorNamesGet**](DefaultApi.md#MapVolumeAccessLunInitiatorNamesGet) | **Get** /map/volume/access/{accessOption}/lun/{lunOption}/initiator/{initiatorOption}/{namesOption} | 
 [**SchemaGet**](DefaultApi.md#SchemaGet) | **Get** /meta/{schemaId} | 
 [**SetInitiatorIdNicknameGet**](DefaultApi.md#SetInitiatorIdNicknameGet) | **Get** /set/initiator/id/{idOption}/nickname/{nicknameOption} | 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -614,7 +614,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -626,9 +626,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## LoginGetByHash
+## LoginGet
 
-> StatusObject LoginGetByHash(ctx, loginHash).Execute()
+> StatusObject LoginGet(ctx).Execute()
 
 
 
@@ -647,35 +647,26 @@ import (
 )
 
 func main() {
-    loginHash := "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824" // string | A SHA256 hash of the 'username_password' string
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultApi.LoginGetByHash(context.Background(), loginHash).Execute()
+    resp, r, err := apiClient.DefaultApi.LoginGet(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.LoginGetByHash``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.LoginGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `LoginGetByHash`: StatusObject
-    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.LoginGetByHash`: %v\n", resp)
+    // response from `LoginGet`: StatusObject
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.LoginGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**loginHash** | **string** | A SHA256 hash of the &#39;username_password&#39; string | 
+This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiLoginGetByHashRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Other parameters are passed through a pointer to a apiLoginGetRequest struct via the builder pattern
 
 
 ### Return type
@@ -684,7 +675,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -763,7 +754,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -833,7 +824,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -906,7 +897,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -967,7 +958,7 @@ Other parameters are passed through a pointer to a apiShowAdvancedSettingsGetReq
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1028,7 +1019,7 @@ Other parameters are passed through a pointer to a apiShowCacheParametersGetRequ
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1089,7 +1080,7 @@ Other parameters are passed through a pointer to a apiShowCertificateGetRequest 
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1150,7 +1141,7 @@ Other parameters are passed through a pointer to a apiShowControllersGetRequest 
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1211,7 +1202,7 @@ Other parameters are passed through a pointer to a apiShowDiskGroupsGetRequest s
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1272,7 +1263,7 @@ Other parameters are passed through a pointer to a apiShowDisksGetRequest struct
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1333,7 +1324,7 @@ Other parameters are passed through a pointer to a apiShowEnclosuresGetRequest s
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1394,7 +1385,7 @@ Other parameters are passed through a pointer to a apiShowFansGetRequest struct 
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1455,7 +1446,7 @@ Other parameters are passed through a pointer to a apiShowHostGroupsGetRequest s
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1525,7 +1516,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1586,7 +1577,7 @@ Other parameters are passed through a pointer to a apiShowInitiatorsGetRequest s
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1647,7 +1638,7 @@ Other parameters are passed through a pointer to a apiShowMapsAllGetRequest stru
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1708,7 +1699,7 @@ Other parameters are passed through a pointer to a apiShowMapsGetRequest struct 
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1778,7 +1769,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1848,7 +1839,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1909,7 +1900,7 @@ Other parameters are passed through a pointer to a apiShowPoolsGetRequest struct
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1970,7 +1961,7 @@ Other parameters are passed through a pointer to a apiShowPowerSuppliesGetReques
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -2031,7 +2022,7 @@ Other parameters are passed through a pointer to a apiShowSnapshotsGetRequest st
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -2101,7 +2092,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -2171,7 +2162,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -2232,7 +2223,7 @@ Other parameters are passed through a pointer to a apiShowSystemGetRequest struc
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -2293,7 +2284,7 @@ Other parameters are passed through a pointer to a apiShowVersionsDetailGetReque
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -2354,7 +2345,7 @@ Other parameters are passed through a pointer to a apiShowVersionsGetRequest str
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -2424,7 +2415,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -2497,7 +2488,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -2567,7 +2558,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 

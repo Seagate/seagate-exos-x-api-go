@@ -4,7 +4,6 @@ package common
 
 import (
 	"context"
-	"crypto/sha256"
 	"fmt"
 	"net/http"
 
@@ -45,19 +44,12 @@ func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 
 	apiClient = client.NewAPIClient(configuration)
 
-	// log in using SHA256
-	userpass := fmt.Sprintf("%s_%s", config.MCUsername, config.MCPassword)
-	data := []byte(userpass)
-	hash := sha256.Sum256(data)
-	hashStr := fmt.Sprintf("%x", hash[:])
-	logger.V(4).Info("login credentials", "userpass", userpass, "hash", hashStr)
-
 	var sessionKey string = ""
 
 	logger.V(3).Info("================================================================================")
-	resp1, httpRes, err := apiClient.DefaultApi.LoginGetByHash(ctx, hashStr).Execute()
+	resp1, httpRes, err := apiClient.DefaultApi.LoginGet(ctx).Execute()
 	if err == nil && httpRes != nil && httpRes.StatusCode == http.StatusOK {
-		logger.V(3).Info("++ LoginGetByHash",
+		logger.V(3).Info("++ LoginGet",
 			"ResponseType", *resp1.Status[0].ResponseType,
 			"ResponseTypeNumeric", *resp1.Status[0].ResponseTypeNumeric)
 
@@ -69,7 +61,7 @@ func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 			return nil, fmt.Errorf("++ MC Login FAILURE", "response", *resp1.Status[0].Response)
 		}
 	} else {
-		logger.V(0).Info("-- LoginGetByHash", "status", httpRes.Status, "err", err, "body", httpRes.Body)
+		logger.V(0).Info("-- LoginGet", "status", httpRes.Status, "err", err, "body", httpRes.Body)
 	}
 	logger.V(3).Info("================================================================================")
 

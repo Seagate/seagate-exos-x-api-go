@@ -3,7 +3,6 @@
 package main
 
 import (
-	"context"
 	"flag"
 	"fmt"
 	"os"
@@ -34,9 +33,6 @@ func (t *testing) Fail() {
 
 func main() {
 
-	// Context
-	ctx := context.Background()
-
 	// Flags for version and debug level
 	version := flag.Bool("version", false, "print the version of this program")
 	debug := flag.String("debug", "", "set the logging debug level")
@@ -64,7 +60,7 @@ func main() {
 	fmt.Printf("using config file (%s)\n", configFilename)
 
 	// Read config info from yaml file and set up configuration instance
-	apiConfig, err := regression.NewTestConfig(ctx, configFilename)
+	apiConfig, err := regression.NewTestConfig(configFilename)
 	if err != nil {
 		fmt.Printf("ERROR: reading config file (%s), err: %v\n", configFilename, err)
 		os.Exit(1)
@@ -73,7 +69,7 @@ func main() {
 	// Logging
 	klog.EnableContextualLogging(true)
 	klog.SetOutput(ginkgo.GinkgoWriter)
-	logger := klog.FromContext(ctx)
+	logger := klog.FromContext(apiConfig.Ctx)
 
 	// Create testing object
 	t := testing{}

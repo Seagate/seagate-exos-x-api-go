@@ -114,8 +114,15 @@ func (s *Specification) Write(ctx context.Context, filename string, append bool)
 	// Write out the components/parameters section
 	if len(s.parameters.lines) > 0 {
 		fmt.Fprintln(f, "")
-		fmt.Fprintln(f, "# Common parameters and schemas used by this API")
+		fmt.Fprintln(f, "# Security, common parameters, and schemas used by this API")
+		fmt.Fprintln(f, "security:")
+		fmt.Fprintln(f, "- basicAuth: []")
+		fmt.Fprintln(f, "")
 		fmt.Fprintln(f, "components:")
+		fmt.Fprintln(f, "  securitySchemes:")
+		fmt.Fprintln(f, "    basicAuth:")
+		fmt.Fprintln(f, "      type: http")
+		fmt.Fprintln(f, "      scheme: basic")
 		fmt.Fprintln(f, "  parameters:")
 		for line, value := range s.parameters.lines {
 			logger.V(4).Info(fmt.Sprintf("[%d][%s] %s", line, "parameters", value))
@@ -176,12 +183,12 @@ func (s *Specification) GenerateHeader(ctx context.Context) error {
 func (s *Specification) GenerateLogin(ctx context.Context) error {
 
 	s.Paths(1, "# Login")
-	s.Paths(1, "/login/{loginHash}:")
+	s.Paths(1, "/login:")
 	s.Paths(2, "get:")
 	s.Paths(3, "description: Log in to the storage array management controller")
-	s.Paths(3, "operationId: LoginGetByHash")
-	s.Paths(3, "parameters:")
-	s.Paths(3, "- $ref: '#/components/parameters/loginHash'")
+	s.Paths(3, "operationId: LoginGet")
+	s.Paths(3, "security:")
+	s.Paths(3, "- basicAuth: []")
 	s.Paths(3, "responses:")
 	s.Paths(4, "'200':")
 	s.Paths(5, "description: OK")
@@ -189,17 +196,6 @@ func (s *Specification) GenerateLogin(ctx context.Context) error {
 	s.Paths(6, "application/json:")
 	s.Paths(7, "schema:")
 	s.Paths(8, "$ref: '#/components/schemas/statusObject'")
-
-	s.generatedOptions["loginHash"] = true
-	s.Parameters(2, "loginHash:")
-	s.Parameters(3, "description: A SHA256 hash of the 'username_password' string")
-	s.Parameters(3, "name: loginHash")
-	s.Parameters(3, "in: path")
-	s.Parameters(3, "required: true")
-	s.Parameters(3, "schema:")
-	s.Parameters(4, "type: string")
-	s.Parameters(4, "maxLength: 64")
-	s.Parameters(4, "example: '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'")
 
 	s.generatedResources["status"] = true
 	s.Resources(2, "statusResource:")
@@ -305,6 +301,7 @@ func (s *Specification) AddMetaProperties(ctx context.Context, config *common.Co
 	// Log in to the MC
 	apiClient, err := common.Login(ctx, config)
 	if err != nil || apiClient == nil {
+		logger.Error(err, "login", "ipaddress", config.MCIpAddress)
 		return fmt.Errorf("login failed for (%s) at (%s)", config.MCDescription, config.MCIpAddress)
 	}
 
@@ -520,7 +517,7 @@ func (s *Specification) AddCommand(ctx context.Context, config *common.Config, c
 		for _, include := range command.Include {
 			err := s.AddMetaProperties(ctx, config, include, nil, exceptions)
 			if err != nil {
-				return fmt.Errorf("unable to add meta (properties) from /meta command for (%s)", include)
+				return fmt.Errorf("unable to add meta (properties) from /meta command for (%s), error: %v", include, err)
 			}
 		}
 	}

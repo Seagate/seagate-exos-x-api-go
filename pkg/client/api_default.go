@@ -962,37 +962,34 @@ func (a *DefaultApiService) ExpandVolumeSizeNameGetExecute(r ApiExpandVolumeSize
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiLoginGetByHashRequest struct {
+type ApiLoginGetRequest struct {
 	ctx        context.Context
 	ApiService *DefaultApiService
-	loginHash  string
 }
 
-func (r ApiLoginGetByHashRequest) Execute() (*StatusObject, *http.Response, error) {
-	return r.ApiService.LoginGetByHashExecute(r)
+func (r ApiLoginGetRequest) Execute() (*StatusObject, *http.Response, error) {
+	return r.ApiService.LoginGetExecute(r)
 }
 
 /*
-LoginGetByHash Method for LoginGetByHash
+LoginGet Method for LoginGet
 
 Log in to the storage array management controller
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param loginHash A SHA256 hash of the 'username_password' string
-	@return ApiLoginGetByHashRequest
+	@return ApiLoginGetRequest
 */
-func (a *DefaultApiService) LoginGetByHash(ctx context.Context, loginHash string) ApiLoginGetByHashRequest {
-	return ApiLoginGetByHashRequest{
+func (a *DefaultApiService) LoginGet(ctx context.Context) ApiLoginGetRequest {
+	return ApiLoginGetRequest{
 		ApiService: a,
 		ctx:        ctx,
-		loginHash:  loginHash,
 	}
 }
 
 // Execute executes the request
 //
 //	@return StatusObject
-func (a *DefaultApiService) LoginGetByHashExecute(r ApiLoginGetByHashRequest) (*StatusObject, *http.Response, error) {
+func (a *DefaultApiService) LoginGetExecute(r ApiLoginGetRequest) (*StatusObject, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
@@ -1000,20 +997,16 @@ func (a *DefaultApiService) LoginGetByHashExecute(r ApiLoginGetByHashRequest) (*
 		localVarReturnValue *StatusObject
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.LoginGetByHash")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.LoginGet")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/login/{loginHash}"
-	localVarPath = strings.Replace(localVarPath, "{"+"loginHash"+"}", url.PathEscape(parameterValueToString(r.loginHash, "loginHash")), -1)
+	localVarPath := localBasePath + "/login"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if strlen(r.loginHash) > 64 {
-		return localVarReturnValue, nil, reportError("loginHash must have less than 64 elements")
-	}
 
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

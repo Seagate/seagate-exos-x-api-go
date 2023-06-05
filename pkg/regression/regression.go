@@ -6,9 +6,9 @@ import (
 	"context"
 	"io/ioutil"
 
+	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
 	"github.com/go-logr/logr"
 	"gopkg.in/yaml.v2"
-	"k8s.io/klog/v2"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -39,33 +39,33 @@ type TestContext struct {
 }
 
 // ReadConfigurationYaml: Read configuration file and return Go struct
-func ReadConfigurationYaml(ctx context.Context, filename string) (*ConfigurationYaml, error) {
-
-	logger := klog.FromContext(ctx)
-	logger.V(4).Info("read configuration setting", "filename", filename)
+func ReadConfigurationYaml(filename string) (*ConfigurationYaml, error) {
 
 	// If it is not possible to extract the configuration.yaml from the tar file, use defaults
 	var yamlc = ConfigurationYaml{}
 
 	yamlFile, err := ioutil.ReadFile(filename)
-	logger.V(4).Info("read file", "err", err)
 	if err != nil {
 		return &yamlc, err
 	}
 
 	err = yaml.Unmarshal(yamlFile, &yamlc)
-	logger.V(4).Info("configuration file", "filename", filename, "contents", yamlc)
 	return &yamlc, err
 }
 
 // NewTestConfig returns a config instance with all values set to values read from a config file.
-func NewTestConfig(ctx context.Context, filename string) (*TestConfig, error) {
+func NewTestConfig(filename string) (*TestConfig, error) {
 
-	config, err := ReadConfigurationYaml(ctx, filename)
+	config, err := ReadConfigurationYaml(filename)
 
 	if err != nil {
 		return nil, err
 	}
+
+	ctx := context.WithValue(context.Background(), client.ContextBasicAuth, client.BasicAuth{
+		UserName: config.Username,
+		Password: config.Password,
+	})
 
 	return &TestConfig{
 		StorageController: ConfigurationYaml{

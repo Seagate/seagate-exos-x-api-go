@@ -10,22 +10,13 @@ info:
 servers:
 - url: http://localhost:8080/api
 - url: https://localhost:8080/api
+security:
+- basicAuth: []
 paths:
-  /login/{loginHash}:
+  /login:
     get:
       description: Log in to the storage array management controller
-      operationId: LoginGetByHash
-      parameters:
-      - description: A SHA256 hash of the 'username_password' string
-        explode: false
-        in: path
-        name: loginHash
-        required: true
-        schema:
-          example: 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
-          maxLength: 64
-          type: string
-        style: simple
+      operationId: LoginGet
       responses:
         "200":
           content:
@@ -33,6 +24,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/statusObject'
           description: OK
+      security:
+      - basicAuth: []
   /meta/{schemaId}:
     get:
       description: Retrieve schema definition for a resource
@@ -900,17 +893,6 @@ paths:
           description: Unauthorized
 components:
   parameters:
-    loginHash:
-      description: A SHA256 hash of the 'username_password' string
-      explode: false
-      in: path
-      name: loginHash
-      required: true
-      schema:
-        example: 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
-        maxLength: 64
-        type: string
-      style: simple
     schemaId:
       description: A string label for a resource
       explode: false
@@ -82130,3 +82112,7 @@ components:
           description: Serial number of the associated volume
           type: string
       type: object
+  securitySchemes:
+    basicAuth:
+      scheme: basic
+      type: http

@@ -86,7 +86,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteSnapshotNamesGet**](docs/DefaultApi.md#deletesnapshotnamesget) | **Get** /delete/snapshot/{namesOption} | 
 *DefaultApi* | [**DeleteVolumesNamesGet**](docs/DefaultApi.md#deletevolumesnamesget) | **Get** /delete/volumes/{namesOption} | 
 *DefaultApi* | [**ExpandVolumeSizeNameGet**](docs/DefaultApi.md#expandvolumesizenameget) | **Get** /expand/volume/size/{sizeOption}/{nameOption} | 
-*DefaultApi* | [**LoginGetByHash**](docs/DefaultApi.md#logingetbyhash) | **Get** /login/{loginHash} | 
+*DefaultApi* | [**LoginGet**](docs/DefaultApi.md#loginget) | **Get** /login | 
 *DefaultApi* | [**MapVolumeAccessLunInitiatorNamesGet**](docs/DefaultApi.md#mapvolumeaccessluninitiatornamesget) | **Get** /map/volume/access/{accessOption}/lun/{lunOption}/initiator/{initiatorOption}/{namesOption} | 
 *DefaultApi* | [**SchemaGet**](docs/DefaultApi.md#schemaget) | **Get** /meta/{schemaId} | 
 *DefaultApi* | [**SetInitiatorIdNicknameGet**](docs/DefaultApi.md#setinitiatoridnicknameget) | **Get** /set/initiator/id/{idOption}/nickname/{nicknameOption} | 
@@ -176,7 +176,21 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- Endpoints do not require authorization.
+
+
+### basicAuth
+
+- **Type**: HTTP basic authentication
+
+Example
+
+```golang
+auth := context.WithValue(context.Background(), sw.ContextBasicAuth, sw.BasicAuth{
+    UserName: "username",
+    Password: "password",
+})
+r, err := client.Service.Operation(auth, args)
+```
 
 
 ## Documentation for Utility Methods
