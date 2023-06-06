@@ -1,3 +1,13 @@
+## [1.0.14](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.13...v1.0.14) (2023-06-06)
+
+### Chores
+
+- **deps:** bump golang.org/x/text from 0.3.3 to 0.3.8 ([3e8e462](https://github.com/Seagate/seagate-exos-x-api-go/commit/3e8e4620dd502cee584f52d324f464df31d4e66c))
+
+### Other
+
+- Merge pull request #33 from Seagate/dependabot/go_modules/golang.org/x/text-0.3.8 ([008bb09](https://github.com/Seagate/seagate-exos-x-api-go/commit/008bb09cae4aa6f3b81d7d4fac5a2e7775bafe24)), closes [#33](https://github.com/Seagate/seagate-exos-x-api-go/issues/33)
+
 ## [1.0.13](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.12...v1.0.13) (2023-06-06)
 
 ### Chores
