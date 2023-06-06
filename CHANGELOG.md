@@ -1,3 +1,13 @@
+## [1.0.15](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.14...v1.0.15) (2023-06-06)
+
+### Chores
+
+- **deps:** bump yaml and semantic-release ([209afcd](https://github.com/Seagate/seagate-exos-x-api-go/commit/209afcd0b40c44274b8ea27b7e8a4f81db75d2b0))
+
+### Other
+
+- Merge pull request #34 from Seagate/dependabot/npm_and_yarn/yaml-and-semantic-release--removed ([ff849de](https://github.com/Seagate/seagate-exos-x-api-go/commit/ff849def3ce7e15ed7ab1ce7a98192905cdb648a)), closes [#34](https://github.com/Seagate/seagate-exos-x-api-go/issues/34)
+
 ## [1.0.14](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.13...v1.0.14) (2023-06-06)
 
 ### Chores
