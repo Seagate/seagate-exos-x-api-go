@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"k8s.io/klog"
+	"k8s.io/klog/v2"
 )
 
 // SessionValid : Determine if a session is valid, if not a login is required

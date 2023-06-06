@@ -27,7 +27,7 @@ import (
 	. "github.com/onsi/gomega"
 	"golang.org/x/text/language"
 	"golang.org/x/text/message"
-	"k8s.io/klog"
+	"k8s.io/klog/v2"
 )
 
 //

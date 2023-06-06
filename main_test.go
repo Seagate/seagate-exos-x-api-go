@@ -9,7 +9,7 @@ import (
 
 	"github.com/joho/godotenv"
 	. "github.com/onsi/gomega"
-	"k8s.io/klog"
+	"k8s.io/klog/v2"
 )
 
 var client = NewClient()

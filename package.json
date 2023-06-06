@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Seagate/seagate-exos-x-api-go#readme",
   "devDependencies": {
-    "semantic-release": "^19.0.5"
+    "semantic-release": "^21.0.1"
   }
 }
