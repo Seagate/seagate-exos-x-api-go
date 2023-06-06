@@ -1,3 +1,13 @@
+## [1.0.13](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.12...v1.0.13) (2023-06-06)
+
+### Chores
+
+- **deps:** bump qs and express in /mock ([5a99f7a](https://github.com/Seagate/seagate-exos-x-api-go/commit/5a99f7a0ee3cb6c5f4fd394ebce5804cc1ddf9f6))
+
+### Other
+
+- Merge pull request #28 from Seagate/dependabot/npm_and_yarn/mock/qs-and-express-6.11.0 ([da43e7b](https://github.com/Seagate/seagate-exos-x-api-go/commit/da43e7b6cf2c76c60bf3035c0a6393fc1cc8706e)), closes [#28](https://github.com/Seagate/seagate-exos-x-api-go/issues/28)
+
 ## [1.0.12](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.11...v1.0.12) (2022-12-22)
 
 ### Bug Fixes
