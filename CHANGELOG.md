@@ -1,3 +1,14 @@
+## [1.0.17](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.16...v1.0.17) (2023-06-06)
+
+### Chores
+
+- **deps:** bump github.com/prometheus/client_golang ([6c7da1b](https://github.com/Seagate/seagate-exos-x-api-go/commit/6c7da1b6c87a089dea7fa6c20454e61a282c4bf3))
+
+### Other
+
+- Merge pull request #32 from Seagate/dependabot/go_modules/github.com/prometheus/client_golang-1.11.1 ([2fa76d4](https://github.com/Seagate/seagate-exos-x-api-go/commit/2fa76d4777789344e92145cee0653fefced6dcf4)), closes [#32](https://github.com/Seagate/seagate-exos-x-api-go/issues/32)
+- Merge branch 'main' into dependabot/go_modules/github.com/prometheus/client_golang-1.11.1 ([e587349](https://github.com/Seagate/seagate-exos-x-api-go/commit/e5873496bf1b9658fe388027aa172275aa1852a6))
+
 ## [1.0.16](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.15...v1.0.16) (2023-06-06)
 
 ### Chores
