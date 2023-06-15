@@ -457,12 +457,12 @@ func (s *Specification) AddMetaProperties(ctx context.Context, config *common.Co
 func (s *Specification) AddCommand(ctx context.Context, config *common.Config, command *CommandInformation, exceptions []ExceptionInformation) error {
 
 	logger := klog.FromContext(ctx)
-	logger.V(1).Info("add command and meta data", "command", command.Path)
+	logger.V(1).Info("add command and meta data", "command", command.Command)
 
 	capitalize := cases.Title(language.English)
 
 	// Create the full path with all options
-	cmd := command.Path
+	cmd := command.Command
 	for _, option := range command.Options {
 		if option.KeywordRequired == "true" {
 			cmd += fmt.Sprintf("/%s/{%sOption}", option.Flag, option.Flag)
@@ -474,7 +474,7 @@ func (s *Specification) AddCommand(ctx context.Context, config *common.Config, c
 
 	// Create a variable name for the path
 	variable := ""
-	tokens := strings.Split(command.Path, "/")
+	tokens := strings.Split(command.Command, "/")
 	for _, token := range tokens {
 		variable += capitalize.String(token)
 	}
@@ -483,10 +483,10 @@ func (s *Specification) AddCommand(ctx context.Context, config *common.Config, c
 	}
 
 	// Add path and get option
-	s.Paths(1, fmt.Sprintf("# %s", command.Path))
+	s.Paths(1, fmt.Sprintf("# %s", command.Command))
 	s.Paths(1, fmt.Sprintf("%s:", cmd))
 	s.Paths(2, "get:")
-	s.Paths(3, fmt.Sprintf("description: Execute %s command", command.Path))
+	s.Paths(3, fmt.Sprintf("description: Execute %s command", command.Command))
 	s.Paths(3, fmt.Sprintf("operationId: %sGet", variable))
 
 	// Add any parameters

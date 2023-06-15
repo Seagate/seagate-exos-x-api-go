@@ -20,7 +20,7 @@ var _ = DescribeRegression("Login Testing (v2)", func(tc *TestContext) {
 
 		It("should be able to log into storage controller", func() {
 			client = storageapi.NewClient()
-			client.StoreCredentials(tc.Config.StorageController.Ip, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
+			client.StoreCredentials(tc.Config.StorageController.Ip, tc.Config.StorageController.Protocol, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
 			err := client.Login(tc.Config.Ctx)
 			logger := klog.FromContext(tc.Config.Ctx)
 			logger.V(3).Info("Login", "ip", client.Addr, "username", client.Username, "err", err)

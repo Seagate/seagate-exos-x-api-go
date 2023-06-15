@@ -23,10 +23,10 @@ type PortType struct {
 	Compliance string
 }
 
-// System: Information stored for a storage array controller
+// System: Information stored for a single storage array controller
 type SystemInfo struct {
 	IPAddress     string
-	HTTP          string
+	Protocol      string
 	URL           string
 	Controller    string
 	Platform      string
@@ -38,7 +38,7 @@ type SystemInfo struct {
 	Ports         []PortType
 }
 
-// SystemsData: Information stored multiple storage array controllers
+// SystemsData: Information stored for multiple storage array controllers
 type SystemsData struct {
 	Systems []*SystemInfo
 }

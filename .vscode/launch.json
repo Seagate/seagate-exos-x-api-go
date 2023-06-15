@@ -12,7 +12,16 @@
             "mode": "auto",
             "cwd": "${workspaceFolder}",
             "program": "${workspaceFolder}/cmd/api-regression/main.go",
-            "args": ["-debug", "4", "-config", "i1.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v2Volume"]
+            "args": ["-debug", "4", "-config", "i1.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v2"]
+        },
+        {
+            "name": "api-regression (i2)",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/cmd/api-regression/main.go",
+            "args": ["-debug", "4", "-config", "i2.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v1"]
         },
         {
             "name": "api-regression (g1)",
@@ -21,7 +30,7 @@
             "mode": "auto",
             "cwd": "${workspaceFolder}",
             "program": "${workspaceFolder}/cmd/api-regression/main.go",
-            "args": ["-debug", "4", "-config", "g1.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v2Volume"]
+            "args": ["-debug", "4", "-config", "g1.conf", "--ginkgo.v", "--ginkgo.fail-fast", "--ginkgo.focus", "v2"]
         },
         {
             "name": "generator",

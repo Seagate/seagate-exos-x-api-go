@@ -9,6 +9,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -42,6 +43,22 @@ func (v Volumes) Less(i, j int) bool {
 	return v[i].LUN < v[j].LUN
 }
 
+// UpdateVolumeObject: transfer results to the common Volume object
+func UpdateVolumeObject(target *common.VolumeObject, source *client.VolumesResourceInner) {
+	target.ObjectName = source.GetObjectName()
+	target.Blocks = source.GetBlocks()
+	target.BlockSize = source.GetBlocksize()
+	target.Health = source.GetHealth()
+	target.SizeNumeric = source.GetSizeNumeric()
+	target.StoragePoolName = source.GetStoragePoolName()
+	target.StorageType = source.GetStorageType()
+	target.TierAffinity = source.GetTierAffinity()
+	target.TotalSize = source.GetTotalSize()
+	target.VolumeName = source.GetVolumeName()
+	target.VolumeType = source.GetVolumeType()
+	target.Wwn = source.GetWwn()
+}
+
 // CreateVolume : creates a volume with the given name, capacity in the given pool
 func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.VolumeObject, *common.ResponseStatus, error) {
 
@@ -51,24 +68,12 @@ func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.V
 
 	status := &common.ResponseStatus{}
 	if response != nil && len(response.GetStatus()) > 0 {
-		status = CreateCommonStatusFromStatus(&response.Status[0])
+		status = CreateCommonStatusFromStatus(logger, &response.Status[0])
 	}
 
 	volume := common.VolumeObject{}
 	if response != nil && len(response.GetVolumes()) > 0 {
-		v := response.Volumes[0]
-		volume.ObjectName = v.GetObjectName()
-		volume.Blocks = v.GetBlocks()
-		volume.BlockSize = v.GetBlocksize()
-		volume.Health = v.GetHealth()
-		volume.SizeNumeric = v.GetSizeNumeric()
-		volume.StoragePoolName = v.GetStoragePoolName()
-		volume.StorageType = v.GetStorageType()
-		volume.TierAffinity = v.GetTierAffinity()
-		volume.TotalSize = v.GetTotalSize()
-		volume.VolumeName = v.GetVolumeName()
-		volume.VolumeType = v.GetVolumeType()
-		volume.Wwn = v.GetWwn()
+		UpdateVolumeObject(&volume, &response.Volumes[0])
 	}
 
 	// For API versions that do not return a representation of the volume object, use ShowVolumes to fill in the data
@@ -76,17 +81,7 @@ func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.V
 		volumes, status, err := client.ShowVolumes(name)
 		if err == nil && status.ResponseTypeNumeric == 0 {
 			if len(volumes) > 0 && volumes[0].ObjectName == "volume" {
-				volume.Blocks = volumes[0].Blocks
-				volume.BlockSize = volumes[0].BlockSize
-				volume.Health = volumes[0].Health
-				volume.SizeNumeric = volumes[0].SizeNumeric
-				volume.StoragePoolName = volumes[0].StoragePoolName
-				volume.StorageType = volumes[0].StorageType
-				volume.TierAffinity = volumes[0].TierAffinity
-				volume.TotalSize = volumes[0].TotalSize
-				volume.VolumeName = volumes[0].VolumeName
-				volume.VolumeType = volumes[0].VolumeType
-				volume.Wwn = strings.ToLower(volumes[0].Wwn)
+				volume = common.VolumeObject(volumes[0])
 			}
 		}
 	}
@@ -156,7 +151,7 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 	logger.V(4).Info("================================================================================")
 
 	returnVolumes := []common.VolumeObject{}
-	status := CreateCommonStatusFromStatus(&response.Status[0])
+	status := CreateCommonStatusFromStatus(logger, &response.Status[0])
 
 	if response != nil {
 		for _, v := range response.Volumes {
@@ -206,7 +201,7 @@ func (client *Client) GetVolumeMapsHostNames(name string) ([]string, *common.Res
 	logger.V(2).Info("get volume maps host names", "volume", name)
 	response, httpRes, err := client.apiClient.DefaultApi.ShowMapsNamesGet(client.Ctx, name).Execute()
 
-	status := CreateCommonStatusFromStatus(&response.Status[0])
+	status := CreateCommonStatusFromStatus(logger, &response.Status[0])
 
 	if err != nil {
 		return []string{}, status, err
@@ -241,7 +236,7 @@ func (client *Client) ShowHostMaps(host string) ([]Volume, *common.ResponseStatu
 	logger.Info("++ ShowHostMaps", "host", host)
 
 	response, _, err := client.apiClient.DefaultApi.ShowMapsInitiatorNamesGet(client.Ctx, "").Execute()
-	status := CreateCommonStatusFromStatus(&response.Status[0])
+	status := CreateCommonStatusFromStatus(logger, &response.Status[0])
 
 	if err != nil {
 		return nil, status, err
@@ -342,7 +337,7 @@ func (client *Client) CreateNickname(name, iqn string) (*common.ResponseStatus, 
 func (client *Client) mapVolumeProcess(volumeName, initiatorName string, lun int) error {
 
 	logger := klog.FromContext(client.Ctx)
-	logger.Info("trying to map volume", "volume", volumeName, "initiator", initiatorName, "lun", lun)
+	logger.V(0).Info("trying to map volume", "volume", volumeName, "initiator", initiatorName, "lun", lun)
 	metadata, err := client.MapVolume(volumeName, initiatorName, "rw", lun)
 	if err != nil && metadata == nil {
 		return err
@@ -363,7 +358,7 @@ func (client *Client) mapVolumeProcess(volumeName, initiatorName string, lun int
 		if err != nil {
 			return err
 		}
-		klog.Info("retrying to map volume")
+		logger.Info("retrying to map volume")
 		_, err = client.MapVolume(volumeName, initiatorName, "rw", lun)
 		if err != nil {
 			return err
@@ -451,7 +446,7 @@ func (client *Client) PublishVolume(volumeId string, initiators []string) (strin
 	mappingSuccessful := false
 	for _, initiator := range initiators {
 		if err = client.mapVolumeProcess(volumeId, initiator, lun); err != nil {
-			klog.Errorf("error mapping volume (%s) for initiator (%s) using LUN (%d): %v", volumeId, initiators, lun, err)
+			logger.Error(err, "mapping error", "volume", volumeId, "initiator", initiator, "LUN", lun)
 		} else {
 			mappingSuccessful = true
 			logger.Info("successfully mapped", "volume", volumeId, "initiator", initiators, "lun", lun)

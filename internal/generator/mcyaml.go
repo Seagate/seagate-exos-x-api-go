@@ -35,7 +35,7 @@ type OptionInformation struct {
 }
 
 type CommandInformation struct {
-	Path    string              `yaml:"path"`    // The command path, such as '/show/system'
+	Command string              `yaml:"command"` // The command, such as '/show/system', or 'show system'
 	Meta    string              `yaml:"meta"`    // The meta resource, which may be different from the main command name, such as 'drives'
 	Include []string            `yaml:"include"` // When a response object includes other response types at the root level, such as 'status'
 	Nested  []NestedMeta        `yaml:"nested"`  // When one or more response objects are nested into the main response object, such as 'redundancy' is nested under 'system'

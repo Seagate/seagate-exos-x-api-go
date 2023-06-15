@@ -18,7 +18,7 @@ func (req *Request) execute(client *Client) ([]byte, int, error) {
 	if strings.HasSuffix(client.Addr, "/") {
 		client.Addr = client.Addr[0 : len(client.Addr)-1]
 	}
-	url := fmt.Sprintf("%s/api%s", client.Addr, req.Endpoint)
+	url := fmt.Sprintf("%s://%s/api%s", client.Protocol, client.Addr, req.Endpoint)
 	httpReq, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, 0, err

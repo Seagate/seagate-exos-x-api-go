@@ -24,7 +24,7 @@ var _ = DescribeRegression("Snapshot Testing (v1)", func(tc *TestContext) {
 
 		logger := klog.FromContext(tc.Config.Ctx)
 		client = storageapi.NewClient()
-		client.StoreCredentials(tc.Config.StorageController.Ip, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
+		client.StoreCredentials(tc.Config.StorageController.Ip, tc.Config.StorageController.Protocol, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
 		err := client.Login()
 		logger.V(3).Info("Login", "ip", client.Addr, "username", client.Username, "err", err)
 		Expect(err).To(BeNil())

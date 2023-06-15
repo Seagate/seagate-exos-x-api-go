@@ -14,6 +14,8 @@ import (
 //
 // System Information Storage and Creation
 //
+// These functions are used to store information for one or more storage arrays, all indexed by their URL
+//
 
 // systems: Data object storing all system information for all added controllers
 var systems common.SystemsData
@@ -27,18 +29,18 @@ func AddSystem(url string, client *Client) error {
 	if strings.HasPrefix(s.URL, "http://") {
 		parts := strings.Split(s.URL, "http://")
 		if len(parts) >= 2 {
-			s.HTTP = "http://"
+			s.Protocol = "http://"
 			s.IPAddress = parts[1]
 		}
 	} else if strings.HasPrefix(s.URL, "https://") {
 		parts := strings.Split(s.URL, "https://")
 		if len(parts) >= 2 {
-			s.HTTP = "https://"
+			s.Protocol = "https://"
 			s.IPAddress = parts[1]
 		}
 	} else {
 		s.IPAddress = s.URL
-		s.HTTP = "http://"
+		s.Protocol = "http://"
 	}
 	systems.Systems = append(systems.Systems, &s)
 	s.Ports = nil
@@ -104,7 +106,7 @@ func AddSystem(url string, client *Client) error {
 
 	if err == nil && httpRes.StatusCode == http.StatusOK {
 		for _, diskgroup := range diskgroups.GetDiskGroups() {
-			klog.V(2).Info("++ Adding", "diskgroup pool", diskgroup.GetPool())
+			klog.V(2).InfoS("++ Adding", "diskgroup pool", diskgroup.GetPool())
 			s.Pools = append(s.Pools,
 				common.PoolType{
 					Name:         diskgroup.GetPool(),
@@ -142,7 +144,7 @@ func Log(system *common.SystemInfo) error {
 	klog.Infof("\n")
 	klog.Infof("=== Controller ===")
 	klog.Infof("IPAddress:     %v\n", system.IPAddress)
-	klog.Infof("HTTP:          %v\n", system.HTTP)
+	klog.Infof("Protocol:      %v\n", system.Protocol)
 	klog.Infof("Controller:    %v\n", system.Controller)
 	klog.Infof("Platform:      %v\n", system.Platform)
 	klog.Infof("SerialNumber:  %v\n", system.SerialNumber)
@@ -191,7 +193,7 @@ func GetTargetId(system *common.SystemInfo, portType string) (string, error) {
 
 	for _, p := range system.Ports {
 		if p.Type == portType && p.TargetId != "" {
-			klog.V(2).Infof("++ TargetId (%s) for (%s) type (%s)\n", p.TargetId, system.IPAddress, p.Type)
+			klog.V(2).InfoS("++ Targets", "target", p.TargetId, "ipaddress", system.IPAddress, "type", p.Type)
 			return p.TargetId, nil
 		}
 	}
@@ -209,7 +211,7 @@ func GetPortals(system *common.SystemInfo) (string, error) {
 
 	for _, p := range system.Ports {
 		if p.IPAddress != "0.0.0.0" {
-			klog.V(2).Infof("++ Add portal (%s) for (%s)\n", p.IPAddress, system.IPAddress)
+			klog.V(2).InfoS("++ Add portal", "portal", p.IPAddress, "system", system.IPAddress)
 			if portals != "" {
 				portals = portals + "," + p.IPAddress
 			} else {

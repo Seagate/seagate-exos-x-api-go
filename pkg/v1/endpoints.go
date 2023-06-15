@@ -26,12 +26,13 @@ func (client *Client) SessionValid(addr, username string) bool {
 }
 
 // StoreCredentials : Called to store ip address, username, and password for the client
-func (client *Client) StoreCredentials(ipaddress string, username string, password string) {
+func (client *Client) StoreCredentials(ipaddress string, protocol string, username string, password string) {
 
 	// Store the login credentials in the Client object
 	client.Username = username
 	client.Password = password
 	client.Addr = ipaddress
+	client.Protocol = protocol
 }
 
 // Login : Called automatically, may be called manually if credentials changed

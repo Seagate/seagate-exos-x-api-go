@@ -42,18 +42,18 @@ func AddSystem(url string, client *Client) error {
 	if strings.HasPrefix(s.URL, "http://") {
 		parts := strings.Split(s.URL, "http://")
 		if len(parts) >= 2 {
-			s.HTTP = "http://"
+			s.Protocol = "http://"
 			s.IPAddress = parts[1]
 		}
 	} else if strings.HasPrefix(s.URL, "https://") {
 		parts := strings.Split(s.URL, "https://")
 		if len(parts) >= 2 {
-			s.HTTP = "https://"
+			s.Protocol = "https://"
 			s.IPAddress = parts[1]
 		}
 	} else {
 		s.IPAddress = s.URL
-		s.HTTP = "http://"
+		s.Protocol = "http://"
 	}
 	systems.Systems = append(systems.Systems, &s)
 	s.Ports = nil
@@ -157,7 +157,7 @@ func Log(system *common.SystemInfo) error {
 	klog.Infof("\n")
 	klog.Infof("=== Controller ===")
 	klog.Infof("IPAddress:     %v\n", system.IPAddress)
-	klog.Infof("HTTP:          %v\n", system.HTTP)
+	klog.Infof("Protocol:      %v\n", system.Protocol)
 	klog.Infof("Controller:    %v\n", system.Controller)
 	klog.Infof("Platform:      %v\n", system.Platform)
 	klog.Infof("SerialNumber:  %v\n", system.SerialNumber)

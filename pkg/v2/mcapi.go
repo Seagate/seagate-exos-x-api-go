@@ -7,12 +7,12 @@ import (
 	"crypto/tls"
 	"fmt"
 	"net/http"
-	"strings"
 	"time"
 
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
 	openapiclient "github.com/Seagate/seagate-exos-x-api-go/pkg/client"
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
+	"github.com/go-logr/logr"
 	"k8s.io/klog/v2"
 )
 
@@ -22,10 +22,11 @@ type Client struct {
 	Username   string
 	Password   string
 	Addr       string
+	Protocol   string
 	HTTPClient http.Client
 	Collector  *common.Collector
 	SessionKey string
-	Initiator  string
+	Initiator  []string
 	PoolName   string
 	Info       *common.SystemInfo
 	apiClient  *client.APIClient
@@ -48,16 +49,13 @@ func NewClient() *Client {
 }
 
 // StoreCredentials : Called to store ip address, username, and password for the client
-func (client *Client) StoreCredentials(ipaddress string, username string, password string) {
+func (client *Client) StoreCredentials(ipaddress string, protocol string, username string, password string) {
 
 	// Store the login credentials in the Client object
 	client.Username = username
 	client.Password = password
-	if strings.HasPrefix(ipaddress, "https") {
-		client.Addr = strings.Replace(ipaddress, "https://", "", 1)
-	} else {
-		client.Addr = strings.Replace(ipaddress, "http://", "", 1)
-	}
+	client.Addr = ipaddress
+	client.Protocol = protocol
 }
 
 // Login: Called to log into the storage controller API
@@ -69,6 +67,7 @@ func (client *Client) Login(ctx context.Context) error {
 
 	config := &common.Config{
 		MCIpAddress: client.Addr,
+		MCProtocol:  client.Protocol,
 		MCUsername:  client.Username,
 		MCPassword:  client.Password,
 	}
@@ -133,7 +132,7 @@ func CreateCommonStatus(response *client.StatusObject) *common.ResponseStatus {
 }
 
 // CreateCommonStatusFromStatus : create a common API status object based on the OpenAPI client response
-func CreateCommonStatusFromStatus(response *openapiclient.StatusResourceInner) *common.ResponseStatus {
+func CreateCommonStatusFromStatus(logger logr.Logger, response *openapiclient.StatusResourceInner) *common.ResponseStatus {
 
 	status := common.ResponseStatus{}
 
@@ -143,6 +142,14 @@ func CreateCommonStatusFromStatus(response *openapiclient.StatusResourceInner) *
 		status.Response = response.GetResponse()
 		status.ReturnCode = int(response.GetReturnCode())
 		status.Time = time.Unix(int64(response.GetTimeStampNumeric()), 0)
+		if status.ReturnCode != 0 {
+			logger.V(1).Info("status",
+				"ResponseType", status.ResponseType,
+				"ResponseTypeNumeric", status.ResponseTypeNumeric,
+				"Response", status.Response,
+				"ReturnCode", status.ReturnCode,
+			)
+		}
 	}
 
 	return &status

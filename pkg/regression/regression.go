@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
+	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 	"github.com/go-logr/logr"
 	"gopkg.in/yaml.v2"
 
@@ -16,11 +17,12 @@ import (
 
 // ConfigurationYaml provides configuration credentials for a specific storage controller.
 type ConfigurationYaml struct {
-	Ip        string `yaml:"ip"`        // The IP Address in dot notation of the storage controller
-	Username  string `yaml:"username"`  // The username used to log into the storage controller
-	Password  string `yaml:"password"`  // The password used to log into the storage controller
-	Initiator string `yaml:"initiator"` // The initiator IGN value to use for iSCSI regression testing
-	Pool      string `yaml:"pool"`      // The storage pool (A or B) to use for testing
+	Ip        string   `yaml:"ip"`        // The IP Address in dot notation of the storage controller, for example 10.1.2.3
+	Protocol  string   `yaml:"protocol"`  // The IP protocol to use, such as http or https
+	Username  string   `yaml:"username"`  // The username used to log into the storage controller
+	Password  string   `yaml:"password"`  // The password used to log into the storage controller
+	Initiator []string `yaml:"initiator"` // The initiator IGN value to use for iSCSI regression testing
+	Pool      string   `yaml:"pool"`      // The storage pool (A or B) to use for testing
 }
 
 // TestConfig provides the configuration for the regression tests. It must be
@@ -67,9 +69,15 @@ func NewTestConfig(filename string) (*TestConfig, error) {
 		Password: config.Password,
 	})
 
+	// Use https as default protocol
+	if config.Protocol == "" {
+		config.Protocol = common.DefaultProtocol
+	}
+
 	return &TestConfig{
 		StorageController: ConfigurationYaml{
 			Ip:        config.Ip,
+			Protocol:  config.Protocol,
 			Username:  config.Username,
 			Password:  config.Password,
 			Initiator: config.Initiator,

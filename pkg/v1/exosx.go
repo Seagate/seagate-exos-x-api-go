@@ -17,10 +17,11 @@ type Client struct {
 	Username   string
 	Password   string
 	Addr       string
+	Protocol   string
 	HTTPClient http.Client
 	Collector  *common.Collector
 	SessionKey string
-	Initiator  string
+	Initiator  []string
 	PoolName   string
 	Info       *common.SystemInfo
 }

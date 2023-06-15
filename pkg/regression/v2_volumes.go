@@ -25,7 +25,7 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 
 		logger := klog.FromContext(tc.Config.Ctx)
 		client = storageapi.NewClient()
-		client.StoreCredentials(tc.Config.StorageController.Ip, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
+		client.StoreCredentials(tc.Config.StorageController.Ip, tc.Config.StorageController.Protocol, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
 		err := client.Login(tc.Config.Ctx)
 		logger.V(3).Info("Login", "ipaddress", client.Addr, "username", client.Username, "err", err)
 		Expect(err).To(BeNil())
@@ -79,7 +79,7 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 		It("should be able to publish/map volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
-			lun, err := client.PublishVolume(volname1, []string{client.Initiator})
+			lun, err := client.PublishVolume(volname1, tc.Config.StorageController.Initiator)
 			logger.V(3).Info("PublishVolume", "name", volname1, "lun", lun)
 			Expect(err).To(BeNil())
 			Expect(lun).ToNot(Equal(0))
@@ -88,7 +88,7 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 		It("should be able to unmap volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
-			status, err := client.UnmapVolume(volname1, tc.Config.StorageController.Initiator)
+			status, err := client.UnmapVolume(volname1, tc.Config.StorageController.Initiator[0])
 			logger.V(3).Info("UnmapVolume", "name", volname1, "mc-response", status.ResponseTypeNumeric)
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))

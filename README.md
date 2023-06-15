@@ -168,7 +168,10 @@ This section describes commands still needed for special use cases.
 
 This option runs a API Regression test suite using Ginkgo expressive tests.
 
-This option requires a configuration file, for example: `api-regression.conf`
+This option requires a configuration file, for example: `api-regression.conf`.
+
+Each user should create their own copy of `api-regression.conf` and not check it in. Please see `api-regression-example.conf` as an example.
+Use the `./api-regression -config <filename>` option to specify your configuration file.
 
 ```
 #
@@ -176,37 +179,40 @@ This option requires a configuration file, for example: `api-regression.conf`
 #
 # Properties:
 #   'ip' is required and is the IP Address of the storage controller used for testing
+#   'protocol" specifies http or https
 #   'username' is required and is the login credentials for the storage controller
 #   'password' is required and is the login credentials for the storage controller
 #
-#   'initiator' is the iSCSI IQN value
+#   'initiator' is an array of host initiators, such as the iSCSI IQN value, or SAS, or FC
 #   'pool' is the storage pool used for creating volumes
 #
 # Notes:
-#    To find initiator: sudo cat /etc/iscsi/initiatorname.iscsi | grep -v "##" | awk -F= '{print $2}'
+#    To find the iSCSI initiator:
+#    sudo cat /etc/iscsi/initiatorname.iscsi | grep -v "##" | awk -F= '{print $2}'
 api-regression: 1.0.0
 
 # Example Controller
-ip: "http://<ipaddress>"
+ip: "<ipaddress>"
+protocol: "https"
 username: "<username>"
 password: "<password>"
-initiator: "iqn.2004-10.com.ubuntu:01:b6f76364a18"
+initiator: ["iqn.2004-10.com.ubuntu:01:b6f76364a18"]
 pool: "A"
 ```
 
 The suggestion is to create your own configuration file and do not check it into the repo. For example:
 `cp api-regression.conf myconfig.conf` and then run `./api-regression -debug 4 -config myconfig.conf --ginkgo.v`.
 
-There are many options for running Ginkgo test cases, here are a few:
+There are many options for running Ginkgo test cases, here are a few using an `i1.conf` configuration file:
 
 - `make regession` to build the ***api-regression*** executable.
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v1"` to run all the ***v1*** tests
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2"` to run all the ***v2*** tests
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Login"` to run only the ***v2 Login*** tests
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2System"` to run only the ***v2 System*** tests
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Volume"` to run only ***v2 Volume*** tests
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Snapshot"` to run only ***v2 Snapshot*** tests
-- `./api-regression -debug 4 --ginkgo.v --ginkgo.fail-fast` to run only all tests
+- `./api-regression -config i1.conf -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v1"` to run all the ***v1*** tests
+- `./api-regression -config i1.conf -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2"` to run all the ***v2*** tests
+- `./api-regression -config i1.conf -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Login"` to run only the ***v2 Login*** tests
+- `./api-regression -config i1.conf -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2System"` to run only the ***v2 System*** tests
+- `./api-regression -config i1.conf -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Volume"` to run only ***v2 Volume*** tests
+- `./api-regression -config i1.conf -debug 4 --ginkgo.v --ginkgo.fail-fast --ginkgo.focus "v2Snapshot"` to run only ***v2 Snapshot*** tests
+- `./api-regression -config i1.conf -debug 4 --ginkgo.v --ginkgo.fail-fast` to run only all tests
 
 There are also many command line flags:
 - `./api-regression --help` to see all options

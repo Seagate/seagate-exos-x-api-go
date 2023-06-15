@@ -32,7 +32,7 @@ func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 		Debug:         false,
 		Servers: client.ServerConfigurations{
 			{
-				URL:         fmt.Sprintf("http://%s/api", config.MCIpAddress),
+				URL:         fmt.Sprintf("%s://%s/api", config.MCProtocol, config.MCIpAddress),
 				Description: config.MCDescription,
 			},
 		},
@@ -54,7 +54,7 @@ func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 			"ResponseTypeNumeric", *resp1.Status[0].ResponseTypeNumeric)
 
 		if *resp1.Status[0].ResponseTypeNumeric == 0 {
-			logger.V(0).Info("++ MC Login SUCCESS", "ipaddress", config.MCIpAddress)
+			logger.V(0).Info("++ MC Login SUCCESS", "ipaddress", config.MCIpAddress, "protocol", config.MCProtocol)
 			sessionKey = *resp1.Status[0].Response
 		} else {
 			logger.V(0).Info("++ MC Login FAILURE", "response", *resp1.Status[0].Response)

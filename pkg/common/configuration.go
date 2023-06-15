@@ -8,6 +8,7 @@ import (
 
 const (
 	DefaultSpecFile = "generated-mc-openapi.yaml" // Default OpenAPI specification file
+	DefaultProtocol = "https"                     // Default MC API Protocol
 )
 
 type Config struct {
@@ -15,6 +16,7 @@ type Config struct {
 	ConfigurationFile string `json:"configuration"`
 	SpecificationFile string `json:"specification"`
 	MCIpAddress       string `json:"mc-ip"`
+	MCProtocol        string `json:"mc-protocol"` // User can specify http, https
 	MCUsername        string `json:"mc-username"`
 	MCPassword        string `json:"mc-password"`
 	MCDescription     string `json:"mc-description"`
@@ -32,6 +34,7 @@ func InitConfig(args []string) (*Config, error) {
 		configuration = flags.String("configuration", "", "MC Configuration YAML File which lists commands to add to spec")
 		specification = flags.String("specification", DefaultSpecFile, "Generated MC OpenAPI Specification File")
 		mcipaddress   = flags.String("mcipaddress", "", "MC IP Address")
+		mcprotocol    = flags.String("mcprotocol", DefaultProtocol, "MC IP Protocol: http, https")
 		mcusername    = flags.String("mcusername", "", "MC Username")
 		mcpassword    = flags.String("mcpassword", "", "MC Password")
 		description   = flags.String("description", "MC Storage System", "Brief name of the storage system for reference")
@@ -46,6 +49,7 @@ func InitConfig(args []string) (*Config, error) {
 		ConfigurationFile: *configuration,
 		SpecificationFile: *specification,
 		MCIpAddress:       *mcipaddress,
+		MCProtocol:        *mcprotocol,
 		MCUsername:        *mcusername,
 		MCPassword:        *mcpassword,
 		MCDescription:     *description,
