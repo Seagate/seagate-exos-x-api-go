@@ -68,7 +68,7 @@ func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.V
 	if poolType == "Virtual" {
 		request = fmt.Sprintf("/create/volume/pool/\"%s\"/size/%s/tier-affinity/no-affinity/\"%s\"", pool, size, name)
 	} else {
-		request = fmt.Sprintf("/create/volume/pool/\"%s\"/size/%s/tier-affinity/no-affinity/\"%s\"", pool, size, name)
+		request = fmt.Sprintf("/create/volume/pool/\"%s\"/size/%s/\"%s\"", pool, size, name)
 	}
 
 	data, status, err := client.FormattedRequest(request)
