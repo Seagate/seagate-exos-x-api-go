@@ -6,6 +6,7 @@ import (
 	"context"
 	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
 
@@ -16,6 +17,55 @@ var (
 	configuration = &client.Configuration{}
 	apiClient     *client.APIClient
 )
+
+// GetAddress: Return ip address, handles the case where addr contains protocol
+func GetAddress(addr string) string {
+
+	// addr may include protocol and ip address or hostname, or only ip address
+	// Example:
+	//   addr == "http://1.2.3.4" OR "https://1.2.3.4" OR "1.2.3.4"
+	//   addr == "http://host.name" OR "https://host.name" OR "host.name"
+	// client.Addr only contains ip address
+	ipaddress := addr
+	if strings.HasPrefix(addr, "http://") {
+		ipaddress = strings.Replace(addr, "http://", "", 1)
+	} else if strings.HasPrefix(addr, "https://") {
+		ipaddress = strings.Replace(addr, "https://", "", 1)
+	}
+
+	return ipaddress
+}
+
+// GetAddressAndProtocol: Return ip address and protocol, handling concatenated string
+func GetAddressAndProtocol(addr string, protocol string) (string, string) {
+
+	// addr may include protocol and ip address or hostname, or only ip address
+	// Example:
+	//   addr == "http://1.2.3.4" OR "https://1.2.3.4" OR "1.2.3.4"
+	//   addr == "http://host.name" OR "https://host.name" OR "host.name"
+	ipaddress := addr
+	usingProtocol := ""
+	if strings.HasPrefix(addr, "http://") {
+		ipaddress = strings.Replace(addr, "http://", "", 1)
+		usingProtocol = "http"
+	} else if strings.HasPrefix(addr, "https://") {
+		ipaddress = strings.Replace(addr, "https://", "", 1)
+		usingProtocol = "https"
+	}
+
+	if protocol == "" && usingProtocol == "" {
+		// Use a default protocol if not supplied
+		protocol = "https"
+		klog.V(0).InfoS("protocol not provided, using default", "protocol", protocol)
+	} else if protocol == "" {
+		// Use the protocol supplied with addr
+		protocol = usingProtocol
+	} else if protocol != usingProtocol {
+		klog.V(0).InfoS("Address protocol does not match passed in protocol", "addr", addr, "protocol", protocol, "usingProtocol", usingProtocol)
+	}
+
+	return ipaddress, protocol
+}
 
 // Login: Perform the needed steps to configure a connection and login to the MC
 func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
