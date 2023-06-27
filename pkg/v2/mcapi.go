@@ -6,7 +6,9 @@ import (
 	"context"
 	"crypto/tls"
 	"fmt"
+	"net"
 	"net/http"
+	"strings"
 	"time"
 
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
@@ -49,7 +51,33 @@ func NewClient() *Client {
 }
 
 // StoreCredentials : Called to store ip address, username, and password for the client
-func (client *Client) StoreCredentials(ipaddress string, protocol string, username string, password string) {
+func (client *Client) StoreCredentials(addr string, protocol string, username string, password string) {
+
+	// addr may include protocol and ip address, or only ip address
+	// Example: addr == "http://1.2.3.4" OR "https://1.2.3.4" OR "1.2.3.4"
+	// client.Addr only contains ip address
+	ipaddress := addr
+	if strings.HasPrefix(addr, "http://") {
+		ipaddress = strings.Replace(addr, "http://", "", 1)
+		if protocol == "" {
+			protocol = "http"
+		}
+	} else if strings.HasPrefix(addr, "https://") {
+		ipaddress = strings.Replace(addr, "https://", "", 1)
+		if protocol == "" {
+			protocol = "https"
+		}
+	}
+
+	// Store a default protocol if not supplied
+	if protocol == "" {
+		protocol = "https"
+	}
+
+	// Validate that the plain IP Address, with no protocol, is valid
+	if net.ParseIP(ipaddress) == nil {
+		klog.V(0).InfoS("IP Address is invalid", "addr", addr, "protocol", protocol, "ipaddress", ipaddress)
+	}
 
 	// Store the login credentials in the Client object
 	client.Username = username
@@ -87,7 +115,17 @@ func (client *Client) SessionValid(addr, username string) bool {
 
 	logger := klog.FromContext(client.Ctx)
 
-	if client.Addr == addr && client.Username == username {
+	// addr may include protocol and ip address, or only ip address
+	// Example: addr == "http://1.2.3.4" OR "https://1.2.3.4" OR "1.2.3.4"
+	// client.Addr only contains ip address
+	ipaddress := addr
+	if strings.HasPrefix(addr, "http://") {
+		ipaddress = strings.Replace(addr, "http://", "", 1)
+	} else if strings.HasPrefix(addr, "https://") {
+		ipaddress = strings.Replace(addr, "https://", "", 1)
+	}
+
+	if client.Addr == ipaddress && client.Username == username {
 		if client.SessionKey == "" {
 			logger.V(2).Info("session invalid", "sessionkey", client.SessionKey)
 			return false
