@@ -56,7 +56,7 @@ func UpdateVolumeObject(target *common.VolumeObject, source *client.VolumesResou
 	target.TotalSize = source.GetTotalSize()
 	target.VolumeName = source.GetVolumeName()
 	target.VolumeType = source.GetVolumeType()
-	target.Wwn = source.GetWwn()
+	target.Wwn = strings.ToLower(source.GetWwn())
 }
 
 // CreateVolume : creates a volume with the given name, capacity in the given pool
@@ -167,7 +167,7 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 			volume.TotalSize = v.GetTotalSize()
 			volume.VolumeName = v.GetVolumeName()
 			volume.VolumeType = v.GetVolumeType()
-			volume.Wwn = v.GetWwn()
+			volume.Wwn = strings.ToLower(v.GetWwn())
 
 			returnVolumes = append(returnVolumes, volume)
 		}

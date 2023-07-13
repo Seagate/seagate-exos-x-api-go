@@ -115,7 +115,7 @@ func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.V
 			volume.VolumeType = val.Data
 		}
 		if val, ok := data.Objects[0].PropertiesMap["wwn"]; ok {
-			volume.Wwn = val.Data
+			volume.Wwn = strings.ToLower(val.Data)
 		}
 	}
 
@@ -190,7 +190,7 @@ func (client *Client) ShowVolumes(volumes ...string) ([]common.VolumeObject, *co
 				volume.TotalSize = object.PropertiesMap["total-size"].Data
 				volume.VolumeName = object.PropertiesMap["volume-name"].Data
 				volume.VolumeType = object.PropertiesMap["volume-type"].Data
-				volume.Wwn = object.PropertiesMap["wwn"].Data
+				volume.Wwn = strings.ToLower(object.PropertiesMap["wwn"].Data)
 
 				returnVolumes = append(returnVolumes, volume)
 			}
