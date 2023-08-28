@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the StatusResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &StatusResourceInner{}
+
 // StatusResourceInner struct for StatusResourceInner
 type StatusResourceInner struct {
 	ObjectName  *string `json:"object-name,omitempty"`
@@ -51,7 +54,7 @@ func NewStatusResourceInnerWithDefaults() *StatusResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *StatusResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -61,7 +64,7 @@ func (o *StatusResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StatusResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -69,7 +72,7 @@ func (o *StatusResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *StatusResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -83,7 +86,7 @@ func (o *StatusResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *StatusResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -93,7 +96,7 @@ func (o *StatusResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StatusResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -101,7 +104,7 @@ func (o *StatusResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *StatusResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -115,7 +118,7 @@ func (o *StatusResourceInner) SetMeta(v string) {
 
 // GetComponentId returns the ComponentId field value if set, zero value otherwise.
 func (o *StatusResourceInner) GetComponentId() string {
-	if o == nil || isNil(o.ComponentId) {
+	if o == nil || IsNil(o.ComponentId) {
 		var ret string
 		return ret
 	}
@@ -125,7 +128,7 @@ func (o *StatusResourceInner) GetComponentId() string {
 // GetComponentIdOk returns a tuple with the ComponentId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StatusResourceInner) GetComponentIdOk() (*string, bool) {
-	if o == nil || isNil(o.ComponentId) {
+	if o == nil || IsNil(o.ComponentId) {
 		return nil, false
 	}
 	return o.ComponentId, true
@@ -133,7 +136,7 @@ func (o *StatusResourceInner) GetComponentIdOk() (*string, bool) {
 
 // HasComponentId returns a boolean if a field has been set.
 func (o *StatusResourceInner) HasComponentId() bool {
-	if o != nil && !isNil(o.ComponentId) {
+	if o != nil && !IsNil(o.ComponentId) {
 		return true
 	}
 
@@ -147,7 +150,7 @@ func (o *StatusResourceInner) SetComponentId(v string) {
 
 // GetResponse returns the Response field value if set, zero value otherwise.
 func (o *StatusResourceInner) GetResponse() string {
-	if o == nil || isNil(o.Response) {
+	if o == nil || IsNil(o.Response) {
 		var ret string
 		return ret
 	}
@@ -157,7 +160,7 @@ func (o *StatusResourceInner) GetResponse() string {
 // GetResponseOk returns a tuple with the Response field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StatusResourceInner) GetResponseOk() (*string, bool) {
-	if o == nil || isNil(o.Response) {
+	if o == nil || IsNil(o.Response) {
 		return nil, false
 	}
 	return o.Response, true
@@ -165,7 +168,7 @@ func (o *StatusResourceInner) GetResponseOk() (*string, bool) {
 
 // HasResponse returns a boolean if a field has been set.
 func (o *StatusResourceInner) HasResponse() bool {
-	if o != nil && !isNil(o.Response) {
+	if o != nil && !IsNil(o.Response) {
 		return true
 	}
 
@@ -179,7 +182,7 @@ func (o *StatusResourceInner) SetResponse(v string) {
 
 // GetResponseType returns the ResponseType field value if set, zero value otherwise.
 func (o *StatusResourceInner) GetResponseType() string {
-	if o == nil || isNil(o.ResponseType) {
+	if o == nil || IsNil(o.ResponseType) {
 		var ret string
 		return ret
 	}
@@ -189,7 +192,7 @@ func (o *StatusResourceInner) GetResponseType() string {
 // GetResponseTypeOk returns a tuple with the ResponseType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StatusResourceInner) GetResponseTypeOk() (*string, bool) {
-	if o == nil || isNil(o.ResponseType) {
+	if o == nil || IsNil(o.ResponseType) {
 		return nil, false
 	}
 	return o.ResponseType, true
@@ -197,7 +200,7 @@ func (o *StatusResourceInner) GetResponseTypeOk() (*string, bool) {
 
 // HasResponseType returns a boolean if a field has been set.
 func (o *StatusResourceInner) HasResponseType() bool {
-	if o != nil && !isNil(o.ResponseType) {
+	if o != nil && !IsNil(o.ResponseType) {
 		return true
 	}
 
@@ -211,7 +214,7 @@ func (o *StatusResourceInner) SetResponseType(v string) {
 
 // GetResponseTypeNumeric returns the ResponseTypeNumeric field value if set, zero value otherwise.
 func (o *StatusResourceInner) GetResponseTypeNumeric() int32 {
-	if o == nil || isNil(o.ResponseTypeNumeric) {
+	if o == nil || IsNil(o.ResponseTypeNumeric) {
 		var ret int32
 		return ret
 	}
@@ -221,7 +224,7 @@ func (o *StatusResourceInner) GetResponseTypeNumeric() int32 {
 // GetResponseTypeNumericOk returns a tuple with the ResponseTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StatusResourceInner) GetResponseTypeNumericOk() (*int32, bool) {
-	if o == nil || isNil(o.ResponseTypeNumeric) {
+	if o == nil || IsNil(o.ResponseTypeNumeric) {
 		return nil, false
 	}
 	return o.ResponseTypeNumeric, true
@@ -229,7 +232,7 @@ func (o *StatusResourceInner) GetResponseTypeNumericOk() (*int32, bool) {
 
 // HasResponseTypeNumeric returns a boolean if a field has been set.
 func (o *StatusResourceInner) HasResponseTypeNumeric() bool {
-	if o != nil && !isNil(o.ResponseTypeNumeric) {
+	if o != nil && !IsNil(o.ResponseTypeNumeric) {
 		return true
 	}
 
@@ -243,7 +246,7 @@ func (o *StatusResourceInner) SetResponseTypeNumeric(v int32) {
 
 // GetReturnCode returns the ReturnCode field value if set, zero value otherwise.
 func (o *StatusResourceInner) GetReturnCode() int32 {
-	if o == nil || isNil(o.ReturnCode) {
+	if o == nil || IsNil(o.ReturnCode) {
 		var ret int32
 		return ret
 	}
@@ -253,7 +256,7 @@ func (o *StatusResourceInner) GetReturnCode() int32 {
 // GetReturnCodeOk returns a tuple with the ReturnCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StatusResourceInner) GetReturnCodeOk() (*int32, bool) {
-	if o == nil || isNil(o.ReturnCode) {
+	if o == nil || IsNil(o.ReturnCode) {
 		return nil, false
 	}
 	return o.ReturnCode, true
@@ -261,7 +264,7 @@ func (o *StatusResourceInner) GetReturnCodeOk() (*int32, bool) {
 
 // HasReturnCode returns a boolean if a field has been set.
 func (o *StatusResourceInner) HasReturnCode() bool {
-	if o != nil && !isNil(o.ReturnCode) {
+	if o != nil && !IsNil(o.ReturnCode) {
 		return true
 	}
 
@@ -275,7 +278,7 @@ func (o *StatusResourceInner) SetReturnCode(v int32) {
 
 // GetTimeStamp returns the TimeStamp field value if set, zero value otherwise.
 func (o *StatusResourceInner) GetTimeStamp() string {
-	if o == nil || isNil(o.TimeStamp) {
+	if o == nil || IsNil(o.TimeStamp) {
 		var ret string
 		return ret
 	}
@@ -285,7 +288,7 @@ func (o *StatusResourceInner) GetTimeStamp() string {
 // GetTimeStampOk returns a tuple with the TimeStamp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StatusResourceInner) GetTimeStampOk() (*string, bool) {
-	if o == nil || isNil(o.TimeStamp) {
+	if o == nil || IsNil(o.TimeStamp) {
 		return nil, false
 	}
 	return o.TimeStamp, true
@@ -293,7 +296,7 @@ func (o *StatusResourceInner) GetTimeStampOk() (*string, bool) {
 
 // HasTimeStamp returns a boolean if a field has been set.
 func (o *StatusResourceInner) HasTimeStamp() bool {
-	if o != nil && !isNil(o.TimeStamp) {
+	if o != nil && !IsNil(o.TimeStamp) {
 		return true
 	}
 
@@ -307,7 +310,7 @@ func (o *StatusResourceInner) SetTimeStamp(v string) {
 
 // GetTimeStampNumeric returns the TimeStampNumeric field value if set, zero value otherwise.
 func (o *StatusResourceInner) GetTimeStampNumeric() int32 {
-	if o == nil || isNil(o.TimeStampNumeric) {
+	if o == nil || IsNil(o.TimeStampNumeric) {
 		var ret int32
 		return ret
 	}
@@ -317,7 +320,7 @@ func (o *StatusResourceInner) GetTimeStampNumeric() int32 {
 // GetTimeStampNumericOk returns a tuple with the TimeStampNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StatusResourceInner) GetTimeStampNumericOk() (*int32, bool) {
-	if o == nil || isNil(o.TimeStampNumeric) {
+	if o == nil || IsNil(o.TimeStampNumeric) {
 		return nil, false
 	}
 	return o.TimeStampNumeric, true
@@ -325,7 +328,7 @@ func (o *StatusResourceInner) GetTimeStampNumericOk() (*int32, bool) {
 
 // HasTimeStampNumeric returns a boolean if a field has been set.
 func (o *StatusResourceInner) HasTimeStampNumeric() bool {
-	if o != nil && !isNil(o.TimeStampNumeric) {
+	if o != nil && !IsNil(o.TimeStampNumeric) {
 		return true
 	}
 
@@ -338,35 +341,43 @@ func (o *StatusResourceInner) SetTimeStampNumeric(v int32) {
 }
 
 func (o StatusResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.ComponentId) {
-		toSerialize["component-id"] = o.ComponentId
-	}
-	if !isNil(o.Response) {
-		toSerialize["response"] = o.Response
-	}
-	if !isNil(o.ResponseType) {
-		toSerialize["response-type"] = o.ResponseType
-	}
-	if !isNil(o.ResponseTypeNumeric) {
-		toSerialize["response-type-numeric"] = o.ResponseTypeNumeric
-	}
-	if !isNil(o.ReturnCode) {
-		toSerialize["return-code"] = o.ReturnCode
-	}
-	if !isNil(o.TimeStamp) {
-		toSerialize["time-stamp"] = o.TimeStamp
-	}
-	if !isNil(o.TimeStampNumeric) {
-		toSerialize["time-stamp-numeric"] = o.TimeStampNumeric
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o StatusResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.ComponentId) {
+		toSerialize["component-id"] = o.ComponentId
+	}
+	if !IsNil(o.Response) {
+		toSerialize["response"] = o.Response
+	}
+	if !IsNil(o.ResponseType) {
+		toSerialize["response-type"] = o.ResponseType
+	}
+	if !IsNil(o.ResponseTypeNumeric) {
+		toSerialize["response-type-numeric"] = o.ResponseTypeNumeric
+	}
+	if !IsNil(o.ReturnCode) {
+		toSerialize["return-code"] = o.ReturnCode
+	}
+	if !IsNil(o.TimeStamp) {
+		toSerialize["time-stamp"] = o.TimeStamp
+	}
+	if !IsNil(o.TimeStampNumeric) {
+		toSerialize["time-stamp-numeric"] = o.TimeStampNumeric
+	}
+	return toSerialize, nil
 }
 
 type NullableStatusResourceInner struct {

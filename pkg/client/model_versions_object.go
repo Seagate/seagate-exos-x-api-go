@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the VersionsObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &VersionsObject{}
+
 // VersionsObject struct for VersionsObject
 type VersionsObject struct {
 	Status   []StatusResourceInner   `json:"status,omitempty"`
@@ -39,7 +42,7 @@ func NewVersionsObjectWithDefaults() *VersionsObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *VersionsObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -49,7 +52,7 @@ func (o *VersionsObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -57,7 +60,7 @@ func (o *VersionsObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *VersionsObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -71,7 +74,7 @@ func (o *VersionsObject) SetStatus(v []StatusResourceInner) {
 
 // GetVersions returns the Versions field value if set, zero value otherwise.
 func (o *VersionsObject) GetVersions() []VersionsResourceInner {
-	if o == nil || isNil(o.Versions) {
+	if o == nil || IsNil(o.Versions) {
 		var ret []VersionsResourceInner
 		return ret
 	}
@@ -81,7 +84,7 @@ func (o *VersionsObject) GetVersions() []VersionsResourceInner {
 // GetVersionsOk returns a tuple with the Versions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsObject) GetVersionsOk() ([]VersionsResourceInner, bool) {
-	if o == nil || isNil(o.Versions) {
+	if o == nil || IsNil(o.Versions) {
 		return nil, false
 	}
 	return o.Versions, true
@@ -89,7 +92,7 @@ func (o *VersionsObject) GetVersionsOk() ([]VersionsResourceInner, bool) {
 
 // HasVersions returns a boolean if a field has been set.
 func (o *VersionsObject) HasVersions() bool {
-	if o != nil && !isNil(o.Versions) {
+	if o != nil && !IsNil(o.Versions) {
 		return true
 	}
 
@@ -102,14 +105,22 @@ func (o *VersionsObject) SetVersions(v []VersionsResourceInner) {
 }
 
 func (o VersionsObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.Versions) {
-		toSerialize["versions"] = o.Versions
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o VersionsObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.Versions) {
+		toSerialize["versions"] = o.Versions
+	}
+	return toSerialize, nil
 }
 
 type NullableVersionsObject struct {

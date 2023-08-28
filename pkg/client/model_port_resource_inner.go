@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the PortResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &PortResourceInner{}
+
 // PortResourceInner struct for PortResourceInner
 type PortResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
@@ -69,7 +72,7 @@ func NewPortResourceInnerWithDefaults() *PortResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *PortResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -79,7 +82,7 @@ func (o *PortResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -87,7 +90,7 @@ func (o *PortResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *PortResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -101,7 +104,7 @@ func (o *PortResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *PortResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -111,7 +114,7 @@ func (o *PortResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -119,7 +122,7 @@ func (o *PortResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *PortResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -133,7 +136,7 @@ func (o *PortResourceInner) SetMeta(v string) {
 
 // GetActualSpeed returns the ActualSpeed field value if set, zero value otherwise.
 func (o *PortResourceInner) GetActualSpeed() string {
-	if o == nil || isNil(o.ActualSpeed) {
+	if o == nil || IsNil(o.ActualSpeed) {
 		var ret string
 		return ret
 	}
@@ -143,7 +146,7 @@ func (o *PortResourceInner) GetActualSpeed() string {
 // GetActualSpeedOk returns a tuple with the ActualSpeed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetActualSpeedOk() (*string, bool) {
-	if o == nil || isNil(o.ActualSpeed) {
+	if o == nil || IsNil(o.ActualSpeed) {
 		return nil, false
 	}
 	return o.ActualSpeed, true
@@ -151,7 +154,7 @@ func (o *PortResourceInner) GetActualSpeedOk() (*string, bool) {
 
 // HasActualSpeed returns a boolean if a field has been set.
 func (o *PortResourceInner) HasActualSpeed() bool {
-	if o != nil && !isNil(o.ActualSpeed) {
+	if o != nil && !IsNil(o.ActualSpeed) {
 		return true
 	}
 
@@ -165,7 +168,7 @@ func (o *PortResourceInner) SetActualSpeed(v string) {
 
 // GetActualSpeedNumeric returns the ActualSpeedNumeric field value if set, zero value otherwise.
 func (o *PortResourceInner) GetActualSpeedNumeric() int64 {
-	if o == nil || isNil(o.ActualSpeedNumeric) {
+	if o == nil || IsNil(o.ActualSpeedNumeric) {
 		var ret int64
 		return ret
 	}
@@ -175,7 +178,7 @@ func (o *PortResourceInner) GetActualSpeedNumeric() int64 {
 // GetActualSpeedNumericOk returns a tuple with the ActualSpeedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetActualSpeedNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.ActualSpeedNumeric) {
+	if o == nil || IsNil(o.ActualSpeedNumeric) {
 		return nil, false
 	}
 	return o.ActualSpeedNumeric, true
@@ -183,7 +186,7 @@ func (o *PortResourceInner) GetActualSpeedNumericOk() (*int64, bool) {
 
 // HasActualSpeedNumeric returns a boolean if a field has been set.
 func (o *PortResourceInner) HasActualSpeedNumeric() bool {
-	if o != nil && !isNil(o.ActualSpeedNumeric) {
+	if o != nil && !IsNil(o.ActualSpeedNumeric) {
 		return true
 	}
 
@@ -197,7 +200,7 @@ func (o *PortResourceInner) SetActualSpeedNumeric(v int64) {
 
 // GetConfiguredSpeed returns the ConfiguredSpeed field value if set, zero value otherwise.
 func (o *PortResourceInner) GetConfiguredSpeed() string {
-	if o == nil || isNil(o.ConfiguredSpeed) {
+	if o == nil || IsNil(o.ConfiguredSpeed) {
 		var ret string
 		return ret
 	}
@@ -207,7 +210,7 @@ func (o *PortResourceInner) GetConfiguredSpeed() string {
 // GetConfiguredSpeedOk returns a tuple with the ConfiguredSpeed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetConfiguredSpeedOk() (*string, bool) {
-	if o == nil || isNil(o.ConfiguredSpeed) {
+	if o == nil || IsNil(o.ConfiguredSpeed) {
 		return nil, false
 	}
 	return o.ConfiguredSpeed, true
@@ -215,7 +218,7 @@ func (o *PortResourceInner) GetConfiguredSpeedOk() (*string, bool) {
 
 // HasConfiguredSpeed returns a boolean if a field has been set.
 func (o *PortResourceInner) HasConfiguredSpeed() bool {
-	if o != nil && !isNil(o.ConfiguredSpeed) {
+	if o != nil && !IsNil(o.ConfiguredSpeed) {
 		return true
 	}
 
@@ -229,7 +232,7 @@ func (o *PortResourceInner) SetConfiguredSpeed(v string) {
 
 // GetConfiguredSpeedNumeric returns the ConfiguredSpeedNumeric field value if set, zero value otherwise.
 func (o *PortResourceInner) GetConfiguredSpeedNumeric() int64 {
-	if o == nil || isNil(o.ConfiguredSpeedNumeric) {
+	if o == nil || IsNil(o.ConfiguredSpeedNumeric) {
 		var ret int64
 		return ret
 	}
@@ -239,7 +242,7 @@ func (o *PortResourceInner) GetConfiguredSpeedNumeric() int64 {
 // GetConfiguredSpeedNumericOk returns a tuple with the ConfiguredSpeedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetConfiguredSpeedNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.ConfiguredSpeedNumeric) {
+	if o == nil || IsNil(o.ConfiguredSpeedNumeric) {
 		return nil, false
 	}
 	return o.ConfiguredSpeedNumeric, true
@@ -247,7 +250,7 @@ func (o *PortResourceInner) GetConfiguredSpeedNumericOk() (*int64, bool) {
 
 // HasConfiguredSpeedNumeric returns a boolean if a field has been set.
 func (o *PortResourceInner) HasConfiguredSpeedNumeric() bool {
-	if o != nil && !isNil(o.ConfiguredSpeedNumeric) {
+	if o != nil && !IsNil(o.ConfiguredSpeedNumeric) {
 		return true
 	}
 
@@ -261,7 +264,7 @@ func (o *PortResourceInner) SetConfiguredSpeedNumeric(v int64) {
 
 // GetController returns the Controller field value if set, zero value otherwise.
 func (o *PortResourceInner) GetController() string {
-	if o == nil || isNil(o.Controller) {
+	if o == nil || IsNil(o.Controller) {
 		var ret string
 		return ret
 	}
@@ -271,7 +274,7 @@ func (o *PortResourceInner) GetController() string {
 // GetControllerOk returns a tuple with the Controller field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetControllerOk() (*string, bool) {
-	if o == nil || isNil(o.Controller) {
+	if o == nil || IsNil(o.Controller) {
 		return nil, false
 	}
 	return o.Controller, true
@@ -279,7 +282,7 @@ func (o *PortResourceInner) GetControllerOk() (*string, bool) {
 
 // HasController returns a boolean if a field has been set.
 func (o *PortResourceInner) HasController() bool {
-	if o != nil && !isNil(o.Controller) {
+	if o != nil && !IsNil(o.Controller) {
 		return true
 	}
 
@@ -293,7 +296,7 @@ func (o *PortResourceInner) SetController(v string) {
 
 // GetControllerNumeric returns the ControllerNumeric field value if set, zero value otherwise.
 func (o *PortResourceInner) GetControllerNumeric() int64 {
-	if o == nil || isNil(o.ControllerNumeric) {
+	if o == nil || IsNil(o.ControllerNumeric) {
 		var ret int64
 		return ret
 	}
@@ -303,7 +306,7 @@ func (o *PortResourceInner) GetControllerNumeric() int64 {
 // GetControllerNumericOk returns a tuple with the ControllerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetControllerNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.ControllerNumeric) {
+	if o == nil || IsNil(o.ControllerNumeric) {
 		return nil, false
 	}
 	return o.ControllerNumeric, true
@@ -311,7 +314,7 @@ func (o *PortResourceInner) GetControllerNumericOk() (*int64, bool) {
 
 // HasControllerNumeric returns a boolean if a field has been set.
 func (o *PortResourceInner) HasControllerNumeric() bool {
-	if o != nil && !isNil(o.ControllerNumeric) {
+	if o != nil && !IsNil(o.ControllerNumeric) {
 		return true
 	}
 
@@ -325,7 +328,7 @@ func (o *PortResourceInner) SetControllerNumeric(v int64) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *PortResourceInner) GetDurableId() string {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -335,7 +338,7 @@ func (o *PortResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -343,7 +346,7 @@ func (o *PortResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *PortResourceInner) HasDurableId() bool {
-	if o != nil && !isNil(o.DurableId) {
+	if o != nil && !IsNil(o.DurableId) {
 		return true
 	}
 
@@ -357,7 +360,7 @@ func (o *PortResourceInner) SetDurableId(v string) {
 
 // GetFanOut returns the FanOut field value if set, zero value otherwise.
 func (o *PortResourceInner) GetFanOut() int64 {
-	if o == nil || isNil(o.FanOut) {
+	if o == nil || IsNil(o.FanOut) {
 		var ret int64
 		return ret
 	}
@@ -367,7 +370,7 @@ func (o *PortResourceInner) GetFanOut() int64 {
 // GetFanOutOk returns a tuple with the FanOut field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetFanOutOk() (*int64, bool) {
-	if o == nil || isNil(o.FanOut) {
+	if o == nil || IsNil(o.FanOut) {
 		return nil, false
 	}
 	return o.FanOut, true
@@ -375,7 +378,7 @@ func (o *PortResourceInner) GetFanOutOk() (*int64, bool) {
 
 // HasFanOut returns a boolean if a field has been set.
 func (o *PortResourceInner) HasFanOut() bool {
-	if o != nil && !isNil(o.FanOut) {
+	if o != nil && !IsNil(o.FanOut) {
 		return true
 	}
 
@@ -389,7 +392,7 @@ func (o *PortResourceInner) SetFanOut(v int64) {
 
 // GetHealth returns the Health field value if set, zero value otherwise.
 func (o *PortResourceInner) GetHealth() string {
-	if o == nil || isNil(o.Health) {
+	if o == nil || IsNil(o.Health) {
 		var ret string
 		return ret
 	}
@@ -399,7 +402,7 @@ func (o *PortResourceInner) GetHealth() string {
 // GetHealthOk returns a tuple with the Health field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetHealthOk() (*string, bool) {
-	if o == nil || isNil(o.Health) {
+	if o == nil || IsNil(o.Health) {
 		return nil, false
 	}
 	return o.Health, true
@@ -407,7 +410,7 @@ func (o *PortResourceInner) GetHealthOk() (*string, bool) {
 
 // HasHealth returns a boolean if a field has been set.
 func (o *PortResourceInner) HasHealth() bool {
-	if o != nil && !isNil(o.Health) {
+	if o != nil && !IsNil(o.Health) {
 		return true
 	}
 
@@ -421,7 +424,7 @@ func (o *PortResourceInner) SetHealth(v string) {
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
 func (o *PortResourceInner) GetHealthNumeric() int64 {
-	if o == nil || isNil(o.HealthNumeric) {
+	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -431,7 +434,7 @@ func (o *PortResourceInner) GetHealthNumeric() int64 {
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetHealthNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.HealthNumeric) {
+	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
 	return o.HealthNumeric, true
@@ -439,7 +442,7 @@ func (o *PortResourceInner) GetHealthNumericOk() (*int64, bool) {
 
 // HasHealthNumeric returns a boolean if a field has been set.
 func (o *PortResourceInner) HasHealthNumeric() bool {
-	if o != nil && !isNil(o.HealthNumeric) {
+	if o != nil && !IsNil(o.HealthNumeric) {
 		return true
 	}
 
@@ -453,7 +456,7 @@ func (o *PortResourceInner) SetHealthNumeric(v int64) {
 
 // GetHealthReason returns the HealthReason field value if set, zero value otherwise.
 func (o *PortResourceInner) GetHealthReason() string {
-	if o == nil || isNil(o.HealthReason) {
+	if o == nil || IsNil(o.HealthReason) {
 		var ret string
 		return ret
 	}
@@ -463,7 +466,7 @@ func (o *PortResourceInner) GetHealthReason() string {
 // GetHealthReasonOk returns a tuple with the HealthReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetHealthReasonOk() (*string, bool) {
-	if o == nil || isNil(o.HealthReason) {
+	if o == nil || IsNil(o.HealthReason) {
 		return nil, false
 	}
 	return o.HealthReason, true
@@ -471,7 +474,7 @@ func (o *PortResourceInner) GetHealthReasonOk() (*string, bool) {
 
 // HasHealthReason returns a boolean if a field has been set.
 func (o *PortResourceInner) HasHealthReason() bool {
-	if o != nil && !isNil(o.HealthReason) {
+	if o != nil && !IsNil(o.HealthReason) {
 		return true
 	}
 
@@ -485,7 +488,7 @@ func (o *PortResourceInner) SetHealthReason(v string) {
 
 // GetHealthRecommendation returns the HealthRecommendation field value if set, zero value otherwise.
 func (o *PortResourceInner) GetHealthRecommendation() string {
-	if o == nil || isNil(o.HealthRecommendation) {
+	if o == nil || IsNil(o.HealthRecommendation) {
 		var ret string
 		return ret
 	}
@@ -495,7 +498,7 @@ func (o *PortResourceInner) GetHealthRecommendation() string {
 // GetHealthRecommendationOk returns a tuple with the HealthRecommendation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetHealthRecommendationOk() (*string, bool) {
-	if o == nil || isNil(o.HealthRecommendation) {
+	if o == nil || IsNil(o.HealthRecommendation) {
 		return nil, false
 	}
 	return o.HealthRecommendation, true
@@ -503,7 +506,7 @@ func (o *PortResourceInner) GetHealthRecommendationOk() (*string, bool) {
 
 // HasHealthRecommendation returns a boolean if a field has been set.
 func (o *PortResourceInner) HasHealthRecommendation() bool {
-	if o != nil && !isNil(o.HealthRecommendation) {
+	if o != nil && !IsNil(o.HealthRecommendation) {
 		return true
 	}
 
@@ -517,7 +520,7 @@ func (o *PortResourceInner) SetHealthRecommendation(v string) {
 
 // GetMedia returns the Media field value if set, zero value otherwise.
 func (o *PortResourceInner) GetMedia() string {
-	if o == nil || isNil(o.Media) {
+	if o == nil || IsNil(o.Media) {
 		var ret string
 		return ret
 	}
@@ -527,7 +530,7 @@ func (o *PortResourceInner) GetMedia() string {
 // GetMediaOk returns a tuple with the Media field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetMediaOk() (*string, bool) {
-	if o == nil || isNil(o.Media) {
+	if o == nil || IsNil(o.Media) {
 		return nil, false
 	}
 	return o.Media, true
@@ -535,7 +538,7 @@ func (o *PortResourceInner) GetMediaOk() (*string, bool) {
 
 // HasMedia returns a boolean if a field has been set.
 func (o *PortResourceInner) HasMedia() bool {
-	if o != nil && !isNil(o.Media) {
+	if o != nil && !IsNil(o.Media) {
 		return true
 	}
 
@@ -549,7 +552,7 @@ func (o *PortResourceInner) SetMedia(v string) {
 
 // GetPort returns the Port field value if set, zero value otherwise.
 func (o *PortResourceInner) GetPort() string {
-	if o == nil || isNil(o.Port) {
+	if o == nil || IsNil(o.Port) {
 		var ret string
 		return ret
 	}
@@ -559,7 +562,7 @@ func (o *PortResourceInner) GetPort() string {
 // GetPortOk returns a tuple with the Port field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetPortOk() (*string, bool) {
-	if o == nil || isNil(o.Port) {
+	if o == nil || IsNil(o.Port) {
 		return nil, false
 	}
 	return o.Port, true
@@ -567,7 +570,7 @@ func (o *PortResourceInner) GetPortOk() (*string, bool) {
 
 // HasPort returns a boolean if a field has been set.
 func (o *PortResourceInner) HasPort() bool {
-	if o != nil && !isNil(o.Port) {
+	if o != nil && !IsNil(o.Port) {
 		return true
 	}
 
@@ -581,7 +584,7 @@ func (o *PortResourceInner) SetPort(v string) {
 
 // GetPortType returns the PortType field value if set, zero value otherwise.
 func (o *PortResourceInner) GetPortType() string {
-	if o == nil || isNil(o.PortType) {
+	if o == nil || IsNil(o.PortType) {
 		var ret string
 		return ret
 	}
@@ -591,7 +594,7 @@ func (o *PortResourceInner) GetPortType() string {
 // GetPortTypeOk returns a tuple with the PortType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetPortTypeOk() (*string, bool) {
-	if o == nil || isNil(o.PortType) {
+	if o == nil || IsNil(o.PortType) {
 		return nil, false
 	}
 	return o.PortType, true
@@ -599,7 +602,7 @@ func (o *PortResourceInner) GetPortTypeOk() (*string, bool) {
 
 // HasPortType returns a boolean if a field has been set.
 func (o *PortResourceInner) HasPortType() bool {
-	if o != nil && !isNil(o.PortType) {
+	if o != nil && !IsNil(o.PortType) {
 		return true
 	}
 
@@ -613,7 +616,7 @@ func (o *PortResourceInner) SetPortType(v string) {
 
 // GetPortTypeNumeric returns the PortTypeNumeric field value if set, zero value otherwise.
 func (o *PortResourceInner) GetPortTypeNumeric() int64 {
-	if o == nil || isNil(o.PortTypeNumeric) {
+	if o == nil || IsNil(o.PortTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -623,7 +626,7 @@ func (o *PortResourceInner) GetPortTypeNumeric() int64 {
 // GetPortTypeNumericOk returns a tuple with the PortTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetPortTypeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.PortTypeNumeric) {
+	if o == nil || IsNil(o.PortTypeNumeric) {
 		return nil, false
 	}
 	return o.PortTypeNumeric, true
@@ -631,7 +634,7 @@ func (o *PortResourceInner) GetPortTypeNumericOk() (*int64, bool) {
 
 // HasPortTypeNumeric returns a boolean if a field has been set.
 func (o *PortResourceInner) HasPortTypeNumeric() bool {
-	if o != nil && !isNil(o.PortTypeNumeric) {
+	if o != nil && !IsNil(o.PortTypeNumeric) {
 		return true
 	}
 
@@ -645,7 +648,7 @@ func (o *PortResourceInner) SetPortTypeNumeric(v int64) {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *PortResourceInner) GetStatus() string {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret string
 		return ret
 	}
@@ -655,7 +658,7 @@ func (o *PortResourceInner) GetStatus() string {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetStatusOk() (*string, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -663,7 +666,7 @@ func (o *PortResourceInner) GetStatusOk() (*string, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *PortResourceInner) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -677,7 +680,7 @@ func (o *PortResourceInner) SetStatus(v string) {
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
 func (o *PortResourceInner) GetStatusNumeric() int64 {
-	if o == nil || isNil(o.StatusNumeric) {
+	if o == nil || IsNil(o.StatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -687,7 +690,7 @@ func (o *PortResourceInner) GetStatusNumeric() int64 {
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetStatusNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.StatusNumeric) {
+	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
 	return o.StatusNumeric, true
@@ -695,7 +698,7 @@ func (o *PortResourceInner) GetStatusNumericOk() (*int64, bool) {
 
 // HasStatusNumeric returns a boolean if a field has been set.
 func (o *PortResourceInner) HasStatusNumeric() bool {
-	if o != nil && !isNil(o.StatusNumeric) {
+	if o != nil && !IsNil(o.StatusNumeric) {
 		return true
 	}
 
@@ -709,7 +712,7 @@ func (o *PortResourceInner) SetStatusNumeric(v int64) {
 
 // GetTargetId returns the TargetId field value if set, zero value otherwise.
 func (o *PortResourceInner) GetTargetId() string {
-	if o == nil || isNil(o.TargetId) {
+	if o == nil || IsNil(o.TargetId) {
 		var ret string
 		return ret
 	}
@@ -719,7 +722,7 @@ func (o *PortResourceInner) GetTargetId() string {
 // GetTargetIdOk returns a tuple with the TargetId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetTargetIdOk() (*string, bool) {
-	if o == nil || isNil(o.TargetId) {
+	if o == nil || IsNil(o.TargetId) {
 		return nil, false
 	}
 	return o.TargetId, true
@@ -727,7 +730,7 @@ func (o *PortResourceInner) GetTargetIdOk() (*string, bool) {
 
 // HasTargetId returns a boolean if a field has been set.
 func (o *PortResourceInner) HasTargetId() bool {
-	if o != nil && !isNil(o.TargetId) {
+	if o != nil && !IsNil(o.TargetId) {
 		return true
 	}
 
@@ -741,7 +744,7 @@ func (o *PortResourceInner) SetTargetId(v string) {
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *PortResourceInner) GetUrl() string {
-	if o == nil || isNil(o.Url) {
+	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
 	}
@@ -751,7 +754,7 @@ func (o *PortResourceInner) GetUrl() string {
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetUrlOk() (*string, bool) {
-	if o == nil || isNil(o.Url) {
+	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
 	return o.Url, true
@@ -759,7 +762,7 @@ func (o *PortResourceInner) GetUrlOk() (*string, bool) {
 
 // HasUrl returns a boolean if a field has been set.
 func (o *PortResourceInner) HasUrl() bool {
-	if o != nil && !isNil(o.Url) {
+	if o != nil && !IsNil(o.Url) {
 		return true
 	}
 
@@ -773,7 +776,7 @@ func (o *PortResourceInner) SetUrl(v string) {
 
 // GetFcPort returns the FcPort field value if set, zero value otherwise.
 func (o *PortResourceInner) GetFcPort() []FcPortResourceInner {
-	if o == nil || isNil(o.FcPort) {
+	if o == nil || IsNil(o.FcPort) {
 		var ret []FcPortResourceInner
 		return ret
 	}
@@ -783,7 +786,7 @@ func (o *PortResourceInner) GetFcPort() []FcPortResourceInner {
 // GetFcPortOk returns a tuple with the FcPort field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetFcPortOk() ([]FcPortResourceInner, bool) {
-	if o == nil || isNil(o.FcPort) {
+	if o == nil || IsNil(o.FcPort) {
 		return nil, false
 	}
 	return o.FcPort, true
@@ -791,7 +794,7 @@ func (o *PortResourceInner) GetFcPortOk() ([]FcPortResourceInner, bool) {
 
 // HasFcPort returns a boolean if a field has been set.
 func (o *PortResourceInner) HasFcPort() bool {
-	if o != nil && !isNil(o.FcPort) {
+	if o != nil && !IsNil(o.FcPort) {
 		return true
 	}
 
@@ -805,7 +808,7 @@ func (o *PortResourceInner) SetFcPort(v []FcPortResourceInner) {
 
 // GetIscsiPort returns the IscsiPort field value if set, zero value otherwise.
 func (o *PortResourceInner) GetIscsiPort() []IscsiPortResourceInner {
-	if o == nil || isNil(o.IscsiPort) {
+	if o == nil || IsNil(o.IscsiPort) {
 		var ret []IscsiPortResourceInner
 		return ret
 	}
@@ -815,7 +818,7 @@ func (o *PortResourceInner) GetIscsiPort() []IscsiPortResourceInner {
 // GetIscsiPortOk returns a tuple with the IscsiPort field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetIscsiPortOk() ([]IscsiPortResourceInner, bool) {
-	if o == nil || isNil(o.IscsiPort) {
+	if o == nil || IsNil(o.IscsiPort) {
 		return nil, false
 	}
 	return o.IscsiPort, true
@@ -823,7 +826,7 @@ func (o *PortResourceInner) GetIscsiPortOk() ([]IscsiPortResourceInner, bool) {
 
 // HasIscsiPort returns a boolean if a field has been set.
 func (o *PortResourceInner) HasIscsiPort() bool {
-	if o != nil && !isNil(o.IscsiPort) {
+	if o != nil && !IsNil(o.IscsiPort) {
 		return true
 	}
 
@@ -837,7 +840,7 @@ func (o *PortResourceInner) SetIscsiPort(v []IscsiPortResourceInner) {
 
 // GetSasPort returns the SasPort field value if set, zero value otherwise.
 func (o *PortResourceInner) GetSasPort() []SasPortResourceInner {
-	if o == nil || isNil(o.SasPort) {
+	if o == nil || IsNil(o.SasPort) {
 		var ret []SasPortResourceInner
 		return ret
 	}
@@ -847,7 +850,7 @@ func (o *PortResourceInner) GetSasPort() []SasPortResourceInner {
 // GetSasPortOk returns a tuple with the SasPort field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PortResourceInner) GetSasPortOk() ([]SasPortResourceInner, bool) {
-	if o == nil || isNil(o.SasPort) {
+	if o == nil || IsNil(o.SasPort) {
 		return nil, false
 	}
 	return o.SasPort, true
@@ -855,7 +858,7 @@ func (o *PortResourceInner) GetSasPortOk() ([]SasPortResourceInner, bool) {
 
 // HasSasPort returns a boolean if a field has been set.
 func (o *PortResourceInner) HasSasPort() bool {
-	if o != nil && !isNil(o.SasPort) {
+	if o != nil && !IsNil(o.SasPort) {
 		return true
 	}
 
@@ -868,83 +871,91 @@ func (o *PortResourceInner) SetSasPort(v []SasPortResourceInner) {
 }
 
 func (o PortResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.ActualSpeed) {
-		toSerialize["actual-speed"] = o.ActualSpeed
-	}
-	if !isNil(o.ActualSpeedNumeric) {
-		toSerialize["actual-speed-numeric"] = o.ActualSpeedNumeric
-	}
-	if !isNil(o.ConfiguredSpeed) {
-		toSerialize["configured-speed"] = o.ConfiguredSpeed
-	}
-	if !isNil(o.ConfiguredSpeedNumeric) {
-		toSerialize["configured-speed-numeric"] = o.ConfiguredSpeedNumeric
-	}
-	if !isNil(o.Controller) {
-		toSerialize["controller"] = o.Controller
-	}
-	if !isNil(o.ControllerNumeric) {
-		toSerialize["controller-numeric"] = o.ControllerNumeric
-	}
-	if !isNil(o.DurableId) {
-		toSerialize["durable-id"] = o.DurableId
-	}
-	if !isNil(o.FanOut) {
-		toSerialize["fan-out"] = o.FanOut
-	}
-	if !isNil(o.Health) {
-		toSerialize["health"] = o.Health
-	}
-	if !isNil(o.HealthNumeric) {
-		toSerialize["health-numeric"] = o.HealthNumeric
-	}
-	if !isNil(o.HealthReason) {
-		toSerialize["health-reason"] = o.HealthReason
-	}
-	if !isNil(o.HealthRecommendation) {
-		toSerialize["health-recommendation"] = o.HealthRecommendation
-	}
-	if !isNil(o.Media) {
-		toSerialize["media"] = o.Media
-	}
-	if !isNil(o.Port) {
-		toSerialize["port"] = o.Port
-	}
-	if !isNil(o.PortType) {
-		toSerialize["port-type"] = o.PortType
-	}
-	if !isNil(o.PortTypeNumeric) {
-		toSerialize["port-type-numeric"] = o.PortTypeNumeric
-	}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.StatusNumeric) {
-		toSerialize["status-numeric"] = o.StatusNumeric
-	}
-	if !isNil(o.TargetId) {
-		toSerialize["target-id"] = o.TargetId
-	}
-	if !isNil(o.Url) {
-		toSerialize["url"] = o.Url
-	}
-	if !isNil(o.FcPort) {
-		toSerialize["fc-port"] = o.FcPort
-	}
-	if !isNil(o.IscsiPort) {
-		toSerialize["iscsi-port"] = o.IscsiPort
-	}
-	if !isNil(o.SasPort) {
-		toSerialize["sas-port"] = o.SasPort
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o PortResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.ActualSpeed) {
+		toSerialize["actual-speed"] = o.ActualSpeed
+	}
+	if !IsNil(o.ActualSpeedNumeric) {
+		toSerialize["actual-speed-numeric"] = o.ActualSpeedNumeric
+	}
+	if !IsNil(o.ConfiguredSpeed) {
+		toSerialize["configured-speed"] = o.ConfiguredSpeed
+	}
+	if !IsNil(o.ConfiguredSpeedNumeric) {
+		toSerialize["configured-speed-numeric"] = o.ConfiguredSpeedNumeric
+	}
+	if !IsNil(o.Controller) {
+		toSerialize["controller"] = o.Controller
+	}
+	if !IsNil(o.ControllerNumeric) {
+		toSerialize["controller-numeric"] = o.ControllerNumeric
+	}
+	if !IsNil(o.DurableId) {
+		toSerialize["durable-id"] = o.DurableId
+	}
+	if !IsNil(o.FanOut) {
+		toSerialize["fan-out"] = o.FanOut
+	}
+	if !IsNil(o.Health) {
+		toSerialize["health"] = o.Health
+	}
+	if !IsNil(o.HealthNumeric) {
+		toSerialize["health-numeric"] = o.HealthNumeric
+	}
+	if !IsNil(o.HealthReason) {
+		toSerialize["health-reason"] = o.HealthReason
+	}
+	if !IsNil(o.HealthRecommendation) {
+		toSerialize["health-recommendation"] = o.HealthRecommendation
+	}
+	if !IsNil(o.Media) {
+		toSerialize["media"] = o.Media
+	}
+	if !IsNil(o.Port) {
+		toSerialize["port"] = o.Port
+	}
+	if !IsNil(o.PortType) {
+		toSerialize["port-type"] = o.PortType
+	}
+	if !IsNil(o.PortTypeNumeric) {
+		toSerialize["port-type-numeric"] = o.PortTypeNumeric
+	}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.StatusNumeric) {
+		toSerialize["status-numeric"] = o.StatusNumeric
+	}
+	if !IsNil(o.TargetId) {
+		toSerialize["target-id"] = o.TargetId
+	}
+	if !IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
+	if !IsNil(o.FcPort) {
+		toSerialize["fc-port"] = o.FcPort
+	}
+	if !IsNil(o.IscsiPort) {
+		toSerialize["iscsi-port"] = o.IscsiPort
+	}
+	if !IsNil(o.SasPort) {
+		toSerialize["sas-port"] = o.SasPort
+	}
+	return toSerialize, nil
 }
 
 type NullablePortResourceInner struct {

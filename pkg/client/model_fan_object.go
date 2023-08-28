@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the FanObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &FanObject{}
+
 // FanObject struct for FanObject
 type FanObject struct {
 	Status []StatusResourceInner `json:"status,omitempty"`
@@ -39,7 +42,7 @@ func NewFanObjectWithDefaults() *FanObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *FanObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -49,7 +52,7 @@ func (o *FanObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -57,7 +60,7 @@ func (o *FanObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *FanObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -71,7 +74,7 @@ func (o *FanObject) SetStatus(v []StatusResourceInner) {
 
 // GetFan returns the Fan field value if set, zero value otherwise.
 func (o *FanObject) GetFan() []FanResourceInner {
-	if o == nil || isNil(o.Fan) {
+	if o == nil || IsNil(o.Fan) {
 		var ret []FanResourceInner
 		return ret
 	}
@@ -81,7 +84,7 @@ func (o *FanObject) GetFan() []FanResourceInner {
 // GetFanOk returns a tuple with the Fan field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanObject) GetFanOk() ([]FanResourceInner, bool) {
-	if o == nil || isNil(o.Fan) {
+	if o == nil || IsNil(o.Fan) {
 		return nil, false
 	}
 	return o.Fan, true
@@ -89,7 +92,7 @@ func (o *FanObject) GetFanOk() ([]FanResourceInner, bool) {
 
 // HasFan returns a boolean if a field has been set.
 func (o *FanObject) HasFan() bool {
-	if o != nil && !isNil(o.Fan) {
+	if o != nil && !IsNil(o.Fan) {
 		return true
 	}
 
@@ -102,14 +105,22 @@ func (o *FanObject) SetFan(v []FanResourceInner) {
 }
 
 func (o FanObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.Fan) {
-		toSerialize["fan"] = o.Fan
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o FanObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.Fan) {
+		toSerialize["fan"] = o.Fan
+	}
+	return toSerialize, nil
 }
 
 type NullableFanObject struct {

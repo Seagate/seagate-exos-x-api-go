@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the PowerSuppliesResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &PowerSuppliesResourceInner{}
+
 // PowerSuppliesResourceInner struct for PowerSuppliesResourceInner
 type PowerSuppliesResourceInner struct {
 	ObjectName                *string `json:"object-name,omitempty"`
@@ -80,7 +83,7 @@ func NewPowerSuppliesResourceInnerWithDefaults() *PowerSuppliesResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -90,7 +93,7 @@ func (o *PowerSuppliesResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -98,7 +101,7 @@ func (o *PowerSuppliesResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -112,7 +115,7 @@ func (o *PowerSuppliesResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -122,7 +125,7 @@ func (o *PowerSuppliesResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -130,7 +133,7 @@ func (o *PowerSuppliesResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -144,7 +147,7 @@ func (o *PowerSuppliesResourceInner) SetMeta(v string) {
 
 // GetConfigurationSerialnumber returns the ConfigurationSerialnumber field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetConfigurationSerialnumber() string {
-	if o == nil || isNil(o.ConfigurationSerialnumber) {
+	if o == nil || IsNil(o.ConfigurationSerialnumber) {
 		var ret string
 		return ret
 	}
@@ -154,7 +157,7 @@ func (o *PowerSuppliesResourceInner) GetConfigurationSerialnumber() string {
 // GetConfigurationSerialnumberOk returns a tuple with the ConfigurationSerialnumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetConfigurationSerialnumberOk() (*string, bool) {
-	if o == nil || isNil(o.ConfigurationSerialnumber) {
+	if o == nil || IsNil(o.ConfigurationSerialnumber) {
 		return nil, false
 	}
 	return o.ConfigurationSerialnumber, true
@@ -162,7 +165,7 @@ func (o *PowerSuppliesResourceInner) GetConfigurationSerialnumberOk() (*string, 
 
 // HasConfigurationSerialnumber returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasConfigurationSerialnumber() bool {
-	if o != nil && !isNil(o.ConfigurationSerialnumber) {
+	if o != nil && !IsNil(o.ConfigurationSerialnumber) {
 		return true
 	}
 
@@ -176,7 +179,7 @@ func (o *PowerSuppliesResourceInner) SetConfigurationSerialnumber(v string) {
 
 // GetDashLevel returns the DashLevel field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetDashLevel() string {
-	if o == nil || isNil(o.DashLevel) {
+	if o == nil || IsNil(o.DashLevel) {
 		var ret string
 		return ret
 	}
@@ -186,7 +189,7 @@ func (o *PowerSuppliesResourceInner) GetDashLevel() string {
 // GetDashLevelOk returns a tuple with the DashLevel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetDashLevelOk() (*string, bool) {
-	if o == nil || isNil(o.DashLevel) {
+	if o == nil || IsNil(o.DashLevel) {
 		return nil, false
 	}
 	return o.DashLevel, true
@@ -194,7 +197,7 @@ func (o *PowerSuppliesResourceInner) GetDashLevelOk() (*string, bool) {
 
 // HasDashLevel returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasDashLevel() bool {
-	if o != nil && !isNil(o.DashLevel) {
+	if o != nil && !IsNil(o.DashLevel) {
 		return true
 	}
 
@@ -208,7 +211,7 @@ func (o *PowerSuppliesResourceInner) SetDashLevel(v string) {
 
 // GetDc12i returns the Dc12i field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetDc12i() int64 {
-	if o == nil || isNil(o.Dc12i) {
+	if o == nil || IsNil(o.Dc12i) {
 		var ret int64
 		return ret
 	}
@@ -218,7 +221,7 @@ func (o *PowerSuppliesResourceInner) GetDc12i() int64 {
 // GetDc12iOk returns a tuple with the Dc12i field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetDc12iOk() (*int64, bool) {
-	if o == nil || isNil(o.Dc12i) {
+	if o == nil || IsNil(o.Dc12i) {
 		return nil, false
 	}
 	return o.Dc12i, true
@@ -226,7 +229,7 @@ func (o *PowerSuppliesResourceInner) GetDc12iOk() (*int64, bool) {
 
 // HasDc12i returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasDc12i() bool {
-	if o != nil && !isNil(o.Dc12i) {
+	if o != nil && !IsNil(o.Dc12i) {
 		return true
 	}
 
@@ -240,7 +243,7 @@ func (o *PowerSuppliesResourceInner) SetDc12i(v int64) {
 
 // GetDc12v returns the Dc12v field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetDc12v() int64 {
-	if o == nil || isNil(o.Dc12v) {
+	if o == nil || IsNil(o.Dc12v) {
 		var ret int64
 		return ret
 	}
@@ -250,7 +253,7 @@ func (o *PowerSuppliesResourceInner) GetDc12v() int64 {
 // GetDc12vOk returns a tuple with the Dc12v field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetDc12vOk() (*int64, bool) {
-	if o == nil || isNil(o.Dc12v) {
+	if o == nil || IsNil(o.Dc12v) {
 		return nil, false
 	}
 	return o.Dc12v, true
@@ -258,7 +261,7 @@ func (o *PowerSuppliesResourceInner) GetDc12vOk() (*int64, bool) {
 
 // HasDc12v returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasDc12v() bool {
-	if o != nil && !isNil(o.Dc12v) {
+	if o != nil && !IsNil(o.Dc12v) {
 		return true
 	}
 
@@ -272,7 +275,7 @@ func (o *PowerSuppliesResourceInner) SetDc12v(v int64) {
 
 // GetDc33v returns the Dc33v field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetDc33v() int64 {
-	if o == nil || isNil(o.Dc33v) {
+	if o == nil || IsNil(o.Dc33v) {
 		var ret int64
 		return ret
 	}
@@ -282,7 +285,7 @@ func (o *PowerSuppliesResourceInner) GetDc33v() int64 {
 // GetDc33vOk returns a tuple with the Dc33v field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetDc33vOk() (*int64, bool) {
-	if o == nil || isNil(o.Dc33v) {
+	if o == nil || IsNil(o.Dc33v) {
 		return nil, false
 	}
 	return o.Dc33v, true
@@ -290,7 +293,7 @@ func (o *PowerSuppliesResourceInner) GetDc33vOk() (*int64, bool) {
 
 // HasDc33v returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasDc33v() bool {
-	if o != nil && !isNil(o.Dc33v) {
+	if o != nil && !IsNil(o.Dc33v) {
 		return true
 	}
 
@@ -304,7 +307,7 @@ func (o *PowerSuppliesResourceInner) SetDc33v(v int64) {
 
 // GetDc5i returns the Dc5i field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetDc5i() int64 {
-	if o == nil || isNil(o.Dc5i) {
+	if o == nil || IsNil(o.Dc5i) {
 		var ret int64
 		return ret
 	}
@@ -314,7 +317,7 @@ func (o *PowerSuppliesResourceInner) GetDc5i() int64 {
 // GetDc5iOk returns a tuple with the Dc5i field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetDc5iOk() (*int64, bool) {
-	if o == nil || isNil(o.Dc5i) {
+	if o == nil || IsNil(o.Dc5i) {
 		return nil, false
 	}
 	return o.Dc5i, true
@@ -322,7 +325,7 @@ func (o *PowerSuppliesResourceInner) GetDc5iOk() (*int64, bool) {
 
 // HasDc5i returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasDc5i() bool {
-	if o != nil && !isNil(o.Dc5i) {
+	if o != nil && !IsNil(o.Dc5i) {
 		return true
 	}
 
@@ -336,7 +339,7 @@ func (o *PowerSuppliesResourceInner) SetDc5i(v int64) {
 
 // GetDc5v returns the Dc5v field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetDc5v() int64 {
-	if o == nil || isNil(o.Dc5v) {
+	if o == nil || IsNil(o.Dc5v) {
 		var ret int64
 		return ret
 	}
@@ -346,7 +349,7 @@ func (o *PowerSuppliesResourceInner) GetDc5v() int64 {
 // GetDc5vOk returns a tuple with the Dc5v field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetDc5vOk() (*int64, bool) {
-	if o == nil || isNil(o.Dc5v) {
+	if o == nil || IsNil(o.Dc5v) {
 		return nil, false
 	}
 	return o.Dc5v, true
@@ -354,7 +357,7 @@ func (o *PowerSuppliesResourceInner) GetDc5vOk() (*int64, bool) {
 
 // HasDc5v returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasDc5v() bool {
-	if o != nil && !isNil(o.Dc5v) {
+	if o != nil && !IsNil(o.Dc5v) {
 		return true
 	}
 
@@ -368,7 +371,7 @@ func (o *PowerSuppliesResourceInner) SetDc5v(v int64) {
 
 // GetDctemp returns the Dctemp field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetDctemp() int64 {
-	if o == nil || isNil(o.Dctemp) {
+	if o == nil || IsNil(o.Dctemp) {
 		var ret int64
 		return ret
 	}
@@ -378,7 +381,7 @@ func (o *PowerSuppliesResourceInner) GetDctemp() int64 {
 // GetDctempOk returns a tuple with the Dctemp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetDctempOk() (*int64, bool) {
-	if o == nil || isNil(o.Dctemp) {
+	if o == nil || IsNil(o.Dctemp) {
 		return nil, false
 	}
 	return o.Dctemp, true
@@ -386,7 +389,7 @@ func (o *PowerSuppliesResourceInner) GetDctempOk() (*int64, bool) {
 
 // HasDctemp returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasDctemp() bool {
-	if o != nil && !isNil(o.Dctemp) {
+	if o != nil && !IsNil(o.Dctemp) {
 		return true
 	}
 
@@ -400,7 +403,7 @@ func (o *PowerSuppliesResourceInner) SetDctemp(v int64) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetDescription() string {
-	if o == nil || isNil(o.Description) {
+	if o == nil || IsNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -410,7 +413,7 @@ func (o *PowerSuppliesResourceInner) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetDescriptionOk() (*string, bool) {
-	if o == nil || isNil(o.Description) {
+	if o == nil || IsNil(o.Description) {
 		return nil, false
 	}
 	return o.Description, true
@@ -418,7 +421,7 @@ func (o *PowerSuppliesResourceInner) GetDescriptionOk() (*string, bool) {
 
 // HasDescription returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasDescription() bool {
-	if o != nil && !isNil(o.Description) {
+	if o != nil && !IsNil(o.Description) {
 		return true
 	}
 
@@ -432,7 +435,7 @@ func (o *PowerSuppliesResourceInner) SetDescription(v string) {
 
 // GetDomId returns the DomId field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetDomId() int64 {
-	if o == nil || isNil(o.DomId) {
+	if o == nil || IsNil(o.DomId) {
 		var ret int64
 		return ret
 	}
@@ -442,7 +445,7 @@ func (o *PowerSuppliesResourceInner) GetDomId() int64 {
 // GetDomIdOk returns a tuple with the DomId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetDomIdOk() (*int64, bool) {
-	if o == nil || isNil(o.DomId) {
+	if o == nil || IsNil(o.DomId) {
 		return nil, false
 	}
 	return o.DomId, true
@@ -450,7 +453,7 @@ func (o *PowerSuppliesResourceInner) GetDomIdOk() (*int64, bool) {
 
 // HasDomId returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasDomId() bool {
-	if o != nil && !isNil(o.DomId) {
+	if o != nil && !IsNil(o.DomId) {
 		return true
 	}
 
@@ -464,7 +467,7 @@ func (o *PowerSuppliesResourceInner) SetDomId(v int64) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetDurableId() string {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -474,7 +477,7 @@ func (o *PowerSuppliesResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -482,7 +485,7 @@ func (o *PowerSuppliesResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasDurableId() bool {
-	if o != nil && !isNil(o.DurableId) {
+	if o != nil && !IsNil(o.DurableId) {
 		return true
 	}
 
@@ -496,7 +499,7 @@ func (o *PowerSuppliesResourceInner) SetDurableId(v string) {
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetEnclosureId() int64 {
-	if o == nil || isNil(o.EnclosureId) {
+	if o == nil || IsNil(o.EnclosureId) {
 		var ret int64
 		return ret
 	}
@@ -506,7 +509,7 @@ func (o *PowerSuppliesResourceInner) GetEnclosureId() int64 {
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetEnclosureIdOk() (*int64, bool) {
-	if o == nil || isNil(o.EnclosureId) {
+	if o == nil || IsNil(o.EnclosureId) {
 		return nil, false
 	}
 	return o.EnclosureId, true
@@ -514,7 +517,7 @@ func (o *PowerSuppliesResourceInner) GetEnclosureIdOk() (*int64, bool) {
 
 // HasEnclosureId returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasEnclosureId() bool {
-	if o != nil && !isNil(o.EnclosureId) {
+	if o != nil && !IsNil(o.EnclosureId) {
 		return true
 	}
 
@@ -528,7 +531,7 @@ func (o *PowerSuppliesResourceInner) SetEnclosureId(v int64) {
 
 // GetEnclosuresUrl returns the EnclosuresUrl field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetEnclosuresUrl() string {
-	if o == nil || isNil(o.EnclosuresUrl) {
+	if o == nil || IsNil(o.EnclosuresUrl) {
 		var ret string
 		return ret
 	}
@@ -538,7 +541,7 @@ func (o *PowerSuppliesResourceInner) GetEnclosuresUrl() string {
 // GetEnclosuresUrlOk returns a tuple with the EnclosuresUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetEnclosuresUrlOk() (*string, bool) {
-	if o == nil || isNil(o.EnclosuresUrl) {
+	if o == nil || IsNil(o.EnclosuresUrl) {
 		return nil, false
 	}
 	return o.EnclosuresUrl, true
@@ -546,7 +549,7 @@ func (o *PowerSuppliesResourceInner) GetEnclosuresUrlOk() (*string, bool) {
 
 // HasEnclosuresUrl returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasEnclosuresUrl() bool {
-	if o != nil && !isNil(o.EnclosuresUrl) {
+	if o != nil && !IsNil(o.EnclosuresUrl) {
 		return true
 	}
 
@@ -560,7 +563,7 @@ func (o *PowerSuppliesResourceInner) SetEnclosuresUrl(v string) {
 
 // GetFruShortname returns the FruShortname field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetFruShortname() string {
-	if o == nil || isNil(o.FruShortname) {
+	if o == nil || IsNil(o.FruShortname) {
 		var ret string
 		return ret
 	}
@@ -570,7 +573,7 @@ func (o *PowerSuppliesResourceInner) GetFruShortname() string {
 // GetFruShortnameOk returns a tuple with the FruShortname field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetFruShortnameOk() (*string, bool) {
-	if o == nil || isNil(o.FruShortname) {
+	if o == nil || IsNil(o.FruShortname) {
 		return nil, false
 	}
 	return o.FruShortname, true
@@ -578,7 +581,7 @@ func (o *PowerSuppliesResourceInner) GetFruShortnameOk() (*string, bool) {
 
 // HasFruShortname returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasFruShortname() bool {
-	if o != nil && !isNil(o.FruShortname) {
+	if o != nil && !IsNil(o.FruShortname) {
 		return true
 	}
 
@@ -592,7 +595,7 @@ func (o *PowerSuppliesResourceInner) SetFruShortname(v string) {
 
 // GetFwRevision returns the FwRevision field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetFwRevision() string {
-	if o == nil || isNil(o.FwRevision) {
+	if o == nil || IsNil(o.FwRevision) {
 		var ret string
 		return ret
 	}
@@ -602,7 +605,7 @@ func (o *PowerSuppliesResourceInner) GetFwRevision() string {
 // GetFwRevisionOk returns a tuple with the FwRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetFwRevisionOk() (*string, bool) {
-	if o == nil || isNil(o.FwRevision) {
+	if o == nil || IsNil(o.FwRevision) {
 		return nil, false
 	}
 	return o.FwRevision, true
@@ -610,7 +613,7 @@ func (o *PowerSuppliesResourceInner) GetFwRevisionOk() (*string, bool) {
 
 // HasFwRevision returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasFwRevision() bool {
-	if o != nil && !isNil(o.FwRevision) {
+	if o != nil && !IsNil(o.FwRevision) {
 		return true
 	}
 
@@ -624,7 +627,7 @@ func (o *PowerSuppliesResourceInner) SetFwRevision(v string) {
 
 // GetHealth returns the Health field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetHealth() string {
-	if o == nil || isNil(o.Health) {
+	if o == nil || IsNil(o.Health) {
 		var ret string
 		return ret
 	}
@@ -634,7 +637,7 @@ func (o *PowerSuppliesResourceInner) GetHealth() string {
 // GetHealthOk returns a tuple with the Health field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetHealthOk() (*string, bool) {
-	if o == nil || isNil(o.Health) {
+	if o == nil || IsNil(o.Health) {
 		return nil, false
 	}
 	return o.Health, true
@@ -642,7 +645,7 @@ func (o *PowerSuppliesResourceInner) GetHealthOk() (*string, bool) {
 
 // HasHealth returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasHealth() bool {
-	if o != nil && !isNil(o.Health) {
+	if o != nil && !IsNil(o.Health) {
 		return true
 	}
 
@@ -656,7 +659,7 @@ func (o *PowerSuppliesResourceInner) SetHealth(v string) {
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetHealthNumeric() int64 {
-	if o == nil || isNil(o.HealthNumeric) {
+	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -666,7 +669,7 @@ func (o *PowerSuppliesResourceInner) GetHealthNumeric() int64 {
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetHealthNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.HealthNumeric) {
+	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
 	return o.HealthNumeric, true
@@ -674,7 +677,7 @@ func (o *PowerSuppliesResourceInner) GetHealthNumericOk() (*int64, bool) {
 
 // HasHealthNumeric returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasHealthNumeric() bool {
-	if o != nil && !isNil(o.HealthNumeric) {
+	if o != nil && !IsNil(o.HealthNumeric) {
 		return true
 	}
 
@@ -688,7 +691,7 @@ func (o *PowerSuppliesResourceInner) SetHealthNumeric(v int64) {
 
 // GetHealthReason returns the HealthReason field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetHealthReason() string {
-	if o == nil || isNil(o.HealthReason) {
+	if o == nil || IsNil(o.HealthReason) {
 		var ret string
 		return ret
 	}
@@ -698,7 +701,7 @@ func (o *PowerSuppliesResourceInner) GetHealthReason() string {
 // GetHealthReasonOk returns a tuple with the HealthReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetHealthReasonOk() (*string, bool) {
-	if o == nil || isNil(o.HealthReason) {
+	if o == nil || IsNil(o.HealthReason) {
 		return nil, false
 	}
 	return o.HealthReason, true
@@ -706,7 +709,7 @@ func (o *PowerSuppliesResourceInner) GetHealthReasonOk() (*string, bool) {
 
 // HasHealthReason returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasHealthReason() bool {
-	if o != nil && !isNil(o.HealthReason) {
+	if o != nil && !IsNil(o.HealthReason) {
 		return true
 	}
 
@@ -720,7 +723,7 @@ func (o *PowerSuppliesResourceInner) SetHealthReason(v string) {
 
 // GetHealthRecommendation returns the HealthRecommendation field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetHealthRecommendation() string {
-	if o == nil || isNil(o.HealthRecommendation) {
+	if o == nil || IsNil(o.HealthRecommendation) {
 		var ret string
 		return ret
 	}
@@ -730,7 +733,7 @@ func (o *PowerSuppliesResourceInner) GetHealthRecommendation() string {
 // GetHealthRecommendationOk returns a tuple with the HealthRecommendation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetHealthRecommendationOk() (*string, bool) {
-	if o == nil || isNil(o.HealthRecommendation) {
+	if o == nil || IsNil(o.HealthRecommendation) {
 		return nil, false
 	}
 	return o.HealthRecommendation, true
@@ -738,7 +741,7 @@ func (o *PowerSuppliesResourceInner) GetHealthRecommendationOk() (*string, bool)
 
 // HasHealthRecommendation returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasHealthRecommendation() bool {
-	if o != nil && !isNil(o.HealthRecommendation) {
+	if o != nil && !IsNil(o.HealthRecommendation) {
 		return true
 	}
 
@@ -752,7 +755,7 @@ func (o *PowerSuppliesResourceInner) SetHealthRecommendation(v string) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetLocation() string {
-	if o == nil || isNil(o.Location) {
+	if o == nil || IsNil(o.Location) {
 		var ret string
 		return ret
 	}
@@ -762,7 +765,7 @@ func (o *PowerSuppliesResourceInner) GetLocation() string {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetLocationOk() (*string, bool) {
-	if o == nil || isNil(o.Location) {
+	if o == nil || IsNil(o.Location) {
 		return nil, false
 	}
 	return o.Location, true
@@ -770,7 +773,7 @@ func (o *PowerSuppliesResourceInner) GetLocationOk() (*string, bool) {
 
 // HasLocation returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasLocation() bool {
-	if o != nil && !isNil(o.Location) {
+	if o != nil && !IsNil(o.Location) {
 		return true
 	}
 
@@ -784,7 +787,7 @@ func (o *PowerSuppliesResourceInner) SetLocation(v string) {
 
 // GetMfgDate returns the MfgDate field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetMfgDate() string {
-	if o == nil || isNil(o.MfgDate) {
+	if o == nil || IsNil(o.MfgDate) {
 		var ret string
 		return ret
 	}
@@ -794,7 +797,7 @@ func (o *PowerSuppliesResourceInner) GetMfgDate() string {
 // GetMfgDateOk returns a tuple with the MfgDate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetMfgDateOk() (*string, bool) {
-	if o == nil || isNil(o.MfgDate) {
+	if o == nil || IsNil(o.MfgDate) {
 		return nil, false
 	}
 	return o.MfgDate, true
@@ -802,7 +805,7 @@ func (o *PowerSuppliesResourceInner) GetMfgDateOk() (*string, bool) {
 
 // HasMfgDate returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasMfgDate() bool {
-	if o != nil && !isNil(o.MfgDate) {
+	if o != nil && !IsNil(o.MfgDate) {
 		return true
 	}
 
@@ -816,7 +819,7 @@ func (o *PowerSuppliesResourceInner) SetMfgDate(v string) {
 
 // GetMfgDateNumeric returns the MfgDateNumeric field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetMfgDateNumeric() int64 {
-	if o == nil || isNil(o.MfgDateNumeric) {
+	if o == nil || IsNil(o.MfgDateNumeric) {
 		var ret int64
 		return ret
 	}
@@ -826,7 +829,7 @@ func (o *PowerSuppliesResourceInner) GetMfgDateNumeric() int64 {
 // GetMfgDateNumericOk returns a tuple with the MfgDateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetMfgDateNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.MfgDateNumeric) {
+	if o == nil || IsNil(o.MfgDateNumeric) {
 		return nil, false
 	}
 	return o.MfgDateNumeric, true
@@ -834,7 +837,7 @@ func (o *PowerSuppliesResourceInner) GetMfgDateNumericOk() (*int64, bool) {
 
 // HasMfgDateNumeric returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasMfgDateNumeric() bool {
-	if o != nil && !isNil(o.MfgDateNumeric) {
+	if o != nil && !IsNil(o.MfgDateNumeric) {
 		return true
 	}
 
@@ -848,7 +851,7 @@ func (o *PowerSuppliesResourceInner) SetMfgDateNumeric(v int64) {
 
 // GetMfgLocation returns the MfgLocation field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetMfgLocation() string {
-	if o == nil || isNil(o.MfgLocation) {
+	if o == nil || IsNil(o.MfgLocation) {
 		var ret string
 		return ret
 	}
@@ -858,7 +861,7 @@ func (o *PowerSuppliesResourceInner) GetMfgLocation() string {
 // GetMfgLocationOk returns a tuple with the MfgLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetMfgLocationOk() (*string, bool) {
-	if o == nil || isNil(o.MfgLocation) {
+	if o == nil || IsNil(o.MfgLocation) {
 		return nil, false
 	}
 	return o.MfgLocation, true
@@ -866,7 +869,7 @@ func (o *PowerSuppliesResourceInner) GetMfgLocationOk() (*string, bool) {
 
 // HasMfgLocation returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasMfgLocation() bool {
-	if o != nil && !isNil(o.MfgLocation) {
+	if o != nil && !IsNil(o.MfgLocation) {
 		return true
 	}
 
@@ -880,7 +883,7 @@ func (o *PowerSuppliesResourceInner) SetMfgLocation(v string) {
 
 // GetMfgVendorId returns the MfgVendorId field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetMfgVendorId() string {
-	if o == nil || isNil(o.MfgVendorId) {
+	if o == nil || IsNil(o.MfgVendorId) {
 		var ret string
 		return ret
 	}
@@ -890,7 +893,7 @@ func (o *PowerSuppliesResourceInner) GetMfgVendorId() string {
 // GetMfgVendorIdOk returns a tuple with the MfgVendorId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetMfgVendorIdOk() (*string, bool) {
-	if o == nil || isNil(o.MfgVendorId) {
+	if o == nil || IsNil(o.MfgVendorId) {
 		return nil, false
 	}
 	return o.MfgVendorId, true
@@ -898,7 +901,7 @@ func (o *PowerSuppliesResourceInner) GetMfgVendorIdOk() (*string, bool) {
 
 // HasMfgVendorId returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasMfgVendorId() bool {
-	if o != nil && !isNil(o.MfgVendorId) {
+	if o != nil && !IsNil(o.MfgVendorId) {
 		return true
 	}
 
@@ -912,7 +915,7 @@ func (o *PowerSuppliesResourceInner) SetMfgVendorId(v string) {
 
 // GetModel returns the Model field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetModel() string {
-	if o == nil || isNil(o.Model) {
+	if o == nil || IsNil(o.Model) {
 		var ret string
 		return ret
 	}
@@ -922,7 +925,7 @@ func (o *PowerSuppliesResourceInner) GetModel() string {
 // GetModelOk returns a tuple with the Model field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetModelOk() (*string, bool) {
-	if o == nil || isNil(o.Model) {
+	if o == nil || IsNil(o.Model) {
 		return nil, false
 	}
 	return o.Model, true
@@ -930,7 +933,7 @@ func (o *PowerSuppliesResourceInner) GetModelOk() (*string, bool) {
 
 // HasModel returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasModel() bool {
-	if o != nil && !isNil(o.Model) {
+	if o != nil && !IsNil(o.Model) {
 		return true
 	}
 
@@ -944,7 +947,7 @@ func (o *PowerSuppliesResourceInner) SetModel(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetName() string {
-	if o == nil || isNil(o.Name) {
+	if o == nil || IsNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -954,7 +957,7 @@ func (o *PowerSuppliesResourceInner) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetNameOk() (*string, bool) {
-	if o == nil || isNil(o.Name) {
+	if o == nil || IsNil(o.Name) {
 		return nil, false
 	}
 	return o.Name, true
@@ -962,7 +965,7 @@ func (o *PowerSuppliesResourceInner) GetNameOk() (*string, bool) {
 
 // HasName returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasName() bool {
-	if o != nil && !isNil(o.Name) {
+	if o != nil && !IsNil(o.Name) {
 		return true
 	}
 
@@ -976,7 +979,7 @@ func (o *PowerSuppliesResourceInner) SetName(v string) {
 
 // GetPartNumber returns the PartNumber field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetPartNumber() string {
-	if o == nil || isNil(o.PartNumber) {
+	if o == nil || IsNil(o.PartNumber) {
 		var ret string
 		return ret
 	}
@@ -986,7 +989,7 @@ func (o *PowerSuppliesResourceInner) GetPartNumber() string {
 // GetPartNumberOk returns a tuple with the PartNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetPartNumberOk() (*string, bool) {
-	if o == nil || isNil(o.PartNumber) {
+	if o == nil || IsNil(o.PartNumber) {
 		return nil, false
 	}
 	return o.PartNumber, true
@@ -994,7 +997,7 @@ func (o *PowerSuppliesResourceInner) GetPartNumberOk() (*string, bool) {
 
 // HasPartNumber returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasPartNumber() bool {
-	if o != nil && !isNil(o.PartNumber) {
+	if o != nil && !IsNil(o.PartNumber) {
 		return true
 	}
 
@@ -1008,7 +1011,7 @@ func (o *PowerSuppliesResourceInner) SetPartNumber(v string) {
 
 // GetPosition returns the Position field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetPosition() string {
-	if o == nil || isNil(o.Position) {
+	if o == nil || IsNil(o.Position) {
 		var ret string
 		return ret
 	}
@@ -1018,7 +1021,7 @@ func (o *PowerSuppliesResourceInner) GetPosition() string {
 // GetPositionOk returns a tuple with the Position field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetPositionOk() (*string, bool) {
-	if o == nil || isNil(o.Position) {
+	if o == nil || IsNil(o.Position) {
 		return nil, false
 	}
 	return o.Position, true
@@ -1026,7 +1029,7 @@ func (o *PowerSuppliesResourceInner) GetPositionOk() (*string, bool) {
 
 // HasPosition returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasPosition() bool {
-	if o != nil && !isNil(o.Position) {
+	if o != nil && !IsNil(o.Position) {
 		return true
 	}
 
@@ -1040,7 +1043,7 @@ func (o *PowerSuppliesResourceInner) SetPosition(v string) {
 
 // GetPositionNumeric returns the PositionNumeric field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetPositionNumeric() int64 {
-	if o == nil || isNil(o.PositionNumeric) {
+	if o == nil || IsNil(o.PositionNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1050,7 +1053,7 @@ func (o *PowerSuppliesResourceInner) GetPositionNumeric() int64 {
 // GetPositionNumericOk returns a tuple with the PositionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetPositionNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.PositionNumeric) {
+	if o == nil || IsNil(o.PositionNumeric) {
 		return nil, false
 	}
 	return o.PositionNumeric, true
@@ -1058,7 +1061,7 @@ func (o *PowerSuppliesResourceInner) GetPositionNumericOk() (*int64, bool) {
 
 // HasPositionNumeric returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasPositionNumeric() bool {
-	if o != nil && !isNil(o.PositionNumeric) {
+	if o != nil && !IsNil(o.PositionNumeric) {
 		return true
 	}
 
@@ -1072,7 +1075,7 @@ func (o *PowerSuppliesResourceInner) SetPositionNumeric(v int64) {
 
 // GetRevision returns the Revision field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetRevision() string {
-	if o == nil || isNil(o.Revision) {
+	if o == nil || IsNil(o.Revision) {
 		var ret string
 		return ret
 	}
@@ -1082,7 +1085,7 @@ func (o *PowerSuppliesResourceInner) GetRevision() string {
 // GetRevisionOk returns a tuple with the Revision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetRevisionOk() (*string, bool) {
-	if o == nil || isNil(o.Revision) {
+	if o == nil || IsNil(o.Revision) {
 		return nil, false
 	}
 	return o.Revision, true
@@ -1090,7 +1093,7 @@ func (o *PowerSuppliesResourceInner) GetRevisionOk() (*string, bool) {
 
 // HasRevision returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasRevision() bool {
-	if o != nil && !isNil(o.Revision) {
+	if o != nil && !IsNil(o.Revision) {
 		return true
 	}
 
@@ -1104,7 +1107,7 @@ func (o *PowerSuppliesResourceInner) SetRevision(v string) {
 
 // GetSerialNumber returns the SerialNumber field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetSerialNumber() string {
-	if o == nil || isNil(o.SerialNumber) {
+	if o == nil || IsNil(o.SerialNumber) {
 		var ret string
 		return ret
 	}
@@ -1114,7 +1117,7 @@ func (o *PowerSuppliesResourceInner) GetSerialNumber() string {
 // GetSerialNumberOk returns a tuple with the SerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetSerialNumberOk() (*string, bool) {
-	if o == nil || isNil(o.SerialNumber) {
+	if o == nil || IsNil(o.SerialNumber) {
 		return nil, false
 	}
 	return o.SerialNumber, true
@@ -1122,7 +1125,7 @@ func (o *PowerSuppliesResourceInner) GetSerialNumberOk() (*string, bool) {
 
 // HasSerialNumber returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasSerialNumber() bool {
-	if o != nil && !isNil(o.SerialNumber) {
+	if o != nil && !IsNil(o.SerialNumber) {
 		return true
 	}
 
@@ -1136,7 +1139,7 @@ func (o *PowerSuppliesResourceInner) SetSerialNumber(v string) {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetStatus() string {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret string
 		return ret
 	}
@@ -1146,7 +1149,7 @@ func (o *PowerSuppliesResourceInner) GetStatus() string {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetStatusOk() (*string, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -1154,7 +1157,7 @@ func (o *PowerSuppliesResourceInner) GetStatusOk() (*string, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -1168,7 +1171,7 @@ func (o *PowerSuppliesResourceInner) SetStatus(v string) {
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetStatusNumeric() int64 {
-	if o == nil || isNil(o.StatusNumeric) {
+	if o == nil || IsNil(o.StatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1178,7 +1181,7 @@ func (o *PowerSuppliesResourceInner) GetStatusNumeric() int64 {
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetStatusNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.StatusNumeric) {
+	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
 	return o.StatusNumeric, true
@@ -1186,7 +1189,7 @@ func (o *PowerSuppliesResourceInner) GetStatusNumericOk() (*int64, bool) {
 
 // HasStatusNumeric returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasStatusNumeric() bool {
-	if o != nil && !isNil(o.StatusNumeric) {
+	if o != nil && !IsNil(o.StatusNumeric) {
 		return true
 	}
 
@@ -1200,7 +1203,7 @@ func (o *PowerSuppliesResourceInner) SetStatusNumeric(v int64) {
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetUrl() string {
-	if o == nil || isNil(o.Url) {
+	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
 	}
@@ -1210,7 +1213,7 @@ func (o *PowerSuppliesResourceInner) GetUrl() string {
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetUrlOk() (*string, bool) {
-	if o == nil || isNil(o.Url) {
+	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
 	return o.Url, true
@@ -1218,7 +1221,7 @@ func (o *PowerSuppliesResourceInner) GetUrlOk() (*string, bool) {
 
 // HasUrl returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasUrl() bool {
-	if o != nil && !isNil(o.Url) {
+	if o != nil && !IsNil(o.Url) {
 		return true
 	}
 
@@ -1232,7 +1235,7 @@ func (o *PowerSuppliesResourceInner) SetUrl(v string) {
 
 // GetVendor returns the Vendor field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetVendor() string {
-	if o == nil || isNil(o.Vendor) {
+	if o == nil || IsNil(o.Vendor) {
 		var ret string
 		return ret
 	}
@@ -1242,7 +1245,7 @@ func (o *PowerSuppliesResourceInner) GetVendor() string {
 // GetVendorOk returns a tuple with the Vendor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetVendorOk() (*string, bool) {
-	if o == nil || isNil(o.Vendor) {
+	if o == nil || IsNil(o.Vendor) {
 		return nil, false
 	}
 	return o.Vendor, true
@@ -1250,7 +1253,7 @@ func (o *PowerSuppliesResourceInner) GetVendorOk() (*string, bool) {
 
 // HasVendor returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasVendor() bool {
-	if o != nil && !isNil(o.Vendor) {
+	if o != nil && !IsNil(o.Vendor) {
 		return true
 	}
 
@@ -1264,7 +1267,7 @@ func (o *PowerSuppliesResourceInner) SetVendor(v string) {
 
 // GetFan returns the Fan field value if set, zero value otherwise.
 func (o *PowerSuppliesResourceInner) GetFan() []FanResourceInner {
-	if o == nil || isNil(o.Fan) {
+	if o == nil || IsNil(o.Fan) {
 		var ret []FanResourceInner
 		return ret
 	}
@@ -1274,7 +1277,7 @@ func (o *PowerSuppliesResourceInner) GetFan() []FanResourceInner {
 // GetFanOk returns a tuple with the Fan field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesResourceInner) GetFanOk() ([]FanResourceInner, bool) {
-	if o == nil || isNil(o.Fan) {
+	if o == nil || IsNil(o.Fan) {
 		return nil, false
 	}
 	return o.Fan, true
@@ -1282,7 +1285,7 @@ func (o *PowerSuppliesResourceInner) GetFanOk() ([]FanResourceInner, bool) {
 
 // HasFan returns a boolean if a field has been set.
 func (o *PowerSuppliesResourceInner) HasFan() bool {
-	if o != nil && !isNil(o.Fan) {
+	if o != nil && !IsNil(o.Fan) {
 		return true
 	}
 
@@ -1295,122 +1298,130 @@ func (o *PowerSuppliesResourceInner) SetFan(v []FanResourceInner) {
 }
 
 func (o PowerSuppliesResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.ConfigurationSerialnumber) {
-		toSerialize["configuration-serialnumber"] = o.ConfigurationSerialnumber
-	}
-	if !isNil(o.DashLevel) {
-		toSerialize["dash-level"] = o.DashLevel
-	}
-	if !isNil(o.Dc12i) {
-		toSerialize["dc12i"] = o.Dc12i
-	}
-	if !isNil(o.Dc12v) {
-		toSerialize["dc12v"] = o.Dc12v
-	}
-	if !isNil(o.Dc33v) {
-		toSerialize["dc33v"] = o.Dc33v
-	}
-	if !isNil(o.Dc5i) {
-		toSerialize["dc5i"] = o.Dc5i
-	}
-	if !isNil(o.Dc5v) {
-		toSerialize["dc5v"] = o.Dc5v
-	}
-	if !isNil(o.Dctemp) {
-		toSerialize["dctemp"] = o.Dctemp
-	}
-	if !isNil(o.Description) {
-		toSerialize["description"] = o.Description
-	}
-	if !isNil(o.DomId) {
-		toSerialize["dom-id"] = o.DomId
-	}
-	if !isNil(o.DurableId) {
-		toSerialize["durable-id"] = o.DurableId
-	}
-	if !isNil(o.EnclosureId) {
-		toSerialize["enclosure-id"] = o.EnclosureId
-	}
-	if !isNil(o.EnclosuresUrl) {
-		toSerialize["enclosures-url"] = o.EnclosuresUrl
-	}
-	if !isNil(o.FruShortname) {
-		toSerialize["fru-shortname"] = o.FruShortname
-	}
-	if !isNil(o.FwRevision) {
-		toSerialize["fw-revision"] = o.FwRevision
-	}
-	if !isNil(o.Health) {
-		toSerialize["health"] = o.Health
-	}
-	if !isNil(o.HealthNumeric) {
-		toSerialize["health-numeric"] = o.HealthNumeric
-	}
-	if !isNil(o.HealthReason) {
-		toSerialize["health-reason"] = o.HealthReason
-	}
-	if !isNil(o.HealthRecommendation) {
-		toSerialize["health-recommendation"] = o.HealthRecommendation
-	}
-	if !isNil(o.Location) {
-		toSerialize["location"] = o.Location
-	}
-	if !isNil(o.MfgDate) {
-		toSerialize["mfg-date"] = o.MfgDate
-	}
-	if !isNil(o.MfgDateNumeric) {
-		toSerialize["mfg-date-numeric"] = o.MfgDateNumeric
-	}
-	if !isNil(o.MfgLocation) {
-		toSerialize["mfg-location"] = o.MfgLocation
-	}
-	if !isNil(o.MfgVendorId) {
-		toSerialize["mfg-vendor-id"] = o.MfgVendorId
-	}
-	if !isNil(o.Model) {
-		toSerialize["model"] = o.Model
-	}
-	if !isNil(o.Name) {
-		toSerialize["name"] = o.Name
-	}
-	if !isNil(o.PartNumber) {
-		toSerialize["part-number"] = o.PartNumber
-	}
-	if !isNil(o.Position) {
-		toSerialize["position"] = o.Position
-	}
-	if !isNil(o.PositionNumeric) {
-		toSerialize["position-numeric"] = o.PositionNumeric
-	}
-	if !isNil(o.Revision) {
-		toSerialize["revision"] = o.Revision
-	}
-	if !isNil(o.SerialNumber) {
-		toSerialize["serial-number"] = o.SerialNumber
-	}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.StatusNumeric) {
-		toSerialize["status-numeric"] = o.StatusNumeric
-	}
-	if !isNil(o.Url) {
-		toSerialize["url"] = o.Url
-	}
-	if !isNil(o.Vendor) {
-		toSerialize["vendor"] = o.Vendor
-	}
-	if !isNil(o.Fan) {
-		toSerialize["fan"] = o.Fan
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o PowerSuppliesResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.ConfigurationSerialnumber) {
+		toSerialize["configuration-serialnumber"] = o.ConfigurationSerialnumber
+	}
+	if !IsNil(o.DashLevel) {
+		toSerialize["dash-level"] = o.DashLevel
+	}
+	if !IsNil(o.Dc12i) {
+		toSerialize["dc12i"] = o.Dc12i
+	}
+	if !IsNil(o.Dc12v) {
+		toSerialize["dc12v"] = o.Dc12v
+	}
+	if !IsNil(o.Dc33v) {
+		toSerialize["dc33v"] = o.Dc33v
+	}
+	if !IsNil(o.Dc5i) {
+		toSerialize["dc5i"] = o.Dc5i
+	}
+	if !IsNil(o.Dc5v) {
+		toSerialize["dc5v"] = o.Dc5v
+	}
+	if !IsNil(o.Dctemp) {
+		toSerialize["dctemp"] = o.Dctemp
+	}
+	if !IsNil(o.Description) {
+		toSerialize["description"] = o.Description
+	}
+	if !IsNil(o.DomId) {
+		toSerialize["dom-id"] = o.DomId
+	}
+	if !IsNil(o.DurableId) {
+		toSerialize["durable-id"] = o.DurableId
+	}
+	if !IsNil(o.EnclosureId) {
+		toSerialize["enclosure-id"] = o.EnclosureId
+	}
+	if !IsNil(o.EnclosuresUrl) {
+		toSerialize["enclosures-url"] = o.EnclosuresUrl
+	}
+	if !IsNil(o.FruShortname) {
+		toSerialize["fru-shortname"] = o.FruShortname
+	}
+	if !IsNil(o.FwRevision) {
+		toSerialize["fw-revision"] = o.FwRevision
+	}
+	if !IsNil(o.Health) {
+		toSerialize["health"] = o.Health
+	}
+	if !IsNil(o.HealthNumeric) {
+		toSerialize["health-numeric"] = o.HealthNumeric
+	}
+	if !IsNil(o.HealthReason) {
+		toSerialize["health-reason"] = o.HealthReason
+	}
+	if !IsNil(o.HealthRecommendation) {
+		toSerialize["health-recommendation"] = o.HealthRecommendation
+	}
+	if !IsNil(o.Location) {
+		toSerialize["location"] = o.Location
+	}
+	if !IsNil(o.MfgDate) {
+		toSerialize["mfg-date"] = o.MfgDate
+	}
+	if !IsNil(o.MfgDateNumeric) {
+		toSerialize["mfg-date-numeric"] = o.MfgDateNumeric
+	}
+	if !IsNil(o.MfgLocation) {
+		toSerialize["mfg-location"] = o.MfgLocation
+	}
+	if !IsNil(o.MfgVendorId) {
+		toSerialize["mfg-vendor-id"] = o.MfgVendorId
+	}
+	if !IsNil(o.Model) {
+		toSerialize["model"] = o.Model
+	}
+	if !IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !IsNil(o.PartNumber) {
+		toSerialize["part-number"] = o.PartNumber
+	}
+	if !IsNil(o.Position) {
+		toSerialize["position"] = o.Position
+	}
+	if !IsNil(o.PositionNumeric) {
+		toSerialize["position-numeric"] = o.PositionNumeric
+	}
+	if !IsNil(o.Revision) {
+		toSerialize["revision"] = o.Revision
+	}
+	if !IsNil(o.SerialNumber) {
+		toSerialize["serial-number"] = o.SerialNumber
+	}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.StatusNumeric) {
+		toSerialize["status-numeric"] = o.StatusNumeric
+	}
+	if !IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
+	if !IsNil(o.Vendor) {
+		toSerialize["vendor"] = o.Vendor
+	}
+	if !IsNil(o.Fan) {
+		toSerialize["fan"] = o.Fan
+	}
+	return toSerialize, nil
 }
 
 type NullablePowerSuppliesResourceInner struct {

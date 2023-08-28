@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the PoolsResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &PoolsResourceInner{}
+
 // PoolsResourceInner struct for PoolsResourceInner
 type PoolsResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
@@ -141,7 +144,7 @@ func NewPoolsResourceInnerWithDefaults() *PoolsResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -151,7 +154,7 @@ func (o *PoolsResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -159,7 +162,7 @@ func (o *PoolsResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -173,7 +176,7 @@ func (o *PoolsResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -183,7 +186,7 @@ func (o *PoolsResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -191,7 +194,7 @@ func (o *PoolsResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -205,7 +208,7 @@ func (o *PoolsResourceInner) SetMeta(v string) {
 
 // GetAllocatedPages returns the AllocatedPages field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetAllocatedPages() int64 {
-	if o == nil || isNil(o.AllocatedPages) {
+	if o == nil || IsNil(o.AllocatedPages) {
 		var ret int64
 		return ret
 	}
@@ -215,7 +218,7 @@ func (o *PoolsResourceInner) GetAllocatedPages() int64 {
 // GetAllocatedPagesOk returns a tuple with the AllocatedPages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetAllocatedPagesOk() (*int64, bool) {
-	if o == nil || isNil(o.AllocatedPages) {
+	if o == nil || IsNil(o.AllocatedPages) {
 		return nil, false
 	}
 	return o.AllocatedPages, true
@@ -223,7 +226,7 @@ func (o *PoolsResourceInner) GetAllocatedPagesOk() (*int64, bool) {
 
 // HasAllocatedPages returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasAllocatedPages() bool {
-	if o != nil && !isNil(o.AllocatedPages) {
+	if o != nil && !IsNil(o.AllocatedPages) {
 		return true
 	}
 
@@ -237,7 +240,7 @@ func (o *PoolsResourceInner) SetAllocatedPages(v int64) {
 
 // GetAvailablePages returns the AvailablePages field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetAvailablePages() int64 {
-	if o == nil || isNil(o.AvailablePages) {
+	if o == nil || IsNil(o.AvailablePages) {
 		var ret int64
 		return ret
 	}
@@ -247,7 +250,7 @@ func (o *PoolsResourceInner) GetAvailablePages() int64 {
 // GetAvailablePagesOk returns a tuple with the AvailablePages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetAvailablePagesOk() (*int64, bool) {
-	if o == nil || isNil(o.AvailablePages) {
+	if o == nil || IsNil(o.AvailablePages) {
 		return nil, false
 	}
 	return o.AvailablePages, true
@@ -255,7 +258,7 @@ func (o *PoolsResourceInner) GetAvailablePagesOk() (*int64, bool) {
 
 // HasAvailablePages returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasAvailablePages() bool {
-	if o != nil && !isNil(o.AvailablePages) {
+	if o != nil && !IsNil(o.AvailablePages) {
 		return true
 	}
 
@@ -269,7 +272,7 @@ func (o *PoolsResourceInner) SetAvailablePages(v int64) {
 
 // GetAvailableRfcSize returns the AvailableRfcSize field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetAvailableRfcSize() string {
-	if o == nil || isNil(o.AvailableRfcSize) {
+	if o == nil || IsNil(o.AvailableRfcSize) {
 		var ret string
 		return ret
 	}
@@ -279,7 +282,7 @@ func (o *PoolsResourceInner) GetAvailableRfcSize() string {
 // GetAvailableRfcSizeOk returns a tuple with the AvailableRfcSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetAvailableRfcSizeOk() (*string, bool) {
-	if o == nil || isNil(o.AvailableRfcSize) {
+	if o == nil || IsNil(o.AvailableRfcSize) {
 		return nil, false
 	}
 	return o.AvailableRfcSize, true
@@ -287,7 +290,7 @@ func (o *PoolsResourceInner) GetAvailableRfcSizeOk() (*string, bool) {
 
 // HasAvailableRfcSize returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasAvailableRfcSize() bool {
-	if o != nil && !isNil(o.AvailableRfcSize) {
+	if o != nil && !IsNil(o.AvailableRfcSize) {
 		return true
 	}
 
@@ -301,7 +304,7 @@ func (o *PoolsResourceInner) SetAvailableRfcSize(v string) {
 
 // GetAvailableRfcSizeNumeric returns the AvailableRfcSizeNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetAvailableRfcSizeNumeric() int64 {
-	if o == nil || isNil(o.AvailableRfcSizeNumeric) {
+	if o == nil || IsNil(o.AvailableRfcSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -311,7 +314,7 @@ func (o *PoolsResourceInner) GetAvailableRfcSizeNumeric() int64 {
 // GetAvailableRfcSizeNumericOk returns a tuple with the AvailableRfcSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetAvailableRfcSizeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.AvailableRfcSizeNumeric) {
+	if o == nil || IsNil(o.AvailableRfcSizeNumeric) {
 		return nil, false
 	}
 	return o.AvailableRfcSizeNumeric, true
@@ -319,7 +322,7 @@ func (o *PoolsResourceInner) GetAvailableRfcSizeNumericOk() (*int64, bool) {
 
 // HasAvailableRfcSizeNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasAvailableRfcSizeNumeric() bool {
-	if o != nil && !isNil(o.AvailableRfcSizeNumeric) {
+	if o != nil && !IsNil(o.AvailableRfcSizeNumeric) {
 		return true
 	}
 
@@ -333,7 +336,7 @@ func (o *PoolsResourceInner) SetAvailableRfcSizeNumeric(v int64) {
 
 // GetBlocksize returns the Blocksize field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetBlocksize() int64 {
-	if o == nil || isNil(o.Blocksize) {
+	if o == nil || IsNil(o.Blocksize) {
 		var ret int64
 		return ret
 	}
@@ -343,7 +346,7 @@ func (o *PoolsResourceInner) GetBlocksize() int64 {
 // GetBlocksizeOk returns a tuple with the Blocksize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetBlocksizeOk() (*int64, bool) {
-	if o == nil || isNil(o.Blocksize) {
+	if o == nil || IsNil(o.Blocksize) {
 		return nil, false
 	}
 	return o.Blocksize, true
@@ -351,7 +354,7 @@ func (o *PoolsResourceInner) GetBlocksizeOk() (*int64, bool) {
 
 // HasBlocksize returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasBlocksize() bool {
-	if o != nil && !isNil(o.Blocksize) {
+	if o != nil && !IsNil(o.Blocksize) {
 		return true
 	}
 
@@ -365,7 +368,7 @@ func (o *PoolsResourceInner) SetBlocksize(v int64) {
 
 // GetCompressionEfficiency returns the CompressionEfficiency field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetCompressionEfficiency() string {
-	if o == nil || isNil(o.CompressionEfficiency) {
+	if o == nil || IsNil(o.CompressionEfficiency) {
 		var ret string
 		return ret
 	}
@@ -375,7 +378,7 @@ func (o *PoolsResourceInner) GetCompressionEfficiency() string {
 // GetCompressionEfficiencyOk returns a tuple with the CompressionEfficiency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetCompressionEfficiencyOk() (*string, bool) {
-	if o == nil || isNil(o.CompressionEfficiency) {
+	if o == nil || IsNil(o.CompressionEfficiency) {
 		return nil, false
 	}
 	return o.CompressionEfficiency, true
@@ -383,7 +386,7 @@ func (o *PoolsResourceInner) GetCompressionEfficiencyOk() (*string, bool) {
 
 // HasCompressionEfficiency returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasCompressionEfficiency() bool {
-	if o != nil && !isNil(o.CompressionEfficiency) {
+	if o != nil && !IsNil(o.CompressionEfficiency) {
 		return true
 	}
 
@@ -397,7 +400,7 @@ func (o *PoolsResourceInner) SetCompressionEfficiency(v string) {
 
 // GetDiskGroupsCount returns the DiskGroupsCount field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetDiskGroupsCount() int64 {
-	if o == nil || isNil(o.DiskGroupsCount) {
+	if o == nil || IsNil(o.DiskGroupsCount) {
 		var ret int64
 		return ret
 	}
@@ -407,7 +410,7 @@ func (o *PoolsResourceInner) GetDiskGroupsCount() int64 {
 // GetDiskGroupsCountOk returns a tuple with the DiskGroupsCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetDiskGroupsCountOk() (*int64, bool) {
-	if o == nil || isNil(o.DiskGroupsCount) {
+	if o == nil || IsNil(o.DiskGroupsCount) {
 		return nil, false
 	}
 	return o.DiskGroupsCount, true
@@ -415,7 +418,7 @@ func (o *PoolsResourceInner) GetDiskGroupsCountOk() (*int64, bool) {
 
 // HasDiskGroupsCount returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasDiskGroupsCount() bool {
-	if o != nil && !isNil(o.DiskGroupsCount) {
+	if o != nil && !IsNil(o.DiskGroupsCount) {
 		return true
 	}
 
@@ -429,7 +432,7 @@ func (o *PoolsResourceInner) SetDiskGroupsCount(v int64) {
 
 // GetExtendedStatus returns the ExtendedStatus field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetExtendedStatus() int64 {
-	if o == nil || isNil(o.ExtendedStatus) {
+	if o == nil || IsNil(o.ExtendedStatus) {
 		var ret int64
 		return ret
 	}
@@ -439,7 +442,7 @@ func (o *PoolsResourceInner) GetExtendedStatus() int64 {
 // GetExtendedStatusOk returns a tuple with the ExtendedStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetExtendedStatusOk() (*int64, bool) {
-	if o == nil || isNil(o.ExtendedStatus) {
+	if o == nil || IsNil(o.ExtendedStatus) {
 		return nil, false
 	}
 	return o.ExtendedStatus, true
@@ -447,7 +450,7 @@ func (o *PoolsResourceInner) GetExtendedStatusOk() (*int64, bool) {
 
 // HasExtendedStatus returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasExtendedStatus() bool {
-	if o != nil && !isNil(o.ExtendedStatus) {
+	if o != nil && !IsNil(o.ExtendedStatus) {
 		return true
 	}
 
@@ -461,7 +464,7 @@ func (o *PoolsResourceInner) SetExtendedStatus(v int64) {
 
 // GetHealth returns the Health field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetHealth() string {
-	if o == nil || isNil(o.Health) {
+	if o == nil || IsNil(o.Health) {
 		var ret string
 		return ret
 	}
@@ -471,7 +474,7 @@ func (o *PoolsResourceInner) GetHealth() string {
 // GetHealthOk returns a tuple with the Health field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetHealthOk() (*string, bool) {
-	if o == nil || isNil(o.Health) {
+	if o == nil || IsNil(o.Health) {
 		return nil, false
 	}
 	return o.Health, true
@@ -479,7 +482,7 @@ func (o *PoolsResourceInner) GetHealthOk() (*string, bool) {
 
 // HasHealth returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasHealth() bool {
-	if o != nil && !isNil(o.Health) {
+	if o != nil && !IsNil(o.Health) {
 		return true
 	}
 
@@ -493,7 +496,7 @@ func (o *PoolsResourceInner) SetHealth(v string) {
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetHealthNumeric() int64 {
-	if o == nil || isNil(o.HealthNumeric) {
+	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -503,7 +506,7 @@ func (o *PoolsResourceInner) GetHealthNumeric() int64 {
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetHealthNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.HealthNumeric) {
+	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
 	return o.HealthNumeric, true
@@ -511,7 +514,7 @@ func (o *PoolsResourceInner) GetHealthNumericOk() (*int64, bool) {
 
 // HasHealthNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasHealthNumeric() bool {
-	if o != nil && !isNil(o.HealthNumeric) {
+	if o != nil && !IsNil(o.HealthNumeric) {
 		return true
 	}
 
@@ -525,7 +528,7 @@ func (o *PoolsResourceInner) SetHealthNumeric(v int64) {
 
 // GetHealthReason returns the HealthReason field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetHealthReason() string {
-	if o == nil || isNil(o.HealthReason) {
+	if o == nil || IsNil(o.HealthReason) {
 		var ret string
 		return ret
 	}
@@ -535,7 +538,7 @@ func (o *PoolsResourceInner) GetHealthReason() string {
 // GetHealthReasonOk returns a tuple with the HealthReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetHealthReasonOk() (*string, bool) {
-	if o == nil || isNil(o.HealthReason) {
+	if o == nil || IsNil(o.HealthReason) {
 		return nil, false
 	}
 	return o.HealthReason, true
@@ -543,7 +546,7 @@ func (o *PoolsResourceInner) GetHealthReasonOk() (*string, bool) {
 
 // HasHealthReason returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasHealthReason() bool {
-	if o != nil && !isNil(o.HealthReason) {
+	if o != nil && !IsNil(o.HealthReason) {
 		return true
 	}
 
@@ -557,7 +560,7 @@ func (o *PoolsResourceInner) SetHealthReason(v string) {
 
 // GetHealthReasonNumeric returns the HealthReasonNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetHealthReasonNumeric() int64 {
-	if o == nil || isNil(o.HealthReasonNumeric) {
+	if o == nil || IsNil(o.HealthReasonNumeric) {
 		var ret int64
 		return ret
 	}
@@ -567,7 +570,7 @@ func (o *PoolsResourceInner) GetHealthReasonNumeric() int64 {
 // GetHealthReasonNumericOk returns a tuple with the HealthReasonNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetHealthReasonNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.HealthReasonNumeric) {
+	if o == nil || IsNil(o.HealthReasonNumeric) {
 		return nil, false
 	}
 	return o.HealthReasonNumeric, true
@@ -575,7 +578,7 @@ func (o *PoolsResourceInner) GetHealthReasonNumericOk() (*int64, bool) {
 
 // HasHealthReasonNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasHealthReasonNumeric() bool {
-	if o != nil && !isNil(o.HealthReasonNumeric) {
+	if o != nil && !IsNil(o.HealthReasonNumeric) {
 		return true
 	}
 
@@ -589,7 +592,7 @@ func (o *PoolsResourceInner) SetHealthReasonNumeric(v int64) {
 
 // GetHealthRecommendation returns the HealthRecommendation field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetHealthRecommendation() string {
-	if o == nil || isNil(o.HealthRecommendation) {
+	if o == nil || IsNil(o.HealthRecommendation) {
 		var ret string
 		return ret
 	}
@@ -599,7 +602,7 @@ func (o *PoolsResourceInner) GetHealthRecommendation() string {
 // GetHealthRecommendationOk returns a tuple with the HealthRecommendation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetHealthRecommendationOk() (*string, bool) {
-	if o == nil || isNil(o.HealthRecommendation) {
+	if o == nil || IsNil(o.HealthRecommendation) {
 		return nil, false
 	}
 	return o.HealthRecommendation, true
@@ -607,7 +610,7 @@ func (o *PoolsResourceInner) GetHealthRecommendationOk() (*string, bool) {
 
 // HasHealthRecommendation returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasHealthRecommendation() bool {
-	if o != nil && !isNil(o.HealthRecommendation) {
+	if o != nil && !IsNil(o.HealthRecommendation) {
 		return true
 	}
 
@@ -621,7 +624,7 @@ func (o *PoolsResourceInner) SetHealthRecommendation(v string) {
 
 // GetHealthRecommendationNumeric returns the HealthRecommendationNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetHealthRecommendationNumeric() int64 {
-	if o == nil || isNil(o.HealthRecommendationNumeric) {
+	if o == nil || IsNil(o.HealthRecommendationNumeric) {
 		var ret int64
 		return ret
 	}
@@ -631,7 +634,7 @@ func (o *PoolsResourceInner) GetHealthRecommendationNumeric() int64 {
 // GetHealthRecommendationNumericOk returns a tuple with the HealthRecommendationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetHealthRecommendationNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.HealthRecommendationNumeric) {
+	if o == nil || IsNil(o.HealthRecommendationNumeric) {
 		return nil, false
 	}
 	return o.HealthRecommendationNumeric, true
@@ -639,7 +642,7 @@ func (o *PoolsResourceInner) GetHealthRecommendationNumericOk() (*int64, bool) {
 
 // HasHealthRecommendationNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasHealthRecommendationNumeric() bool {
-	if o != nil && !isNil(o.HealthRecommendationNumeric) {
+	if o != nil && !IsNil(o.HealthRecommendationNumeric) {
 		return true
 	}
 
@@ -653,7 +656,7 @@ func (o *PoolsResourceInner) SetHealthRecommendationNumeric(v int64) {
 
 // GetHighThreshold returns the HighThreshold field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetHighThreshold() string {
-	if o == nil || isNil(o.HighThreshold) {
+	if o == nil || IsNil(o.HighThreshold) {
 		var ret string
 		return ret
 	}
@@ -663,7 +666,7 @@ func (o *PoolsResourceInner) GetHighThreshold() string {
 // GetHighThresholdOk returns a tuple with the HighThreshold field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetHighThresholdOk() (*string, bool) {
-	if o == nil || isNil(o.HighThreshold) {
+	if o == nil || IsNil(o.HighThreshold) {
 		return nil, false
 	}
 	return o.HighThreshold, true
@@ -671,7 +674,7 @@ func (o *PoolsResourceInner) GetHighThresholdOk() (*string, bool) {
 
 // HasHighThreshold returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasHighThreshold() bool {
-	if o != nil && !isNil(o.HighThreshold) {
+	if o != nil && !IsNil(o.HighThreshold) {
 		return true
 	}
 
@@ -685,7 +688,7 @@ func (o *PoolsResourceInner) SetHighThreshold(v string) {
 
 // GetIdlePageCheck returns the IdlePageCheck field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetIdlePageCheck() string {
-	if o == nil || isNil(o.IdlePageCheck) {
+	if o == nil || IsNil(o.IdlePageCheck) {
 		var ret string
 		return ret
 	}
@@ -695,7 +698,7 @@ func (o *PoolsResourceInner) GetIdlePageCheck() string {
 // GetIdlePageCheckOk returns a tuple with the IdlePageCheck field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetIdlePageCheckOk() (*string, bool) {
-	if o == nil || isNil(o.IdlePageCheck) {
+	if o == nil || IsNil(o.IdlePageCheck) {
 		return nil, false
 	}
 	return o.IdlePageCheck, true
@@ -703,7 +706,7 @@ func (o *PoolsResourceInner) GetIdlePageCheckOk() (*string, bool) {
 
 // HasIdlePageCheck returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasIdlePageCheck() bool {
-	if o != nil && !isNil(o.IdlePageCheck) {
+	if o != nil && !IsNil(o.IdlePageCheck) {
 		return true
 	}
 
@@ -717,7 +720,7 @@ func (o *PoolsResourceInner) SetIdlePageCheck(v string) {
 
 // GetIdlePageCheckNumeric returns the IdlePageCheckNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetIdlePageCheckNumeric() int64 {
-	if o == nil || isNil(o.IdlePageCheckNumeric) {
+	if o == nil || IsNil(o.IdlePageCheckNumeric) {
 		var ret int64
 		return ret
 	}
@@ -727,7 +730,7 @@ func (o *PoolsResourceInner) GetIdlePageCheckNumeric() int64 {
 // GetIdlePageCheckNumericOk returns a tuple with the IdlePageCheckNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetIdlePageCheckNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.IdlePageCheckNumeric) {
+	if o == nil || IsNil(o.IdlePageCheckNumeric) {
 		return nil, false
 	}
 	return o.IdlePageCheckNumeric, true
@@ -735,7 +738,7 @@ func (o *PoolsResourceInner) GetIdlePageCheckNumericOk() (*int64, bool) {
 
 // HasIdlePageCheckNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasIdlePageCheckNumeric() bool {
-	if o != nil && !isNil(o.IdlePageCheckNumeric) {
+	if o != nil && !IsNil(o.IdlePageCheckNumeric) {
 		return true
 	}
 
@@ -749,7 +752,7 @@ func (o *PoolsResourceInner) SetIdlePageCheckNumeric(v int64) {
 
 // GetLowThreshold returns the LowThreshold field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetLowThreshold() string {
-	if o == nil || isNil(o.LowThreshold) {
+	if o == nil || IsNil(o.LowThreshold) {
 		var ret string
 		return ret
 	}
@@ -759,7 +762,7 @@ func (o *PoolsResourceInner) GetLowThreshold() string {
 // GetLowThresholdOk returns a tuple with the LowThreshold field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetLowThresholdOk() (*string, bool) {
-	if o == nil || isNil(o.LowThreshold) {
+	if o == nil || IsNil(o.LowThreshold) {
 		return nil, false
 	}
 	return o.LowThreshold, true
@@ -767,7 +770,7 @@ func (o *PoolsResourceInner) GetLowThresholdOk() (*string, bool) {
 
 // HasLowThreshold returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasLowThreshold() bool {
-	if o != nil && !isNil(o.LowThreshold) {
+	if o != nil && !IsNil(o.LowThreshold) {
 		return true
 	}
 
@@ -781,7 +784,7 @@ func (o *PoolsResourceInner) SetLowThreshold(v string) {
 
 // GetMetadataAllocated returns the MetadataAllocated field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMetadataAllocated() string {
-	if o == nil || isNil(o.MetadataAllocated) {
+	if o == nil || IsNil(o.MetadataAllocated) {
 		var ret string
 		return ret
 	}
@@ -791,7 +794,7 @@ func (o *PoolsResourceInner) GetMetadataAllocated() string {
 // GetMetadataAllocatedOk returns a tuple with the MetadataAllocated field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMetadataAllocatedOk() (*string, bool) {
-	if o == nil || isNil(o.MetadataAllocated) {
+	if o == nil || IsNil(o.MetadataAllocated) {
 		return nil, false
 	}
 	return o.MetadataAllocated, true
@@ -799,7 +802,7 @@ func (o *PoolsResourceInner) GetMetadataAllocatedOk() (*string, bool) {
 
 // HasMetadataAllocated returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMetadataAllocated() bool {
-	if o != nil && !isNil(o.MetadataAllocated) {
+	if o != nil && !IsNil(o.MetadataAllocated) {
 		return true
 	}
 
@@ -813,7 +816,7 @@ func (o *PoolsResourceInner) SetMetadataAllocated(v string) {
 
 // GetMetadataAllocatedNumeric returns the MetadataAllocatedNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMetadataAllocatedNumeric() int64 {
-	if o == nil || isNil(o.MetadataAllocatedNumeric) {
+	if o == nil || IsNil(o.MetadataAllocatedNumeric) {
 		var ret int64
 		return ret
 	}
@@ -823,7 +826,7 @@ func (o *PoolsResourceInner) GetMetadataAllocatedNumeric() int64 {
 // GetMetadataAllocatedNumericOk returns a tuple with the MetadataAllocatedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMetadataAllocatedNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.MetadataAllocatedNumeric) {
+	if o == nil || IsNil(o.MetadataAllocatedNumeric) {
 		return nil, false
 	}
 	return o.MetadataAllocatedNumeric, true
@@ -831,7 +834,7 @@ func (o *PoolsResourceInner) GetMetadataAllocatedNumericOk() (*int64, bool) {
 
 // HasMetadataAllocatedNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMetadataAllocatedNumeric() bool {
-	if o != nil && !isNil(o.MetadataAllocatedNumeric) {
+	if o != nil && !IsNil(o.MetadataAllocatedNumeric) {
 		return true
 	}
 
@@ -845,7 +848,7 @@ func (o *PoolsResourceInner) SetMetadataAllocatedNumeric(v int64) {
 
 // GetMetadataAvailable returns the MetadataAvailable field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMetadataAvailable() string {
-	if o == nil || isNil(o.MetadataAvailable) {
+	if o == nil || IsNil(o.MetadataAvailable) {
 		var ret string
 		return ret
 	}
@@ -855,7 +858,7 @@ func (o *PoolsResourceInner) GetMetadataAvailable() string {
 // GetMetadataAvailableOk returns a tuple with the MetadataAvailable field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMetadataAvailableOk() (*string, bool) {
-	if o == nil || isNil(o.MetadataAvailable) {
+	if o == nil || IsNil(o.MetadataAvailable) {
 		return nil, false
 	}
 	return o.MetadataAvailable, true
@@ -863,7 +866,7 @@ func (o *PoolsResourceInner) GetMetadataAvailableOk() (*string, bool) {
 
 // HasMetadataAvailable returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMetadataAvailable() bool {
-	if o != nil && !isNil(o.MetadataAvailable) {
+	if o != nil && !IsNil(o.MetadataAvailable) {
 		return true
 	}
 
@@ -877,7 +880,7 @@ func (o *PoolsResourceInner) SetMetadataAvailable(v string) {
 
 // GetMetadataAvailableNumeric returns the MetadataAvailableNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMetadataAvailableNumeric() int64 {
-	if o == nil || isNil(o.MetadataAvailableNumeric) {
+	if o == nil || IsNil(o.MetadataAvailableNumeric) {
 		var ret int64
 		return ret
 	}
@@ -887,7 +890,7 @@ func (o *PoolsResourceInner) GetMetadataAvailableNumeric() int64 {
 // GetMetadataAvailableNumericOk returns a tuple with the MetadataAvailableNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMetadataAvailableNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.MetadataAvailableNumeric) {
+	if o == nil || IsNil(o.MetadataAvailableNumeric) {
 		return nil, false
 	}
 	return o.MetadataAvailableNumeric, true
@@ -895,7 +898,7 @@ func (o *PoolsResourceInner) GetMetadataAvailableNumericOk() (*int64, bool) {
 
 // HasMetadataAvailableNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMetadataAvailableNumeric() bool {
-	if o != nil && !isNil(o.MetadataAvailableNumeric) {
+	if o != nil && !IsNil(o.MetadataAvailableNumeric) {
 		return true
 	}
 
@@ -909,7 +912,7 @@ func (o *PoolsResourceInner) SetMetadataAvailableNumeric(v int64) {
 
 // GetMetadataTotalSize returns the MetadataTotalSize field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMetadataTotalSize() string {
-	if o == nil || isNil(o.MetadataTotalSize) {
+	if o == nil || IsNil(o.MetadataTotalSize) {
 		var ret string
 		return ret
 	}
@@ -919,7 +922,7 @@ func (o *PoolsResourceInner) GetMetadataTotalSize() string {
 // GetMetadataTotalSizeOk returns a tuple with the MetadataTotalSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMetadataTotalSizeOk() (*string, bool) {
-	if o == nil || isNil(o.MetadataTotalSize) {
+	if o == nil || IsNil(o.MetadataTotalSize) {
 		return nil, false
 	}
 	return o.MetadataTotalSize, true
@@ -927,7 +930,7 @@ func (o *PoolsResourceInner) GetMetadataTotalSizeOk() (*string, bool) {
 
 // HasMetadataTotalSize returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMetadataTotalSize() bool {
-	if o != nil && !isNil(o.MetadataTotalSize) {
+	if o != nil && !IsNil(o.MetadataTotalSize) {
 		return true
 	}
 
@@ -941,7 +944,7 @@ func (o *PoolsResourceInner) SetMetadataTotalSize(v string) {
 
 // GetMetadataTotalSizeNumeric returns the MetadataTotalSizeNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMetadataTotalSizeNumeric() int64 {
-	if o == nil || isNil(o.MetadataTotalSizeNumeric) {
+	if o == nil || IsNil(o.MetadataTotalSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -951,7 +954,7 @@ func (o *PoolsResourceInner) GetMetadataTotalSizeNumeric() int64 {
 // GetMetadataTotalSizeNumericOk returns a tuple with the MetadataTotalSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMetadataTotalSizeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.MetadataTotalSizeNumeric) {
+	if o == nil || IsNil(o.MetadataTotalSizeNumeric) {
 		return nil, false
 	}
 	return o.MetadataTotalSizeNumeric, true
@@ -959,7 +962,7 @@ func (o *PoolsResourceInner) GetMetadataTotalSizeNumericOk() (*int64, bool) {
 
 // HasMetadataTotalSizeNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMetadataTotalSizeNumeric() bool {
-	if o != nil && !isNil(o.MetadataTotalSizeNumeric) {
+	if o != nil && !IsNil(o.MetadataTotalSizeNumeric) {
 		return true
 	}
 
@@ -973,7 +976,7 @@ func (o *PoolsResourceInner) SetMetadataTotalSizeNumeric(v int64) {
 
 // GetMetadataVolSize returns the MetadataVolSize field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMetadataVolSize() string {
-	if o == nil || isNil(o.MetadataVolSize) {
+	if o == nil || IsNil(o.MetadataVolSize) {
 		var ret string
 		return ret
 	}
@@ -983,7 +986,7 @@ func (o *PoolsResourceInner) GetMetadataVolSize() string {
 // GetMetadataVolSizeOk returns a tuple with the MetadataVolSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMetadataVolSizeOk() (*string, bool) {
-	if o == nil || isNil(o.MetadataVolSize) {
+	if o == nil || IsNil(o.MetadataVolSize) {
 		return nil, false
 	}
 	return o.MetadataVolSize, true
@@ -991,7 +994,7 @@ func (o *PoolsResourceInner) GetMetadataVolSizeOk() (*string, bool) {
 
 // HasMetadataVolSize returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMetadataVolSize() bool {
-	if o != nil && !isNil(o.MetadataVolSize) {
+	if o != nil && !IsNil(o.MetadataVolSize) {
 		return true
 	}
 
@@ -1005,7 +1008,7 @@ func (o *PoolsResourceInner) SetMetadataVolSize(v string) {
 
 // GetMetadataVolSizeNumeric returns the MetadataVolSizeNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMetadataVolSizeNumeric() int64 {
-	if o == nil || isNil(o.MetadataVolSizeNumeric) {
+	if o == nil || IsNil(o.MetadataVolSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1015,7 +1018,7 @@ func (o *PoolsResourceInner) GetMetadataVolSizeNumeric() int64 {
 // GetMetadataVolSizeNumericOk returns a tuple with the MetadataVolSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMetadataVolSizeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.MetadataVolSizeNumeric) {
+	if o == nil || IsNil(o.MetadataVolSizeNumeric) {
 		return nil, false
 	}
 	return o.MetadataVolSizeNumeric, true
@@ -1023,7 +1026,7 @@ func (o *PoolsResourceInner) GetMetadataVolSizeNumericOk() (*int64, bool) {
 
 // HasMetadataVolSizeNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMetadataVolSizeNumeric() bool {
-	if o != nil && !isNil(o.MetadataVolSizeNumeric) {
+	if o != nil && !IsNil(o.MetadataVolSizeNumeric) {
 		return true
 	}
 
@@ -1037,7 +1040,7 @@ func (o *PoolsResourceInner) SetMetadataVolSizeNumeric(v int64) {
 
 // GetMiddleThreshold returns the MiddleThreshold field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMiddleThreshold() string {
-	if o == nil || isNil(o.MiddleThreshold) {
+	if o == nil || IsNil(o.MiddleThreshold) {
 		var ret string
 		return ret
 	}
@@ -1047,7 +1050,7 @@ func (o *PoolsResourceInner) GetMiddleThreshold() string {
 // GetMiddleThresholdOk returns a tuple with the MiddleThreshold field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMiddleThresholdOk() (*string, bool) {
-	if o == nil || isNil(o.MiddleThreshold) {
+	if o == nil || IsNil(o.MiddleThreshold) {
 		return nil, false
 	}
 	return o.MiddleThreshold, true
@@ -1055,7 +1058,7 @@ func (o *PoolsResourceInner) GetMiddleThresholdOk() (*string, bool) {
 
 // HasMiddleThreshold returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMiddleThreshold() bool {
-	if o != nil && !isNil(o.MiddleThreshold) {
+	if o != nil && !IsNil(o.MiddleThreshold) {
 		return true
 	}
 
@@ -1069,7 +1072,7 @@ func (o *PoolsResourceInner) SetMiddleThreshold(v string) {
 
 // GetMigration returns the Migration field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMigration() string {
-	if o == nil || isNil(o.Migration) {
+	if o == nil || IsNil(o.Migration) {
 		var ret string
 		return ret
 	}
@@ -1079,7 +1082,7 @@ func (o *PoolsResourceInner) GetMigration() string {
 // GetMigrationOk returns a tuple with the Migration field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMigrationOk() (*string, bool) {
-	if o == nil || isNil(o.Migration) {
+	if o == nil || IsNil(o.Migration) {
 		return nil, false
 	}
 	return o.Migration, true
@@ -1087,7 +1090,7 @@ func (o *PoolsResourceInner) GetMigrationOk() (*string, bool) {
 
 // HasMigration returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMigration() bool {
-	if o != nil && !isNil(o.Migration) {
+	if o != nil && !IsNil(o.Migration) {
 		return true
 	}
 
@@ -1101,7 +1104,7 @@ func (o *PoolsResourceInner) SetMigration(v string) {
 
 // GetMigrationNumeric returns the MigrationNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetMigrationNumeric() int64 {
-	if o == nil || isNil(o.MigrationNumeric) {
+	if o == nil || IsNil(o.MigrationNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1111,7 +1114,7 @@ func (o *PoolsResourceInner) GetMigrationNumeric() int64 {
 // GetMigrationNumericOk returns a tuple with the MigrationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetMigrationNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.MigrationNumeric) {
+	if o == nil || IsNil(o.MigrationNumeric) {
 		return nil, false
 	}
 	return o.MigrationNumeric, true
@@ -1119,7 +1122,7 @@ func (o *PoolsResourceInner) GetMigrationNumericOk() (*int64, bool) {
 
 // HasMigrationNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasMigrationNumeric() bool {
-	if o != nil && !isNil(o.MigrationNumeric) {
+	if o != nil && !IsNil(o.MigrationNumeric) {
 		return true
 	}
 
@@ -1133,7 +1136,7 @@ func (o *PoolsResourceInner) SetMigrationNumeric(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetName() string {
-	if o == nil || isNil(o.Name) {
+	if o == nil || IsNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -1143,7 +1146,7 @@ func (o *PoolsResourceInner) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetNameOk() (*string, bool) {
-	if o == nil || isNil(o.Name) {
+	if o == nil || IsNil(o.Name) {
 		return nil, false
 	}
 	return o.Name, true
@@ -1151,7 +1154,7 @@ func (o *PoolsResourceInner) GetNameOk() (*string, bool) {
 
 // HasName returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasName() bool {
-	if o != nil && !isNil(o.Name) {
+	if o != nil && !IsNil(o.Name) {
 		return true
 	}
 
@@ -1165,7 +1168,7 @@ func (o *PoolsResourceInner) SetName(v string) {
 
 // GetOverCommitted returns the OverCommitted field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetOverCommitted() string {
-	if o == nil || isNil(o.OverCommitted) {
+	if o == nil || IsNil(o.OverCommitted) {
 		var ret string
 		return ret
 	}
@@ -1175,7 +1178,7 @@ func (o *PoolsResourceInner) GetOverCommitted() string {
 // GetOverCommittedOk returns a tuple with the OverCommitted field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetOverCommittedOk() (*string, bool) {
-	if o == nil || isNil(o.OverCommitted) {
+	if o == nil || IsNil(o.OverCommitted) {
 		return nil, false
 	}
 	return o.OverCommitted, true
@@ -1183,7 +1186,7 @@ func (o *PoolsResourceInner) GetOverCommittedOk() (*string, bool) {
 
 // HasOverCommitted returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasOverCommitted() bool {
-	if o != nil && !isNil(o.OverCommitted) {
+	if o != nil && !IsNil(o.OverCommitted) {
 		return true
 	}
 
@@ -1197,7 +1200,7 @@ func (o *PoolsResourceInner) SetOverCommitted(v string) {
 
 // GetOverCommittedNumeric returns the OverCommittedNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetOverCommittedNumeric() int64 {
-	if o == nil || isNil(o.OverCommittedNumeric) {
+	if o == nil || IsNil(o.OverCommittedNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1207,7 +1210,7 @@ func (o *PoolsResourceInner) GetOverCommittedNumeric() int64 {
 // GetOverCommittedNumericOk returns a tuple with the OverCommittedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetOverCommittedNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.OverCommittedNumeric) {
+	if o == nil || IsNil(o.OverCommittedNumeric) {
 		return nil, false
 	}
 	return o.OverCommittedNumeric, true
@@ -1215,7 +1218,7 @@ func (o *PoolsResourceInner) GetOverCommittedNumericOk() (*int64, bool) {
 
 // HasOverCommittedNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasOverCommittedNumeric() bool {
-	if o != nil && !isNil(o.OverCommittedNumeric) {
+	if o != nil && !IsNil(o.OverCommittedNumeric) {
 		return true
 	}
 
@@ -1229,7 +1232,7 @@ func (o *PoolsResourceInner) SetOverCommittedNumeric(v int64) {
 
 // GetOvercommit returns the Overcommit field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetOvercommit() string {
-	if o == nil || isNil(o.Overcommit) {
+	if o == nil || IsNil(o.Overcommit) {
 		var ret string
 		return ret
 	}
@@ -1239,7 +1242,7 @@ func (o *PoolsResourceInner) GetOvercommit() string {
 // GetOvercommitOk returns a tuple with the Overcommit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetOvercommitOk() (*string, bool) {
-	if o == nil || isNil(o.Overcommit) {
+	if o == nil || IsNil(o.Overcommit) {
 		return nil, false
 	}
 	return o.Overcommit, true
@@ -1247,7 +1250,7 @@ func (o *PoolsResourceInner) GetOvercommitOk() (*string, bool) {
 
 // HasOvercommit returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasOvercommit() bool {
-	if o != nil && !isNil(o.Overcommit) {
+	if o != nil && !IsNil(o.Overcommit) {
 		return true
 	}
 
@@ -1261,7 +1264,7 @@ func (o *PoolsResourceInner) SetOvercommit(v string) {
 
 // GetOvercommitNumeric returns the OvercommitNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetOvercommitNumeric() int64 {
-	if o == nil || isNil(o.OvercommitNumeric) {
+	if o == nil || IsNil(o.OvercommitNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1271,7 +1274,7 @@ func (o *PoolsResourceInner) GetOvercommitNumeric() int64 {
 // GetOvercommitNumericOk returns a tuple with the OvercommitNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetOvercommitNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.OvercommitNumeric) {
+	if o == nil || IsNil(o.OvercommitNumeric) {
 		return nil, false
 	}
 	return o.OvercommitNumeric, true
@@ -1279,7 +1282,7 @@ func (o *PoolsResourceInner) GetOvercommitNumericOk() (*int64, bool) {
 
 // HasOvercommitNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasOvercommitNumeric() bool {
-	if o != nil && !isNil(o.OvercommitNumeric) {
+	if o != nil && !IsNil(o.OvercommitNumeric) {
 		return true
 	}
 
@@ -1293,7 +1296,7 @@ func (o *PoolsResourceInner) SetOvercommitNumeric(v int64) {
 
 // GetOwner returns the Owner field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetOwner() string {
-	if o == nil || isNil(o.Owner) {
+	if o == nil || IsNil(o.Owner) {
 		var ret string
 		return ret
 	}
@@ -1303,7 +1306,7 @@ func (o *PoolsResourceInner) GetOwner() string {
 // GetOwnerOk returns a tuple with the Owner field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetOwnerOk() (*string, bool) {
-	if o == nil || isNil(o.Owner) {
+	if o == nil || IsNil(o.Owner) {
 		return nil, false
 	}
 	return o.Owner, true
@@ -1311,7 +1314,7 @@ func (o *PoolsResourceInner) GetOwnerOk() (*string, bool) {
 
 // HasOwner returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasOwner() bool {
-	if o != nil && !isNil(o.Owner) {
+	if o != nil && !IsNil(o.Owner) {
 		return true
 	}
 
@@ -1325,7 +1328,7 @@ func (o *PoolsResourceInner) SetOwner(v string) {
 
 // GetOwnerNumeric returns the OwnerNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetOwnerNumeric() int64 {
-	if o == nil || isNil(o.OwnerNumeric) {
+	if o == nil || IsNil(o.OwnerNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1335,7 +1338,7 @@ func (o *PoolsResourceInner) GetOwnerNumeric() int64 {
 // GetOwnerNumericOk returns a tuple with the OwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetOwnerNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.OwnerNumeric) {
+	if o == nil || IsNil(o.OwnerNumeric) {
 		return nil, false
 	}
 	return o.OwnerNumeric, true
@@ -1343,7 +1346,7 @@ func (o *PoolsResourceInner) GetOwnerNumericOk() (*int64, bool) {
 
 // HasOwnerNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasOwnerNumeric() bool {
-	if o != nil && !isNil(o.OwnerNumeric) {
+	if o != nil && !IsNil(o.OwnerNumeric) {
 		return true
 	}
 
@@ -1357,7 +1360,7 @@ func (o *PoolsResourceInner) SetOwnerNumeric(v int64) {
 
 // GetPageSize returns the PageSize field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetPageSize() string {
-	if o == nil || isNil(o.PageSize) {
+	if o == nil || IsNil(o.PageSize) {
 		var ret string
 		return ret
 	}
@@ -1367,7 +1370,7 @@ func (o *PoolsResourceInner) GetPageSize() string {
 // GetPageSizeOk returns a tuple with the PageSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetPageSizeOk() (*string, bool) {
-	if o == nil || isNil(o.PageSize) {
+	if o == nil || IsNil(o.PageSize) {
 		return nil, false
 	}
 	return o.PageSize, true
@@ -1375,7 +1378,7 @@ func (o *PoolsResourceInner) GetPageSizeOk() (*string, bool) {
 
 // HasPageSize returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasPageSize() bool {
-	if o != nil && !isNil(o.PageSize) {
+	if o != nil && !IsNil(o.PageSize) {
 		return true
 	}
 
@@ -1389,7 +1392,7 @@ func (o *PoolsResourceInner) SetPageSize(v string) {
 
 // GetPageSizeNumeric returns the PageSizeNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetPageSizeNumeric() int64 {
-	if o == nil || isNil(o.PageSizeNumeric) {
+	if o == nil || IsNil(o.PageSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1399,7 +1402,7 @@ func (o *PoolsResourceInner) GetPageSizeNumeric() int64 {
 // GetPageSizeNumericOk returns a tuple with the PageSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetPageSizeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.PageSizeNumeric) {
+	if o == nil || IsNil(o.PageSizeNumeric) {
 		return nil, false
 	}
 	return o.PageSizeNumeric, true
@@ -1407,7 +1410,7 @@ func (o *PoolsResourceInner) GetPageSizeNumericOk() (*int64, bool) {
 
 // HasPageSizeNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasPageSizeNumeric() bool {
-	if o != nil && !isNil(o.PageSizeNumeric) {
+	if o != nil && !IsNil(o.PageSizeNumeric) {
 		return true
 	}
 
@@ -1421,7 +1424,7 @@ func (o *PoolsResourceInner) SetPageSizeNumeric(v int64) {
 
 // GetPoolSectorFormat returns the PoolSectorFormat field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetPoolSectorFormat() string {
-	if o == nil || isNil(o.PoolSectorFormat) {
+	if o == nil || IsNil(o.PoolSectorFormat) {
 		var ret string
 		return ret
 	}
@@ -1431,7 +1434,7 @@ func (o *PoolsResourceInner) GetPoolSectorFormat() string {
 // GetPoolSectorFormatOk returns a tuple with the PoolSectorFormat field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetPoolSectorFormatOk() (*string, bool) {
-	if o == nil || isNil(o.PoolSectorFormat) {
+	if o == nil || IsNil(o.PoolSectorFormat) {
 		return nil, false
 	}
 	return o.PoolSectorFormat, true
@@ -1439,7 +1442,7 @@ func (o *PoolsResourceInner) GetPoolSectorFormatOk() (*string, bool) {
 
 // HasPoolSectorFormat returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasPoolSectorFormat() bool {
-	if o != nil && !isNil(o.PoolSectorFormat) {
+	if o != nil && !IsNil(o.PoolSectorFormat) {
 		return true
 	}
 
@@ -1453,7 +1456,7 @@ func (o *PoolsResourceInner) SetPoolSectorFormat(v string) {
 
 // GetPoolSectorFormatNumeric returns the PoolSectorFormatNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetPoolSectorFormatNumeric() int64 {
-	if o == nil || isNil(o.PoolSectorFormatNumeric) {
+	if o == nil || IsNil(o.PoolSectorFormatNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1463,7 +1466,7 @@ func (o *PoolsResourceInner) GetPoolSectorFormatNumeric() int64 {
 // GetPoolSectorFormatNumericOk returns a tuple with the PoolSectorFormatNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetPoolSectorFormatNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.PoolSectorFormatNumeric) {
+	if o == nil || IsNil(o.PoolSectorFormatNumeric) {
 		return nil, false
 	}
 	return o.PoolSectorFormatNumeric, true
@@ -1471,7 +1474,7 @@ func (o *PoolsResourceInner) GetPoolSectorFormatNumericOk() (*int64, bool) {
 
 // HasPoolSectorFormatNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasPoolSectorFormatNumeric() bool {
-	if o != nil && !isNil(o.PoolSectorFormatNumeric) {
+	if o != nil && !IsNil(o.PoolSectorFormatNumeric) {
 		return true
 	}
 
@@ -1485,7 +1488,7 @@ func (o *PoolsResourceInner) SetPoolSectorFormatNumeric(v int64) {
 
 // GetPreferredOwner returns the PreferredOwner field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetPreferredOwner() string {
-	if o == nil || isNil(o.PreferredOwner) {
+	if o == nil || IsNil(o.PreferredOwner) {
 		var ret string
 		return ret
 	}
@@ -1495,7 +1498,7 @@ func (o *PoolsResourceInner) GetPreferredOwner() string {
 // GetPreferredOwnerOk returns a tuple with the PreferredOwner field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetPreferredOwnerOk() (*string, bool) {
-	if o == nil || isNil(o.PreferredOwner) {
+	if o == nil || IsNil(o.PreferredOwner) {
 		return nil, false
 	}
 	return o.PreferredOwner, true
@@ -1503,7 +1506,7 @@ func (o *PoolsResourceInner) GetPreferredOwnerOk() (*string, bool) {
 
 // HasPreferredOwner returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasPreferredOwner() bool {
-	if o != nil && !isNil(o.PreferredOwner) {
+	if o != nil && !IsNil(o.PreferredOwner) {
 		return true
 	}
 
@@ -1517,7 +1520,7 @@ func (o *PoolsResourceInner) SetPreferredOwner(v string) {
 
 // GetPreferredOwnerNumeric returns the PreferredOwnerNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetPreferredOwnerNumeric() int64 {
-	if o == nil || isNil(o.PreferredOwnerNumeric) {
+	if o == nil || IsNil(o.PreferredOwnerNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1527,7 +1530,7 @@ func (o *PoolsResourceInner) GetPreferredOwnerNumeric() int64 {
 // GetPreferredOwnerNumericOk returns a tuple with the PreferredOwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetPreferredOwnerNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.PreferredOwnerNumeric) {
+	if o == nil || IsNil(o.PreferredOwnerNumeric) {
 		return nil, false
 	}
 	return o.PreferredOwnerNumeric, true
@@ -1535,7 +1538,7 @@ func (o *PoolsResourceInner) GetPreferredOwnerNumericOk() (*int64, bool) {
 
 // HasPreferredOwnerNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasPreferredOwnerNumeric() bool {
-	if o != nil && !isNil(o.PreferredOwnerNumeric) {
+	if o != nil && !IsNil(o.PreferredOwnerNumeric) {
 		return true
 	}
 
@@ -1549,7 +1552,7 @@ func (o *PoolsResourceInner) SetPreferredOwnerNumeric(v int64) {
 
 // GetReadFlashCache returns the ReadFlashCache field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetReadFlashCache() string {
-	if o == nil || isNil(o.ReadFlashCache) {
+	if o == nil || IsNil(o.ReadFlashCache) {
 		var ret string
 		return ret
 	}
@@ -1559,7 +1562,7 @@ func (o *PoolsResourceInner) GetReadFlashCache() string {
 // GetReadFlashCacheOk returns a tuple with the ReadFlashCache field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetReadFlashCacheOk() (*string, bool) {
-	if o == nil || isNil(o.ReadFlashCache) {
+	if o == nil || IsNil(o.ReadFlashCache) {
 		return nil, false
 	}
 	return o.ReadFlashCache, true
@@ -1567,7 +1570,7 @@ func (o *PoolsResourceInner) GetReadFlashCacheOk() (*string, bool) {
 
 // HasReadFlashCache returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasReadFlashCache() bool {
-	if o != nil && !isNil(o.ReadFlashCache) {
+	if o != nil && !IsNil(o.ReadFlashCache) {
 		return true
 	}
 
@@ -1581,7 +1584,7 @@ func (o *PoolsResourceInner) SetReadFlashCache(v string) {
 
 // GetReadFlashCacheNumeric returns the ReadFlashCacheNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetReadFlashCacheNumeric() int64 {
-	if o == nil || isNil(o.ReadFlashCacheNumeric) {
+	if o == nil || IsNil(o.ReadFlashCacheNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1591,7 +1594,7 @@ func (o *PoolsResourceInner) GetReadFlashCacheNumeric() int64 {
 // GetReadFlashCacheNumericOk returns a tuple with the ReadFlashCacheNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetReadFlashCacheNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.ReadFlashCacheNumeric) {
+	if o == nil || IsNil(o.ReadFlashCacheNumeric) {
 		return nil, false
 	}
 	return o.ReadFlashCacheNumeric, true
@@ -1599,7 +1602,7 @@ func (o *PoolsResourceInner) GetReadFlashCacheNumericOk() (*int64, bool) {
 
 // HasReadFlashCacheNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasReadFlashCacheNumeric() bool {
-	if o != nil && !isNil(o.ReadFlashCacheNumeric) {
+	if o != nil && !IsNil(o.ReadFlashCacheNumeric) {
 		return true
 	}
 
@@ -1613,7 +1616,7 @@ func (o *PoolsResourceInner) SetReadFlashCacheNumeric(v int64) {
 
 // GetRebalance returns the Rebalance field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetRebalance() string {
-	if o == nil || isNil(o.Rebalance) {
+	if o == nil || IsNil(o.Rebalance) {
 		var ret string
 		return ret
 	}
@@ -1623,7 +1626,7 @@ func (o *PoolsResourceInner) GetRebalance() string {
 // GetRebalanceOk returns a tuple with the Rebalance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetRebalanceOk() (*string, bool) {
-	if o == nil || isNil(o.Rebalance) {
+	if o == nil || IsNil(o.Rebalance) {
 		return nil, false
 	}
 	return o.Rebalance, true
@@ -1631,7 +1634,7 @@ func (o *PoolsResourceInner) GetRebalanceOk() (*string, bool) {
 
 // HasRebalance returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasRebalance() bool {
-	if o != nil && !isNil(o.Rebalance) {
+	if o != nil && !IsNil(o.Rebalance) {
 		return true
 	}
 
@@ -1645,7 +1648,7 @@ func (o *PoolsResourceInner) SetRebalance(v string) {
 
 // GetRebalanceNumeric returns the RebalanceNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetRebalanceNumeric() int64 {
-	if o == nil || isNil(o.RebalanceNumeric) {
+	if o == nil || IsNil(o.RebalanceNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1655,7 +1658,7 @@ func (o *PoolsResourceInner) GetRebalanceNumeric() int64 {
 // GetRebalanceNumericOk returns a tuple with the RebalanceNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetRebalanceNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.RebalanceNumeric) {
+	if o == nil || IsNil(o.RebalanceNumeric) {
 		return nil, false
 	}
 	return o.RebalanceNumeric, true
@@ -1663,7 +1666,7 @@ func (o *PoolsResourceInner) GetRebalanceNumericOk() (*int64, bool) {
 
 // HasRebalanceNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasRebalanceNumeric() bool {
-	if o != nil && !isNil(o.RebalanceNumeric) {
+	if o != nil && !IsNil(o.RebalanceNumeric) {
 		return true
 	}
 
@@ -1677,7 +1680,7 @@ func (o *PoolsResourceInner) SetRebalanceNumeric(v int64) {
 
 // GetReservedSize returns the ReservedSize field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetReservedSize() string {
-	if o == nil || isNil(o.ReservedSize) {
+	if o == nil || IsNil(o.ReservedSize) {
 		var ret string
 		return ret
 	}
@@ -1687,7 +1690,7 @@ func (o *PoolsResourceInner) GetReservedSize() string {
 // GetReservedSizeOk returns a tuple with the ReservedSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetReservedSizeOk() (*string, bool) {
-	if o == nil || isNil(o.ReservedSize) {
+	if o == nil || IsNil(o.ReservedSize) {
 		return nil, false
 	}
 	return o.ReservedSize, true
@@ -1695,7 +1698,7 @@ func (o *PoolsResourceInner) GetReservedSizeOk() (*string, bool) {
 
 // HasReservedSize returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasReservedSize() bool {
-	if o != nil && !isNil(o.ReservedSize) {
+	if o != nil && !IsNil(o.ReservedSize) {
 		return true
 	}
 
@@ -1709,7 +1712,7 @@ func (o *PoolsResourceInner) SetReservedSize(v string) {
 
 // GetReservedSizeNumeric returns the ReservedSizeNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetReservedSizeNumeric() int64 {
-	if o == nil || isNil(o.ReservedSizeNumeric) {
+	if o == nil || IsNil(o.ReservedSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1719,7 +1722,7 @@ func (o *PoolsResourceInner) GetReservedSizeNumeric() int64 {
 // GetReservedSizeNumericOk returns a tuple with the ReservedSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetReservedSizeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.ReservedSizeNumeric) {
+	if o == nil || IsNil(o.ReservedSizeNumeric) {
 		return nil, false
 	}
 	return o.ReservedSizeNumeric, true
@@ -1727,7 +1730,7 @@ func (o *PoolsResourceInner) GetReservedSizeNumericOk() (*int64, bool) {
 
 // HasReservedSizeNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasReservedSizeNumeric() bool {
-	if o != nil && !isNil(o.ReservedSizeNumeric) {
+	if o != nil && !IsNil(o.ReservedSizeNumeric) {
 		return true
 	}
 
@@ -1741,7 +1744,7 @@ func (o *PoolsResourceInner) SetReservedSizeNumeric(v int64) {
 
 // GetReservedUnallocSize returns the ReservedUnallocSize field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetReservedUnallocSize() string {
-	if o == nil || isNil(o.ReservedUnallocSize) {
+	if o == nil || IsNil(o.ReservedUnallocSize) {
 		var ret string
 		return ret
 	}
@@ -1751,7 +1754,7 @@ func (o *PoolsResourceInner) GetReservedUnallocSize() string {
 // GetReservedUnallocSizeOk returns a tuple with the ReservedUnallocSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetReservedUnallocSizeOk() (*string, bool) {
-	if o == nil || isNil(o.ReservedUnallocSize) {
+	if o == nil || IsNil(o.ReservedUnallocSize) {
 		return nil, false
 	}
 	return o.ReservedUnallocSize, true
@@ -1759,7 +1762,7 @@ func (o *PoolsResourceInner) GetReservedUnallocSizeOk() (*string, bool) {
 
 // HasReservedUnallocSize returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasReservedUnallocSize() bool {
-	if o != nil && !isNil(o.ReservedUnallocSize) {
+	if o != nil && !IsNil(o.ReservedUnallocSize) {
 		return true
 	}
 
@@ -1773,7 +1776,7 @@ func (o *PoolsResourceInner) SetReservedUnallocSize(v string) {
 
 // GetReservedUnallocSizeNumeric returns the ReservedUnallocSizeNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetReservedUnallocSizeNumeric() int64 {
-	if o == nil || isNil(o.ReservedUnallocSizeNumeric) {
+	if o == nil || IsNil(o.ReservedUnallocSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1783,7 +1786,7 @@ func (o *PoolsResourceInner) GetReservedUnallocSizeNumeric() int64 {
 // GetReservedUnallocSizeNumericOk returns a tuple with the ReservedUnallocSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetReservedUnallocSizeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.ReservedUnallocSizeNumeric) {
+	if o == nil || IsNil(o.ReservedUnallocSizeNumeric) {
 		return nil, false
 	}
 	return o.ReservedUnallocSizeNumeric, true
@@ -1791,7 +1794,7 @@ func (o *PoolsResourceInner) GetReservedUnallocSizeNumericOk() (*int64, bool) {
 
 // HasReservedUnallocSizeNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasReservedUnallocSizeNumeric() bool {
-	if o != nil && !isNil(o.ReservedUnallocSizeNumeric) {
+	if o != nil && !IsNil(o.ReservedUnallocSizeNumeric) {
 		return true
 	}
 
@@ -1805,7 +1808,7 @@ func (o *PoolsResourceInner) SetReservedUnallocSizeNumeric(v int64) {
 
 // GetSerialNumber returns the SerialNumber field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetSerialNumber() string {
-	if o == nil || isNil(o.SerialNumber) {
+	if o == nil || IsNil(o.SerialNumber) {
 		var ret string
 		return ret
 	}
@@ -1815,7 +1818,7 @@ func (o *PoolsResourceInner) GetSerialNumber() string {
 // GetSerialNumberOk returns a tuple with the SerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetSerialNumberOk() (*string, bool) {
-	if o == nil || isNil(o.SerialNumber) {
+	if o == nil || IsNil(o.SerialNumber) {
 		return nil, false
 	}
 	return o.SerialNumber, true
@@ -1823,7 +1826,7 @@ func (o *PoolsResourceInner) GetSerialNumberOk() (*string, bool) {
 
 // HasSerialNumber returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasSerialNumber() bool {
-	if o != nil && !isNil(o.SerialNumber) {
+	if o != nil && !IsNil(o.SerialNumber) {
 		return true
 	}
 
@@ -1837,7 +1840,7 @@ func (o *PoolsResourceInner) SetSerialNumber(v string) {
 
 // GetSnapSize returns the SnapSize field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetSnapSize() string {
-	if o == nil || isNil(o.SnapSize) {
+	if o == nil || IsNil(o.SnapSize) {
 		var ret string
 		return ret
 	}
@@ -1847,7 +1850,7 @@ func (o *PoolsResourceInner) GetSnapSize() string {
 // GetSnapSizeOk returns a tuple with the SnapSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetSnapSizeOk() (*string, bool) {
-	if o == nil || isNil(o.SnapSize) {
+	if o == nil || IsNil(o.SnapSize) {
 		return nil, false
 	}
 	return o.SnapSize, true
@@ -1855,7 +1858,7 @@ func (o *PoolsResourceInner) GetSnapSizeOk() (*string, bool) {
 
 // HasSnapSize returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasSnapSize() bool {
-	if o != nil && !isNil(o.SnapSize) {
+	if o != nil && !IsNil(o.SnapSize) {
 		return true
 	}
 
@@ -1869,7 +1872,7 @@ func (o *PoolsResourceInner) SetSnapSize(v string) {
 
 // GetSnapSizeNumeric returns the SnapSizeNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetSnapSizeNumeric() int64 {
-	if o == nil || isNil(o.SnapSizeNumeric) {
+	if o == nil || IsNil(o.SnapSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1879,7 +1882,7 @@ func (o *PoolsResourceInner) GetSnapSizeNumeric() int64 {
 // GetSnapSizeNumericOk returns a tuple with the SnapSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetSnapSizeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.SnapSizeNumeric) {
+	if o == nil || IsNil(o.SnapSizeNumeric) {
 		return nil, false
 	}
 	return o.SnapSizeNumeric, true
@@ -1887,7 +1890,7 @@ func (o *PoolsResourceInner) GetSnapSizeNumericOk() (*int64, bool) {
 
 // HasSnapSizeNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasSnapSizeNumeric() bool {
-	if o != nil && !isNil(o.SnapSizeNumeric) {
+	if o != nil && !IsNil(o.SnapSizeNumeric) {
 		return true
 	}
 
@@ -1901,7 +1904,7 @@ func (o *PoolsResourceInner) SetSnapSizeNumeric(v int64) {
 
 // GetStorageType returns the StorageType field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetStorageType() string {
-	if o == nil || isNil(o.StorageType) {
+	if o == nil || IsNil(o.StorageType) {
 		var ret string
 		return ret
 	}
@@ -1911,7 +1914,7 @@ func (o *PoolsResourceInner) GetStorageType() string {
 // GetStorageTypeOk returns a tuple with the StorageType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetStorageTypeOk() (*string, bool) {
-	if o == nil || isNil(o.StorageType) {
+	if o == nil || IsNil(o.StorageType) {
 		return nil, false
 	}
 	return o.StorageType, true
@@ -1919,7 +1922,7 @@ func (o *PoolsResourceInner) GetStorageTypeOk() (*string, bool) {
 
 // HasStorageType returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasStorageType() bool {
-	if o != nil && !isNil(o.StorageType) {
+	if o != nil && !IsNil(o.StorageType) {
 		return true
 	}
 
@@ -1933,7 +1936,7 @@ func (o *PoolsResourceInner) SetStorageType(v string) {
 
 // GetStorageTypeNumeric returns the StorageTypeNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetStorageTypeNumeric() int64 {
-	if o == nil || isNil(o.StorageTypeNumeric) {
+	if o == nil || IsNil(o.StorageTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1943,7 +1946,7 @@ func (o *PoolsResourceInner) GetStorageTypeNumeric() int64 {
 // GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetStorageTypeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.StorageTypeNumeric) {
+	if o == nil || IsNil(o.StorageTypeNumeric) {
 		return nil, false
 	}
 	return o.StorageTypeNumeric, true
@@ -1951,7 +1954,7 @@ func (o *PoolsResourceInner) GetStorageTypeNumericOk() (*int64, bool) {
 
 // HasStorageTypeNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasStorageTypeNumeric() bool {
-	if o != nil && !isNil(o.StorageTypeNumeric) {
+	if o != nil && !IsNil(o.StorageTypeNumeric) {
 		return true
 	}
 
@@ -1965,7 +1968,7 @@ func (o *PoolsResourceInner) SetStorageTypeNumeric(v int64) {
 
 // GetTotalAvail returns the TotalAvail field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetTotalAvail() string {
-	if o == nil || isNil(o.TotalAvail) {
+	if o == nil || IsNil(o.TotalAvail) {
 		var ret string
 		return ret
 	}
@@ -1975,7 +1978,7 @@ func (o *PoolsResourceInner) GetTotalAvail() string {
 // GetTotalAvailOk returns a tuple with the TotalAvail field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetTotalAvailOk() (*string, bool) {
-	if o == nil || isNil(o.TotalAvail) {
+	if o == nil || IsNil(o.TotalAvail) {
 		return nil, false
 	}
 	return o.TotalAvail, true
@@ -1983,7 +1986,7 @@ func (o *PoolsResourceInner) GetTotalAvailOk() (*string, bool) {
 
 // HasTotalAvail returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasTotalAvail() bool {
-	if o != nil && !isNil(o.TotalAvail) {
+	if o != nil && !IsNil(o.TotalAvail) {
 		return true
 	}
 
@@ -1997,7 +2000,7 @@ func (o *PoolsResourceInner) SetTotalAvail(v string) {
 
 // GetTotalAvailNumeric returns the TotalAvailNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetTotalAvailNumeric() int64 {
-	if o == nil || isNil(o.TotalAvailNumeric) {
+	if o == nil || IsNil(o.TotalAvailNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2007,7 +2010,7 @@ func (o *PoolsResourceInner) GetTotalAvailNumeric() int64 {
 // GetTotalAvailNumericOk returns a tuple with the TotalAvailNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetTotalAvailNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.TotalAvailNumeric) {
+	if o == nil || IsNil(o.TotalAvailNumeric) {
 		return nil, false
 	}
 	return o.TotalAvailNumeric, true
@@ -2015,7 +2018,7 @@ func (o *PoolsResourceInner) GetTotalAvailNumericOk() (*int64, bool) {
 
 // HasTotalAvailNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasTotalAvailNumeric() bool {
-	if o != nil && !isNil(o.TotalAvailNumeric) {
+	if o != nil && !IsNil(o.TotalAvailNumeric) {
 		return true
 	}
 
@@ -2029,7 +2032,7 @@ func (o *PoolsResourceInner) SetTotalAvailNumeric(v int64) {
 
 // GetTotalRfcSize returns the TotalRfcSize field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetTotalRfcSize() string {
-	if o == nil || isNil(o.TotalRfcSize) {
+	if o == nil || IsNil(o.TotalRfcSize) {
 		var ret string
 		return ret
 	}
@@ -2039,7 +2042,7 @@ func (o *PoolsResourceInner) GetTotalRfcSize() string {
 // GetTotalRfcSizeOk returns a tuple with the TotalRfcSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetTotalRfcSizeOk() (*string, bool) {
-	if o == nil || isNil(o.TotalRfcSize) {
+	if o == nil || IsNil(o.TotalRfcSize) {
 		return nil, false
 	}
 	return o.TotalRfcSize, true
@@ -2047,7 +2050,7 @@ func (o *PoolsResourceInner) GetTotalRfcSizeOk() (*string, bool) {
 
 // HasTotalRfcSize returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasTotalRfcSize() bool {
-	if o != nil && !isNil(o.TotalRfcSize) {
+	if o != nil && !IsNil(o.TotalRfcSize) {
 		return true
 	}
 
@@ -2061,7 +2064,7 @@ func (o *PoolsResourceInner) SetTotalRfcSize(v string) {
 
 // GetTotalRfcSizeNumeric returns the TotalRfcSizeNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetTotalRfcSizeNumeric() int64 {
-	if o == nil || isNil(o.TotalRfcSizeNumeric) {
+	if o == nil || IsNil(o.TotalRfcSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2071,7 +2074,7 @@ func (o *PoolsResourceInner) GetTotalRfcSizeNumeric() int64 {
 // GetTotalRfcSizeNumericOk returns a tuple with the TotalRfcSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetTotalRfcSizeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.TotalRfcSizeNumeric) {
+	if o == nil || IsNil(o.TotalRfcSizeNumeric) {
 		return nil, false
 	}
 	return o.TotalRfcSizeNumeric, true
@@ -2079,7 +2082,7 @@ func (o *PoolsResourceInner) GetTotalRfcSizeNumericOk() (*int64, bool) {
 
 // HasTotalRfcSizeNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasTotalRfcSizeNumeric() bool {
-	if o != nil && !isNil(o.TotalRfcSizeNumeric) {
+	if o != nil && !IsNil(o.TotalRfcSizeNumeric) {
 		return true
 	}
 
@@ -2093,7 +2096,7 @@ func (o *PoolsResourceInner) SetTotalRfcSizeNumeric(v int64) {
 
 // GetTotalSize returns the TotalSize field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetTotalSize() string {
-	if o == nil || isNil(o.TotalSize) {
+	if o == nil || IsNil(o.TotalSize) {
 		var ret string
 		return ret
 	}
@@ -2103,7 +2106,7 @@ func (o *PoolsResourceInner) GetTotalSize() string {
 // GetTotalSizeOk returns a tuple with the TotalSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetTotalSizeOk() (*string, bool) {
-	if o == nil || isNil(o.TotalSize) {
+	if o == nil || IsNil(o.TotalSize) {
 		return nil, false
 	}
 	return o.TotalSize, true
@@ -2111,7 +2114,7 @@ func (o *PoolsResourceInner) GetTotalSizeOk() (*string, bool) {
 
 // HasTotalSize returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasTotalSize() bool {
-	if o != nil && !isNil(o.TotalSize) {
+	if o != nil && !IsNil(o.TotalSize) {
 		return true
 	}
 
@@ -2125,7 +2128,7 @@ func (o *PoolsResourceInner) SetTotalSize(v string) {
 
 // GetTotalSizeNumeric returns the TotalSizeNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetTotalSizeNumeric() int64 {
-	if o == nil || isNil(o.TotalSizeNumeric) {
+	if o == nil || IsNil(o.TotalSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2135,7 +2138,7 @@ func (o *PoolsResourceInner) GetTotalSizeNumeric() int64 {
 // GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetTotalSizeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.TotalSizeNumeric) {
+	if o == nil || IsNil(o.TotalSizeNumeric) {
 		return nil, false
 	}
 	return o.TotalSizeNumeric, true
@@ -2143,7 +2146,7 @@ func (o *PoolsResourceInner) GetTotalSizeNumericOk() (*int64, bool) {
 
 // HasTotalSizeNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasTotalSizeNumeric() bool {
-	if o != nil && !isNil(o.TotalSizeNumeric) {
+	if o != nil && !IsNil(o.TotalSizeNumeric) {
 		return true
 	}
 
@@ -2157,7 +2160,7 @@ func (o *PoolsResourceInner) SetTotalSizeNumeric(v int64) {
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetUrl() string {
-	if o == nil || isNil(o.Url) {
+	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
 	}
@@ -2167,7 +2170,7 @@ func (o *PoolsResourceInner) GetUrl() string {
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetUrlOk() (*string, bool) {
-	if o == nil || isNil(o.Url) {
+	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
 	return o.Url, true
@@ -2175,7 +2178,7 @@ func (o *PoolsResourceInner) GetUrlOk() (*string, bool) {
 
 // HasUrl returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasUrl() bool {
-	if o != nil && !isNil(o.Url) {
+	if o != nil && !IsNil(o.Url) {
 		return true
 	}
 
@@ -2189,7 +2192,7 @@ func (o *PoolsResourceInner) SetUrl(v string) {
 
 // GetUtilityRunning returns the UtilityRunning field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetUtilityRunning() string {
-	if o == nil || isNil(o.UtilityRunning) {
+	if o == nil || IsNil(o.UtilityRunning) {
 		var ret string
 		return ret
 	}
@@ -2199,7 +2202,7 @@ func (o *PoolsResourceInner) GetUtilityRunning() string {
 // GetUtilityRunningOk returns a tuple with the UtilityRunning field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetUtilityRunningOk() (*string, bool) {
-	if o == nil || isNil(o.UtilityRunning) {
+	if o == nil || IsNil(o.UtilityRunning) {
 		return nil, false
 	}
 	return o.UtilityRunning, true
@@ -2207,7 +2210,7 @@ func (o *PoolsResourceInner) GetUtilityRunningOk() (*string, bool) {
 
 // HasUtilityRunning returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasUtilityRunning() bool {
-	if o != nil && !isNil(o.UtilityRunning) {
+	if o != nil && !IsNil(o.UtilityRunning) {
 		return true
 	}
 
@@ -2221,7 +2224,7 @@ func (o *PoolsResourceInner) SetUtilityRunning(v string) {
 
 // GetUtilityRunningNumeric returns the UtilityRunningNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetUtilityRunningNumeric() int64 {
-	if o == nil || isNil(o.UtilityRunningNumeric) {
+	if o == nil || IsNil(o.UtilityRunningNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2231,7 +2234,7 @@ func (o *PoolsResourceInner) GetUtilityRunningNumeric() int64 {
 // GetUtilityRunningNumericOk returns a tuple with the UtilityRunningNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetUtilityRunningNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.UtilityRunningNumeric) {
+	if o == nil || IsNil(o.UtilityRunningNumeric) {
 		return nil, false
 	}
 	return o.UtilityRunningNumeric, true
@@ -2239,7 +2242,7 @@ func (o *PoolsResourceInner) GetUtilityRunningNumericOk() (*int64, bool) {
 
 // HasUtilityRunningNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasUtilityRunningNumeric() bool {
-	if o != nil && !isNil(o.UtilityRunningNumeric) {
+	if o != nil && !IsNil(o.UtilityRunningNumeric) {
 		return true
 	}
 
@@ -2253,7 +2256,7 @@ func (o *PoolsResourceInner) SetUtilityRunningNumeric(v int64) {
 
 // GetVolumes returns the Volumes field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetVolumes() int64 {
-	if o == nil || isNil(o.Volumes) {
+	if o == nil || IsNil(o.Volumes) {
 		var ret int64
 		return ret
 	}
@@ -2263,7 +2266,7 @@ func (o *PoolsResourceInner) GetVolumes() int64 {
 // GetVolumesOk returns a tuple with the Volumes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetVolumesOk() (*int64, bool) {
-	if o == nil || isNil(o.Volumes) {
+	if o == nil || IsNil(o.Volumes) {
 		return nil, false
 	}
 	return o.Volumes, true
@@ -2271,7 +2274,7 @@ func (o *PoolsResourceInner) GetVolumesOk() (*int64, bool) {
 
 // HasVolumes returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasVolumes() bool {
-	if o != nil && !isNil(o.Volumes) {
+	if o != nil && !IsNil(o.Volumes) {
 		return true
 	}
 
@@ -2285,7 +2288,7 @@ func (o *PoolsResourceInner) SetVolumes(v int64) {
 
 // GetZeroScan returns the ZeroScan field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetZeroScan() string {
-	if o == nil || isNil(o.ZeroScan) {
+	if o == nil || IsNil(o.ZeroScan) {
 		var ret string
 		return ret
 	}
@@ -2295,7 +2298,7 @@ func (o *PoolsResourceInner) GetZeroScan() string {
 // GetZeroScanOk returns a tuple with the ZeroScan field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetZeroScanOk() (*string, bool) {
-	if o == nil || isNil(o.ZeroScan) {
+	if o == nil || IsNil(o.ZeroScan) {
 		return nil, false
 	}
 	return o.ZeroScan, true
@@ -2303,7 +2306,7 @@ func (o *PoolsResourceInner) GetZeroScanOk() (*string, bool) {
 
 // HasZeroScan returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasZeroScan() bool {
-	if o != nil && !isNil(o.ZeroScan) {
+	if o != nil && !IsNil(o.ZeroScan) {
 		return true
 	}
 
@@ -2317,7 +2320,7 @@ func (o *PoolsResourceInner) SetZeroScan(v string) {
 
 // GetZeroScanNumeric returns the ZeroScanNumeric field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetZeroScanNumeric() int64 {
-	if o == nil || isNil(o.ZeroScanNumeric) {
+	if o == nil || IsNil(o.ZeroScanNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2327,7 +2330,7 @@ func (o *PoolsResourceInner) GetZeroScanNumeric() int64 {
 // GetZeroScanNumericOk returns a tuple with the ZeroScanNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetZeroScanNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.ZeroScanNumeric) {
+	if o == nil || IsNil(o.ZeroScanNumeric) {
 		return nil, false
 	}
 	return o.ZeroScanNumeric, true
@@ -2335,7 +2338,7 @@ func (o *PoolsResourceInner) GetZeroScanNumericOk() (*int64, bool) {
 
 // HasZeroScanNumeric returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasZeroScanNumeric() bool {
-	if o != nil && !isNil(o.ZeroScanNumeric) {
+	if o != nil && !IsNil(o.ZeroScanNumeric) {
 		return true
 	}
 
@@ -2349,7 +2352,7 @@ func (o *PoolsResourceInner) SetZeroScanNumeric(v int64) {
 
 // GetDiskGroups returns the DiskGroups field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetDiskGroups() []DiskGroupsResourceInner {
-	if o == nil || isNil(o.DiskGroups) {
+	if o == nil || IsNil(o.DiskGroups) {
 		var ret []DiskGroupsResourceInner
 		return ret
 	}
@@ -2359,7 +2362,7 @@ func (o *PoolsResourceInner) GetDiskGroups() []DiskGroupsResourceInner {
 // GetDiskGroupsOk returns a tuple with the DiskGroups field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetDiskGroupsOk() ([]DiskGroupsResourceInner, bool) {
-	if o == nil || isNil(o.DiskGroups) {
+	if o == nil || IsNil(o.DiskGroups) {
 		return nil, false
 	}
 	return o.DiskGroups, true
@@ -2367,7 +2370,7 @@ func (o *PoolsResourceInner) GetDiskGroupsOk() ([]DiskGroupsResourceInner, bool)
 
 // HasDiskGroups returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasDiskGroups() bool {
-	if o != nil && !isNil(o.DiskGroups) {
+	if o != nil && !IsNil(o.DiskGroups) {
 		return true
 	}
 
@@ -2381,7 +2384,7 @@ func (o *PoolsResourceInner) SetDiskGroups(v []DiskGroupsResourceInner) {
 
 // GetTiers returns the Tiers field value if set, zero value otherwise.
 func (o *PoolsResourceInner) GetTiers() []TiersResourceInner {
-	if o == nil || isNil(o.Tiers) {
+	if o == nil || IsNil(o.Tiers) {
 		var ret []TiersResourceInner
 		return ret
 	}
@@ -2391,7 +2394,7 @@ func (o *PoolsResourceInner) GetTiers() []TiersResourceInner {
 // GetTiersOk returns a tuple with the Tiers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsResourceInner) GetTiersOk() ([]TiersResourceInner, bool) {
-	if o == nil || isNil(o.Tiers) {
+	if o == nil || IsNil(o.Tiers) {
 		return nil, false
 	}
 	return o.Tiers, true
@@ -2399,7 +2402,7 @@ func (o *PoolsResourceInner) GetTiersOk() ([]TiersResourceInner, bool) {
 
 // HasTiers returns a boolean if a field has been set.
 func (o *PoolsResourceInner) HasTiers() bool {
-	if o != nil && !isNil(o.Tiers) {
+	if o != nil && !IsNil(o.Tiers) {
 		return true
 	}
 
@@ -2412,221 +2415,229 @@ func (o *PoolsResourceInner) SetTiers(v []TiersResourceInner) {
 }
 
 func (o PoolsResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.AllocatedPages) {
-		toSerialize["allocated-pages"] = o.AllocatedPages
-	}
-	if !isNil(o.AvailablePages) {
-		toSerialize["available-pages"] = o.AvailablePages
-	}
-	if !isNil(o.AvailableRfcSize) {
-		toSerialize["available-rfc-size"] = o.AvailableRfcSize
-	}
-	if !isNil(o.AvailableRfcSizeNumeric) {
-		toSerialize["available-rfc-size-numeric"] = o.AvailableRfcSizeNumeric
-	}
-	if !isNil(o.Blocksize) {
-		toSerialize["blocksize"] = o.Blocksize
-	}
-	if !isNil(o.CompressionEfficiency) {
-		toSerialize["compression-efficiency"] = o.CompressionEfficiency
-	}
-	if !isNil(o.DiskGroupsCount) {
-		toSerialize["disk-groups-count"] = o.DiskGroupsCount
-	}
-	if !isNil(o.ExtendedStatus) {
-		toSerialize["extended-status"] = o.ExtendedStatus
-	}
-	if !isNil(o.Health) {
-		toSerialize["health"] = o.Health
-	}
-	if !isNil(o.HealthNumeric) {
-		toSerialize["health-numeric"] = o.HealthNumeric
-	}
-	if !isNil(o.HealthReason) {
-		toSerialize["health-reason"] = o.HealthReason
-	}
-	if !isNil(o.HealthReasonNumeric) {
-		toSerialize["health-reason-numeric"] = o.HealthReasonNumeric
-	}
-	if !isNil(o.HealthRecommendation) {
-		toSerialize["health-recommendation"] = o.HealthRecommendation
-	}
-	if !isNil(o.HealthRecommendationNumeric) {
-		toSerialize["health-recommendation-numeric"] = o.HealthRecommendationNumeric
-	}
-	if !isNil(o.HighThreshold) {
-		toSerialize["high-threshold"] = o.HighThreshold
-	}
-	if !isNil(o.IdlePageCheck) {
-		toSerialize["idle-page-check"] = o.IdlePageCheck
-	}
-	if !isNil(o.IdlePageCheckNumeric) {
-		toSerialize["idle-page-check-numeric"] = o.IdlePageCheckNumeric
-	}
-	if !isNil(o.LowThreshold) {
-		toSerialize["low-threshold"] = o.LowThreshold
-	}
-	if !isNil(o.MetadataAllocated) {
-		toSerialize["metadata-allocated"] = o.MetadataAllocated
-	}
-	if !isNil(o.MetadataAllocatedNumeric) {
-		toSerialize["metadata-allocated-numeric"] = o.MetadataAllocatedNumeric
-	}
-	if !isNil(o.MetadataAvailable) {
-		toSerialize["metadata-available"] = o.MetadataAvailable
-	}
-	if !isNil(o.MetadataAvailableNumeric) {
-		toSerialize["metadata-available-numeric"] = o.MetadataAvailableNumeric
-	}
-	if !isNil(o.MetadataTotalSize) {
-		toSerialize["metadata-total-size"] = o.MetadataTotalSize
-	}
-	if !isNil(o.MetadataTotalSizeNumeric) {
-		toSerialize["metadata-total-size-numeric"] = o.MetadataTotalSizeNumeric
-	}
-	if !isNil(o.MetadataVolSize) {
-		toSerialize["metadata-vol-size"] = o.MetadataVolSize
-	}
-	if !isNil(o.MetadataVolSizeNumeric) {
-		toSerialize["metadata-vol-size-numeric"] = o.MetadataVolSizeNumeric
-	}
-	if !isNil(o.MiddleThreshold) {
-		toSerialize["middle-threshold"] = o.MiddleThreshold
-	}
-	if !isNil(o.Migration) {
-		toSerialize["migration"] = o.Migration
-	}
-	if !isNil(o.MigrationNumeric) {
-		toSerialize["migration-numeric"] = o.MigrationNumeric
-	}
-	if !isNil(o.Name) {
-		toSerialize["name"] = o.Name
-	}
-	if !isNil(o.OverCommitted) {
-		toSerialize["over-committed"] = o.OverCommitted
-	}
-	if !isNil(o.OverCommittedNumeric) {
-		toSerialize["over-committed-numeric"] = o.OverCommittedNumeric
-	}
-	if !isNil(o.Overcommit) {
-		toSerialize["overcommit"] = o.Overcommit
-	}
-	if !isNil(o.OvercommitNumeric) {
-		toSerialize["overcommit-numeric"] = o.OvercommitNumeric
-	}
-	if !isNil(o.Owner) {
-		toSerialize["owner"] = o.Owner
-	}
-	if !isNil(o.OwnerNumeric) {
-		toSerialize["owner-numeric"] = o.OwnerNumeric
-	}
-	if !isNil(o.PageSize) {
-		toSerialize["page-size"] = o.PageSize
-	}
-	if !isNil(o.PageSizeNumeric) {
-		toSerialize["page-size-numeric"] = o.PageSizeNumeric
-	}
-	if !isNil(o.PoolSectorFormat) {
-		toSerialize["pool-sector-format"] = o.PoolSectorFormat
-	}
-	if !isNil(o.PoolSectorFormatNumeric) {
-		toSerialize["pool-sector-format-numeric"] = o.PoolSectorFormatNumeric
-	}
-	if !isNil(o.PreferredOwner) {
-		toSerialize["preferred-owner"] = o.PreferredOwner
-	}
-	if !isNil(o.PreferredOwnerNumeric) {
-		toSerialize["preferred-owner-numeric"] = o.PreferredOwnerNumeric
-	}
-	if !isNil(o.ReadFlashCache) {
-		toSerialize["read-flash-cache"] = o.ReadFlashCache
-	}
-	if !isNil(o.ReadFlashCacheNumeric) {
-		toSerialize["read-flash-cache-numeric"] = o.ReadFlashCacheNumeric
-	}
-	if !isNil(o.Rebalance) {
-		toSerialize["rebalance"] = o.Rebalance
-	}
-	if !isNil(o.RebalanceNumeric) {
-		toSerialize["rebalance-numeric"] = o.RebalanceNumeric
-	}
-	if !isNil(o.ReservedSize) {
-		toSerialize["reserved-size"] = o.ReservedSize
-	}
-	if !isNil(o.ReservedSizeNumeric) {
-		toSerialize["reserved-size-numeric"] = o.ReservedSizeNumeric
-	}
-	if !isNil(o.ReservedUnallocSize) {
-		toSerialize["reserved-unalloc-size"] = o.ReservedUnallocSize
-	}
-	if !isNil(o.ReservedUnallocSizeNumeric) {
-		toSerialize["reserved-unalloc-size-numeric"] = o.ReservedUnallocSizeNumeric
-	}
-	if !isNil(o.SerialNumber) {
-		toSerialize["serial-number"] = o.SerialNumber
-	}
-	if !isNil(o.SnapSize) {
-		toSerialize["snap-size"] = o.SnapSize
-	}
-	if !isNil(o.SnapSizeNumeric) {
-		toSerialize["snap-size-numeric"] = o.SnapSizeNumeric
-	}
-	if !isNil(o.StorageType) {
-		toSerialize["storage-type"] = o.StorageType
-	}
-	if !isNil(o.StorageTypeNumeric) {
-		toSerialize["storage-type-numeric"] = o.StorageTypeNumeric
-	}
-	if !isNil(o.TotalAvail) {
-		toSerialize["total-avail"] = o.TotalAvail
-	}
-	if !isNil(o.TotalAvailNumeric) {
-		toSerialize["total-avail-numeric"] = o.TotalAvailNumeric
-	}
-	if !isNil(o.TotalRfcSize) {
-		toSerialize["total-rfc-size"] = o.TotalRfcSize
-	}
-	if !isNil(o.TotalRfcSizeNumeric) {
-		toSerialize["total-rfc-size-numeric"] = o.TotalRfcSizeNumeric
-	}
-	if !isNil(o.TotalSize) {
-		toSerialize["total-size"] = o.TotalSize
-	}
-	if !isNil(o.TotalSizeNumeric) {
-		toSerialize["total-size-numeric"] = o.TotalSizeNumeric
-	}
-	if !isNil(o.Url) {
-		toSerialize["url"] = o.Url
-	}
-	if !isNil(o.UtilityRunning) {
-		toSerialize["utility-running"] = o.UtilityRunning
-	}
-	if !isNil(o.UtilityRunningNumeric) {
-		toSerialize["utility-running-numeric"] = o.UtilityRunningNumeric
-	}
-	if !isNil(o.Volumes) {
-		toSerialize["volumes"] = o.Volumes
-	}
-	if !isNil(o.ZeroScan) {
-		toSerialize["zero-scan"] = o.ZeroScan
-	}
-	if !isNil(o.ZeroScanNumeric) {
-		toSerialize["zero-scan-numeric"] = o.ZeroScanNumeric
-	}
-	if !isNil(o.DiskGroups) {
-		toSerialize["disk-groups"] = o.DiskGroups
-	}
-	if !isNil(o.Tiers) {
-		toSerialize["tiers"] = o.Tiers
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o PoolsResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.AllocatedPages) {
+		toSerialize["allocated-pages"] = o.AllocatedPages
+	}
+	if !IsNil(o.AvailablePages) {
+		toSerialize["available-pages"] = o.AvailablePages
+	}
+	if !IsNil(o.AvailableRfcSize) {
+		toSerialize["available-rfc-size"] = o.AvailableRfcSize
+	}
+	if !IsNil(o.AvailableRfcSizeNumeric) {
+		toSerialize["available-rfc-size-numeric"] = o.AvailableRfcSizeNumeric
+	}
+	if !IsNil(o.Blocksize) {
+		toSerialize["blocksize"] = o.Blocksize
+	}
+	if !IsNil(o.CompressionEfficiency) {
+		toSerialize["compression-efficiency"] = o.CompressionEfficiency
+	}
+	if !IsNil(o.DiskGroupsCount) {
+		toSerialize["disk-groups-count"] = o.DiskGroupsCount
+	}
+	if !IsNil(o.ExtendedStatus) {
+		toSerialize["extended-status"] = o.ExtendedStatus
+	}
+	if !IsNil(o.Health) {
+		toSerialize["health"] = o.Health
+	}
+	if !IsNil(o.HealthNumeric) {
+		toSerialize["health-numeric"] = o.HealthNumeric
+	}
+	if !IsNil(o.HealthReason) {
+		toSerialize["health-reason"] = o.HealthReason
+	}
+	if !IsNil(o.HealthReasonNumeric) {
+		toSerialize["health-reason-numeric"] = o.HealthReasonNumeric
+	}
+	if !IsNil(o.HealthRecommendation) {
+		toSerialize["health-recommendation"] = o.HealthRecommendation
+	}
+	if !IsNil(o.HealthRecommendationNumeric) {
+		toSerialize["health-recommendation-numeric"] = o.HealthRecommendationNumeric
+	}
+	if !IsNil(o.HighThreshold) {
+		toSerialize["high-threshold"] = o.HighThreshold
+	}
+	if !IsNil(o.IdlePageCheck) {
+		toSerialize["idle-page-check"] = o.IdlePageCheck
+	}
+	if !IsNil(o.IdlePageCheckNumeric) {
+		toSerialize["idle-page-check-numeric"] = o.IdlePageCheckNumeric
+	}
+	if !IsNil(o.LowThreshold) {
+		toSerialize["low-threshold"] = o.LowThreshold
+	}
+	if !IsNil(o.MetadataAllocated) {
+		toSerialize["metadata-allocated"] = o.MetadataAllocated
+	}
+	if !IsNil(o.MetadataAllocatedNumeric) {
+		toSerialize["metadata-allocated-numeric"] = o.MetadataAllocatedNumeric
+	}
+	if !IsNil(o.MetadataAvailable) {
+		toSerialize["metadata-available"] = o.MetadataAvailable
+	}
+	if !IsNil(o.MetadataAvailableNumeric) {
+		toSerialize["metadata-available-numeric"] = o.MetadataAvailableNumeric
+	}
+	if !IsNil(o.MetadataTotalSize) {
+		toSerialize["metadata-total-size"] = o.MetadataTotalSize
+	}
+	if !IsNil(o.MetadataTotalSizeNumeric) {
+		toSerialize["metadata-total-size-numeric"] = o.MetadataTotalSizeNumeric
+	}
+	if !IsNil(o.MetadataVolSize) {
+		toSerialize["metadata-vol-size"] = o.MetadataVolSize
+	}
+	if !IsNil(o.MetadataVolSizeNumeric) {
+		toSerialize["metadata-vol-size-numeric"] = o.MetadataVolSizeNumeric
+	}
+	if !IsNil(o.MiddleThreshold) {
+		toSerialize["middle-threshold"] = o.MiddleThreshold
+	}
+	if !IsNil(o.Migration) {
+		toSerialize["migration"] = o.Migration
+	}
+	if !IsNil(o.MigrationNumeric) {
+		toSerialize["migration-numeric"] = o.MigrationNumeric
+	}
+	if !IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !IsNil(o.OverCommitted) {
+		toSerialize["over-committed"] = o.OverCommitted
+	}
+	if !IsNil(o.OverCommittedNumeric) {
+		toSerialize["over-committed-numeric"] = o.OverCommittedNumeric
+	}
+	if !IsNil(o.Overcommit) {
+		toSerialize["overcommit"] = o.Overcommit
+	}
+	if !IsNil(o.OvercommitNumeric) {
+		toSerialize["overcommit-numeric"] = o.OvercommitNumeric
+	}
+	if !IsNil(o.Owner) {
+		toSerialize["owner"] = o.Owner
+	}
+	if !IsNil(o.OwnerNumeric) {
+		toSerialize["owner-numeric"] = o.OwnerNumeric
+	}
+	if !IsNil(o.PageSize) {
+		toSerialize["page-size"] = o.PageSize
+	}
+	if !IsNil(o.PageSizeNumeric) {
+		toSerialize["page-size-numeric"] = o.PageSizeNumeric
+	}
+	if !IsNil(o.PoolSectorFormat) {
+		toSerialize["pool-sector-format"] = o.PoolSectorFormat
+	}
+	if !IsNil(o.PoolSectorFormatNumeric) {
+		toSerialize["pool-sector-format-numeric"] = o.PoolSectorFormatNumeric
+	}
+	if !IsNil(o.PreferredOwner) {
+		toSerialize["preferred-owner"] = o.PreferredOwner
+	}
+	if !IsNil(o.PreferredOwnerNumeric) {
+		toSerialize["preferred-owner-numeric"] = o.PreferredOwnerNumeric
+	}
+	if !IsNil(o.ReadFlashCache) {
+		toSerialize["read-flash-cache"] = o.ReadFlashCache
+	}
+	if !IsNil(o.ReadFlashCacheNumeric) {
+		toSerialize["read-flash-cache-numeric"] = o.ReadFlashCacheNumeric
+	}
+	if !IsNil(o.Rebalance) {
+		toSerialize["rebalance"] = o.Rebalance
+	}
+	if !IsNil(o.RebalanceNumeric) {
+		toSerialize["rebalance-numeric"] = o.RebalanceNumeric
+	}
+	if !IsNil(o.ReservedSize) {
+		toSerialize["reserved-size"] = o.ReservedSize
+	}
+	if !IsNil(o.ReservedSizeNumeric) {
+		toSerialize["reserved-size-numeric"] = o.ReservedSizeNumeric
+	}
+	if !IsNil(o.ReservedUnallocSize) {
+		toSerialize["reserved-unalloc-size"] = o.ReservedUnallocSize
+	}
+	if !IsNil(o.ReservedUnallocSizeNumeric) {
+		toSerialize["reserved-unalloc-size-numeric"] = o.ReservedUnallocSizeNumeric
+	}
+	if !IsNil(o.SerialNumber) {
+		toSerialize["serial-number"] = o.SerialNumber
+	}
+	if !IsNil(o.SnapSize) {
+		toSerialize["snap-size"] = o.SnapSize
+	}
+	if !IsNil(o.SnapSizeNumeric) {
+		toSerialize["snap-size-numeric"] = o.SnapSizeNumeric
+	}
+	if !IsNil(o.StorageType) {
+		toSerialize["storage-type"] = o.StorageType
+	}
+	if !IsNil(o.StorageTypeNumeric) {
+		toSerialize["storage-type-numeric"] = o.StorageTypeNumeric
+	}
+	if !IsNil(o.TotalAvail) {
+		toSerialize["total-avail"] = o.TotalAvail
+	}
+	if !IsNil(o.TotalAvailNumeric) {
+		toSerialize["total-avail-numeric"] = o.TotalAvailNumeric
+	}
+	if !IsNil(o.TotalRfcSize) {
+		toSerialize["total-rfc-size"] = o.TotalRfcSize
+	}
+	if !IsNil(o.TotalRfcSizeNumeric) {
+		toSerialize["total-rfc-size-numeric"] = o.TotalRfcSizeNumeric
+	}
+	if !IsNil(o.TotalSize) {
+		toSerialize["total-size"] = o.TotalSize
+	}
+	if !IsNil(o.TotalSizeNumeric) {
+		toSerialize["total-size-numeric"] = o.TotalSizeNumeric
+	}
+	if !IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
+	if !IsNil(o.UtilityRunning) {
+		toSerialize["utility-running"] = o.UtilityRunning
+	}
+	if !IsNil(o.UtilityRunningNumeric) {
+		toSerialize["utility-running-numeric"] = o.UtilityRunningNumeric
+	}
+	if !IsNil(o.Volumes) {
+		toSerialize["volumes"] = o.Volumes
+	}
+	if !IsNil(o.ZeroScan) {
+		toSerialize["zero-scan"] = o.ZeroScan
+	}
+	if !IsNil(o.ZeroScanNumeric) {
+		toSerialize["zero-scan-numeric"] = o.ZeroScanNumeric
+	}
+	if !IsNil(o.DiskGroups) {
+		toSerialize["disk-groups"] = o.DiskGroups
+	}
+	if !IsNil(o.Tiers) {
+		toSerialize["tiers"] = o.Tiers
+	}
+	return toSerialize, nil
 }
 
 type NullablePoolsResourceInner struct {

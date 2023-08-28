@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the HostResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &HostResourceInner{}
+
 // HostResourceInner struct for HostResourceInner
 type HostResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
@@ -48,7 +51,7 @@ func NewHostResourceInnerWithDefaults() *HostResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *HostResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -58,7 +61,7 @@ func (o *HostResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -66,7 +69,7 @@ func (o *HostResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *HostResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -80,7 +83,7 @@ func (o *HostResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *HostResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -90,7 +93,7 @@ func (o *HostResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -98,7 +101,7 @@ func (o *HostResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *HostResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -112,7 +115,7 @@ func (o *HostResourceInner) SetMeta(v string) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *HostResourceInner) GetDurableId() string {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -122,7 +125,7 @@ func (o *HostResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -130,7 +133,7 @@ func (o *HostResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *HostResourceInner) HasDurableId() bool {
-	if o != nil && !isNil(o.DurableId) {
+	if o != nil && !IsNil(o.DurableId) {
 		return true
 	}
 
@@ -144,7 +147,7 @@ func (o *HostResourceInner) SetDurableId(v string) {
 
 // GetGroupKey returns the GroupKey field value if set, zero value otherwise.
 func (o *HostResourceInner) GetGroupKey() string {
-	if o == nil || isNil(o.GroupKey) {
+	if o == nil || IsNil(o.GroupKey) {
 		var ret string
 		return ret
 	}
@@ -154,7 +157,7 @@ func (o *HostResourceInner) GetGroupKey() string {
 // GetGroupKeyOk returns a tuple with the GroupKey field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostResourceInner) GetGroupKeyOk() (*string, bool) {
-	if o == nil || isNil(o.GroupKey) {
+	if o == nil || IsNil(o.GroupKey) {
 		return nil, false
 	}
 	return o.GroupKey, true
@@ -162,7 +165,7 @@ func (o *HostResourceInner) GetGroupKeyOk() (*string, bool) {
 
 // HasGroupKey returns a boolean if a field has been set.
 func (o *HostResourceInner) HasGroupKey() bool {
-	if o != nil && !isNil(o.GroupKey) {
+	if o != nil && !IsNil(o.GroupKey) {
 		return true
 	}
 
@@ -176,7 +179,7 @@ func (o *HostResourceInner) SetGroupKey(v string) {
 
 // GetHostGroup returns the HostGroup field value if set, zero value otherwise.
 func (o *HostResourceInner) GetHostGroup() string {
-	if o == nil || isNil(o.HostGroup) {
+	if o == nil || IsNil(o.HostGroup) {
 		var ret string
 		return ret
 	}
@@ -186,7 +189,7 @@ func (o *HostResourceInner) GetHostGroup() string {
 // GetHostGroupOk returns a tuple with the HostGroup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostResourceInner) GetHostGroupOk() (*string, bool) {
-	if o == nil || isNil(o.HostGroup) {
+	if o == nil || IsNil(o.HostGroup) {
 		return nil, false
 	}
 	return o.HostGroup, true
@@ -194,7 +197,7 @@ func (o *HostResourceInner) GetHostGroupOk() (*string, bool) {
 
 // HasHostGroup returns a boolean if a field has been set.
 func (o *HostResourceInner) HasHostGroup() bool {
-	if o != nil && !isNil(o.HostGroup) {
+	if o != nil && !IsNil(o.HostGroup) {
 		return true
 	}
 
@@ -208,7 +211,7 @@ func (o *HostResourceInner) SetHostGroup(v string) {
 
 // GetMemberCount returns the MemberCount field value if set, zero value otherwise.
 func (o *HostResourceInner) GetMemberCount() int64 {
-	if o == nil || isNil(o.MemberCount) {
+	if o == nil || IsNil(o.MemberCount) {
 		var ret int64
 		return ret
 	}
@@ -218,7 +221,7 @@ func (o *HostResourceInner) GetMemberCount() int64 {
 // GetMemberCountOk returns a tuple with the MemberCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostResourceInner) GetMemberCountOk() (*int64, bool) {
-	if o == nil || isNil(o.MemberCount) {
+	if o == nil || IsNil(o.MemberCount) {
 		return nil, false
 	}
 	return o.MemberCount, true
@@ -226,7 +229,7 @@ func (o *HostResourceInner) GetMemberCountOk() (*int64, bool) {
 
 // HasMemberCount returns a boolean if a field has been set.
 func (o *HostResourceInner) HasMemberCount() bool {
-	if o != nil && !isNil(o.MemberCount) {
+	if o != nil && !IsNil(o.MemberCount) {
 		return true
 	}
 
@@ -240,7 +243,7 @@ func (o *HostResourceInner) SetMemberCount(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *HostResourceInner) GetName() string {
-	if o == nil || isNil(o.Name) {
+	if o == nil || IsNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -250,7 +253,7 @@ func (o *HostResourceInner) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostResourceInner) GetNameOk() (*string, bool) {
-	if o == nil || isNil(o.Name) {
+	if o == nil || IsNil(o.Name) {
 		return nil, false
 	}
 	return o.Name, true
@@ -258,7 +261,7 @@ func (o *HostResourceInner) GetNameOk() (*string, bool) {
 
 // HasName returns a boolean if a field has been set.
 func (o *HostResourceInner) HasName() bool {
-	if o != nil && !isNil(o.Name) {
+	if o != nil && !IsNil(o.Name) {
 		return true
 	}
 
@@ -272,7 +275,7 @@ func (o *HostResourceInner) SetName(v string) {
 
 // GetSerialNumber returns the SerialNumber field value if set, zero value otherwise.
 func (o *HostResourceInner) GetSerialNumber() string {
-	if o == nil || isNil(o.SerialNumber) {
+	if o == nil || IsNil(o.SerialNumber) {
 		var ret string
 		return ret
 	}
@@ -282,7 +285,7 @@ func (o *HostResourceInner) GetSerialNumber() string {
 // GetSerialNumberOk returns a tuple with the SerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostResourceInner) GetSerialNumberOk() (*string, bool) {
-	if o == nil || isNil(o.SerialNumber) {
+	if o == nil || IsNil(o.SerialNumber) {
 		return nil, false
 	}
 	return o.SerialNumber, true
@@ -290,7 +293,7 @@ func (o *HostResourceInner) GetSerialNumberOk() (*string, bool) {
 
 // HasSerialNumber returns a boolean if a field has been set.
 func (o *HostResourceInner) HasSerialNumber() bool {
-	if o != nil && !isNil(o.SerialNumber) {
+	if o != nil && !IsNil(o.SerialNumber) {
 		return true
 	}
 
@@ -304,7 +307,7 @@ func (o *HostResourceInner) SetSerialNumber(v string) {
 
 // GetInitiator returns the Initiator field value if set, zero value otherwise.
 func (o *HostResourceInner) GetInitiator() []InitiatorResourceInner {
-	if o == nil || isNil(o.Initiator) {
+	if o == nil || IsNil(o.Initiator) {
 		var ret []InitiatorResourceInner
 		return ret
 	}
@@ -314,7 +317,7 @@ func (o *HostResourceInner) GetInitiator() []InitiatorResourceInner {
 // GetInitiatorOk returns a tuple with the Initiator field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostResourceInner) GetInitiatorOk() ([]InitiatorResourceInner, bool) {
-	if o == nil || isNil(o.Initiator) {
+	if o == nil || IsNil(o.Initiator) {
 		return nil, false
 	}
 	return o.Initiator, true
@@ -322,7 +325,7 @@ func (o *HostResourceInner) GetInitiatorOk() ([]InitiatorResourceInner, bool) {
 
 // HasInitiator returns a boolean if a field has been set.
 func (o *HostResourceInner) HasInitiator() bool {
-	if o != nil && !isNil(o.Initiator) {
+	if o != nil && !IsNil(o.Initiator) {
 		return true
 	}
 
@@ -335,35 +338,43 @@ func (o *HostResourceInner) SetInitiator(v []InitiatorResourceInner) {
 }
 
 func (o HostResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.DurableId) {
-		toSerialize["durable-id"] = o.DurableId
-	}
-	if !isNil(o.GroupKey) {
-		toSerialize["group-key"] = o.GroupKey
-	}
-	if !isNil(o.HostGroup) {
-		toSerialize["host-group"] = o.HostGroup
-	}
-	if !isNil(o.MemberCount) {
-		toSerialize["member-count"] = o.MemberCount
-	}
-	if !isNil(o.Name) {
-		toSerialize["name"] = o.Name
-	}
-	if !isNil(o.SerialNumber) {
-		toSerialize["serial-number"] = o.SerialNumber
-	}
-	if !isNil(o.Initiator) {
-		toSerialize["initiator"] = o.Initiator
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o HostResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.DurableId) {
+		toSerialize["durable-id"] = o.DurableId
+	}
+	if !IsNil(o.GroupKey) {
+		toSerialize["group-key"] = o.GroupKey
+	}
+	if !IsNil(o.HostGroup) {
+		toSerialize["host-group"] = o.HostGroup
+	}
+	if !IsNil(o.MemberCount) {
+		toSerialize["member-count"] = o.MemberCount
+	}
+	if !IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !IsNil(o.SerialNumber) {
+		toSerialize["serial-number"] = o.SerialNumber
+	}
+	if !IsNil(o.Initiator) {
+		toSerialize["initiator"] = o.Initiator
+	}
+	return toSerialize, nil
 }
 
 type NullableHostResourceInner struct {

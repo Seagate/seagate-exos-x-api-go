@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the ControllersObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &ControllersObject{}
+
 // ControllersObject struct for ControllersObject
 type ControllersObject struct {
 	Status      []StatusResourceInner      `json:"status,omitempty"`
@@ -39,7 +42,7 @@ func NewControllersObjectWithDefaults() *ControllersObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *ControllersObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -49,7 +52,7 @@ func (o *ControllersObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllersObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -57,7 +60,7 @@ func (o *ControllersObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *ControllersObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -71,7 +74,7 @@ func (o *ControllersObject) SetStatus(v []StatusResourceInner) {
 
 // GetControllers returns the Controllers field value if set, zero value otherwise.
 func (o *ControllersObject) GetControllers() []ControllersResourceInner {
-	if o == nil || isNil(o.Controllers) {
+	if o == nil || IsNil(o.Controllers) {
 		var ret []ControllersResourceInner
 		return ret
 	}
@@ -81,7 +84,7 @@ func (o *ControllersObject) GetControllers() []ControllersResourceInner {
 // GetControllersOk returns a tuple with the Controllers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllersObject) GetControllersOk() ([]ControllersResourceInner, bool) {
-	if o == nil || isNil(o.Controllers) {
+	if o == nil || IsNil(o.Controllers) {
 		return nil, false
 	}
 	return o.Controllers, true
@@ -89,7 +92,7 @@ func (o *ControllersObject) GetControllersOk() ([]ControllersResourceInner, bool
 
 // HasControllers returns a boolean if a field has been set.
 func (o *ControllersObject) HasControllers() bool {
-	if o != nil && !isNil(o.Controllers) {
+	if o != nil && !IsNil(o.Controllers) {
 		return true
 	}
 
@@ -102,14 +105,22 @@ func (o *ControllersObject) SetControllers(v []ControllersResourceInner) {
 }
 
 func (o ControllersObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.Controllers) {
-		toSerialize["controllers"] = o.Controllers
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o ControllersObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.Controllers) {
+		toSerialize["controllers"] = o.Controllers
+	}
+	return toSerialize, nil
 }
 
 type NullableControllersObject struct {

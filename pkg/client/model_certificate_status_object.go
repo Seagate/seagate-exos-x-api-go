@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the CertificateStatusObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CertificateStatusObject{}
+
 // CertificateStatusObject struct for CertificateStatusObject
 type CertificateStatusObject struct {
 	Status            []StatusResourceInner            `json:"status,omitempty"`
@@ -39,7 +42,7 @@ func NewCertificateStatusObjectWithDefaults() *CertificateStatusObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *CertificateStatusObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -49,7 +52,7 @@ func (o *CertificateStatusObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -57,7 +60,7 @@ func (o *CertificateStatusObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *CertificateStatusObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -71,7 +74,7 @@ func (o *CertificateStatusObject) SetStatus(v []StatusResourceInner) {
 
 // GetCertificateStatus returns the CertificateStatus field value if set, zero value otherwise.
 func (o *CertificateStatusObject) GetCertificateStatus() []CertificateStatusResourceInner {
-	if o == nil || isNil(o.CertificateStatus) {
+	if o == nil || IsNil(o.CertificateStatus) {
 		var ret []CertificateStatusResourceInner
 		return ret
 	}
@@ -81,7 +84,7 @@ func (o *CertificateStatusObject) GetCertificateStatus() []CertificateStatusReso
 // GetCertificateStatusOk returns a tuple with the CertificateStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusObject) GetCertificateStatusOk() ([]CertificateStatusResourceInner, bool) {
-	if o == nil || isNil(o.CertificateStatus) {
+	if o == nil || IsNil(o.CertificateStatus) {
 		return nil, false
 	}
 	return o.CertificateStatus, true
@@ -89,7 +92,7 @@ func (o *CertificateStatusObject) GetCertificateStatusOk() ([]CertificateStatusR
 
 // HasCertificateStatus returns a boolean if a field has been set.
 func (o *CertificateStatusObject) HasCertificateStatus() bool {
-	if o != nil && !isNil(o.CertificateStatus) {
+	if o != nil && !IsNil(o.CertificateStatus) {
 		return true
 	}
 
@@ -102,14 +105,22 @@ func (o *CertificateStatusObject) SetCertificateStatus(v []CertificateStatusReso
 }
 
 func (o CertificateStatusObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.CertificateStatus) {
-		toSerialize["certificate-status"] = o.CertificateStatus
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o CertificateStatusObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.CertificateStatus) {
+		toSerialize["certificate-status"] = o.CertificateStatus
+	}
+	return toSerialize, nil
 }
 
 type NullableCertificateStatusObject struct {

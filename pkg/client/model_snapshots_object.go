@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the SnapshotsObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &SnapshotsObject{}
+
 // SnapshotsObject struct for SnapshotsObject
 type SnapshotsObject struct {
 	Status    []StatusResourceInner    `json:"status,omitempty"`
@@ -39,7 +42,7 @@ func NewSnapshotsObjectWithDefaults() *SnapshotsObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *SnapshotsObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -49,7 +52,7 @@ func (o *SnapshotsObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SnapshotsObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -57,7 +60,7 @@ func (o *SnapshotsObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *SnapshotsObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -71,7 +74,7 @@ func (o *SnapshotsObject) SetStatus(v []StatusResourceInner) {
 
 // GetSnapshots returns the Snapshots field value if set, zero value otherwise.
 func (o *SnapshotsObject) GetSnapshots() []SnapshotsResourceInner {
-	if o == nil || isNil(o.Snapshots) {
+	if o == nil || IsNil(o.Snapshots) {
 		var ret []SnapshotsResourceInner
 		return ret
 	}
@@ -81,7 +84,7 @@ func (o *SnapshotsObject) GetSnapshots() []SnapshotsResourceInner {
 // GetSnapshotsOk returns a tuple with the Snapshots field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SnapshotsObject) GetSnapshotsOk() ([]SnapshotsResourceInner, bool) {
-	if o == nil || isNil(o.Snapshots) {
+	if o == nil || IsNil(o.Snapshots) {
 		return nil, false
 	}
 	return o.Snapshots, true
@@ -89,7 +92,7 @@ func (o *SnapshotsObject) GetSnapshotsOk() ([]SnapshotsResourceInner, bool) {
 
 // HasSnapshots returns a boolean if a field has been set.
 func (o *SnapshotsObject) HasSnapshots() bool {
-	if o != nil && !isNil(o.Snapshots) {
+	if o != nil && !IsNil(o.Snapshots) {
 		return true
 	}
 
@@ -102,14 +105,22 @@ func (o *SnapshotsObject) SetSnapshots(v []SnapshotsResourceInner) {
 }
 
 func (o SnapshotsObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.Snapshots) {
-		toSerialize["snapshots"] = o.Snapshots
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o SnapshotsObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.Snapshots) {
+		toSerialize["snapshots"] = o.Snapshots
+	}
+	return toSerialize, nil
 }
 
 type NullableSnapshotsObject struct {

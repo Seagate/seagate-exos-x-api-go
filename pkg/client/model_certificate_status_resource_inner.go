@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the CertificateStatusResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CertificateStatusResourceInner{}
+
 // CertificateStatusResourceInner struct for CertificateStatusResourceInner
 type CertificateStatusResourceInner struct {
 	ObjectName               *string `json:"object-name,omitempty"`
@@ -46,7 +49,7 @@ func NewCertificateStatusResourceInnerWithDefaults() *CertificateStatusResourceI
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *CertificateStatusResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -56,7 +59,7 @@ func (o *CertificateStatusResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -64,7 +67,7 @@ func (o *CertificateStatusResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *CertificateStatusResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -78,7 +81,7 @@ func (o *CertificateStatusResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *CertificateStatusResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -88,7 +91,7 @@ func (o *CertificateStatusResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -96,7 +99,7 @@ func (o *CertificateStatusResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *CertificateStatusResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -110,7 +113,7 @@ func (o *CertificateStatusResourceInner) SetMeta(v string) {
 
 // GetCertificateSignature returns the CertificateSignature field value if set, zero value otherwise.
 func (o *CertificateStatusResourceInner) GetCertificateSignature() string {
-	if o == nil || isNil(o.CertificateSignature) {
+	if o == nil || IsNil(o.CertificateSignature) {
 		var ret string
 		return ret
 	}
@@ -120,7 +123,7 @@ func (o *CertificateStatusResourceInner) GetCertificateSignature() string {
 // GetCertificateSignatureOk returns a tuple with the CertificateSignature field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusResourceInner) GetCertificateSignatureOk() (*string, bool) {
-	if o == nil || isNil(o.CertificateSignature) {
+	if o == nil || IsNil(o.CertificateSignature) {
 		return nil, false
 	}
 	return o.CertificateSignature, true
@@ -128,7 +131,7 @@ func (o *CertificateStatusResourceInner) GetCertificateSignatureOk() (*string, b
 
 // HasCertificateSignature returns a boolean if a field has been set.
 func (o *CertificateStatusResourceInner) HasCertificateSignature() bool {
-	if o != nil && !isNil(o.CertificateSignature) {
+	if o != nil && !IsNil(o.CertificateSignature) {
 		return true
 	}
 
@@ -142,7 +145,7 @@ func (o *CertificateStatusResourceInner) SetCertificateSignature(v string) {
 
 // GetCertificateStatus returns the CertificateStatus field value if set, zero value otherwise.
 func (o *CertificateStatusResourceInner) GetCertificateStatus() string {
-	if o == nil || isNil(o.CertificateStatus) {
+	if o == nil || IsNil(o.CertificateStatus) {
 		var ret string
 		return ret
 	}
@@ -152,7 +155,7 @@ func (o *CertificateStatusResourceInner) GetCertificateStatus() string {
 // GetCertificateStatusOk returns a tuple with the CertificateStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusResourceInner) GetCertificateStatusOk() (*string, bool) {
-	if o == nil || isNil(o.CertificateStatus) {
+	if o == nil || IsNil(o.CertificateStatus) {
 		return nil, false
 	}
 	return o.CertificateStatus, true
@@ -160,7 +163,7 @@ func (o *CertificateStatusResourceInner) GetCertificateStatusOk() (*string, bool
 
 // HasCertificateStatus returns a boolean if a field has been set.
 func (o *CertificateStatusResourceInner) HasCertificateStatus() bool {
-	if o != nil && !isNil(o.CertificateStatus) {
+	if o != nil && !IsNil(o.CertificateStatus) {
 		return true
 	}
 
@@ -174,7 +177,7 @@ func (o *CertificateStatusResourceInner) SetCertificateStatus(v string) {
 
 // GetCertificateStatusNumeric returns the CertificateStatusNumeric field value if set, zero value otherwise.
 func (o *CertificateStatusResourceInner) GetCertificateStatusNumeric() int64 {
-	if o == nil || isNil(o.CertificateStatusNumeric) {
+	if o == nil || IsNil(o.CertificateStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -184,7 +187,7 @@ func (o *CertificateStatusResourceInner) GetCertificateStatusNumeric() int64 {
 // GetCertificateStatusNumericOk returns a tuple with the CertificateStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusResourceInner) GetCertificateStatusNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.CertificateStatusNumeric) {
+	if o == nil || IsNil(o.CertificateStatusNumeric) {
 		return nil, false
 	}
 	return o.CertificateStatusNumeric, true
@@ -192,7 +195,7 @@ func (o *CertificateStatusResourceInner) GetCertificateStatusNumericOk() (*int64
 
 // HasCertificateStatusNumeric returns a boolean if a field has been set.
 func (o *CertificateStatusResourceInner) HasCertificateStatusNumeric() bool {
-	if o != nil && !isNil(o.CertificateStatusNumeric) {
+	if o != nil && !IsNil(o.CertificateStatusNumeric) {
 		return true
 	}
 
@@ -206,7 +209,7 @@ func (o *CertificateStatusResourceInner) SetCertificateStatusNumeric(v int64) {
 
 // GetCertificateText returns the CertificateText field value if set, zero value otherwise.
 func (o *CertificateStatusResourceInner) GetCertificateText() string {
-	if o == nil || isNil(o.CertificateText) {
+	if o == nil || IsNil(o.CertificateText) {
 		var ret string
 		return ret
 	}
@@ -216,7 +219,7 @@ func (o *CertificateStatusResourceInner) GetCertificateText() string {
 // GetCertificateTextOk returns a tuple with the CertificateText field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusResourceInner) GetCertificateTextOk() (*string, bool) {
-	if o == nil || isNil(o.CertificateText) {
+	if o == nil || IsNil(o.CertificateText) {
 		return nil, false
 	}
 	return o.CertificateText, true
@@ -224,7 +227,7 @@ func (o *CertificateStatusResourceInner) GetCertificateTextOk() (*string, bool) 
 
 // HasCertificateText returns a boolean if a field has been set.
 func (o *CertificateStatusResourceInner) HasCertificateText() bool {
-	if o != nil && !isNil(o.CertificateText) {
+	if o != nil && !IsNil(o.CertificateText) {
 		return true
 	}
 
@@ -238,7 +241,7 @@ func (o *CertificateStatusResourceInner) SetCertificateText(v string) {
 
 // GetCertificateTime returns the CertificateTime field value if set, zero value otherwise.
 func (o *CertificateStatusResourceInner) GetCertificateTime() string {
-	if o == nil || isNil(o.CertificateTime) {
+	if o == nil || IsNil(o.CertificateTime) {
 		var ret string
 		return ret
 	}
@@ -248,7 +251,7 @@ func (o *CertificateStatusResourceInner) GetCertificateTime() string {
 // GetCertificateTimeOk returns a tuple with the CertificateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusResourceInner) GetCertificateTimeOk() (*string, bool) {
-	if o == nil || isNil(o.CertificateTime) {
+	if o == nil || IsNil(o.CertificateTime) {
 		return nil, false
 	}
 	return o.CertificateTime, true
@@ -256,7 +259,7 @@ func (o *CertificateStatusResourceInner) GetCertificateTimeOk() (*string, bool) 
 
 // HasCertificateTime returns a boolean if a field has been set.
 func (o *CertificateStatusResourceInner) HasCertificateTime() bool {
-	if o != nil && !isNil(o.CertificateTime) {
+	if o != nil && !IsNil(o.CertificateTime) {
 		return true
 	}
 
@@ -270,7 +273,7 @@ func (o *CertificateStatusResourceInner) SetCertificateTime(v string) {
 
 // GetController returns the Controller field value if set, zero value otherwise.
 func (o *CertificateStatusResourceInner) GetController() string {
-	if o == nil || isNil(o.Controller) {
+	if o == nil || IsNil(o.Controller) {
 		var ret string
 		return ret
 	}
@@ -280,7 +283,7 @@ func (o *CertificateStatusResourceInner) GetController() string {
 // GetControllerOk returns a tuple with the Controller field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusResourceInner) GetControllerOk() (*string, bool) {
-	if o == nil || isNil(o.Controller) {
+	if o == nil || IsNil(o.Controller) {
 		return nil, false
 	}
 	return o.Controller, true
@@ -288,7 +291,7 @@ func (o *CertificateStatusResourceInner) GetControllerOk() (*string, bool) {
 
 // HasController returns a boolean if a field has been set.
 func (o *CertificateStatusResourceInner) HasController() bool {
-	if o != nil && !isNil(o.Controller) {
+	if o != nil && !IsNil(o.Controller) {
 		return true
 	}
 
@@ -302,7 +305,7 @@ func (o *CertificateStatusResourceInner) SetController(v string) {
 
 // GetControllerNumeric returns the ControllerNumeric field value if set, zero value otherwise.
 func (o *CertificateStatusResourceInner) GetControllerNumeric() int64 {
-	if o == nil || isNil(o.ControllerNumeric) {
+	if o == nil || IsNil(o.ControllerNumeric) {
 		var ret int64
 		return ret
 	}
@@ -312,7 +315,7 @@ func (o *CertificateStatusResourceInner) GetControllerNumeric() int64 {
 // GetControllerNumericOk returns a tuple with the ControllerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CertificateStatusResourceInner) GetControllerNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.ControllerNumeric) {
+	if o == nil || IsNil(o.ControllerNumeric) {
 		return nil, false
 	}
 	return o.ControllerNumeric, true
@@ -320,7 +323,7 @@ func (o *CertificateStatusResourceInner) GetControllerNumericOk() (*int64, bool)
 
 // HasControllerNumeric returns a boolean if a field has been set.
 func (o *CertificateStatusResourceInner) HasControllerNumeric() bool {
-	if o != nil && !isNil(o.ControllerNumeric) {
+	if o != nil && !IsNil(o.ControllerNumeric) {
 		return true
 	}
 
@@ -333,35 +336,43 @@ func (o *CertificateStatusResourceInner) SetControllerNumeric(v int64) {
 }
 
 func (o CertificateStatusResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.CertificateSignature) {
-		toSerialize["certificate-signature"] = o.CertificateSignature
-	}
-	if !isNil(o.CertificateStatus) {
-		toSerialize["certificate-status"] = o.CertificateStatus
-	}
-	if !isNil(o.CertificateStatusNumeric) {
-		toSerialize["certificate-status-numeric"] = o.CertificateStatusNumeric
-	}
-	if !isNil(o.CertificateText) {
-		toSerialize["certificate-text"] = o.CertificateText
-	}
-	if !isNil(o.CertificateTime) {
-		toSerialize["certificate-time"] = o.CertificateTime
-	}
-	if !isNil(o.Controller) {
-		toSerialize["controller"] = o.Controller
-	}
-	if !isNil(o.ControllerNumeric) {
-		toSerialize["controller-numeric"] = o.ControllerNumeric
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o CertificateStatusResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.CertificateSignature) {
+		toSerialize["certificate-signature"] = o.CertificateSignature
+	}
+	if !IsNil(o.CertificateStatus) {
+		toSerialize["certificate-status"] = o.CertificateStatus
+	}
+	if !IsNil(o.CertificateStatusNumeric) {
+		toSerialize["certificate-status-numeric"] = o.CertificateStatusNumeric
+	}
+	if !IsNil(o.CertificateText) {
+		toSerialize["certificate-text"] = o.CertificateText
+	}
+	if !IsNil(o.CertificateTime) {
+		toSerialize["certificate-time"] = o.CertificateTime
+	}
+	if !IsNil(o.Controller) {
+		toSerialize["controller"] = o.Controller
+	}
+	if !IsNil(o.ControllerNumeric) {
+		toSerialize["controller-numeric"] = o.ControllerNumeric
+	}
+	return toSerialize, nil
 }
 
 type NullableCertificateStatusResourceInner struct {

@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the ExpanderPortsResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &ExpanderPortsResourceInner{}
+
 // ExpanderPortsResourceInner struct for ExpanderPortsResourceInner
 type ExpanderPortsResourceInner struct {
 	ObjectName           *string `json:"object-name,omitempty"`
@@ -56,7 +59,7 @@ func NewExpanderPortsResourceInnerWithDefaults() *ExpanderPortsResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -66,7 +69,7 @@ func (o *ExpanderPortsResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -74,7 +77,7 @@ func (o *ExpanderPortsResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -88,7 +91,7 @@ func (o *ExpanderPortsResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -98,7 +101,7 @@ func (o *ExpanderPortsResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -106,7 +109,7 @@ func (o *ExpanderPortsResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -120,7 +123,7 @@ func (o *ExpanderPortsResourceInner) SetMeta(v string) {
 
 // GetController returns the Controller field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetController() string {
-	if o == nil || isNil(o.Controller) {
+	if o == nil || IsNil(o.Controller) {
 		var ret string
 		return ret
 	}
@@ -130,7 +133,7 @@ func (o *ExpanderPortsResourceInner) GetController() string {
 // GetControllerOk returns a tuple with the Controller field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetControllerOk() (*string, bool) {
-	if o == nil || isNil(o.Controller) {
+	if o == nil || IsNil(o.Controller) {
 		return nil, false
 	}
 	return o.Controller, true
@@ -138,7 +141,7 @@ func (o *ExpanderPortsResourceInner) GetControllerOk() (*string, bool) {
 
 // HasController returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasController() bool {
-	if o != nil && !isNil(o.Controller) {
+	if o != nil && !IsNil(o.Controller) {
 		return true
 	}
 
@@ -152,7 +155,7 @@ func (o *ExpanderPortsResourceInner) SetController(v string) {
 
 // GetControllerNumeric returns the ControllerNumeric field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetControllerNumeric() int64 {
-	if o == nil || isNil(o.ControllerNumeric) {
+	if o == nil || IsNil(o.ControllerNumeric) {
 		var ret int64
 		return ret
 	}
@@ -162,7 +165,7 @@ func (o *ExpanderPortsResourceInner) GetControllerNumeric() int64 {
 // GetControllerNumericOk returns a tuple with the ControllerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetControllerNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.ControllerNumeric) {
+	if o == nil || IsNil(o.ControllerNumeric) {
 		return nil, false
 	}
 	return o.ControllerNumeric, true
@@ -170,7 +173,7 @@ func (o *ExpanderPortsResourceInner) GetControllerNumericOk() (*int64, bool) {
 
 // HasControllerNumeric returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasControllerNumeric() bool {
-	if o != nil && !isNil(o.ControllerNumeric) {
+	if o != nil && !IsNil(o.ControllerNumeric) {
 		return true
 	}
 
@@ -184,7 +187,7 @@ func (o *ExpanderPortsResourceInner) SetControllerNumeric(v int64) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetDurableId() string {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -194,7 +197,7 @@ func (o *ExpanderPortsResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -202,7 +205,7 @@ func (o *ExpanderPortsResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasDurableId() bool {
-	if o != nil && !isNil(o.DurableId) {
+	if o != nil && !IsNil(o.DurableId) {
 		return true
 	}
 
@@ -216,7 +219,7 @@ func (o *ExpanderPortsResourceInner) SetDurableId(v string) {
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetEnclosureId() int64 {
-	if o == nil || isNil(o.EnclosureId) {
+	if o == nil || IsNil(o.EnclosureId) {
 		var ret int64
 		return ret
 	}
@@ -226,7 +229,7 @@ func (o *ExpanderPortsResourceInner) GetEnclosureId() int64 {
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetEnclosureIdOk() (*int64, bool) {
-	if o == nil || isNil(o.EnclosureId) {
+	if o == nil || IsNil(o.EnclosureId) {
 		return nil, false
 	}
 	return o.EnclosureId, true
@@ -234,7 +237,7 @@ func (o *ExpanderPortsResourceInner) GetEnclosureIdOk() (*int64, bool) {
 
 // HasEnclosureId returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasEnclosureId() bool {
-	if o != nil && !isNil(o.EnclosureId) {
+	if o != nil && !IsNil(o.EnclosureId) {
 		return true
 	}
 
@@ -248,7 +251,7 @@ func (o *ExpanderPortsResourceInner) SetEnclosureId(v int64) {
 
 // GetHealth returns the Health field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetHealth() string {
-	if o == nil || isNil(o.Health) {
+	if o == nil || IsNil(o.Health) {
 		var ret string
 		return ret
 	}
@@ -258,7 +261,7 @@ func (o *ExpanderPortsResourceInner) GetHealth() string {
 // GetHealthOk returns a tuple with the Health field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetHealthOk() (*string, bool) {
-	if o == nil || isNil(o.Health) {
+	if o == nil || IsNil(o.Health) {
 		return nil, false
 	}
 	return o.Health, true
@@ -266,7 +269,7 @@ func (o *ExpanderPortsResourceInner) GetHealthOk() (*string, bool) {
 
 // HasHealth returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasHealth() bool {
-	if o != nil && !isNil(o.Health) {
+	if o != nil && !IsNil(o.Health) {
 		return true
 	}
 
@@ -280,7 +283,7 @@ func (o *ExpanderPortsResourceInner) SetHealth(v string) {
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetHealthNumeric() int64 {
-	if o == nil || isNil(o.HealthNumeric) {
+	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -290,7 +293,7 @@ func (o *ExpanderPortsResourceInner) GetHealthNumeric() int64 {
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetHealthNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.HealthNumeric) {
+	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
 	return o.HealthNumeric, true
@@ -298,7 +301,7 @@ func (o *ExpanderPortsResourceInner) GetHealthNumericOk() (*int64, bool) {
 
 // HasHealthNumeric returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasHealthNumeric() bool {
-	if o != nil && !isNil(o.HealthNumeric) {
+	if o != nil && !IsNil(o.HealthNumeric) {
 		return true
 	}
 
@@ -312,7 +315,7 @@ func (o *ExpanderPortsResourceInner) SetHealthNumeric(v int64) {
 
 // GetHealthReason returns the HealthReason field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetHealthReason() string {
-	if o == nil || isNil(o.HealthReason) {
+	if o == nil || IsNil(o.HealthReason) {
 		var ret string
 		return ret
 	}
@@ -322,7 +325,7 @@ func (o *ExpanderPortsResourceInner) GetHealthReason() string {
 // GetHealthReasonOk returns a tuple with the HealthReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetHealthReasonOk() (*string, bool) {
-	if o == nil || isNil(o.HealthReason) {
+	if o == nil || IsNil(o.HealthReason) {
 		return nil, false
 	}
 	return o.HealthReason, true
@@ -330,7 +333,7 @@ func (o *ExpanderPortsResourceInner) GetHealthReasonOk() (*string, bool) {
 
 // HasHealthReason returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasHealthReason() bool {
-	if o != nil && !isNil(o.HealthReason) {
+	if o != nil && !IsNil(o.HealthReason) {
 		return true
 	}
 
@@ -344,7 +347,7 @@ func (o *ExpanderPortsResourceInner) SetHealthReason(v string) {
 
 // GetHealthRecommendation returns the HealthRecommendation field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetHealthRecommendation() string {
-	if o == nil || isNil(o.HealthRecommendation) {
+	if o == nil || IsNil(o.HealthRecommendation) {
 		var ret string
 		return ret
 	}
@@ -354,7 +357,7 @@ func (o *ExpanderPortsResourceInner) GetHealthRecommendation() string {
 // GetHealthRecommendationOk returns a tuple with the HealthRecommendation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetHealthRecommendationOk() (*string, bool) {
-	if o == nil || isNil(o.HealthRecommendation) {
+	if o == nil || IsNil(o.HealthRecommendation) {
 		return nil, false
 	}
 	return o.HealthRecommendation, true
@@ -362,7 +365,7 @@ func (o *ExpanderPortsResourceInner) GetHealthRecommendationOk() (*string, bool)
 
 // HasHealthRecommendation returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasHealthRecommendation() bool {
-	if o != nil && !isNil(o.HealthRecommendation) {
+	if o != nil && !IsNil(o.HealthRecommendation) {
 		return true
 	}
 
@@ -376,7 +379,7 @@ func (o *ExpanderPortsResourceInner) SetHealthRecommendation(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetName() string {
-	if o == nil || isNil(o.Name) {
+	if o == nil || IsNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -386,7 +389,7 @@ func (o *ExpanderPortsResourceInner) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetNameOk() (*string, bool) {
-	if o == nil || isNil(o.Name) {
+	if o == nil || IsNil(o.Name) {
 		return nil, false
 	}
 	return o.Name, true
@@ -394,7 +397,7 @@ func (o *ExpanderPortsResourceInner) GetNameOk() (*string, bool) {
 
 // HasName returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasName() bool {
-	if o != nil && !isNil(o.Name) {
+	if o != nil && !IsNil(o.Name) {
 		return true
 	}
 
@@ -408,7 +411,7 @@ func (o *ExpanderPortsResourceInner) SetName(v string) {
 
 // GetSasPortIndex returns the SasPortIndex field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetSasPortIndex() int64 {
-	if o == nil || isNil(o.SasPortIndex) {
+	if o == nil || IsNil(o.SasPortIndex) {
 		var ret int64
 		return ret
 	}
@@ -418,7 +421,7 @@ func (o *ExpanderPortsResourceInner) GetSasPortIndex() int64 {
 // GetSasPortIndexOk returns a tuple with the SasPortIndex field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetSasPortIndexOk() (*int64, bool) {
-	if o == nil || isNil(o.SasPortIndex) {
+	if o == nil || IsNil(o.SasPortIndex) {
 		return nil, false
 	}
 	return o.SasPortIndex, true
@@ -426,7 +429,7 @@ func (o *ExpanderPortsResourceInner) GetSasPortIndexOk() (*int64, bool) {
 
 // HasSasPortIndex returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasSasPortIndex() bool {
-	if o != nil && !isNil(o.SasPortIndex) {
+	if o != nil && !IsNil(o.SasPortIndex) {
 		return true
 	}
 
@@ -440,7 +443,7 @@ func (o *ExpanderPortsResourceInner) SetSasPortIndex(v int64) {
 
 // GetSasPortType returns the SasPortType field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetSasPortType() string {
-	if o == nil || isNil(o.SasPortType) {
+	if o == nil || IsNil(o.SasPortType) {
 		var ret string
 		return ret
 	}
@@ -450,7 +453,7 @@ func (o *ExpanderPortsResourceInner) GetSasPortType() string {
 // GetSasPortTypeOk returns a tuple with the SasPortType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetSasPortTypeOk() (*string, bool) {
-	if o == nil || isNil(o.SasPortType) {
+	if o == nil || IsNil(o.SasPortType) {
 		return nil, false
 	}
 	return o.SasPortType, true
@@ -458,7 +461,7 @@ func (o *ExpanderPortsResourceInner) GetSasPortTypeOk() (*string, bool) {
 
 // HasSasPortType returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasSasPortType() bool {
-	if o != nil && !isNil(o.SasPortType) {
+	if o != nil && !IsNil(o.SasPortType) {
 		return true
 	}
 
@@ -472,7 +475,7 @@ func (o *ExpanderPortsResourceInner) SetSasPortType(v string) {
 
 // GetSasPortTypeNumeric returns the SasPortTypeNumeric field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetSasPortTypeNumeric() int64 {
-	if o == nil || isNil(o.SasPortTypeNumeric) {
+	if o == nil || IsNil(o.SasPortTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -482,7 +485,7 @@ func (o *ExpanderPortsResourceInner) GetSasPortTypeNumeric() int64 {
 // GetSasPortTypeNumericOk returns a tuple with the SasPortTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetSasPortTypeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.SasPortTypeNumeric) {
+	if o == nil || IsNil(o.SasPortTypeNumeric) {
 		return nil, false
 	}
 	return o.SasPortTypeNumeric, true
@@ -490,7 +493,7 @@ func (o *ExpanderPortsResourceInner) GetSasPortTypeNumericOk() (*int64, bool) {
 
 // HasSasPortTypeNumeric returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasSasPortTypeNumeric() bool {
-	if o != nil && !isNil(o.SasPortTypeNumeric) {
+	if o != nil && !IsNil(o.SasPortTypeNumeric) {
 		return true
 	}
 
@@ -504,7 +507,7 @@ func (o *ExpanderPortsResourceInner) SetSasPortTypeNumeric(v int64) {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetStatus() string {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret string
 		return ret
 	}
@@ -514,7 +517,7 @@ func (o *ExpanderPortsResourceInner) GetStatus() string {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetStatusOk() (*string, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -522,7 +525,7 @@ func (o *ExpanderPortsResourceInner) GetStatusOk() (*string, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -536,7 +539,7 @@ func (o *ExpanderPortsResourceInner) SetStatus(v string) {
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
 func (o *ExpanderPortsResourceInner) GetStatusNumeric() int64 {
-	if o == nil || isNil(o.StatusNumeric) {
+	if o == nil || IsNil(o.StatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -546,7 +549,7 @@ func (o *ExpanderPortsResourceInner) GetStatusNumeric() int64 {
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpanderPortsResourceInner) GetStatusNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.StatusNumeric) {
+	if o == nil || IsNil(o.StatusNumeric) {
 		return nil, false
 	}
 	return o.StatusNumeric, true
@@ -554,7 +557,7 @@ func (o *ExpanderPortsResourceInner) GetStatusNumericOk() (*int64, bool) {
 
 // HasStatusNumeric returns a boolean if a field has been set.
 func (o *ExpanderPortsResourceInner) HasStatusNumeric() bool {
-	if o != nil && !isNil(o.StatusNumeric) {
+	if o != nil && !IsNil(o.StatusNumeric) {
 		return true
 	}
 
@@ -567,56 +570,64 @@ func (o *ExpanderPortsResourceInner) SetStatusNumeric(v int64) {
 }
 
 func (o ExpanderPortsResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.Controller) {
-		toSerialize["controller"] = o.Controller
-	}
-	if !isNil(o.ControllerNumeric) {
-		toSerialize["controller-numeric"] = o.ControllerNumeric
-	}
-	if !isNil(o.DurableId) {
-		toSerialize["durable-id"] = o.DurableId
-	}
-	if !isNil(o.EnclosureId) {
-		toSerialize["enclosure-id"] = o.EnclosureId
-	}
-	if !isNil(o.Health) {
-		toSerialize["health"] = o.Health
-	}
-	if !isNil(o.HealthNumeric) {
-		toSerialize["health-numeric"] = o.HealthNumeric
-	}
-	if !isNil(o.HealthReason) {
-		toSerialize["health-reason"] = o.HealthReason
-	}
-	if !isNil(o.HealthRecommendation) {
-		toSerialize["health-recommendation"] = o.HealthRecommendation
-	}
-	if !isNil(o.Name) {
-		toSerialize["name"] = o.Name
-	}
-	if !isNil(o.SasPortIndex) {
-		toSerialize["sas-port-index"] = o.SasPortIndex
-	}
-	if !isNil(o.SasPortType) {
-		toSerialize["sas-port-type"] = o.SasPortType
-	}
-	if !isNil(o.SasPortTypeNumeric) {
-		toSerialize["sas-port-type-numeric"] = o.SasPortTypeNumeric
-	}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.StatusNumeric) {
-		toSerialize["status-numeric"] = o.StatusNumeric
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o ExpanderPortsResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.Controller) {
+		toSerialize["controller"] = o.Controller
+	}
+	if !IsNil(o.ControllerNumeric) {
+		toSerialize["controller-numeric"] = o.ControllerNumeric
+	}
+	if !IsNil(o.DurableId) {
+		toSerialize["durable-id"] = o.DurableId
+	}
+	if !IsNil(o.EnclosureId) {
+		toSerialize["enclosure-id"] = o.EnclosureId
+	}
+	if !IsNil(o.Health) {
+		toSerialize["health"] = o.Health
+	}
+	if !IsNil(o.HealthNumeric) {
+		toSerialize["health-numeric"] = o.HealthNumeric
+	}
+	if !IsNil(o.HealthReason) {
+		toSerialize["health-reason"] = o.HealthReason
+	}
+	if !IsNil(o.HealthRecommendation) {
+		toSerialize["health-recommendation"] = o.HealthRecommendation
+	}
+	if !IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !IsNil(o.SasPortIndex) {
+		toSerialize["sas-port-index"] = o.SasPortIndex
+	}
+	if !IsNil(o.SasPortType) {
+		toSerialize["sas-port-type"] = o.SasPortType
+	}
+	if !IsNil(o.SasPortTypeNumeric) {
+		toSerialize["sas-port-type-numeric"] = o.SasPortTypeNumeric
+	}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.StatusNumeric) {
+		toSerialize["status-numeric"] = o.StatusNumeric
+	}
+	return toSerialize, nil
 }
 
 type NullableExpanderPortsResourceInner struct {

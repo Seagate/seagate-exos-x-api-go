@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the StatusObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &StatusObject{}
+
 // StatusObject struct for StatusObject
 type StatusObject struct {
 	Status []StatusResourceInner `json:"status,omitempty"`
@@ -38,7 +41,7 @@ func NewStatusObjectWithDefaults() *StatusObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *StatusObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -48,7 +51,7 @@ func (o *StatusObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StatusObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -56,7 +59,7 @@ func (o *StatusObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *StatusObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -69,11 +72,19 @@ func (o *StatusObject) SetStatus(v []StatusResourceInner) {
 }
 
 func (o StatusObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o StatusObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	return toSerialize, nil
 }
 
 type NullableStatusObject struct {

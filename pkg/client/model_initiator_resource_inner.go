@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the InitiatorResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &InitiatorResourceInner{}
+
 // InitiatorResourceInner struct for InitiatorResourceInner
 type InitiatorResourceInner struct {
 	ObjectName         *string `json:"object-name,omitempty"`
@@ -56,7 +59,7 @@ func NewInitiatorResourceInnerWithDefaults() *InitiatorResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -66,7 +69,7 @@ func (o *InitiatorResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -74,7 +77,7 @@ func (o *InitiatorResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -88,7 +91,7 @@ func (o *InitiatorResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -98,7 +101,7 @@ func (o *InitiatorResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -106,7 +109,7 @@ func (o *InitiatorResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -120,7 +123,7 @@ func (o *InitiatorResourceInner) SetMeta(v string) {
 
 // GetDiscovered returns the Discovered field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetDiscovered() string {
-	if o == nil || isNil(o.Discovered) {
+	if o == nil || IsNil(o.Discovered) {
 		var ret string
 		return ret
 	}
@@ -130,7 +133,7 @@ func (o *InitiatorResourceInner) GetDiscovered() string {
 // GetDiscoveredOk returns a tuple with the Discovered field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetDiscoveredOk() (*string, bool) {
-	if o == nil || isNil(o.Discovered) {
+	if o == nil || IsNil(o.Discovered) {
 		return nil, false
 	}
 	return o.Discovered, true
@@ -138,7 +141,7 @@ func (o *InitiatorResourceInner) GetDiscoveredOk() (*string, bool) {
 
 // HasDiscovered returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasDiscovered() bool {
-	if o != nil && !isNil(o.Discovered) {
+	if o != nil && !IsNil(o.Discovered) {
 		return true
 	}
 
@@ -152,7 +155,7 @@ func (o *InitiatorResourceInner) SetDiscovered(v string) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetDurableId() string {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -162,7 +165,7 @@ func (o *InitiatorResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -170,7 +173,7 @@ func (o *InitiatorResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasDurableId() bool {
-	if o != nil && !isNil(o.DurableId) {
+	if o != nil && !IsNil(o.DurableId) {
 		return true
 	}
 
@@ -184,7 +187,7 @@ func (o *InitiatorResourceInner) SetDurableId(v string) {
 
 // GetHostBusType returns the HostBusType field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetHostBusType() string {
-	if o == nil || isNil(o.HostBusType) {
+	if o == nil || IsNil(o.HostBusType) {
 		var ret string
 		return ret
 	}
@@ -194,7 +197,7 @@ func (o *InitiatorResourceInner) GetHostBusType() string {
 // GetHostBusTypeOk returns a tuple with the HostBusType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetHostBusTypeOk() (*string, bool) {
-	if o == nil || isNil(o.HostBusType) {
+	if o == nil || IsNil(o.HostBusType) {
 		return nil, false
 	}
 	return o.HostBusType, true
@@ -202,7 +205,7 @@ func (o *InitiatorResourceInner) GetHostBusTypeOk() (*string, bool) {
 
 // HasHostBusType returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasHostBusType() bool {
-	if o != nil && !isNil(o.HostBusType) {
+	if o != nil && !IsNil(o.HostBusType) {
 		return true
 	}
 
@@ -216,7 +219,7 @@ func (o *InitiatorResourceInner) SetHostBusType(v string) {
 
 // GetHostBusTypeNumeric returns the HostBusTypeNumeric field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetHostBusTypeNumeric() int64 {
-	if o == nil || isNil(o.HostBusTypeNumeric) {
+	if o == nil || IsNil(o.HostBusTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -226,7 +229,7 @@ func (o *InitiatorResourceInner) GetHostBusTypeNumeric() int64 {
 // GetHostBusTypeNumericOk returns a tuple with the HostBusTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetHostBusTypeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.HostBusTypeNumeric) {
+	if o == nil || IsNil(o.HostBusTypeNumeric) {
 		return nil, false
 	}
 	return o.HostBusTypeNumeric, true
@@ -234,7 +237,7 @@ func (o *InitiatorResourceInner) GetHostBusTypeNumericOk() (*int64, bool) {
 
 // HasHostBusTypeNumeric returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasHostBusTypeNumeric() bool {
-	if o != nil && !isNil(o.HostBusTypeNumeric) {
+	if o != nil && !IsNil(o.HostBusTypeNumeric) {
 		return true
 	}
 
@@ -248,7 +251,7 @@ func (o *InitiatorResourceInner) SetHostBusTypeNumeric(v int64) {
 
 // GetHostId returns the HostId field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetHostId() string {
-	if o == nil || isNil(o.HostId) {
+	if o == nil || IsNil(o.HostId) {
 		var ret string
 		return ret
 	}
@@ -258,7 +261,7 @@ func (o *InitiatorResourceInner) GetHostId() string {
 // GetHostIdOk returns a tuple with the HostId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetHostIdOk() (*string, bool) {
-	if o == nil || isNil(o.HostId) {
+	if o == nil || IsNil(o.HostId) {
 		return nil, false
 	}
 	return o.HostId, true
@@ -266,7 +269,7 @@ func (o *InitiatorResourceInner) GetHostIdOk() (*string, bool) {
 
 // HasHostId returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasHostId() bool {
-	if o != nil && !isNil(o.HostId) {
+	if o != nil && !IsNil(o.HostId) {
 		return true
 	}
 
@@ -280,7 +283,7 @@ func (o *InitiatorResourceInner) SetHostId(v string) {
 
 // GetHostKey returns the HostKey field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetHostKey() string {
-	if o == nil || isNil(o.HostKey) {
+	if o == nil || IsNil(o.HostKey) {
 		var ret string
 		return ret
 	}
@@ -290,7 +293,7 @@ func (o *InitiatorResourceInner) GetHostKey() string {
 // GetHostKeyOk returns a tuple with the HostKey field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetHostKeyOk() (*string, bool) {
-	if o == nil || isNil(o.HostKey) {
+	if o == nil || IsNil(o.HostKey) {
 		return nil, false
 	}
 	return o.HostKey, true
@@ -298,7 +301,7 @@ func (o *InitiatorResourceInner) GetHostKeyOk() (*string, bool) {
 
 // HasHostKey returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasHostKey() bool {
-	if o != nil && !isNil(o.HostKey) {
+	if o != nil && !IsNil(o.HostKey) {
 		return true
 	}
 
@@ -312,7 +315,7 @@ func (o *InitiatorResourceInner) SetHostKey(v string) {
 
 // GetHostPortBitsA returns the HostPortBitsA field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetHostPortBitsA() int64 {
-	if o == nil || isNil(o.HostPortBitsA) {
+	if o == nil || IsNil(o.HostPortBitsA) {
 		var ret int64
 		return ret
 	}
@@ -322,7 +325,7 @@ func (o *InitiatorResourceInner) GetHostPortBitsA() int64 {
 // GetHostPortBitsAOk returns a tuple with the HostPortBitsA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetHostPortBitsAOk() (*int64, bool) {
-	if o == nil || isNil(o.HostPortBitsA) {
+	if o == nil || IsNil(o.HostPortBitsA) {
 		return nil, false
 	}
 	return o.HostPortBitsA, true
@@ -330,7 +333,7 @@ func (o *InitiatorResourceInner) GetHostPortBitsAOk() (*int64, bool) {
 
 // HasHostPortBitsA returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasHostPortBitsA() bool {
-	if o != nil && !isNil(o.HostPortBitsA) {
+	if o != nil && !IsNil(o.HostPortBitsA) {
 		return true
 	}
 
@@ -344,7 +347,7 @@ func (o *InitiatorResourceInner) SetHostPortBitsA(v int64) {
 
 // GetHostPortBitsB returns the HostPortBitsB field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetHostPortBitsB() int64 {
-	if o == nil || isNil(o.HostPortBitsB) {
+	if o == nil || IsNil(o.HostPortBitsB) {
 		var ret int64
 		return ret
 	}
@@ -354,7 +357,7 @@ func (o *InitiatorResourceInner) GetHostPortBitsB() int64 {
 // GetHostPortBitsBOk returns a tuple with the HostPortBitsB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetHostPortBitsBOk() (*int64, bool) {
-	if o == nil || isNil(o.HostPortBitsB) {
+	if o == nil || IsNil(o.HostPortBitsB) {
 		return nil, false
 	}
 	return o.HostPortBitsB, true
@@ -362,7 +365,7 @@ func (o *InitiatorResourceInner) GetHostPortBitsBOk() (*int64, bool) {
 
 // HasHostPortBitsB returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasHostPortBitsB() bool {
-	if o != nil && !isNil(o.HostPortBitsB) {
+	if o != nil && !IsNil(o.HostPortBitsB) {
 		return true
 	}
 
@@ -376,7 +379,7 @@ func (o *InitiatorResourceInner) SetHostPortBitsB(v int64) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetId() string {
-	if o == nil || isNil(o.Id) {
+	if o == nil || IsNil(o.Id) {
 		var ret string
 		return ret
 	}
@@ -386,7 +389,7 @@ func (o *InitiatorResourceInner) GetId() string {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetIdOk() (*string, bool) {
-	if o == nil || isNil(o.Id) {
+	if o == nil || IsNil(o.Id) {
 		return nil, false
 	}
 	return o.Id, true
@@ -394,7 +397,7 @@ func (o *InitiatorResourceInner) GetIdOk() (*string, bool) {
 
 // HasId returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasId() bool {
-	if o != nil && !isNil(o.Id) {
+	if o != nil && !IsNil(o.Id) {
 		return true
 	}
 
@@ -408,7 +411,7 @@ func (o *InitiatorResourceInner) SetId(v string) {
 
 // GetMapped returns the Mapped field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetMapped() string {
-	if o == nil || isNil(o.Mapped) {
+	if o == nil || IsNil(o.Mapped) {
 		var ret string
 		return ret
 	}
@@ -418,7 +421,7 @@ func (o *InitiatorResourceInner) GetMapped() string {
 // GetMappedOk returns a tuple with the Mapped field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetMappedOk() (*string, bool) {
-	if o == nil || isNil(o.Mapped) {
+	if o == nil || IsNil(o.Mapped) {
 		return nil, false
 	}
 	return o.Mapped, true
@@ -426,7 +429,7 @@ func (o *InitiatorResourceInner) GetMappedOk() (*string, bool) {
 
 // HasMapped returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasMapped() bool {
-	if o != nil && !isNil(o.Mapped) {
+	if o != nil && !IsNil(o.Mapped) {
 		return true
 	}
 
@@ -440,7 +443,7 @@ func (o *InitiatorResourceInner) SetMapped(v string) {
 
 // GetNickname returns the Nickname field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetNickname() string {
-	if o == nil || isNil(o.Nickname) {
+	if o == nil || IsNil(o.Nickname) {
 		var ret string
 		return ret
 	}
@@ -450,7 +453,7 @@ func (o *InitiatorResourceInner) GetNickname() string {
 // GetNicknameOk returns a tuple with the Nickname field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetNicknameOk() (*string, bool) {
-	if o == nil || isNil(o.Nickname) {
+	if o == nil || IsNil(o.Nickname) {
 		return nil, false
 	}
 	return o.Nickname, true
@@ -458,7 +461,7 @@ func (o *InitiatorResourceInner) GetNicknameOk() (*string, bool) {
 
 // HasNickname returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasNickname() bool {
-	if o != nil && !isNil(o.Nickname) {
+	if o != nil && !IsNil(o.Nickname) {
 		return true
 	}
 
@@ -472,7 +475,7 @@ func (o *InitiatorResourceInner) SetNickname(v string) {
 
 // GetProfile returns the Profile field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetProfile() string {
-	if o == nil || isNil(o.Profile) {
+	if o == nil || IsNil(o.Profile) {
 		var ret string
 		return ret
 	}
@@ -482,7 +485,7 @@ func (o *InitiatorResourceInner) GetProfile() string {
 // GetProfileOk returns a tuple with the Profile field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetProfileOk() (*string, bool) {
-	if o == nil || isNil(o.Profile) {
+	if o == nil || IsNil(o.Profile) {
 		return nil, false
 	}
 	return o.Profile, true
@@ -490,7 +493,7 @@ func (o *InitiatorResourceInner) GetProfileOk() (*string, bool) {
 
 // HasProfile returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasProfile() bool {
-	if o != nil && !isNil(o.Profile) {
+	if o != nil && !IsNil(o.Profile) {
 		return true
 	}
 
@@ -504,7 +507,7 @@ func (o *InitiatorResourceInner) SetProfile(v string) {
 
 // GetProfileNumeric returns the ProfileNumeric field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetProfileNumeric() int64 {
-	if o == nil || isNil(o.ProfileNumeric) {
+	if o == nil || IsNil(o.ProfileNumeric) {
 		var ret int64
 		return ret
 	}
@@ -514,7 +517,7 @@ func (o *InitiatorResourceInner) GetProfileNumeric() int64 {
 // GetProfileNumericOk returns a tuple with the ProfileNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetProfileNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.ProfileNumeric) {
+	if o == nil || IsNil(o.ProfileNumeric) {
 		return nil, false
 	}
 	return o.ProfileNumeric, true
@@ -522,7 +525,7 @@ func (o *InitiatorResourceInner) GetProfileNumericOk() (*int64, bool) {
 
 // HasProfileNumeric returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasProfileNumeric() bool {
-	if o != nil && !isNil(o.ProfileNumeric) {
+	if o != nil && !IsNil(o.ProfileNumeric) {
 		return true
 	}
 
@@ -536,7 +539,7 @@ func (o *InitiatorResourceInner) SetProfileNumeric(v int64) {
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *InitiatorResourceInner) GetUrl() string {
-	if o == nil || isNil(o.Url) {
+	if o == nil || IsNil(o.Url) {
 		var ret string
 		return ret
 	}
@@ -546,7 +549,7 @@ func (o *InitiatorResourceInner) GetUrl() string {
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorResourceInner) GetUrlOk() (*string, bool) {
-	if o == nil || isNil(o.Url) {
+	if o == nil || IsNil(o.Url) {
 		return nil, false
 	}
 	return o.Url, true
@@ -554,7 +557,7 @@ func (o *InitiatorResourceInner) GetUrlOk() (*string, bool) {
 
 // HasUrl returns a boolean if a field has been set.
 func (o *InitiatorResourceInner) HasUrl() bool {
-	if o != nil && !isNil(o.Url) {
+	if o != nil && !IsNil(o.Url) {
 		return true
 	}
 
@@ -567,56 +570,64 @@ func (o *InitiatorResourceInner) SetUrl(v string) {
 }
 
 func (o InitiatorResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.Discovered) {
-		toSerialize["discovered"] = o.Discovered
-	}
-	if !isNil(o.DurableId) {
-		toSerialize["durable-id"] = o.DurableId
-	}
-	if !isNil(o.HostBusType) {
-		toSerialize["host-bus-type"] = o.HostBusType
-	}
-	if !isNil(o.HostBusTypeNumeric) {
-		toSerialize["host-bus-type-numeric"] = o.HostBusTypeNumeric
-	}
-	if !isNil(o.HostId) {
-		toSerialize["host-id"] = o.HostId
-	}
-	if !isNil(o.HostKey) {
-		toSerialize["host-key"] = o.HostKey
-	}
-	if !isNil(o.HostPortBitsA) {
-		toSerialize["host-port-bits-a"] = o.HostPortBitsA
-	}
-	if !isNil(o.HostPortBitsB) {
-		toSerialize["host-port-bits-b"] = o.HostPortBitsB
-	}
-	if !isNil(o.Id) {
-		toSerialize["id"] = o.Id
-	}
-	if !isNil(o.Mapped) {
-		toSerialize["mapped"] = o.Mapped
-	}
-	if !isNil(o.Nickname) {
-		toSerialize["nickname"] = o.Nickname
-	}
-	if !isNil(o.Profile) {
-		toSerialize["profile"] = o.Profile
-	}
-	if !isNil(o.ProfileNumeric) {
-		toSerialize["profile-numeric"] = o.ProfileNumeric
-	}
-	if !isNil(o.Url) {
-		toSerialize["url"] = o.Url
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o InitiatorResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.Discovered) {
+		toSerialize["discovered"] = o.Discovered
+	}
+	if !IsNil(o.DurableId) {
+		toSerialize["durable-id"] = o.DurableId
+	}
+	if !IsNil(o.HostBusType) {
+		toSerialize["host-bus-type"] = o.HostBusType
+	}
+	if !IsNil(o.HostBusTypeNumeric) {
+		toSerialize["host-bus-type-numeric"] = o.HostBusTypeNumeric
+	}
+	if !IsNil(o.HostId) {
+		toSerialize["host-id"] = o.HostId
+	}
+	if !IsNil(o.HostKey) {
+		toSerialize["host-key"] = o.HostKey
+	}
+	if !IsNil(o.HostPortBitsA) {
+		toSerialize["host-port-bits-a"] = o.HostPortBitsA
+	}
+	if !IsNil(o.HostPortBitsB) {
+		toSerialize["host-port-bits-b"] = o.HostPortBitsB
+	}
+	if !IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !IsNil(o.Mapped) {
+		toSerialize["mapped"] = o.Mapped
+	}
+	if !IsNil(o.Nickname) {
+		toSerialize["nickname"] = o.Nickname
+	}
+	if !IsNil(o.Profile) {
+		toSerialize["profile"] = o.Profile
+	}
+	if !IsNil(o.ProfileNumeric) {
+		toSerialize["profile-numeric"] = o.ProfileNumeric
+	}
+	if !IsNil(o.Url) {
+		toSerialize["url"] = o.Url
+	}
+	return toSerialize, nil
 }
 
 type NullableInitiatorResourceInner struct {

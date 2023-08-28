@@ -13,7 +13,7 @@ package client
 import (
 	"bytes"
 	"context"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"strings"
@@ -72,9 +72,9 @@ func (a *DefaultApiService) CopyVolumeDestinationPoolNameSourceGetExecute(r ApiC
 	}
 
 	localVarPath := localBasePath + "/copy/volume/destination-pool/{destination-poolOption}/name/{nameOption}/{sourceOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"destination-poolOption"+"}", url.PathEscape(parameterToString(r.destinationPoolOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"nameOption"+"}", url.PathEscape(parameterToString(r.nameOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"sourceOption"+"}", url.PathEscape(parameterToString(r.sourceOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"destination-poolOption"+"}", url.PathEscape(parameterValueToString(r.destinationPoolOption, "destinationPoolOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"nameOption"+"}", url.PathEscape(parameterValueToString(r.nameOption, "nameOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"sourceOption"+"}", url.PathEscape(parameterValueToString(r.sourceOption, "sourceOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -107,9 +107,9 @@ func (a *DefaultApiService) CopyVolumeDestinationPoolNameSourceGetExecute(r ApiC
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -191,8 +191,8 @@ func (a *DefaultApiService) CreateSnapshotsVolumesNamesGetExecute(r ApiCreateSna
 	}
 
 	localVarPath := localBasePath + "/create/snapshots/volumes/{volumesOption}/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"volumesOption"+"}", url.PathEscape(parameterToString(r.volumesOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"volumesOption"+"}", url.PathEscape(parameterValueToString(r.volumesOption, "volumesOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -225,9 +225,9 @@ func (a *DefaultApiService) CreateSnapshotsVolumesNamesGetExecute(r ApiCreateSna
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -315,10 +315,10 @@ func (a *DefaultApiService) CreateVolumePoolSizeTierAffinityNameGetExecute(r Api
 	}
 
 	localVarPath := localBasePath + "/create/volume/pool/{poolOption}/size/{sizeOption}/tier-affinity/{tier-affinityOption}/{nameOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"poolOption"+"}", url.PathEscape(parameterToString(r.poolOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"sizeOption"+"}", url.PathEscape(parameterToString(r.sizeOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"tier-affinityOption"+"}", url.PathEscape(parameterToString(r.tierAffinityOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"nameOption"+"}", url.PathEscape(parameterToString(r.nameOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"poolOption"+"}", url.PathEscape(parameterValueToString(r.poolOption, "poolOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"sizeOption"+"}", url.PathEscape(parameterValueToString(r.sizeOption, "sizeOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"tier-affinityOption"+"}", url.PathEscape(parameterValueToString(r.tierAffinityOption, "tierAffinityOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"nameOption"+"}", url.PathEscape(parameterValueToString(r.nameOption, "nameOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -351,9 +351,9 @@ func (a *DefaultApiService) CreateVolumePoolSizeTierAffinityNameGetExecute(r Api
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -432,7 +432,7 @@ func (a *DefaultApiService) DeleteHostsNamesGetExecute(r ApiDeleteHostsNamesGetR
 	}
 
 	localVarPath := localBasePath + "/delete/hosts/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -465,9 +465,9 @@ func (a *DefaultApiService) DeleteHostsNamesGetExecute(r ApiDeleteHostsNamesGetR
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -546,7 +546,7 @@ func (a *DefaultApiService) DeleteInitiatorNicknameNameGetExecute(r ApiDeleteIni
 	}
 
 	localVarPath := localBasePath + "/delete/initiator-nickname/{nameOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"nameOption"+"}", url.PathEscape(parameterToString(r.nameOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"nameOption"+"}", url.PathEscape(parameterValueToString(r.nameOption, "nameOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -579,9 +579,9 @@ func (a *DefaultApiService) DeleteInitiatorNicknameNameGetExecute(r ApiDeleteIni
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -660,7 +660,7 @@ func (a *DefaultApiService) DeleteSnapshotNamesGetExecute(r ApiDeleteSnapshotNam
 	}
 
 	localVarPath := localBasePath + "/delete/snapshot/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -693,9 +693,9 @@ func (a *DefaultApiService) DeleteSnapshotNamesGetExecute(r ApiDeleteSnapshotNam
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -774,7 +774,7 @@ func (a *DefaultApiService) DeleteVolumesNamesGetExecute(r ApiDeleteVolumesNames
 	}
 
 	localVarPath := localBasePath + "/delete/volumes/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -807,9 +807,9 @@ func (a *DefaultApiService) DeleteVolumesNamesGetExecute(r ApiDeleteVolumesNames
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -891,8 +891,8 @@ func (a *DefaultApiService) ExpandVolumeSizeNameGetExecute(r ApiExpandVolumeSize
 	}
 
 	localVarPath := localBasePath + "/expand/volume/size/{sizeOption}/{nameOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"sizeOption"+"}", url.PathEscape(parameterToString(r.sizeOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"nameOption"+"}", url.PathEscape(parameterToString(r.nameOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"sizeOption"+"}", url.PathEscape(parameterValueToString(r.sizeOption, "sizeOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"nameOption"+"}", url.PathEscape(parameterValueToString(r.nameOption, "nameOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -925,9 +925,9 @@ func (a *DefaultApiService) ExpandVolumeSizeNameGetExecute(r ApiExpandVolumeSize
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1035,9 +1035,9 @@ func (a *DefaultApiService) LoginGetExecute(r ApiLoginGetRequest) (*StatusObject
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1115,10 +1115,10 @@ func (a *DefaultApiService) MapVolumeAccessLunInitiatorNamesGetExecute(r ApiMapV
 	}
 
 	localVarPath := localBasePath + "/map/volume/access/{accessOption}/lun/{lunOption}/initiator/{initiatorOption}/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"accessOption"+"}", url.PathEscape(parameterToString(r.accessOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"lunOption"+"}", url.PathEscape(parameterToString(r.lunOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"initiatorOption"+"}", url.PathEscape(parameterToString(r.initiatorOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"accessOption"+"}", url.PathEscape(parameterValueToString(r.accessOption, "accessOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"lunOption"+"}", url.PathEscape(parameterValueToString(r.lunOption, "lunOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"initiatorOption"+"}", url.PathEscape(parameterValueToString(r.initiatorOption, "initiatorOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1151,9 +1151,9 @@ func (a *DefaultApiService) MapVolumeAccessLunInitiatorNamesGetExecute(r ApiMapV
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1232,7 +1232,7 @@ func (a *DefaultApiService) SchemaGetExecute(r ApiSchemaGetRequest) (interface{}
 	}
 
 	localVarPath := localBasePath + "/meta/{schemaId}"
-	localVarPath = strings.Replace(localVarPath, "{"+"schemaId"+"}", url.PathEscape(parameterToString(r.schemaId, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"schemaId"+"}", url.PathEscape(parameterValueToString(r.schemaId, "schemaId")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1265,9 +1265,9 @@ func (a *DefaultApiService) SchemaGetExecute(r ApiSchemaGetRequest) (interface{}
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1339,8 +1339,8 @@ func (a *DefaultApiService) SetInitiatorIdNicknameGetExecute(r ApiSetInitiatorId
 	}
 
 	localVarPath := localBasePath + "/set/initiator/id/{idOption}/nickname/{nicknameOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"idOption"+"}", url.PathEscape(parameterToString(r.idOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"nicknameOption"+"}", url.PathEscape(parameterToString(r.nicknameOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"idOption"+"}", url.PathEscape(parameterValueToString(r.idOption, "idOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"nicknameOption"+"}", url.PathEscape(parameterValueToString(r.nicknameOption, "nicknameOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1373,9 +1373,9 @@ func (a *DefaultApiService) SetInitiatorIdNicknameGetExecute(r ApiSetInitiatorId
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1483,9 +1483,9 @@ func (a *DefaultApiService) ShowAdvancedSettingsGetExecute(r ApiShowAdvancedSett
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1593,9 +1593,9 @@ func (a *DefaultApiService) ShowCacheParametersGetExecute(r ApiShowCacheParamete
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1703,9 +1703,9 @@ func (a *DefaultApiService) ShowCertificateGetExecute(r ApiShowCertificateGetReq
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1813,9 +1813,9 @@ func (a *DefaultApiService) ShowControllersGetExecute(r ApiShowControllersGetReq
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1923,9 +1923,9 @@ func (a *DefaultApiService) ShowDiskGroupsGetExecute(r ApiShowDiskGroupsGetReque
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2033,9 +2033,9 @@ func (a *DefaultApiService) ShowDisksGetExecute(r ApiShowDisksGetRequest) (*Driv
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2143,9 +2143,9 @@ func (a *DefaultApiService) ShowEnclosuresGetExecute(r ApiShowEnclosuresGetReque
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2253,9 +2253,9 @@ func (a *DefaultApiService) ShowFansGetExecute(r ApiShowFansGetRequest) (*FanObj
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2363,9 +2363,9 @@ func (a *DefaultApiService) ShowHostGroupsGetExecute(r ApiShowHostGroupsGetReque
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2444,7 +2444,7 @@ func (a *DefaultApiService) ShowInitiatorNamesGetExecute(r ApiShowInitiatorNames
 	}
 
 	localVarPath := localBasePath + "/show/initiator/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2477,9 +2477,9 @@ func (a *DefaultApiService) ShowInitiatorNamesGetExecute(r ApiShowInitiatorNames
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2587,9 +2587,9 @@ func (a *DefaultApiService) ShowInitiatorsGetExecute(r ApiShowInitiatorsGetReque
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2697,9 +2697,9 @@ func (a *DefaultApiService) ShowMapsAllGetExecute(r ApiShowMapsAllGetRequest) (*
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2807,9 +2807,9 @@ func (a *DefaultApiService) ShowMapsGetExecute(r ApiShowMapsGetRequest) (*Volume
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2888,7 +2888,7 @@ func (a *DefaultApiService) ShowMapsInitiatorNamesGetExecute(r ApiShowMapsInitia
 	}
 
 	localVarPath := localBasePath + "/show/maps/initiator/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2921,9 +2921,9 @@ func (a *DefaultApiService) ShowMapsInitiatorNamesGetExecute(r ApiShowMapsInitia
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3002,7 +3002,7 @@ func (a *DefaultApiService) ShowMapsNamesGetExecute(r ApiShowMapsNamesGetRequest
 	}
 
 	localVarPath := localBasePath + "/show/maps/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3035,9 +3035,9 @@ func (a *DefaultApiService) ShowMapsNamesGetExecute(r ApiShowMapsNamesGetRequest
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3145,9 +3145,9 @@ func (a *DefaultApiService) ShowPoolsGetExecute(r ApiShowPoolsGetRequest) (*Pool
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3255,9 +3255,9 @@ func (a *DefaultApiService) ShowPowerSuppliesGetExecute(r ApiShowPowerSuppliesGe
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3365,9 +3365,9 @@ func (a *DefaultApiService) ShowSnapshotsGetExecute(r ApiShowSnapshotsGetRequest
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3446,7 +3446,7 @@ func (a *DefaultApiService) ShowSnapshotsPatternGetExecute(r ApiShowSnapshotsPat
 	}
 
 	localVarPath := localBasePath + "/show/snapshots/pattern/{patternOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"patternOption"+"}", url.PathEscape(parameterToString(r.patternOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"patternOption"+"}", url.PathEscape(parameterValueToString(r.patternOption, "patternOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3479,9 +3479,9 @@ func (a *DefaultApiService) ShowSnapshotsPatternGetExecute(r ApiShowSnapshotsPat
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3560,7 +3560,7 @@ func (a *DefaultApiService) ShowSnapshotsVolumeGetExecute(r ApiShowSnapshotsVolu
 	}
 
 	localVarPath := localBasePath + "/show/snapshots/volume/{volumeOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"volumeOption"+"}", url.PathEscape(parameterToString(r.volumeOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"volumeOption"+"}", url.PathEscape(parameterValueToString(r.volumeOption, "volumeOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3593,9 +3593,9 @@ func (a *DefaultApiService) ShowSnapshotsVolumeGetExecute(r ApiShowSnapshotsVolu
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3703,9 +3703,9 @@ func (a *DefaultApiService) ShowSystemGetExecute(r ApiShowSystemGetRequest) (*Sy
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3813,9 +3813,9 @@ func (a *DefaultApiService) ShowVersionsDetailGetExecute(r ApiShowVersionsDetail
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -3923,9 +3923,9 @@ func (a *DefaultApiService) ShowVersionsGetExecute(r ApiShowVersionsGetRequest) 
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -4004,7 +4004,7 @@ func (a *DefaultApiService) ShowVolumesNamesGetExecute(r ApiShowVolumesNamesGetR
 	}
 
 	localVarPath := localBasePath + "/show/volumes/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -4037,9 +4037,9 @@ func (a *DefaultApiService) ShowVolumesNamesGetExecute(r ApiShowVolumesNamesGetR
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -4121,8 +4121,8 @@ func (a *DefaultApiService) UnmapVolumeInitiatorNamesGetExecute(r ApiUnmapVolume
 	}
 
 	localVarPath := localBasePath + "/unmap/volume/initiator/{initiatorOption}/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"initiatorOption"+"}", url.PathEscape(parameterToString(r.initiatorOption, "")), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"initiatorOption"+"}", url.PathEscape(parameterValueToString(r.initiatorOption, "initiatorOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -4155,9 +4155,9 @@ func (a *DefaultApiService) UnmapVolumeInitiatorNamesGetExecute(r ApiUnmapVolume
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -4236,7 +4236,7 @@ func (a *DefaultApiService) UnmapVolumeNamesGetExecute(r ApiUnmapVolumeNamesGetR
 	}
 
 	localVarPath := localBasePath + "/unmap/volume/{namesOption}"
-	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterToString(r.namesOption, "")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"namesOption"+"}", url.PathEscape(parameterValueToString(r.namesOption, "namesOption")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -4269,9 +4269,9 @@ func (a *DefaultApiService) UnmapVolumeNamesGetExecute(r ApiUnmapVolumeNamesGetR
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}

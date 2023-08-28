@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the HostsViewObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &HostsViewObject{}
+
 // HostsViewObject struct for HostsViewObject
 type HostsViewObject struct {
 	Status    []StatusResourceInner    `json:"status,omitempty"`
@@ -39,7 +42,7 @@ func NewHostsViewObjectWithDefaults() *HostsViewObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *HostsViewObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -49,7 +52,7 @@ func (o *HostsViewObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostsViewObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -57,7 +60,7 @@ func (o *HostsViewObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *HostsViewObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -71,7 +74,7 @@ func (o *HostsViewObject) SetStatus(v []StatusResourceInner) {
 
 // GetHostsView returns the HostsView field value if set, zero value otherwise.
 func (o *HostsViewObject) GetHostsView() []HostsViewResourceInner {
-	if o == nil || isNil(o.HostsView) {
+	if o == nil || IsNil(o.HostsView) {
 		var ret []HostsViewResourceInner
 		return ret
 	}
@@ -81,7 +84,7 @@ func (o *HostsViewObject) GetHostsView() []HostsViewResourceInner {
 // GetHostsViewOk returns a tuple with the HostsView field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostsViewObject) GetHostsViewOk() ([]HostsViewResourceInner, bool) {
-	if o == nil || isNil(o.HostsView) {
+	if o == nil || IsNil(o.HostsView) {
 		return nil, false
 	}
 	return o.HostsView, true
@@ -89,7 +92,7 @@ func (o *HostsViewObject) GetHostsViewOk() ([]HostsViewResourceInner, bool) {
 
 // HasHostsView returns a boolean if a field has been set.
 func (o *HostsViewObject) HasHostsView() bool {
-	if o != nil && !isNil(o.HostsView) {
+	if o != nil && !IsNil(o.HostsView) {
 		return true
 	}
 
@@ -102,14 +105,22 @@ func (o *HostsViewObject) SetHostsView(v []HostsViewResourceInner) {
 }
 
 func (o HostsViewObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.HostsView) {
-		toSerialize["hosts-view"] = o.HostsView
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o HostsViewObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.HostsView) {
+		toSerialize["hosts-view"] = o.HostsView
+	}
+	return toSerialize, nil
 }
 
 type NullableHostsViewObject struct {

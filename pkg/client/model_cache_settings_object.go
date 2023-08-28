@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the CacheSettingsObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &CacheSettingsObject{}
+
 // CacheSettingsObject struct for CacheSettingsObject
 type CacheSettingsObject struct {
 	Status        []StatusResourceInner        `json:"status,omitempty"`
@@ -39,7 +42,7 @@ func NewCacheSettingsObjectWithDefaults() *CacheSettingsObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *CacheSettingsObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -49,7 +52,7 @@ func (o *CacheSettingsObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CacheSettingsObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -57,7 +60,7 @@ func (o *CacheSettingsObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *CacheSettingsObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -71,7 +74,7 @@ func (o *CacheSettingsObject) SetStatus(v []StatusResourceInner) {
 
 // GetCacheSettings returns the CacheSettings field value if set, zero value otherwise.
 func (o *CacheSettingsObject) GetCacheSettings() []CacheSettingsResourceInner {
-	if o == nil || isNil(o.CacheSettings) {
+	if o == nil || IsNil(o.CacheSettings) {
 		var ret []CacheSettingsResourceInner
 		return ret
 	}
@@ -81,7 +84,7 @@ func (o *CacheSettingsObject) GetCacheSettings() []CacheSettingsResourceInner {
 // GetCacheSettingsOk returns a tuple with the CacheSettings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CacheSettingsObject) GetCacheSettingsOk() ([]CacheSettingsResourceInner, bool) {
-	if o == nil || isNil(o.CacheSettings) {
+	if o == nil || IsNil(o.CacheSettings) {
 		return nil, false
 	}
 	return o.CacheSettings, true
@@ -89,7 +92,7 @@ func (o *CacheSettingsObject) GetCacheSettingsOk() ([]CacheSettingsResourceInner
 
 // HasCacheSettings returns a boolean if a field has been set.
 func (o *CacheSettingsObject) HasCacheSettings() bool {
-	if o != nil && !isNil(o.CacheSettings) {
+	if o != nil && !IsNil(o.CacheSettings) {
 		return true
 	}
 
@@ -102,14 +105,22 @@ func (o *CacheSettingsObject) SetCacheSettings(v []CacheSettingsResourceInner) {
 }
 
 func (o CacheSettingsObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.CacheSettings) {
-		toSerialize["cache-settings"] = o.CacheSettings
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o CacheSettingsObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.CacheSettings) {
+		toSerialize["cache-settings"] = o.CacheSettings
+	}
+	return toSerialize, nil
 }
 
 type NullableCacheSettingsObject struct {

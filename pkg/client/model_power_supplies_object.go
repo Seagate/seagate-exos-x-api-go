@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the PowerSuppliesObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &PowerSuppliesObject{}
+
 // PowerSuppliesObject struct for PowerSuppliesObject
 type PowerSuppliesObject struct {
 	Status        []StatusResourceInner        `json:"status,omitempty"`
@@ -39,7 +42,7 @@ func NewPowerSuppliesObjectWithDefaults() *PowerSuppliesObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *PowerSuppliesObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -49,7 +52,7 @@ func (o *PowerSuppliesObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -57,7 +60,7 @@ func (o *PowerSuppliesObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *PowerSuppliesObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -71,7 +74,7 @@ func (o *PowerSuppliesObject) SetStatus(v []StatusResourceInner) {
 
 // GetPowerSupplies returns the PowerSupplies field value if set, zero value otherwise.
 func (o *PowerSuppliesObject) GetPowerSupplies() []PowerSuppliesResourceInner {
-	if o == nil || isNil(o.PowerSupplies) {
+	if o == nil || IsNil(o.PowerSupplies) {
 		var ret []PowerSuppliesResourceInner
 		return ret
 	}
@@ -81,7 +84,7 @@ func (o *PowerSuppliesObject) GetPowerSupplies() []PowerSuppliesResourceInner {
 // GetPowerSuppliesOk returns a tuple with the PowerSupplies field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PowerSuppliesObject) GetPowerSuppliesOk() ([]PowerSuppliesResourceInner, bool) {
-	if o == nil || isNil(o.PowerSupplies) {
+	if o == nil || IsNil(o.PowerSupplies) {
 		return nil, false
 	}
 	return o.PowerSupplies, true
@@ -89,7 +92,7 @@ func (o *PowerSuppliesObject) GetPowerSuppliesOk() ([]PowerSuppliesResourceInner
 
 // HasPowerSupplies returns a boolean if a field has been set.
 func (o *PowerSuppliesObject) HasPowerSupplies() bool {
-	if o != nil && !isNil(o.PowerSupplies) {
+	if o != nil && !IsNil(o.PowerSupplies) {
 		return true
 	}
 
@@ -102,14 +105,22 @@ func (o *PowerSuppliesObject) SetPowerSupplies(v []PowerSuppliesResourceInner) {
 }
 
 func (o PowerSuppliesObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.PowerSupplies) {
-		toSerialize["power-supplies"] = o.PowerSupplies
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o PowerSuppliesObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.PowerSupplies) {
+		toSerialize["power-supplies"] = o.PowerSupplies
+	}
+	return toSerialize, nil
 }
 
 type NullablePowerSuppliesObject struct {

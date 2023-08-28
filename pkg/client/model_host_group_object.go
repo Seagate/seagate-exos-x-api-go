@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the HostGroupObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &HostGroupObject{}
+
 // HostGroupObject struct for HostGroupObject
 type HostGroupObject struct {
 	Status    []StatusResourceInner    `json:"status,omitempty"`
@@ -39,7 +42,7 @@ func NewHostGroupObjectWithDefaults() *HostGroupObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *HostGroupObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -49,7 +52,7 @@ func (o *HostGroupObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostGroupObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -57,7 +60,7 @@ func (o *HostGroupObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *HostGroupObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -71,7 +74,7 @@ func (o *HostGroupObject) SetStatus(v []StatusResourceInner) {
 
 // GetHostGroup returns the HostGroup field value if set, zero value otherwise.
 func (o *HostGroupObject) GetHostGroup() []HostGroupResourceInner {
-	if o == nil || isNil(o.HostGroup) {
+	if o == nil || IsNil(o.HostGroup) {
 		var ret []HostGroupResourceInner
 		return ret
 	}
@@ -81,7 +84,7 @@ func (o *HostGroupObject) GetHostGroup() []HostGroupResourceInner {
 // GetHostGroupOk returns a tuple with the HostGroup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostGroupObject) GetHostGroupOk() ([]HostGroupResourceInner, bool) {
-	if o == nil || isNil(o.HostGroup) {
+	if o == nil || IsNil(o.HostGroup) {
 		return nil, false
 	}
 	return o.HostGroup, true
@@ -89,7 +92,7 @@ func (o *HostGroupObject) GetHostGroupOk() ([]HostGroupResourceInner, bool) {
 
 // HasHostGroup returns a boolean if a field has been set.
 func (o *HostGroupObject) HasHostGroup() bool {
-	if o != nil && !isNil(o.HostGroup) {
+	if o != nil && !IsNil(o.HostGroup) {
 		return true
 	}
 
@@ -102,14 +105,22 @@ func (o *HostGroupObject) SetHostGroup(v []HostGroupResourceInner) {
 }
 
 func (o HostGroupObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.HostGroup) {
-		toSerialize["host-group"] = o.HostGroup
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o HostGroupObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.HostGroup) {
+		toSerialize["host-group"] = o.HostGroup
+	}
+	return toSerialize, nil
 }
 
 type NullableHostGroupObject struct {

@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the HostViewMappingsResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &HostViewMappingsResourceInner{}
+
 // HostViewMappingsResourceInner struct for HostViewMappingsResourceInner
 type HostViewMappingsResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
@@ -50,7 +53,7 @@ func NewHostViewMappingsResourceInnerWithDefaults() *HostViewMappingsResourceInn
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *HostViewMappingsResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -60,7 +63,7 @@ func (o *HostViewMappingsResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostViewMappingsResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -68,7 +71,7 @@ func (o *HostViewMappingsResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *HostViewMappingsResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -82,7 +85,7 @@ func (o *HostViewMappingsResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *HostViewMappingsResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -92,7 +95,7 @@ func (o *HostViewMappingsResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostViewMappingsResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -100,7 +103,7 @@ func (o *HostViewMappingsResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *HostViewMappingsResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -114,7 +117,7 @@ func (o *HostViewMappingsResourceInner) SetMeta(v string) {
 
 // GetAccess returns the Access field value if set, zero value otherwise.
 func (o *HostViewMappingsResourceInner) GetAccess() string {
-	if o == nil || isNil(o.Access) {
+	if o == nil || IsNil(o.Access) {
 		var ret string
 		return ret
 	}
@@ -124,7 +127,7 @@ func (o *HostViewMappingsResourceInner) GetAccess() string {
 // GetAccessOk returns a tuple with the Access field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostViewMappingsResourceInner) GetAccessOk() (*string, bool) {
-	if o == nil || isNil(o.Access) {
+	if o == nil || IsNil(o.Access) {
 		return nil, false
 	}
 	return o.Access, true
@@ -132,7 +135,7 @@ func (o *HostViewMappingsResourceInner) GetAccessOk() (*string, bool) {
 
 // HasAccess returns a boolean if a field has been set.
 func (o *HostViewMappingsResourceInner) HasAccess() bool {
-	if o != nil && !isNil(o.Access) {
+	if o != nil && !IsNil(o.Access) {
 		return true
 	}
 
@@ -146,7 +149,7 @@ func (o *HostViewMappingsResourceInner) SetAccess(v string) {
 
 // GetAccessNumeric returns the AccessNumeric field value if set, zero value otherwise.
 func (o *HostViewMappingsResourceInner) GetAccessNumeric() int64 {
-	if o == nil || isNil(o.AccessNumeric) {
+	if o == nil || IsNil(o.AccessNumeric) {
 		var ret int64
 		return ret
 	}
@@ -156,7 +159,7 @@ func (o *HostViewMappingsResourceInner) GetAccessNumeric() int64 {
 // GetAccessNumericOk returns a tuple with the AccessNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostViewMappingsResourceInner) GetAccessNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.AccessNumeric) {
+	if o == nil || IsNil(o.AccessNumeric) {
 		return nil, false
 	}
 	return o.AccessNumeric, true
@@ -164,7 +167,7 @@ func (o *HostViewMappingsResourceInner) GetAccessNumericOk() (*int64, bool) {
 
 // HasAccessNumeric returns a boolean if a field has been set.
 func (o *HostViewMappingsResourceInner) HasAccessNumeric() bool {
-	if o != nil && !isNil(o.AccessNumeric) {
+	if o != nil && !IsNil(o.AccessNumeric) {
 		return true
 	}
 
@@ -178,7 +181,7 @@ func (o *HostViewMappingsResourceInner) SetAccessNumeric(v int64) {
 
 // GetLun returns the Lun field value if set, zero value otherwise.
 func (o *HostViewMappingsResourceInner) GetLun() string {
-	if o == nil || isNil(o.Lun) {
+	if o == nil || IsNil(o.Lun) {
 		var ret string
 		return ret
 	}
@@ -188,7 +191,7 @@ func (o *HostViewMappingsResourceInner) GetLun() string {
 // GetLunOk returns a tuple with the Lun field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostViewMappingsResourceInner) GetLunOk() (*string, bool) {
-	if o == nil || isNil(o.Lun) {
+	if o == nil || IsNil(o.Lun) {
 		return nil, false
 	}
 	return o.Lun, true
@@ -196,7 +199,7 @@ func (o *HostViewMappingsResourceInner) GetLunOk() (*string, bool) {
 
 // HasLun returns a boolean if a field has been set.
 func (o *HostViewMappingsResourceInner) HasLun() bool {
-	if o != nil && !isNil(o.Lun) {
+	if o != nil && !IsNil(o.Lun) {
 		return true
 	}
 
@@ -210,7 +213,7 @@ func (o *HostViewMappingsResourceInner) SetLun(v string) {
 
 // GetPorts returns the Ports field value if set, zero value otherwise.
 func (o *HostViewMappingsResourceInner) GetPorts() string {
-	if o == nil || isNil(o.Ports) {
+	if o == nil || IsNil(o.Ports) {
 		var ret string
 		return ret
 	}
@@ -220,7 +223,7 @@ func (o *HostViewMappingsResourceInner) GetPorts() string {
 // GetPortsOk returns a tuple with the Ports field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostViewMappingsResourceInner) GetPortsOk() (*string, bool) {
-	if o == nil || isNil(o.Ports) {
+	if o == nil || IsNil(o.Ports) {
 		return nil, false
 	}
 	return o.Ports, true
@@ -228,7 +231,7 @@ func (o *HostViewMappingsResourceInner) GetPortsOk() (*string, bool) {
 
 // HasPorts returns a boolean if a field has been set.
 func (o *HostViewMappingsResourceInner) HasPorts() bool {
-	if o != nil && !isNil(o.Ports) {
+	if o != nil && !IsNil(o.Ports) {
 		return true
 	}
 
@@ -242,7 +245,7 @@ func (o *HostViewMappingsResourceInner) SetPorts(v string) {
 
 // GetVolumeName returns the VolumeName field value if set, zero value otherwise.
 func (o *HostViewMappingsResourceInner) GetVolumeName() string {
-	if o == nil || isNil(o.VolumeName) {
+	if o == nil || IsNil(o.VolumeName) {
 		var ret string
 		return ret
 	}
@@ -252,7 +255,7 @@ func (o *HostViewMappingsResourceInner) GetVolumeName() string {
 // GetVolumeNameOk returns a tuple with the VolumeName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostViewMappingsResourceInner) GetVolumeNameOk() (*string, bool) {
-	if o == nil || isNil(o.VolumeName) {
+	if o == nil || IsNil(o.VolumeName) {
 		return nil, false
 	}
 	return o.VolumeName, true
@@ -260,7 +263,7 @@ func (o *HostViewMappingsResourceInner) GetVolumeNameOk() (*string, bool) {
 
 // HasVolumeName returns a boolean if a field has been set.
 func (o *HostViewMappingsResourceInner) HasVolumeName() bool {
-	if o != nil && !isNil(o.VolumeName) {
+	if o != nil && !IsNil(o.VolumeName) {
 		return true
 	}
 
@@ -274,7 +277,7 @@ func (o *HostViewMappingsResourceInner) SetVolumeName(v string) {
 
 // GetVolumeSerial returns the VolumeSerial field value if set, zero value otherwise.
 func (o *HostViewMappingsResourceInner) GetVolumeSerial() string {
-	if o == nil || isNil(o.VolumeSerial) {
+	if o == nil || IsNil(o.VolumeSerial) {
 		var ret string
 		return ret
 	}
@@ -284,7 +287,7 @@ func (o *HostViewMappingsResourceInner) GetVolumeSerial() string {
 // GetVolumeSerialOk returns a tuple with the VolumeSerial field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostViewMappingsResourceInner) GetVolumeSerialOk() (*string, bool) {
-	if o == nil || isNil(o.VolumeSerial) {
+	if o == nil || IsNil(o.VolumeSerial) {
 		return nil, false
 	}
 	return o.VolumeSerial, true
@@ -292,7 +295,7 @@ func (o *HostViewMappingsResourceInner) GetVolumeSerialOk() (*string, bool) {
 
 // HasVolumeSerial returns a boolean if a field has been set.
 func (o *HostViewMappingsResourceInner) HasVolumeSerial() bool {
-	if o != nil && !isNil(o.VolumeSerial) {
+	if o != nil && !IsNil(o.VolumeSerial) {
 		return true
 	}
 
@@ -305,32 +308,40 @@ func (o *HostViewMappingsResourceInner) SetVolumeSerial(v string) {
 }
 
 func (o HostViewMappingsResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.Access) {
-		toSerialize["access"] = o.Access
-	}
-	if !isNil(o.AccessNumeric) {
-		toSerialize["access-numeric"] = o.AccessNumeric
-	}
-	if !isNil(o.Lun) {
-		toSerialize["lun"] = o.Lun
-	}
-	if !isNil(o.Ports) {
-		toSerialize["ports"] = o.Ports
-	}
-	if !isNil(o.VolumeName) {
-		toSerialize["volume-name"] = o.VolumeName
-	}
-	if !isNil(o.VolumeSerial) {
-		toSerialize["volume-serial"] = o.VolumeSerial
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o HostViewMappingsResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.Access) {
+		toSerialize["access"] = o.Access
+	}
+	if !IsNil(o.AccessNumeric) {
+		toSerialize["access-numeric"] = o.AccessNumeric
+	}
+	if !IsNil(o.Lun) {
+		toSerialize["lun"] = o.Lun
+	}
+	if !IsNil(o.Ports) {
+		toSerialize["ports"] = o.Ports
+	}
+	if !IsNil(o.VolumeName) {
+		toSerialize["volume-name"] = o.VolumeName
+	}
+	if !IsNil(o.VolumeSerial) {
+		toSerialize["volume-serial"] = o.VolumeSerial
+	}
+	return toSerialize, nil
 }
 
 type NullableHostViewMappingsResourceInner struct {

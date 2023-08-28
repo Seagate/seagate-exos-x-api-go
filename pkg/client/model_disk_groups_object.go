@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the DiskGroupsObject type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &DiskGroupsObject{}
+
 // DiskGroupsObject struct for DiskGroupsObject
 type DiskGroupsObject struct {
 	Status     []StatusResourceInner     `json:"status,omitempty"`
@@ -39,7 +42,7 @@ func NewDiskGroupsObjectWithDefaults() *DiskGroupsObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *DiskGroupsObject) GetStatus() []StatusResourceInner {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -49,7 +52,7 @@ func (o *DiskGroupsObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DiskGroupsObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || isNil(o.Status) {
+	if o == nil || IsNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -57,7 +60,7 @@ func (o *DiskGroupsObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *DiskGroupsObject) HasStatus() bool {
-	if o != nil && !isNil(o.Status) {
+	if o != nil && !IsNil(o.Status) {
 		return true
 	}
 
@@ -71,7 +74,7 @@ func (o *DiskGroupsObject) SetStatus(v []StatusResourceInner) {
 
 // GetDiskGroups returns the DiskGroups field value if set, zero value otherwise.
 func (o *DiskGroupsObject) GetDiskGroups() []DiskGroupsResourceInner {
-	if o == nil || isNil(o.DiskGroups) {
+	if o == nil || IsNil(o.DiskGroups) {
 		var ret []DiskGroupsResourceInner
 		return ret
 	}
@@ -81,7 +84,7 @@ func (o *DiskGroupsObject) GetDiskGroups() []DiskGroupsResourceInner {
 // GetDiskGroupsOk returns a tuple with the DiskGroups field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DiskGroupsObject) GetDiskGroupsOk() ([]DiskGroupsResourceInner, bool) {
-	if o == nil || isNil(o.DiskGroups) {
+	if o == nil || IsNil(o.DiskGroups) {
 		return nil, false
 	}
 	return o.DiskGroups, true
@@ -89,7 +92,7 @@ func (o *DiskGroupsObject) GetDiskGroupsOk() ([]DiskGroupsResourceInner, bool) {
 
 // HasDiskGroups returns a boolean if a field has been set.
 func (o *DiskGroupsObject) HasDiskGroups() bool {
-	if o != nil && !isNil(o.DiskGroups) {
+	if o != nil && !IsNil(o.DiskGroups) {
 		return true
 	}
 
@@ -102,14 +105,22 @@ func (o *DiskGroupsObject) SetDiskGroups(v []DiskGroupsResourceInner) {
 }
 
 func (o DiskGroupsObject) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.Status) {
-		toSerialize["status"] = o.Status
-	}
-	if !isNil(o.DiskGroups) {
-		toSerialize["disk-groups"] = o.DiskGroups
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o DiskGroupsObject) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
+	if !IsNil(o.DiskGroups) {
+		toSerialize["disk-groups"] = o.DiskGroups
+	}
+	return toSerialize, nil
 }
 
 type NullableDiskGroupsObject struct {

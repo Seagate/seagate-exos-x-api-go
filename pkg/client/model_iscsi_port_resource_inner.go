@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the IscsiPortResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &IscsiPortResourceInner{}
+
 // IscsiPortResourceInner struct for IscsiPortResourceInner
 type IscsiPortResourceInner struct {
 	ObjectName    *string `json:"object-name,omitempty"`
@@ -63,7 +66,7 @@ func NewIscsiPortResourceInnerWithDefaults() *IscsiPortResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -73,7 +76,7 @@ func (o *IscsiPortResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -81,7 +84,7 @@ func (o *IscsiPortResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -95,7 +98,7 @@ func (o *IscsiPortResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -105,7 +108,7 @@ func (o *IscsiPortResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -113,7 +116,7 @@ func (o *IscsiPortResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -127,7 +130,7 @@ func (o *IscsiPortResourceInner) SetMeta(v string) {
 
 // GetDefaultRouter returns the DefaultRouter field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetDefaultRouter() string {
-	if o == nil || isNil(o.DefaultRouter) {
+	if o == nil || IsNil(o.DefaultRouter) {
 		var ret string
 		return ret
 	}
@@ -137,7 +140,7 @@ func (o *IscsiPortResourceInner) GetDefaultRouter() string {
 // GetDefaultRouterOk returns a tuple with the DefaultRouter field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetDefaultRouterOk() (*string, bool) {
-	if o == nil || isNil(o.DefaultRouter) {
+	if o == nil || IsNil(o.DefaultRouter) {
 		return nil, false
 	}
 	return o.DefaultRouter, true
@@ -145,7 +148,7 @@ func (o *IscsiPortResourceInner) GetDefaultRouterOk() (*string, bool) {
 
 // HasDefaultRouter returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasDefaultRouter() bool {
-	if o != nil && !isNil(o.DefaultRouter) {
+	if o != nil && !IsNil(o.DefaultRouter) {
 		return true
 	}
 
@@ -159,7 +162,7 @@ func (o *IscsiPortResourceInner) SetDefaultRouter(v string) {
 
 // GetGateway returns the Gateway field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetGateway() string {
-	if o == nil || isNil(o.Gateway) {
+	if o == nil || IsNil(o.Gateway) {
 		var ret string
 		return ret
 	}
@@ -169,7 +172,7 @@ func (o *IscsiPortResourceInner) GetGateway() string {
 // GetGatewayOk returns a tuple with the Gateway field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetGatewayOk() (*string, bool) {
-	if o == nil || isNil(o.Gateway) {
+	if o == nil || IsNil(o.Gateway) {
 		return nil, false
 	}
 	return o.Gateway, true
@@ -177,7 +180,7 @@ func (o *IscsiPortResourceInner) GetGatewayOk() (*string, bool) {
 
 // HasGateway returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasGateway() bool {
-	if o != nil && !isNil(o.Gateway) {
+	if o != nil && !IsNil(o.Gateway) {
 		return true
 	}
 
@@ -191,7 +194,7 @@ func (o *IscsiPortResourceInner) SetGateway(v string) {
 
 // GetIpAddress returns the IpAddress field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetIpAddress() string {
-	if o == nil || isNil(o.IpAddress) {
+	if o == nil || IsNil(o.IpAddress) {
 		var ret string
 		return ret
 	}
@@ -201,7 +204,7 @@ func (o *IscsiPortResourceInner) GetIpAddress() string {
 // GetIpAddressOk returns a tuple with the IpAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetIpAddressOk() (*string, bool) {
-	if o == nil || isNil(o.IpAddress) {
+	if o == nil || IsNil(o.IpAddress) {
 		return nil, false
 	}
 	return o.IpAddress, true
@@ -209,7 +212,7 @@ func (o *IscsiPortResourceInner) GetIpAddressOk() (*string, bool) {
 
 // HasIpAddress returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasIpAddress() bool {
-	if o != nil && !isNil(o.IpAddress) {
+	if o != nil && !IsNil(o.IpAddress) {
 		return true
 	}
 
@@ -223,7 +226,7 @@ func (o *IscsiPortResourceInner) SetIpAddress(v string) {
 
 // GetIpVersion returns the IpVersion field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetIpVersion() string {
-	if o == nil || isNil(o.IpVersion) {
+	if o == nil || IsNil(o.IpVersion) {
 		var ret string
 		return ret
 	}
@@ -233,7 +236,7 @@ func (o *IscsiPortResourceInner) GetIpVersion() string {
 // GetIpVersionOk returns a tuple with the IpVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetIpVersionOk() (*string, bool) {
-	if o == nil || isNil(o.IpVersion) {
+	if o == nil || IsNil(o.IpVersion) {
 		return nil, false
 	}
 	return o.IpVersion, true
@@ -241,7 +244,7 @@ func (o *IscsiPortResourceInner) GetIpVersionOk() (*string, bool) {
 
 // HasIpVersion returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasIpVersion() bool {
-	if o != nil && !isNil(o.IpVersion) {
+	if o != nil && !IsNil(o.IpVersion) {
 		return true
 	}
 
@@ -255,7 +258,7 @@ func (o *IscsiPortResourceInner) SetIpVersion(v string) {
 
 // GetLinkLocalAddress returns the LinkLocalAddress field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetLinkLocalAddress() string {
-	if o == nil || isNil(o.LinkLocalAddress) {
+	if o == nil || IsNil(o.LinkLocalAddress) {
 		var ret string
 		return ret
 	}
@@ -265,7 +268,7 @@ func (o *IscsiPortResourceInner) GetLinkLocalAddress() string {
 // GetLinkLocalAddressOk returns a tuple with the LinkLocalAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetLinkLocalAddressOk() (*string, bool) {
-	if o == nil || isNil(o.LinkLocalAddress) {
+	if o == nil || IsNil(o.LinkLocalAddress) {
 		return nil, false
 	}
 	return o.LinkLocalAddress, true
@@ -273,7 +276,7 @@ func (o *IscsiPortResourceInner) GetLinkLocalAddressOk() (*string, bool) {
 
 // HasLinkLocalAddress returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasLinkLocalAddress() bool {
-	if o != nil && !isNil(o.LinkLocalAddress) {
+	if o != nil && !IsNil(o.LinkLocalAddress) {
 		return true
 	}
 
@@ -287,7 +290,7 @@ func (o *IscsiPortResourceInner) SetLinkLocalAddress(v string) {
 
 // GetMacAddress returns the MacAddress field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetMacAddress() string {
-	if o == nil || isNil(o.MacAddress) {
+	if o == nil || IsNil(o.MacAddress) {
 		var ret string
 		return ret
 	}
@@ -297,7 +300,7 @@ func (o *IscsiPortResourceInner) GetMacAddress() string {
 // GetMacAddressOk returns a tuple with the MacAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetMacAddressOk() (*string, bool) {
-	if o == nil || isNil(o.MacAddress) {
+	if o == nil || IsNil(o.MacAddress) {
 		return nil, false
 	}
 	return o.MacAddress, true
@@ -305,7 +308,7 @@ func (o *IscsiPortResourceInner) GetMacAddressOk() (*string, bool) {
 
 // HasMacAddress returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasMacAddress() bool {
-	if o != nil && !isNil(o.MacAddress) {
+	if o != nil && !IsNil(o.MacAddress) {
 		return true
 	}
 
@@ -319,7 +322,7 @@ func (o *IscsiPortResourceInner) SetMacAddress(v string) {
 
 // GetNetmask returns the Netmask field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetNetmask() string {
-	if o == nil || isNil(o.Netmask) {
+	if o == nil || IsNil(o.Netmask) {
 		var ret string
 		return ret
 	}
@@ -329,7 +332,7 @@ func (o *IscsiPortResourceInner) GetNetmask() string {
 // GetNetmaskOk returns a tuple with the Netmask field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetNetmaskOk() (*string, bool) {
-	if o == nil || isNil(o.Netmask) {
+	if o == nil || IsNil(o.Netmask) {
 		return nil, false
 	}
 	return o.Netmask, true
@@ -337,7 +340,7 @@ func (o *IscsiPortResourceInner) GetNetmaskOk() (*string, bool) {
 
 // HasNetmask returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasNetmask() bool {
-	if o != nil && !isNil(o.Netmask) {
+	if o != nil && !IsNil(o.Netmask) {
 		return true
 	}
 
@@ -351,7 +354,7 @@ func (o *IscsiPortResourceInner) SetNetmask(v string) {
 
 // GetSfp10GCompliance returns the Sfp10GCompliance field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfp10GCompliance() string {
-	if o == nil || isNil(o.Sfp10GCompliance) {
+	if o == nil || IsNil(o.Sfp10GCompliance) {
 		var ret string
 		return ret
 	}
@@ -361,7 +364,7 @@ func (o *IscsiPortResourceInner) GetSfp10GCompliance() string {
 // GetSfp10GComplianceOk returns a tuple with the Sfp10GCompliance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfp10GComplianceOk() (*string, bool) {
-	if o == nil || isNil(o.Sfp10GCompliance) {
+	if o == nil || IsNil(o.Sfp10GCompliance) {
 		return nil, false
 	}
 	return o.Sfp10GCompliance, true
@@ -369,7 +372,7 @@ func (o *IscsiPortResourceInner) GetSfp10GComplianceOk() (*string, bool) {
 
 // HasSfp10GCompliance returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfp10GCompliance() bool {
-	if o != nil && !isNil(o.Sfp10GCompliance) {
+	if o != nil && !IsNil(o.Sfp10GCompliance) {
 		return true
 	}
 
@@ -383,7 +386,7 @@ func (o *IscsiPortResourceInner) SetSfp10GCompliance(v string) {
 
 // GetSfp10GComplianceNumeric returns the Sfp10GComplianceNumeric field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfp10GComplianceNumeric() int64 {
-	if o == nil || isNil(o.Sfp10GComplianceNumeric) {
+	if o == nil || IsNil(o.Sfp10GComplianceNumeric) {
 		var ret int64
 		return ret
 	}
@@ -393,7 +396,7 @@ func (o *IscsiPortResourceInner) GetSfp10GComplianceNumeric() int64 {
 // GetSfp10GComplianceNumericOk returns a tuple with the Sfp10GComplianceNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfp10GComplianceNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.Sfp10GComplianceNumeric) {
+	if o == nil || IsNil(o.Sfp10GComplianceNumeric) {
 		return nil, false
 	}
 	return o.Sfp10GComplianceNumeric, true
@@ -401,7 +404,7 @@ func (o *IscsiPortResourceInner) GetSfp10GComplianceNumericOk() (*int64, bool) {
 
 // HasSfp10GComplianceNumeric returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfp10GComplianceNumeric() bool {
-	if o != nil && !isNil(o.Sfp10GComplianceNumeric) {
+	if o != nil && !IsNil(o.Sfp10GComplianceNumeric) {
 		return true
 	}
 
@@ -415,7 +418,7 @@ func (o *IscsiPortResourceInner) SetSfp10GComplianceNumeric(v int64) {
 
 // GetSfpCableLength returns the SfpCableLength field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpCableLength() int64 {
-	if o == nil || isNil(o.SfpCableLength) {
+	if o == nil || IsNil(o.SfpCableLength) {
 		var ret int64
 		return ret
 	}
@@ -425,7 +428,7 @@ func (o *IscsiPortResourceInner) GetSfpCableLength() int64 {
 // GetSfpCableLengthOk returns a tuple with the SfpCableLength field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpCableLengthOk() (*int64, bool) {
-	if o == nil || isNil(o.SfpCableLength) {
+	if o == nil || IsNil(o.SfpCableLength) {
 		return nil, false
 	}
 	return o.SfpCableLength, true
@@ -433,7 +436,7 @@ func (o *IscsiPortResourceInner) GetSfpCableLengthOk() (*int64, bool) {
 
 // HasSfpCableLength returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpCableLength() bool {
-	if o != nil && !isNil(o.SfpCableLength) {
+	if o != nil && !IsNil(o.SfpCableLength) {
 		return true
 	}
 
@@ -447,7 +450,7 @@ func (o *IscsiPortResourceInner) SetSfpCableLength(v int64) {
 
 // GetSfpCableTechnology returns the SfpCableTechnology field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpCableTechnology() string {
-	if o == nil || isNil(o.SfpCableTechnology) {
+	if o == nil || IsNil(o.SfpCableTechnology) {
 		var ret string
 		return ret
 	}
@@ -457,7 +460,7 @@ func (o *IscsiPortResourceInner) GetSfpCableTechnology() string {
 // GetSfpCableTechnologyOk returns a tuple with the SfpCableTechnology field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpCableTechnologyOk() (*string, bool) {
-	if o == nil || isNil(o.SfpCableTechnology) {
+	if o == nil || IsNil(o.SfpCableTechnology) {
 		return nil, false
 	}
 	return o.SfpCableTechnology, true
@@ -465,7 +468,7 @@ func (o *IscsiPortResourceInner) GetSfpCableTechnologyOk() (*string, bool) {
 
 // HasSfpCableTechnology returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpCableTechnology() bool {
-	if o != nil && !isNil(o.SfpCableTechnology) {
+	if o != nil && !IsNil(o.SfpCableTechnology) {
 		return true
 	}
 
@@ -479,7 +482,7 @@ func (o *IscsiPortResourceInner) SetSfpCableTechnology(v string) {
 
 // GetSfpCableTechnologyNumeric returns the SfpCableTechnologyNumeric field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpCableTechnologyNumeric() int64 {
-	if o == nil || isNil(o.SfpCableTechnologyNumeric) {
+	if o == nil || IsNil(o.SfpCableTechnologyNumeric) {
 		var ret int64
 		return ret
 	}
@@ -489,7 +492,7 @@ func (o *IscsiPortResourceInner) GetSfpCableTechnologyNumeric() int64 {
 // GetSfpCableTechnologyNumericOk returns a tuple with the SfpCableTechnologyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpCableTechnologyNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.SfpCableTechnologyNumeric) {
+	if o == nil || IsNil(o.SfpCableTechnologyNumeric) {
 		return nil, false
 	}
 	return o.SfpCableTechnologyNumeric, true
@@ -497,7 +500,7 @@ func (o *IscsiPortResourceInner) GetSfpCableTechnologyNumericOk() (*int64, bool)
 
 // HasSfpCableTechnologyNumeric returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpCableTechnologyNumeric() bool {
-	if o != nil && !isNil(o.SfpCableTechnologyNumeric) {
+	if o != nil && !IsNil(o.SfpCableTechnologyNumeric) {
 		return true
 	}
 
@@ -511,7 +514,7 @@ func (o *IscsiPortResourceInner) SetSfpCableTechnologyNumeric(v int64) {
 
 // GetSfpEthernetCompliance returns the SfpEthernetCompliance field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpEthernetCompliance() string {
-	if o == nil || isNil(o.SfpEthernetCompliance) {
+	if o == nil || IsNil(o.SfpEthernetCompliance) {
 		var ret string
 		return ret
 	}
@@ -521,7 +524,7 @@ func (o *IscsiPortResourceInner) GetSfpEthernetCompliance() string {
 // GetSfpEthernetComplianceOk returns a tuple with the SfpEthernetCompliance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpEthernetComplianceOk() (*string, bool) {
-	if o == nil || isNil(o.SfpEthernetCompliance) {
+	if o == nil || IsNil(o.SfpEthernetCompliance) {
 		return nil, false
 	}
 	return o.SfpEthernetCompliance, true
@@ -529,7 +532,7 @@ func (o *IscsiPortResourceInner) GetSfpEthernetComplianceOk() (*string, bool) {
 
 // HasSfpEthernetCompliance returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpEthernetCompliance() bool {
-	if o != nil && !isNil(o.SfpEthernetCompliance) {
+	if o != nil && !IsNil(o.SfpEthernetCompliance) {
 		return true
 	}
 
@@ -543,7 +546,7 @@ func (o *IscsiPortResourceInner) SetSfpEthernetCompliance(v string) {
 
 // GetSfpEthernetComplianceNumeric returns the SfpEthernetComplianceNumeric field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpEthernetComplianceNumeric() int64 {
-	if o == nil || isNil(o.SfpEthernetComplianceNumeric) {
+	if o == nil || IsNil(o.SfpEthernetComplianceNumeric) {
 		var ret int64
 		return ret
 	}
@@ -553,7 +556,7 @@ func (o *IscsiPortResourceInner) GetSfpEthernetComplianceNumeric() int64 {
 // GetSfpEthernetComplianceNumericOk returns a tuple with the SfpEthernetComplianceNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpEthernetComplianceNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.SfpEthernetComplianceNumeric) {
+	if o == nil || IsNil(o.SfpEthernetComplianceNumeric) {
 		return nil, false
 	}
 	return o.SfpEthernetComplianceNumeric, true
@@ -561,7 +564,7 @@ func (o *IscsiPortResourceInner) GetSfpEthernetComplianceNumericOk() (*int64, bo
 
 // HasSfpEthernetComplianceNumeric returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpEthernetComplianceNumeric() bool {
-	if o != nil && !isNil(o.SfpEthernetComplianceNumeric) {
+	if o != nil && !IsNil(o.SfpEthernetComplianceNumeric) {
 		return true
 	}
 
@@ -575,7 +578,7 @@ func (o *IscsiPortResourceInner) SetSfpEthernetComplianceNumeric(v int64) {
 
 // GetSfpPartNumber returns the SfpPartNumber field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpPartNumber() string {
-	if o == nil || isNil(o.SfpPartNumber) {
+	if o == nil || IsNil(o.SfpPartNumber) {
 		var ret string
 		return ret
 	}
@@ -585,7 +588,7 @@ func (o *IscsiPortResourceInner) GetSfpPartNumber() string {
 // GetSfpPartNumberOk returns a tuple with the SfpPartNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpPartNumberOk() (*string, bool) {
-	if o == nil || isNil(o.SfpPartNumber) {
+	if o == nil || IsNil(o.SfpPartNumber) {
 		return nil, false
 	}
 	return o.SfpPartNumber, true
@@ -593,7 +596,7 @@ func (o *IscsiPortResourceInner) GetSfpPartNumberOk() (*string, bool) {
 
 // HasSfpPartNumber returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpPartNumber() bool {
-	if o != nil && !isNil(o.SfpPartNumber) {
+	if o != nil && !IsNil(o.SfpPartNumber) {
 		return true
 	}
 
@@ -607,7 +610,7 @@ func (o *IscsiPortResourceInner) SetSfpPartNumber(v string) {
 
 // GetSfpPresent returns the SfpPresent field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpPresent() string {
-	if o == nil || isNil(o.SfpPresent) {
+	if o == nil || IsNil(o.SfpPresent) {
 		var ret string
 		return ret
 	}
@@ -617,7 +620,7 @@ func (o *IscsiPortResourceInner) GetSfpPresent() string {
 // GetSfpPresentOk returns a tuple with the SfpPresent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpPresentOk() (*string, bool) {
-	if o == nil || isNil(o.SfpPresent) {
+	if o == nil || IsNil(o.SfpPresent) {
 		return nil, false
 	}
 	return o.SfpPresent, true
@@ -625,7 +628,7 @@ func (o *IscsiPortResourceInner) GetSfpPresentOk() (*string, bool) {
 
 // HasSfpPresent returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpPresent() bool {
-	if o != nil && !isNil(o.SfpPresent) {
+	if o != nil && !IsNil(o.SfpPresent) {
 		return true
 	}
 
@@ -639,7 +642,7 @@ func (o *IscsiPortResourceInner) SetSfpPresent(v string) {
 
 // GetSfpPresentNumeric returns the SfpPresentNumeric field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpPresentNumeric() int64 {
-	if o == nil || isNil(o.SfpPresentNumeric) {
+	if o == nil || IsNil(o.SfpPresentNumeric) {
 		var ret int64
 		return ret
 	}
@@ -649,7 +652,7 @@ func (o *IscsiPortResourceInner) GetSfpPresentNumeric() int64 {
 // GetSfpPresentNumericOk returns a tuple with the SfpPresentNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpPresentNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.SfpPresentNumeric) {
+	if o == nil || IsNil(o.SfpPresentNumeric) {
 		return nil, false
 	}
 	return o.SfpPresentNumeric, true
@@ -657,7 +660,7 @@ func (o *IscsiPortResourceInner) GetSfpPresentNumericOk() (*int64, bool) {
 
 // HasSfpPresentNumeric returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpPresentNumeric() bool {
-	if o != nil && !isNil(o.SfpPresentNumeric) {
+	if o != nil && !IsNil(o.SfpPresentNumeric) {
 		return true
 	}
 
@@ -671,7 +674,7 @@ func (o *IscsiPortResourceInner) SetSfpPresentNumeric(v int64) {
 
 // GetSfpRevision returns the SfpRevision field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpRevision() string {
-	if o == nil || isNil(o.SfpRevision) {
+	if o == nil || IsNil(o.SfpRevision) {
 		var ret string
 		return ret
 	}
@@ -681,7 +684,7 @@ func (o *IscsiPortResourceInner) GetSfpRevision() string {
 // GetSfpRevisionOk returns a tuple with the SfpRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpRevisionOk() (*string, bool) {
-	if o == nil || isNil(o.SfpRevision) {
+	if o == nil || IsNil(o.SfpRevision) {
 		return nil, false
 	}
 	return o.SfpRevision, true
@@ -689,7 +692,7 @@ func (o *IscsiPortResourceInner) GetSfpRevisionOk() (*string, bool) {
 
 // HasSfpRevision returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpRevision() bool {
-	if o != nil && !isNil(o.SfpRevision) {
+	if o != nil && !IsNil(o.SfpRevision) {
 		return true
 	}
 
@@ -703,7 +706,7 @@ func (o *IscsiPortResourceInner) SetSfpRevision(v string) {
 
 // GetSfpStatus returns the SfpStatus field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpStatus() string {
-	if o == nil || isNil(o.SfpStatus) {
+	if o == nil || IsNil(o.SfpStatus) {
 		var ret string
 		return ret
 	}
@@ -713,7 +716,7 @@ func (o *IscsiPortResourceInner) GetSfpStatus() string {
 // GetSfpStatusOk returns a tuple with the SfpStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpStatusOk() (*string, bool) {
-	if o == nil || isNil(o.SfpStatus) {
+	if o == nil || IsNil(o.SfpStatus) {
 		return nil, false
 	}
 	return o.SfpStatus, true
@@ -721,7 +724,7 @@ func (o *IscsiPortResourceInner) GetSfpStatusOk() (*string, bool) {
 
 // HasSfpStatus returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpStatus() bool {
-	if o != nil && !isNil(o.SfpStatus) {
+	if o != nil && !IsNil(o.SfpStatus) {
 		return true
 	}
 
@@ -735,7 +738,7 @@ func (o *IscsiPortResourceInner) SetSfpStatus(v string) {
 
 // GetSfpStatusNumeric returns the SfpStatusNumeric field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpStatusNumeric() int64 {
-	if o == nil || isNil(o.SfpStatusNumeric) {
+	if o == nil || IsNil(o.SfpStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -745,7 +748,7 @@ func (o *IscsiPortResourceInner) GetSfpStatusNumeric() int64 {
 // GetSfpStatusNumericOk returns a tuple with the SfpStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpStatusNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.SfpStatusNumeric) {
+	if o == nil || IsNil(o.SfpStatusNumeric) {
 		return nil, false
 	}
 	return o.SfpStatusNumeric, true
@@ -753,7 +756,7 @@ func (o *IscsiPortResourceInner) GetSfpStatusNumericOk() (*int64, bool) {
 
 // HasSfpStatusNumeric returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpStatusNumeric() bool {
-	if o != nil && !isNil(o.SfpStatusNumeric) {
+	if o != nil && !IsNil(o.SfpStatusNumeric) {
 		return true
 	}
 
@@ -767,7 +770,7 @@ func (o *IscsiPortResourceInner) SetSfpStatusNumeric(v int64) {
 
 // GetSfpVendor returns the SfpVendor field value if set, zero value otherwise.
 func (o *IscsiPortResourceInner) GetSfpVendor() string {
-	if o == nil || isNil(o.SfpVendor) {
+	if o == nil || IsNil(o.SfpVendor) {
 		var ret string
 		return ret
 	}
@@ -777,7 +780,7 @@ func (o *IscsiPortResourceInner) GetSfpVendor() string {
 // GetSfpVendorOk returns a tuple with the SfpVendor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IscsiPortResourceInner) GetSfpVendorOk() (*string, bool) {
-	if o == nil || isNil(o.SfpVendor) {
+	if o == nil || IsNil(o.SfpVendor) {
 		return nil, false
 	}
 	return o.SfpVendor, true
@@ -785,7 +788,7 @@ func (o *IscsiPortResourceInner) GetSfpVendorOk() (*string, bool) {
 
 // HasSfpVendor returns a boolean if a field has been set.
 func (o *IscsiPortResourceInner) HasSfpVendor() bool {
-	if o != nil && !isNil(o.SfpVendor) {
+	if o != nil && !IsNil(o.SfpVendor) {
 		return true
 	}
 
@@ -798,77 +801,85 @@ func (o *IscsiPortResourceInner) SetSfpVendor(v string) {
 }
 
 func (o IscsiPortResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.DefaultRouter) {
-		toSerialize["default-router"] = o.DefaultRouter
-	}
-	if !isNil(o.Gateway) {
-		toSerialize["gateway"] = o.Gateway
-	}
-	if !isNil(o.IpAddress) {
-		toSerialize["ip-address"] = o.IpAddress
-	}
-	if !isNil(o.IpVersion) {
-		toSerialize["ip-version"] = o.IpVersion
-	}
-	if !isNil(o.LinkLocalAddress) {
-		toSerialize["link-local-address"] = o.LinkLocalAddress
-	}
-	if !isNil(o.MacAddress) {
-		toSerialize["mac-address"] = o.MacAddress
-	}
-	if !isNil(o.Netmask) {
-		toSerialize["netmask"] = o.Netmask
-	}
-	if !isNil(o.Sfp10GCompliance) {
-		toSerialize["sfp-10G-compliance"] = o.Sfp10GCompliance
-	}
-	if !isNil(o.Sfp10GComplianceNumeric) {
-		toSerialize["sfp-10G-compliance-numeric"] = o.Sfp10GComplianceNumeric
-	}
-	if !isNil(o.SfpCableLength) {
-		toSerialize["sfp-cable-length"] = o.SfpCableLength
-	}
-	if !isNil(o.SfpCableTechnology) {
-		toSerialize["sfp-cable-technology"] = o.SfpCableTechnology
-	}
-	if !isNil(o.SfpCableTechnologyNumeric) {
-		toSerialize["sfp-cable-technology-numeric"] = o.SfpCableTechnologyNumeric
-	}
-	if !isNil(o.SfpEthernetCompliance) {
-		toSerialize["sfp-ethernet-compliance"] = o.SfpEthernetCompliance
-	}
-	if !isNil(o.SfpEthernetComplianceNumeric) {
-		toSerialize["sfp-ethernet-compliance-numeric"] = o.SfpEthernetComplianceNumeric
-	}
-	if !isNil(o.SfpPartNumber) {
-		toSerialize["sfp-part-number"] = o.SfpPartNumber
-	}
-	if !isNil(o.SfpPresent) {
-		toSerialize["sfp-present"] = o.SfpPresent
-	}
-	if !isNil(o.SfpPresentNumeric) {
-		toSerialize["sfp-present-numeric"] = o.SfpPresentNumeric
-	}
-	if !isNil(o.SfpRevision) {
-		toSerialize["sfp-revision"] = o.SfpRevision
-	}
-	if !isNil(o.SfpStatus) {
-		toSerialize["sfp-status"] = o.SfpStatus
-	}
-	if !isNil(o.SfpStatusNumeric) {
-		toSerialize["sfp-status-numeric"] = o.SfpStatusNumeric
-	}
-	if !isNil(o.SfpVendor) {
-		toSerialize["sfp-vendor"] = o.SfpVendor
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o IscsiPortResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.DefaultRouter) {
+		toSerialize["default-router"] = o.DefaultRouter
+	}
+	if !IsNil(o.Gateway) {
+		toSerialize["gateway"] = o.Gateway
+	}
+	if !IsNil(o.IpAddress) {
+		toSerialize["ip-address"] = o.IpAddress
+	}
+	if !IsNil(o.IpVersion) {
+		toSerialize["ip-version"] = o.IpVersion
+	}
+	if !IsNil(o.LinkLocalAddress) {
+		toSerialize["link-local-address"] = o.LinkLocalAddress
+	}
+	if !IsNil(o.MacAddress) {
+		toSerialize["mac-address"] = o.MacAddress
+	}
+	if !IsNil(o.Netmask) {
+		toSerialize["netmask"] = o.Netmask
+	}
+	if !IsNil(o.Sfp10GCompliance) {
+		toSerialize["sfp-10G-compliance"] = o.Sfp10GCompliance
+	}
+	if !IsNil(o.Sfp10GComplianceNumeric) {
+		toSerialize["sfp-10G-compliance-numeric"] = o.Sfp10GComplianceNumeric
+	}
+	if !IsNil(o.SfpCableLength) {
+		toSerialize["sfp-cable-length"] = o.SfpCableLength
+	}
+	if !IsNil(o.SfpCableTechnology) {
+		toSerialize["sfp-cable-technology"] = o.SfpCableTechnology
+	}
+	if !IsNil(o.SfpCableTechnologyNumeric) {
+		toSerialize["sfp-cable-technology-numeric"] = o.SfpCableTechnologyNumeric
+	}
+	if !IsNil(o.SfpEthernetCompliance) {
+		toSerialize["sfp-ethernet-compliance"] = o.SfpEthernetCompliance
+	}
+	if !IsNil(o.SfpEthernetComplianceNumeric) {
+		toSerialize["sfp-ethernet-compliance-numeric"] = o.SfpEthernetComplianceNumeric
+	}
+	if !IsNil(o.SfpPartNumber) {
+		toSerialize["sfp-part-number"] = o.SfpPartNumber
+	}
+	if !IsNil(o.SfpPresent) {
+		toSerialize["sfp-present"] = o.SfpPresent
+	}
+	if !IsNil(o.SfpPresentNumeric) {
+		toSerialize["sfp-present-numeric"] = o.SfpPresentNumeric
+	}
+	if !IsNil(o.SfpRevision) {
+		toSerialize["sfp-revision"] = o.SfpRevision
+	}
+	if !IsNil(o.SfpStatus) {
+		toSerialize["sfp-status"] = o.SfpStatus
+	}
+	if !IsNil(o.SfpStatusNumeric) {
+		toSerialize["sfp-status-numeric"] = o.SfpStatusNumeric
+	}
+	if !IsNil(o.SfpVendor) {
+		toSerialize["sfp-vendor"] = o.SfpVendor
+	}
+	return toSerialize, nil
 }
 
 type NullableIscsiPortResourceInner struct {

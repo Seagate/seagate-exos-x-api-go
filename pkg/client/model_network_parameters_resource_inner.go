@@ -14,6 +14,9 @@ import (
 	"encoding/json"
 )
 
+// checks if the NetworkParametersResourceInner type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &NetworkParametersResourceInner{}
+
 // NetworkParametersResourceInner struct for NetworkParametersResourceInner
 type NetworkParametersResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
@@ -68,7 +71,7 @@ func NewNetworkParametersResourceInnerWithDefaults() *NetworkParametersResourceI
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetObjectName() string {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -78,7 +81,7 @@ func (o *NetworkParametersResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || isNil(o.ObjectName) {
+	if o == nil || IsNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -86,7 +89,7 @@ func (o *NetworkParametersResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasObjectName() bool {
-	if o != nil && !isNil(o.ObjectName) {
+	if o != nil && !IsNil(o.ObjectName) {
 		return true
 	}
 
@@ -100,7 +103,7 @@ func (o *NetworkParametersResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetMeta() string {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -110,7 +113,7 @@ func (o *NetworkParametersResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || isNil(o.Meta) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -118,7 +121,7 @@ func (o *NetworkParametersResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasMeta() bool {
-	if o != nil && !isNil(o.Meta) {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
@@ -132,7 +135,7 @@ func (o *NetworkParametersResourceInner) SetMeta(v string) {
 
 // GetActiveVersion returns the ActiveVersion field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetActiveVersion() int64 {
-	if o == nil || isNil(o.ActiveVersion) {
+	if o == nil || IsNil(o.ActiveVersion) {
 		var ret int64
 		return ret
 	}
@@ -142,7 +145,7 @@ func (o *NetworkParametersResourceInner) GetActiveVersion() int64 {
 // GetActiveVersionOk returns a tuple with the ActiveVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetActiveVersionOk() (*int64, bool) {
-	if o == nil || isNil(o.ActiveVersion) {
+	if o == nil || IsNil(o.ActiveVersion) {
 		return nil, false
 	}
 	return o.ActiveVersion, true
@@ -150,7 +153,7 @@ func (o *NetworkParametersResourceInner) GetActiveVersionOk() (*int64, bool) {
 
 // HasActiveVersion returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasActiveVersion() bool {
-	if o != nil && !isNil(o.ActiveVersion) {
+	if o != nil && !IsNil(o.ActiveVersion) {
 		return true
 	}
 
@@ -164,7 +167,7 @@ func (o *NetworkParametersResourceInner) SetActiveVersion(v int64) {
 
 // GetAddressingMode returns the AddressingMode field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetAddressingMode() string {
-	if o == nil || isNil(o.AddressingMode) {
+	if o == nil || IsNil(o.AddressingMode) {
 		var ret string
 		return ret
 	}
@@ -174,7 +177,7 @@ func (o *NetworkParametersResourceInner) GetAddressingMode() string {
 // GetAddressingModeOk returns a tuple with the AddressingMode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetAddressingModeOk() (*string, bool) {
-	if o == nil || isNil(o.AddressingMode) {
+	if o == nil || IsNil(o.AddressingMode) {
 		return nil, false
 	}
 	return o.AddressingMode, true
@@ -182,7 +185,7 @@ func (o *NetworkParametersResourceInner) GetAddressingModeOk() (*string, bool) {
 
 // HasAddressingMode returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasAddressingMode() bool {
-	if o != nil && !isNil(o.AddressingMode) {
+	if o != nil && !IsNil(o.AddressingMode) {
 		return true
 	}
 
@@ -196,7 +199,7 @@ func (o *NetworkParametersResourceInner) SetAddressingMode(v string) {
 
 // GetAddressingModeNumeric returns the AddressingModeNumeric field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int64 {
-	if o == nil || isNil(o.AddressingModeNumeric) {
+	if o == nil || IsNil(o.AddressingModeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -206,7 +209,7 @@ func (o *NetworkParametersResourceInner) GetAddressingModeNumeric() int64 {
 // GetAddressingModeNumericOk returns a tuple with the AddressingModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetAddressingModeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.AddressingModeNumeric) {
+	if o == nil || IsNil(o.AddressingModeNumeric) {
 		return nil, false
 	}
 	return o.AddressingModeNumeric, true
@@ -214,7 +217,7 @@ func (o *NetworkParametersResourceInner) GetAddressingModeNumericOk() (*int64, b
 
 // HasAddressingModeNumeric returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasAddressingModeNumeric() bool {
-	if o != nil && !isNil(o.AddressingModeNumeric) {
+	if o != nil && !IsNil(o.AddressingModeNumeric) {
 		return true
 	}
 
@@ -228,7 +231,7 @@ func (o *NetworkParametersResourceInner) SetAddressingModeNumeric(v int64) {
 
 // GetAutoNegotiation returns the AutoNegotiation field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetAutoNegotiation() string {
-	if o == nil || isNil(o.AutoNegotiation) {
+	if o == nil || IsNil(o.AutoNegotiation) {
 		var ret string
 		return ret
 	}
@@ -238,7 +241,7 @@ func (o *NetworkParametersResourceInner) GetAutoNegotiation() string {
 // GetAutoNegotiationOk returns a tuple with the AutoNegotiation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetAutoNegotiationOk() (*string, bool) {
-	if o == nil || isNil(o.AutoNegotiation) {
+	if o == nil || IsNil(o.AutoNegotiation) {
 		return nil, false
 	}
 	return o.AutoNegotiation, true
@@ -246,7 +249,7 @@ func (o *NetworkParametersResourceInner) GetAutoNegotiationOk() (*string, bool) 
 
 // HasAutoNegotiation returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasAutoNegotiation() bool {
-	if o != nil && !isNil(o.AutoNegotiation) {
+	if o != nil && !IsNil(o.AutoNegotiation) {
 		return true
 	}
 
@@ -260,7 +263,7 @@ func (o *NetworkParametersResourceInner) SetAutoNegotiation(v string) {
 
 // GetAutoNegotiationNumeric returns the AutoNegotiationNumeric field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int64 {
-	if o == nil || isNil(o.AutoNegotiationNumeric) {
+	if o == nil || IsNil(o.AutoNegotiationNumeric) {
 		var ret int64
 		return ret
 	}
@@ -270,7 +273,7 @@ func (o *NetworkParametersResourceInner) GetAutoNegotiationNumeric() int64 {
 // GetAutoNegotiationNumericOk returns a tuple with the AutoNegotiationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetAutoNegotiationNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.AutoNegotiationNumeric) {
+	if o == nil || IsNil(o.AutoNegotiationNumeric) {
 		return nil, false
 	}
 	return o.AutoNegotiationNumeric, true
@@ -278,7 +281,7 @@ func (o *NetworkParametersResourceInner) GetAutoNegotiationNumericOk() (*int64, 
 
 // HasAutoNegotiationNumeric returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasAutoNegotiationNumeric() bool {
-	if o != nil && !isNil(o.AutoNegotiationNumeric) {
+	if o != nil && !IsNil(o.AutoNegotiationNumeric) {
 		return true
 	}
 
@@ -292,7 +295,7 @@ func (o *NetworkParametersResourceInner) SetAutoNegotiationNumeric(v int64) {
 
 // GetDuplexMode returns the DuplexMode field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetDuplexMode() string {
-	if o == nil || isNil(o.DuplexMode) {
+	if o == nil || IsNil(o.DuplexMode) {
 		var ret string
 		return ret
 	}
@@ -302,7 +305,7 @@ func (o *NetworkParametersResourceInner) GetDuplexMode() string {
 // GetDuplexModeOk returns a tuple with the DuplexMode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetDuplexModeOk() (*string, bool) {
-	if o == nil || isNil(o.DuplexMode) {
+	if o == nil || IsNil(o.DuplexMode) {
 		return nil, false
 	}
 	return o.DuplexMode, true
@@ -310,7 +313,7 @@ func (o *NetworkParametersResourceInner) GetDuplexModeOk() (*string, bool) {
 
 // HasDuplexMode returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasDuplexMode() bool {
-	if o != nil && !isNil(o.DuplexMode) {
+	if o != nil && !IsNil(o.DuplexMode) {
 		return true
 	}
 
@@ -324,7 +327,7 @@ func (o *NetworkParametersResourceInner) SetDuplexMode(v string) {
 
 // GetDuplexModeNumeric returns the DuplexModeNumeric field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int64 {
-	if o == nil || isNil(o.DuplexModeNumeric) {
+	if o == nil || IsNil(o.DuplexModeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -334,7 +337,7 @@ func (o *NetworkParametersResourceInner) GetDuplexModeNumeric() int64 {
 // GetDuplexModeNumericOk returns a tuple with the DuplexModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetDuplexModeNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.DuplexModeNumeric) {
+	if o == nil || IsNil(o.DuplexModeNumeric) {
 		return nil, false
 	}
 	return o.DuplexModeNumeric, true
@@ -342,7 +345,7 @@ func (o *NetworkParametersResourceInner) GetDuplexModeNumericOk() (*int64, bool)
 
 // HasDuplexModeNumeric returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasDuplexModeNumeric() bool {
-	if o != nil && !isNil(o.DuplexModeNumeric) {
+	if o != nil && !IsNil(o.DuplexModeNumeric) {
 		return true
 	}
 
@@ -356,7 +359,7 @@ func (o *NetworkParametersResourceInner) SetDuplexModeNumeric(v int64) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetDurableId() string {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -366,7 +369,7 @@ func (o *NetworkParametersResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || isNil(o.DurableId) {
+	if o == nil || IsNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -374,7 +377,7 @@ func (o *NetworkParametersResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasDurableId() bool {
-	if o != nil && !isNil(o.DurableId) {
+	if o != nil && !IsNil(o.DurableId) {
 		return true
 	}
 
@@ -388,7 +391,7 @@ func (o *NetworkParametersResourceInner) SetDurableId(v string) {
 
 // GetGateway returns the Gateway field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetGateway() string {
-	if o == nil || isNil(o.Gateway) {
+	if o == nil || IsNil(o.Gateway) {
 		var ret string
 		return ret
 	}
@@ -398,7 +401,7 @@ func (o *NetworkParametersResourceInner) GetGateway() string {
 // GetGatewayOk returns a tuple with the Gateway field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetGatewayOk() (*string, bool) {
-	if o == nil || isNil(o.Gateway) {
+	if o == nil || IsNil(o.Gateway) {
 		return nil, false
 	}
 	return o.Gateway, true
@@ -406,7 +409,7 @@ func (o *NetworkParametersResourceInner) GetGatewayOk() (*string, bool) {
 
 // HasGateway returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasGateway() bool {
-	if o != nil && !isNil(o.Gateway) {
+	if o != nil && !IsNil(o.Gateway) {
 		return true
 	}
 
@@ -420,7 +423,7 @@ func (o *NetworkParametersResourceInner) SetGateway(v string) {
 
 // GetHealth returns the Health field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetHealth() string {
-	if o == nil || isNil(o.Health) {
+	if o == nil || IsNil(o.Health) {
 		var ret string
 		return ret
 	}
@@ -430,7 +433,7 @@ func (o *NetworkParametersResourceInner) GetHealth() string {
 // GetHealthOk returns a tuple with the Health field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetHealthOk() (*string, bool) {
-	if o == nil || isNil(o.Health) {
+	if o == nil || IsNil(o.Health) {
 		return nil, false
 	}
 	return o.Health, true
@@ -438,7 +441,7 @@ func (o *NetworkParametersResourceInner) GetHealthOk() (*string, bool) {
 
 // HasHealth returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasHealth() bool {
-	if o != nil && !isNil(o.Health) {
+	if o != nil && !IsNil(o.Health) {
 		return true
 	}
 
@@ -452,7 +455,7 @@ func (o *NetworkParametersResourceInner) SetHealth(v string) {
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetHealthNumeric() int64 {
-	if o == nil || isNil(o.HealthNumeric) {
+	if o == nil || IsNil(o.HealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -462,7 +465,7 @@ func (o *NetworkParametersResourceInner) GetHealthNumeric() int64 {
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetHealthNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.HealthNumeric) {
+	if o == nil || IsNil(o.HealthNumeric) {
 		return nil, false
 	}
 	return o.HealthNumeric, true
@@ -470,7 +473,7 @@ func (o *NetworkParametersResourceInner) GetHealthNumericOk() (*int64, bool) {
 
 // HasHealthNumeric returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasHealthNumeric() bool {
-	if o != nil && !isNil(o.HealthNumeric) {
+	if o != nil && !IsNil(o.HealthNumeric) {
 		return true
 	}
 
@@ -484,7 +487,7 @@ func (o *NetworkParametersResourceInner) SetHealthNumeric(v int64) {
 
 // GetHealthReason returns the HealthReason field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetHealthReason() string {
-	if o == nil || isNil(o.HealthReason) {
+	if o == nil || IsNil(o.HealthReason) {
 		var ret string
 		return ret
 	}
@@ -494,7 +497,7 @@ func (o *NetworkParametersResourceInner) GetHealthReason() string {
 // GetHealthReasonOk returns a tuple with the HealthReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetHealthReasonOk() (*string, bool) {
-	if o == nil || isNil(o.HealthReason) {
+	if o == nil || IsNil(o.HealthReason) {
 		return nil, false
 	}
 	return o.HealthReason, true
@@ -502,7 +505,7 @@ func (o *NetworkParametersResourceInner) GetHealthReasonOk() (*string, bool) {
 
 // HasHealthReason returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasHealthReason() bool {
-	if o != nil && !isNil(o.HealthReason) {
+	if o != nil && !IsNil(o.HealthReason) {
 		return true
 	}
 
@@ -516,7 +519,7 @@ func (o *NetworkParametersResourceInner) SetHealthReason(v string) {
 
 // GetHealthRecommendation returns the HealthRecommendation field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetHealthRecommendation() string {
-	if o == nil || isNil(o.HealthRecommendation) {
+	if o == nil || IsNil(o.HealthRecommendation) {
 		var ret string
 		return ret
 	}
@@ -526,7 +529,7 @@ func (o *NetworkParametersResourceInner) GetHealthRecommendation() string {
 // GetHealthRecommendationOk returns a tuple with the HealthRecommendation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetHealthRecommendationOk() (*string, bool) {
-	if o == nil || isNil(o.HealthRecommendation) {
+	if o == nil || IsNil(o.HealthRecommendation) {
 		return nil, false
 	}
 	return o.HealthRecommendation, true
@@ -534,7 +537,7 @@ func (o *NetworkParametersResourceInner) GetHealthRecommendationOk() (*string, b
 
 // HasHealthRecommendation returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasHealthRecommendation() bool {
-	if o != nil && !isNil(o.HealthRecommendation) {
+	if o != nil && !IsNil(o.HealthRecommendation) {
 		return true
 	}
 
@@ -548,7 +551,7 @@ func (o *NetworkParametersResourceInner) SetHealthRecommendation(v string) {
 
 // GetIpAddress returns the IpAddress field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetIpAddress() string {
-	if o == nil || isNil(o.IpAddress) {
+	if o == nil || IsNil(o.IpAddress) {
 		var ret string
 		return ret
 	}
@@ -558,7 +561,7 @@ func (o *NetworkParametersResourceInner) GetIpAddress() string {
 // GetIpAddressOk returns a tuple with the IpAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetIpAddressOk() (*string, bool) {
-	if o == nil || isNil(o.IpAddress) {
+	if o == nil || IsNil(o.IpAddress) {
 		return nil, false
 	}
 	return o.IpAddress, true
@@ -566,7 +569,7 @@ func (o *NetworkParametersResourceInner) GetIpAddressOk() (*string, bool) {
 
 // HasIpAddress returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasIpAddress() bool {
-	if o != nil && !isNil(o.IpAddress) {
+	if o != nil && !IsNil(o.IpAddress) {
 		return true
 	}
 
@@ -580,7 +583,7 @@ func (o *NetworkParametersResourceInner) SetIpAddress(v string) {
 
 // GetLinkSpeed returns the LinkSpeed field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetLinkSpeed() string {
-	if o == nil || isNil(o.LinkSpeed) {
+	if o == nil || IsNil(o.LinkSpeed) {
 		var ret string
 		return ret
 	}
@@ -590,7 +593,7 @@ func (o *NetworkParametersResourceInner) GetLinkSpeed() string {
 // GetLinkSpeedOk returns a tuple with the LinkSpeed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetLinkSpeedOk() (*string, bool) {
-	if o == nil || isNil(o.LinkSpeed) {
+	if o == nil || IsNil(o.LinkSpeed) {
 		return nil, false
 	}
 	return o.LinkSpeed, true
@@ -598,7 +601,7 @@ func (o *NetworkParametersResourceInner) GetLinkSpeedOk() (*string, bool) {
 
 // HasLinkSpeed returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasLinkSpeed() bool {
-	if o != nil && !isNil(o.LinkSpeed) {
+	if o != nil && !IsNil(o.LinkSpeed) {
 		return true
 	}
 
@@ -612,7 +615,7 @@ func (o *NetworkParametersResourceInner) SetLinkSpeed(v string) {
 
 // GetLinkSpeedNumeric returns the LinkSpeedNumeric field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int64 {
-	if o == nil || isNil(o.LinkSpeedNumeric) {
+	if o == nil || IsNil(o.LinkSpeedNumeric) {
 		var ret int64
 		return ret
 	}
@@ -622,7 +625,7 @@ func (o *NetworkParametersResourceInner) GetLinkSpeedNumeric() int64 {
 // GetLinkSpeedNumericOk returns a tuple with the LinkSpeedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetLinkSpeedNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.LinkSpeedNumeric) {
+	if o == nil || IsNil(o.LinkSpeedNumeric) {
 		return nil, false
 	}
 	return o.LinkSpeedNumeric, true
@@ -630,7 +633,7 @@ func (o *NetworkParametersResourceInner) GetLinkSpeedNumericOk() (*int64, bool) 
 
 // HasLinkSpeedNumeric returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasLinkSpeedNumeric() bool {
-	if o != nil && !isNil(o.LinkSpeedNumeric) {
+	if o != nil && !IsNil(o.LinkSpeedNumeric) {
 		return true
 	}
 
@@ -644,7 +647,7 @@ func (o *NetworkParametersResourceInner) SetLinkSpeedNumeric(v int64) {
 
 // GetMacAddress returns the MacAddress field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetMacAddress() string {
-	if o == nil || isNil(o.MacAddress) {
+	if o == nil || IsNil(o.MacAddress) {
 		var ret string
 		return ret
 	}
@@ -654,7 +657,7 @@ func (o *NetworkParametersResourceInner) GetMacAddress() string {
 // GetMacAddressOk returns a tuple with the MacAddress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetMacAddressOk() (*string, bool) {
-	if o == nil || isNil(o.MacAddress) {
+	if o == nil || IsNil(o.MacAddress) {
 		return nil, false
 	}
 	return o.MacAddress, true
@@ -662,7 +665,7 @@ func (o *NetworkParametersResourceInner) GetMacAddressOk() (*string, bool) {
 
 // HasMacAddress returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasMacAddress() bool {
-	if o != nil && !isNil(o.MacAddress) {
+	if o != nil && !IsNil(o.MacAddress) {
 		return true
 	}
 
@@ -676,7 +679,7 @@ func (o *NetworkParametersResourceInner) SetMacAddress(v string) {
 
 // GetPingBroadcast returns the PingBroadcast field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetPingBroadcast() string {
-	if o == nil || isNil(o.PingBroadcast) {
+	if o == nil || IsNil(o.PingBroadcast) {
 		var ret string
 		return ret
 	}
@@ -686,7 +689,7 @@ func (o *NetworkParametersResourceInner) GetPingBroadcast() string {
 // GetPingBroadcastOk returns a tuple with the PingBroadcast field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetPingBroadcastOk() (*string, bool) {
-	if o == nil || isNil(o.PingBroadcast) {
+	if o == nil || IsNil(o.PingBroadcast) {
 		return nil, false
 	}
 	return o.PingBroadcast, true
@@ -694,7 +697,7 @@ func (o *NetworkParametersResourceInner) GetPingBroadcastOk() (*string, bool) {
 
 // HasPingBroadcast returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasPingBroadcast() bool {
-	if o != nil && !isNil(o.PingBroadcast) {
+	if o != nil && !IsNil(o.PingBroadcast) {
 		return true
 	}
 
@@ -708,7 +711,7 @@ func (o *NetworkParametersResourceInner) SetPingBroadcast(v string) {
 
 // GetPingBroadcastNumeric returns the PingBroadcastNumeric field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int64 {
-	if o == nil || isNil(o.PingBroadcastNumeric) {
+	if o == nil || IsNil(o.PingBroadcastNumeric) {
 		var ret int64
 		return ret
 	}
@@ -718,7 +721,7 @@ func (o *NetworkParametersResourceInner) GetPingBroadcastNumeric() int64 {
 // GetPingBroadcastNumericOk returns a tuple with the PingBroadcastNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetPingBroadcastNumericOk() (*int64, bool) {
-	if o == nil || isNil(o.PingBroadcastNumeric) {
+	if o == nil || IsNil(o.PingBroadcastNumeric) {
 		return nil, false
 	}
 	return o.PingBroadcastNumeric, true
@@ -726,7 +729,7 @@ func (o *NetworkParametersResourceInner) GetPingBroadcastNumericOk() (*int64, bo
 
 // HasPingBroadcastNumeric returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasPingBroadcastNumeric() bool {
-	if o != nil && !isNil(o.PingBroadcastNumeric) {
+	if o != nil && !IsNil(o.PingBroadcastNumeric) {
 		return true
 	}
 
@@ -740,7 +743,7 @@ func (o *NetworkParametersResourceInner) SetPingBroadcastNumeric(v int64) {
 
 // GetSubnetMask returns the SubnetMask field value if set, zero value otherwise.
 func (o *NetworkParametersResourceInner) GetSubnetMask() string {
-	if o == nil || isNil(o.SubnetMask) {
+	if o == nil || IsNil(o.SubnetMask) {
 		var ret string
 		return ret
 	}
@@ -750,7 +753,7 @@ func (o *NetworkParametersResourceInner) GetSubnetMask() string {
 // GetSubnetMaskOk returns a tuple with the SubnetMask field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NetworkParametersResourceInner) GetSubnetMaskOk() (*string, bool) {
-	if o == nil || isNil(o.SubnetMask) {
+	if o == nil || IsNil(o.SubnetMask) {
 		return nil, false
 	}
 	return o.SubnetMask, true
@@ -758,7 +761,7 @@ func (o *NetworkParametersResourceInner) GetSubnetMaskOk() (*string, bool) {
 
 // HasSubnetMask returns a boolean if a field has been set.
 func (o *NetworkParametersResourceInner) HasSubnetMask() bool {
-	if o != nil && !isNil(o.SubnetMask) {
+	if o != nil && !IsNil(o.SubnetMask) {
 		return true
 	}
 
@@ -771,74 +774,82 @@ func (o *NetworkParametersResourceInner) SetSubnetMask(v string) {
 }
 
 func (o NetworkParametersResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if !isNil(o.ObjectName) {
-		toSerialize["object-name"] = o.ObjectName
-	}
-	if !isNil(o.Meta) {
-		toSerialize["meta"] = o.Meta
-	}
-	if !isNil(o.ActiveVersion) {
-		toSerialize["active-version"] = o.ActiveVersion
-	}
-	if !isNil(o.AddressingMode) {
-		toSerialize["addressing-mode"] = o.AddressingMode
-	}
-	if !isNil(o.AddressingModeNumeric) {
-		toSerialize["addressing-mode-numeric"] = o.AddressingModeNumeric
-	}
-	if !isNil(o.AutoNegotiation) {
-		toSerialize["auto-negotiation"] = o.AutoNegotiation
-	}
-	if !isNil(o.AutoNegotiationNumeric) {
-		toSerialize["auto-negotiation-numeric"] = o.AutoNegotiationNumeric
-	}
-	if !isNil(o.DuplexMode) {
-		toSerialize["duplex-mode"] = o.DuplexMode
-	}
-	if !isNil(o.DuplexModeNumeric) {
-		toSerialize["duplex-mode-numeric"] = o.DuplexModeNumeric
-	}
-	if !isNil(o.DurableId) {
-		toSerialize["durable-id"] = o.DurableId
-	}
-	if !isNil(o.Gateway) {
-		toSerialize["gateway"] = o.Gateway
-	}
-	if !isNil(o.Health) {
-		toSerialize["health"] = o.Health
-	}
-	if !isNil(o.HealthNumeric) {
-		toSerialize["health-numeric"] = o.HealthNumeric
-	}
-	if !isNil(o.HealthReason) {
-		toSerialize["health-reason"] = o.HealthReason
-	}
-	if !isNil(o.HealthRecommendation) {
-		toSerialize["health-recommendation"] = o.HealthRecommendation
-	}
-	if !isNil(o.IpAddress) {
-		toSerialize["ip-address"] = o.IpAddress
-	}
-	if !isNil(o.LinkSpeed) {
-		toSerialize["link-speed"] = o.LinkSpeed
-	}
-	if !isNil(o.LinkSpeedNumeric) {
-		toSerialize["link-speed-numeric"] = o.LinkSpeedNumeric
-	}
-	if !isNil(o.MacAddress) {
-		toSerialize["mac-address"] = o.MacAddress
-	}
-	if !isNil(o.PingBroadcast) {
-		toSerialize["ping-broadcast"] = o.PingBroadcast
-	}
-	if !isNil(o.PingBroadcastNumeric) {
-		toSerialize["ping-broadcast-numeric"] = o.PingBroadcastNumeric
-	}
-	if !isNil(o.SubnetMask) {
-		toSerialize["subnet-mask"] = o.SubnetMask
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o NetworkParametersResourceInner) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ObjectName) {
+		toSerialize["object-name"] = o.ObjectName
+	}
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
+	}
+	if !IsNil(o.ActiveVersion) {
+		toSerialize["active-version"] = o.ActiveVersion
+	}
+	if !IsNil(o.AddressingMode) {
+		toSerialize["addressing-mode"] = o.AddressingMode
+	}
+	if !IsNil(o.AddressingModeNumeric) {
+		toSerialize["addressing-mode-numeric"] = o.AddressingModeNumeric
+	}
+	if !IsNil(o.AutoNegotiation) {
+		toSerialize["auto-negotiation"] = o.AutoNegotiation
+	}
+	if !IsNil(o.AutoNegotiationNumeric) {
+		toSerialize["auto-negotiation-numeric"] = o.AutoNegotiationNumeric
+	}
+	if !IsNil(o.DuplexMode) {
+		toSerialize["duplex-mode"] = o.DuplexMode
+	}
+	if !IsNil(o.DuplexModeNumeric) {
+		toSerialize["duplex-mode-numeric"] = o.DuplexModeNumeric
+	}
+	if !IsNil(o.DurableId) {
+		toSerialize["durable-id"] = o.DurableId
+	}
+	if !IsNil(o.Gateway) {
+		toSerialize["gateway"] = o.Gateway
+	}
+	if !IsNil(o.Health) {
+		toSerialize["health"] = o.Health
+	}
+	if !IsNil(o.HealthNumeric) {
+		toSerialize["health-numeric"] = o.HealthNumeric
+	}
+	if !IsNil(o.HealthReason) {
+		toSerialize["health-reason"] = o.HealthReason
+	}
+	if !IsNil(o.HealthRecommendation) {
+		toSerialize["health-recommendation"] = o.HealthRecommendation
+	}
+	if !IsNil(o.IpAddress) {
+		toSerialize["ip-address"] = o.IpAddress
+	}
+	if !IsNil(o.LinkSpeed) {
+		toSerialize["link-speed"] = o.LinkSpeed
+	}
+	if !IsNil(o.LinkSpeedNumeric) {
+		toSerialize["link-speed-numeric"] = o.LinkSpeedNumeric
+	}
+	if !IsNil(o.MacAddress) {
+		toSerialize["mac-address"] = o.MacAddress
+	}
+	if !IsNil(o.PingBroadcast) {
+		toSerialize["ping-broadcast"] = o.PingBroadcast
+	}
+	if !IsNil(o.PingBroadcastNumeric) {
+		toSerialize["ping-broadcast-numeric"] = o.PingBroadcastNumeric
+	}
+	if !IsNil(o.SubnetMask) {
+		toSerialize["subnet-mask"] = o.SubnetMask
+	}
+	return toSerialize, nil
 }
 
 type NullableNetworkParametersResourceInner struct {
