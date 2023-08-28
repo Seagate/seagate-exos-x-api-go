@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the TiersResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &TiersResourceInner{}
-
 // TiersResourceInner struct for TiersResourceInner
 type TiersResourceInner struct {
 	ObjectName           *string `json:"object-name,omitempty"`
@@ -63,7 +60,7 @@ func NewTiersResourceInnerWithDefaults() *TiersResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -73,7 +70,7 @@ func (o *TiersResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -81,7 +78,7 @@ func (o *TiersResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -95,7 +92,7 @@ func (o *TiersResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -105,7 +102,7 @@ func (o *TiersResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -113,7 +110,7 @@ func (o *TiersResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -127,7 +124,7 @@ func (o *TiersResourceInner) SetMeta(v string) {
 
 // GetAffinitySize returns the AffinitySize field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetAffinitySize() string {
-	if o == nil || IsNil(o.AffinitySize) {
+	if o == nil || isNil(o.AffinitySize) {
 		var ret string
 		return ret
 	}
@@ -137,7 +134,7 @@ func (o *TiersResourceInner) GetAffinitySize() string {
 // GetAffinitySizeOk returns a tuple with the AffinitySize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetAffinitySizeOk() (*string, bool) {
-	if o == nil || IsNil(o.AffinitySize) {
+	if o == nil || isNil(o.AffinitySize) {
 		return nil, false
 	}
 	return o.AffinitySize, true
@@ -145,7 +142,7 @@ func (o *TiersResourceInner) GetAffinitySizeOk() (*string, bool) {
 
 // HasAffinitySize returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasAffinitySize() bool {
-	if o != nil && !IsNil(o.AffinitySize) {
+	if o != nil && !isNil(o.AffinitySize) {
 		return true
 	}
 
@@ -159,7 +156,7 @@ func (o *TiersResourceInner) SetAffinitySize(v string) {
 
 // GetAffinitySizeNumeric returns the AffinitySizeNumeric field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetAffinitySizeNumeric() int64 {
-	if o == nil || IsNil(o.AffinitySizeNumeric) {
+	if o == nil || isNil(o.AffinitySizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -169,7 +166,7 @@ func (o *TiersResourceInner) GetAffinitySizeNumeric() int64 {
 // GetAffinitySizeNumericOk returns a tuple with the AffinitySizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetAffinitySizeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.AffinitySizeNumeric) {
+	if o == nil || isNil(o.AffinitySizeNumeric) {
 		return nil, false
 	}
 	return o.AffinitySizeNumeric, true
@@ -177,7 +174,7 @@ func (o *TiersResourceInner) GetAffinitySizeNumericOk() (*int64, bool) {
 
 // HasAffinitySizeNumeric returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasAffinitySizeNumeric() bool {
-	if o != nil && !IsNil(o.AffinitySizeNumeric) {
+	if o != nil && !isNil(o.AffinitySizeNumeric) {
 		return true
 	}
 
@@ -191,7 +188,7 @@ func (o *TiersResourceInner) SetAffinitySizeNumeric(v int64) {
 
 // GetAllocatedSize returns the AllocatedSize field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetAllocatedSize() string {
-	if o == nil || IsNil(o.AllocatedSize) {
+	if o == nil || isNil(o.AllocatedSize) {
 		var ret string
 		return ret
 	}
@@ -201,7 +198,7 @@ func (o *TiersResourceInner) GetAllocatedSize() string {
 // GetAllocatedSizeOk returns a tuple with the AllocatedSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetAllocatedSizeOk() (*string, bool) {
-	if o == nil || IsNil(o.AllocatedSize) {
+	if o == nil || isNil(o.AllocatedSize) {
 		return nil, false
 	}
 	return o.AllocatedSize, true
@@ -209,7 +206,7 @@ func (o *TiersResourceInner) GetAllocatedSizeOk() (*string, bool) {
 
 // HasAllocatedSize returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasAllocatedSize() bool {
-	if o != nil && !IsNil(o.AllocatedSize) {
+	if o != nil && !isNil(o.AllocatedSize) {
 		return true
 	}
 
@@ -223,7 +220,7 @@ func (o *TiersResourceInner) SetAllocatedSize(v string) {
 
 // GetAllocatedSizeNumeric returns the AllocatedSizeNumeric field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetAllocatedSizeNumeric() int64 {
-	if o == nil || IsNil(o.AllocatedSizeNumeric) {
+	if o == nil || isNil(o.AllocatedSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -233,7 +230,7 @@ func (o *TiersResourceInner) GetAllocatedSizeNumeric() int64 {
 // GetAllocatedSizeNumericOk returns a tuple with the AllocatedSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetAllocatedSizeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.AllocatedSizeNumeric) {
+	if o == nil || isNil(o.AllocatedSizeNumeric) {
 		return nil, false
 	}
 	return o.AllocatedSizeNumeric, true
@@ -241,7 +238,7 @@ func (o *TiersResourceInner) GetAllocatedSizeNumericOk() (*int64, bool) {
 
 // HasAllocatedSizeNumeric returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasAllocatedSizeNumeric() bool {
-	if o != nil && !IsNil(o.AllocatedSizeNumeric) {
+	if o != nil && !isNil(o.AllocatedSizeNumeric) {
 		return true
 	}
 
@@ -255,7 +252,7 @@ func (o *TiersResourceInner) SetAllocatedSizeNumeric(v int64) {
 
 // GetAvailableSize returns the AvailableSize field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetAvailableSize() string {
-	if o == nil || IsNil(o.AvailableSize) {
+	if o == nil || isNil(o.AvailableSize) {
 		var ret string
 		return ret
 	}
@@ -265,7 +262,7 @@ func (o *TiersResourceInner) GetAvailableSize() string {
 // GetAvailableSizeOk returns a tuple with the AvailableSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetAvailableSizeOk() (*string, bool) {
-	if o == nil || IsNil(o.AvailableSize) {
+	if o == nil || isNil(o.AvailableSize) {
 		return nil, false
 	}
 	return o.AvailableSize, true
@@ -273,7 +270,7 @@ func (o *TiersResourceInner) GetAvailableSizeOk() (*string, bool) {
 
 // HasAvailableSize returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasAvailableSize() bool {
-	if o != nil && !IsNil(o.AvailableSize) {
+	if o != nil && !isNil(o.AvailableSize) {
 		return true
 	}
 
@@ -287,7 +284,7 @@ func (o *TiersResourceInner) SetAvailableSize(v string) {
 
 // GetAvailableSizeNumeric returns the AvailableSizeNumeric field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetAvailableSizeNumeric() int64 {
-	if o == nil || IsNil(o.AvailableSizeNumeric) {
+	if o == nil || isNil(o.AvailableSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -297,7 +294,7 @@ func (o *TiersResourceInner) GetAvailableSizeNumeric() int64 {
 // GetAvailableSizeNumericOk returns a tuple with the AvailableSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetAvailableSizeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.AvailableSizeNumeric) {
+	if o == nil || isNil(o.AvailableSizeNumeric) {
 		return nil, false
 	}
 	return o.AvailableSizeNumeric, true
@@ -305,7 +302,7 @@ func (o *TiersResourceInner) GetAvailableSizeNumericOk() (*int64, bool) {
 
 // HasAvailableSizeNumeric returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasAvailableSizeNumeric() bool {
-	if o != nil && !IsNil(o.AvailableSizeNumeric) {
+	if o != nil && !isNil(o.AvailableSizeNumeric) {
 		return true
 	}
 
@@ -319,7 +316,7 @@ func (o *TiersResourceInner) SetAvailableSizeNumeric(v int64) {
 
 // GetDiskcount returns the Diskcount field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetDiskcount() int64 {
-	if o == nil || IsNil(o.Diskcount) {
+	if o == nil || isNil(o.Diskcount) {
 		var ret int64
 		return ret
 	}
@@ -329,7 +326,7 @@ func (o *TiersResourceInner) GetDiskcount() int64 {
 // GetDiskcountOk returns a tuple with the Diskcount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetDiskcountOk() (*int64, bool) {
-	if o == nil || IsNil(o.Diskcount) {
+	if o == nil || isNil(o.Diskcount) {
 		return nil, false
 	}
 	return o.Diskcount, true
@@ -337,7 +334,7 @@ func (o *TiersResourceInner) GetDiskcountOk() (*int64, bool) {
 
 // HasDiskcount returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasDiskcount() bool {
-	if o != nil && !IsNil(o.Diskcount) {
+	if o != nil && !isNil(o.Diskcount) {
 		return true
 	}
 
@@ -351,7 +348,7 @@ func (o *TiersResourceInner) SetDiskcount(v int64) {
 
 // GetPool returns the Pool field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetPool() string {
-	if o == nil || IsNil(o.Pool) {
+	if o == nil || isNil(o.Pool) {
 		var ret string
 		return ret
 	}
@@ -361,7 +358,7 @@ func (o *TiersResourceInner) GetPool() string {
 // GetPoolOk returns a tuple with the Pool field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetPoolOk() (*string, bool) {
-	if o == nil || IsNil(o.Pool) {
+	if o == nil || isNil(o.Pool) {
 		return nil, false
 	}
 	return o.Pool, true
@@ -369,7 +366,7 @@ func (o *TiersResourceInner) GetPoolOk() (*string, bool) {
 
 // HasPool returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasPool() bool {
-	if o != nil && !IsNil(o.Pool) {
+	if o != nil && !isNil(o.Pool) {
 		return true
 	}
 
@@ -383,7 +380,7 @@ func (o *TiersResourceInner) SetPool(v string) {
 
 // GetPoolPercentage returns the PoolPercentage field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetPoolPercentage() int64 {
-	if o == nil || IsNil(o.PoolPercentage) {
+	if o == nil || isNil(o.PoolPercentage) {
 		var ret int64
 		return ret
 	}
@@ -393,7 +390,7 @@ func (o *TiersResourceInner) GetPoolPercentage() int64 {
 // GetPoolPercentageOk returns a tuple with the PoolPercentage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetPoolPercentageOk() (*int64, bool) {
-	if o == nil || IsNil(o.PoolPercentage) {
+	if o == nil || isNil(o.PoolPercentage) {
 		return nil, false
 	}
 	return o.PoolPercentage, true
@@ -401,7 +398,7 @@ func (o *TiersResourceInner) GetPoolPercentageOk() (*int64, bool) {
 
 // HasPoolPercentage returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasPoolPercentage() bool {
-	if o != nil && !IsNil(o.PoolPercentage) {
+	if o != nil && !isNil(o.PoolPercentage) {
 		return true
 	}
 
@@ -415,7 +412,7 @@ func (o *TiersResourceInner) SetPoolPercentage(v int64) {
 
 // GetRawSize returns the RawSize field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetRawSize() string {
-	if o == nil || IsNil(o.RawSize) {
+	if o == nil || isNil(o.RawSize) {
 		var ret string
 		return ret
 	}
@@ -425,7 +422,7 @@ func (o *TiersResourceInner) GetRawSize() string {
 // GetRawSizeOk returns a tuple with the RawSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetRawSizeOk() (*string, bool) {
-	if o == nil || IsNil(o.RawSize) {
+	if o == nil || isNil(o.RawSize) {
 		return nil, false
 	}
 	return o.RawSize, true
@@ -433,7 +430,7 @@ func (o *TiersResourceInner) GetRawSizeOk() (*string, bool) {
 
 // HasRawSize returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasRawSize() bool {
-	if o != nil && !IsNil(o.RawSize) {
+	if o != nil && !isNil(o.RawSize) {
 		return true
 	}
 
@@ -447,7 +444,7 @@ func (o *TiersResourceInner) SetRawSize(v string) {
 
 // GetRawSizeNumeric returns the RawSizeNumeric field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetRawSizeNumeric() int64 {
-	if o == nil || IsNil(o.RawSizeNumeric) {
+	if o == nil || isNil(o.RawSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -457,7 +454,7 @@ func (o *TiersResourceInner) GetRawSizeNumeric() int64 {
 // GetRawSizeNumericOk returns a tuple with the RawSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetRawSizeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.RawSizeNumeric) {
+	if o == nil || isNil(o.RawSizeNumeric) {
 		return nil, false
 	}
 	return o.RawSizeNumeric, true
@@ -465,7 +462,7 @@ func (o *TiersResourceInner) GetRawSizeNumericOk() (*int64, bool) {
 
 // HasRawSizeNumeric returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasRawSizeNumeric() bool {
-	if o != nil && !IsNil(o.RawSizeNumeric) {
+	if o != nil && !isNil(o.RawSizeNumeric) {
 		return true
 	}
 
@@ -479,7 +476,7 @@ func (o *TiersResourceInner) SetRawSizeNumeric(v int64) {
 
 // GetSerialNumber returns the SerialNumber field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetSerialNumber() string {
-	if o == nil || IsNil(o.SerialNumber) {
+	if o == nil || isNil(o.SerialNumber) {
 		var ret string
 		return ret
 	}
@@ -489,7 +486,7 @@ func (o *TiersResourceInner) GetSerialNumber() string {
 // GetSerialNumberOk returns a tuple with the SerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetSerialNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.SerialNumber) {
+	if o == nil || isNil(o.SerialNumber) {
 		return nil, false
 	}
 	return o.SerialNumber, true
@@ -497,7 +494,7 @@ func (o *TiersResourceInner) GetSerialNumberOk() (*string, bool) {
 
 // HasSerialNumber returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasSerialNumber() bool {
-	if o != nil && !IsNil(o.SerialNumber) {
+	if o != nil && !isNil(o.SerialNumber) {
 		return true
 	}
 
@@ -511,7 +508,7 @@ func (o *TiersResourceInner) SetSerialNumber(v string) {
 
 // GetTier returns the Tier field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetTier() string {
-	if o == nil || IsNil(o.Tier) {
+	if o == nil || isNil(o.Tier) {
 		var ret string
 		return ret
 	}
@@ -521,7 +518,7 @@ func (o *TiersResourceInner) GetTier() string {
 // GetTierOk returns a tuple with the Tier field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetTierOk() (*string, bool) {
-	if o == nil || IsNil(o.Tier) {
+	if o == nil || isNil(o.Tier) {
 		return nil, false
 	}
 	return o.Tier, true
@@ -529,7 +526,7 @@ func (o *TiersResourceInner) GetTierOk() (*string, bool) {
 
 // HasTier returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasTier() bool {
-	if o != nil && !IsNil(o.Tier) {
+	if o != nil && !isNil(o.Tier) {
 		return true
 	}
 
@@ -543,7 +540,7 @@ func (o *TiersResourceInner) SetTier(v string) {
 
 // GetTierNumeric returns the TierNumeric field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetTierNumeric() int64 {
-	if o == nil || IsNil(o.TierNumeric) {
+	if o == nil || isNil(o.TierNumeric) {
 		var ret int64
 		return ret
 	}
@@ -553,7 +550,7 @@ func (o *TiersResourceInner) GetTierNumeric() int64 {
 // GetTierNumericOk returns a tuple with the TierNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetTierNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.TierNumeric) {
+	if o == nil || isNil(o.TierNumeric) {
 		return nil, false
 	}
 	return o.TierNumeric, true
@@ -561,7 +558,7 @@ func (o *TiersResourceInner) GetTierNumericOk() (*int64, bool) {
 
 // HasTierNumeric returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasTierNumeric() bool {
-	if o != nil && !IsNil(o.TierNumeric) {
+	if o != nil && !isNil(o.TierNumeric) {
 		return true
 	}
 
@@ -575,7 +572,7 @@ func (o *TiersResourceInner) SetTierNumeric(v int64) {
 
 // GetTotalSize returns the TotalSize field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetTotalSize() string {
-	if o == nil || IsNil(o.TotalSize) {
+	if o == nil || isNil(o.TotalSize) {
 		var ret string
 		return ret
 	}
@@ -585,7 +582,7 @@ func (o *TiersResourceInner) GetTotalSize() string {
 // GetTotalSizeOk returns a tuple with the TotalSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetTotalSizeOk() (*string, bool) {
-	if o == nil || IsNil(o.TotalSize) {
+	if o == nil || isNil(o.TotalSize) {
 		return nil, false
 	}
 	return o.TotalSize, true
@@ -593,7 +590,7 @@ func (o *TiersResourceInner) GetTotalSizeOk() (*string, bool) {
 
 // HasTotalSize returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasTotalSize() bool {
-	if o != nil && !IsNil(o.TotalSize) {
+	if o != nil && !isNil(o.TotalSize) {
 		return true
 	}
 
@@ -607,7 +604,7 @@ func (o *TiersResourceInner) SetTotalSize(v string) {
 
 // GetTotalSizeNumeric returns the TotalSizeNumeric field value if set, zero value otherwise.
 func (o *TiersResourceInner) GetTotalSizeNumeric() int64 {
-	if o == nil || IsNil(o.TotalSizeNumeric) {
+	if o == nil || isNil(o.TotalSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -617,7 +614,7 @@ func (o *TiersResourceInner) GetTotalSizeNumeric() int64 {
 // GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TiersResourceInner) GetTotalSizeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.TotalSizeNumeric) {
+	if o == nil || isNil(o.TotalSizeNumeric) {
 		return nil, false
 	}
 	return o.TotalSizeNumeric, true
@@ -625,7 +622,7 @@ func (o *TiersResourceInner) GetTotalSizeNumericOk() (*int64, bool) {
 
 // HasTotalSizeNumeric returns a boolean if a field has been set.
 func (o *TiersResourceInner) HasTotalSizeNumeric() bool {
-	if o != nil && !IsNil(o.TotalSizeNumeric) {
+	if o != nil && !isNil(o.TotalSizeNumeric) {
 		return true
 	}
 
@@ -638,70 +635,62 @@ func (o *TiersResourceInner) SetTotalSizeNumeric(v int64) {
 }
 
 func (o TiersResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o TiersResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.AffinitySize) {
+	if !isNil(o.AffinitySize) {
 		toSerialize["affinity-size"] = o.AffinitySize
 	}
-	if !IsNil(o.AffinitySizeNumeric) {
+	if !isNil(o.AffinitySizeNumeric) {
 		toSerialize["affinity-size-numeric"] = o.AffinitySizeNumeric
 	}
-	if !IsNil(o.AllocatedSize) {
+	if !isNil(o.AllocatedSize) {
 		toSerialize["allocated-size"] = o.AllocatedSize
 	}
-	if !IsNil(o.AllocatedSizeNumeric) {
+	if !isNil(o.AllocatedSizeNumeric) {
 		toSerialize["allocated-size-numeric"] = o.AllocatedSizeNumeric
 	}
-	if !IsNil(o.AvailableSize) {
+	if !isNil(o.AvailableSize) {
 		toSerialize["available-size"] = o.AvailableSize
 	}
-	if !IsNil(o.AvailableSizeNumeric) {
+	if !isNil(o.AvailableSizeNumeric) {
 		toSerialize["available-size-numeric"] = o.AvailableSizeNumeric
 	}
-	if !IsNil(o.Diskcount) {
+	if !isNil(o.Diskcount) {
 		toSerialize["diskcount"] = o.Diskcount
 	}
-	if !IsNil(o.Pool) {
+	if !isNil(o.Pool) {
 		toSerialize["pool"] = o.Pool
 	}
-	if !IsNil(o.PoolPercentage) {
+	if !isNil(o.PoolPercentage) {
 		toSerialize["pool-percentage"] = o.PoolPercentage
 	}
-	if !IsNil(o.RawSize) {
+	if !isNil(o.RawSize) {
 		toSerialize["raw-size"] = o.RawSize
 	}
-	if !IsNil(o.RawSizeNumeric) {
+	if !isNil(o.RawSizeNumeric) {
 		toSerialize["raw-size-numeric"] = o.RawSizeNumeric
 	}
-	if !IsNil(o.SerialNumber) {
+	if !isNil(o.SerialNumber) {
 		toSerialize["serial-number"] = o.SerialNumber
 	}
-	if !IsNil(o.Tier) {
+	if !isNil(o.Tier) {
 		toSerialize["tier"] = o.Tier
 	}
-	if !IsNil(o.TierNumeric) {
+	if !isNil(o.TierNumeric) {
 		toSerialize["tier-numeric"] = o.TierNumeric
 	}
-	if !IsNil(o.TotalSize) {
+	if !isNil(o.TotalSize) {
 		toSerialize["total-size"] = o.TotalSize
 	}
-	if !IsNil(o.TotalSizeNumeric) {
+	if !isNil(o.TotalSizeNumeric) {
 		toSerialize["total-size-numeric"] = o.TotalSizeNumeric
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableTiersResourceInner struct {

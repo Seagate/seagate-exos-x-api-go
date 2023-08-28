@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the VersionsResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &VersionsResourceInner{}
-
 // VersionsResourceInner struct for VersionsResourceInner
 type VersionsResourceInner struct {
 	ObjectName          *string `json:"object-name,omitempty"`
@@ -98,7 +95,7 @@ func NewVersionsResourceInnerWithDefaults() *VersionsResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -108,7 +105,7 @@ func (o *VersionsResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -116,7 +113,7 @@ func (o *VersionsResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -130,7 +127,7 @@ func (o *VersionsResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -140,7 +137,7 @@ func (o *VersionsResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -148,7 +145,7 @@ func (o *VersionsResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -162,7 +159,7 @@ func (o *VersionsResourceInner) SetMeta(v string) {
 
 // GetBackplaneType returns the BackplaneType field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetBackplaneType() int64 {
-	if o == nil || IsNil(o.BackplaneType) {
+	if o == nil || isNil(o.BackplaneType) {
 		var ret int64
 		return ret
 	}
@@ -172,7 +169,7 @@ func (o *VersionsResourceInner) GetBackplaneType() int64 {
 // GetBackplaneTypeOk returns a tuple with the BackplaneType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetBackplaneTypeOk() (*int64, bool) {
-	if o == nil || IsNil(o.BackplaneType) {
+	if o == nil || isNil(o.BackplaneType) {
 		return nil, false
 	}
 	return o.BackplaneType, true
@@ -180,7 +177,7 @@ func (o *VersionsResourceInner) GetBackplaneTypeOk() (*int64, bool) {
 
 // HasBackplaneType returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasBackplaneType() bool {
-	if o != nil && !IsNil(o.BackplaneType) {
+	if o != nil && !isNil(o.BackplaneType) {
 		return true
 	}
 
@@ -194,7 +191,7 @@ func (o *VersionsResourceInner) SetBackplaneType(v int64) {
 
 // GetBuildDate returns the BuildDate field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetBuildDate() string {
-	if o == nil || IsNil(o.BuildDate) {
+	if o == nil || isNil(o.BuildDate) {
 		var ret string
 		return ret
 	}
@@ -204,7 +201,7 @@ func (o *VersionsResourceInner) GetBuildDate() string {
 // GetBuildDateOk returns a tuple with the BuildDate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetBuildDateOk() (*string, bool) {
-	if o == nil || IsNil(o.BuildDate) {
+	if o == nil || isNil(o.BuildDate) {
 		return nil, false
 	}
 	return o.BuildDate, true
@@ -212,7 +209,7 @@ func (o *VersionsResourceInner) GetBuildDateOk() (*string, bool) {
 
 // HasBuildDate returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasBuildDate() bool {
-	if o != nil && !IsNil(o.BuildDate) {
+	if o != nil && !isNil(o.BuildDate) {
 		return true
 	}
 
@@ -226,7 +223,7 @@ func (o *VersionsResourceInner) SetBuildDate(v string) {
 
 // GetBundleBaseVersion returns the BundleBaseVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetBundleBaseVersion() string {
-	if o == nil || IsNil(o.BundleBaseVersion) {
+	if o == nil || isNil(o.BundleBaseVersion) {
 		var ret string
 		return ret
 	}
@@ -236,7 +233,7 @@ func (o *VersionsResourceInner) GetBundleBaseVersion() string {
 // GetBundleBaseVersionOk returns a tuple with the BundleBaseVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetBundleBaseVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.BundleBaseVersion) {
+	if o == nil || isNil(o.BundleBaseVersion) {
 		return nil, false
 	}
 	return o.BundleBaseVersion, true
@@ -244,7 +241,7 @@ func (o *VersionsResourceInner) GetBundleBaseVersionOk() (*string, bool) {
 
 // HasBundleBaseVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasBundleBaseVersion() bool {
-	if o != nil && !IsNil(o.BundleBaseVersion) {
+	if o != nil && !isNil(o.BundleBaseVersion) {
 		return true
 	}
 
@@ -258,7 +255,7 @@ func (o *VersionsResourceInner) SetBundleBaseVersion(v string) {
 
 // GetBundleStatus returns the BundleStatus field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetBundleStatus() string {
-	if o == nil || IsNil(o.BundleStatus) {
+	if o == nil || isNil(o.BundleStatus) {
 		var ret string
 		return ret
 	}
@@ -268,7 +265,7 @@ func (o *VersionsResourceInner) GetBundleStatus() string {
 // GetBundleStatusOk returns a tuple with the BundleStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetBundleStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.BundleStatus) {
+	if o == nil || isNil(o.BundleStatus) {
 		return nil, false
 	}
 	return o.BundleStatus, true
@@ -276,7 +273,7 @@ func (o *VersionsResourceInner) GetBundleStatusOk() (*string, bool) {
 
 // HasBundleStatus returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasBundleStatus() bool {
-	if o != nil && !IsNil(o.BundleStatus) {
+	if o != nil && !isNil(o.BundleStatus) {
 		return true
 	}
 
@@ -290,7 +287,7 @@ func (o *VersionsResourceInner) SetBundleStatus(v string) {
 
 // GetBundleStatusNumeric returns the BundleStatusNumeric field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetBundleStatusNumeric() int64 {
-	if o == nil || IsNil(o.BundleStatusNumeric) {
+	if o == nil || isNil(o.BundleStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -300,7 +297,7 @@ func (o *VersionsResourceInner) GetBundleStatusNumeric() int64 {
 // GetBundleStatusNumericOk returns a tuple with the BundleStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetBundleStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.BundleStatusNumeric) {
+	if o == nil || isNil(o.BundleStatusNumeric) {
 		return nil, false
 	}
 	return o.BundleStatusNumeric, true
@@ -308,7 +305,7 @@ func (o *VersionsResourceInner) GetBundleStatusNumericOk() (*int64, bool) {
 
 // HasBundleStatusNumeric returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasBundleStatusNumeric() bool {
-	if o != nil && !IsNil(o.BundleStatusNumeric) {
+	if o != nil && !isNil(o.BundleStatusNumeric) {
 		return true
 	}
 
@@ -322,7 +319,7 @@ func (o *VersionsResourceInner) SetBundleStatusNumeric(v int64) {
 
 // GetBundleVersion returns the BundleVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetBundleVersion() string {
-	if o == nil || IsNil(o.BundleVersion) {
+	if o == nil || isNil(o.BundleVersion) {
 		var ret string
 		return ret
 	}
@@ -332,7 +329,7 @@ func (o *VersionsResourceInner) GetBundleVersion() string {
 // GetBundleVersionOk returns a tuple with the BundleVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetBundleVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.BundleVersion) {
+	if o == nil || isNil(o.BundleVersion) {
 		return nil, false
 	}
 	return o.BundleVersion, true
@@ -340,7 +337,7 @@ func (o *VersionsResourceInner) GetBundleVersionOk() (*string, bool) {
 
 // HasBundleVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasBundleVersion() bool {
-	if o != nil && !IsNil(o.BundleVersion) {
+	if o != nil && !isNil(o.BundleVersion) {
 		return true
 	}
 
@@ -354,7 +351,7 @@ func (o *VersionsResourceInner) SetBundleVersion(v string) {
 
 // GetBundleVersionOnly returns the BundleVersionOnly field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetBundleVersionOnly() string {
-	if o == nil || IsNil(o.BundleVersionOnly) {
+	if o == nil || isNil(o.BundleVersionOnly) {
 		var ret string
 		return ret
 	}
@@ -364,7 +361,7 @@ func (o *VersionsResourceInner) GetBundleVersionOnly() string {
 // GetBundleVersionOnlyOk returns a tuple with the BundleVersionOnly field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetBundleVersionOnlyOk() (*string, bool) {
-	if o == nil || IsNil(o.BundleVersionOnly) {
+	if o == nil || isNil(o.BundleVersionOnly) {
 		return nil, false
 	}
 	return o.BundleVersionOnly, true
@@ -372,7 +369,7 @@ func (o *VersionsResourceInner) GetBundleVersionOnlyOk() (*string, bool) {
 
 // HasBundleVersionOnly returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasBundleVersionOnly() bool {
-	if o != nil && !IsNil(o.BundleVersionOnly) {
+	if o != nil && !isNil(o.BundleVersionOnly) {
 		return true
 	}
 
@@ -386,7 +383,7 @@ func (o *VersionsResourceInner) SetBundleVersionOnly(v string) {
 
 // GetCapiVersion returns the CapiVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetCapiVersion() string {
-	if o == nil || IsNil(o.CapiVersion) {
+	if o == nil || isNil(o.CapiVersion) {
 		var ret string
 		return ret
 	}
@@ -396,7 +393,7 @@ func (o *VersionsResourceInner) GetCapiVersion() string {
 // GetCapiVersionOk returns a tuple with the CapiVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetCapiVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.CapiVersion) {
+	if o == nil || isNil(o.CapiVersion) {
 		return nil, false
 	}
 	return o.CapiVersion, true
@@ -404,7 +401,7 @@ func (o *VersionsResourceInner) GetCapiVersionOk() (*string, bool) {
 
 // HasCapiVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasCapiVersion() bool {
-	if o != nil && !IsNil(o.CapiVersion) {
+	if o != nil && !isNil(o.CapiVersion) {
 		return true
 	}
 
@@ -418,7 +415,7 @@ func (o *VersionsResourceInner) SetCapiVersion(v string) {
 
 // GetCtkVersion returns the CtkVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetCtkVersion() string {
-	if o == nil || IsNil(o.CtkVersion) {
+	if o == nil || isNil(o.CtkVersion) {
 		var ret string
 		return ret
 	}
@@ -428,7 +425,7 @@ func (o *VersionsResourceInner) GetCtkVersion() string {
 // GetCtkVersionOk returns a tuple with the CtkVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetCtkVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.CtkVersion) {
+	if o == nil || isNil(o.CtkVersion) {
 		return nil, false
 	}
 	return o.CtkVersion, true
@@ -436,7 +433,7 @@ func (o *VersionsResourceInner) GetCtkVersionOk() (*string, bool) {
 
 // HasCtkVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasCtkVersion() bool {
-	if o != nil && !IsNil(o.CtkVersion) {
+	if o != nil && !isNil(o.CtkVersion) {
 		return true
 	}
 
@@ -450,7 +447,7 @@ func (o *VersionsResourceInner) SetCtkVersion(v string) {
 
 // GetDiskChannelRevision returns the DiskChannelRevision field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetDiskChannelRevision() int64 {
-	if o == nil || IsNil(o.DiskChannelRevision) {
+	if o == nil || isNil(o.DiskChannelRevision) {
 		var ret int64
 		return ret
 	}
@@ -460,7 +457,7 @@ func (o *VersionsResourceInner) GetDiskChannelRevision() int64 {
 // GetDiskChannelRevisionOk returns a tuple with the DiskChannelRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetDiskChannelRevisionOk() (*int64, bool) {
-	if o == nil || IsNil(o.DiskChannelRevision) {
+	if o == nil || isNil(o.DiskChannelRevision) {
 		return nil, false
 	}
 	return o.DiskChannelRevision, true
@@ -468,7 +465,7 @@ func (o *VersionsResourceInner) GetDiskChannelRevisionOk() (*int64, bool) {
 
 // HasDiskChannelRevision returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasDiskChannelRevision() bool {
-	if o != nil && !IsNil(o.DiskChannelRevision) {
+	if o != nil && !isNil(o.DiskChannelRevision) {
 		return true
 	}
 
@@ -482,7 +479,7 @@ func (o *VersionsResourceInner) SetDiskChannelRevision(v int64) {
 
 // GetEcFw returns the EcFw field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetEcFw() string {
-	if o == nil || IsNil(o.EcFw) {
+	if o == nil || isNil(o.EcFw) {
 		var ret string
 		return ret
 	}
@@ -492,7 +489,7 @@ func (o *VersionsResourceInner) GetEcFw() string {
 // GetEcFwOk returns a tuple with the EcFw field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetEcFwOk() (*string, bool) {
-	if o == nil || IsNil(o.EcFw) {
+	if o == nil || isNil(o.EcFw) {
 		return nil, false
 	}
 	return o.EcFw, true
@@ -500,7 +497,7 @@ func (o *VersionsResourceInner) GetEcFwOk() (*string, bool) {
 
 // HasEcFw returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasEcFw() bool {
-	if o != nil && !IsNil(o.EcFw) {
+	if o != nil && !isNil(o.EcFw) {
 		return true
 	}
 
@@ -514,7 +511,7 @@ func (o *VersionsResourceInner) SetEcFw(v string) {
 
 // GetFwDefaultPlatformBrand returns the FwDefaultPlatformBrand field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetFwDefaultPlatformBrand() string {
-	if o == nil || IsNil(o.FwDefaultPlatformBrand) {
+	if o == nil || isNil(o.FwDefaultPlatformBrand) {
 		var ret string
 		return ret
 	}
@@ -524,7 +521,7 @@ func (o *VersionsResourceInner) GetFwDefaultPlatformBrand() string {
 // GetFwDefaultPlatformBrandOk returns a tuple with the FwDefaultPlatformBrand field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetFwDefaultPlatformBrandOk() (*string, bool) {
-	if o == nil || IsNil(o.FwDefaultPlatformBrand) {
+	if o == nil || isNil(o.FwDefaultPlatformBrand) {
 		return nil, false
 	}
 	return o.FwDefaultPlatformBrand, true
@@ -532,7 +529,7 @@ func (o *VersionsResourceInner) GetFwDefaultPlatformBrandOk() (*string, bool) {
 
 // HasFwDefaultPlatformBrand returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasFwDefaultPlatformBrand() bool {
-	if o != nil && !IsNil(o.FwDefaultPlatformBrand) {
+	if o != nil && !isNil(o.FwDefaultPlatformBrand) {
 		return true
 	}
 
@@ -546,7 +543,7 @@ func (o *VersionsResourceInner) SetFwDefaultPlatformBrand(v string) {
 
 // GetFwDefaultPlatformBrandNumeric returns the FwDefaultPlatformBrandNumeric field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumeric() int64 {
-	if o == nil || IsNil(o.FwDefaultPlatformBrandNumeric) {
+	if o == nil || isNil(o.FwDefaultPlatformBrandNumeric) {
 		var ret int64
 		return ret
 	}
@@ -556,7 +553,7 @@ func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumeric() int64 {
 // GetFwDefaultPlatformBrandNumericOk returns a tuple with the FwDefaultPlatformBrandNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.FwDefaultPlatformBrandNumeric) {
+	if o == nil || isNil(o.FwDefaultPlatformBrandNumeric) {
 		return nil, false
 	}
 	return o.FwDefaultPlatformBrandNumeric, true
@@ -564,7 +561,7 @@ func (o *VersionsResourceInner) GetFwDefaultPlatformBrandNumericOk() (*int64, bo
 
 // HasFwDefaultPlatformBrandNumeric returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasFwDefaultPlatformBrandNumeric() bool {
-	if o != nil && !IsNil(o.FwDefaultPlatformBrandNumeric) {
+	if o != nil && !isNil(o.FwDefaultPlatformBrandNumeric) {
 		return true
 	}
 
@@ -578,7 +575,7 @@ func (o *VersionsResourceInner) SetFwDefaultPlatformBrandNumeric(v int64) {
 
 // GetGemVersion returns the GemVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetGemVersion() string {
-	if o == nil || IsNil(o.GemVersion) {
+	if o == nil || isNil(o.GemVersion) {
 		var ret string
 		return ret
 	}
@@ -588,7 +585,7 @@ func (o *VersionsResourceInner) GetGemVersion() string {
 // GetGemVersionOk returns a tuple with the GemVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetGemVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.GemVersion) {
+	if o == nil || isNil(o.GemVersion) {
 		return nil, false
 	}
 	return o.GemVersion, true
@@ -596,7 +593,7 @@ func (o *VersionsResourceInner) GetGemVersionOk() (*string, bool) {
 
 // HasGemVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasGemVersion() bool {
-	if o != nil && !IsNil(o.GemVersion) {
+	if o != nil && !isNil(o.GemVersion) {
 		return true
 	}
 
@@ -610,7 +607,7 @@ func (o *VersionsResourceInner) SetGemVersion(v string) {
 
 // GetHimModel returns the HimModel field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetHimModel() string {
-	if o == nil || IsNil(o.HimModel) {
+	if o == nil || isNil(o.HimModel) {
 		var ret string
 		return ret
 	}
@@ -620,7 +617,7 @@ func (o *VersionsResourceInner) GetHimModel() string {
 // GetHimModelOk returns a tuple with the HimModel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetHimModelOk() (*string, bool) {
-	if o == nil || IsNil(o.HimModel) {
+	if o == nil || isNil(o.HimModel) {
 		return nil, false
 	}
 	return o.HimModel, true
@@ -628,7 +625,7 @@ func (o *VersionsResourceInner) GetHimModelOk() (*string, bool) {
 
 // HasHimModel returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasHimModel() bool {
-	if o != nil && !IsNil(o.HimModel) {
+	if o != nil && !isNil(o.HimModel) {
 		return true
 	}
 
@@ -642,7 +639,7 @@ func (o *VersionsResourceInner) SetHimModel(v string) {
 
 // GetHimRev returns the HimRev field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetHimRev() string {
-	if o == nil || IsNil(o.HimRev) {
+	if o == nil || isNil(o.HimRev) {
 		var ret string
 		return ret
 	}
@@ -652,7 +649,7 @@ func (o *VersionsResourceInner) GetHimRev() string {
 // GetHimRevOk returns a tuple with the HimRev field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetHimRevOk() (*string, bool) {
-	if o == nil || IsNil(o.HimRev) {
+	if o == nil || isNil(o.HimRev) {
 		return nil, false
 	}
 	return o.HimRev, true
@@ -660,7 +657,7 @@ func (o *VersionsResourceInner) GetHimRevOk() (*string, bool) {
 
 // HasHimRev returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasHimRev() bool {
-	if o != nil && !IsNil(o.HimRev) {
+	if o != nil && !isNil(o.HimRev) {
 		return true
 	}
 
@@ -674,7 +671,7 @@ func (o *VersionsResourceInner) SetHimRev(v string) {
 
 // GetHostChannelRevision returns the HostChannelRevision field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetHostChannelRevision() int64 {
-	if o == nil || IsNil(o.HostChannelRevision) {
+	if o == nil || isNil(o.HostChannelRevision) {
 		var ret int64
 		return ret
 	}
@@ -684,7 +681,7 @@ func (o *VersionsResourceInner) GetHostChannelRevision() int64 {
 // GetHostChannelRevisionOk returns a tuple with the HostChannelRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetHostChannelRevisionOk() (*int64, bool) {
-	if o == nil || IsNil(o.HostChannelRevision) {
+	if o == nil || isNil(o.HostChannelRevision) {
 		return nil, false
 	}
 	return o.HostChannelRevision, true
@@ -692,7 +689,7 @@ func (o *VersionsResourceInner) GetHostChannelRevisionOk() (*int64, bool) {
 
 // HasHostChannelRevision returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasHostChannelRevision() bool {
-	if o != nil && !IsNil(o.HostChannelRevision) {
+	if o != nil && !isNil(o.HostChannelRevision) {
 		return true
 	}
 
@@ -706,7 +703,7 @@ func (o *VersionsResourceInner) SetHostChannelRevision(v int64) {
 
 // GetHwRev returns the HwRev field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetHwRev() string {
-	if o == nil || IsNil(o.HwRev) {
+	if o == nil || isNil(o.HwRev) {
 		var ret string
 		return ret
 	}
@@ -716,7 +713,7 @@ func (o *VersionsResourceInner) GetHwRev() string {
 // GetHwRevOk returns a tuple with the HwRev field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetHwRevOk() (*string, bool) {
-	if o == nil || IsNil(o.HwRev) {
+	if o == nil || isNil(o.HwRev) {
 		return nil, false
 	}
 	return o.HwRev, true
@@ -724,7 +721,7 @@ func (o *VersionsResourceInner) GetHwRevOk() (*string, bool) {
 
 // HasHwRev returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasHwRev() bool {
-	if o != nil && !IsNil(o.HwRev) {
+	if o != nil && !isNil(o.HwRev) {
 		return true
 	}
 
@@ -738,7 +735,7 @@ func (o *VersionsResourceInner) SetHwRev(v string) {
 
 // GetMcBaseFw returns the McBaseFw field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetMcBaseFw() string {
-	if o == nil || IsNil(o.McBaseFw) {
+	if o == nil || isNil(o.McBaseFw) {
 		var ret string
 		return ret
 	}
@@ -748,7 +745,7 @@ func (o *VersionsResourceInner) GetMcBaseFw() string {
 // GetMcBaseFwOk returns a tuple with the McBaseFw field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetMcBaseFwOk() (*string, bool) {
-	if o == nil || IsNil(o.McBaseFw) {
+	if o == nil || isNil(o.McBaseFw) {
 		return nil, false
 	}
 	return o.McBaseFw, true
@@ -756,7 +753,7 @@ func (o *VersionsResourceInner) GetMcBaseFwOk() (*string, bool) {
 
 // HasMcBaseFw returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasMcBaseFw() bool {
-	if o != nil && !IsNil(o.McBaseFw) {
+	if o != nil && !isNil(o.McBaseFw) {
 		return true
 	}
 
@@ -770,7 +767,7 @@ func (o *VersionsResourceInner) SetMcBaseFw(v string) {
 
 // GetMcFw returns the McFw field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetMcFw() string {
-	if o == nil || IsNil(o.McFw) {
+	if o == nil || isNil(o.McFw) {
 		var ret string
 		return ret
 	}
@@ -780,7 +777,7 @@ func (o *VersionsResourceInner) GetMcFw() string {
 // GetMcFwOk returns a tuple with the McFw field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetMcFwOk() (*string, bool) {
-	if o == nil || IsNil(o.McFw) {
+	if o == nil || isNil(o.McFw) {
 		return nil, false
 	}
 	return o.McFw, true
@@ -788,7 +785,7 @@ func (o *VersionsResourceInner) GetMcFwOk() (*string, bool) {
 
 // HasMcFw returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasMcFw() bool {
-	if o != nil && !IsNil(o.McFw) {
+	if o != nil && !isNil(o.McFw) {
 		return true
 	}
 
@@ -802,7 +799,7 @@ func (o *VersionsResourceInner) SetMcFw(v string) {
 
 // GetMcLoader returns the McLoader field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetMcLoader() string {
-	if o == nil || IsNil(o.McLoader) {
+	if o == nil || isNil(o.McLoader) {
 		var ret string
 		return ret
 	}
@@ -812,7 +809,7 @@ func (o *VersionsResourceInner) GetMcLoader() string {
 // GetMcLoaderOk returns a tuple with the McLoader field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetMcLoaderOk() (*string, bool) {
-	if o == nil || IsNil(o.McLoader) {
+	if o == nil || isNil(o.McLoader) {
 		return nil, false
 	}
 	return o.McLoader, true
@@ -820,7 +817,7 @@ func (o *VersionsResourceInner) GetMcLoaderOk() (*string, bool) {
 
 // HasMcLoader returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasMcLoader() bool {
-	if o != nil && !IsNil(o.McLoader) {
+	if o != nil && !isNil(o.McLoader) {
 		return true
 	}
 
@@ -834,7 +831,7 @@ func (o *VersionsResourceInner) SetMcLoader(v string) {
 
 // GetMcosVersion returns the McosVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetMcosVersion() string {
-	if o == nil || IsNil(o.McosVersion) {
+	if o == nil || isNil(o.McosVersion) {
 		var ret string
 		return ret
 	}
@@ -844,7 +841,7 @@ func (o *VersionsResourceInner) GetMcosVersion() string {
 // GetMcosVersionOk returns a tuple with the McosVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetMcosVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.McosVersion) {
+	if o == nil || isNil(o.McosVersion) {
 		return nil, false
 	}
 	return o.McosVersion, true
@@ -852,7 +849,7 @@ func (o *VersionsResourceInner) GetMcosVersionOk() (*string, bool) {
 
 // HasMcosVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasMcosVersion() bool {
-	if o != nil && !IsNil(o.McosVersion) {
+	if o != nil && !isNil(o.McosVersion) {
 		return true
 	}
 
@@ -866,7 +863,7 @@ func (o *VersionsResourceInner) SetMcosVersion(v string) {
 
 // GetMrcVersion returns the MrcVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetMrcVersion() string {
-	if o == nil || IsNil(o.MrcVersion) {
+	if o == nil || isNil(o.MrcVersion) {
 		var ret string
 		return ret
 	}
@@ -876,7 +873,7 @@ func (o *VersionsResourceInner) GetMrcVersion() string {
 // GetMrcVersionOk returns a tuple with the MrcVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetMrcVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.MrcVersion) {
+	if o == nil || isNil(o.MrcVersion) {
 		return nil, false
 	}
 	return o.MrcVersion, true
@@ -884,7 +881,7 @@ func (o *VersionsResourceInner) GetMrcVersionOk() (*string, bool) {
 
 // HasMrcVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasMrcVersion() bool {
-	if o != nil && !IsNil(o.MrcVersion) {
+	if o != nil && !isNil(o.MrcVersion) {
 		return true
 	}
 
@@ -898,7 +895,7 @@ func (o *VersionsResourceInner) SetMrcVersion(v string) {
 
 // GetPcieSwitchBackendConfigurationVersion returns the PcieSwitchBackendConfigurationVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetPcieSwitchBackendConfigurationVersion() string {
-	if o == nil || IsNil(o.PcieSwitchBackendConfigurationVersion) {
+	if o == nil || isNil(o.PcieSwitchBackendConfigurationVersion) {
 		var ret string
 		return ret
 	}
@@ -908,7 +905,7 @@ func (o *VersionsResourceInner) GetPcieSwitchBackendConfigurationVersion() strin
 // GetPcieSwitchBackendConfigurationVersionOk returns a tuple with the PcieSwitchBackendConfigurationVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetPcieSwitchBackendConfigurationVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.PcieSwitchBackendConfigurationVersion) {
+	if o == nil || isNil(o.PcieSwitchBackendConfigurationVersion) {
 		return nil, false
 	}
 	return o.PcieSwitchBackendConfigurationVersion, true
@@ -916,7 +913,7 @@ func (o *VersionsResourceInner) GetPcieSwitchBackendConfigurationVersionOk() (*s
 
 // HasPcieSwitchBackendConfigurationVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasPcieSwitchBackendConfigurationVersion() bool {
-	if o != nil && !IsNil(o.PcieSwitchBackendConfigurationVersion) {
+	if o != nil && !isNil(o.PcieSwitchBackendConfigurationVersion) {
 		return true
 	}
 
@@ -930,7 +927,7 @@ func (o *VersionsResourceInner) SetPcieSwitchBackendConfigurationVersion(v strin
 
 // GetPcieSwitchBackendFirmwareVersion returns the PcieSwitchBackendFirmwareVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetPcieSwitchBackendFirmwareVersion() string {
-	if o == nil || IsNil(o.PcieSwitchBackendFirmwareVersion) {
+	if o == nil || isNil(o.PcieSwitchBackendFirmwareVersion) {
 		var ret string
 		return ret
 	}
@@ -940,7 +937,7 @@ func (o *VersionsResourceInner) GetPcieSwitchBackendFirmwareVersion() string {
 // GetPcieSwitchBackendFirmwareVersionOk returns a tuple with the PcieSwitchBackendFirmwareVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetPcieSwitchBackendFirmwareVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.PcieSwitchBackendFirmwareVersion) {
+	if o == nil || isNil(o.PcieSwitchBackendFirmwareVersion) {
 		return nil, false
 	}
 	return o.PcieSwitchBackendFirmwareVersion, true
@@ -948,7 +945,7 @@ func (o *VersionsResourceInner) GetPcieSwitchBackendFirmwareVersionOk() (*string
 
 // HasPcieSwitchBackendFirmwareVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasPcieSwitchBackendFirmwareVersion() bool {
-	if o != nil && !IsNil(o.PcieSwitchBackendFirmwareVersion) {
+	if o != nil && !isNil(o.PcieSwitchBackendFirmwareVersion) {
 		return true
 	}
 
@@ -962,7 +959,7 @@ func (o *VersionsResourceInner) SetPcieSwitchBackendFirmwareVersion(v string) {
 
 // GetPcieSwitchFrontendConfigurationVersion returns the PcieSwitchFrontendConfigurationVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetPcieSwitchFrontendConfigurationVersion() string {
-	if o == nil || IsNil(o.PcieSwitchFrontendConfigurationVersion) {
+	if o == nil || isNil(o.PcieSwitchFrontendConfigurationVersion) {
 		var ret string
 		return ret
 	}
@@ -972,7 +969,7 @@ func (o *VersionsResourceInner) GetPcieSwitchFrontendConfigurationVersion() stri
 // GetPcieSwitchFrontendConfigurationVersionOk returns a tuple with the PcieSwitchFrontendConfigurationVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetPcieSwitchFrontendConfigurationVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.PcieSwitchFrontendConfigurationVersion) {
+	if o == nil || isNil(o.PcieSwitchFrontendConfigurationVersion) {
 		return nil, false
 	}
 	return o.PcieSwitchFrontendConfigurationVersion, true
@@ -980,7 +977,7 @@ func (o *VersionsResourceInner) GetPcieSwitchFrontendConfigurationVersionOk() (*
 
 // HasPcieSwitchFrontendConfigurationVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasPcieSwitchFrontendConfigurationVersion() bool {
-	if o != nil && !IsNil(o.PcieSwitchFrontendConfigurationVersion) {
+	if o != nil && !isNil(o.PcieSwitchFrontendConfigurationVersion) {
 		return true
 	}
 
@@ -994,7 +991,7 @@ func (o *VersionsResourceInner) SetPcieSwitchFrontendConfigurationVersion(v stri
 
 // GetPcieSwitchFrontendFirmwareVersion returns the PcieSwitchFrontendFirmwareVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetPcieSwitchFrontendFirmwareVersion() string {
-	if o == nil || IsNil(o.PcieSwitchFrontendFirmwareVersion) {
+	if o == nil || isNil(o.PcieSwitchFrontendFirmwareVersion) {
 		var ret string
 		return ret
 	}
@@ -1004,7 +1001,7 @@ func (o *VersionsResourceInner) GetPcieSwitchFrontendFirmwareVersion() string {
 // GetPcieSwitchFrontendFirmwareVersionOk returns a tuple with the PcieSwitchFrontendFirmwareVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetPcieSwitchFrontendFirmwareVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.PcieSwitchFrontendFirmwareVersion) {
+	if o == nil || isNil(o.PcieSwitchFrontendFirmwareVersion) {
 		return nil, false
 	}
 	return o.PcieSwitchFrontendFirmwareVersion, true
@@ -1012,7 +1009,7 @@ func (o *VersionsResourceInner) GetPcieSwitchFrontendFirmwareVersionOk() (*strin
 
 // HasPcieSwitchFrontendFirmwareVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasPcieSwitchFrontendFirmwareVersion() bool {
-	if o != nil && !IsNil(o.PcieSwitchFrontendFirmwareVersion) {
+	if o != nil && !isNil(o.PcieSwitchFrontendFirmwareVersion) {
 		return true
 	}
 
@@ -1026,7 +1023,7 @@ func (o *VersionsResourceInner) SetPcieSwitchFrontendFirmwareVersion(v string) {
 
 // GetPldRev returns the PldRev field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetPldRev() string {
-	if o == nil || IsNil(o.PldRev) {
+	if o == nil || isNil(o.PldRev) {
 		var ret string
 		return ret
 	}
@@ -1036,7 +1033,7 @@ func (o *VersionsResourceInner) GetPldRev() string {
 // GetPldRevOk returns a tuple with the PldRev field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetPldRevOk() (*string, bool) {
-	if o == nil || IsNil(o.PldRev) {
+	if o == nil || isNil(o.PldRev) {
 		return nil, false
 	}
 	return o.PldRev, true
@@ -1044,7 +1041,7 @@ func (o *VersionsResourceInner) GetPldRevOk() (*string, bool) {
 
 // HasPldRev returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasPldRev() bool {
-	if o != nil && !IsNil(o.PldRev) {
+	if o != nil && !isNil(o.PldRev) {
 		return true
 	}
 
@@ -1058,7 +1055,7 @@ func (o *VersionsResourceInner) SetPldRev(v string) {
 
 // GetPmCpldVersion returns the PmCpldVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetPmCpldVersion() string {
-	if o == nil || IsNil(o.PmCpldVersion) {
+	if o == nil || isNil(o.PmCpldVersion) {
 		var ret string
 		return ret
 	}
@@ -1068,7 +1065,7 @@ func (o *VersionsResourceInner) GetPmCpldVersion() string {
 // GetPmCpldVersionOk returns a tuple with the PmCpldVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetPmCpldVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.PmCpldVersion) {
+	if o == nil || isNil(o.PmCpldVersion) {
 		return nil, false
 	}
 	return o.PmCpldVersion, true
@@ -1076,7 +1073,7 @@ func (o *VersionsResourceInner) GetPmCpldVersionOk() (*string, bool) {
 
 // HasPmCpldVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasPmCpldVersion() bool {
-	if o != nil && !IsNil(o.PmCpldVersion) {
+	if o != nil && !isNil(o.PmCpldVersion) {
 		return true
 	}
 
@@ -1090,7 +1087,7 @@ func (o *VersionsResourceInner) SetPmCpldVersion(v string) {
 
 // GetPrmVersion returns the PrmVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetPrmVersion() string {
-	if o == nil || IsNil(o.PrmVersion) {
+	if o == nil || isNil(o.PrmVersion) {
 		var ret string
 		return ret
 	}
@@ -1100,7 +1097,7 @@ func (o *VersionsResourceInner) GetPrmVersion() string {
 // GetPrmVersionOk returns a tuple with the PrmVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetPrmVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.PrmVersion) {
+	if o == nil || isNil(o.PrmVersion) {
 		return nil, false
 	}
 	return o.PrmVersion, true
@@ -1108,7 +1105,7 @@ func (o *VersionsResourceInner) GetPrmVersionOk() (*string, bool) {
 
 // HasPrmVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasPrmVersion() bool {
-	if o != nil && !IsNil(o.PrmVersion) {
+	if o != nil && !isNil(o.PrmVersion) {
 		return true
 	}
 
@@ -1122,7 +1119,7 @@ func (o *VersionsResourceInner) SetPrmVersion(v string) {
 
 // GetPubsVersion returns the PubsVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetPubsVersion() string {
-	if o == nil || IsNil(o.PubsVersion) {
+	if o == nil || isNil(o.PubsVersion) {
 		var ret string
 		return ret
 	}
@@ -1132,7 +1129,7 @@ func (o *VersionsResourceInner) GetPubsVersion() string {
 // GetPubsVersionOk returns a tuple with the PubsVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetPubsVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.PubsVersion) {
+	if o == nil || isNil(o.PubsVersion) {
 		return nil, false
 	}
 	return o.PubsVersion, true
@@ -1140,7 +1137,7 @@ func (o *VersionsResourceInner) GetPubsVersionOk() (*string, bool) {
 
 // HasPubsVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasPubsVersion() bool {
-	if o != nil && !IsNil(o.PubsVersion) {
+	if o != nil && !isNil(o.PubsVersion) {
 		return true
 	}
 
@@ -1154,7 +1151,7 @@ func (o *VersionsResourceInner) SetPubsVersion(v string) {
 
 // GetScBaselevel returns the ScBaselevel field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetScBaselevel() string {
-	if o == nil || IsNil(o.ScBaselevel) {
+	if o == nil || isNil(o.ScBaselevel) {
 		var ret string
 		return ret
 	}
@@ -1164,7 +1161,7 @@ func (o *VersionsResourceInner) GetScBaselevel() string {
 // GetScBaselevelOk returns a tuple with the ScBaselevel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetScBaselevelOk() (*string, bool) {
-	if o == nil || IsNil(o.ScBaselevel) {
+	if o == nil || isNil(o.ScBaselevel) {
 		return nil, false
 	}
 	return o.ScBaselevel, true
@@ -1172,7 +1169,7 @@ func (o *VersionsResourceInner) GetScBaselevelOk() (*string, bool) {
 
 // HasScBaselevel returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasScBaselevel() bool {
-	if o != nil && !IsNil(o.ScBaselevel) {
+	if o != nil && !isNil(o.ScBaselevel) {
 		return true
 	}
 
@@ -1186,7 +1183,7 @@ func (o *VersionsResourceInner) SetScBaselevel(v string) {
 
 // GetScCpuType returns the ScCpuType field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetScCpuType() string {
-	if o == nil || IsNil(o.ScCpuType) {
+	if o == nil || isNil(o.ScCpuType) {
 		var ret string
 		return ret
 	}
@@ -1196,7 +1193,7 @@ func (o *VersionsResourceInner) GetScCpuType() string {
 // GetScCpuTypeOk returns a tuple with the ScCpuType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetScCpuTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.ScCpuType) {
+	if o == nil || isNil(o.ScCpuType) {
 		return nil, false
 	}
 	return o.ScCpuType, true
@@ -1204,7 +1201,7 @@ func (o *VersionsResourceInner) GetScCpuTypeOk() (*string, bool) {
 
 // HasScCpuType returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasScCpuType() bool {
-	if o != nil && !IsNil(o.ScCpuType) {
+	if o != nil && !isNil(o.ScCpuType) {
 		return true
 	}
 
@@ -1218,7 +1215,7 @@ func (o *VersionsResourceInner) SetScCpuType(v string) {
 
 // GetScFuVersion returns the ScFuVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetScFuVersion() string {
-	if o == nil || IsNil(o.ScFuVersion) {
+	if o == nil || isNil(o.ScFuVersion) {
 		var ret string
 		return ret
 	}
@@ -1228,7 +1225,7 @@ func (o *VersionsResourceInner) GetScFuVersion() string {
 // GetScFuVersionOk returns a tuple with the ScFuVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetScFuVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.ScFuVersion) {
+	if o == nil || isNil(o.ScFuVersion) {
 		return nil, false
 	}
 	return o.ScFuVersion, true
@@ -1236,7 +1233,7 @@ func (o *VersionsResourceInner) GetScFuVersionOk() (*string, bool) {
 
 // HasScFuVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasScFuVersion() bool {
-	if o != nil && !IsNil(o.ScFuVersion) {
+	if o != nil && !isNil(o.ScFuVersion) {
 		return true
 	}
 
@@ -1250,7 +1247,7 @@ func (o *VersionsResourceInner) SetScFuVersion(v string) {
 
 // GetScFw returns the ScFw field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetScFw() string {
-	if o == nil || IsNil(o.ScFw) {
+	if o == nil || isNil(o.ScFw) {
 		var ret string
 		return ret
 	}
@@ -1260,7 +1257,7 @@ func (o *VersionsResourceInner) GetScFw() string {
 // GetScFwOk returns a tuple with the ScFw field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetScFwOk() (*string, bool) {
-	if o == nil || IsNil(o.ScFw) {
+	if o == nil || isNil(o.ScFw) {
 		return nil, false
 	}
 	return o.ScFw, true
@@ -1268,7 +1265,7 @@ func (o *VersionsResourceInner) GetScFwOk() (*string, bool) {
 
 // HasScFw returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasScFw() bool {
-	if o != nil && !IsNil(o.ScFw) {
+	if o != nil && !isNil(o.ScFw) {
 		return true
 	}
 
@@ -1282,7 +1279,7 @@ func (o *VersionsResourceInner) SetScFw(v string) {
 
 // GetScLoader returns the ScLoader field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetScLoader() string {
-	if o == nil || IsNil(o.ScLoader) {
+	if o == nil || isNil(o.ScLoader) {
 		var ret string
 		return ret
 	}
@@ -1292,7 +1289,7 @@ func (o *VersionsResourceInner) GetScLoader() string {
 // GetScLoaderOk returns a tuple with the ScLoader field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetScLoaderOk() (*string, bool) {
-	if o == nil || IsNil(o.ScLoader) {
+	if o == nil || isNil(o.ScLoader) {
 		return nil, false
 	}
 	return o.ScLoader, true
@@ -1300,7 +1297,7 @@ func (o *VersionsResourceInner) GetScLoaderOk() (*string, bool) {
 
 // HasScLoader returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasScLoader() bool {
-	if o != nil && !IsNil(o.ScLoader) {
+	if o != nil && !isNil(o.ScLoader) {
 		return true
 	}
 
@@ -1314,7 +1311,7 @@ func (o *VersionsResourceInner) SetScLoader(v string) {
 
 // GetScMemory returns the ScMemory field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetScMemory() string {
-	if o == nil || IsNil(o.ScMemory) {
+	if o == nil || isNil(o.ScMemory) {
 		var ret string
 		return ret
 	}
@@ -1324,7 +1321,7 @@ func (o *VersionsResourceInner) GetScMemory() string {
 // GetScMemoryOk returns a tuple with the ScMemory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetScMemoryOk() (*string, bool) {
-	if o == nil || IsNil(o.ScMemory) {
+	if o == nil || isNil(o.ScMemory) {
 		return nil, false
 	}
 	return o.ScMemory, true
@@ -1332,7 +1329,7 @@ func (o *VersionsResourceInner) GetScMemoryOk() (*string, bool) {
 
 // HasScMemory returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasScMemory() bool {
-	if o != nil && !IsNil(o.ScMemory) {
+	if o != nil && !isNil(o.ScMemory) {
 		return true
 	}
 
@@ -1346,7 +1343,7 @@ func (o *VersionsResourceInner) SetScMemory(v string) {
 
 // GetTranslationVersion returns the TranslationVersion field value if set, zero value otherwise.
 func (o *VersionsResourceInner) GetTranslationVersion() string {
-	if o == nil || IsNil(o.TranslationVersion) {
+	if o == nil || isNil(o.TranslationVersion) {
 		var ret string
 		return ret
 	}
@@ -1356,7 +1353,7 @@ func (o *VersionsResourceInner) GetTranslationVersion() string {
 // GetTranslationVersionOk returns a tuple with the TranslationVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VersionsResourceInner) GetTranslationVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.TranslationVersion) {
+	if o == nil || isNil(o.TranslationVersion) {
 		return nil, false
 	}
 	return o.TranslationVersion, true
@@ -1364,7 +1361,7 @@ func (o *VersionsResourceInner) GetTranslationVersionOk() (*string, bool) {
 
 // HasTranslationVersion returns a boolean if a field has been set.
 func (o *VersionsResourceInner) HasTranslationVersion() bool {
-	if o != nil && !IsNil(o.TranslationVersion) {
+	if o != nil && !isNil(o.TranslationVersion) {
 		return true
 	}
 
@@ -1377,136 +1374,128 @@ func (o *VersionsResourceInner) SetTranslationVersion(v string) {
 }
 
 func (o VersionsResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o VersionsResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.BackplaneType) {
+	if !isNil(o.BackplaneType) {
 		toSerialize["backplane-type"] = o.BackplaneType
 	}
-	if !IsNil(o.BuildDate) {
+	if !isNil(o.BuildDate) {
 		toSerialize["build-date"] = o.BuildDate
 	}
-	if !IsNil(o.BundleBaseVersion) {
+	if !isNil(o.BundleBaseVersion) {
 		toSerialize["bundle-base-version"] = o.BundleBaseVersion
 	}
-	if !IsNil(o.BundleStatus) {
+	if !isNil(o.BundleStatus) {
 		toSerialize["bundle-status"] = o.BundleStatus
 	}
-	if !IsNil(o.BundleStatusNumeric) {
+	if !isNil(o.BundleStatusNumeric) {
 		toSerialize["bundle-status-numeric"] = o.BundleStatusNumeric
 	}
-	if !IsNil(o.BundleVersion) {
+	if !isNil(o.BundleVersion) {
 		toSerialize["bundle-version"] = o.BundleVersion
 	}
-	if !IsNil(o.BundleVersionOnly) {
+	if !isNil(o.BundleVersionOnly) {
 		toSerialize["bundle-version-only"] = o.BundleVersionOnly
 	}
-	if !IsNil(o.CapiVersion) {
+	if !isNil(o.CapiVersion) {
 		toSerialize["capi-version"] = o.CapiVersion
 	}
-	if !IsNil(o.CtkVersion) {
+	if !isNil(o.CtkVersion) {
 		toSerialize["ctk-version"] = o.CtkVersion
 	}
-	if !IsNil(o.DiskChannelRevision) {
+	if !isNil(o.DiskChannelRevision) {
 		toSerialize["disk-channel_revision"] = o.DiskChannelRevision
 	}
-	if !IsNil(o.EcFw) {
+	if !isNil(o.EcFw) {
 		toSerialize["ec-fw"] = o.EcFw
 	}
-	if !IsNil(o.FwDefaultPlatformBrand) {
+	if !isNil(o.FwDefaultPlatformBrand) {
 		toSerialize["fw-default-platform-brand"] = o.FwDefaultPlatformBrand
 	}
-	if !IsNil(o.FwDefaultPlatformBrandNumeric) {
+	if !isNil(o.FwDefaultPlatformBrandNumeric) {
 		toSerialize["fw-default-platform-brand-numeric"] = o.FwDefaultPlatformBrandNumeric
 	}
-	if !IsNil(o.GemVersion) {
+	if !isNil(o.GemVersion) {
 		toSerialize["gem-version"] = o.GemVersion
 	}
-	if !IsNil(o.HimModel) {
+	if !isNil(o.HimModel) {
 		toSerialize["him-model"] = o.HimModel
 	}
-	if !IsNil(o.HimRev) {
+	if !isNil(o.HimRev) {
 		toSerialize["him-rev"] = o.HimRev
 	}
-	if !IsNil(o.HostChannelRevision) {
+	if !isNil(o.HostChannelRevision) {
 		toSerialize["host-channel_revision"] = o.HostChannelRevision
 	}
-	if !IsNil(o.HwRev) {
+	if !isNil(o.HwRev) {
 		toSerialize["hw-rev"] = o.HwRev
 	}
-	if !IsNil(o.McBaseFw) {
+	if !isNil(o.McBaseFw) {
 		toSerialize["mc-base-fw"] = o.McBaseFw
 	}
-	if !IsNil(o.McFw) {
+	if !isNil(o.McFw) {
 		toSerialize["mc-fw"] = o.McFw
 	}
-	if !IsNil(o.McLoader) {
+	if !isNil(o.McLoader) {
 		toSerialize["mc-loader"] = o.McLoader
 	}
-	if !IsNil(o.McosVersion) {
+	if !isNil(o.McosVersion) {
 		toSerialize["mcos-version"] = o.McosVersion
 	}
-	if !IsNil(o.MrcVersion) {
+	if !isNil(o.MrcVersion) {
 		toSerialize["mrc-version"] = o.MrcVersion
 	}
-	if !IsNil(o.PcieSwitchBackendConfigurationVersion) {
+	if !isNil(o.PcieSwitchBackendConfigurationVersion) {
 		toSerialize["pcie-switch-backend-configuration-version"] = o.PcieSwitchBackendConfigurationVersion
 	}
-	if !IsNil(o.PcieSwitchBackendFirmwareVersion) {
+	if !isNil(o.PcieSwitchBackendFirmwareVersion) {
 		toSerialize["pcie-switch-backend-firmware-version"] = o.PcieSwitchBackendFirmwareVersion
 	}
-	if !IsNil(o.PcieSwitchFrontendConfigurationVersion) {
+	if !isNil(o.PcieSwitchFrontendConfigurationVersion) {
 		toSerialize["pcie-switch-frontend-configuration-version"] = o.PcieSwitchFrontendConfigurationVersion
 	}
-	if !IsNil(o.PcieSwitchFrontendFirmwareVersion) {
+	if !isNil(o.PcieSwitchFrontendFirmwareVersion) {
 		toSerialize["pcie-switch-frontend-firmware-version"] = o.PcieSwitchFrontendFirmwareVersion
 	}
-	if !IsNil(o.PldRev) {
+	if !isNil(o.PldRev) {
 		toSerialize["pld-rev"] = o.PldRev
 	}
-	if !IsNil(o.PmCpldVersion) {
+	if !isNil(o.PmCpldVersion) {
 		toSerialize["pm-cpld-version"] = o.PmCpldVersion
 	}
-	if !IsNil(o.PrmVersion) {
+	if !isNil(o.PrmVersion) {
 		toSerialize["prm-version"] = o.PrmVersion
 	}
-	if !IsNil(o.PubsVersion) {
+	if !isNil(o.PubsVersion) {
 		toSerialize["pubs-version"] = o.PubsVersion
 	}
-	if !IsNil(o.ScBaselevel) {
+	if !isNil(o.ScBaselevel) {
 		toSerialize["sc-baselevel"] = o.ScBaselevel
 	}
-	if !IsNil(o.ScCpuType) {
+	if !isNil(o.ScCpuType) {
 		toSerialize["sc-cpu-type"] = o.ScCpuType
 	}
-	if !IsNil(o.ScFuVersion) {
+	if !isNil(o.ScFuVersion) {
 		toSerialize["sc-fu-version"] = o.ScFuVersion
 	}
-	if !IsNil(o.ScFw) {
+	if !isNil(o.ScFw) {
 		toSerialize["sc-fw"] = o.ScFw
 	}
-	if !IsNil(o.ScLoader) {
+	if !isNil(o.ScLoader) {
 		toSerialize["sc-loader"] = o.ScLoader
 	}
-	if !IsNil(o.ScMemory) {
+	if !isNil(o.ScMemory) {
 		toSerialize["sc-memory"] = o.ScMemory
 	}
-	if !IsNil(o.TranslationVersion) {
+	if !isNil(o.TranslationVersion) {
 		toSerialize["translation-version"] = o.TranslationVersion
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableVersionsResourceInner struct {

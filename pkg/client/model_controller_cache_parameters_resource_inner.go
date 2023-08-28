@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the ControllerCacheParametersResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &ControllerCacheParametersResourceInner{}
-
 // ControllerCacheParametersResourceInner struct for ControllerCacheParametersResourceInner
 type ControllerCacheParametersResourceInner struct {
 	ObjectName              *string `json:"object-name,omitempty"`
@@ -56,7 +53,7 @@ func NewControllerCacheParametersResourceInnerWithDefaults() *ControllerCachePar
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -66,7 +63,7 @@ func (o *ControllerCacheParametersResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -74,7 +71,7 @@ func (o *ControllerCacheParametersResourceInner) GetObjectNameOk() (*string, boo
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -88,7 +85,7 @@ func (o *ControllerCacheParametersResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -98,7 +95,7 @@ func (o *ControllerCacheParametersResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -106,7 +103,7 @@ func (o *ControllerCacheParametersResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -120,7 +117,7 @@ func (o *ControllerCacheParametersResourceInner) SetMeta(v string) {
 
 // GetCacheFlush returns the CacheFlush field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetCacheFlush() string {
-	if o == nil || IsNil(o.CacheFlush) {
+	if o == nil || isNil(o.CacheFlush) {
 		var ret string
 		return ret
 	}
@@ -130,7 +127,7 @@ func (o *ControllerCacheParametersResourceInner) GetCacheFlush() string {
 // GetCacheFlushOk returns a tuple with the CacheFlush field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetCacheFlushOk() (*string, bool) {
-	if o == nil || IsNil(o.CacheFlush) {
+	if o == nil || isNil(o.CacheFlush) {
 		return nil, false
 	}
 	return o.CacheFlush, true
@@ -138,7 +135,7 @@ func (o *ControllerCacheParametersResourceInner) GetCacheFlushOk() (*string, boo
 
 // HasCacheFlush returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasCacheFlush() bool {
-	if o != nil && !IsNil(o.CacheFlush) {
+	if o != nil && !isNil(o.CacheFlush) {
 		return true
 	}
 
@@ -152,7 +149,7 @@ func (o *ControllerCacheParametersResourceInner) SetCacheFlush(v string) {
 
 // GetCacheFlushNumeric returns the CacheFlushNumeric field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int64 {
-	if o == nil || IsNil(o.CacheFlushNumeric) {
+	if o == nil || isNil(o.CacheFlushNumeric) {
 		var ret int64
 		return ret
 	}
@@ -162,7 +159,7 @@ func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumeric() int64 {
 // GetCacheFlushNumericOk returns a tuple with the CacheFlushNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.CacheFlushNumeric) {
+	if o == nil || isNil(o.CacheFlushNumeric) {
 		return nil, false
 	}
 	return o.CacheFlushNumeric, true
@@ -170,7 +167,7 @@ func (o *ControllerCacheParametersResourceInner) GetCacheFlushNumericOk() (*int6
 
 // HasCacheFlushNumeric returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasCacheFlushNumeric() bool {
-	if o != nil && !IsNil(o.CacheFlushNumeric) {
+	if o != nil && !isNil(o.CacheFlushNumeric) {
 		return true
 	}
 
@@ -184,7 +181,7 @@ func (o *ControllerCacheParametersResourceInner) SetCacheFlushNumeric(v int64) {
 
 // GetControllerId returns the ControllerId field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetControllerId() string {
-	if o == nil || IsNil(o.ControllerId) {
+	if o == nil || isNil(o.ControllerId) {
 		var ret string
 		return ret
 	}
@@ -194,7 +191,7 @@ func (o *ControllerCacheParametersResourceInner) GetControllerId() string {
 // GetControllerIdOk returns a tuple with the ControllerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetControllerIdOk() (*string, bool) {
-	if o == nil || IsNil(o.ControllerId) {
+	if o == nil || isNil(o.ControllerId) {
 		return nil, false
 	}
 	return o.ControllerId, true
@@ -202,7 +199,7 @@ func (o *ControllerCacheParametersResourceInner) GetControllerIdOk() (*string, b
 
 // HasControllerId returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasControllerId() bool {
-	if o != nil && !IsNil(o.ControllerId) {
+	if o != nil && !isNil(o.ControllerId) {
 		return true
 	}
 
@@ -216,7 +213,7 @@ func (o *ControllerCacheParametersResourceInner) SetControllerId(v string) {
 
 // GetControllerIdNumeric returns the ControllerIdNumeric field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int64 {
-	if o == nil || IsNil(o.ControllerIdNumeric) {
+	if o == nil || isNil(o.ControllerIdNumeric) {
 		var ret int64
 		return ret
 	}
@@ -226,7 +223,7 @@ func (o *ControllerCacheParametersResourceInner) GetControllerIdNumeric() int64 
 // GetControllerIdNumericOk returns a tuple with the ControllerIdNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetControllerIdNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ControllerIdNumeric) {
+	if o == nil || isNil(o.ControllerIdNumeric) {
 		return nil, false
 	}
 	return o.ControllerIdNumeric, true
@@ -234,7 +231,7 @@ func (o *ControllerCacheParametersResourceInner) GetControllerIdNumericOk() (*in
 
 // HasControllerIdNumeric returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasControllerIdNumeric() bool {
-	if o != nil && !IsNil(o.ControllerIdNumeric) {
+	if o != nil && !isNil(o.ControllerIdNumeric) {
 		return true
 	}
 
@@ -248,7 +245,7 @@ func (o *ControllerCacheParametersResourceInner) SetControllerIdNumeric(v int64)
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetDurableId() string {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -258,7 +255,7 @@ func (o *ControllerCacheParametersResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -266,7 +263,7 @@ func (o *ControllerCacheParametersResourceInner) GetDurableIdOk() (*string, bool
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasDurableId() bool {
-	if o != nil && !IsNil(o.DurableId) {
+	if o != nil && !isNil(o.DurableId) {
 		return true
 	}
 
@@ -280,7 +277,7 @@ func (o *ControllerCacheParametersResourceInner) SetDurableId(v string) {
 
 // GetMemoryCardHealth returns the MemoryCardHealth field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealth() string {
-	if o == nil || IsNil(o.MemoryCardHealth) {
+	if o == nil || isNil(o.MemoryCardHealth) {
 		var ret string
 		return ret
 	}
@@ -290,7 +287,7 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealth() string {
 // GetMemoryCardHealthOk returns a tuple with the MemoryCardHealth field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthOk() (*string, bool) {
-	if o == nil || IsNil(o.MemoryCardHealth) {
+	if o == nil || isNil(o.MemoryCardHealth) {
 		return nil, false
 	}
 	return o.MemoryCardHealth, true
@@ -298,7 +295,7 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthOk() (*strin
 
 // HasMemoryCardHealth returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasMemoryCardHealth() bool {
-	if o != nil && !IsNil(o.MemoryCardHealth) {
+	if o != nil && !isNil(o.MemoryCardHealth) {
 		return true
 	}
 
@@ -312,7 +309,7 @@ func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealth(v string) {
 
 // GetMemoryCardHealthNumeric returns the MemoryCardHealthNumeric field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() int64 {
-	if o == nil || IsNil(o.MemoryCardHealthNumeric) {
+	if o == nil || isNil(o.MemoryCardHealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -322,7 +319,7 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumeric() in
 // GetMemoryCardHealthNumericOk returns a tuple with the MemoryCardHealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.MemoryCardHealthNumeric) {
+	if o == nil || isNil(o.MemoryCardHealthNumeric) {
 		return nil, false
 	}
 	return o.MemoryCardHealthNumeric, true
@@ -330,7 +327,7 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardHealthNumericOk() 
 
 // HasMemoryCardHealthNumeric returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasMemoryCardHealthNumeric() bool {
-	if o != nil && !IsNil(o.MemoryCardHealthNumeric) {
+	if o != nil && !isNil(o.MemoryCardHealthNumeric) {
 		return true
 	}
 
@@ -344,7 +341,7 @@ func (o *ControllerCacheParametersResourceInner) SetMemoryCardHealthNumeric(v in
 
 // GetMemoryCardStatus returns the MemoryCardStatus field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatus() string {
-	if o == nil || IsNil(o.MemoryCardStatus) {
+	if o == nil || isNil(o.MemoryCardStatus) {
 		var ret string
 		return ret
 	}
@@ -354,7 +351,7 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatus() string {
 // GetMemoryCardStatusOk returns a tuple with the MemoryCardStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.MemoryCardStatus) {
+	if o == nil || isNil(o.MemoryCardStatus) {
 		return nil, false
 	}
 	return o.MemoryCardStatus, true
@@ -362,7 +359,7 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusOk() (*strin
 
 // HasMemoryCardStatus returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasMemoryCardStatus() bool {
-	if o != nil && !IsNil(o.MemoryCardStatus) {
+	if o != nil && !isNil(o.MemoryCardStatus) {
 		return true
 	}
 
@@ -376,7 +373,7 @@ func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatus(v string) {
 
 // GetMemoryCardStatusNumeric returns the MemoryCardStatusNumeric field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() int64 {
-	if o == nil || IsNil(o.MemoryCardStatusNumeric) {
+	if o == nil || isNil(o.MemoryCardStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -386,7 +383,7 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumeric() in
 // GetMemoryCardStatusNumericOk returns a tuple with the MemoryCardStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.MemoryCardStatusNumeric) {
+	if o == nil || isNil(o.MemoryCardStatusNumeric) {
 		return nil, false
 	}
 	return o.MemoryCardStatusNumeric, true
@@ -394,7 +391,7 @@ func (o *ControllerCacheParametersResourceInner) GetMemoryCardStatusNumericOk() 
 
 // HasMemoryCardStatusNumeric returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasMemoryCardStatusNumeric() bool {
-	if o != nil && !IsNil(o.MemoryCardStatusNumeric) {
+	if o != nil && !isNil(o.MemoryCardStatusNumeric) {
 		return true
 	}
 
@@ -408,7 +405,7 @@ func (o *ControllerCacheParametersResourceInner) SetMemoryCardStatusNumeric(v in
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetName() string {
-	if o == nil || IsNil(o.Name) {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -418,7 +415,7 @@ func (o *ControllerCacheParametersResourceInner) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetNameOk() (*string, bool) {
-	if o == nil || IsNil(o.Name) {
+	if o == nil || isNil(o.Name) {
 		return nil, false
 	}
 	return o.Name, true
@@ -426,7 +423,7 @@ func (o *ControllerCacheParametersResourceInner) GetNameOk() (*string, bool) {
 
 // HasName returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasName() bool {
-	if o != nil && !IsNil(o.Name) {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -440,7 +437,7 @@ func (o *ControllerCacheParametersResourceInner) SetName(v string) {
 
 // GetWriteBackStatus returns the WriteBackStatus field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetWriteBackStatus() string {
-	if o == nil || IsNil(o.WriteBackStatus) {
+	if o == nil || isNil(o.WriteBackStatus) {
 		var ret string
 		return ret
 	}
@@ -450,7 +447,7 @@ func (o *ControllerCacheParametersResourceInner) GetWriteBackStatus() string {
 // GetWriteBackStatusOk returns a tuple with the WriteBackStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.WriteBackStatus) {
+	if o == nil || isNil(o.WriteBackStatus) {
 		return nil, false
 	}
 	return o.WriteBackStatus, true
@@ -458,7 +455,7 @@ func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusOk() (*string
 
 // HasWriteBackStatus returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasWriteBackStatus() bool {
-	if o != nil && !IsNil(o.WriteBackStatus) {
+	if o != nil && !isNil(o.WriteBackStatus) {
 		return true
 	}
 
@@ -472,7 +469,7 @@ func (o *ControllerCacheParametersResourceInner) SetWriteBackStatus(v string) {
 
 // GetWriteBackStatusNumeric returns the WriteBackStatusNumeric field value if set, zero value otherwise.
 func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int64 {
-	if o == nil || IsNil(o.WriteBackStatusNumeric) {
+	if o == nil || isNil(o.WriteBackStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -482,7 +479,7 @@ func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumeric() int
 // GetWriteBackStatusNumericOk returns a tuple with the WriteBackStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.WriteBackStatusNumeric) {
+	if o == nil || isNil(o.WriteBackStatusNumeric) {
 		return nil, false
 	}
 	return o.WriteBackStatusNumeric, true
@@ -490,7 +487,7 @@ func (o *ControllerCacheParametersResourceInner) GetWriteBackStatusNumericOk() (
 
 // HasWriteBackStatusNumeric returns a boolean if a field has been set.
 func (o *ControllerCacheParametersResourceInner) HasWriteBackStatusNumeric() bool {
-	if o != nil && !IsNil(o.WriteBackStatusNumeric) {
+	if o != nil && !isNil(o.WriteBackStatusNumeric) {
 		return true
 	}
 
@@ -503,58 +500,50 @@ func (o *ControllerCacheParametersResourceInner) SetWriteBackStatusNumeric(v int
 }
 
 func (o ControllerCacheParametersResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o ControllerCacheParametersResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.CacheFlush) {
+	if !isNil(o.CacheFlush) {
 		toSerialize["cache-flush"] = o.CacheFlush
 	}
-	if !IsNil(o.CacheFlushNumeric) {
+	if !isNil(o.CacheFlushNumeric) {
 		toSerialize["cache-flush-numeric"] = o.CacheFlushNumeric
 	}
-	if !IsNil(o.ControllerId) {
+	if !isNil(o.ControllerId) {
 		toSerialize["controller-id"] = o.ControllerId
 	}
-	if !IsNil(o.ControllerIdNumeric) {
+	if !isNil(o.ControllerIdNumeric) {
 		toSerialize["controller-id-numeric"] = o.ControllerIdNumeric
 	}
-	if !IsNil(o.DurableId) {
+	if !isNil(o.DurableId) {
 		toSerialize["durable-id"] = o.DurableId
 	}
-	if !IsNil(o.MemoryCardHealth) {
+	if !isNil(o.MemoryCardHealth) {
 		toSerialize["memory-card-health"] = o.MemoryCardHealth
 	}
-	if !IsNil(o.MemoryCardHealthNumeric) {
+	if !isNil(o.MemoryCardHealthNumeric) {
 		toSerialize["memory-card-health-numeric"] = o.MemoryCardHealthNumeric
 	}
-	if !IsNil(o.MemoryCardStatus) {
+	if !isNil(o.MemoryCardStatus) {
 		toSerialize["memory-card-status"] = o.MemoryCardStatus
 	}
-	if !IsNil(o.MemoryCardStatusNumeric) {
+	if !isNil(o.MemoryCardStatusNumeric) {
 		toSerialize["memory-card-status-numeric"] = o.MemoryCardStatusNumeric
 	}
-	if !IsNil(o.Name) {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if !IsNil(o.WriteBackStatus) {
+	if !isNil(o.WriteBackStatus) {
 		toSerialize["write-back-status"] = o.WriteBackStatus
 	}
-	if !IsNil(o.WriteBackStatusNumeric) {
+	if !isNil(o.WriteBackStatusNumeric) {
 		toSerialize["write-back-status-numeric"] = o.WriteBackStatusNumeric
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableControllerCacheParametersResourceInner struct {

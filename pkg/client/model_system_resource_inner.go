@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the SystemResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &SystemResourceInner{}
-
 // SystemResourceInner struct for SystemResourceInner
 type SystemResourceInner struct {
 	ObjectName               *string `json:"object-name,omitempty"`
@@ -86,7 +83,7 @@ func NewSystemResourceInnerWithDefaults() *SystemResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -96,7 +93,7 @@ func (o *SystemResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -104,7 +101,7 @@ func (o *SystemResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -118,7 +115,7 @@ func (o *SystemResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -128,7 +125,7 @@ func (o *SystemResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -136,7 +133,7 @@ func (o *SystemResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -150,7 +147,7 @@ func (o *SystemResourceInner) SetMeta(v string) {
 
 // GetConfigurationSelector returns the ConfigurationSelector field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetConfigurationSelector() string {
-	if o == nil || IsNil(o.ConfigurationSelector) {
+	if o == nil || isNil(o.ConfigurationSelector) {
 		var ret string
 		return ret
 	}
@@ -160,7 +157,7 @@ func (o *SystemResourceInner) GetConfigurationSelector() string {
 // GetConfigurationSelectorOk returns a tuple with the ConfigurationSelector field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetConfigurationSelectorOk() (*string, bool) {
-	if o == nil || IsNil(o.ConfigurationSelector) {
+	if o == nil || isNil(o.ConfigurationSelector) {
 		return nil, false
 	}
 	return o.ConfigurationSelector, true
@@ -168,7 +165,7 @@ func (o *SystemResourceInner) GetConfigurationSelectorOk() (*string, bool) {
 
 // HasConfigurationSelector returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasConfigurationSelector() bool {
-	if o != nil && !IsNil(o.ConfigurationSelector) {
+	if o != nil && !isNil(o.ConfigurationSelector) {
 		return true
 	}
 
@@ -182,7 +179,7 @@ func (o *SystemResourceInner) SetConfigurationSelector(v string) {
 
 // GetCurrentNodeWwn returns the CurrentNodeWwn field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetCurrentNodeWwn() string {
-	if o == nil || IsNil(o.CurrentNodeWwn) {
+	if o == nil || isNil(o.CurrentNodeWwn) {
 		var ret string
 		return ret
 	}
@@ -192,7 +189,7 @@ func (o *SystemResourceInner) GetCurrentNodeWwn() string {
 // GetCurrentNodeWwnOk returns a tuple with the CurrentNodeWwn field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetCurrentNodeWwnOk() (*string, bool) {
-	if o == nil || IsNil(o.CurrentNodeWwn) {
+	if o == nil || isNil(o.CurrentNodeWwn) {
 		return nil, false
 	}
 	return o.CurrentNodeWwn, true
@@ -200,7 +197,7 @@ func (o *SystemResourceInner) GetCurrentNodeWwnOk() (*string, bool) {
 
 // HasCurrentNodeWwn returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasCurrentNodeWwn() bool {
-	if o != nil && !IsNil(o.CurrentNodeWwn) {
+	if o != nil && !isNil(o.CurrentNodeWwn) {
 		return true
 	}
 
@@ -214,7 +211,7 @@ func (o *SystemResourceInner) SetCurrentNodeWwn(v string) {
 
 // GetEnclosureCount returns the EnclosureCount field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetEnclosureCount() int64 {
-	if o == nil || IsNil(o.EnclosureCount) {
+	if o == nil || isNil(o.EnclosureCount) {
 		var ret int64
 		return ret
 	}
@@ -224,7 +221,7 @@ func (o *SystemResourceInner) GetEnclosureCount() int64 {
 // GetEnclosureCountOk returns a tuple with the EnclosureCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetEnclosureCountOk() (*int64, bool) {
-	if o == nil || IsNil(o.EnclosureCount) {
+	if o == nil || isNil(o.EnclosureCount) {
 		return nil, false
 	}
 	return o.EnclosureCount, true
@@ -232,7 +229,7 @@ func (o *SystemResourceInner) GetEnclosureCountOk() (*int64, bool) {
 
 // HasEnclosureCount returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasEnclosureCount() bool {
-	if o != nil && !IsNil(o.EnclosureCount) {
+	if o != nil && !isNil(o.EnclosureCount) {
 		return true
 	}
 
@@ -246,7 +243,7 @@ func (o *SystemResourceInner) SetEnclosureCount(v int64) {
 
 // GetFdeSecurityStatus returns the FdeSecurityStatus field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetFdeSecurityStatus() string {
-	if o == nil || IsNil(o.FdeSecurityStatus) {
+	if o == nil || isNil(o.FdeSecurityStatus) {
 		var ret string
 		return ret
 	}
@@ -256,7 +253,7 @@ func (o *SystemResourceInner) GetFdeSecurityStatus() string {
 // GetFdeSecurityStatusOk returns a tuple with the FdeSecurityStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetFdeSecurityStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.FdeSecurityStatus) {
+	if o == nil || isNil(o.FdeSecurityStatus) {
 		return nil, false
 	}
 	return o.FdeSecurityStatus, true
@@ -264,7 +261,7 @@ func (o *SystemResourceInner) GetFdeSecurityStatusOk() (*string, bool) {
 
 // HasFdeSecurityStatus returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasFdeSecurityStatus() bool {
-	if o != nil && !IsNil(o.FdeSecurityStatus) {
+	if o != nil && !isNil(o.FdeSecurityStatus) {
 		return true
 	}
 
@@ -278,7 +275,7 @@ func (o *SystemResourceInner) SetFdeSecurityStatus(v string) {
 
 // GetFdeSecurityStatusNumeric returns the FdeSecurityStatusNumeric field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetFdeSecurityStatusNumeric() int64 {
-	if o == nil || IsNil(o.FdeSecurityStatusNumeric) {
+	if o == nil || isNil(o.FdeSecurityStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -288,7 +285,7 @@ func (o *SystemResourceInner) GetFdeSecurityStatusNumeric() int64 {
 // GetFdeSecurityStatusNumericOk returns a tuple with the FdeSecurityStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetFdeSecurityStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.FdeSecurityStatusNumeric) {
+	if o == nil || isNil(o.FdeSecurityStatusNumeric) {
 		return nil, false
 	}
 	return o.FdeSecurityStatusNumeric, true
@@ -296,7 +293,7 @@ func (o *SystemResourceInner) GetFdeSecurityStatusNumericOk() (*int64, bool) {
 
 // HasFdeSecurityStatusNumeric returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasFdeSecurityStatusNumeric() bool {
-	if o != nil && !IsNil(o.FdeSecurityStatusNumeric) {
+	if o != nil && !isNil(o.FdeSecurityStatusNumeric) {
 		return true
 	}
 
@@ -310,7 +307,7 @@ func (o *SystemResourceInner) SetFdeSecurityStatusNumeric(v int64) {
 
 // GetHealth returns the Health field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetHealth() string {
-	if o == nil || IsNil(o.Health) {
+	if o == nil || isNil(o.Health) {
 		var ret string
 		return ret
 	}
@@ -320,7 +317,7 @@ func (o *SystemResourceInner) GetHealth() string {
 // GetHealthOk returns a tuple with the Health field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetHealthOk() (*string, bool) {
-	if o == nil || IsNil(o.Health) {
+	if o == nil || isNil(o.Health) {
 		return nil, false
 	}
 	return o.Health, true
@@ -328,7 +325,7 @@ func (o *SystemResourceInner) GetHealthOk() (*string, bool) {
 
 // HasHealth returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasHealth() bool {
-	if o != nil && !IsNil(o.Health) {
+	if o != nil && !isNil(o.Health) {
 		return true
 	}
 
@@ -342,7 +339,7 @@ func (o *SystemResourceInner) SetHealth(v string) {
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetHealthNumeric() int64 {
-	if o == nil || IsNil(o.HealthNumeric) {
+	if o == nil || isNil(o.HealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -352,7 +349,7 @@ func (o *SystemResourceInner) GetHealthNumeric() int64 {
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetHealthNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.HealthNumeric) {
+	if o == nil || isNil(o.HealthNumeric) {
 		return nil, false
 	}
 	return o.HealthNumeric, true
@@ -360,7 +357,7 @@ func (o *SystemResourceInner) GetHealthNumericOk() (*int64, bool) {
 
 // HasHealthNumeric returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasHealthNumeric() bool {
-	if o != nil && !IsNil(o.HealthNumeric) {
+	if o != nil && !isNil(o.HealthNumeric) {
 		return true
 	}
 
@@ -374,7 +371,7 @@ func (o *SystemResourceInner) SetHealthNumeric(v int64) {
 
 // GetHealthReason returns the HealthReason field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetHealthReason() string {
-	if o == nil || IsNil(o.HealthReason) {
+	if o == nil || isNil(o.HealthReason) {
 		var ret string
 		return ret
 	}
@@ -384,7 +381,7 @@ func (o *SystemResourceInner) GetHealthReason() string {
 // GetHealthReasonOk returns a tuple with the HealthReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetHealthReasonOk() (*string, bool) {
-	if o == nil || IsNil(o.HealthReason) {
+	if o == nil || isNil(o.HealthReason) {
 		return nil, false
 	}
 	return o.HealthReason, true
@@ -392,7 +389,7 @@ func (o *SystemResourceInner) GetHealthReasonOk() (*string, bool) {
 
 // HasHealthReason returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasHealthReason() bool {
-	if o != nil && !IsNil(o.HealthReason) {
+	if o != nil && !isNil(o.HealthReason) {
 		return true
 	}
 
@@ -406,7 +403,7 @@ func (o *SystemResourceInner) SetHealthReason(v string) {
 
 // GetMidplaneSerialNumber returns the MidplaneSerialNumber field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetMidplaneSerialNumber() string {
-	if o == nil || IsNil(o.MidplaneSerialNumber) {
+	if o == nil || isNil(o.MidplaneSerialNumber) {
 		var ret string
 		return ret
 	}
@@ -416,7 +413,7 @@ func (o *SystemResourceInner) GetMidplaneSerialNumber() string {
 // GetMidplaneSerialNumberOk returns a tuple with the MidplaneSerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetMidplaneSerialNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.MidplaneSerialNumber) {
+	if o == nil || isNil(o.MidplaneSerialNumber) {
 		return nil, false
 	}
 	return o.MidplaneSerialNumber, true
@@ -424,7 +421,7 @@ func (o *SystemResourceInner) GetMidplaneSerialNumberOk() (*string, bool) {
 
 // HasMidplaneSerialNumber returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasMidplaneSerialNumber() bool {
-	if o != nil && !IsNil(o.MidplaneSerialNumber) {
+	if o != nil && !isNil(o.MidplaneSerialNumber) {
 		return true
 	}
 
@@ -438,7 +435,7 @@ func (o *SystemResourceInner) SetMidplaneSerialNumber(v string) {
 
 // GetOtherMCStatus returns the OtherMCStatus field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetOtherMCStatus() string {
-	if o == nil || IsNil(o.OtherMCStatus) {
+	if o == nil || isNil(o.OtherMCStatus) {
 		var ret string
 		return ret
 	}
@@ -448,7 +445,7 @@ func (o *SystemResourceInner) GetOtherMCStatus() string {
 // GetOtherMCStatusOk returns a tuple with the OtherMCStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetOtherMCStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.OtherMCStatus) {
+	if o == nil || isNil(o.OtherMCStatus) {
 		return nil, false
 	}
 	return o.OtherMCStatus, true
@@ -456,7 +453,7 @@ func (o *SystemResourceInner) GetOtherMCStatusOk() (*string, bool) {
 
 // HasOtherMCStatus returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasOtherMCStatus() bool {
-	if o != nil && !IsNil(o.OtherMCStatus) {
+	if o != nil && !isNil(o.OtherMCStatus) {
 		return true
 	}
 
@@ -470,7 +467,7 @@ func (o *SystemResourceInner) SetOtherMCStatus(v string) {
 
 // GetOtherMCStatusNumeric returns the OtherMCStatusNumeric field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetOtherMCStatusNumeric() int64 {
-	if o == nil || IsNil(o.OtherMCStatusNumeric) {
+	if o == nil || isNil(o.OtherMCStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -480,7 +477,7 @@ func (o *SystemResourceInner) GetOtherMCStatusNumeric() int64 {
 // GetOtherMCStatusNumericOk returns a tuple with the OtherMCStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetOtherMCStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.OtherMCStatusNumeric) {
+	if o == nil || isNil(o.OtherMCStatusNumeric) {
 		return nil, false
 	}
 	return o.OtherMCStatusNumeric, true
@@ -488,7 +485,7 @@ func (o *SystemResourceInner) GetOtherMCStatusNumericOk() (*int64, bool) {
 
 // HasOtherMCStatusNumeric returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasOtherMCStatusNumeric() bool {
-	if o != nil && !IsNil(o.OtherMCStatusNumeric) {
+	if o != nil && !isNil(o.OtherMCStatusNumeric) {
 		return true
 	}
 
@@ -502,7 +499,7 @@ func (o *SystemResourceInner) SetOtherMCStatusNumeric(v int64) {
 
 // GetPfuStatus returns the PfuStatus field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetPfuStatus() string {
-	if o == nil || IsNil(o.PfuStatus) {
+	if o == nil || isNil(o.PfuStatus) {
 		var ret string
 		return ret
 	}
@@ -512,7 +509,7 @@ func (o *SystemResourceInner) GetPfuStatus() string {
 // GetPfuStatusOk returns a tuple with the PfuStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetPfuStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.PfuStatus) {
+	if o == nil || isNil(o.PfuStatus) {
 		return nil, false
 	}
 	return o.PfuStatus, true
@@ -520,7 +517,7 @@ func (o *SystemResourceInner) GetPfuStatusOk() (*string, bool) {
 
 // HasPfuStatus returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasPfuStatus() bool {
-	if o != nil && !IsNil(o.PfuStatus) {
+	if o != nil && !isNil(o.PfuStatus) {
 		return true
 	}
 
@@ -534,7 +531,7 @@ func (o *SystemResourceInner) SetPfuStatus(v string) {
 
 // GetPfuStatusNumeric returns the PfuStatusNumeric field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetPfuStatusNumeric() int64 {
-	if o == nil || IsNil(o.PfuStatusNumeric) {
+	if o == nil || isNil(o.PfuStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -544,7 +541,7 @@ func (o *SystemResourceInner) GetPfuStatusNumeric() int64 {
 // GetPfuStatusNumericOk returns a tuple with the PfuStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetPfuStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PfuStatusNumeric) {
+	if o == nil || isNil(o.PfuStatusNumeric) {
 		return nil, false
 	}
 	return o.PfuStatusNumeric, true
@@ -552,7 +549,7 @@ func (o *SystemResourceInner) GetPfuStatusNumericOk() (*int64, bool) {
 
 // HasPfuStatusNumeric returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasPfuStatusNumeric() bool {
-	if o != nil && !IsNil(o.PfuStatusNumeric) {
+	if o != nil && !isNil(o.PfuStatusNumeric) {
 		return true
 	}
 
@@ -566,7 +563,7 @@ func (o *SystemResourceInner) SetPfuStatusNumeric(v int64) {
 
 // GetPlatformBrand returns the PlatformBrand field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetPlatformBrand() string {
-	if o == nil || IsNil(o.PlatformBrand) {
+	if o == nil || isNil(o.PlatformBrand) {
 		var ret string
 		return ret
 	}
@@ -576,7 +573,7 @@ func (o *SystemResourceInner) GetPlatformBrand() string {
 // GetPlatformBrandOk returns a tuple with the PlatformBrand field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetPlatformBrandOk() (*string, bool) {
-	if o == nil || IsNil(o.PlatformBrand) {
+	if o == nil || isNil(o.PlatformBrand) {
 		return nil, false
 	}
 	return o.PlatformBrand, true
@@ -584,7 +581,7 @@ func (o *SystemResourceInner) GetPlatformBrandOk() (*string, bool) {
 
 // HasPlatformBrand returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasPlatformBrand() bool {
-	if o != nil && !IsNil(o.PlatformBrand) {
+	if o != nil && !isNil(o.PlatformBrand) {
 		return true
 	}
 
@@ -598,7 +595,7 @@ func (o *SystemResourceInner) SetPlatformBrand(v string) {
 
 // GetPlatformBrandNumeric returns the PlatformBrandNumeric field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetPlatformBrandNumeric() int64 {
-	if o == nil || IsNil(o.PlatformBrandNumeric) {
+	if o == nil || isNil(o.PlatformBrandNumeric) {
 		var ret int64
 		return ret
 	}
@@ -608,7 +605,7 @@ func (o *SystemResourceInner) GetPlatformBrandNumeric() int64 {
 // GetPlatformBrandNumericOk returns a tuple with the PlatformBrandNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetPlatformBrandNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PlatformBrandNumeric) {
+	if o == nil || isNil(o.PlatformBrandNumeric) {
 		return nil, false
 	}
 	return o.PlatformBrandNumeric, true
@@ -616,7 +613,7 @@ func (o *SystemResourceInner) GetPlatformBrandNumericOk() (*int64, bool) {
 
 // HasPlatformBrandNumeric returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasPlatformBrandNumeric() bool {
-	if o != nil && !IsNil(o.PlatformBrandNumeric) {
+	if o != nil && !isNil(o.PlatformBrandNumeric) {
 		return true
 	}
 
@@ -630,7 +627,7 @@ func (o *SystemResourceInner) SetPlatformBrandNumeric(v int64) {
 
 // GetPlatformType returns the PlatformType field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetPlatformType() string {
-	if o == nil || IsNil(o.PlatformType) {
+	if o == nil || isNil(o.PlatformType) {
 		var ret string
 		return ret
 	}
@@ -640,7 +637,7 @@ func (o *SystemResourceInner) GetPlatformType() string {
 // GetPlatformTypeOk returns a tuple with the PlatformType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetPlatformTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.PlatformType) {
+	if o == nil || isNil(o.PlatformType) {
 		return nil, false
 	}
 	return o.PlatformType, true
@@ -648,7 +645,7 @@ func (o *SystemResourceInner) GetPlatformTypeOk() (*string, bool) {
 
 // HasPlatformType returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasPlatformType() bool {
-	if o != nil && !IsNil(o.PlatformType) {
+	if o != nil && !isNil(o.PlatformType) {
 		return true
 	}
 
@@ -662,7 +659,7 @@ func (o *SystemResourceInner) SetPlatformType(v string) {
 
 // GetPlatformTypeNumeric returns the PlatformTypeNumeric field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetPlatformTypeNumeric() int64 {
-	if o == nil || IsNil(o.PlatformTypeNumeric) {
+	if o == nil || isNil(o.PlatformTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -672,7 +669,7 @@ func (o *SystemResourceInner) GetPlatformTypeNumeric() int64 {
 // GetPlatformTypeNumericOk returns a tuple with the PlatformTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetPlatformTypeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PlatformTypeNumeric) {
+	if o == nil || isNil(o.PlatformTypeNumeric) {
 		return nil, false
 	}
 	return o.PlatformTypeNumeric, true
@@ -680,7 +677,7 @@ func (o *SystemResourceInner) GetPlatformTypeNumericOk() (*int64, bool) {
 
 // HasPlatformTypeNumeric returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasPlatformTypeNumeric() bool {
-	if o != nil && !IsNil(o.PlatformTypeNumeric) {
+	if o != nil && !isNil(o.PlatformTypeNumeric) {
 		return true
 	}
 
@@ -694,7 +691,7 @@ func (o *SystemResourceInner) SetPlatformTypeNumeric(v int64) {
 
 // GetProductBrand returns the ProductBrand field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetProductBrand() string {
-	if o == nil || IsNil(o.ProductBrand) {
+	if o == nil || isNil(o.ProductBrand) {
 		var ret string
 		return ret
 	}
@@ -704,7 +701,7 @@ func (o *SystemResourceInner) GetProductBrand() string {
 // GetProductBrandOk returns a tuple with the ProductBrand field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetProductBrandOk() (*string, bool) {
-	if o == nil || IsNil(o.ProductBrand) {
+	if o == nil || isNil(o.ProductBrand) {
 		return nil, false
 	}
 	return o.ProductBrand, true
@@ -712,7 +709,7 @@ func (o *SystemResourceInner) GetProductBrandOk() (*string, bool) {
 
 // HasProductBrand returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasProductBrand() bool {
-	if o != nil && !IsNil(o.ProductBrand) {
+	if o != nil && !isNil(o.ProductBrand) {
 		return true
 	}
 
@@ -726,7 +723,7 @@ func (o *SystemResourceInner) SetProductBrand(v string) {
 
 // GetProductId returns the ProductId field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetProductId() string {
-	if o == nil || IsNil(o.ProductId) {
+	if o == nil || isNil(o.ProductId) {
 		var ret string
 		return ret
 	}
@@ -736,7 +733,7 @@ func (o *SystemResourceInner) GetProductId() string {
 // GetProductIdOk returns a tuple with the ProductId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetProductIdOk() (*string, bool) {
-	if o == nil || IsNil(o.ProductId) {
+	if o == nil || isNil(o.ProductId) {
 		return nil, false
 	}
 	return o.ProductId, true
@@ -744,7 +741,7 @@ func (o *SystemResourceInner) GetProductIdOk() (*string, bool) {
 
 // HasProductId returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasProductId() bool {
-	if o != nil && !IsNil(o.ProductId) {
+	if o != nil && !isNil(o.ProductId) {
 		return true
 	}
 
@@ -758,7 +755,7 @@ func (o *SystemResourceInner) SetProductId(v string) {
 
 // GetScsiProductId returns the ScsiProductId field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetScsiProductId() string {
-	if o == nil || IsNil(o.ScsiProductId) {
+	if o == nil || isNil(o.ScsiProductId) {
 		var ret string
 		return ret
 	}
@@ -768,7 +765,7 @@ func (o *SystemResourceInner) GetScsiProductId() string {
 // GetScsiProductIdOk returns a tuple with the ScsiProductId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetScsiProductIdOk() (*string, bool) {
-	if o == nil || IsNil(o.ScsiProductId) {
+	if o == nil || isNil(o.ScsiProductId) {
 		return nil, false
 	}
 	return o.ScsiProductId, true
@@ -776,7 +773,7 @@ func (o *SystemResourceInner) GetScsiProductIdOk() (*string, bool) {
 
 // HasScsiProductId returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasScsiProductId() bool {
-	if o != nil && !IsNil(o.ScsiProductId) {
+	if o != nil && !isNil(o.ScsiProductId) {
 		return true
 	}
 
@@ -790,7 +787,7 @@ func (o *SystemResourceInner) SetScsiProductId(v string) {
 
 // GetScsiVendorId returns the ScsiVendorId field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetScsiVendorId() string {
-	if o == nil || IsNil(o.ScsiVendorId) {
+	if o == nil || isNil(o.ScsiVendorId) {
 		var ret string
 		return ret
 	}
@@ -800,7 +797,7 @@ func (o *SystemResourceInner) GetScsiVendorId() string {
 // GetScsiVendorIdOk returns a tuple with the ScsiVendorId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetScsiVendorIdOk() (*string, bool) {
-	if o == nil || IsNil(o.ScsiVendorId) {
+	if o == nil || isNil(o.ScsiVendorId) {
 		return nil, false
 	}
 	return o.ScsiVendorId, true
@@ -808,7 +805,7 @@ func (o *SystemResourceInner) GetScsiVendorIdOk() (*string, bool) {
 
 // HasScsiVendorId returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasScsiVendorId() bool {
-	if o != nil && !IsNil(o.ScsiVendorId) {
+	if o != nil && !isNil(o.ScsiVendorId) {
 		return true
 	}
 
@@ -822,7 +819,7 @@ func (o *SystemResourceInner) SetScsiVendorId(v string) {
 
 // GetSecuritySystemManagement returns the SecuritySystemManagement field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetSecuritySystemManagement() string {
-	if o == nil || IsNil(o.SecuritySystemManagement) {
+	if o == nil || isNil(o.SecuritySystemManagement) {
 		var ret string
 		return ret
 	}
@@ -832,7 +829,7 @@ func (o *SystemResourceInner) GetSecuritySystemManagement() string {
 // GetSecuritySystemManagementOk returns a tuple with the SecuritySystemManagement field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetSecuritySystemManagementOk() (*string, bool) {
-	if o == nil || IsNil(o.SecuritySystemManagement) {
+	if o == nil || isNil(o.SecuritySystemManagement) {
 		return nil, false
 	}
 	return o.SecuritySystemManagement, true
@@ -840,7 +837,7 @@ func (o *SystemResourceInner) GetSecuritySystemManagementOk() (*string, bool) {
 
 // HasSecuritySystemManagement returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasSecuritySystemManagement() bool {
-	if o != nil && !IsNil(o.SecuritySystemManagement) {
+	if o != nil && !isNil(o.SecuritySystemManagement) {
 		return true
 	}
 
@@ -854,7 +851,7 @@ func (o *SystemResourceInner) SetSecuritySystemManagement(v string) {
 
 // GetSecuritySystemManagementNumeric returns the SecuritySystemManagementNumeric field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetSecuritySystemManagementNumeric() int64 {
-	if o == nil || IsNil(o.SecuritySystemManagementNumeric) {
+	if o == nil || isNil(o.SecuritySystemManagementNumeric) {
 		var ret int64
 		return ret
 	}
@@ -864,7 +861,7 @@ func (o *SystemResourceInner) GetSecuritySystemManagementNumeric() int64 {
 // GetSecuritySystemManagementNumericOk returns a tuple with the SecuritySystemManagementNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetSecuritySystemManagementNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SecuritySystemManagementNumeric) {
+	if o == nil || isNil(o.SecuritySystemManagementNumeric) {
 		return nil, false
 	}
 	return o.SecuritySystemManagementNumeric, true
@@ -872,7 +869,7 @@ func (o *SystemResourceInner) GetSecuritySystemManagementNumericOk() (*int64, bo
 
 // HasSecuritySystemManagementNumeric returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasSecuritySystemManagementNumeric() bool {
-	if o != nil && !IsNil(o.SecuritySystemManagementNumeric) {
+	if o != nil && !isNil(o.SecuritySystemManagementNumeric) {
 		return true
 	}
 
@@ -886,7 +883,7 @@ func (o *SystemResourceInner) SetSecuritySystemManagementNumeric(v int64) {
 
 // GetSupportedLocales returns the SupportedLocales field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetSupportedLocales() string {
-	if o == nil || IsNil(o.SupportedLocales) {
+	if o == nil || isNil(o.SupportedLocales) {
 		var ret string
 		return ret
 	}
@@ -896,7 +893,7 @@ func (o *SystemResourceInner) GetSupportedLocales() string {
 // GetSupportedLocalesOk returns a tuple with the SupportedLocales field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetSupportedLocalesOk() (*string, bool) {
-	if o == nil || IsNil(o.SupportedLocales) {
+	if o == nil || isNil(o.SupportedLocales) {
 		return nil, false
 	}
 	return o.SupportedLocales, true
@@ -904,7 +901,7 @@ func (o *SystemResourceInner) GetSupportedLocalesOk() (*string, bool) {
 
 // HasSupportedLocales returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasSupportedLocales() bool {
-	if o != nil && !IsNil(o.SupportedLocales) {
+	if o != nil && !isNil(o.SupportedLocales) {
 		return true
 	}
 
@@ -918,7 +915,7 @@ func (o *SystemResourceInner) SetSupportedLocales(v string) {
 
 // GetSystemContact returns the SystemContact field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetSystemContact() string {
-	if o == nil || IsNil(o.SystemContact) {
+	if o == nil || isNil(o.SystemContact) {
 		var ret string
 		return ret
 	}
@@ -928,7 +925,7 @@ func (o *SystemResourceInner) GetSystemContact() string {
 // GetSystemContactOk returns a tuple with the SystemContact field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetSystemContactOk() (*string, bool) {
-	if o == nil || IsNil(o.SystemContact) {
+	if o == nil || isNil(o.SystemContact) {
 		return nil, false
 	}
 	return o.SystemContact, true
@@ -936,7 +933,7 @@ func (o *SystemResourceInner) GetSystemContactOk() (*string, bool) {
 
 // HasSystemContact returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasSystemContact() bool {
-	if o != nil && !IsNil(o.SystemContact) {
+	if o != nil && !isNil(o.SystemContact) {
 		return true
 	}
 
@@ -950,7 +947,7 @@ func (o *SystemResourceInner) SetSystemContact(v string) {
 
 // GetSystemInformation returns the SystemInformation field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetSystemInformation() string {
-	if o == nil || IsNil(o.SystemInformation) {
+	if o == nil || isNil(o.SystemInformation) {
 		var ret string
 		return ret
 	}
@@ -960,7 +957,7 @@ func (o *SystemResourceInner) GetSystemInformation() string {
 // GetSystemInformationOk returns a tuple with the SystemInformation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetSystemInformationOk() (*string, bool) {
-	if o == nil || IsNil(o.SystemInformation) {
+	if o == nil || isNil(o.SystemInformation) {
 		return nil, false
 	}
 	return o.SystemInformation, true
@@ -968,7 +965,7 @@ func (o *SystemResourceInner) GetSystemInformationOk() (*string, bool) {
 
 // HasSystemInformation returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasSystemInformation() bool {
-	if o != nil && !IsNil(o.SystemInformation) {
+	if o != nil && !isNil(o.SystemInformation) {
 		return true
 	}
 
@@ -982,7 +979,7 @@ func (o *SystemResourceInner) SetSystemInformation(v string) {
 
 // GetSystemLocation returns the SystemLocation field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetSystemLocation() string {
-	if o == nil || IsNil(o.SystemLocation) {
+	if o == nil || isNil(o.SystemLocation) {
 		var ret string
 		return ret
 	}
@@ -992,7 +989,7 @@ func (o *SystemResourceInner) GetSystemLocation() string {
 // GetSystemLocationOk returns a tuple with the SystemLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetSystemLocationOk() (*string, bool) {
-	if o == nil || IsNil(o.SystemLocation) {
+	if o == nil || isNil(o.SystemLocation) {
 		return nil, false
 	}
 	return o.SystemLocation, true
@@ -1000,7 +997,7 @@ func (o *SystemResourceInner) GetSystemLocationOk() (*string, bool) {
 
 // HasSystemLocation returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasSystemLocation() bool {
-	if o != nil && !IsNil(o.SystemLocation) {
+	if o != nil && !isNil(o.SystemLocation) {
 		return true
 	}
 
@@ -1014,7 +1011,7 @@ func (o *SystemResourceInner) SetSystemLocation(v string) {
 
 // GetSystemName returns the SystemName field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetSystemName() string {
-	if o == nil || IsNil(o.SystemName) {
+	if o == nil || isNil(o.SystemName) {
 		var ret string
 		return ret
 	}
@@ -1024,7 +1021,7 @@ func (o *SystemResourceInner) GetSystemName() string {
 // GetSystemNameOk returns a tuple with the SystemName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetSystemNameOk() (*string, bool) {
-	if o == nil || IsNil(o.SystemName) {
+	if o == nil || isNil(o.SystemName) {
 		return nil, false
 	}
 	return o.SystemName, true
@@ -1032,7 +1029,7 @@ func (o *SystemResourceInner) GetSystemNameOk() (*string, bool) {
 
 // HasSystemName returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasSystemName() bool {
-	if o != nil && !IsNil(o.SystemName) {
+	if o != nil && !isNil(o.SystemName) {
 		return true
 	}
 
@@ -1046,7 +1043,7 @@ func (o *SystemResourceInner) SetSystemName(v string) {
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetUrl() string {
-	if o == nil || IsNil(o.Url) {
+	if o == nil || isNil(o.Url) {
 		var ret string
 		return ret
 	}
@@ -1056,7 +1053,7 @@ func (o *SystemResourceInner) GetUrl() string {
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetUrlOk() (*string, bool) {
-	if o == nil || IsNil(o.Url) {
+	if o == nil || isNil(o.Url) {
 		return nil, false
 	}
 	return o.Url, true
@@ -1064,7 +1061,7 @@ func (o *SystemResourceInner) GetUrlOk() (*string, bool) {
 
 // HasUrl returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasUrl() bool {
-	if o != nil && !IsNil(o.Url) {
+	if o != nil && !isNil(o.Url) {
 		return true
 	}
 
@@ -1078,7 +1075,7 @@ func (o *SystemResourceInner) SetUrl(v string) {
 
 // GetVendorName returns the VendorName field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetVendorName() string {
-	if o == nil || IsNil(o.VendorName) {
+	if o == nil || isNil(o.VendorName) {
 		var ret string
 		return ret
 	}
@@ -1088,7 +1085,7 @@ func (o *SystemResourceInner) GetVendorName() string {
 // GetVendorNameOk returns a tuple with the VendorName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetVendorNameOk() (*string, bool) {
-	if o == nil || IsNil(o.VendorName) {
+	if o == nil || isNil(o.VendorName) {
 		return nil, false
 	}
 	return o.VendorName, true
@@ -1096,7 +1093,7 @@ func (o *SystemResourceInner) GetVendorNameOk() (*string, bool) {
 
 // HasVendorName returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasVendorName() bool {
-	if o != nil && !IsNil(o.VendorName) {
+	if o != nil && !isNil(o.VendorName) {
 		return true
 	}
 
@@ -1110,7 +1107,7 @@ func (o *SystemResourceInner) SetVendorName(v string) {
 
 // GetRedundancy returns the Redundancy field value if set, zero value otherwise.
 func (o *SystemResourceInner) GetRedundancy() []RedundancyResourceInner {
-	if o == nil || IsNil(o.Redundancy) {
+	if o == nil || isNil(o.Redundancy) {
 		var ret []RedundancyResourceInner
 		return ret
 	}
@@ -1120,7 +1117,7 @@ func (o *SystemResourceInner) GetRedundancy() []RedundancyResourceInner {
 // GetRedundancyOk returns a tuple with the Redundancy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemResourceInner) GetRedundancyOk() ([]RedundancyResourceInner, bool) {
-	if o == nil || IsNil(o.Redundancy) {
+	if o == nil || isNil(o.Redundancy) {
 		return nil, false
 	}
 	return o.Redundancy, true
@@ -1128,7 +1125,7 @@ func (o *SystemResourceInner) GetRedundancyOk() ([]RedundancyResourceInner, bool
 
 // HasRedundancy returns a boolean if a field has been set.
 func (o *SystemResourceInner) HasRedundancy() bool {
-	if o != nil && !IsNil(o.Redundancy) {
+	if o != nil && !isNil(o.Redundancy) {
 		return true
 	}
 
@@ -1141,115 +1138,107 @@ func (o *SystemResourceInner) SetRedundancy(v []RedundancyResourceInner) {
 }
 
 func (o SystemResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o SystemResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.ConfigurationSelector) {
+	if !isNil(o.ConfigurationSelector) {
 		toSerialize["configuration-selector"] = o.ConfigurationSelector
 	}
-	if !IsNil(o.CurrentNodeWwn) {
+	if !isNil(o.CurrentNodeWwn) {
 		toSerialize["current-node-wwn"] = o.CurrentNodeWwn
 	}
-	if !IsNil(o.EnclosureCount) {
+	if !isNil(o.EnclosureCount) {
 		toSerialize["enclosure-count"] = o.EnclosureCount
 	}
-	if !IsNil(o.FdeSecurityStatus) {
+	if !isNil(o.FdeSecurityStatus) {
 		toSerialize["fde-security-status"] = o.FdeSecurityStatus
 	}
-	if !IsNil(o.FdeSecurityStatusNumeric) {
+	if !isNil(o.FdeSecurityStatusNumeric) {
 		toSerialize["fde-security-status-numeric"] = o.FdeSecurityStatusNumeric
 	}
-	if !IsNil(o.Health) {
+	if !isNil(o.Health) {
 		toSerialize["health"] = o.Health
 	}
-	if !IsNil(o.HealthNumeric) {
+	if !isNil(o.HealthNumeric) {
 		toSerialize["health-numeric"] = o.HealthNumeric
 	}
-	if !IsNil(o.HealthReason) {
+	if !isNil(o.HealthReason) {
 		toSerialize["health-reason"] = o.HealthReason
 	}
-	if !IsNil(o.MidplaneSerialNumber) {
+	if !isNil(o.MidplaneSerialNumber) {
 		toSerialize["midplane-serial-number"] = o.MidplaneSerialNumber
 	}
-	if !IsNil(o.OtherMCStatus) {
+	if !isNil(o.OtherMCStatus) {
 		toSerialize["other-MC-status"] = o.OtherMCStatus
 	}
-	if !IsNil(o.OtherMCStatusNumeric) {
+	if !isNil(o.OtherMCStatusNumeric) {
 		toSerialize["other-MC-status-numeric"] = o.OtherMCStatusNumeric
 	}
-	if !IsNil(o.PfuStatus) {
+	if !isNil(o.PfuStatus) {
 		toSerialize["pfuStatus"] = o.PfuStatus
 	}
-	if !IsNil(o.PfuStatusNumeric) {
+	if !isNil(o.PfuStatusNumeric) {
 		toSerialize["pfuStatus-numeric"] = o.PfuStatusNumeric
 	}
-	if !IsNil(o.PlatformBrand) {
+	if !isNil(o.PlatformBrand) {
 		toSerialize["platform-brand"] = o.PlatformBrand
 	}
-	if !IsNil(o.PlatformBrandNumeric) {
+	if !isNil(o.PlatformBrandNumeric) {
 		toSerialize["platform-brand-numeric"] = o.PlatformBrandNumeric
 	}
-	if !IsNil(o.PlatformType) {
+	if !isNil(o.PlatformType) {
 		toSerialize["platform-type"] = o.PlatformType
 	}
-	if !IsNil(o.PlatformTypeNumeric) {
+	if !isNil(o.PlatformTypeNumeric) {
 		toSerialize["platform-type-numeric"] = o.PlatformTypeNumeric
 	}
-	if !IsNil(o.ProductBrand) {
+	if !isNil(o.ProductBrand) {
 		toSerialize["product-brand"] = o.ProductBrand
 	}
-	if !IsNil(o.ProductId) {
+	if !isNil(o.ProductId) {
 		toSerialize["product-id"] = o.ProductId
 	}
-	if !IsNil(o.ScsiProductId) {
+	if !isNil(o.ScsiProductId) {
 		toSerialize["scsi-product-id"] = o.ScsiProductId
 	}
-	if !IsNil(o.ScsiVendorId) {
+	if !isNil(o.ScsiVendorId) {
 		toSerialize["scsi-vendor-id"] = o.ScsiVendorId
 	}
-	if !IsNil(o.SecuritySystemManagement) {
+	if !isNil(o.SecuritySystemManagement) {
 		toSerialize["security-system-management"] = o.SecuritySystemManagement
 	}
-	if !IsNil(o.SecuritySystemManagementNumeric) {
+	if !isNil(o.SecuritySystemManagementNumeric) {
 		toSerialize["security-system-management-numeric"] = o.SecuritySystemManagementNumeric
 	}
-	if !IsNil(o.SupportedLocales) {
+	if !isNil(o.SupportedLocales) {
 		toSerialize["supported-locales"] = o.SupportedLocales
 	}
-	if !IsNil(o.SystemContact) {
+	if !isNil(o.SystemContact) {
 		toSerialize["system-contact"] = o.SystemContact
 	}
-	if !IsNil(o.SystemInformation) {
+	if !isNil(o.SystemInformation) {
 		toSerialize["system-information"] = o.SystemInformation
 	}
-	if !IsNil(o.SystemLocation) {
+	if !isNil(o.SystemLocation) {
 		toSerialize["system-location"] = o.SystemLocation
 	}
-	if !IsNil(o.SystemName) {
+	if !isNil(o.SystemName) {
 		toSerialize["system-name"] = o.SystemName
 	}
-	if !IsNil(o.Url) {
+	if !isNil(o.Url) {
 		toSerialize["url"] = o.Url
 	}
-	if !IsNil(o.VendorName) {
+	if !isNil(o.VendorName) {
 		toSerialize["vendor-name"] = o.VendorName
 	}
-	if !IsNil(o.Redundancy) {
+	if !isNil(o.Redundancy) {
 		toSerialize["redundancy"] = o.Redundancy
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableSystemResourceInner struct {

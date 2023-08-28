@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the VolumesResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &VolumesResourceInner{}
-
 // VolumesResourceInner struct for VolumesResourceInner
 type VolumesResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
@@ -187,7 +184,7 @@ func NewVolumesResourceInnerWithDefaults() *VolumesResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -197,7 +194,7 @@ func (o *VolumesResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -205,7 +202,7 @@ func (o *VolumesResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -219,7 +216,7 @@ func (o *VolumesResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -229,7 +226,7 @@ func (o *VolumesResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -237,7 +234,7 @@ func (o *VolumesResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -251,7 +248,7 @@ func (o *VolumesResourceInner) SetMeta(v string) {
 
 // GetAllocateReservedPagesFirst returns the AllocateReservedPagesFirst field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetAllocateReservedPagesFirst() string {
-	if o == nil || IsNil(o.AllocateReservedPagesFirst) {
+	if o == nil || isNil(o.AllocateReservedPagesFirst) {
 		var ret string
 		return ret
 	}
@@ -261,7 +258,7 @@ func (o *VolumesResourceInner) GetAllocateReservedPagesFirst() string {
 // GetAllocateReservedPagesFirstOk returns a tuple with the AllocateReservedPagesFirst field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetAllocateReservedPagesFirstOk() (*string, bool) {
-	if o == nil || IsNil(o.AllocateReservedPagesFirst) {
+	if o == nil || isNil(o.AllocateReservedPagesFirst) {
 		return nil, false
 	}
 	return o.AllocateReservedPagesFirst, true
@@ -269,7 +266,7 @@ func (o *VolumesResourceInner) GetAllocateReservedPagesFirstOk() (*string, bool)
 
 // HasAllocateReservedPagesFirst returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasAllocateReservedPagesFirst() bool {
-	if o != nil && !IsNil(o.AllocateReservedPagesFirst) {
+	if o != nil && !isNil(o.AllocateReservedPagesFirst) {
 		return true
 	}
 
@@ -283,7 +280,7 @@ func (o *VolumesResourceInner) SetAllocateReservedPagesFirst(v string) {
 
 // GetAllocateReservedPagesFirstNumeric returns the AllocateReservedPagesFirstNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumeric() int64 {
-	if o == nil || IsNil(o.AllocateReservedPagesFirstNumeric) {
+	if o == nil || isNil(o.AllocateReservedPagesFirstNumeric) {
 		var ret int64
 		return ret
 	}
@@ -293,7 +290,7 @@ func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumeric() int64 {
 // GetAllocateReservedPagesFirstNumericOk returns a tuple with the AllocateReservedPagesFirstNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.AllocateReservedPagesFirstNumeric) {
+	if o == nil || isNil(o.AllocateReservedPagesFirstNumeric) {
 		return nil, false
 	}
 	return o.AllocateReservedPagesFirstNumeric, true
@@ -301,7 +298,7 @@ func (o *VolumesResourceInner) GetAllocateReservedPagesFirstNumericOk() (*int64,
 
 // HasAllocateReservedPagesFirstNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasAllocateReservedPagesFirstNumeric() bool {
-	if o != nil && !IsNil(o.AllocateReservedPagesFirstNumeric) {
+	if o != nil && !isNil(o.AllocateReservedPagesFirstNumeric) {
 		return true
 	}
 
@@ -315,7 +312,7 @@ func (o *VolumesResourceInner) SetAllocateReservedPagesFirstNumeric(v int64) {
 
 // GetAllocatedSize returns the AllocatedSize field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetAllocatedSize() string {
-	if o == nil || IsNil(o.AllocatedSize) {
+	if o == nil || isNil(o.AllocatedSize) {
 		var ret string
 		return ret
 	}
@@ -325,7 +322,7 @@ func (o *VolumesResourceInner) GetAllocatedSize() string {
 // GetAllocatedSizeOk returns a tuple with the AllocatedSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetAllocatedSizeOk() (*string, bool) {
-	if o == nil || IsNil(o.AllocatedSize) {
+	if o == nil || isNil(o.AllocatedSize) {
 		return nil, false
 	}
 	return o.AllocatedSize, true
@@ -333,7 +330,7 @@ func (o *VolumesResourceInner) GetAllocatedSizeOk() (*string, bool) {
 
 // HasAllocatedSize returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasAllocatedSize() bool {
-	if o != nil && !IsNil(o.AllocatedSize) {
+	if o != nil && !isNil(o.AllocatedSize) {
 		return true
 	}
 
@@ -347,7 +344,7 @@ func (o *VolumesResourceInner) SetAllocatedSize(v string) {
 
 // GetAllocatedSizeNumeric returns the AllocatedSizeNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetAllocatedSizeNumeric() int64 {
-	if o == nil || IsNil(o.AllocatedSizeNumeric) {
+	if o == nil || isNil(o.AllocatedSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -357,7 +354,7 @@ func (o *VolumesResourceInner) GetAllocatedSizeNumeric() int64 {
 // GetAllocatedSizeNumericOk returns a tuple with the AllocatedSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetAllocatedSizeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.AllocatedSizeNumeric) {
+	if o == nil || isNil(o.AllocatedSizeNumeric) {
 		return nil, false
 	}
 	return o.AllocatedSizeNumeric, true
@@ -365,7 +362,7 @@ func (o *VolumesResourceInner) GetAllocatedSizeNumericOk() (*int64, bool) {
 
 // HasAllocatedSizeNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasAllocatedSizeNumeric() bool {
-	if o != nil && !IsNil(o.AllocatedSizeNumeric) {
+	if o != nil && !isNil(o.AllocatedSizeNumeric) {
 		return true
 	}
 
@@ -379,7 +376,7 @@ func (o *VolumesResourceInner) SetAllocatedSizeNumeric(v int64) {
 
 // GetAllowedStorageTiers returns the AllowedStorageTiers field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetAllowedStorageTiers() string {
-	if o == nil || IsNil(o.AllowedStorageTiers) {
+	if o == nil || isNil(o.AllowedStorageTiers) {
 		var ret string
 		return ret
 	}
@@ -389,7 +386,7 @@ func (o *VolumesResourceInner) GetAllowedStorageTiers() string {
 // GetAllowedStorageTiersOk returns a tuple with the AllowedStorageTiers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetAllowedStorageTiersOk() (*string, bool) {
-	if o == nil || IsNil(o.AllowedStorageTiers) {
+	if o == nil || isNil(o.AllowedStorageTiers) {
 		return nil, false
 	}
 	return o.AllowedStorageTiers, true
@@ -397,7 +394,7 @@ func (o *VolumesResourceInner) GetAllowedStorageTiersOk() (*string, bool) {
 
 // HasAllowedStorageTiers returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasAllowedStorageTiers() bool {
-	if o != nil && !IsNil(o.AllowedStorageTiers) {
+	if o != nil && !isNil(o.AllowedStorageTiers) {
 		return true
 	}
 
@@ -411,7 +408,7 @@ func (o *VolumesResourceInner) SetAllowedStorageTiers(v string) {
 
 // GetAllowedStorageTiersNumeric returns the AllowedStorageTiersNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetAllowedStorageTiersNumeric() int64 {
-	if o == nil || IsNil(o.AllowedStorageTiersNumeric) {
+	if o == nil || isNil(o.AllowedStorageTiersNumeric) {
 		var ret int64
 		return ret
 	}
@@ -421,7 +418,7 @@ func (o *VolumesResourceInner) GetAllowedStorageTiersNumeric() int64 {
 // GetAllowedStorageTiersNumericOk returns a tuple with the AllowedStorageTiersNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetAllowedStorageTiersNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.AllowedStorageTiersNumeric) {
+	if o == nil || isNil(o.AllowedStorageTiersNumeric) {
 		return nil, false
 	}
 	return o.AllowedStorageTiersNumeric, true
@@ -429,7 +426,7 @@ func (o *VolumesResourceInner) GetAllowedStorageTiersNumericOk() (*int64, bool) 
 
 // HasAllowedStorageTiersNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasAllowedStorageTiersNumeric() bool {
-	if o != nil && !IsNil(o.AllowedStorageTiersNumeric) {
+	if o != nil && !isNil(o.AllowedStorageTiersNumeric) {
 		return true
 	}
 
@@ -443,7 +440,7 @@ func (o *VolumesResourceInner) SetAllowedStorageTiersNumeric(v int64) {
 
 // GetAttributes returns the Attributes field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetAttributes() string {
-	if o == nil || IsNil(o.Attributes) {
+	if o == nil || isNil(o.Attributes) {
 		var ret string
 		return ret
 	}
@@ -453,7 +450,7 @@ func (o *VolumesResourceInner) GetAttributes() string {
 // GetAttributesOk returns a tuple with the Attributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetAttributesOk() (*string, bool) {
-	if o == nil || IsNil(o.Attributes) {
+	if o == nil || isNil(o.Attributes) {
 		return nil, false
 	}
 	return o.Attributes, true
@@ -461,7 +458,7 @@ func (o *VolumesResourceInner) GetAttributesOk() (*string, bool) {
 
 // HasAttributes returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasAttributes() bool {
-	if o != nil && !IsNil(o.Attributes) {
+	if o != nil && !isNil(o.Attributes) {
 		return true
 	}
 
@@ -475,7 +472,7 @@ func (o *VolumesResourceInner) SetAttributes(v string) {
 
 // GetBlocks returns the Blocks field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetBlocks() int64 {
-	if o == nil || IsNil(o.Blocks) {
+	if o == nil || isNil(o.Blocks) {
 		var ret int64
 		return ret
 	}
@@ -485,7 +482,7 @@ func (o *VolumesResourceInner) GetBlocks() int64 {
 // GetBlocksOk returns a tuple with the Blocks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetBlocksOk() (*int64, bool) {
-	if o == nil || IsNil(o.Blocks) {
+	if o == nil || isNil(o.Blocks) {
 		return nil, false
 	}
 	return o.Blocks, true
@@ -493,7 +490,7 @@ func (o *VolumesResourceInner) GetBlocksOk() (*int64, bool) {
 
 // HasBlocks returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasBlocks() bool {
-	if o != nil && !IsNil(o.Blocks) {
+	if o != nil && !isNil(o.Blocks) {
 		return true
 	}
 
@@ -507,7 +504,7 @@ func (o *VolumesResourceInner) SetBlocks(v int64) {
 
 // GetBlocksize returns the Blocksize field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetBlocksize() int64 {
-	if o == nil || IsNil(o.Blocksize) {
+	if o == nil || isNil(o.Blocksize) {
 		var ret int64
 		return ret
 	}
@@ -517,7 +514,7 @@ func (o *VolumesResourceInner) GetBlocksize() int64 {
 // GetBlocksizeOk returns a tuple with the Blocksize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetBlocksizeOk() (*int64, bool) {
-	if o == nil || IsNil(o.Blocksize) {
+	if o == nil || isNil(o.Blocksize) {
 		return nil, false
 	}
 	return o.Blocksize, true
@@ -525,7 +522,7 @@ func (o *VolumesResourceInner) GetBlocksizeOk() (*int64, bool) {
 
 // HasBlocksize returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasBlocksize() bool {
-	if o != nil && !IsNil(o.Blocksize) {
+	if o != nil && !isNil(o.Blocksize) {
 		return true
 	}
 
@@ -539,7 +536,7 @@ func (o *VolumesResourceInner) SetBlocksize(v int64) {
 
 // GetCacheOptimization returns the CacheOptimization field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCacheOptimization() string {
-	if o == nil || IsNil(o.CacheOptimization) {
+	if o == nil || isNil(o.CacheOptimization) {
 		var ret string
 		return ret
 	}
@@ -549,7 +546,7 @@ func (o *VolumesResourceInner) GetCacheOptimization() string {
 // GetCacheOptimizationOk returns a tuple with the CacheOptimization field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCacheOptimizationOk() (*string, bool) {
-	if o == nil || IsNil(o.CacheOptimization) {
+	if o == nil || isNil(o.CacheOptimization) {
 		return nil, false
 	}
 	return o.CacheOptimization, true
@@ -557,7 +554,7 @@ func (o *VolumesResourceInner) GetCacheOptimizationOk() (*string, bool) {
 
 // HasCacheOptimization returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCacheOptimization() bool {
-	if o != nil && !IsNil(o.CacheOptimization) {
+	if o != nil && !isNil(o.CacheOptimization) {
 		return true
 	}
 
@@ -571,7 +568,7 @@ func (o *VolumesResourceInner) SetCacheOptimization(v string) {
 
 // GetCacheOptimizationNumeric returns the CacheOptimizationNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCacheOptimizationNumeric() int64 {
-	if o == nil || IsNil(o.CacheOptimizationNumeric) {
+	if o == nil || isNil(o.CacheOptimizationNumeric) {
 		var ret int64
 		return ret
 	}
@@ -581,7 +578,7 @@ func (o *VolumesResourceInner) GetCacheOptimizationNumeric() int64 {
 // GetCacheOptimizationNumericOk returns a tuple with the CacheOptimizationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCacheOptimizationNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.CacheOptimizationNumeric) {
+	if o == nil || isNil(o.CacheOptimizationNumeric) {
 		return nil, false
 	}
 	return o.CacheOptimizationNumeric, true
@@ -589,7 +586,7 @@ func (o *VolumesResourceInner) GetCacheOptimizationNumericOk() (*int64, bool) {
 
 // HasCacheOptimizationNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCacheOptimizationNumeric() bool {
-	if o != nil && !IsNil(o.CacheOptimizationNumeric) {
+	if o != nil && !isNil(o.CacheOptimizationNumeric) {
 		return true
 	}
 
@@ -603,7 +600,7 @@ func (o *VolumesResourceInner) SetCacheOptimizationNumeric(v int64) {
 
 // GetCapabilities returns the Capabilities field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCapabilities() string {
-	if o == nil || IsNil(o.Capabilities) {
+	if o == nil || isNil(o.Capabilities) {
 		var ret string
 		return ret
 	}
@@ -613,7 +610,7 @@ func (o *VolumesResourceInner) GetCapabilities() string {
 // GetCapabilitiesOk returns a tuple with the Capabilities field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCapabilitiesOk() (*string, bool) {
-	if o == nil || IsNil(o.Capabilities) {
+	if o == nil || isNil(o.Capabilities) {
 		return nil, false
 	}
 	return o.Capabilities, true
@@ -621,7 +618,7 @@ func (o *VolumesResourceInner) GetCapabilitiesOk() (*string, bool) {
 
 // HasCapabilities returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCapabilities() bool {
-	if o != nil && !IsNil(o.Capabilities) {
+	if o != nil && !isNil(o.Capabilities) {
 		return true
 	}
 
@@ -635,7 +632,7 @@ func (o *VolumesResourceInner) SetCapabilities(v string) {
 
 // GetCompression returns the Compression field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCompression() string {
-	if o == nil || IsNil(o.Compression) {
+	if o == nil || isNil(o.Compression) {
 		var ret string
 		return ret
 	}
@@ -645,7 +642,7 @@ func (o *VolumesResourceInner) GetCompression() string {
 // GetCompressionOk returns a tuple with the Compression field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCompressionOk() (*string, bool) {
-	if o == nil || IsNil(o.Compression) {
+	if o == nil || isNil(o.Compression) {
 		return nil, false
 	}
 	return o.Compression, true
@@ -653,7 +650,7 @@ func (o *VolumesResourceInner) GetCompressionOk() (*string, bool) {
 
 // HasCompression returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCompression() bool {
-	if o != nil && !IsNil(o.Compression) {
+	if o != nil && !isNil(o.Compression) {
 		return true
 	}
 
@@ -667,7 +664,7 @@ func (o *VolumesResourceInner) SetCompression(v string) {
 
 // GetCompressionEfficiency returns the CompressionEfficiency field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCompressionEfficiency() string {
-	if o == nil || IsNil(o.CompressionEfficiency) {
+	if o == nil || isNil(o.CompressionEfficiency) {
 		var ret string
 		return ret
 	}
@@ -677,7 +674,7 @@ func (o *VolumesResourceInner) GetCompressionEfficiency() string {
 // GetCompressionEfficiencyOk returns a tuple with the CompressionEfficiency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCompressionEfficiencyOk() (*string, bool) {
-	if o == nil || IsNil(o.CompressionEfficiency) {
+	if o == nil || isNil(o.CompressionEfficiency) {
 		return nil, false
 	}
 	return o.CompressionEfficiency, true
@@ -685,7 +682,7 @@ func (o *VolumesResourceInner) GetCompressionEfficiencyOk() (*string, bool) {
 
 // HasCompressionEfficiency returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCompressionEfficiency() bool {
-	if o != nil && !IsNil(o.CompressionEfficiency) {
+	if o != nil && !isNil(o.CompressionEfficiency) {
 		return true
 	}
 
@@ -699,7 +696,7 @@ func (o *VolumesResourceInner) SetCompressionEfficiency(v string) {
 
 // GetCompressionNumeric returns the CompressionNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCompressionNumeric() int64 {
-	if o == nil || IsNil(o.CompressionNumeric) {
+	if o == nil || isNil(o.CompressionNumeric) {
 		var ret int64
 		return ret
 	}
@@ -709,7 +706,7 @@ func (o *VolumesResourceInner) GetCompressionNumeric() int64 {
 // GetCompressionNumericOk returns a tuple with the CompressionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCompressionNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.CompressionNumeric) {
+	if o == nil || isNil(o.CompressionNumeric) {
 		return nil, false
 	}
 	return o.CompressionNumeric, true
@@ -717,7 +714,7 @@ func (o *VolumesResourceInner) GetCompressionNumericOk() (*int64, bool) {
 
 // HasCompressionNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCompressionNumeric() bool {
-	if o != nil && !IsNil(o.CompressionNumeric) {
+	if o != nil && !isNil(o.CompressionNumeric) {
 		return true
 	}
 
@@ -731,7 +728,7 @@ func (o *VolumesResourceInner) SetCompressionNumeric(v int64) {
 
 // GetContainerName returns the ContainerName field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetContainerName() string {
-	if o == nil || IsNil(o.ContainerName) {
+	if o == nil || isNil(o.ContainerName) {
 		var ret string
 		return ret
 	}
@@ -741,7 +738,7 @@ func (o *VolumesResourceInner) GetContainerName() string {
 // GetContainerNameOk returns a tuple with the ContainerName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetContainerNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ContainerName) {
+	if o == nil || isNil(o.ContainerName) {
 		return nil, false
 	}
 	return o.ContainerName, true
@@ -749,7 +746,7 @@ func (o *VolumesResourceInner) GetContainerNameOk() (*string, bool) {
 
 // HasContainerName returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasContainerName() bool {
-	if o != nil && !IsNil(o.ContainerName) {
+	if o != nil && !isNil(o.ContainerName) {
 		return true
 	}
 
@@ -763,7 +760,7 @@ func (o *VolumesResourceInner) SetContainerName(v string) {
 
 // GetContainerSerial returns the ContainerSerial field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetContainerSerial() string {
-	if o == nil || IsNil(o.ContainerSerial) {
+	if o == nil || isNil(o.ContainerSerial) {
 		var ret string
 		return ret
 	}
@@ -773,7 +770,7 @@ func (o *VolumesResourceInner) GetContainerSerial() string {
 // GetContainerSerialOk returns a tuple with the ContainerSerial field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetContainerSerialOk() (*string, bool) {
-	if o == nil || IsNil(o.ContainerSerial) {
+	if o == nil || isNil(o.ContainerSerial) {
 		return nil, false
 	}
 	return o.ContainerSerial, true
@@ -781,7 +778,7 @@ func (o *VolumesResourceInner) GetContainerSerialOk() (*string, bool) {
 
 // HasContainerSerial returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasContainerSerial() bool {
-	if o != nil && !IsNil(o.ContainerSerial) {
+	if o != nil && !isNil(o.ContainerSerial) {
 		return true
 	}
 
@@ -795,7 +792,7 @@ func (o *VolumesResourceInner) SetContainerSerial(v string) {
 
 // GetCreationDateTime returns the CreationDateTime field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCreationDateTime() string {
-	if o == nil || IsNil(o.CreationDateTime) {
+	if o == nil || isNil(o.CreationDateTime) {
 		var ret string
 		return ret
 	}
@@ -805,7 +802,7 @@ func (o *VolumesResourceInner) GetCreationDateTime() string {
 // GetCreationDateTimeOk returns a tuple with the CreationDateTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCreationDateTimeOk() (*string, bool) {
-	if o == nil || IsNil(o.CreationDateTime) {
+	if o == nil || isNil(o.CreationDateTime) {
 		return nil, false
 	}
 	return o.CreationDateTime, true
@@ -813,7 +810,7 @@ func (o *VolumesResourceInner) GetCreationDateTimeOk() (*string, bool) {
 
 // HasCreationDateTime returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCreationDateTime() bool {
-	if o != nil && !IsNil(o.CreationDateTime) {
+	if o != nil && !isNil(o.CreationDateTime) {
 		return true
 	}
 
@@ -827,7 +824,7 @@ func (o *VolumesResourceInner) SetCreationDateTime(v string) {
 
 // GetCreationDateTimeNumeric returns the CreationDateTimeNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCreationDateTimeNumeric() int64 {
-	if o == nil || IsNil(o.CreationDateTimeNumeric) {
+	if o == nil || isNil(o.CreationDateTimeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -837,7 +834,7 @@ func (o *VolumesResourceInner) GetCreationDateTimeNumeric() int64 {
 // GetCreationDateTimeNumericOk returns a tuple with the CreationDateTimeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCreationDateTimeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.CreationDateTimeNumeric) {
+	if o == nil || isNil(o.CreationDateTimeNumeric) {
 		return nil, false
 	}
 	return o.CreationDateTimeNumeric, true
@@ -845,7 +842,7 @@ func (o *VolumesResourceInner) GetCreationDateTimeNumericOk() (*int64, bool) {
 
 // HasCreationDateTimeNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCreationDateTimeNumeric() bool {
-	if o != nil && !IsNil(o.CreationDateTimeNumeric) {
+	if o != nil && !isNil(o.CreationDateTimeNumeric) {
 		return true
 	}
 
@@ -859,7 +856,7 @@ func (o *VolumesResourceInner) SetCreationDateTimeNumeric(v int64) {
 
 // GetCsCopyDest returns the CsCopyDest field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCsCopyDest() string {
-	if o == nil || IsNil(o.CsCopyDest) {
+	if o == nil || isNil(o.CsCopyDest) {
 		var ret string
 		return ret
 	}
@@ -869,7 +866,7 @@ func (o *VolumesResourceInner) GetCsCopyDest() string {
 // GetCsCopyDestOk returns a tuple with the CsCopyDest field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCsCopyDestOk() (*string, bool) {
-	if o == nil || IsNil(o.CsCopyDest) {
+	if o == nil || isNil(o.CsCopyDest) {
 		return nil, false
 	}
 	return o.CsCopyDest, true
@@ -877,7 +874,7 @@ func (o *VolumesResourceInner) GetCsCopyDestOk() (*string, bool) {
 
 // HasCsCopyDest returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCsCopyDest() bool {
-	if o != nil && !IsNil(o.CsCopyDest) {
+	if o != nil && !isNil(o.CsCopyDest) {
 		return true
 	}
 
@@ -891,7 +888,7 @@ func (o *VolumesResourceInner) SetCsCopyDest(v string) {
 
 // GetCsCopyDestNumeric returns the CsCopyDestNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCsCopyDestNumeric() int64 {
-	if o == nil || IsNil(o.CsCopyDestNumeric) {
+	if o == nil || isNil(o.CsCopyDestNumeric) {
 		var ret int64
 		return ret
 	}
@@ -901,7 +898,7 @@ func (o *VolumesResourceInner) GetCsCopyDestNumeric() int64 {
 // GetCsCopyDestNumericOk returns a tuple with the CsCopyDestNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCsCopyDestNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.CsCopyDestNumeric) {
+	if o == nil || isNil(o.CsCopyDestNumeric) {
 		return nil, false
 	}
 	return o.CsCopyDestNumeric, true
@@ -909,7 +906,7 @@ func (o *VolumesResourceInner) GetCsCopyDestNumericOk() (*int64, bool) {
 
 // HasCsCopyDestNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCsCopyDestNumeric() bool {
-	if o != nil && !IsNil(o.CsCopyDestNumeric) {
+	if o != nil && !isNil(o.CsCopyDestNumeric) {
 		return true
 	}
 
@@ -923,7 +920,7 @@ func (o *VolumesResourceInner) SetCsCopyDestNumeric(v int64) {
 
 // GetCsCopySrc returns the CsCopySrc field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCsCopySrc() string {
-	if o == nil || IsNil(o.CsCopySrc) {
+	if o == nil || isNil(o.CsCopySrc) {
 		var ret string
 		return ret
 	}
@@ -933,7 +930,7 @@ func (o *VolumesResourceInner) GetCsCopySrc() string {
 // GetCsCopySrcOk returns a tuple with the CsCopySrc field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCsCopySrcOk() (*string, bool) {
-	if o == nil || IsNil(o.CsCopySrc) {
+	if o == nil || isNil(o.CsCopySrc) {
 		return nil, false
 	}
 	return o.CsCopySrc, true
@@ -941,7 +938,7 @@ func (o *VolumesResourceInner) GetCsCopySrcOk() (*string, bool) {
 
 // HasCsCopySrc returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCsCopySrc() bool {
-	if o != nil && !IsNil(o.CsCopySrc) {
+	if o != nil && !isNil(o.CsCopySrc) {
 		return true
 	}
 
@@ -955,7 +952,7 @@ func (o *VolumesResourceInner) SetCsCopySrc(v string) {
 
 // GetCsCopySrcNumeric returns the CsCopySrcNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCsCopySrcNumeric() int64 {
-	if o == nil || IsNil(o.CsCopySrcNumeric) {
+	if o == nil || isNil(o.CsCopySrcNumeric) {
 		var ret int64
 		return ret
 	}
@@ -965,7 +962,7 @@ func (o *VolumesResourceInner) GetCsCopySrcNumeric() int64 {
 // GetCsCopySrcNumericOk returns a tuple with the CsCopySrcNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCsCopySrcNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.CsCopySrcNumeric) {
+	if o == nil || isNil(o.CsCopySrcNumeric) {
 		return nil, false
 	}
 	return o.CsCopySrcNumeric, true
@@ -973,7 +970,7 @@ func (o *VolumesResourceInner) GetCsCopySrcNumericOk() (*int64, bool) {
 
 // HasCsCopySrcNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCsCopySrcNumeric() bool {
-	if o != nil && !IsNil(o.CsCopySrcNumeric) {
+	if o != nil && !isNil(o.CsCopySrcNumeric) {
 		return true
 	}
 
@@ -987,7 +984,7 @@ func (o *VolumesResourceInner) SetCsCopySrcNumeric(v int64) {
 
 // GetCsPrimary returns the CsPrimary field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCsPrimary() string {
-	if o == nil || IsNil(o.CsPrimary) {
+	if o == nil || isNil(o.CsPrimary) {
 		var ret string
 		return ret
 	}
@@ -997,7 +994,7 @@ func (o *VolumesResourceInner) GetCsPrimary() string {
 // GetCsPrimaryOk returns a tuple with the CsPrimary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCsPrimaryOk() (*string, bool) {
-	if o == nil || IsNil(o.CsPrimary) {
+	if o == nil || isNil(o.CsPrimary) {
 		return nil, false
 	}
 	return o.CsPrimary, true
@@ -1005,7 +1002,7 @@ func (o *VolumesResourceInner) GetCsPrimaryOk() (*string, bool) {
 
 // HasCsPrimary returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCsPrimary() bool {
-	if o != nil && !IsNil(o.CsPrimary) {
+	if o != nil && !isNil(o.CsPrimary) {
 		return true
 	}
 
@@ -1019,7 +1016,7 @@ func (o *VolumesResourceInner) SetCsPrimary(v string) {
 
 // GetCsPrimaryNumeric returns the CsPrimaryNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCsPrimaryNumeric() int64 {
-	if o == nil || IsNil(o.CsPrimaryNumeric) {
+	if o == nil || isNil(o.CsPrimaryNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1029,7 +1026,7 @@ func (o *VolumesResourceInner) GetCsPrimaryNumeric() int64 {
 // GetCsPrimaryNumericOk returns a tuple with the CsPrimaryNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCsPrimaryNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.CsPrimaryNumeric) {
+	if o == nil || isNil(o.CsPrimaryNumeric) {
 		return nil, false
 	}
 	return o.CsPrimaryNumeric, true
@@ -1037,7 +1034,7 @@ func (o *VolumesResourceInner) GetCsPrimaryNumericOk() (*int64, bool) {
 
 // HasCsPrimaryNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCsPrimaryNumeric() bool {
-	if o != nil && !IsNil(o.CsPrimaryNumeric) {
+	if o != nil && !isNil(o.CsPrimaryNumeric) {
 		return true
 	}
 
@@ -1051,7 +1048,7 @@ func (o *VolumesResourceInner) SetCsPrimaryNumeric(v int64) {
 
 // GetCsReplicationRole returns the CsReplicationRole field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCsReplicationRole() string {
-	if o == nil || IsNil(o.CsReplicationRole) {
+	if o == nil || isNil(o.CsReplicationRole) {
 		var ret string
 		return ret
 	}
@@ -1061,7 +1058,7 @@ func (o *VolumesResourceInner) GetCsReplicationRole() string {
 // GetCsReplicationRoleOk returns a tuple with the CsReplicationRole field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCsReplicationRoleOk() (*string, bool) {
-	if o == nil || IsNil(o.CsReplicationRole) {
+	if o == nil || isNil(o.CsReplicationRole) {
 		return nil, false
 	}
 	return o.CsReplicationRole, true
@@ -1069,7 +1066,7 @@ func (o *VolumesResourceInner) GetCsReplicationRoleOk() (*string, bool) {
 
 // HasCsReplicationRole returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCsReplicationRole() bool {
-	if o != nil && !IsNil(o.CsReplicationRole) {
+	if o != nil && !isNil(o.CsReplicationRole) {
 		return true
 	}
 
@@ -1083,7 +1080,7 @@ func (o *VolumesResourceInner) SetCsReplicationRole(v string) {
 
 // GetCsSecondary returns the CsSecondary field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCsSecondary() string {
-	if o == nil || IsNil(o.CsSecondary) {
+	if o == nil || isNil(o.CsSecondary) {
 		var ret string
 		return ret
 	}
@@ -1093,7 +1090,7 @@ func (o *VolumesResourceInner) GetCsSecondary() string {
 // GetCsSecondaryOk returns a tuple with the CsSecondary field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCsSecondaryOk() (*string, bool) {
-	if o == nil || IsNil(o.CsSecondary) {
+	if o == nil || isNil(o.CsSecondary) {
 		return nil, false
 	}
 	return o.CsSecondary, true
@@ -1101,7 +1098,7 @@ func (o *VolumesResourceInner) GetCsSecondaryOk() (*string, bool) {
 
 // HasCsSecondary returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCsSecondary() bool {
-	if o != nil && !IsNil(o.CsSecondary) {
+	if o != nil && !isNil(o.CsSecondary) {
 		return true
 	}
 
@@ -1115,7 +1112,7 @@ func (o *VolumesResourceInner) SetCsSecondary(v string) {
 
 // GetCsSecondaryNumeric returns the CsSecondaryNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetCsSecondaryNumeric() int64 {
-	if o == nil || IsNil(o.CsSecondaryNumeric) {
+	if o == nil || isNil(o.CsSecondaryNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1125,7 +1122,7 @@ func (o *VolumesResourceInner) GetCsSecondaryNumeric() int64 {
 // GetCsSecondaryNumericOk returns a tuple with the CsSecondaryNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetCsSecondaryNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.CsSecondaryNumeric) {
+	if o == nil || isNil(o.CsSecondaryNumeric) {
 		return nil, false
 	}
 	return o.CsSecondaryNumeric, true
@@ -1133,7 +1130,7 @@ func (o *VolumesResourceInner) GetCsSecondaryNumericOk() (*int64, bool) {
 
 // HasCsSecondaryNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasCsSecondaryNumeric() bool {
-	if o != nil && !IsNil(o.CsSecondaryNumeric) {
+	if o != nil && !isNil(o.CsSecondaryNumeric) {
 		return true
 	}
 
@@ -1147,7 +1144,7 @@ func (o *VolumesResourceInner) SetCsSecondaryNumeric(v int64) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetDurableId() string {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -1157,7 +1154,7 @@ func (o *VolumesResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -1165,7 +1162,7 @@ func (o *VolumesResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasDurableId() bool {
-	if o != nil && !IsNil(o.DurableId) {
+	if o != nil && !isNil(o.DurableId) {
 		return true
 	}
 
@@ -1179,7 +1176,7 @@ func (o *VolumesResourceInner) SetDurableId(v string) {
 
 // GetGroupKey returns the GroupKey field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetGroupKey() string {
-	if o == nil || IsNil(o.GroupKey) {
+	if o == nil || isNil(o.GroupKey) {
 		var ret string
 		return ret
 	}
@@ -1189,7 +1186,7 @@ func (o *VolumesResourceInner) GetGroupKey() string {
 // GetGroupKeyOk returns a tuple with the GroupKey field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetGroupKeyOk() (*string, bool) {
-	if o == nil || IsNil(o.GroupKey) {
+	if o == nil || isNil(o.GroupKey) {
 		return nil, false
 	}
 	return o.GroupKey, true
@@ -1197,7 +1194,7 @@ func (o *VolumesResourceInner) GetGroupKeyOk() (*string, bool) {
 
 // HasGroupKey returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasGroupKey() bool {
-	if o != nil && !IsNil(o.GroupKey) {
+	if o != nil && !isNil(o.GroupKey) {
 		return true
 	}
 
@@ -1211,7 +1208,7 @@ func (o *VolumesResourceInner) SetGroupKey(v string) {
 
 // GetHealth returns the Health field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetHealth() string {
-	if o == nil || IsNil(o.Health) {
+	if o == nil || isNil(o.Health) {
 		var ret string
 		return ret
 	}
@@ -1221,7 +1218,7 @@ func (o *VolumesResourceInner) GetHealth() string {
 // GetHealthOk returns a tuple with the Health field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetHealthOk() (*string, bool) {
-	if o == nil || IsNil(o.Health) {
+	if o == nil || isNil(o.Health) {
 		return nil, false
 	}
 	return o.Health, true
@@ -1229,7 +1226,7 @@ func (o *VolumesResourceInner) GetHealthOk() (*string, bool) {
 
 // HasHealth returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasHealth() bool {
-	if o != nil && !IsNil(o.Health) {
+	if o != nil && !isNil(o.Health) {
 		return true
 	}
 
@@ -1243,7 +1240,7 @@ func (o *VolumesResourceInner) SetHealth(v string) {
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetHealthNumeric() int64 {
-	if o == nil || IsNil(o.HealthNumeric) {
+	if o == nil || isNil(o.HealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1253,7 +1250,7 @@ func (o *VolumesResourceInner) GetHealthNumeric() int64 {
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetHealthNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.HealthNumeric) {
+	if o == nil || isNil(o.HealthNumeric) {
 		return nil, false
 	}
 	return o.HealthNumeric, true
@@ -1261,7 +1258,7 @@ func (o *VolumesResourceInner) GetHealthNumericOk() (*int64, bool) {
 
 // HasHealthNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasHealthNumeric() bool {
-	if o != nil && !IsNil(o.HealthNumeric) {
+	if o != nil && !isNil(o.HealthNumeric) {
 		return true
 	}
 
@@ -1275,7 +1272,7 @@ func (o *VolumesResourceInner) SetHealthNumeric(v int64) {
 
 // GetHealthReason returns the HealthReason field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetHealthReason() string {
-	if o == nil || IsNil(o.HealthReason) {
+	if o == nil || isNil(o.HealthReason) {
 		var ret string
 		return ret
 	}
@@ -1285,7 +1282,7 @@ func (o *VolumesResourceInner) GetHealthReason() string {
 // GetHealthReasonOk returns a tuple with the HealthReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetHealthReasonOk() (*string, bool) {
-	if o == nil || IsNil(o.HealthReason) {
+	if o == nil || isNil(o.HealthReason) {
 		return nil, false
 	}
 	return o.HealthReason, true
@@ -1293,7 +1290,7 @@ func (o *VolumesResourceInner) GetHealthReasonOk() (*string, bool) {
 
 // HasHealthReason returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasHealthReason() bool {
-	if o != nil && !IsNil(o.HealthReason) {
+	if o != nil && !isNil(o.HealthReason) {
 		return true
 	}
 
@@ -1307,7 +1304,7 @@ func (o *VolumesResourceInner) SetHealthReason(v string) {
 
 // GetHealthRecommendation returns the HealthRecommendation field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetHealthRecommendation() string {
-	if o == nil || IsNil(o.HealthRecommendation) {
+	if o == nil || isNil(o.HealthRecommendation) {
 		var ret string
 		return ret
 	}
@@ -1317,7 +1314,7 @@ func (o *VolumesResourceInner) GetHealthRecommendation() string {
 // GetHealthRecommendationOk returns a tuple with the HealthRecommendation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetHealthRecommendationOk() (*string, bool) {
-	if o == nil || IsNil(o.HealthRecommendation) {
+	if o == nil || isNil(o.HealthRecommendation) {
 		return nil, false
 	}
 	return o.HealthRecommendation, true
@@ -1325,7 +1322,7 @@ func (o *VolumesResourceInner) GetHealthRecommendationOk() (*string, bool) {
 
 // HasHealthRecommendation returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasHealthRecommendation() bool {
-	if o != nil && !IsNil(o.HealthRecommendation) {
+	if o != nil && !isNil(o.HealthRecommendation) {
 		return true
 	}
 
@@ -1339,7 +1336,7 @@ func (o *VolumesResourceInner) SetHealthRecommendation(v string) {
 
 // GetInterleaved returns the Interleaved field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetInterleaved() string {
-	if o == nil || IsNil(o.Interleaved) {
+	if o == nil || isNil(o.Interleaved) {
 		var ret string
 		return ret
 	}
@@ -1349,7 +1346,7 @@ func (o *VolumesResourceInner) GetInterleaved() string {
 // GetInterleavedOk returns a tuple with the Interleaved field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetInterleavedOk() (*string, bool) {
-	if o == nil || IsNil(o.Interleaved) {
+	if o == nil || isNil(o.Interleaved) {
 		return nil, false
 	}
 	return o.Interleaved, true
@@ -1357,7 +1354,7 @@ func (o *VolumesResourceInner) GetInterleavedOk() (*string, bool) {
 
 // HasInterleaved returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasInterleaved() bool {
-	if o != nil && !IsNil(o.Interleaved) {
+	if o != nil && !isNil(o.Interleaved) {
 		return true
 	}
 
@@ -1371,7 +1368,7 @@ func (o *VolumesResourceInner) SetInterleaved(v string) {
 
 // GetInterleavedNumeric returns the InterleavedNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetInterleavedNumeric() int64 {
-	if o == nil || IsNil(o.InterleavedNumeric) {
+	if o == nil || isNil(o.InterleavedNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1381,7 +1378,7 @@ func (o *VolumesResourceInner) GetInterleavedNumeric() int64 {
 // GetInterleavedNumericOk returns a tuple with the InterleavedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetInterleavedNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.InterleavedNumeric) {
+	if o == nil || isNil(o.InterleavedNumeric) {
 		return nil, false
 	}
 	return o.InterleavedNumeric, true
@@ -1389,7 +1386,7 @@ func (o *VolumesResourceInner) GetInterleavedNumericOk() (*int64, bool) {
 
 // HasInterleavedNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasInterleavedNumeric() bool {
-	if o != nil && !IsNil(o.InterleavedNumeric) {
+	if o != nil && !isNil(o.InterleavedNumeric) {
 		return true
 	}
 
@@ -1403,7 +1400,7 @@ func (o *VolumesResourceInner) SetInterleavedNumeric(v int64) {
 
 // GetLargeVirtualExtents returns the LargeVirtualExtents field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetLargeVirtualExtents() string {
-	if o == nil || IsNil(o.LargeVirtualExtents) {
+	if o == nil || isNil(o.LargeVirtualExtents) {
 		var ret string
 		return ret
 	}
@@ -1413,7 +1410,7 @@ func (o *VolumesResourceInner) GetLargeVirtualExtents() string {
 // GetLargeVirtualExtentsOk returns a tuple with the LargeVirtualExtents field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetLargeVirtualExtentsOk() (*string, bool) {
-	if o == nil || IsNil(o.LargeVirtualExtents) {
+	if o == nil || isNil(o.LargeVirtualExtents) {
 		return nil, false
 	}
 	return o.LargeVirtualExtents, true
@@ -1421,7 +1418,7 @@ func (o *VolumesResourceInner) GetLargeVirtualExtentsOk() (*string, bool) {
 
 // HasLargeVirtualExtents returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasLargeVirtualExtents() bool {
-	if o != nil && !IsNil(o.LargeVirtualExtents) {
+	if o != nil && !isNil(o.LargeVirtualExtents) {
 		return true
 	}
 
@@ -1435,7 +1432,7 @@ func (o *VolumesResourceInner) SetLargeVirtualExtents(v string) {
 
 // GetLargeVirtualExtentsNumeric returns the LargeVirtualExtentsNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetLargeVirtualExtentsNumeric() int64 {
-	if o == nil || IsNil(o.LargeVirtualExtentsNumeric) {
+	if o == nil || isNil(o.LargeVirtualExtentsNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1445,7 +1442,7 @@ func (o *VolumesResourceInner) GetLargeVirtualExtentsNumeric() int64 {
 // GetLargeVirtualExtentsNumericOk returns a tuple with the LargeVirtualExtentsNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetLargeVirtualExtentsNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.LargeVirtualExtentsNumeric) {
+	if o == nil || isNil(o.LargeVirtualExtentsNumeric) {
 		return nil, false
 	}
 	return o.LargeVirtualExtentsNumeric, true
@@ -1453,7 +1450,7 @@ func (o *VolumesResourceInner) GetLargeVirtualExtentsNumericOk() (*int64, bool) 
 
 // HasLargeVirtualExtentsNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasLargeVirtualExtentsNumeric() bool {
-	if o != nil && !IsNil(o.LargeVirtualExtentsNumeric) {
+	if o != nil && !isNil(o.LargeVirtualExtentsNumeric) {
 		return true
 	}
 
@@ -1467,7 +1464,7 @@ func (o *VolumesResourceInner) SetLargeVirtualExtentsNumeric(v int64) {
 
 // GetMetadataInUse returns the MetadataInUse field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetMetadataInUse() string {
-	if o == nil || IsNil(o.MetadataInUse) {
+	if o == nil || isNil(o.MetadataInUse) {
 		var ret string
 		return ret
 	}
@@ -1477,7 +1474,7 @@ func (o *VolumesResourceInner) GetMetadataInUse() string {
 // GetMetadataInUseOk returns a tuple with the MetadataInUse field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetMetadataInUseOk() (*string, bool) {
-	if o == nil || IsNil(o.MetadataInUse) {
+	if o == nil || isNil(o.MetadataInUse) {
 		return nil, false
 	}
 	return o.MetadataInUse, true
@@ -1485,7 +1482,7 @@ func (o *VolumesResourceInner) GetMetadataInUseOk() (*string, bool) {
 
 // HasMetadataInUse returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasMetadataInUse() bool {
-	if o != nil && !IsNil(o.MetadataInUse) {
+	if o != nil && !isNil(o.MetadataInUse) {
 		return true
 	}
 
@@ -1499,7 +1496,7 @@ func (o *VolumesResourceInner) SetMetadataInUse(v string) {
 
 // GetMetadataInUseNumeric returns the MetadataInUseNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetMetadataInUseNumeric() int64 {
-	if o == nil || IsNil(o.MetadataInUseNumeric) {
+	if o == nil || isNil(o.MetadataInUseNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1509,7 +1506,7 @@ func (o *VolumesResourceInner) GetMetadataInUseNumeric() int64 {
 // GetMetadataInUseNumericOk returns a tuple with the MetadataInUseNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetMetadataInUseNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.MetadataInUseNumeric) {
+	if o == nil || isNil(o.MetadataInUseNumeric) {
 		return nil, false
 	}
 	return o.MetadataInUseNumeric, true
@@ -1517,7 +1514,7 @@ func (o *VolumesResourceInner) GetMetadataInUseNumericOk() (*int64, bool) {
 
 // HasMetadataInUseNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasMetadataInUseNumeric() bool {
-	if o != nil && !IsNil(o.MetadataInUseNumeric) {
+	if o != nil && !isNil(o.MetadataInUseNumeric) {
 		return true
 	}
 
@@ -1531,7 +1528,7 @@ func (o *VolumesResourceInner) SetMetadataInUseNumeric(v int64) {
 
 // GetOwner returns the Owner field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetOwner() string {
-	if o == nil || IsNil(o.Owner) {
+	if o == nil || isNil(o.Owner) {
 		var ret string
 		return ret
 	}
@@ -1541,7 +1538,7 @@ func (o *VolumesResourceInner) GetOwner() string {
 // GetOwnerOk returns a tuple with the Owner field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetOwnerOk() (*string, bool) {
-	if o == nil || IsNil(o.Owner) {
+	if o == nil || isNil(o.Owner) {
 		return nil, false
 	}
 	return o.Owner, true
@@ -1549,7 +1546,7 @@ func (o *VolumesResourceInner) GetOwnerOk() (*string, bool) {
 
 // HasOwner returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasOwner() bool {
-	if o != nil && !IsNil(o.Owner) {
+	if o != nil && !isNil(o.Owner) {
 		return true
 	}
 
@@ -1563,7 +1560,7 @@ func (o *VolumesResourceInner) SetOwner(v string) {
 
 // GetOwnerNumeric returns the OwnerNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetOwnerNumeric() int64 {
-	if o == nil || IsNil(o.OwnerNumeric) {
+	if o == nil || isNil(o.OwnerNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1573,7 +1570,7 @@ func (o *VolumesResourceInner) GetOwnerNumeric() int64 {
 // GetOwnerNumericOk returns a tuple with the OwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetOwnerNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.OwnerNumeric) {
+	if o == nil || isNil(o.OwnerNumeric) {
 		return nil, false
 	}
 	return o.OwnerNumeric, true
@@ -1581,7 +1578,7 @@ func (o *VolumesResourceInner) GetOwnerNumericOk() (*int64, bool) {
 
 // HasOwnerNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasOwnerNumeric() bool {
-	if o != nil && !IsNil(o.OwnerNumeric) {
+	if o != nil && !isNil(o.OwnerNumeric) {
 		return true
 	}
 
@@ -1595,7 +1592,7 @@ func (o *VolumesResourceInner) SetOwnerNumeric(v int64) {
 
 // GetPiFormat returns the PiFormat field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetPiFormat() string {
-	if o == nil || IsNil(o.PiFormat) {
+	if o == nil || isNil(o.PiFormat) {
 		var ret string
 		return ret
 	}
@@ -1605,7 +1602,7 @@ func (o *VolumesResourceInner) GetPiFormat() string {
 // GetPiFormatOk returns a tuple with the PiFormat field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetPiFormatOk() (*string, bool) {
-	if o == nil || IsNil(o.PiFormat) {
+	if o == nil || isNil(o.PiFormat) {
 		return nil, false
 	}
 	return o.PiFormat, true
@@ -1613,7 +1610,7 @@ func (o *VolumesResourceInner) GetPiFormatOk() (*string, bool) {
 
 // HasPiFormat returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasPiFormat() bool {
-	if o != nil && !IsNil(o.PiFormat) {
+	if o != nil && !isNil(o.PiFormat) {
 		return true
 	}
 
@@ -1627,7 +1624,7 @@ func (o *VolumesResourceInner) SetPiFormat(v string) {
 
 // GetPiFormatNumeric returns the PiFormatNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetPiFormatNumeric() int64 {
-	if o == nil || IsNil(o.PiFormatNumeric) {
+	if o == nil || isNil(o.PiFormatNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1637,7 +1634,7 @@ func (o *VolumesResourceInner) GetPiFormatNumeric() int64 {
 // GetPiFormatNumericOk returns a tuple with the PiFormatNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetPiFormatNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PiFormatNumeric) {
+	if o == nil || isNil(o.PiFormatNumeric) {
 		return nil, false
 	}
 	return o.PiFormatNumeric, true
@@ -1645,7 +1642,7 @@ func (o *VolumesResourceInner) GetPiFormatNumericOk() (*int64, bool) {
 
 // HasPiFormatNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasPiFormatNumeric() bool {
-	if o != nil && !IsNil(o.PiFormatNumeric) {
+	if o != nil && !isNil(o.PiFormatNumeric) {
 		return true
 	}
 
@@ -1659,7 +1656,7 @@ func (o *VolumesResourceInner) SetPiFormatNumeric(v int64) {
 
 // GetPreferredOwner returns the PreferredOwner field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetPreferredOwner() string {
-	if o == nil || IsNil(o.PreferredOwner) {
+	if o == nil || isNil(o.PreferredOwner) {
 		var ret string
 		return ret
 	}
@@ -1669,7 +1666,7 @@ func (o *VolumesResourceInner) GetPreferredOwner() string {
 // GetPreferredOwnerOk returns a tuple with the PreferredOwner field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetPreferredOwnerOk() (*string, bool) {
-	if o == nil || IsNil(o.PreferredOwner) {
+	if o == nil || isNil(o.PreferredOwner) {
 		return nil, false
 	}
 	return o.PreferredOwner, true
@@ -1677,7 +1674,7 @@ func (o *VolumesResourceInner) GetPreferredOwnerOk() (*string, bool) {
 
 // HasPreferredOwner returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasPreferredOwner() bool {
-	if o != nil && !IsNil(o.PreferredOwner) {
+	if o != nil && !isNil(o.PreferredOwner) {
 		return true
 	}
 
@@ -1691,7 +1688,7 @@ func (o *VolumesResourceInner) SetPreferredOwner(v string) {
 
 // GetPreferredOwnerNumeric returns the PreferredOwnerNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetPreferredOwnerNumeric() int64 {
-	if o == nil || IsNil(o.PreferredOwnerNumeric) {
+	if o == nil || isNil(o.PreferredOwnerNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1701,7 +1698,7 @@ func (o *VolumesResourceInner) GetPreferredOwnerNumeric() int64 {
 // GetPreferredOwnerNumericOk returns a tuple with the PreferredOwnerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetPreferredOwnerNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PreferredOwnerNumeric) {
+	if o == nil || isNil(o.PreferredOwnerNumeric) {
 		return nil, false
 	}
 	return o.PreferredOwnerNumeric, true
@@ -1709,7 +1706,7 @@ func (o *VolumesResourceInner) GetPreferredOwnerNumericOk() (*int64, bool) {
 
 // HasPreferredOwnerNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasPreferredOwnerNumeric() bool {
-	if o != nil && !IsNil(o.PreferredOwnerNumeric) {
+	if o != nil && !isNil(o.PreferredOwnerNumeric) {
 		return true
 	}
 
@@ -1723,7 +1720,7 @@ func (o *VolumesResourceInner) SetPreferredOwnerNumeric(v int64) {
 
 // GetProgress returns the Progress field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetProgress() string {
-	if o == nil || IsNil(o.Progress) {
+	if o == nil || isNil(o.Progress) {
 		var ret string
 		return ret
 	}
@@ -1733,7 +1730,7 @@ func (o *VolumesResourceInner) GetProgress() string {
 // GetProgressOk returns a tuple with the Progress field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetProgressOk() (*string, bool) {
-	if o == nil || IsNil(o.Progress) {
+	if o == nil || isNil(o.Progress) {
 		return nil, false
 	}
 	return o.Progress, true
@@ -1741,7 +1738,7 @@ func (o *VolumesResourceInner) GetProgressOk() (*string, bool) {
 
 // HasProgress returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasProgress() bool {
-	if o != nil && !IsNil(o.Progress) {
+	if o != nil && !isNil(o.Progress) {
 		return true
 	}
 
@@ -1755,7 +1752,7 @@ func (o *VolumesResourceInner) SetProgress(v string) {
 
 // GetProgressNumeric returns the ProgressNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetProgressNumeric() int64 {
-	if o == nil || IsNil(o.ProgressNumeric) {
+	if o == nil || isNil(o.ProgressNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1765,7 +1762,7 @@ func (o *VolumesResourceInner) GetProgressNumeric() int64 {
 // GetProgressNumericOk returns a tuple with the ProgressNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetProgressNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ProgressNumeric) {
+	if o == nil || isNil(o.ProgressNumeric) {
 		return nil, false
 	}
 	return o.ProgressNumeric, true
@@ -1773,7 +1770,7 @@ func (o *VolumesResourceInner) GetProgressNumericOk() (*int64, bool) {
 
 // HasProgressNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasProgressNumeric() bool {
-	if o != nil && !IsNil(o.ProgressNumeric) {
+	if o != nil && !isNil(o.ProgressNumeric) {
 		return true
 	}
 
@@ -1787,7 +1784,7 @@ func (o *VolumesResourceInner) SetProgressNumeric(v int64) {
 
 // GetRaidtype returns the Raidtype field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetRaidtype() string {
-	if o == nil || IsNil(o.Raidtype) {
+	if o == nil || isNil(o.Raidtype) {
 		var ret string
 		return ret
 	}
@@ -1797,7 +1794,7 @@ func (o *VolumesResourceInner) GetRaidtype() string {
 // GetRaidtypeOk returns a tuple with the Raidtype field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetRaidtypeOk() (*string, bool) {
-	if o == nil || IsNil(o.Raidtype) {
+	if o == nil || isNil(o.Raidtype) {
 		return nil, false
 	}
 	return o.Raidtype, true
@@ -1805,7 +1802,7 @@ func (o *VolumesResourceInner) GetRaidtypeOk() (*string, bool) {
 
 // HasRaidtype returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasRaidtype() bool {
-	if o != nil && !IsNil(o.Raidtype) {
+	if o != nil && !isNil(o.Raidtype) {
 		return true
 	}
 
@@ -1819,7 +1816,7 @@ func (o *VolumesResourceInner) SetRaidtype(v string) {
 
 // GetRaidtypeNumeric returns the RaidtypeNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetRaidtypeNumeric() int64 {
-	if o == nil || IsNil(o.RaidtypeNumeric) {
+	if o == nil || isNil(o.RaidtypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1829,7 +1826,7 @@ func (o *VolumesResourceInner) GetRaidtypeNumeric() int64 {
 // GetRaidtypeNumericOk returns a tuple with the RaidtypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetRaidtypeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.RaidtypeNumeric) {
+	if o == nil || isNil(o.RaidtypeNumeric) {
 		return nil, false
 	}
 	return o.RaidtypeNumeric, true
@@ -1837,7 +1834,7 @@ func (o *VolumesResourceInner) GetRaidtypeNumericOk() (*int64, bool) {
 
 // HasRaidtypeNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasRaidtypeNumeric() bool {
-	if o != nil && !IsNil(o.RaidtypeNumeric) {
+	if o != nil && !isNil(o.RaidtypeNumeric) {
 		return true
 	}
 
@@ -1851,7 +1848,7 @@ func (o *VolumesResourceInner) SetRaidtypeNumeric(v int64) {
 
 // GetReadAheadSize returns the ReadAheadSize field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetReadAheadSize() string {
-	if o == nil || IsNil(o.ReadAheadSize) {
+	if o == nil || isNil(o.ReadAheadSize) {
 		var ret string
 		return ret
 	}
@@ -1861,7 +1858,7 @@ func (o *VolumesResourceInner) GetReadAheadSize() string {
 // GetReadAheadSizeOk returns a tuple with the ReadAheadSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetReadAheadSizeOk() (*string, bool) {
-	if o == nil || IsNil(o.ReadAheadSize) {
+	if o == nil || isNil(o.ReadAheadSize) {
 		return nil, false
 	}
 	return o.ReadAheadSize, true
@@ -1869,7 +1866,7 @@ func (o *VolumesResourceInner) GetReadAheadSizeOk() (*string, bool) {
 
 // HasReadAheadSize returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasReadAheadSize() bool {
-	if o != nil && !IsNil(o.ReadAheadSize) {
+	if o != nil && !isNil(o.ReadAheadSize) {
 		return true
 	}
 
@@ -1883,7 +1880,7 @@ func (o *VolumesResourceInner) SetReadAheadSize(v string) {
 
 // GetReadAheadSizeNumeric returns the ReadAheadSizeNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetReadAheadSizeNumeric() int64 {
-	if o == nil || IsNil(o.ReadAheadSizeNumeric) {
+	if o == nil || isNil(o.ReadAheadSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1893,7 +1890,7 @@ func (o *VolumesResourceInner) GetReadAheadSizeNumeric() int64 {
 // GetReadAheadSizeNumericOk returns a tuple with the ReadAheadSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetReadAheadSizeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ReadAheadSizeNumeric) {
+	if o == nil || isNil(o.ReadAheadSizeNumeric) {
 		return nil, false
 	}
 	return o.ReadAheadSizeNumeric, true
@@ -1901,7 +1898,7 @@ func (o *VolumesResourceInner) GetReadAheadSizeNumericOk() (*int64, bool) {
 
 // HasReadAheadSizeNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasReadAheadSizeNumeric() bool {
-	if o != nil && !IsNil(o.ReadAheadSizeNumeric) {
+	if o != nil && !isNil(o.ReadAheadSizeNumeric) {
 		return true
 	}
 
@@ -1915,7 +1912,7 @@ func (o *VolumesResourceInner) SetReadAheadSizeNumeric(v int64) {
 
 // GetReplicationSet returns the ReplicationSet field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetReplicationSet() string {
-	if o == nil || IsNil(o.ReplicationSet) {
+	if o == nil || isNil(o.ReplicationSet) {
 		var ret string
 		return ret
 	}
@@ -1925,7 +1922,7 @@ func (o *VolumesResourceInner) GetReplicationSet() string {
 // GetReplicationSetOk returns a tuple with the ReplicationSet field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetReplicationSetOk() (*string, bool) {
-	if o == nil || IsNil(o.ReplicationSet) {
+	if o == nil || isNil(o.ReplicationSet) {
 		return nil, false
 	}
 	return o.ReplicationSet, true
@@ -1933,7 +1930,7 @@ func (o *VolumesResourceInner) GetReplicationSetOk() (*string, bool) {
 
 // HasReplicationSet returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasReplicationSet() bool {
-	if o != nil && !IsNil(o.ReplicationSet) {
+	if o != nil && !isNil(o.ReplicationSet) {
 		return true
 	}
 
@@ -1947,7 +1944,7 @@ func (o *VolumesResourceInner) SetReplicationSet(v string) {
 
 // GetReservedSizeInPages returns the ReservedSizeInPages field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetReservedSizeInPages() int64 {
-	if o == nil || IsNil(o.ReservedSizeInPages) {
+	if o == nil || isNil(o.ReservedSizeInPages) {
 		var ret int64
 		return ret
 	}
@@ -1957,7 +1954,7 @@ func (o *VolumesResourceInner) GetReservedSizeInPages() int64 {
 // GetReservedSizeInPagesOk returns a tuple with the ReservedSizeInPages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetReservedSizeInPagesOk() (*int64, bool) {
-	if o == nil || IsNil(o.ReservedSizeInPages) {
+	if o == nil || isNil(o.ReservedSizeInPages) {
 		return nil, false
 	}
 	return o.ReservedSizeInPages, true
@@ -1965,7 +1962,7 @@ func (o *VolumesResourceInner) GetReservedSizeInPagesOk() (*int64, bool) {
 
 // HasReservedSizeInPages returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasReservedSizeInPages() bool {
-	if o != nil && !IsNil(o.ReservedSizeInPages) {
+	if o != nil && !isNil(o.ReservedSizeInPages) {
 		return true
 	}
 
@@ -1979,7 +1976,7 @@ func (o *VolumesResourceInner) SetReservedSizeInPages(v int64) {
 
 // GetSerialNumber returns the SerialNumber field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetSerialNumber() string {
-	if o == nil || IsNil(o.SerialNumber) {
+	if o == nil || isNil(o.SerialNumber) {
 		var ret string
 		return ret
 	}
@@ -1989,7 +1986,7 @@ func (o *VolumesResourceInner) GetSerialNumber() string {
 // GetSerialNumberOk returns a tuple with the SerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetSerialNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.SerialNumber) {
+	if o == nil || isNil(o.SerialNumber) {
 		return nil, false
 	}
 	return o.SerialNumber, true
@@ -1997,7 +1994,7 @@ func (o *VolumesResourceInner) GetSerialNumberOk() (*string, bool) {
 
 // HasSerialNumber returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasSerialNumber() bool {
-	if o != nil && !IsNil(o.SerialNumber) {
+	if o != nil && !isNil(o.SerialNumber) {
 		return true
 	}
 
@@ -2011,7 +2008,7 @@ func (o *VolumesResourceInner) SetSerialNumber(v string) {
 
 // GetSize returns the Size field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetSize() string {
-	if o == nil || IsNil(o.Size) {
+	if o == nil || isNil(o.Size) {
 		var ret string
 		return ret
 	}
@@ -2021,7 +2018,7 @@ func (o *VolumesResourceInner) GetSize() string {
 // GetSizeOk returns a tuple with the Size field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetSizeOk() (*string, bool) {
-	if o == nil || IsNil(o.Size) {
+	if o == nil || isNil(o.Size) {
 		return nil, false
 	}
 	return o.Size, true
@@ -2029,7 +2026,7 @@ func (o *VolumesResourceInner) GetSizeOk() (*string, bool) {
 
 // HasSize returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasSize() bool {
-	if o != nil && !IsNil(o.Size) {
+	if o != nil && !isNil(o.Size) {
 		return true
 	}
 
@@ -2043,7 +2040,7 @@ func (o *VolumesResourceInner) SetSize(v string) {
 
 // GetSizeNumeric returns the SizeNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetSizeNumeric() int64 {
-	if o == nil || IsNil(o.SizeNumeric) {
+	if o == nil || isNil(o.SizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2053,7 +2050,7 @@ func (o *VolumesResourceInner) GetSizeNumeric() int64 {
 // GetSizeNumericOk returns a tuple with the SizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetSizeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SizeNumeric) {
+	if o == nil || isNil(o.SizeNumeric) {
 		return nil, false
 	}
 	return o.SizeNumeric, true
@@ -2061,7 +2058,7 @@ func (o *VolumesResourceInner) GetSizeNumericOk() (*int64, bool) {
 
 // HasSizeNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasSizeNumeric() bool {
-	if o != nil && !IsNil(o.SizeNumeric) {
+	if o != nil && !isNil(o.SizeNumeric) {
 		return true
 	}
 
@@ -2075,7 +2072,7 @@ func (o *VolumesResourceInner) SetSizeNumeric(v int64) {
 
 // GetSnapPool returns the SnapPool field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetSnapPool() string {
-	if o == nil || IsNil(o.SnapPool) {
+	if o == nil || isNil(o.SnapPool) {
 		var ret string
 		return ret
 	}
@@ -2085,7 +2082,7 @@ func (o *VolumesResourceInner) GetSnapPool() string {
 // GetSnapPoolOk returns a tuple with the SnapPool field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetSnapPoolOk() (*string, bool) {
-	if o == nil || IsNil(o.SnapPool) {
+	if o == nil || isNil(o.SnapPool) {
 		return nil, false
 	}
 	return o.SnapPool, true
@@ -2093,7 +2090,7 @@ func (o *VolumesResourceInner) GetSnapPoolOk() (*string, bool) {
 
 // HasSnapPool returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasSnapPool() bool {
-	if o != nil && !IsNil(o.SnapPool) {
+	if o != nil && !isNil(o.SnapPool) {
 		return true
 	}
 
@@ -2107,7 +2104,7 @@ func (o *VolumesResourceInner) SetSnapPool(v string) {
 
 // GetSnapshot returns the Snapshot field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetSnapshot() string {
-	if o == nil || IsNil(o.Snapshot) {
+	if o == nil || isNil(o.Snapshot) {
 		var ret string
 		return ret
 	}
@@ -2117,7 +2114,7 @@ func (o *VolumesResourceInner) GetSnapshot() string {
 // GetSnapshotOk returns a tuple with the Snapshot field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetSnapshotOk() (*string, bool) {
-	if o == nil || IsNil(o.Snapshot) {
+	if o == nil || isNil(o.Snapshot) {
 		return nil, false
 	}
 	return o.Snapshot, true
@@ -2125,7 +2122,7 @@ func (o *VolumesResourceInner) GetSnapshotOk() (*string, bool) {
 
 // HasSnapshot returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasSnapshot() bool {
-	if o != nil && !IsNil(o.Snapshot) {
+	if o != nil && !isNil(o.Snapshot) {
 		return true
 	}
 
@@ -2139,7 +2136,7 @@ func (o *VolumesResourceInner) SetSnapshot(v string) {
 
 // GetSnapshotRetentionPriority returns the SnapshotRetentionPriority field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetSnapshotRetentionPriority() string {
-	if o == nil || IsNil(o.SnapshotRetentionPriority) {
+	if o == nil || isNil(o.SnapshotRetentionPriority) {
 		var ret string
 		return ret
 	}
@@ -2149,7 +2146,7 @@ func (o *VolumesResourceInner) GetSnapshotRetentionPriority() string {
 // GetSnapshotRetentionPriorityOk returns a tuple with the SnapshotRetentionPriority field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetSnapshotRetentionPriorityOk() (*string, bool) {
-	if o == nil || IsNil(o.SnapshotRetentionPriority) {
+	if o == nil || isNil(o.SnapshotRetentionPriority) {
 		return nil, false
 	}
 	return o.SnapshotRetentionPriority, true
@@ -2157,7 +2154,7 @@ func (o *VolumesResourceInner) GetSnapshotRetentionPriorityOk() (*string, bool) 
 
 // HasSnapshotRetentionPriority returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasSnapshotRetentionPriority() bool {
-	if o != nil && !IsNil(o.SnapshotRetentionPriority) {
+	if o != nil && !isNil(o.SnapshotRetentionPriority) {
 		return true
 	}
 
@@ -2171,7 +2168,7 @@ func (o *VolumesResourceInner) SetSnapshotRetentionPriority(v string) {
 
 // GetSnapshotRetentionPriorityNumeric returns the SnapshotRetentionPriorityNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumeric() int64 {
-	if o == nil || IsNil(o.SnapshotRetentionPriorityNumeric) {
+	if o == nil || isNil(o.SnapshotRetentionPriorityNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2181,7 +2178,7 @@ func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumeric() int64 {
 // GetSnapshotRetentionPriorityNumericOk returns a tuple with the SnapshotRetentionPriorityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SnapshotRetentionPriorityNumeric) {
+	if o == nil || isNil(o.SnapshotRetentionPriorityNumeric) {
 		return nil, false
 	}
 	return o.SnapshotRetentionPriorityNumeric, true
@@ -2189,7 +2186,7 @@ func (o *VolumesResourceInner) GetSnapshotRetentionPriorityNumericOk() (*int64, 
 
 // HasSnapshotRetentionPriorityNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasSnapshotRetentionPriorityNumeric() bool {
-	if o != nil && !IsNil(o.SnapshotRetentionPriorityNumeric) {
+	if o != nil && !isNil(o.SnapshotRetentionPriorityNumeric) {
 		return true
 	}
 
@@ -2203,7 +2200,7 @@ func (o *VolumesResourceInner) SetSnapshotRetentionPriorityNumeric(v int64) {
 
 // GetStoragePoolName returns the StoragePoolName field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetStoragePoolName() string {
-	if o == nil || IsNil(o.StoragePoolName) {
+	if o == nil || isNil(o.StoragePoolName) {
 		var ret string
 		return ret
 	}
@@ -2213,7 +2210,7 @@ func (o *VolumesResourceInner) GetStoragePoolName() string {
 // GetStoragePoolNameOk returns a tuple with the StoragePoolName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetStoragePoolNameOk() (*string, bool) {
-	if o == nil || IsNil(o.StoragePoolName) {
+	if o == nil || isNil(o.StoragePoolName) {
 		return nil, false
 	}
 	return o.StoragePoolName, true
@@ -2221,7 +2218,7 @@ func (o *VolumesResourceInner) GetStoragePoolNameOk() (*string, bool) {
 
 // HasStoragePoolName returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasStoragePoolName() bool {
-	if o != nil && !IsNil(o.StoragePoolName) {
+	if o != nil && !isNil(o.StoragePoolName) {
 		return true
 	}
 
@@ -2235,7 +2232,7 @@ func (o *VolumesResourceInner) SetStoragePoolName(v string) {
 
 // GetStoragePoolsUrl returns the StoragePoolsUrl field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetStoragePoolsUrl() string {
-	if o == nil || IsNil(o.StoragePoolsUrl) {
+	if o == nil || isNil(o.StoragePoolsUrl) {
 		var ret string
 		return ret
 	}
@@ -2245,7 +2242,7 @@ func (o *VolumesResourceInner) GetStoragePoolsUrl() string {
 // GetStoragePoolsUrlOk returns a tuple with the StoragePoolsUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetStoragePoolsUrlOk() (*string, bool) {
-	if o == nil || IsNil(o.StoragePoolsUrl) {
+	if o == nil || isNil(o.StoragePoolsUrl) {
 		return nil, false
 	}
 	return o.StoragePoolsUrl, true
@@ -2253,7 +2250,7 @@ func (o *VolumesResourceInner) GetStoragePoolsUrlOk() (*string, bool) {
 
 // HasStoragePoolsUrl returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasStoragePoolsUrl() bool {
-	if o != nil && !IsNil(o.StoragePoolsUrl) {
+	if o != nil && !isNil(o.StoragePoolsUrl) {
 		return true
 	}
 
@@ -2267,7 +2264,7 @@ func (o *VolumesResourceInner) SetStoragePoolsUrl(v string) {
 
 // GetStorageType returns the StorageType field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetStorageType() string {
-	if o == nil || IsNil(o.StorageType) {
+	if o == nil || isNil(o.StorageType) {
 		var ret string
 		return ret
 	}
@@ -2277,7 +2274,7 @@ func (o *VolumesResourceInner) GetStorageType() string {
 // GetStorageTypeOk returns a tuple with the StorageType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetStorageTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.StorageType) {
+	if o == nil || isNil(o.StorageType) {
 		return nil, false
 	}
 	return o.StorageType, true
@@ -2285,7 +2282,7 @@ func (o *VolumesResourceInner) GetStorageTypeOk() (*string, bool) {
 
 // HasStorageType returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasStorageType() bool {
-	if o != nil && !IsNil(o.StorageType) {
+	if o != nil && !isNil(o.StorageType) {
 		return true
 	}
 
@@ -2299,7 +2296,7 @@ func (o *VolumesResourceInner) SetStorageType(v string) {
 
 // GetStorageTypeNumeric returns the StorageTypeNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetStorageTypeNumeric() int64 {
-	if o == nil || IsNil(o.StorageTypeNumeric) {
+	if o == nil || isNil(o.StorageTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2309,7 +2306,7 @@ func (o *VolumesResourceInner) GetStorageTypeNumeric() int64 {
 // GetStorageTypeNumericOk returns a tuple with the StorageTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetStorageTypeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.StorageTypeNumeric) {
+	if o == nil || isNil(o.StorageTypeNumeric) {
 		return nil, false
 	}
 	return o.StorageTypeNumeric, true
@@ -2317,7 +2314,7 @@ func (o *VolumesResourceInner) GetStorageTypeNumericOk() (*int64, bool) {
 
 // HasStorageTypeNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasStorageTypeNumeric() bool {
-	if o != nil && !IsNil(o.StorageTypeNumeric) {
+	if o != nil && !isNil(o.StorageTypeNumeric) {
 		return true
 	}
 
@@ -2331,7 +2328,7 @@ func (o *VolumesResourceInner) SetStorageTypeNumeric(v int64) {
 
 // GetThresholdPercentOfPool returns the ThresholdPercentOfPool field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetThresholdPercentOfPool() string {
-	if o == nil || IsNil(o.ThresholdPercentOfPool) {
+	if o == nil || isNil(o.ThresholdPercentOfPool) {
 		var ret string
 		return ret
 	}
@@ -2341,7 +2338,7 @@ func (o *VolumesResourceInner) GetThresholdPercentOfPool() string {
 // GetThresholdPercentOfPoolOk returns a tuple with the ThresholdPercentOfPool field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetThresholdPercentOfPoolOk() (*string, bool) {
-	if o == nil || IsNil(o.ThresholdPercentOfPool) {
+	if o == nil || isNil(o.ThresholdPercentOfPool) {
 		return nil, false
 	}
 	return o.ThresholdPercentOfPool, true
@@ -2349,7 +2346,7 @@ func (o *VolumesResourceInner) GetThresholdPercentOfPoolOk() (*string, bool) {
 
 // HasThresholdPercentOfPool returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasThresholdPercentOfPool() bool {
-	if o != nil && !IsNil(o.ThresholdPercentOfPool) {
+	if o != nil && !isNil(o.ThresholdPercentOfPool) {
 		return true
 	}
 
@@ -2363,7 +2360,7 @@ func (o *VolumesResourceInner) SetThresholdPercentOfPool(v string) {
 
 // GetTierAffinity returns the TierAffinity field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetTierAffinity() string {
-	if o == nil || IsNil(o.TierAffinity) {
+	if o == nil || isNil(o.TierAffinity) {
 		var ret string
 		return ret
 	}
@@ -2373,7 +2370,7 @@ func (o *VolumesResourceInner) GetTierAffinity() string {
 // GetTierAffinityOk returns a tuple with the TierAffinity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetTierAffinityOk() (*string, bool) {
-	if o == nil || IsNil(o.TierAffinity) {
+	if o == nil || isNil(o.TierAffinity) {
 		return nil, false
 	}
 	return o.TierAffinity, true
@@ -2381,7 +2378,7 @@ func (o *VolumesResourceInner) GetTierAffinityOk() (*string, bool) {
 
 // HasTierAffinity returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasTierAffinity() bool {
-	if o != nil && !IsNil(o.TierAffinity) {
+	if o != nil && !isNil(o.TierAffinity) {
 		return true
 	}
 
@@ -2395,7 +2392,7 @@ func (o *VolumesResourceInner) SetTierAffinity(v string) {
 
 // GetTierAffinityNumeric returns the TierAffinityNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetTierAffinityNumeric() int64 {
-	if o == nil || IsNil(o.TierAffinityNumeric) {
+	if o == nil || isNil(o.TierAffinityNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2405,7 +2402,7 @@ func (o *VolumesResourceInner) GetTierAffinityNumeric() int64 {
 // GetTierAffinityNumericOk returns a tuple with the TierAffinityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetTierAffinityNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.TierAffinityNumeric) {
+	if o == nil || isNil(o.TierAffinityNumeric) {
 		return nil, false
 	}
 	return o.TierAffinityNumeric, true
@@ -2413,7 +2410,7 @@ func (o *VolumesResourceInner) GetTierAffinityNumericOk() (*int64, bool) {
 
 // HasTierAffinityNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasTierAffinityNumeric() bool {
-	if o != nil && !IsNil(o.TierAffinityNumeric) {
+	if o != nil && !isNil(o.TierAffinityNumeric) {
 		return true
 	}
 
@@ -2427,7 +2424,7 @@ func (o *VolumesResourceInner) SetTierAffinityNumeric(v int64) {
 
 // GetTotalSize returns the TotalSize field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetTotalSize() string {
-	if o == nil || IsNil(o.TotalSize) {
+	if o == nil || isNil(o.TotalSize) {
 		var ret string
 		return ret
 	}
@@ -2437,7 +2434,7 @@ func (o *VolumesResourceInner) GetTotalSize() string {
 // GetTotalSizeOk returns a tuple with the TotalSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetTotalSizeOk() (*string, bool) {
-	if o == nil || IsNil(o.TotalSize) {
+	if o == nil || isNil(o.TotalSize) {
 		return nil, false
 	}
 	return o.TotalSize, true
@@ -2445,7 +2442,7 @@ func (o *VolumesResourceInner) GetTotalSizeOk() (*string, bool) {
 
 // HasTotalSize returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasTotalSize() bool {
-	if o != nil && !IsNil(o.TotalSize) {
+	if o != nil && !isNil(o.TotalSize) {
 		return true
 	}
 
@@ -2459,7 +2456,7 @@ func (o *VolumesResourceInner) SetTotalSize(v string) {
 
 // GetTotalSizeNumeric returns the TotalSizeNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetTotalSizeNumeric() int64 {
-	if o == nil || IsNil(o.TotalSizeNumeric) {
+	if o == nil || isNil(o.TotalSizeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2469,7 +2466,7 @@ func (o *VolumesResourceInner) GetTotalSizeNumeric() int64 {
 // GetTotalSizeNumericOk returns a tuple with the TotalSizeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetTotalSizeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.TotalSizeNumeric) {
+	if o == nil || isNil(o.TotalSizeNumeric) {
 		return nil, false
 	}
 	return o.TotalSizeNumeric, true
@@ -2477,7 +2474,7 @@ func (o *VolumesResourceInner) GetTotalSizeNumericOk() (*int64, bool) {
 
 // HasTotalSizeNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasTotalSizeNumeric() bool {
-	if o != nil && !IsNil(o.TotalSizeNumeric) {
+	if o != nil && !isNil(o.TotalSizeNumeric) {
 		return true
 	}
 
@@ -2491,7 +2488,7 @@ func (o *VolumesResourceInner) SetTotalSizeNumeric(v int64) {
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetUrl() string {
-	if o == nil || IsNil(o.Url) {
+	if o == nil || isNil(o.Url) {
 		var ret string
 		return ret
 	}
@@ -2501,7 +2498,7 @@ func (o *VolumesResourceInner) GetUrl() string {
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetUrlOk() (*string, bool) {
-	if o == nil || IsNil(o.Url) {
+	if o == nil || isNil(o.Url) {
 		return nil, false
 	}
 	return o.Url, true
@@ -2509,7 +2506,7 @@ func (o *VolumesResourceInner) GetUrlOk() (*string, bool) {
 
 // HasUrl returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasUrl() bool {
-	if o != nil && !IsNil(o.Url) {
+	if o != nil && !isNil(o.Url) {
 		return true
 	}
 
@@ -2523,7 +2520,7 @@ func (o *VolumesResourceInner) SetUrl(v string) {
 
 // GetVirtualDiskName returns the VirtualDiskName field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVirtualDiskName() string {
-	if o == nil || IsNil(o.VirtualDiskName) {
+	if o == nil || isNil(o.VirtualDiskName) {
 		var ret string
 		return ret
 	}
@@ -2533,7 +2530,7 @@ func (o *VolumesResourceInner) GetVirtualDiskName() string {
 // GetVirtualDiskNameOk returns a tuple with the VirtualDiskName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVirtualDiskNameOk() (*string, bool) {
-	if o == nil || IsNil(o.VirtualDiskName) {
+	if o == nil || isNil(o.VirtualDiskName) {
 		return nil, false
 	}
 	return o.VirtualDiskName, true
@@ -2541,7 +2538,7 @@ func (o *VolumesResourceInner) GetVirtualDiskNameOk() (*string, bool) {
 
 // HasVirtualDiskName returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVirtualDiskName() bool {
-	if o != nil && !IsNil(o.VirtualDiskName) {
+	if o != nil && !isNil(o.VirtualDiskName) {
 		return true
 	}
 
@@ -2555,7 +2552,7 @@ func (o *VolumesResourceInner) SetVirtualDiskName(v string) {
 
 // GetVirtualDiskSerial returns the VirtualDiskSerial field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVirtualDiskSerial() string {
-	if o == nil || IsNil(o.VirtualDiskSerial) {
+	if o == nil || isNil(o.VirtualDiskSerial) {
 		var ret string
 		return ret
 	}
@@ -2565,7 +2562,7 @@ func (o *VolumesResourceInner) GetVirtualDiskSerial() string {
 // GetVirtualDiskSerialOk returns a tuple with the VirtualDiskSerial field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVirtualDiskSerialOk() (*string, bool) {
-	if o == nil || IsNil(o.VirtualDiskSerial) {
+	if o == nil || isNil(o.VirtualDiskSerial) {
 		return nil, false
 	}
 	return o.VirtualDiskSerial, true
@@ -2573,7 +2570,7 @@ func (o *VolumesResourceInner) GetVirtualDiskSerialOk() (*string, bool) {
 
 // HasVirtualDiskSerial returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVirtualDiskSerial() bool {
-	if o != nil && !IsNil(o.VirtualDiskSerial) {
+	if o != nil && !isNil(o.VirtualDiskSerial) {
 		return true
 	}
 
@@ -2587,7 +2584,7 @@ func (o *VolumesResourceInner) SetVirtualDiskSerial(v string) {
 
 // GetVolumeClass returns the VolumeClass field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeClass() string {
-	if o == nil || IsNil(o.VolumeClass) {
+	if o == nil || isNil(o.VolumeClass) {
 		var ret string
 		return ret
 	}
@@ -2597,7 +2594,7 @@ func (o *VolumesResourceInner) GetVolumeClass() string {
 // GetVolumeClassOk returns a tuple with the VolumeClass field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeClassOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumeClass) {
+	if o == nil || isNil(o.VolumeClass) {
 		return nil, false
 	}
 	return o.VolumeClass, true
@@ -2605,7 +2602,7 @@ func (o *VolumesResourceInner) GetVolumeClassOk() (*string, bool) {
 
 // HasVolumeClass returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeClass() bool {
-	if o != nil && !IsNil(o.VolumeClass) {
+	if o != nil && !isNil(o.VolumeClass) {
 		return true
 	}
 
@@ -2619,7 +2616,7 @@ func (o *VolumesResourceInner) SetVolumeClass(v string) {
 
 // GetVolumeClassNumeric returns the VolumeClassNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeClassNumeric() int64 {
-	if o == nil || IsNil(o.VolumeClassNumeric) {
+	if o == nil || isNil(o.VolumeClassNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2629,7 +2626,7 @@ func (o *VolumesResourceInner) GetVolumeClassNumeric() int64 {
 // GetVolumeClassNumericOk returns a tuple with the VolumeClassNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeClassNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.VolumeClassNumeric) {
+	if o == nil || isNil(o.VolumeClassNumeric) {
 		return nil, false
 	}
 	return o.VolumeClassNumeric, true
@@ -2637,7 +2634,7 @@ func (o *VolumesResourceInner) GetVolumeClassNumericOk() (*int64, bool) {
 
 // HasVolumeClassNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeClassNumeric() bool {
-	if o != nil && !IsNil(o.VolumeClassNumeric) {
+	if o != nil && !isNil(o.VolumeClassNumeric) {
 		return true
 	}
 
@@ -2651,7 +2648,7 @@ func (o *VolumesResourceInner) SetVolumeClassNumeric(v int64) {
 
 // GetVolumeDescription returns the VolumeDescription field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeDescription() string {
-	if o == nil || IsNil(o.VolumeDescription) {
+	if o == nil || isNil(o.VolumeDescription) {
 		var ret string
 		return ret
 	}
@@ -2661,7 +2658,7 @@ func (o *VolumesResourceInner) GetVolumeDescription() string {
 // GetVolumeDescriptionOk returns a tuple with the VolumeDescription field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeDescriptionOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumeDescription) {
+	if o == nil || isNil(o.VolumeDescription) {
 		return nil, false
 	}
 	return o.VolumeDescription, true
@@ -2669,7 +2666,7 @@ func (o *VolumesResourceInner) GetVolumeDescriptionOk() (*string, bool) {
 
 // HasVolumeDescription returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeDescription() bool {
-	if o != nil && !IsNil(o.VolumeDescription) {
+	if o != nil && !isNil(o.VolumeDescription) {
 		return true
 	}
 
@@ -2683,7 +2680,7 @@ func (o *VolumesResourceInner) SetVolumeDescription(v string) {
 
 // GetVolumeGroup returns the VolumeGroup field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeGroup() string {
-	if o == nil || IsNil(o.VolumeGroup) {
+	if o == nil || isNil(o.VolumeGroup) {
 		var ret string
 		return ret
 	}
@@ -2693,7 +2690,7 @@ func (o *VolumesResourceInner) GetVolumeGroup() string {
 // GetVolumeGroupOk returns a tuple with the VolumeGroup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeGroupOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumeGroup) {
+	if o == nil || isNil(o.VolumeGroup) {
 		return nil, false
 	}
 	return o.VolumeGroup, true
@@ -2701,7 +2698,7 @@ func (o *VolumesResourceInner) GetVolumeGroupOk() (*string, bool) {
 
 // HasVolumeGroup returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeGroup() bool {
-	if o != nil && !IsNil(o.VolumeGroup) {
+	if o != nil && !isNil(o.VolumeGroup) {
 		return true
 	}
 
@@ -2715,7 +2712,7 @@ func (o *VolumesResourceInner) SetVolumeGroup(v string) {
 
 // GetVolumeName returns the VolumeName field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeName() string {
-	if o == nil || IsNil(o.VolumeName) {
+	if o == nil || isNil(o.VolumeName) {
 		var ret string
 		return ret
 	}
@@ -2725,7 +2722,7 @@ func (o *VolumesResourceInner) GetVolumeName() string {
 // GetVolumeNameOk returns a tuple with the VolumeName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeNameOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumeName) {
+	if o == nil || isNil(o.VolumeName) {
 		return nil, false
 	}
 	return o.VolumeName, true
@@ -2733,7 +2730,7 @@ func (o *VolumesResourceInner) GetVolumeNameOk() (*string, bool) {
 
 // HasVolumeName returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeName() bool {
-	if o != nil && !IsNil(o.VolumeName) {
+	if o != nil && !isNil(o.VolumeName) {
 		return true
 	}
 
@@ -2747,7 +2744,7 @@ func (o *VolumesResourceInner) SetVolumeName(v string) {
 
 // GetVolumeParent returns the VolumeParent field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeParent() string {
-	if o == nil || IsNil(o.VolumeParent) {
+	if o == nil || isNil(o.VolumeParent) {
 		var ret string
 		return ret
 	}
@@ -2757,7 +2754,7 @@ func (o *VolumesResourceInner) GetVolumeParent() string {
 // GetVolumeParentOk returns a tuple with the VolumeParent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeParentOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumeParent) {
+	if o == nil || isNil(o.VolumeParent) {
 		return nil, false
 	}
 	return o.VolumeParent, true
@@ -2765,7 +2762,7 @@ func (o *VolumesResourceInner) GetVolumeParentOk() (*string, bool) {
 
 // HasVolumeParent returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeParent() bool {
-	if o != nil && !IsNil(o.VolumeParent) {
+	if o != nil && !isNil(o.VolumeParent) {
 		return true
 	}
 
@@ -2779,7 +2776,7 @@ func (o *VolumesResourceInner) SetVolumeParent(v string) {
 
 // GetVolumeQualifier returns the VolumeQualifier field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeQualifier() string {
-	if o == nil || IsNil(o.VolumeQualifier) {
+	if o == nil || isNil(o.VolumeQualifier) {
 		var ret string
 		return ret
 	}
@@ -2789,7 +2786,7 @@ func (o *VolumesResourceInner) GetVolumeQualifier() string {
 // GetVolumeQualifierOk returns a tuple with the VolumeQualifier field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeQualifierOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumeQualifier) {
+	if o == nil || isNil(o.VolumeQualifier) {
 		return nil, false
 	}
 	return o.VolumeQualifier, true
@@ -2797,7 +2794,7 @@ func (o *VolumesResourceInner) GetVolumeQualifierOk() (*string, bool) {
 
 // HasVolumeQualifier returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeQualifier() bool {
-	if o != nil && !IsNil(o.VolumeQualifier) {
+	if o != nil && !isNil(o.VolumeQualifier) {
 		return true
 	}
 
@@ -2811,7 +2808,7 @@ func (o *VolumesResourceInner) SetVolumeQualifier(v string) {
 
 // GetVolumeQualifierNumeric returns the VolumeQualifierNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeQualifierNumeric() int64 {
-	if o == nil || IsNil(o.VolumeQualifierNumeric) {
+	if o == nil || isNil(o.VolumeQualifierNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2821,7 +2818,7 @@ func (o *VolumesResourceInner) GetVolumeQualifierNumeric() int64 {
 // GetVolumeQualifierNumericOk returns a tuple with the VolumeQualifierNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeQualifierNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.VolumeQualifierNumeric) {
+	if o == nil || isNil(o.VolumeQualifierNumeric) {
 		return nil, false
 	}
 	return o.VolumeQualifierNumeric, true
@@ -2829,7 +2826,7 @@ func (o *VolumesResourceInner) GetVolumeQualifierNumericOk() (*int64, bool) {
 
 // HasVolumeQualifierNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeQualifierNumeric() bool {
-	if o != nil && !IsNil(o.VolumeQualifierNumeric) {
+	if o != nil && !isNil(o.VolumeQualifierNumeric) {
 		return true
 	}
 
@@ -2843,7 +2840,7 @@ func (o *VolumesResourceInner) SetVolumeQualifierNumeric(v int64) {
 
 // GetVolumeType returns the VolumeType field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeType() string {
-	if o == nil || IsNil(o.VolumeType) {
+	if o == nil || isNil(o.VolumeType) {
 		var ret string
 		return ret
 	}
@@ -2853,7 +2850,7 @@ func (o *VolumesResourceInner) GetVolumeType() string {
 // GetVolumeTypeOk returns a tuple with the VolumeType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumeType) {
+	if o == nil || isNil(o.VolumeType) {
 		return nil, false
 	}
 	return o.VolumeType, true
@@ -2861,7 +2858,7 @@ func (o *VolumesResourceInner) GetVolumeTypeOk() (*string, bool) {
 
 // HasVolumeType returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeType() bool {
-	if o != nil && !IsNil(o.VolumeType) {
+	if o != nil && !isNil(o.VolumeType) {
 		return true
 	}
 
@@ -2875,7 +2872,7 @@ func (o *VolumesResourceInner) SetVolumeType(v string) {
 
 // GetVolumeTypeNumeric returns the VolumeTypeNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeTypeNumeric() int64 {
-	if o == nil || IsNil(o.VolumeTypeNumeric) {
+	if o == nil || isNil(o.VolumeTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2885,7 +2882,7 @@ func (o *VolumesResourceInner) GetVolumeTypeNumeric() int64 {
 // GetVolumeTypeNumericOk returns a tuple with the VolumeTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeTypeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.VolumeTypeNumeric) {
+	if o == nil || isNil(o.VolumeTypeNumeric) {
 		return nil, false
 	}
 	return o.VolumeTypeNumeric, true
@@ -2893,7 +2890,7 @@ func (o *VolumesResourceInner) GetVolumeTypeNumericOk() (*int64, bool) {
 
 // HasVolumeTypeNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeTypeNumeric() bool {
-	if o != nil && !IsNil(o.VolumeTypeNumeric) {
+	if o != nil && !isNil(o.VolumeTypeNumeric) {
 		return true
 	}
 
@@ -2907,7 +2904,7 @@ func (o *VolumesResourceInner) SetVolumeTypeNumeric(v int64) {
 
 // GetVolumeUsageType returns the VolumeUsageType field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeUsageType() string {
-	if o == nil || IsNil(o.VolumeUsageType) {
+	if o == nil || isNil(o.VolumeUsageType) {
 		var ret string
 		return ret
 	}
@@ -2917,7 +2914,7 @@ func (o *VolumesResourceInner) GetVolumeUsageType() string {
 // GetVolumeUsageTypeOk returns a tuple with the VolumeUsageType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeUsageTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumeUsageType) {
+	if o == nil || isNil(o.VolumeUsageType) {
 		return nil, false
 	}
 	return o.VolumeUsageType, true
@@ -2925,7 +2922,7 @@ func (o *VolumesResourceInner) GetVolumeUsageTypeOk() (*string, bool) {
 
 // HasVolumeUsageType returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeUsageType() bool {
-	if o != nil && !IsNil(o.VolumeUsageType) {
+	if o != nil && !isNil(o.VolumeUsageType) {
 		return true
 	}
 
@@ -2939,7 +2936,7 @@ func (o *VolumesResourceInner) SetVolumeUsageType(v string) {
 
 // GetVolumeUsageTypeNumeric returns the VolumeUsageTypeNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetVolumeUsageTypeNumeric() int64 {
-	if o == nil || IsNil(o.VolumeUsageTypeNumeric) {
+	if o == nil || isNil(o.VolumeUsageTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2949,7 +2946,7 @@ func (o *VolumesResourceInner) GetVolumeUsageTypeNumeric() int64 {
 // GetVolumeUsageTypeNumericOk returns a tuple with the VolumeUsageTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetVolumeUsageTypeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.VolumeUsageTypeNumeric) {
+	if o == nil || isNil(o.VolumeUsageTypeNumeric) {
 		return nil, false
 	}
 	return o.VolumeUsageTypeNumeric, true
@@ -2957,7 +2954,7 @@ func (o *VolumesResourceInner) GetVolumeUsageTypeNumericOk() (*int64, bool) {
 
 // HasVolumeUsageTypeNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasVolumeUsageTypeNumeric() bool {
-	if o != nil && !IsNil(o.VolumeUsageTypeNumeric) {
+	if o != nil && !isNil(o.VolumeUsageTypeNumeric) {
 		return true
 	}
 
@@ -2971,7 +2968,7 @@ func (o *VolumesResourceInner) SetVolumeUsageTypeNumeric(v int64) {
 
 // GetWritePolicy returns the WritePolicy field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetWritePolicy() string {
-	if o == nil || IsNil(o.WritePolicy) {
+	if o == nil || isNil(o.WritePolicy) {
 		var ret string
 		return ret
 	}
@@ -2981,7 +2978,7 @@ func (o *VolumesResourceInner) GetWritePolicy() string {
 // GetWritePolicyOk returns a tuple with the WritePolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetWritePolicyOk() (*string, bool) {
-	if o == nil || IsNil(o.WritePolicy) {
+	if o == nil || isNil(o.WritePolicy) {
 		return nil, false
 	}
 	return o.WritePolicy, true
@@ -2989,7 +2986,7 @@ func (o *VolumesResourceInner) GetWritePolicyOk() (*string, bool) {
 
 // HasWritePolicy returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasWritePolicy() bool {
-	if o != nil && !IsNil(o.WritePolicy) {
+	if o != nil && !isNil(o.WritePolicy) {
 		return true
 	}
 
@@ -3003,7 +3000,7 @@ func (o *VolumesResourceInner) SetWritePolicy(v string) {
 
 // GetWritePolicyNumeric returns the WritePolicyNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetWritePolicyNumeric() int64 {
-	if o == nil || IsNil(o.WritePolicyNumeric) {
+	if o == nil || isNil(o.WritePolicyNumeric) {
 		var ret int64
 		return ret
 	}
@@ -3013,7 +3010,7 @@ func (o *VolumesResourceInner) GetWritePolicyNumeric() int64 {
 // GetWritePolicyNumericOk returns a tuple with the WritePolicyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetWritePolicyNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.WritePolicyNumeric) {
+	if o == nil || isNil(o.WritePolicyNumeric) {
 		return nil, false
 	}
 	return o.WritePolicyNumeric, true
@@ -3021,7 +3018,7 @@ func (o *VolumesResourceInner) GetWritePolicyNumericOk() (*int64, bool) {
 
 // HasWritePolicyNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasWritePolicyNumeric() bool {
-	if o != nil && !IsNil(o.WritePolicyNumeric) {
+	if o != nil && !isNil(o.WritePolicyNumeric) {
 		return true
 	}
 
@@ -3035,7 +3032,7 @@ func (o *VolumesResourceInner) SetWritePolicyNumeric(v int64) {
 
 // GetWwn returns the Wwn field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetWwn() string {
-	if o == nil || IsNil(o.Wwn) {
+	if o == nil || isNil(o.Wwn) {
 		var ret string
 		return ret
 	}
@@ -3045,7 +3042,7 @@ func (o *VolumesResourceInner) GetWwn() string {
 // GetWwnOk returns a tuple with the Wwn field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetWwnOk() (*string, bool) {
-	if o == nil || IsNil(o.Wwn) {
+	if o == nil || isNil(o.Wwn) {
 		return nil, false
 	}
 	return o.Wwn, true
@@ -3053,7 +3050,7 @@ func (o *VolumesResourceInner) GetWwnOk() (*string, bool) {
 
 // HasWwn returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasWwn() bool {
-	if o != nil && !IsNil(o.Wwn) {
+	if o != nil && !isNil(o.Wwn) {
 		return true
 	}
 
@@ -3067,7 +3064,7 @@ func (o *VolumesResourceInner) SetWwn(v string) {
 
 // GetZeroInitPageOnAllocation returns the ZeroInitPageOnAllocation field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetZeroInitPageOnAllocation() string {
-	if o == nil || IsNil(o.ZeroInitPageOnAllocation) {
+	if o == nil || isNil(o.ZeroInitPageOnAllocation) {
 		var ret string
 		return ret
 	}
@@ -3077,7 +3074,7 @@ func (o *VolumesResourceInner) GetZeroInitPageOnAllocation() string {
 // GetZeroInitPageOnAllocationOk returns a tuple with the ZeroInitPageOnAllocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetZeroInitPageOnAllocationOk() (*string, bool) {
-	if o == nil || IsNil(o.ZeroInitPageOnAllocation) {
+	if o == nil || isNil(o.ZeroInitPageOnAllocation) {
 		return nil, false
 	}
 	return o.ZeroInitPageOnAllocation, true
@@ -3085,7 +3082,7 @@ func (o *VolumesResourceInner) GetZeroInitPageOnAllocationOk() (*string, bool) {
 
 // HasZeroInitPageOnAllocation returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasZeroInitPageOnAllocation() bool {
-	if o != nil && !IsNil(o.ZeroInitPageOnAllocation) {
+	if o != nil && !isNil(o.ZeroInitPageOnAllocation) {
 		return true
 	}
 
@@ -3099,7 +3096,7 @@ func (o *VolumesResourceInner) SetZeroInitPageOnAllocation(v string) {
 
 // GetZeroInitPageOnAllocationNumeric returns the ZeroInitPageOnAllocationNumeric field value if set, zero value otherwise.
 func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumeric() int64 {
-	if o == nil || IsNil(o.ZeroInitPageOnAllocationNumeric) {
+	if o == nil || isNil(o.ZeroInitPageOnAllocationNumeric) {
 		var ret int64
 		return ret
 	}
@@ -3109,7 +3106,7 @@ func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumeric() int64 {
 // GetZeroInitPageOnAllocationNumericOk returns a tuple with the ZeroInitPageOnAllocationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ZeroInitPageOnAllocationNumeric) {
+	if o == nil || isNil(o.ZeroInitPageOnAllocationNumeric) {
 		return nil, false
 	}
 	return o.ZeroInitPageOnAllocationNumeric, true
@@ -3117,7 +3114,7 @@ func (o *VolumesResourceInner) GetZeroInitPageOnAllocationNumericOk() (*int64, b
 
 // HasZeroInitPageOnAllocationNumeric returns a boolean if a field has been set.
 func (o *VolumesResourceInner) HasZeroInitPageOnAllocationNumeric() bool {
-	if o != nil && !IsNil(o.ZeroInitPageOnAllocationNumeric) {
+	if o != nil && !isNil(o.ZeroInitPageOnAllocationNumeric) {
 		return true
 	}
 
@@ -3130,292 +3127,284 @@ func (o *VolumesResourceInner) SetZeroInitPageOnAllocationNumeric(v int64) {
 }
 
 func (o VolumesResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o VolumesResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.AllocateReservedPagesFirst) {
+	if !isNil(o.AllocateReservedPagesFirst) {
 		toSerialize["allocate-reserved-pages-first"] = o.AllocateReservedPagesFirst
 	}
-	if !IsNil(o.AllocateReservedPagesFirstNumeric) {
+	if !isNil(o.AllocateReservedPagesFirstNumeric) {
 		toSerialize["allocate-reserved-pages-first-numeric"] = o.AllocateReservedPagesFirstNumeric
 	}
-	if !IsNil(o.AllocatedSize) {
+	if !isNil(o.AllocatedSize) {
 		toSerialize["allocated-size"] = o.AllocatedSize
 	}
-	if !IsNil(o.AllocatedSizeNumeric) {
+	if !isNil(o.AllocatedSizeNumeric) {
 		toSerialize["allocated-size-numeric"] = o.AllocatedSizeNumeric
 	}
-	if !IsNil(o.AllowedStorageTiers) {
+	if !isNil(o.AllowedStorageTiers) {
 		toSerialize["allowed-storage-tiers"] = o.AllowedStorageTiers
 	}
-	if !IsNil(o.AllowedStorageTiersNumeric) {
+	if !isNil(o.AllowedStorageTiersNumeric) {
 		toSerialize["allowed-storage-tiers-numeric"] = o.AllowedStorageTiersNumeric
 	}
-	if !IsNil(o.Attributes) {
+	if !isNil(o.Attributes) {
 		toSerialize["attributes"] = o.Attributes
 	}
-	if !IsNil(o.Blocks) {
+	if !isNil(o.Blocks) {
 		toSerialize["blocks"] = o.Blocks
 	}
-	if !IsNil(o.Blocksize) {
+	if !isNil(o.Blocksize) {
 		toSerialize["blocksize"] = o.Blocksize
 	}
-	if !IsNil(o.CacheOptimization) {
+	if !isNil(o.CacheOptimization) {
 		toSerialize["cache-optimization"] = o.CacheOptimization
 	}
-	if !IsNil(o.CacheOptimizationNumeric) {
+	if !isNil(o.CacheOptimizationNumeric) {
 		toSerialize["cache-optimization-numeric"] = o.CacheOptimizationNumeric
 	}
-	if !IsNil(o.Capabilities) {
+	if !isNil(o.Capabilities) {
 		toSerialize["capabilities"] = o.Capabilities
 	}
-	if !IsNil(o.Compression) {
+	if !isNil(o.Compression) {
 		toSerialize["compression"] = o.Compression
 	}
-	if !IsNil(o.CompressionEfficiency) {
+	if !isNil(o.CompressionEfficiency) {
 		toSerialize["compression-efficiency"] = o.CompressionEfficiency
 	}
-	if !IsNil(o.CompressionNumeric) {
+	if !isNil(o.CompressionNumeric) {
 		toSerialize["compression-numeric"] = o.CompressionNumeric
 	}
-	if !IsNil(o.ContainerName) {
+	if !isNil(o.ContainerName) {
 		toSerialize["container-name"] = o.ContainerName
 	}
-	if !IsNil(o.ContainerSerial) {
+	if !isNil(o.ContainerSerial) {
 		toSerialize["container-serial"] = o.ContainerSerial
 	}
-	if !IsNil(o.CreationDateTime) {
+	if !isNil(o.CreationDateTime) {
 		toSerialize["creation-date-time"] = o.CreationDateTime
 	}
-	if !IsNil(o.CreationDateTimeNumeric) {
+	if !isNil(o.CreationDateTimeNumeric) {
 		toSerialize["creation-date-time-numeric"] = o.CreationDateTimeNumeric
 	}
-	if !IsNil(o.CsCopyDest) {
+	if !isNil(o.CsCopyDest) {
 		toSerialize["cs-copy-dest"] = o.CsCopyDest
 	}
-	if !IsNil(o.CsCopyDestNumeric) {
+	if !isNil(o.CsCopyDestNumeric) {
 		toSerialize["cs-copy-dest-numeric"] = o.CsCopyDestNumeric
 	}
-	if !IsNil(o.CsCopySrc) {
+	if !isNil(o.CsCopySrc) {
 		toSerialize["cs-copy-src"] = o.CsCopySrc
 	}
-	if !IsNil(o.CsCopySrcNumeric) {
+	if !isNil(o.CsCopySrcNumeric) {
 		toSerialize["cs-copy-src-numeric"] = o.CsCopySrcNumeric
 	}
-	if !IsNil(o.CsPrimary) {
+	if !isNil(o.CsPrimary) {
 		toSerialize["cs-primary"] = o.CsPrimary
 	}
-	if !IsNil(o.CsPrimaryNumeric) {
+	if !isNil(o.CsPrimaryNumeric) {
 		toSerialize["cs-primary-numeric"] = o.CsPrimaryNumeric
 	}
-	if !IsNil(o.CsReplicationRole) {
+	if !isNil(o.CsReplicationRole) {
 		toSerialize["cs-replication-role"] = o.CsReplicationRole
 	}
-	if !IsNil(o.CsSecondary) {
+	if !isNil(o.CsSecondary) {
 		toSerialize["cs-secondary"] = o.CsSecondary
 	}
-	if !IsNil(o.CsSecondaryNumeric) {
+	if !isNil(o.CsSecondaryNumeric) {
 		toSerialize["cs-secondary-numeric"] = o.CsSecondaryNumeric
 	}
-	if !IsNil(o.DurableId) {
+	if !isNil(o.DurableId) {
 		toSerialize["durable-id"] = o.DurableId
 	}
-	if !IsNil(o.GroupKey) {
+	if !isNil(o.GroupKey) {
 		toSerialize["group-key"] = o.GroupKey
 	}
-	if !IsNil(o.Health) {
+	if !isNil(o.Health) {
 		toSerialize["health"] = o.Health
 	}
-	if !IsNil(o.HealthNumeric) {
+	if !isNil(o.HealthNumeric) {
 		toSerialize["health-numeric"] = o.HealthNumeric
 	}
-	if !IsNil(o.HealthReason) {
+	if !isNil(o.HealthReason) {
 		toSerialize["health-reason"] = o.HealthReason
 	}
-	if !IsNil(o.HealthRecommendation) {
+	if !isNil(o.HealthRecommendation) {
 		toSerialize["health-recommendation"] = o.HealthRecommendation
 	}
-	if !IsNil(o.Interleaved) {
+	if !isNil(o.Interleaved) {
 		toSerialize["interleaved"] = o.Interleaved
 	}
-	if !IsNil(o.InterleavedNumeric) {
+	if !isNil(o.InterleavedNumeric) {
 		toSerialize["interleaved-numeric"] = o.InterleavedNumeric
 	}
-	if !IsNil(o.LargeVirtualExtents) {
+	if !isNil(o.LargeVirtualExtents) {
 		toSerialize["large-virtual-extents"] = o.LargeVirtualExtents
 	}
-	if !IsNil(o.LargeVirtualExtentsNumeric) {
+	if !isNil(o.LargeVirtualExtentsNumeric) {
 		toSerialize["large-virtual-extents-numeric"] = o.LargeVirtualExtentsNumeric
 	}
-	if !IsNil(o.MetadataInUse) {
+	if !isNil(o.MetadataInUse) {
 		toSerialize["metadata-in-use"] = o.MetadataInUse
 	}
-	if !IsNil(o.MetadataInUseNumeric) {
+	if !isNil(o.MetadataInUseNumeric) {
 		toSerialize["metadata-in-use-numeric"] = o.MetadataInUseNumeric
 	}
-	if !IsNil(o.Owner) {
+	if !isNil(o.Owner) {
 		toSerialize["owner"] = o.Owner
 	}
-	if !IsNil(o.OwnerNumeric) {
+	if !isNil(o.OwnerNumeric) {
 		toSerialize["owner-numeric"] = o.OwnerNumeric
 	}
-	if !IsNil(o.PiFormat) {
+	if !isNil(o.PiFormat) {
 		toSerialize["pi-format"] = o.PiFormat
 	}
-	if !IsNil(o.PiFormatNumeric) {
+	if !isNil(o.PiFormatNumeric) {
 		toSerialize["pi-format-numeric"] = o.PiFormatNumeric
 	}
-	if !IsNil(o.PreferredOwner) {
+	if !isNil(o.PreferredOwner) {
 		toSerialize["preferred-owner"] = o.PreferredOwner
 	}
-	if !IsNil(o.PreferredOwnerNumeric) {
+	if !isNil(o.PreferredOwnerNumeric) {
 		toSerialize["preferred-owner-numeric"] = o.PreferredOwnerNumeric
 	}
-	if !IsNil(o.Progress) {
+	if !isNil(o.Progress) {
 		toSerialize["progress"] = o.Progress
 	}
-	if !IsNil(o.ProgressNumeric) {
+	if !isNil(o.ProgressNumeric) {
 		toSerialize["progress-numeric"] = o.ProgressNumeric
 	}
-	if !IsNil(o.Raidtype) {
+	if !isNil(o.Raidtype) {
 		toSerialize["raidtype"] = o.Raidtype
 	}
-	if !IsNil(o.RaidtypeNumeric) {
+	if !isNil(o.RaidtypeNumeric) {
 		toSerialize["raidtype-numeric"] = o.RaidtypeNumeric
 	}
-	if !IsNil(o.ReadAheadSize) {
+	if !isNil(o.ReadAheadSize) {
 		toSerialize["read-ahead-size"] = o.ReadAheadSize
 	}
-	if !IsNil(o.ReadAheadSizeNumeric) {
+	if !isNil(o.ReadAheadSizeNumeric) {
 		toSerialize["read-ahead-size-numeric"] = o.ReadAheadSizeNumeric
 	}
-	if !IsNil(o.ReplicationSet) {
+	if !isNil(o.ReplicationSet) {
 		toSerialize["replication-set"] = o.ReplicationSet
 	}
-	if !IsNil(o.ReservedSizeInPages) {
+	if !isNil(o.ReservedSizeInPages) {
 		toSerialize["reserved-size-in-pages"] = o.ReservedSizeInPages
 	}
-	if !IsNil(o.SerialNumber) {
+	if !isNil(o.SerialNumber) {
 		toSerialize["serial-number"] = o.SerialNumber
 	}
-	if !IsNil(o.Size) {
+	if !isNil(o.Size) {
 		toSerialize["size"] = o.Size
 	}
-	if !IsNil(o.SizeNumeric) {
+	if !isNil(o.SizeNumeric) {
 		toSerialize["size-numeric"] = o.SizeNumeric
 	}
-	if !IsNil(o.SnapPool) {
+	if !isNil(o.SnapPool) {
 		toSerialize["snap-pool"] = o.SnapPool
 	}
-	if !IsNil(o.Snapshot) {
+	if !isNil(o.Snapshot) {
 		toSerialize["snapshot"] = o.Snapshot
 	}
-	if !IsNil(o.SnapshotRetentionPriority) {
+	if !isNil(o.SnapshotRetentionPriority) {
 		toSerialize["snapshot-retention-priority"] = o.SnapshotRetentionPriority
 	}
-	if !IsNil(o.SnapshotRetentionPriorityNumeric) {
+	if !isNil(o.SnapshotRetentionPriorityNumeric) {
 		toSerialize["snapshot-retention-priority-numeric"] = o.SnapshotRetentionPriorityNumeric
 	}
-	if !IsNil(o.StoragePoolName) {
+	if !isNil(o.StoragePoolName) {
 		toSerialize["storage-pool-name"] = o.StoragePoolName
 	}
-	if !IsNil(o.StoragePoolsUrl) {
+	if !isNil(o.StoragePoolsUrl) {
 		toSerialize["storage-pools-url"] = o.StoragePoolsUrl
 	}
-	if !IsNil(o.StorageType) {
+	if !isNil(o.StorageType) {
 		toSerialize["storage-type"] = o.StorageType
 	}
-	if !IsNil(o.StorageTypeNumeric) {
+	if !isNil(o.StorageTypeNumeric) {
 		toSerialize["storage-type-numeric"] = o.StorageTypeNumeric
 	}
-	if !IsNil(o.ThresholdPercentOfPool) {
+	if !isNil(o.ThresholdPercentOfPool) {
 		toSerialize["threshold-percent-of-pool"] = o.ThresholdPercentOfPool
 	}
-	if !IsNil(o.TierAffinity) {
+	if !isNil(o.TierAffinity) {
 		toSerialize["tier-affinity"] = o.TierAffinity
 	}
-	if !IsNil(o.TierAffinityNumeric) {
+	if !isNil(o.TierAffinityNumeric) {
 		toSerialize["tier-affinity-numeric"] = o.TierAffinityNumeric
 	}
-	if !IsNil(o.TotalSize) {
+	if !isNil(o.TotalSize) {
 		toSerialize["total-size"] = o.TotalSize
 	}
-	if !IsNil(o.TotalSizeNumeric) {
+	if !isNil(o.TotalSizeNumeric) {
 		toSerialize["total-size-numeric"] = o.TotalSizeNumeric
 	}
-	if !IsNil(o.Url) {
+	if !isNil(o.Url) {
 		toSerialize["url"] = o.Url
 	}
-	if !IsNil(o.VirtualDiskName) {
+	if !isNil(o.VirtualDiskName) {
 		toSerialize["virtual-disk-name"] = o.VirtualDiskName
 	}
-	if !IsNil(o.VirtualDiskSerial) {
+	if !isNil(o.VirtualDiskSerial) {
 		toSerialize["virtual-disk-serial"] = o.VirtualDiskSerial
 	}
-	if !IsNil(o.VolumeClass) {
+	if !isNil(o.VolumeClass) {
 		toSerialize["volume-class"] = o.VolumeClass
 	}
-	if !IsNil(o.VolumeClassNumeric) {
+	if !isNil(o.VolumeClassNumeric) {
 		toSerialize["volume-class-numeric"] = o.VolumeClassNumeric
 	}
-	if !IsNil(o.VolumeDescription) {
+	if !isNil(o.VolumeDescription) {
 		toSerialize["volume-description"] = o.VolumeDescription
 	}
-	if !IsNil(o.VolumeGroup) {
+	if !isNil(o.VolumeGroup) {
 		toSerialize["volume-group"] = o.VolumeGroup
 	}
-	if !IsNil(o.VolumeName) {
+	if !isNil(o.VolumeName) {
 		toSerialize["volume-name"] = o.VolumeName
 	}
-	if !IsNil(o.VolumeParent) {
+	if !isNil(o.VolumeParent) {
 		toSerialize["volume-parent"] = o.VolumeParent
 	}
-	if !IsNil(o.VolumeQualifier) {
+	if !isNil(o.VolumeQualifier) {
 		toSerialize["volume-qualifier"] = o.VolumeQualifier
 	}
-	if !IsNil(o.VolumeQualifierNumeric) {
+	if !isNil(o.VolumeQualifierNumeric) {
 		toSerialize["volume-qualifier-numeric"] = o.VolumeQualifierNumeric
 	}
-	if !IsNil(o.VolumeType) {
+	if !isNil(o.VolumeType) {
 		toSerialize["volume-type"] = o.VolumeType
 	}
-	if !IsNil(o.VolumeTypeNumeric) {
+	if !isNil(o.VolumeTypeNumeric) {
 		toSerialize["volume-type-numeric"] = o.VolumeTypeNumeric
 	}
-	if !IsNil(o.VolumeUsageType) {
+	if !isNil(o.VolumeUsageType) {
 		toSerialize["volume-usage-type"] = o.VolumeUsageType
 	}
-	if !IsNil(o.VolumeUsageTypeNumeric) {
+	if !isNil(o.VolumeUsageTypeNumeric) {
 		toSerialize["volume-usage-type-numeric"] = o.VolumeUsageTypeNumeric
 	}
-	if !IsNil(o.WritePolicy) {
+	if !isNil(o.WritePolicy) {
 		toSerialize["write-policy"] = o.WritePolicy
 	}
-	if !IsNil(o.WritePolicyNumeric) {
+	if !isNil(o.WritePolicyNumeric) {
 		toSerialize["write-policy-numeric"] = o.WritePolicyNumeric
 	}
-	if !IsNil(o.Wwn) {
+	if !isNil(o.Wwn) {
 		toSerialize["wwn"] = o.Wwn
 	}
-	if !IsNil(o.ZeroInitPageOnAllocation) {
+	if !isNil(o.ZeroInitPageOnAllocation) {
 		toSerialize["zero-init-page-on-allocation"] = o.ZeroInitPageOnAllocation
 	}
-	if !IsNil(o.ZeroInitPageOnAllocationNumeric) {
+	if !isNil(o.ZeroInitPageOnAllocationNumeric) {
 		toSerialize["zero-init-page-on-allocation-numeric"] = o.ZeroInitPageOnAllocationNumeric
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableVolumesResourceInner struct {

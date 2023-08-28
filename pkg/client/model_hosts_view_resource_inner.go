@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the HostsViewResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &HostsViewResourceInner{}
-
 // HostsViewResourceInner struct for HostsViewResourceInner
 type HostsViewResourceInner struct {
 	ObjectName       *string                         `json:"object-name,omitempty"`
@@ -46,7 +43,7 @@ func NewHostsViewResourceInnerWithDefaults() *HostsViewResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *HostsViewResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -56,7 +53,7 @@ func (o *HostsViewResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostsViewResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -64,7 +61,7 @@ func (o *HostsViewResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *HostsViewResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -78,7 +75,7 @@ func (o *HostsViewResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *HostsViewResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -88,7 +85,7 @@ func (o *HostsViewResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostsViewResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -96,7 +93,7 @@ func (o *HostsViewResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *HostsViewResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -110,7 +107,7 @@ func (o *HostsViewResourceInner) SetMeta(v string) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *HostsViewResourceInner) GetDurableId() string {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -120,7 +117,7 @@ func (o *HostsViewResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostsViewResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -128,7 +125,7 @@ func (o *HostsViewResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *HostsViewResourceInner) HasDurableId() bool {
-	if o != nil && !IsNil(o.DurableId) {
+	if o != nil && !isNil(o.DurableId) {
 		return true
 	}
 
@@ -142,7 +139,7 @@ func (o *HostsViewResourceInner) SetDurableId(v string) {
 
 // GetHostName returns the HostName field value if set, zero value otherwise.
 func (o *HostsViewResourceInner) GetHostName() string {
-	if o == nil || IsNil(o.HostName) {
+	if o == nil || isNil(o.HostName) {
 		var ret string
 		return ret
 	}
@@ -152,7 +149,7 @@ func (o *HostsViewResourceInner) GetHostName() string {
 // GetHostNameOk returns a tuple with the HostName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostsViewResourceInner) GetHostNameOk() (*string, bool) {
-	if o == nil || IsNil(o.HostName) {
+	if o == nil || isNil(o.HostName) {
 		return nil, false
 	}
 	return o.HostName, true
@@ -160,7 +157,7 @@ func (o *HostsViewResourceInner) GetHostNameOk() (*string, bool) {
 
 // HasHostName returns a boolean if a field has been set.
 func (o *HostsViewResourceInner) HasHostName() bool {
-	if o != nil && !IsNil(o.HostName) {
+	if o != nil && !isNil(o.HostName) {
 		return true
 	}
 
@@ -174,7 +171,7 @@ func (o *HostsViewResourceInner) SetHostName(v string) {
 
 // GetSerialNumber returns the SerialNumber field value if set, zero value otherwise.
 func (o *HostsViewResourceInner) GetSerialNumber() string {
-	if o == nil || IsNil(o.SerialNumber) {
+	if o == nil || isNil(o.SerialNumber) {
 		var ret string
 		return ret
 	}
@@ -184,7 +181,7 @@ func (o *HostsViewResourceInner) GetSerialNumber() string {
 // GetSerialNumberOk returns a tuple with the SerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostsViewResourceInner) GetSerialNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.SerialNumber) {
+	if o == nil || isNil(o.SerialNumber) {
 		return nil, false
 	}
 	return o.SerialNumber, true
@@ -192,7 +189,7 @@ func (o *HostsViewResourceInner) GetSerialNumberOk() (*string, bool) {
 
 // HasSerialNumber returns a boolean if a field has been set.
 func (o *HostsViewResourceInner) HasSerialNumber() bool {
-	if o != nil && !IsNil(o.SerialNumber) {
+	if o != nil && !isNil(o.SerialNumber) {
 		return true
 	}
 
@@ -206,7 +203,7 @@ func (o *HostsViewResourceInner) SetSerialNumber(v string) {
 
 // GetHostViewMappings returns the HostViewMappings field value if set, zero value otherwise.
 func (o *HostsViewResourceInner) GetHostViewMappings() []HostViewMappingsResourceInner {
-	if o == nil || IsNil(o.HostViewMappings) {
+	if o == nil || isNil(o.HostViewMappings) {
 		var ret []HostViewMappingsResourceInner
 		return ret
 	}
@@ -216,7 +213,7 @@ func (o *HostsViewResourceInner) GetHostViewMappings() []HostViewMappingsResourc
 // GetHostViewMappingsOk returns a tuple with the HostViewMappings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HostsViewResourceInner) GetHostViewMappingsOk() ([]HostViewMappingsResourceInner, bool) {
-	if o == nil || IsNil(o.HostViewMappings) {
+	if o == nil || isNil(o.HostViewMappings) {
 		return nil, false
 	}
 	return o.HostViewMappings, true
@@ -224,7 +221,7 @@ func (o *HostsViewResourceInner) GetHostViewMappingsOk() ([]HostViewMappingsReso
 
 // HasHostViewMappings returns a boolean if a field has been set.
 func (o *HostsViewResourceInner) HasHostViewMappings() bool {
-	if o != nil && !IsNil(o.HostViewMappings) {
+	if o != nil && !isNil(o.HostViewMappings) {
 		return true
 	}
 
@@ -237,34 +234,26 @@ func (o *HostsViewResourceInner) SetHostViewMappings(v []HostViewMappingsResourc
 }
 
 func (o HostsViewResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o HostsViewResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.DurableId) {
+	if !isNil(o.DurableId) {
 		toSerialize["durable-id"] = o.DurableId
 	}
-	if !IsNil(o.HostName) {
+	if !isNil(o.HostName) {
 		toSerialize["host-name"] = o.HostName
 	}
-	if !IsNil(o.SerialNumber) {
+	if !isNil(o.SerialNumber) {
 		toSerialize["serial-number"] = o.SerialNumber
 	}
-	if !IsNil(o.HostViewMappings) {
+	if !isNil(o.HostViewMappings) {
 		toSerialize["host-view-mappings"] = o.HostViewMappings
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableHostsViewResourceInner struct {

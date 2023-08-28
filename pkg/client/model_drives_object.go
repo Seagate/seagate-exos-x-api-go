@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the DrivesObject type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &DrivesObject{}
-
 // DrivesObject struct for DrivesObject
 type DrivesObject struct {
 	Status []StatusResourceInner `json:"status,omitempty"`
@@ -42,7 +39,7 @@ func NewDrivesObjectWithDefaults() *DrivesObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *DrivesObject) GetStatus() []StatusResourceInner {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -52,7 +49,7 @@ func (o *DrivesObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DrivesObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -60,7 +57,7 @@ func (o *DrivesObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *DrivesObject) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -74,7 +71,7 @@ func (o *DrivesObject) SetStatus(v []StatusResourceInner) {
 
 // GetDrives returns the Drives field value if set, zero value otherwise.
 func (o *DrivesObject) GetDrives() []DrivesResourceInner {
-	if o == nil || IsNil(o.Drives) {
+	if o == nil || isNil(o.Drives) {
 		var ret []DrivesResourceInner
 		return ret
 	}
@@ -84,7 +81,7 @@ func (o *DrivesObject) GetDrives() []DrivesResourceInner {
 // GetDrivesOk returns a tuple with the Drives field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DrivesObject) GetDrivesOk() ([]DrivesResourceInner, bool) {
-	if o == nil || IsNil(o.Drives) {
+	if o == nil || isNil(o.Drives) {
 		return nil, false
 	}
 	return o.Drives, true
@@ -92,7 +89,7 @@ func (o *DrivesObject) GetDrivesOk() ([]DrivesResourceInner, bool) {
 
 // HasDrives returns a boolean if a field has been set.
 func (o *DrivesObject) HasDrives() bool {
-	if o != nil && !IsNil(o.Drives) {
+	if o != nil && !isNil(o.Drives) {
 		return true
 	}
 
@@ -105,22 +102,14 @@ func (o *DrivesObject) SetDrives(v []DrivesResourceInner) {
 }
 
 func (o DrivesObject) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o DrivesObject) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.Drives) {
+	if !isNil(o.Drives) {
 		toSerialize["drives"] = o.Drives
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableDrivesObject struct {

@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the FanResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &FanResourceInner{}
-
 // FanResourceInner struct for FanResourceInner
 type FanResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
@@ -74,7 +71,7 @@ func NewFanResourceInnerWithDefaults() *FanResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *FanResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -84,7 +81,7 @@ func (o *FanResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -92,7 +89,7 @@ func (o *FanResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *FanResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -106,7 +103,7 @@ func (o *FanResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *FanResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -116,7 +113,7 @@ func (o *FanResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -124,7 +121,7 @@ func (o *FanResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *FanResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -138,7 +135,7 @@ func (o *FanResourceInner) SetMeta(v string) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *FanResourceInner) GetDurableId() string {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -148,7 +145,7 @@ func (o *FanResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -156,7 +153,7 @@ func (o *FanResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *FanResourceInner) HasDurableId() bool {
-	if o != nil && !IsNil(o.DurableId) {
+	if o != nil && !isNil(o.DurableId) {
 		return true
 	}
 
@@ -170,7 +167,7 @@ func (o *FanResourceInner) SetDurableId(v string) {
 
 // GetExtendedStatus returns the ExtendedStatus field value if set, zero value otherwise.
 func (o *FanResourceInner) GetExtendedStatus() string {
-	if o == nil || IsNil(o.ExtendedStatus) {
+	if o == nil || isNil(o.ExtendedStatus) {
 		var ret string
 		return ret
 	}
@@ -180,7 +177,7 @@ func (o *FanResourceInner) GetExtendedStatus() string {
 // GetExtendedStatusOk returns a tuple with the ExtendedStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetExtendedStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.ExtendedStatus) {
+	if o == nil || isNil(o.ExtendedStatus) {
 		return nil, false
 	}
 	return o.ExtendedStatus, true
@@ -188,7 +185,7 @@ func (o *FanResourceInner) GetExtendedStatusOk() (*string, bool) {
 
 // HasExtendedStatus returns a boolean if a field has been set.
 func (o *FanResourceInner) HasExtendedStatus() bool {
-	if o != nil && !IsNil(o.ExtendedStatus) {
+	if o != nil && !isNil(o.ExtendedStatus) {
 		return true
 	}
 
@@ -202,7 +199,7 @@ func (o *FanResourceInner) SetExtendedStatus(v string) {
 
 // GetFwRevision returns the FwRevision field value if set, zero value otherwise.
 func (o *FanResourceInner) GetFwRevision() string {
-	if o == nil || IsNil(o.FwRevision) {
+	if o == nil || isNil(o.FwRevision) {
 		var ret string
 		return ret
 	}
@@ -212,7 +209,7 @@ func (o *FanResourceInner) GetFwRevision() string {
 // GetFwRevisionOk returns a tuple with the FwRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetFwRevisionOk() (*string, bool) {
-	if o == nil || IsNil(o.FwRevision) {
+	if o == nil || isNil(o.FwRevision) {
 		return nil, false
 	}
 	return o.FwRevision, true
@@ -220,7 +217,7 @@ func (o *FanResourceInner) GetFwRevisionOk() (*string, bool) {
 
 // HasFwRevision returns a boolean if a field has been set.
 func (o *FanResourceInner) HasFwRevision() bool {
-	if o != nil && !IsNil(o.FwRevision) {
+	if o != nil && !isNil(o.FwRevision) {
 		return true
 	}
 
@@ -234,7 +231,7 @@ func (o *FanResourceInner) SetFwRevision(v string) {
 
 // GetHealth returns the Health field value if set, zero value otherwise.
 func (o *FanResourceInner) GetHealth() string {
-	if o == nil || IsNil(o.Health) {
+	if o == nil || isNil(o.Health) {
 		var ret string
 		return ret
 	}
@@ -244,7 +241,7 @@ func (o *FanResourceInner) GetHealth() string {
 // GetHealthOk returns a tuple with the Health field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetHealthOk() (*string, bool) {
-	if o == nil || IsNil(o.Health) {
+	if o == nil || isNil(o.Health) {
 		return nil, false
 	}
 	return o.Health, true
@@ -252,7 +249,7 @@ func (o *FanResourceInner) GetHealthOk() (*string, bool) {
 
 // HasHealth returns a boolean if a field has been set.
 func (o *FanResourceInner) HasHealth() bool {
-	if o != nil && !IsNil(o.Health) {
+	if o != nil && !isNil(o.Health) {
 		return true
 	}
 
@@ -266,7 +263,7 @@ func (o *FanResourceInner) SetHealth(v string) {
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
 func (o *FanResourceInner) GetHealthNumeric() int64 {
-	if o == nil || IsNil(o.HealthNumeric) {
+	if o == nil || isNil(o.HealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -276,7 +273,7 @@ func (o *FanResourceInner) GetHealthNumeric() int64 {
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetHealthNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.HealthNumeric) {
+	if o == nil || isNil(o.HealthNumeric) {
 		return nil, false
 	}
 	return o.HealthNumeric, true
@@ -284,7 +281,7 @@ func (o *FanResourceInner) GetHealthNumericOk() (*int64, bool) {
 
 // HasHealthNumeric returns a boolean if a field has been set.
 func (o *FanResourceInner) HasHealthNumeric() bool {
-	if o != nil && !IsNil(o.HealthNumeric) {
+	if o != nil && !isNil(o.HealthNumeric) {
 		return true
 	}
 
@@ -298,7 +295,7 @@ func (o *FanResourceInner) SetHealthNumeric(v int64) {
 
 // GetHealthReason returns the HealthReason field value if set, zero value otherwise.
 func (o *FanResourceInner) GetHealthReason() string {
-	if o == nil || IsNil(o.HealthReason) {
+	if o == nil || isNil(o.HealthReason) {
 		var ret string
 		return ret
 	}
@@ -308,7 +305,7 @@ func (o *FanResourceInner) GetHealthReason() string {
 // GetHealthReasonOk returns a tuple with the HealthReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetHealthReasonOk() (*string, bool) {
-	if o == nil || IsNil(o.HealthReason) {
+	if o == nil || isNil(o.HealthReason) {
 		return nil, false
 	}
 	return o.HealthReason, true
@@ -316,7 +313,7 @@ func (o *FanResourceInner) GetHealthReasonOk() (*string, bool) {
 
 // HasHealthReason returns a boolean if a field has been set.
 func (o *FanResourceInner) HasHealthReason() bool {
-	if o != nil && !IsNil(o.HealthReason) {
+	if o != nil && !isNil(o.HealthReason) {
 		return true
 	}
 
@@ -330,7 +327,7 @@ func (o *FanResourceInner) SetHealthReason(v string) {
 
 // GetHealthRecommendation returns the HealthRecommendation field value if set, zero value otherwise.
 func (o *FanResourceInner) GetHealthRecommendation() string {
-	if o == nil || IsNil(o.HealthRecommendation) {
+	if o == nil || isNil(o.HealthRecommendation) {
 		var ret string
 		return ret
 	}
@@ -340,7 +337,7 @@ func (o *FanResourceInner) GetHealthRecommendation() string {
 // GetHealthRecommendationOk returns a tuple with the HealthRecommendation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetHealthRecommendationOk() (*string, bool) {
-	if o == nil || IsNil(o.HealthRecommendation) {
+	if o == nil || isNil(o.HealthRecommendation) {
 		return nil, false
 	}
 	return o.HealthRecommendation, true
@@ -348,7 +345,7 @@ func (o *FanResourceInner) GetHealthRecommendationOk() (*string, bool) {
 
 // HasHealthRecommendation returns a boolean if a field has been set.
 func (o *FanResourceInner) HasHealthRecommendation() bool {
-	if o != nil && !IsNil(o.HealthRecommendation) {
+	if o != nil && !isNil(o.HealthRecommendation) {
 		return true
 	}
 
@@ -362,7 +359,7 @@ func (o *FanResourceInner) SetHealthRecommendation(v string) {
 
 // GetHwRevision returns the HwRevision field value if set, zero value otherwise.
 func (o *FanResourceInner) GetHwRevision() string {
-	if o == nil || IsNil(o.HwRevision) {
+	if o == nil || isNil(o.HwRevision) {
 		var ret string
 		return ret
 	}
@@ -372,7 +369,7 @@ func (o *FanResourceInner) GetHwRevision() string {
 // GetHwRevisionOk returns a tuple with the HwRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetHwRevisionOk() (*string, bool) {
-	if o == nil || IsNil(o.HwRevision) {
+	if o == nil || isNil(o.HwRevision) {
 		return nil, false
 	}
 	return o.HwRevision, true
@@ -380,7 +377,7 @@ func (o *FanResourceInner) GetHwRevisionOk() (*string, bool) {
 
 // HasHwRevision returns a boolean if a field has been set.
 func (o *FanResourceInner) HasHwRevision() bool {
-	if o != nil && !IsNil(o.HwRevision) {
+	if o != nil && !isNil(o.HwRevision) {
 		return true
 	}
 
@@ -394,7 +391,7 @@ func (o *FanResourceInner) SetHwRevision(v string) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *FanResourceInner) GetLocation() string {
-	if o == nil || IsNil(o.Location) {
+	if o == nil || isNil(o.Location) {
 		var ret string
 		return ret
 	}
@@ -404,7 +401,7 @@ func (o *FanResourceInner) GetLocation() string {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetLocationOk() (*string, bool) {
-	if o == nil || IsNil(o.Location) {
+	if o == nil || isNil(o.Location) {
 		return nil, false
 	}
 	return o.Location, true
@@ -412,7 +409,7 @@ func (o *FanResourceInner) GetLocationOk() (*string, bool) {
 
 // HasLocation returns a boolean if a field has been set.
 func (o *FanResourceInner) HasLocation() bool {
-	if o != nil && !IsNil(o.Location) {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -426,7 +423,7 @@ func (o *FanResourceInner) SetLocation(v string) {
 
 // GetLocatorLed returns the LocatorLed field value if set, zero value otherwise.
 func (o *FanResourceInner) GetLocatorLed() string {
-	if o == nil || IsNil(o.LocatorLed) {
+	if o == nil || isNil(o.LocatorLed) {
 		var ret string
 		return ret
 	}
@@ -436,7 +433,7 @@ func (o *FanResourceInner) GetLocatorLed() string {
 // GetLocatorLedOk returns a tuple with the LocatorLed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetLocatorLedOk() (*string, bool) {
-	if o == nil || IsNil(o.LocatorLed) {
+	if o == nil || isNil(o.LocatorLed) {
 		return nil, false
 	}
 	return o.LocatorLed, true
@@ -444,7 +441,7 @@ func (o *FanResourceInner) GetLocatorLedOk() (*string, bool) {
 
 // HasLocatorLed returns a boolean if a field has been set.
 func (o *FanResourceInner) HasLocatorLed() bool {
-	if o != nil && !IsNil(o.LocatorLed) {
+	if o != nil && !isNil(o.LocatorLed) {
 		return true
 	}
 
@@ -458,7 +455,7 @@ func (o *FanResourceInner) SetLocatorLed(v string) {
 
 // GetLocatorLedNumeric returns the LocatorLedNumeric field value if set, zero value otherwise.
 func (o *FanResourceInner) GetLocatorLedNumeric() int64 {
-	if o == nil || IsNil(o.LocatorLedNumeric) {
+	if o == nil || isNil(o.LocatorLedNumeric) {
 		var ret int64
 		return ret
 	}
@@ -468,7 +465,7 @@ func (o *FanResourceInner) GetLocatorLedNumeric() int64 {
 // GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetLocatorLedNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.LocatorLedNumeric) {
+	if o == nil || isNil(o.LocatorLedNumeric) {
 		return nil, false
 	}
 	return o.LocatorLedNumeric, true
@@ -476,7 +473,7 @@ func (o *FanResourceInner) GetLocatorLedNumericOk() (*int64, bool) {
 
 // HasLocatorLedNumeric returns a boolean if a field has been set.
 func (o *FanResourceInner) HasLocatorLedNumeric() bool {
-	if o != nil && !IsNil(o.LocatorLedNumeric) {
+	if o != nil && !isNil(o.LocatorLedNumeric) {
 		return true
 	}
 
@@ -490,7 +487,7 @@ func (o *FanResourceInner) SetLocatorLedNumeric(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *FanResourceInner) GetName() string {
-	if o == nil || IsNil(o.Name) {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -500,7 +497,7 @@ func (o *FanResourceInner) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetNameOk() (*string, bool) {
-	if o == nil || IsNil(o.Name) {
+	if o == nil || isNil(o.Name) {
 		return nil, false
 	}
 	return o.Name, true
@@ -508,7 +505,7 @@ func (o *FanResourceInner) GetNameOk() (*string, bool) {
 
 // HasName returns a boolean if a field has been set.
 func (o *FanResourceInner) HasName() bool {
-	if o != nil && !IsNil(o.Name) {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -522,7 +519,7 @@ func (o *FanResourceInner) SetName(v string) {
 
 // GetPartNumber returns the PartNumber field value if set, zero value otherwise.
 func (o *FanResourceInner) GetPartNumber() string {
-	if o == nil || IsNil(o.PartNumber) {
+	if o == nil || isNil(o.PartNumber) {
 		var ret string
 		return ret
 	}
@@ -532,7 +529,7 @@ func (o *FanResourceInner) GetPartNumber() string {
 // GetPartNumberOk returns a tuple with the PartNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetPartNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.PartNumber) {
+	if o == nil || isNil(o.PartNumber) {
 		return nil, false
 	}
 	return o.PartNumber, true
@@ -540,7 +537,7 @@ func (o *FanResourceInner) GetPartNumberOk() (*string, bool) {
 
 // HasPartNumber returns a boolean if a field has been set.
 func (o *FanResourceInner) HasPartNumber() bool {
-	if o != nil && !IsNil(o.PartNumber) {
+	if o != nil && !isNil(o.PartNumber) {
 		return true
 	}
 
@@ -554,7 +551,7 @@ func (o *FanResourceInner) SetPartNumber(v string) {
 
 // GetPosition returns the Position field value if set, zero value otherwise.
 func (o *FanResourceInner) GetPosition() string {
-	if o == nil || IsNil(o.Position) {
+	if o == nil || isNil(o.Position) {
 		var ret string
 		return ret
 	}
@@ -564,7 +561,7 @@ func (o *FanResourceInner) GetPosition() string {
 // GetPositionOk returns a tuple with the Position field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetPositionOk() (*string, bool) {
-	if o == nil || IsNil(o.Position) {
+	if o == nil || isNil(o.Position) {
 		return nil, false
 	}
 	return o.Position, true
@@ -572,7 +569,7 @@ func (o *FanResourceInner) GetPositionOk() (*string, bool) {
 
 // HasPosition returns a boolean if a field has been set.
 func (o *FanResourceInner) HasPosition() bool {
-	if o != nil && !IsNil(o.Position) {
+	if o != nil && !isNil(o.Position) {
 		return true
 	}
 
@@ -586,7 +583,7 @@ func (o *FanResourceInner) SetPosition(v string) {
 
 // GetPositionNumeric returns the PositionNumeric field value if set, zero value otherwise.
 func (o *FanResourceInner) GetPositionNumeric() int64 {
-	if o == nil || IsNil(o.PositionNumeric) {
+	if o == nil || isNil(o.PositionNumeric) {
 		var ret int64
 		return ret
 	}
@@ -596,7 +593,7 @@ func (o *FanResourceInner) GetPositionNumeric() int64 {
 // GetPositionNumericOk returns a tuple with the PositionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetPositionNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PositionNumeric) {
+	if o == nil || isNil(o.PositionNumeric) {
 		return nil, false
 	}
 	return o.PositionNumeric, true
@@ -604,7 +601,7 @@ func (o *FanResourceInner) GetPositionNumericOk() (*int64, bool) {
 
 // HasPositionNumeric returns a boolean if a field has been set.
 func (o *FanResourceInner) HasPositionNumeric() bool {
-	if o != nil && !IsNil(o.PositionNumeric) {
+	if o != nil && !isNil(o.PositionNumeric) {
 		return true
 	}
 
@@ -618,7 +615,7 @@ func (o *FanResourceInner) SetPositionNumeric(v int64) {
 
 // GetSerialNumber returns the SerialNumber field value if set, zero value otherwise.
 func (o *FanResourceInner) GetSerialNumber() string {
-	if o == nil || IsNil(o.SerialNumber) {
+	if o == nil || isNil(o.SerialNumber) {
 		var ret string
 		return ret
 	}
@@ -628,7 +625,7 @@ func (o *FanResourceInner) GetSerialNumber() string {
 // GetSerialNumberOk returns a tuple with the SerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetSerialNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.SerialNumber) {
+	if o == nil || isNil(o.SerialNumber) {
 		return nil, false
 	}
 	return o.SerialNumber, true
@@ -636,7 +633,7 @@ func (o *FanResourceInner) GetSerialNumberOk() (*string, bool) {
 
 // HasSerialNumber returns a boolean if a field has been set.
 func (o *FanResourceInner) HasSerialNumber() bool {
-	if o != nil && !IsNil(o.SerialNumber) {
+	if o != nil && !isNil(o.SerialNumber) {
 		return true
 	}
 
@@ -650,7 +647,7 @@ func (o *FanResourceInner) SetSerialNumber(v string) {
 
 // GetSpeed returns the Speed field value if set, zero value otherwise.
 func (o *FanResourceInner) GetSpeed() int64 {
-	if o == nil || IsNil(o.Speed) {
+	if o == nil || isNil(o.Speed) {
 		var ret int64
 		return ret
 	}
@@ -660,7 +657,7 @@ func (o *FanResourceInner) GetSpeed() int64 {
 // GetSpeedOk returns a tuple with the Speed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetSpeedOk() (*int64, bool) {
-	if o == nil || IsNil(o.Speed) {
+	if o == nil || isNil(o.Speed) {
 		return nil, false
 	}
 	return o.Speed, true
@@ -668,7 +665,7 @@ func (o *FanResourceInner) GetSpeedOk() (*int64, bool) {
 
 // HasSpeed returns a boolean if a field has been set.
 func (o *FanResourceInner) HasSpeed() bool {
-	if o != nil && !IsNil(o.Speed) {
+	if o != nil && !isNil(o.Speed) {
 		return true
 	}
 
@@ -682,7 +679,7 @@ func (o *FanResourceInner) SetSpeed(v int64) {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *FanResourceInner) GetStatus() string {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret string
 		return ret
 	}
@@ -692,7 +689,7 @@ func (o *FanResourceInner) GetStatus() string {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -700,7 +697,7 @@ func (o *FanResourceInner) GetStatusOk() (*string, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *FanResourceInner) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -714,7 +711,7 @@ func (o *FanResourceInner) SetStatus(v string) {
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
 func (o *FanResourceInner) GetStatusNumeric() int64 {
-	if o == nil || IsNil(o.StatusNumeric) {
+	if o == nil || isNil(o.StatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -724,7 +721,7 @@ func (o *FanResourceInner) GetStatusNumeric() int64 {
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.StatusNumeric) {
+	if o == nil || isNil(o.StatusNumeric) {
 		return nil, false
 	}
 	return o.StatusNumeric, true
@@ -732,7 +729,7 @@ func (o *FanResourceInner) GetStatusNumericOk() (*int64, bool) {
 
 // HasStatusNumeric returns a boolean if a field has been set.
 func (o *FanResourceInner) HasStatusNumeric() bool {
-	if o != nil && !IsNil(o.StatusNumeric) {
+	if o != nil && !isNil(o.StatusNumeric) {
 		return true
 	}
 
@@ -746,7 +743,7 @@ func (o *FanResourceInner) SetStatusNumeric(v int64) {
 
 // GetStatusSes returns the StatusSes field value if set, zero value otherwise.
 func (o *FanResourceInner) GetStatusSes() string {
-	if o == nil || IsNil(o.StatusSes) {
+	if o == nil || isNil(o.StatusSes) {
 		var ret string
 		return ret
 	}
@@ -756,7 +753,7 @@ func (o *FanResourceInner) GetStatusSes() string {
 // GetStatusSesOk returns a tuple with the StatusSes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetStatusSesOk() (*string, bool) {
-	if o == nil || IsNil(o.StatusSes) {
+	if o == nil || isNil(o.StatusSes) {
 		return nil, false
 	}
 	return o.StatusSes, true
@@ -764,7 +761,7 @@ func (o *FanResourceInner) GetStatusSesOk() (*string, bool) {
 
 // HasStatusSes returns a boolean if a field has been set.
 func (o *FanResourceInner) HasStatusSes() bool {
-	if o != nil && !IsNil(o.StatusSes) {
+	if o != nil && !isNil(o.StatusSes) {
 		return true
 	}
 
@@ -778,7 +775,7 @@ func (o *FanResourceInner) SetStatusSes(v string) {
 
 // GetStatusSesNumeric returns the StatusSesNumeric field value if set, zero value otherwise.
 func (o *FanResourceInner) GetStatusSesNumeric() int64 {
-	if o == nil || IsNil(o.StatusSesNumeric) {
+	if o == nil || isNil(o.StatusSesNumeric) {
 		var ret int64
 		return ret
 	}
@@ -788,7 +785,7 @@ func (o *FanResourceInner) GetStatusSesNumeric() int64 {
 // GetStatusSesNumericOk returns a tuple with the StatusSesNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetStatusSesNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.StatusSesNumeric) {
+	if o == nil || isNil(o.StatusSesNumeric) {
 		return nil, false
 	}
 	return o.StatusSesNumeric, true
@@ -796,7 +793,7 @@ func (o *FanResourceInner) GetStatusSesNumericOk() (*int64, bool) {
 
 // HasStatusSesNumeric returns a boolean if a field has been set.
 func (o *FanResourceInner) HasStatusSesNumeric() bool {
-	if o != nil && !IsNil(o.StatusSesNumeric) {
+	if o != nil && !isNil(o.StatusSesNumeric) {
 		return true
 	}
 
@@ -810,7 +807,7 @@ func (o *FanResourceInner) SetStatusSesNumeric(v int64) {
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *FanResourceInner) GetUrl() string {
-	if o == nil || IsNil(o.Url) {
+	if o == nil || isNil(o.Url) {
 		var ret string
 		return ret
 	}
@@ -820,7 +817,7 @@ func (o *FanResourceInner) GetUrl() string {
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FanResourceInner) GetUrlOk() (*string, bool) {
-	if o == nil || IsNil(o.Url) {
+	if o == nil || isNil(o.Url) {
 		return nil, false
 	}
 	return o.Url, true
@@ -828,7 +825,7 @@ func (o *FanResourceInner) GetUrlOk() (*string, bool) {
 
 // HasUrl returns a boolean if a field has been set.
 func (o *FanResourceInner) HasUrl() bool {
-	if o != nil && !IsNil(o.Url) {
+	if o != nil && !isNil(o.Url) {
 		return true
 	}
 
@@ -841,88 +838,80 @@ func (o *FanResourceInner) SetUrl(v string) {
 }
 
 func (o FanResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o FanResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.DurableId) {
+	if !isNil(o.DurableId) {
 		toSerialize["durable-id"] = o.DurableId
 	}
-	if !IsNil(o.ExtendedStatus) {
+	if !isNil(o.ExtendedStatus) {
 		toSerialize["extended-status"] = o.ExtendedStatus
 	}
-	if !IsNil(o.FwRevision) {
+	if !isNil(o.FwRevision) {
 		toSerialize["fw-revision"] = o.FwRevision
 	}
-	if !IsNil(o.Health) {
+	if !isNil(o.Health) {
 		toSerialize["health"] = o.Health
 	}
-	if !IsNil(o.HealthNumeric) {
+	if !isNil(o.HealthNumeric) {
 		toSerialize["health-numeric"] = o.HealthNumeric
 	}
-	if !IsNil(o.HealthReason) {
+	if !isNil(o.HealthReason) {
 		toSerialize["health-reason"] = o.HealthReason
 	}
-	if !IsNil(o.HealthRecommendation) {
+	if !isNil(o.HealthRecommendation) {
 		toSerialize["health-recommendation"] = o.HealthRecommendation
 	}
-	if !IsNil(o.HwRevision) {
+	if !isNil(o.HwRevision) {
 		toSerialize["hw-revision"] = o.HwRevision
 	}
-	if !IsNil(o.Location) {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if !IsNil(o.LocatorLed) {
+	if !isNil(o.LocatorLed) {
 		toSerialize["locator-led"] = o.LocatorLed
 	}
-	if !IsNil(o.LocatorLedNumeric) {
+	if !isNil(o.LocatorLedNumeric) {
 		toSerialize["locator-led-numeric"] = o.LocatorLedNumeric
 	}
-	if !IsNil(o.Name) {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if !IsNil(o.PartNumber) {
+	if !isNil(o.PartNumber) {
 		toSerialize["part-number"] = o.PartNumber
 	}
-	if !IsNil(o.Position) {
+	if !isNil(o.Position) {
 		toSerialize["position"] = o.Position
 	}
-	if !IsNil(o.PositionNumeric) {
+	if !isNil(o.PositionNumeric) {
 		toSerialize["position-numeric"] = o.PositionNumeric
 	}
-	if !IsNil(o.SerialNumber) {
+	if !isNil(o.SerialNumber) {
 		toSerialize["serial-number"] = o.SerialNumber
 	}
-	if !IsNil(o.Speed) {
+	if !isNil(o.Speed) {
 		toSerialize["speed"] = o.Speed
 	}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.StatusNumeric) {
+	if !isNil(o.StatusNumeric) {
 		toSerialize["status-numeric"] = o.StatusNumeric
 	}
-	if !IsNil(o.StatusSes) {
+	if !isNil(o.StatusSes) {
 		toSerialize["status-ses"] = o.StatusSes
 	}
-	if !IsNil(o.StatusSesNumeric) {
+	if !isNil(o.StatusSesNumeric) {
 		toSerialize["status-ses-numeric"] = o.StatusSesNumeric
 	}
-	if !IsNil(o.Url) {
+	if !isNil(o.Url) {
 		toSerialize["url"] = o.Url
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableFanResourceInner struct {

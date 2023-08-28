@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the EnclosuresResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &EnclosuresResourceInner{}
-
 // EnclosuresResourceInner struct for EnclosuresResourceInner
 type EnclosuresResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
@@ -134,7 +131,7 @@ func NewEnclosuresResourceInnerWithDefaults() *EnclosuresResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -144,7 +141,7 @@ func (o *EnclosuresResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -152,7 +149,7 @@ func (o *EnclosuresResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -166,7 +163,7 @@ func (o *EnclosuresResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -176,7 +173,7 @@ func (o *EnclosuresResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -184,7 +181,7 @@ func (o *EnclosuresResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -198,7 +195,7 @@ func (o *EnclosuresResourceInner) SetMeta(v string) {
 
 // GetBoardModel returns the BoardModel field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetBoardModel() string {
-	if o == nil || IsNil(o.BoardModel) {
+	if o == nil || isNil(o.BoardModel) {
 		var ret string
 		return ret
 	}
@@ -208,7 +205,7 @@ func (o *EnclosuresResourceInner) GetBoardModel() string {
 // GetBoardModelOk returns a tuple with the BoardModel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetBoardModelOk() (*string, bool) {
-	if o == nil || IsNil(o.BoardModel) {
+	if o == nil || isNil(o.BoardModel) {
 		return nil, false
 	}
 	return o.BoardModel, true
@@ -216,7 +213,7 @@ func (o *EnclosuresResourceInner) GetBoardModelOk() (*string, bool) {
 
 // HasBoardModel returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasBoardModel() bool {
-	if o != nil && !IsNil(o.BoardModel) {
+	if o != nil && !isNil(o.BoardModel) {
 		return true
 	}
 
@@ -230,7 +227,7 @@ func (o *EnclosuresResourceInner) SetBoardModel(v string) {
 
 // GetBoardModelNumeric returns the BoardModelNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetBoardModelNumeric() int64 {
-	if o == nil || IsNil(o.BoardModelNumeric) {
+	if o == nil || isNil(o.BoardModelNumeric) {
 		var ret int64
 		return ret
 	}
@@ -240,7 +237,7 @@ func (o *EnclosuresResourceInner) GetBoardModelNumeric() int64 {
 // GetBoardModelNumericOk returns a tuple with the BoardModelNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetBoardModelNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.BoardModelNumeric) {
+	if o == nil || isNil(o.BoardModelNumeric) {
 		return nil, false
 	}
 	return o.BoardModelNumeric, true
@@ -248,7 +245,7 @@ func (o *EnclosuresResourceInner) GetBoardModelNumericOk() (*int64, bool) {
 
 // HasBoardModelNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasBoardModelNumeric() bool {
-	if o != nil && !IsNil(o.BoardModelNumeric) {
+	if o != nil && !isNil(o.BoardModelNumeric) {
 		return true
 	}
 
@@ -262,7 +259,7 @@ func (o *EnclosuresResourceInner) SetBoardModelNumeric(v int64) {
 
 // GetColumns returns the Columns field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetColumns() int64 {
-	if o == nil || IsNil(o.Columns) {
+	if o == nil || isNil(o.Columns) {
 		var ret int64
 		return ret
 	}
@@ -272,7 +269,7 @@ func (o *EnclosuresResourceInner) GetColumns() int64 {
 // GetColumnsOk returns a tuple with the Columns field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetColumnsOk() (*int64, bool) {
-	if o == nil || IsNil(o.Columns) {
+	if o == nil || isNil(o.Columns) {
 		return nil, false
 	}
 	return o.Columns, true
@@ -280,7 +277,7 @@ func (o *EnclosuresResourceInner) GetColumnsOk() (*int64, bool) {
 
 // HasColumns returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasColumns() bool {
-	if o != nil && !IsNil(o.Columns) {
+	if o != nil && !isNil(o.Columns) {
 		return true
 	}
 
@@ -294,7 +291,7 @@ func (o *EnclosuresResourceInner) SetColumns(v int64) {
 
 // GetDashLevel returns the DashLevel field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetDashLevel() string {
-	if o == nil || IsNil(o.DashLevel) {
+	if o == nil || isNil(o.DashLevel) {
 		var ret string
 		return ret
 	}
@@ -304,7 +301,7 @@ func (o *EnclosuresResourceInner) GetDashLevel() string {
 // GetDashLevelOk returns a tuple with the DashLevel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetDashLevelOk() (*string, bool) {
-	if o == nil || IsNil(o.DashLevel) {
+	if o == nil || isNil(o.DashLevel) {
 		return nil, false
 	}
 	return o.DashLevel, true
@@ -312,7 +309,7 @@ func (o *EnclosuresResourceInner) GetDashLevelOk() (*string, bool) {
 
 // HasDashLevel returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasDashLevel() bool {
-	if o != nil && !IsNil(o.DashLevel) {
+	if o != nil && !isNil(o.DashLevel) {
 		return true
 	}
 
@@ -326,7 +323,7 @@ func (o *EnclosuresResourceInner) SetDashLevel(v string) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetDescription() string {
-	if o == nil || IsNil(o.Description) {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -336,7 +333,7 @@ func (o *EnclosuresResourceInner) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetDescriptionOk() (*string, bool) {
-	if o == nil || IsNil(o.Description) {
+	if o == nil || isNil(o.Description) {
 		return nil, false
 	}
 	return o.Description, true
@@ -344,7 +341,7 @@ func (o *EnclosuresResourceInner) GetDescriptionOk() (*string, bool) {
 
 // HasDescription returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasDescription() bool {
-	if o != nil && !IsNil(o.Description) {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -358,7 +355,7 @@ func (o *EnclosuresResourceInner) SetDescription(v string) {
 
 // GetDriveOrientation returns the DriveOrientation field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetDriveOrientation() string {
-	if o == nil || IsNil(o.DriveOrientation) {
+	if o == nil || isNil(o.DriveOrientation) {
 		var ret string
 		return ret
 	}
@@ -368,7 +365,7 @@ func (o *EnclosuresResourceInner) GetDriveOrientation() string {
 // GetDriveOrientationOk returns a tuple with the DriveOrientation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetDriveOrientationOk() (*string, bool) {
-	if o == nil || IsNil(o.DriveOrientation) {
+	if o == nil || isNil(o.DriveOrientation) {
 		return nil, false
 	}
 	return o.DriveOrientation, true
@@ -376,7 +373,7 @@ func (o *EnclosuresResourceInner) GetDriveOrientationOk() (*string, bool) {
 
 // HasDriveOrientation returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasDriveOrientation() bool {
-	if o != nil && !IsNil(o.DriveOrientation) {
+	if o != nil && !isNil(o.DriveOrientation) {
 		return true
 	}
 
@@ -390,7 +387,7 @@ func (o *EnclosuresResourceInner) SetDriveOrientation(v string) {
 
 // GetDriveOrientationNumeric returns the DriveOrientationNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int64 {
-	if o == nil || IsNil(o.DriveOrientationNumeric) {
+	if o == nil || isNil(o.DriveOrientationNumeric) {
 		var ret int64
 		return ret
 	}
@@ -400,7 +397,7 @@ func (o *EnclosuresResourceInner) GetDriveOrientationNumeric() int64 {
 // GetDriveOrientationNumericOk returns a tuple with the DriveOrientationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetDriveOrientationNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.DriveOrientationNumeric) {
+	if o == nil || isNil(o.DriveOrientationNumeric) {
 		return nil, false
 	}
 	return o.DriveOrientationNumeric, true
@@ -408,7 +405,7 @@ func (o *EnclosuresResourceInner) GetDriveOrientationNumericOk() (*int64, bool) 
 
 // HasDriveOrientationNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasDriveOrientationNumeric() bool {
-	if o != nil && !IsNil(o.DriveOrientationNumeric) {
+	if o != nil && !isNil(o.DriveOrientationNumeric) {
 		return true
 	}
 
@@ -422,7 +419,7 @@ func (o *EnclosuresResourceInner) SetDriveOrientationNumeric(v int64) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetDurableId() string {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -432,7 +429,7 @@ func (o *EnclosuresResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -440,7 +437,7 @@ func (o *EnclosuresResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasDurableId() bool {
-	if o != nil && !IsNil(o.DurableId) {
+	if o != nil && !isNil(o.DurableId) {
 		return true
 	}
 
@@ -454,7 +451,7 @@ func (o *EnclosuresResourceInner) SetDurableId(v string) {
 
 // GetEmpA returns the EmpA field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEmpA() string {
-	if o == nil || IsNil(o.EmpA) {
+	if o == nil || isNil(o.EmpA) {
 		var ret string
 		return ret
 	}
@@ -464,7 +461,7 @@ func (o *EnclosuresResourceInner) GetEmpA() string {
 // GetEmpAOk returns a tuple with the EmpA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEmpAOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpA) {
+	if o == nil || isNil(o.EmpA) {
 		return nil, false
 	}
 	return o.EmpA, true
@@ -472,7 +469,7 @@ func (o *EnclosuresResourceInner) GetEmpAOk() (*string, bool) {
 
 // HasEmpA returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEmpA() bool {
-	if o != nil && !IsNil(o.EmpA) {
+	if o != nil && !isNil(o.EmpA) {
 		return true
 	}
 
@@ -486,7 +483,7 @@ func (o *EnclosuresResourceInner) SetEmpA(v string) {
 
 // GetEmpABusid returns the EmpABusid field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEmpABusid() string {
-	if o == nil || IsNil(o.EmpABusid) {
+	if o == nil || isNil(o.EmpABusid) {
 		var ret string
 		return ret
 	}
@@ -496,7 +493,7 @@ func (o *EnclosuresResourceInner) GetEmpABusid() string {
 // GetEmpABusidOk returns a tuple with the EmpABusid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEmpABusidOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpABusid) {
+	if o == nil || isNil(o.EmpABusid) {
 		return nil, false
 	}
 	return o.EmpABusid, true
@@ -504,7 +501,7 @@ func (o *EnclosuresResourceInner) GetEmpABusidOk() (*string, bool) {
 
 // HasEmpABusid returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEmpABusid() bool {
-	if o != nil && !IsNil(o.EmpABusid) {
+	if o != nil && !isNil(o.EmpABusid) {
 		return true
 	}
 
@@ -518,7 +515,7 @@ func (o *EnclosuresResourceInner) SetEmpABusid(v string) {
 
 // GetEmpAChIdRev returns the EmpAChIdRev field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEmpAChIdRev() string {
-	if o == nil || IsNil(o.EmpAChIdRev) {
+	if o == nil || isNil(o.EmpAChIdRev) {
 		var ret string
 		return ret
 	}
@@ -528,7 +525,7 @@ func (o *EnclosuresResourceInner) GetEmpAChIdRev() string {
 // GetEmpAChIdRevOk returns a tuple with the EmpAChIdRev field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEmpAChIdRevOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpAChIdRev) {
+	if o == nil || isNil(o.EmpAChIdRev) {
 		return nil, false
 	}
 	return o.EmpAChIdRev, true
@@ -536,7 +533,7 @@ func (o *EnclosuresResourceInner) GetEmpAChIdRevOk() (*string, bool) {
 
 // HasEmpAChIdRev returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEmpAChIdRev() bool {
-	if o != nil && !IsNil(o.EmpAChIdRev) {
+	if o != nil && !isNil(o.EmpAChIdRev) {
 		return true
 	}
 
@@ -550,7 +547,7 @@ func (o *EnclosuresResourceInner) SetEmpAChIdRev(v string) {
 
 // GetEmpARev returns the EmpARev field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEmpARev() string {
-	if o == nil || IsNil(o.EmpARev) {
+	if o == nil || isNil(o.EmpARev) {
 		var ret string
 		return ret
 	}
@@ -560,7 +557,7 @@ func (o *EnclosuresResourceInner) GetEmpARev() string {
 // GetEmpARevOk returns a tuple with the EmpARev field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEmpARevOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpARev) {
+	if o == nil || isNil(o.EmpARev) {
 		return nil, false
 	}
 	return o.EmpARev, true
@@ -568,7 +565,7 @@ func (o *EnclosuresResourceInner) GetEmpARevOk() (*string, bool) {
 
 // HasEmpARev returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEmpARev() bool {
-	if o != nil && !IsNil(o.EmpARev) {
+	if o != nil && !isNil(o.EmpARev) {
 		return true
 	}
 
@@ -582,7 +579,7 @@ func (o *EnclosuresResourceInner) SetEmpARev(v string) {
 
 // GetEmpATargetid returns the EmpATargetid field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEmpATargetid() string {
-	if o == nil || IsNil(o.EmpATargetid) {
+	if o == nil || isNil(o.EmpATargetid) {
 		var ret string
 		return ret
 	}
@@ -592,7 +589,7 @@ func (o *EnclosuresResourceInner) GetEmpATargetid() string {
 // GetEmpATargetidOk returns a tuple with the EmpATargetid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEmpATargetidOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpATargetid) {
+	if o == nil || isNil(o.EmpATargetid) {
 		return nil, false
 	}
 	return o.EmpATargetid, true
@@ -600,7 +597,7 @@ func (o *EnclosuresResourceInner) GetEmpATargetidOk() (*string, bool) {
 
 // HasEmpATargetid returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEmpATargetid() bool {
-	if o != nil && !IsNil(o.EmpATargetid) {
+	if o != nil && !isNil(o.EmpATargetid) {
 		return true
 	}
 
@@ -614,7 +611,7 @@ func (o *EnclosuresResourceInner) SetEmpATargetid(v string) {
 
 // GetEmpB returns the EmpB field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEmpB() string {
-	if o == nil || IsNil(o.EmpB) {
+	if o == nil || isNil(o.EmpB) {
 		var ret string
 		return ret
 	}
@@ -624,7 +621,7 @@ func (o *EnclosuresResourceInner) GetEmpB() string {
 // GetEmpBOk returns a tuple with the EmpB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEmpBOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpB) {
+	if o == nil || isNil(o.EmpB) {
 		return nil, false
 	}
 	return o.EmpB, true
@@ -632,7 +629,7 @@ func (o *EnclosuresResourceInner) GetEmpBOk() (*string, bool) {
 
 // HasEmpB returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEmpB() bool {
-	if o != nil && !IsNil(o.EmpB) {
+	if o != nil && !isNil(o.EmpB) {
 		return true
 	}
 
@@ -646,7 +643,7 @@ func (o *EnclosuresResourceInner) SetEmpB(v string) {
 
 // GetEmpBBusid returns the EmpBBusid field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEmpBBusid() string {
-	if o == nil || IsNil(o.EmpBBusid) {
+	if o == nil || isNil(o.EmpBBusid) {
 		var ret string
 		return ret
 	}
@@ -656,7 +653,7 @@ func (o *EnclosuresResourceInner) GetEmpBBusid() string {
 // GetEmpBBusidOk returns a tuple with the EmpBBusid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEmpBBusidOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpBBusid) {
+	if o == nil || isNil(o.EmpBBusid) {
 		return nil, false
 	}
 	return o.EmpBBusid, true
@@ -664,7 +661,7 @@ func (o *EnclosuresResourceInner) GetEmpBBusidOk() (*string, bool) {
 
 // HasEmpBBusid returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEmpBBusid() bool {
-	if o != nil && !IsNil(o.EmpBBusid) {
+	if o != nil && !isNil(o.EmpBBusid) {
 		return true
 	}
 
@@ -678,7 +675,7 @@ func (o *EnclosuresResourceInner) SetEmpBBusid(v string) {
 
 // GetEmpBChIdRev returns the EmpBChIdRev field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEmpBChIdRev() string {
-	if o == nil || IsNil(o.EmpBChIdRev) {
+	if o == nil || isNil(o.EmpBChIdRev) {
 		var ret string
 		return ret
 	}
@@ -688,7 +685,7 @@ func (o *EnclosuresResourceInner) GetEmpBChIdRev() string {
 // GetEmpBChIdRevOk returns a tuple with the EmpBChIdRev field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEmpBChIdRevOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpBChIdRev) {
+	if o == nil || isNil(o.EmpBChIdRev) {
 		return nil, false
 	}
 	return o.EmpBChIdRev, true
@@ -696,7 +693,7 @@ func (o *EnclosuresResourceInner) GetEmpBChIdRevOk() (*string, bool) {
 
 // HasEmpBChIdRev returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEmpBChIdRev() bool {
-	if o != nil && !IsNil(o.EmpBChIdRev) {
+	if o != nil && !isNil(o.EmpBChIdRev) {
 		return true
 	}
 
@@ -710,7 +707,7 @@ func (o *EnclosuresResourceInner) SetEmpBChIdRev(v string) {
 
 // GetEmpBRev returns the EmpBRev field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEmpBRev() string {
-	if o == nil || IsNil(o.EmpBRev) {
+	if o == nil || isNil(o.EmpBRev) {
 		var ret string
 		return ret
 	}
@@ -720,7 +717,7 @@ func (o *EnclosuresResourceInner) GetEmpBRev() string {
 // GetEmpBRevOk returns a tuple with the EmpBRev field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEmpBRevOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpBRev) {
+	if o == nil || isNil(o.EmpBRev) {
 		return nil, false
 	}
 	return o.EmpBRev, true
@@ -728,7 +725,7 @@ func (o *EnclosuresResourceInner) GetEmpBRevOk() (*string, bool) {
 
 // HasEmpBRev returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEmpBRev() bool {
-	if o != nil && !IsNil(o.EmpBRev) {
+	if o != nil && !isNil(o.EmpBRev) {
 		return true
 	}
 
@@ -742,7 +739,7 @@ func (o *EnclosuresResourceInner) SetEmpBRev(v string) {
 
 // GetEmpBTargetid returns the EmpBTargetid field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEmpBTargetid() string {
-	if o == nil || IsNil(o.EmpBTargetid) {
+	if o == nil || isNil(o.EmpBTargetid) {
 		var ret string
 		return ret
 	}
@@ -752,7 +749,7 @@ func (o *EnclosuresResourceInner) GetEmpBTargetid() string {
 // GetEmpBTargetidOk returns a tuple with the EmpBTargetid field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEmpBTargetidOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpBTargetid) {
+	if o == nil || isNil(o.EmpBTargetid) {
 		return nil, false
 	}
 	return o.EmpBTargetid, true
@@ -760,7 +757,7 @@ func (o *EnclosuresResourceInner) GetEmpBTargetidOk() (*string, bool) {
 
 // HasEmpBTargetid returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEmpBTargetid() bool {
-	if o != nil && !IsNil(o.EmpBTargetid) {
+	if o != nil && !isNil(o.EmpBTargetid) {
 		return true
 	}
 
@@ -774,7 +771,7 @@ func (o *EnclosuresResourceInner) SetEmpBTargetid(v string) {
 
 // GetEnclosureArrangement returns the EnclosureArrangement field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEnclosureArrangement() string {
-	if o == nil || IsNil(o.EnclosureArrangement) {
+	if o == nil || isNil(o.EnclosureArrangement) {
 		var ret string
 		return ret
 	}
@@ -784,7 +781,7 @@ func (o *EnclosuresResourceInner) GetEnclosureArrangement() string {
 // GetEnclosureArrangementOk returns a tuple with the EnclosureArrangement field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEnclosureArrangementOk() (*string, bool) {
-	if o == nil || IsNil(o.EnclosureArrangement) {
+	if o == nil || isNil(o.EnclosureArrangement) {
 		return nil, false
 	}
 	return o.EnclosureArrangement, true
@@ -792,7 +789,7 @@ func (o *EnclosuresResourceInner) GetEnclosureArrangementOk() (*string, bool) {
 
 // HasEnclosureArrangement returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEnclosureArrangement() bool {
-	if o != nil && !IsNil(o.EnclosureArrangement) {
+	if o != nil && !isNil(o.EnclosureArrangement) {
 		return true
 	}
 
@@ -806,7 +803,7 @@ func (o *EnclosuresResourceInner) SetEnclosureArrangement(v string) {
 
 // GetEnclosureArrangementNumeric returns the EnclosureArrangementNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int64 {
-	if o == nil || IsNil(o.EnclosureArrangementNumeric) {
+	if o == nil || isNil(o.EnclosureArrangementNumeric) {
 		var ret int64
 		return ret
 	}
@@ -816,7 +813,7 @@ func (o *EnclosuresResourceInner) GetEnclosureArrangementNumeric() int64 {
 // GetEnclosureArrangementNumericOk returns a tuple with the EnclosureArrangementNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEnclosureArrangementNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.EnclosureArrangementNumeric) {
+	if o == nil || isNil(o.EnclosureArrangementNumeric) {
 		return nil, false
 	}
 	return o.EnclosureArrangementNumeric, true
@@ -824,7 +821,7 @@ func (o *EnclosuresResourceInner) GetEnclosureArrangementNumericOk() (*int64, bo
 
 // HasEnclosureArrangementNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEnclosureArrangementNumeric() bool {
-	if o != nil && !IsNil(o.EnclosureArrangementNumeric) {
+	if o != nil && !isNil(o.EnclosureArrangementNumeric) {
 		return true
 	}
 
@@ -838,7 +835,7 @@ func (o *EnclosuresResourceInner) SetEnclosureArrangementNumeric(v int64) {
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEnclosureId() int64 {
-	if o == nil || IsNil(o.EnclosureId) {
+	if o == nil || isNil(o.EnclosureId) {
 		var ret int64
 		return ret
 	}
@@ -848,7 +845,7 @@ func (o *EnclosuresResourceInner) GetEnclosureId() int64 {
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEnclosureIdOk() (*int64, bool) {
-	if o == nil || IsNil(o.EnclosureId) {
+	if o == nil || isNil(o.EnclosureId) {
 		return nil, false
 	}
 	return o.EnclosureId, true
@@ -856,7 +853,7 @@ func (o *EnclosuresResourceInner) GetEnclosureIdOk() (*int64, bool) {
 
 // HasEnclosureId returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEnclosureId() bool {
-	if o != nil && !IsNil(o.EnclosureId) {
+	if o != nil && !isNil(o.EnclosureId) {
 		return true
 	}
 
@@ -870,7 +867,7 @@ func (o *EnclosuresResourceInner) SetEnclosureId(v int64) {
 
 // GetEnclosurePower returns the EnclosurePower field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEnclosurePower() string {
-	if o == nil || IsNil(o.EnclosurePower) {
+	if o == nil || isNil(o.EnclosurePower) {
 		var ret string
 		return ret
 	}
@@ -880,7 +877,7 @@ func (o *EnclosuresResourceInner) GetEnclosurePower() string {
 // GetEnclosurePowerOk returns a tuple with the EnclosurePower field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEnclosurePowerOk() (*string, bool) {
-	if o == nil || IsNil(o.EnclosurePower) {
+	if o == nil || isNil(o.EnclosurePower) {
 		return nil, false
 	}
 	return o.EnclosurePower, true
@@ -888,7 +885,7 @@ func (o *EnclosuresResourceInner) GetEnclosurePowerOk() (*string, bool) {
 
 // HasEnclosurePower returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEnclosurePower() bool {
-	if o != nil && !IsNil(o.EnclosurePower) {
+	if o != nil && !isNil(o.EnclosurePower) {
 		return true
 	}
 
@@ -902,7 +899,7 @@ func (o *EnclosuresResourceInner) SetEnclosurePower(v string) {
 
 // GetEnclosureWwn returns the EnclosureWwn field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetEnclosureWwn() string {
-	if o == nil || IsNil(o.EnclosureWwn) {
+	if o == nil || isNil(o.EnclosureWwn) {
 		var ret string
 		return ret
 	}
@@ -912,7 +909,7 @@ func (o *EnclosuresResourceInner) GetEnclosureWwn() string {
 // GetEnclosureWwnOk returns a tuple with the EnclosureWwn field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetEnclosureWwnOk() (*string, bool) {
-	if o == nil || IsNil(o.EnclosureWwn) {
+	if o == nil || isNil(o.EnclosureWwn) {
 		return nil, false
 	}
 	return o.EnclosureWwn, true
@@ -920,7 +917,7 @@ func (o *EnclosuresResourceInner) GetEnclosureWwnOk() (*string, bool) {
 
 // HasEnclosureWwn returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasEnclosureWwn() bool {
-	if o != nil && !IsNil(o.EnclosureWwn) {
+	if o != nil && !isNil(o.EnclosureWwn) {
 		return true
 	}
 
@@ -934,7 +931,7 @@ func (o *EnclosuresResourceInner) SetEnclosureWwn(v string) {
 
 // GetExtendedStatus returns the ExtendedStatus field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetExtendedStatus() string {
-	if o == nil || IsNil(o.ExtendedStatus) {
+	if o == nil || isNil(o.ExtendedStatus) {
 		var ret string
 		return ret
 	}
@@ -944,7 +941,7 @@ func (o *EnclosuresResourceInner) GetExtendedStatus() string {
 // GetExtendedStatusOk returns a tuple with the ExtendedStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetExtendedStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.ExtendedStatus) {
+	if o == nil || isNil(o.ExtendedStatus) {
 		return nil, false
 	}
 	return o.ExtendedStatus, true
@@ -952,7 +949,7 @@ func (o *EnclosuresResourceInner) GetExtendedStatusOk() (*string, bool) {
 
 // HasExtendedStatus returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasExtendedStatus() bool {
-	if o != nil && !IsNil(o.ExtendedStatus) {
+	if o != nil && !isNil(o.ExtendedStatus) {
 		return true
 	}
 
@@ -966,7 +963,7 @@ func (o *EnclosuresResourceInner) SetExtendedStatus(v string) {
 
 // GetFruLocation returns the FruLocation field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetFruLocation() string {
-	if o == nil || IsNil(o.FruLocation) {
+	if o == nil || isNil(o.FruLocation) {
 		var ret string
 		return ret
 	}
@@ -976,7 +973,7 @@ func (o *EnclosuresResourceInner) GetFruLocation() string {
 // GetFruLocationOk returns a tuple with the FruLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetFruLocationOk() (*string, bool) {
-	if o == nil || IsNil(o.FruLocation) {
+	if o == nil || isNil(o.FruLocation) {
 		return nil, false
 	}
 	return o.FruLocation, true
@@ -984,7 +981,7 @@ func (o *EnclosuresResourceInner) GetFruLocationOk() (*string, bool) {
 
 // HasFruLocation returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasFruLocation() bool {
-	if o != nil && !IsNil(o.FruLocation) {
+	if o != nil && !isNil(o.FruLocation) {
 		return true
 	}
 
@@ -998,7 +995,7 @@ func (o *EnclosuresResourceInner) SetFruLocation(v string) {
 
 // GetFruShortname returns the FruShortname field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetFruShortname() string {
-	if o == nil || IsNil(o.FruShortname) {
+	if o == nil || isNil(o.FruShortname) {
 		var ret string
 		return ret
 	}
@@ -1008,7 +1005,7 @@ func (o *EnclosuresResourceInner) GetFruShortname() string {
 // GetFruShortnameOk returns a tuple with the FruShortname field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetFruShortnameOk() (*string, bool) {
-	if o == nil || IsNil(o.FruShortname) {
+	if o == nil || isNil(o.FruShortname) {
 		return nil, false
 	}
 	return o.FruShortname, true
@@ -1016,7 +1013,7 @@ func (o *EnclosuresResourceInner) GetFruShortnameOk() (*string, bool) {
 
 // HasFruShortname returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasFruShortname() bool {
-	if o != nil && !IsNil(o.FruShortname) {
+	if o != nil && !isNil(o.FruShortname) {
 		return true
 	}
 
@@ -1030,7 +1027,7 @@ func (o *EnclosuresResourceInner) SetFruShortname(v string) {
 
 // GetFruTlapn returns the FruTlapn field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetFruTlapn() string {
-	if o == nil || IsNil(o.FruTlapn) {
+	if o == nil || isNil(o.FruTlapn) {
 		var ret string
 		return ret
 	}
@@ -1040,7 +1037,7 @@ func (o *EnclosuresResourceInner) GetFruTlapn() string {
 // GetFruTlapnOk returns a tuple with the FruTlapn field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetFruTlapnOk() (*string, bool) {
-	if o == nil || IsNil(o.FruTlapn) {
+	if o == nil || isNil(o.FruTlapn) {
 		return nil, false
 	}
 	return o.FruTlapn, true
@@ -1048,7 +1045,7 @@ func (o *EnclosuresResourceInner) GetFruTlapnOk() (*string, bool) {
 
 // HasFruTlapn returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasFruTlapn() bool {
-	if o != nil && !IsNil(o.FruTlapn) {
+	if o != nil && !isNil(o.FruTlapn) {
 		return true
 	}
 
@@ -1062,7 +1059,7 @@ func (o *EnclosuresResourceInner) SetFruTlapn(v string) {
 
 // GetGemVersionA returns the GemVersionA field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetGemVersionA() string {
-	if o == nil || IsNil(o.GemVersionA) {
+	if o == nil || isNil(o.GemVersionA) {
 		var ret string
 		return ret
 	}
@@ -1072,7 +1069,7 @@ func (o *EnclosuresResourceInner) GetGemVersionA() string {
 // GetGemVersionAOk returns a tuple with the GemVersionA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetGemVersionAOk() (*string, bool) {
-	if o == nil || IsNil(o.GemVersionA) {
+	if o == nil || isNil(o.GemVersionA) {
 		return nil, false
 	}
 	return o.GemVersionA, true
@@ -1080,7 +1077,7 @@ func (o *EnclosuresResourceInner) GetGemVersionAOk() (*string, bool) {
 
 // HasGemVersionA returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasGemVersionA() bool {
-	if o != nil && !IsNil(o.GemVersionA) {
+	if o != nil && !isNil(o.GemVersionA) {
 		return true
 	}
 
@@ -1094,7 +1091,7 @@ func (o *EnclosuresResourceInner) SetGemVersionA(v string) {
 
 // GetGemVersionB returns the GemVersionB field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetGemVersionB() string {
-	if o == nil || IsNil(o.GemVersionB) {
+	if o == nil || isNil(o.GemVersionB) {
 		var ret string
 		return ret
 	}
@@ -1104,7 +1101,7 @@ func (o *EnclosuresResourceInner) GetGemVersionB() string {
 // GetGemVersionBOk returns a tuple with the GemVersionB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetGemVersionBOk() (*string, bool) {
-	if o == nil || IsNil(o.GemVersionB) {
+	if o == nil || isNil(o.GemVersionB) {
 		return nil, false
 	}
 	return o.GemVersionB, true
@@ -1112,7 +1109,7 @@ func (o *EnclosuresResourceInner) GetGemVersionBOk() (*string, bool) {
 
 // HasGemVersionB returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasGemVersionB() bool {
-	if o != nil && !IsNil(o.GemVersionB) {
+	if o != nil && !isNil(o.GemVersionB) {
 		return true
 	}
 
@@ -1126,7 +1123,7 @@ func (o *EnclosuresResourceInner) SetGemVersionB(v string) {
 
 // GetHealth returns the Health field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetHealth() string {
-	if o == nil || IsNil(o.Health) {
+	if o == nil || isNil(o.Health) {
 		var ret string
 		return ret
 	}
@@ -1136,7 +1133,7 @@ func (o *EnclosuresResourceInner) GetHealth() string {
 // GetHealthOk returns a tuple with the Health field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetHealthOk() (*string, bool) {
-	if o == nil || IsNil(o.Health) {
+	if o == nil || isNil(o.Health) {
 		return nil, false
 	}
 	return o.Health, true
@@ -1144,7 +1141,7 @@ func (o *EnclosuresResourceInner) GetHealthOk() (*string, bool) {
 
 // HasHealth returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasHealth() bool {
-	if o != nil && !IsNil(o.Health) {
+	if o != nil && !isNil(o.Health) {
 		return true
 	}
 
@@ -1158,7 +1155,7 @@ func (o *EnclosuresResourceInner) SetHealth(v string) {
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetHealthNumeric() int64 {
-	if o == nil || IsNil(o.HealthNumeric) {
+	if o == nil || isNil(o.HealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1168,7 +1165,7 @@ func (o *EnclosuresResourceInner) GetHealthNumeric() int64 {
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetHealthNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.HealthNumeric) {
+	if o == nil || isNil(o.HealthNumeric) {
 		return nil, false
 	}
 	return o.HealthNumeric, true
@@ -1176,7 +1173,7 @@ func (o *EnclosuresResourceInner) GetHealthNumericOk() (*int64, bool) {
 
 // HasHealthNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasHealthNumeric() bool {
-	if o != nil && !IsNil(o.HealthNumeric) {
+	if o != nil && !isNil(o.HealthNumeric) {
 		return true
 	}
 
@@ -1190,7 +1187,7 @@ func (o *EnclosuresResourceInner) SetHealthNumeric(v int64) {
 
 // GetHealthReason returns the HealthReason field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetHealthReason() string {
-	if o == nil || IsNil(o.HealthReason) {
+	if o == nil || isNil(o.HealthReason) {
 		var ret string
 		return ret
 	}
@@ -1200,7 +1197,7 @@ func (o *EnclosuresResourceInner) GetHealthReason() string {
 // GetHealthReasonOk returns a tuple with the HealthReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetHealthReasonOk() (*string, bool) {
-	if o == nil || IsNil(o.HealthReason) {
+	if o == nil || isNil(o.HealthReason) {
 		return nil, false
 	}
 	return o.HealthReason, true
@@ -1208,7 +1205,7 @@ func (o *EnclosuresResourceInner) GetHealthReasonOk() (*string, bool) {
 
 // HasHealthReason returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasHealthReason() bool {
-	if o != nil && !IsNil(o.HealthReason) {
+	if o != nil && !isNil(o.HealthReason) {
 		return true
 	}
 
@@ -1222,7 +1219,7 @@ func (o *EnclosuresResourceInner) SetHealthReason(v string) {
 
 // GetHealthRecommendation returns the HealthRecommendation field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetHealthRecommendation() string {
-	if o == nil || IsNil(o.HealthRecommendation) {
+	if o == nil || isNil(o.HealthRecommendation) {
 		var ret string
 		return ret
 	}
@@ -1232,7 +1229,7 @@ func (o *EnclosuresResourceInner) GetHealthRecommendation() string {
 // GetHealthRecommendationOk returns a tuple with the HealthRecommendation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetHealthRecommendationOk() (*string, bool) {
-	if o == nil || IsNil(o.HealthRecommendation) {
+	if o == nil || isNil(o.HealthRecommendation) {
 		return nil, false
 	}
 	return o.HealthRecommendation, true
@@ -1240,7 +1237,7 @@ func (o *EnclosuresResourceInner) GetHealthRecommendationOk() (*string, bool) {
 
 // HasHealthRecommendation returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasHealthRecommendation() bool {
-	if o != nil && !IsNil(o.HealthRecommendation) {
+	if o != nil && !isNil(o.HealthRecommendation) {
 		return true
 	}
 
@@ -1254,7 +1251,7 @@ func (o *EnclosuresResourceInner) SetHealthRecommendation(v string) {
 
 // GetIomType returns the IomType field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetIomType() string {
-	if o == nil || IsNil(o.IomType) {
+	if o == nil || isNil(o.IomType) {
 		var ret string
 		return ret
 	}
@@ -1264,7 +1261,7 @@ func (o *EnclosuresResourceInner) GetIomType() string {
 // GetIomTypeOk returns a tuple with the IomType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetIomTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.IomType) {
+	if o == nil || isNil(o.IomType) {
 		return nil, false
 	}
 	return o.IomType, true
@@ -1272,7 +1269,7 @@ func (o *EnclosuresResourceInner) GetIomTypeOk() (*string, bool) {
 
 // HasIomType returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasIomType() bool {
-	if o != nil && !IsNil(o.IomType) {
+	if o != nil && !isNil(o.IomType) {
 		return true
 	}
 
@@ -1286,7 +1283,7 @@ func (o *EnclosuresResourceInner) SetIomType(v string) {
 
 // GetIomTypeNumeric returns the IomTypeNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetIomTypeNumeric() int64 {
-	if o == nil || IsNil(o.IomTypeNumeric) {
+	if o == nil || isNil(o.IomTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1296,7 +1293,7 @@ func (o *EnclosuresResourceInner) GetIomTypeNumeric() int64 {
 // GetIomTypeNumericOk returns a tuple with the IomTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetIomTypeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.IomTypeNumeric) {
+	if o == nil || isNil(o.IomTypeNumeric) {
 		return nil, false
 	}
 	return o.IomTypeNumeric, true
@@ -1304,7 +1301,7 @@ func (o *EnclosuresResourceInner) GetIomTypeNumericOk() (*int64, bool) {
 
 // HasIomTypeNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasIomTypeNumeric() bool {
-	if o != nil && !IsNil(o.IomTypeNumeric) {
+	if o != nil && !isNil(o.IomTypeNumeric) {
 		return true
 	}
 
@@ -1318,7 +1315,7 @@ func (o *EnclosuresResourceInner) SetIomTypeNumeric(v int64) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetLocation() string {
-	if o == nil || IsNil(o.Location) {
+	if o == nil || isNil(o.Location) {
 		var ret string
 		return ret
 	}
@@ -1328,7 +1325,7 @@ func (o *EnclosuresResourceInner) GetLocation() string {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetLocationOk() (*string, bool) {
-	if o == nil || IsNil(o.Location) {
+	if o == nil || isNil(o.Location) {
 		return nil, false
 	}
 	return o.Location, true
@@ -1336,7 +1333,7 @@ func (o *EnclosuresResourceInner) GetLocationOk() (*string, bool) {
 
 // HasLocation returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasLocation() bool {
-	if o != nil && !IsNil(o.Location) {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -1350,7 +1347,7 @@ func (o *EnclosuresResourceInner) SetLocation(v string) {
 
 // GetLocatorLed returns the LocatorLed field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetLocatorLed() string {
-	if o == nil || IsNil(o.LocatorLed) {
+	if o == nil || isNil(o.LocatorLed) {
 		var ret string
 		return ret
 	}
@@ -1360,7 +1357,7 @@ func (o *EnclosuresResourceInner) GetLocatorLed() string {
 // GetLocatorLedOk returns a tuple with the LocatorLed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetLocatorLedOk() (*string, bool) {
-	if o == nil || IsNil(o.LocatorLed) {
+	if o == nil || isNil(o.LocatorLed) {
 		return nil, false
 	}
 	return o.LocatorLed, true
@@ -1368,7 +1365,7 @@ func (o *EnclosuresResourceInner) GetLocatorLedOk() (*string, bool) {
 
 // HasLocatorLed returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasLocatorLed() bool {
-	if o != nil && !IsNil(o.LocatorLed) {
+	if o != nil && !isNil(o.LocatorLed) {
 		return true
 	}
 
@@ -1382,7 +1379,7 @@ func (o *EnclosuresResourceInner) SetLocatorLed(v string) {
 
 // GetLocatorLedNumeric returns the LocatorLedNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int64 {
-	if o == nil || IsNil(o.LocatorLedNumeric) {
+	if o == nil || isNil(o.LocatorLedNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1392,7 +1389,7 @@ func (o *EnclosuresResourceInner) GetLocatorLedNumeric() int64 {
 // GetLocatorLedNumericOk returns a tuple with the LocatorLedNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetLocatorLedNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.LocatorLedNumeric) {
+	if o == nil || isNil(o.LocatorLedNumeric) {
 		return nil, false
 	}
 	return o.LocatorLedNumeric, true
@@ -1400,7 +1397,7 @@ func (o *EnclosuresResourceInner) GetLocatorLedNumericOk() (*int64, bool) {
 
 // HasLocatorLedNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasLocatorLedNumeric() bool {
-	if o != nil && !IsNil(o.LocatorLedNumeric) {
+	if o != nil && !isNil(o.LocatorLedNumeric) {
 		return true
 	}
 
@@ -1414,7 +1411,7 @@ func (o *EnclosuresResourceInner) SetLocatorLedNumeric(v int64) {
 
 // GetMfgDate returns the MfgDate field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetMfgDate() string {
-	if o == nil || IsNil(o.MfgDate) {
+	if o == nil || isNil(o.MfgDate) {
 		var ret string
 		return ret
 	}
@@ -1424,7 +1421,7 @@ func (o *EnclosuresResourceInner) GetMfgDate() string {
 // GetMfgDateOk returns a tuple with the MfgDate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetMfgDateOk() (*string, bool) {
-	if o == nil || IsNil(o.MfgDate) {
+	if o == nil || isNil(o.MfgDate) {
 		return nil, false
 	}
 	return o.MfgDate, true
@@ -1432,7 +1429,7 @@ func (o *EnclosuresResourceInner) GetMfgDateOk() (*string, bool) {
 
 // HasMfgDate returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasMfgDate() bool {
-	if o != nil && !IsNil(o.MfgDate) {
+	if o != nil && !isNil(o.MfgDate) {
 		return true
 	}
 
@@ -1446,7 +1443,7 @@ func (o *EnclosuresResourceInner) SetMfgDate(v string) {
 
 // GetMfgDateNumeric returns the MfgDateNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetMfgDateNumeric() int64 {
-	if o == nil || IsNil(o.MfgDateNumeric) {
+	if o == nil || isNil(o.MfgDateNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1456,7 +1453,7 @@ func (o *EnclosuresResourceInner) GetMfgDateNumeric() int64 {
 // GetMfgDateNumericOk returns a tuple with the MfgDateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetMfgDateNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.MfgDateNumeric) {
+	if o == nil || isNil(o.MfgDateNumeric) {
 		return nil, false
 	}
 	return o.MfgDateNumeric, true
@@ -1464,7 +1461,7 @@ func (o *EnclosuresResourceInner) GetMfgDateNumericOk() (*int64, bool) {
 
 // HasMfgDateNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasMfgDateNumeric() bool {
-	if o != nil && !IsNil(o.MfgDateNumeric) {
+	if o != nil && !isNil(o.MfgDateNumeric) {
 		return true
 	}
 
@@ -1478,7 +1475,7 @@ func (o *EnclosuresResourceInner) SetMfgDateNumeric(v int64) {
 
 // GetMfgLocation returns the MfgLocation field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetMfgLocation() string {
-	if o == nil || IsNil(o.MfgLocation) {
+	if o == nil || isNil(o.MfgLocation) {
 		var ret string
 		return ret
 	}
@@ -1488,7 +1485,7 @@ func (o *EnclosuresResourceInner) GetMfgLocation() string {
 // GetMfgLocationOk returns a tuple with the MfgLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetMfgLocationOk() (*string, bool) {
-	if o == nil || IsNil(o.MfgLocation) {
+	if o == nil || isNil(o.MfgLocation) {
 		return nil, false
 	}
 	return o.MfgLocation, true
@@ -1496,7 +1493,7 @@ func (o *EnclosuresResourceInner) GetMfgLocationOk() (*string, bool) {
 
 // HasMfgLocation returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasMfgLocation() bool {
-	if o != nil && !IsNil(o.MfgLocation) {
+	if o != nil && !isNil(o.MfgLocation) {
 		return true
 	}
 
@@ -1510,7 +1507,7 @@ func (o *EnclosuresResourceInner) SetMfgLocation(v string) {
 
 // GetMidplaneRev returns the MidplaneRev field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetMidplaneRev() int64 {
-	if o == nil || IsNil(o.MidplaneRev) {
+	if o == nil || isNil(o.MidplaneRev) {
 		var ret int64
 		return ret
 	}
@@ -1520,7 +1517,7 @@ func (o *EnclosuresResourceInner) GetMidplaneRev() int64 {
 // GetMidplaneRevOk returns a tuple with the MidplaneRev field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetMidplaneRevOk() (*int64, bool) {
-	if o == nil || IsNil(o.MidplaneRev) {
+	if o == nil || isNil(o.MidplaneRev) {
 		return nil, false
 	}
 	return o.MidplaneRev, true
@@ -1528,7 +1525,7 @@ func (o *EnclosuresResourceInner) GetMidplaneRevOk() (*int64, bool) {
 
 // HasMidplaneRev returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasMidplaneRev() bool {
-	if o != nil && !IsNil(o.MidplaneRev) {
+	if o != nil && !isNil(o.MidplaneRev) {
 		return true
 	}
 
@@ -1542,7 +1539,7 @@ func (o *EnclosuresResourceInner) SetMidplaneRev(v int64) {
 
 // GetMidplaneSerialNumber returns the MidplaneSerialNumber field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetMidplaneSerialNumber() string {
-	if o == nil || IsNil(o.MidplaneSerialNumber) {
+	if o == nil || isNil(o.MidplaneSerialNumber) {
 		var ret string
 		return ret
 	}
@@ -1552,7 +1549,7 @@ func (o *EnclosuresResourceInner) GetMidplaneSerialNumber() string {
 // GetMidplaneSerialNumberOk returns a tuple with the MidplaneSerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetMidplaneSerialNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.MidplaneSerialNumber) {
+	if o == nil || isNil(o.MidplaneSerialNumber) {
 		return nil, false
 	}
 	return o.MidplaneSerialNumber, true
@@ -1560,7 +1557,7 @@ func (o *EnclosuresResourceInner) GetMidplaneSerialNumberOk() (*string, bool) {
 
 // HasMidplaneSerialNumber returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasMidplaneSerialNumber() bool {
-	if o != nil && !IsNil(o.MidplaneSerialNumber) {
+	if o != nil && !isNil(o.MidplaneSerialNumber) {
 		return true
 	}
 
@@ -1574,7 +1571,7 @@ func (o *EnclosuresResourceInner) SetMidplaneSerialNumber(v string) {
 
 // GetMidplaneType returns the MidplaneType field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetMidplaneType() string {
-	if o == nil || IsNil(o.MidplaneType) {
+	if o == nil || isNil(o.MidplaneType) {
 		var ret string
 		return ret
 	}
@@ -1584,7 +1581,7 @@ func (o *EnclosuresResourceInner) GetMidplaneType() string {
 // GetMidplaneTypeOk returns a tuple with the MidplaneType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetMidplaneTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.MidplaneType) {
+	if o == nil || isNil(o.MidplaneType) {
 		return nil, false
 	}
 	return o.MidplaneType, true
@@ -1592,7 +1589,7 @@ func (o *EnclosuresResourceInner) GetMidplaneTypeOk() (*string, bool) {
 
 // HasMidplaneType returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasMidplaneType() bool {
-	if o != nil && !IsNil(o.MidplaneType) {
+	if o != nil && !isNil(o.MidplaneType) {
 		return true
 	}
 
@@ -1606,7 +1603,7 @@ func (o *EnclosuresResourceInner) SetMidplaneType(v string) {
 
 // GetMidplaneTypeNumeric returns the MidplaneTypeNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int64 {
-	if o == nil || IsNil(o.MidplaneTypeNumeric) {
+	if o == nil || isNil(o.MidplaneTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1616,7 +1613,7 @@ func (o *EnclosuresResourceInner) GetMidplaneTypeNumeric() int64 {
 // GetMidplaneTypeNumericOk returns a tuple with the MidplaneTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetMidplaneTypeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.MidplaneTypeNumeric) {
+	if o == nil || isNil(o.MidplaneTypeNumeric) {
 		return nil, false
 	}
 	return o.MidplaneTypeNumeric, true
@@ -1624,7 +1621,7 @@ func (o *EnclosuresResourceInner) GetMidplaneTypeNumericOk() (*int64, bool) {
 
 // HasMidplaneTypeNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasMidplaneTypeNumeric() bool {
-	if o != nil && !IsNil(o.MidplaneTypeNumeric) {
+	if o != nil && !isNil(o.MidplaneTypeNumeric) {
 		return true
 	}
 
@@ -1638,7 +1635,7 @@ func (o *EnclosuresResourceInner) SetMidplaneTypeNumeric(v int64) {
 
 // GetModel returns the Model field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetModel() string {
-	if o == nil || IsNil(o.Model) {
+	if o == nil || isNil(o.Model) {
 		var ret string
 		return ret
 	}
@@ -1648,7 +1645,7 @@ func (o *EnclosuresResourceInner) GetModel() string {
 // GetModelOk returns a tuple with the Model field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetModelOk() (*string, bool) {
-	if o == nil || IsNil(o.Model) {
+	if o == nil || isNil(o.Model) {
 		return nil, false
 	}
 	return o.Model, true
@@ -1656,7 +1653,7 @@ func (o *EnclosuresResourceInner) GetModelOk() (*string, bool) {
 
 // HasModel returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasModel() bool {
-	if o != nil && !IsNil(o.Model) {
+	if o != nil && !isNil(o.Model) {
 		return true
 	}
 
@@ -1670,7 +1667,7 @@ func (o *EnclosuresResourceInner) SetModel(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetName() string {
-	if o == nil || IsNil(o.Name) {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -1680,7 +1677,7 @@ func (o *EnclosuresResourceInner) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetNameOk() (*string, bool) {
-	if o == nil || IsNil(o.Name) {
+	if o == nil || isNil(o.Name) {
 		return nil, false
 	}
 	return o.Name, true
@@ -1688,7 +1685,7 @@ func (o *EnclosuresResourceInner) GetNameOk() (*string, bool) {
 
 // HasName returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasName() bool {
-	if o != nil && !IsNil(o.Name) {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -1702,7 +1699,7 @@ func (o *EnclosuresResourceInner) SetName(v string) {
 
 // GetNumberOfCoolingsElements returns the NumberOfCoolingsElements field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int64 {
-	if o == nil || IsNil(o.NumberOfCoolingsElements) {
+	if o == nil || isNil(o.NumberOfCoolingsElements) {
 		var ret int64
 		return ret
 	}
@@ -1712,7 +1709,7 @@ func (o *EnclosuresResourceInner) GetNumberOfCoolingsElements() int64 {
 // GetNumberOfCoolingsElementsOk returns a tuple with the NumberOfCoolingsElements field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetNumberOfCoolingsElementsOk() (*int64, bool) {
-	if o == nil || IsNil(o.NumberOfCoolingsElements) {
+	if o == nil || isNil(o.NumberOfCoolingsElements) {
 		return nil, false
 	}
 	return o.NumberOfCoolingsElements, true
@@ -1720,7 +1717,7 @@ func (o *EnclosuresResourceInner) GetNumberOfCoolingsElementsOk() (*int64, bool)
 
 // HasNumberOfCoolingsElements returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasNumberOfCoolingsElements() bool {
-	if o != nil && !IsNil(o.NumberOfCoolingsElements) {
+	if o != nil && !isNil(o.NumberOfCoolingsElements) {
 		return true
 	}
 
@@ -1734,7 +1731,7 @@ func (o *EnclosuresResourceInner) SetNumberOfCoolingsElements(v int64) {
 
 // GetNumberOfDisks returns the NumberOfDisks field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetNumberOfDisks() int64 {
-	if o == nil || IsNil(o.NumberOfDisks) {
+	if o == nil || isNil(o.NumberOfDisks) {
 		var ret int64
 		return ret
 	}
@@ -1744,7 +1741,7 @@ func (o *EnclosuresResourceInner) GetNumberOfDisks() int64 {
 // GetNumberOfDisksOk returns a tuple with the NumberOfDisks field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetNumberOfDisksOk() (*int64, bool) {
-	if o == nil || IsNil(o.NumberOfDisks) {
+	if o == nil || isNil(o.NumberOfDisks) {
 		return nil, false
 	}
 	return o.NumberOfDisks, true
@@ -1752,7 +1749,7 @@ func (o *EnclosuresResourceInner) GetNumberOfDisksOk() (*int64, bool) {
 
 // HasNumberOfDisks returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasNumberOfDisks() bool {
-	if o != nil && !IsNil(o.NumberOfDisks) {
+	if o != nil && !isNil(o.NumberOfDisks) {
 		return true
 	}
 
@@ -1766,7 +1763,7 @@ func (o *EnclosuresResourceInner) SetNumberOfDisks(v int64) {
 
 // GetNumberOfPowerSupplies returns the NumberOfPowerSupplies field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int64 {
-	if o == nil || IsNil(o.NumberOfPowerSupplies) {
+	if o == nil || isNil(o.NumberOfPowerSupplies) {
 		var ret int64
 		return ret
 	}
@@ -1776,7 +1773,7 @@ func (o *EnclosuresResourceInner) GetNumberOfPowerSupplies() int64 {
 // GetNumberOfPowerSuppliesOk returns a tuple with the NumberOfPowerSupplies field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetNumberOfPowerSuppliesOk() (*int64, bool) {
-	if o == nil || IsNil(o.NumberOfPowerSupplies) {
+	if o == nil || isNil(o.NumberOfPowerSupplies) {
 		return nil, false
 	}
 	return o.NumberOfPowerSupplies, true
@@ -1784,7 +1781,7 @@ func (o *EnclosuresResourceInner) GetNumberOfPowerSuppliesOk() (*int64, bool) {
 
 // HasNumberOfPowerSupplies returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasNumberOfPowerSupplies() bool {
-	if o != nil && !IsNil(o.NumberOfPowerSupplies) {
+	if o != nil && !isNil(o.NumberOfPowerSupplies) {
 		return true
 	}
 
@@ -1798,7 +1795,7 @@ func (o *EnclosuresResourceInner) SetNumberOfPowerSupplies(v int64) {
 
 // GetPartNumber returns the PartNumber field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetPartNumber() string {
-	if o == nil || IsNil(o.PartNumber) {
+	if o == nil || isNil(o.PartNumber) {
 		var ret string
 		return ret
 	}
@@ -1808,7 +1805,7 @@ func (o *EnclosuresResourceInner) GetPartNumber() string {
 // GetPartNumberOk returns a tuple with the PartNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetPartNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.PartNumber) {
+	if o == nil || isNil(o.PartNumber) {
 		return nil, false
 	}
 	return o.PartNumber, true
@@ -1816,7 +1813,7 @@ func (o *EnclosuresResourceInner) GetPartNumberOk() (*string, bool) {
 
 // HasPartNumber returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasPartNumber() bool {
-	if o != nil && !IsNil(o.PartNumber) {
+	if o != nil && !isNil(o.PartNumber) {
 		return true
 	}
 
@@ -1830,7 +1827,7 @@ func (o *EnclosuresResourceInner) SetPartNumber(v string) {
 
 // GetPcie2Capable returns the Pcie2Capable field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetPcie2Capable() string {
-	if o == nil || IsNil(o.Pcie2Capable) {
+	if o == nil || isNil(o.Pcie2Capable) {
 		var ret string
 		return ret
 	}
@@ -1840,7 +1837,7 @@ func (o *EnclosuresResourceInner) GetPcie2Capable() string {
 // GetPcie2CapableOk returns a tuple with the Pcie2Capable field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetPcie2CapableOk() (*string, bool) {
-	if o == nil || IsNil(o.Pcie2Capable) {
+	if o == nil || isNil(o.Pcie2Capable) {
 		return nil, false
 	}
 	return o.Pcie2Capable, true
@@ -1848,7 +1845,7 @@ func (o *EnclosuresResourceInner) GetPcie2CapableOk() (*string, bool) {
 
 // HasPcie2Capable returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasPcie2Capable() bool {
-	if o != nil && !IsNil(o.Pcie2Capable) {
+	if o != nil && !isNil(o.Pcie2Capable) {
 		return true
 	}
 
@@ -1862,7 +1859,7 @@ func (o *EnclosuresResourceInner) SetPcie2Capable(v string) {
 
 // GetPcie2CapableNumeric returns the Pcie2CapableNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int64 {
-	if o == nil || IsNil(o.Pcie2CapableNumeric) {
+	if o == nil || isNil(o.Pcie2CapableNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1872,7 +1869,7 @@ func (o *EnclosuresResourceInner) GetPcie2CapableNumeric() int64 {
 // GetPcie2CapableNumericOk returns a tuple with the Pcie2CapableNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetPcie2CapableNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.Pcie2CapableNumeric) {
+	if o == nil || isNil(o.Pcie2CapableNumeric) {
 		return nil, false
 	}
 	return o.Pcie2CapableNumeric, true
@@ -1880,7 +1877,7 @@ func (o *EnclosuresResourceInner) GetPcie2CapableNumericOk() (*int64, bool) {
 
 // HasPcie2CapableNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasPcie2CapableNumeric() bool {
-	if o != nil && !IsNil(o.Pcie2CapableNumeric) {
+	if o != nil && !isNil(o.Pcie2CapableNumeric) {
 		return true
 	}
 
@@ -1894,7 +1891,7 @@ func (o *EnclosuresResourceInner) SetPcie2CapableNumeric(v int64) {
 
 // GetPlatformType returns the PlatformType field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetPlatformType() string {
-	if o == nil || IsNil(o.PlatformType) {
+	if o == nil || isNil(o.PlatformType) {
 		var ret string
 		return ret
 	}
@@ -1904,7 +1901,7 @@ func (o *EnclosuresResourceInner) GetPlatformType() string {
 // GetPlatformTypeOk returns a tuple with the PlatformType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetPlatformTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.PlatformType) {
+	if o == nil || isNil(o.PlatformType) {
 		return nil, false
 	}
 	return o.PlatformType, true
@@ -1912,7 +1909,7 @@ func (o *EnclosuresResourceInner) GetPlatformTypeOk() (*string, bool) {
 
 // HasPlatformType returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasPlatformType() bool {
-	if o != nil && !IsNil(o.PlatformType) {
+	if o != nil && !isNil(o.PlatformType) {
 		return true
 	}
 
@@ -1926,7 +1923,7 @@ func (o *EnclosuresResourceInner) SetPlatformType(v string) {
 
 // GetPlatformTypeNumeric returns the PlatformTypeNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int64 {
-	if o == nil || IsNil(o.PlatformTypeNumeric) {
+	if o == nil || isNil(o.PlatformTypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1936,7 +1933,7 @@ func (o *EnclosuresResourceInner) GetPlatformTypeNumeric() int64 {
 // GetPlatformTypeNumericOk returns a tuple with the PlatformTypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetPlatformTypeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PlatformTypeNumeric) {
+	if o == nil || isNil(o.PlatformTypeNumeric) {
 		return nil, false
 	}
 	return o.PlatformTypeNumeric, true
@@ -1944,7 +1941,7 @@ func (o *EnclosuresResourceInner) GetPlatformTypeNumericOk() (*int64, bool) {
 
 // HasPlatformTypeNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasPlatformTypeNumeric() bool {
-	if o != nil && !IsNil(o.PlatformTypeNumeric) {
+	if o != nil && !isNil(o.PlatformTypeNumeric) {
 		return true
 	}
 
@@ -1958,7 +1955,7 @@ func (o *EnclosuresResourceInner) SetPlatformTypeNumeric(v int64) {
 
 // GetRackNumber returns the RackNumber field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetRackNumber() int64 {
-	if o == nil || IsNil(o.RackNumber) {
+	if o == nil || isNil(o.RackNumber) {
 		var ret int64
 		return ret
 	}
@@ -1968,7 +1965,7 @@ func (o *EnclosuresResourceInner) GetRackNumber() int64 {
 // GetRackNumberOk returns a tuple with the RackNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetRackNumberOk() (*int64, bool) {
-	if o == nil || IsNil(o.RackNumber) {
+	if o == nil || isNil(o.RackNumber) {
 		return nil, false
 	}
 	return o.RackNumber, true
@@ -1976,7 +1973,7 @@ func (o *EnclosuresResourceInner) GetRackNumberOk() (*int64, bool) {
 
 // HasRackNumber returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasRackNumber() bool {
-	if o != nil && !IsNil(o.RackNumber) {
+	if o != nil && !isNil(o.RackNumber) {
 		return true
 	}
 
@@ -1990,7 +1987,7 @@ func (o *EnclosuresResourceInner) SetRackNumber(v int64) {
 
 // GetRackPosition returns the RackPosition field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetRackPosition() int64 {
-	if o == nil || IsNil(o.RackPosition) {
+	if o == nil || isNil(o.RackPosition) {
 		var ret int64
 		return ret
 	}
@@ -2000,7 +1997,7 @@ func (o *EnclosuresResourceInner) GetRackPosition() int64 {
 // GetRackPositionOk returns a tuple with the RackPosition field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetRackPositionOk() (*int64, bool) {
-	if o == nil || IsNil(o.RackPosition) {
+	if o == nil || isNil(o.RackPosition) {
 		return nil, false
 	}
 	return o.RackPosition, true
@@ -2008,7 +2005,7 @@ func (o *EnclosuresResourceInner) GetRackPositionOk() (*int64, bool) {
 
 // HasRackPosition returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasRackPosition() bool {
-	if o != nil && !IsNil(o.RackPosition) {
+	if o != nil && !isNil(o.RackPosition) {
 		return true
 	}
 
@@ -2022,7 +2019,7 @@ func (o *EnclosuresResourceInner) SetRackPosition(v int64) {
 
 // GetRevision returns the Revision field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetRevision() string {
-	if o == nil || IsNil(o.Revision) {
+	if o == nil || isNil(o.Revision) {
 		var ret string
 		return ret
 	}
@@ -2032,7 +2029,7 @@ func (o *EnclosuresResourceInner) GetRevision() string {
 // GetRevisionOk returns a tuple with the Revision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetRevisionOk() (*string, bool) {
-	if o == nil || IsNil(o.Revision) {
+	if o == nil || isNil(o.Revision) {
 		return nil, false
 	}
 	return o.Revision, true
@@ -2040,7 +2037,7 @@ func (o *EnclosuresResourceInner) GetRevisionOk() (*string, bool) {
 
 // HasRevision returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasRevision() bool {
-	if o != nil && !IsNil(o.Revision) {
+	if o != nil && !isNil(o.Revision) {
 		return true
 	}
 
@@ -2054,7 +2051,7 @@ func (o *EnclosuresResourceInner) SetRevision(v string) {
 
 // GetRows returns the Rows field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetRows() int64 {
-	if o == nil || IsNil(o.Rows) {
+	if o == nil || isNil(o.Rows) {
 		var ret int64
 		return ret
 	}
@@ -2064,7 +2061,7 @@ func (o *EnclosuresResourceInner) GetRows() int64 {
 // GetRowsOk returns a tuple with the Rows field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetRowsOk() (*int64, bool) {
-	if o == nil || IsNil(o.Rows) {
+	if o == nil || isNil(o.Rows) {
 		return nil, false
 	}
 	return o.Rows, true
@@ -2072,7 +2069,7 @@ func (o *EnclosuresResourceInner) GetRowsOk() (*int64, bool) {
 
 // HasRows returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasRows() bool {
-	if o != nil && !IsNil(o.Rows) {
+	if o != nil && !isNil(o.Rows) {
 		return true
 	}
 
@@ -2086,7 +2083,7 @@ func (o *EnclosuresResourceInner) SetRows(v int64) {
 
 // GetSlots returns the Slots field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetSlots() int64 {
-	if o == nil || IsNil(o.Slots) {
+	if o == nil || isNil(o.Slots) {
 		var ret int64
 		return ret
 	}
@@ -2096,7 +2093,7 @@ func (o *EnclosuresResourceInner) GetSlots() int64 {
 // GetSlotsOk returns a tuple with the Slots field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetSlotsOk() (*int64, bool) {
-	if o == nil || IsNil(o.Slots) {
+	if o == nil || isNil(o.Slots) {
 		return nil, false
 	}
 	return o.Slots, true
@@ -2104,7 +2101,7 @@ func (o *EnclosuresResourceInner) GetSlotsOk() (*int64, bool) {
 
 // HasSlots returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasSlots() bool {
-	if o != nil && !IsNil(o.Slots) {
+	if o != nil && !isNil(o.Slots) {
 		return true
 	}
 
@@ -2118,7 +2115,7 @@ func (o *EnclosuresResourceInner) SetSlots(v int64) {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetStatus() string {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret string
 		return ret
 	}
@@ -2128,7 +2125,7 @@ func (o *EnclosuresResourceInner) GetStatus() string {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -2136,7 +2133,7 @@ func (o *EnclosuresResourceInner) GetStatusOk() (*string, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -2150,7 +2147,7 @@ func (o *EnclosuresResourceInner) SetStatus(v string) {
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetStatusNumeric() int64 {
-	if o == nil || IsNil(o.StatusNumeric) {
+	if o == nil || isNil(o.StatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2160,7 +2157,7 @@ func (o *EnclosuresResourceInner) GetStatusNumeric() int64 {
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.StatusNumeric) {
+	if o == nil || isNil(o.StatusNumeric) {
 		return nil, false
 	}
 	return o.StatusNumeric, true
@@ -2168,7 +2165,7 @@ func (o *EnclosuresResourceInner) GetStatusNumericOk() (*int64, bool) {
 
 // HasStatusNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasStatusNumeric() bool {
-	if o != nil && !IsNil(o.StatusNumeric) {
+	if o != nil && !isNil(o.StatusNumeric) {
 		return true
 	}
 
@@ -2182,7 +2179,7 @@ func (o *EnclosuresResourceInner) SetStatusNumeric(v int64) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetType() string {
-	if o == nil || IsNil(o.Type) {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -2192,7 +2189,7 @@ func (o *EnclosuresResourceInner) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.Type) {
+	if o == nil || isNil(o.Type) {
 		return nil, false
 	}
 	return o.Type, true
@@ -2200,7 +2197,7 @@ func (o *EnclosuresResourceInner) GetTypeOk() (*string, bool) {
 
 // HasType returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasType() bool {
-	if o != nil && !IsNil(o.Type) {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -2214,7 +2211,7 @@ func (o *EnclosuresResourceInner) SetType(v string) {
 
 // GetTypeNumeric returns the TypeNumeric field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetTypeNumeric() int64 {
-	if o == nil || IsNil(o.TypeNumeric) {
+	if o == nil || isNil(o.TypeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2224,7 +2221,7 @@ func (o *EnclosuresResourceInner) GetTypeNumeric() int64 {
 // GetTypeNumericOk returns a tuple with the TypeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetTypeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.TypeNumeric) {
+	if o == nil || isNil(o.TypeNumeric) {
 		return nil, false
 	}
 	return o.TypeNumeric, true
@@ -2232,7 +2229,7 @@ func (o *EnclosuresResourceInner) GetTypeNumericOk() (*int64, bool) {
 
 // HasTypeNumeric returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasTypeNumeric() bool {
-	if o != nil && !IsNil(o.TypeNumeric) {
+	if o != nil && !isNil(o.TypeNumeric) {
 		return true
 	}
 
@@ -2246,7 +2243,7 @@ func (o *EnclosuresResourceInner) SetTypeNumeric(v int64) {
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetUrl() string {
-	if o == nil || IsNil(o.Url) {
+	if o == nil || isNil(o.Url) {
 		var ret string
 		return ret
 	}
@@ -2256,7 +2253,7 @@ func (o *EnclosuresResourceInner) GetUrl() string {
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetUrlOk() (*string, bool) {
-	if o == nil || IsNil(o.Url) {
+	if o == nil || isNil(o.Url) {
 		return nil, false
 	}
 	return o.Url, true
@@ -2264,7 +2261,7 @@ func (o *EnclosuresResourceInner) GetUrlOk() (*string, bool) {
 
 // HasUrl returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasUrl() bool {
-	if o != nil && !IsNil(o.Url) {
+	if o != nil && !isNil(o.Url) {
 		return true
 	}
 
@@ -2278,7 +2275,7 @@ func (o *EnclosuresResourceInner) SetUrl(v string) {
 
 // GetVendor returns the Vendor field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetVendor() string {
-	if o == nil || IsNil(o.Vendor) {
+	if o == nil || isNil(o.Vendor) {
 		var ret string
 		return ret
 	}
@@ -2288,7 +2285,7 @@ func (o *EnclosuresResourceInner) GetVendor() string {
 // GetVendorOk returns a tuple with the Vendor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetVendorOk() (*string, bool) {
-	if o == nil || IsNil(o.Vendor) {
+	if o == nil || isNil(o.Vendor) {
 		return nil, false
 	}
 	return o.Vendor, true
@@ -2296,7 +2293,7 @@ func (o *EnclosuresResourceInner) GetVendorOk() (*string, bool) {
 
 // HasVendor returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasVendor() bool {
-	if o != nil && !IsNil(o.Vendor) {
+	if o != nil && !isNil(o.Vendor) {
 		return true
 	}
 
@@ -2310,7 +2307,7 @@ func (o *EnclosuresResourceInner) SetVendor(v string) {
 
 // GetControllers returns the Controllers field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetControllers() []ControllersResourceInner {
-	if o == nil || IsNil(o.Controllers) {
+	if o == nil || isNil(o.Controllers) {
 		var ret []ControllersResourceInner
 		return ret
 	}
@@ -2320,7 +2317,7 @@ func (o *EnclosuresResourceInner) GetControllers() []ControllersResourceInner {
 // GetControllersOk returns a tuple with the Controllers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetControllersOk() ([]ControllersResourceInner, bool) {
-	if o == nil || IsNil(o.Controllers) {
+	if o == nil || isNil(o.Controllers) {
 		return nil, false
 	}
 	return o.Controllers, true
@@ -2328,7 +2325,7 @@ func (o *EnclosuresResourceInner) GetControllersOk() ([]ControllersResourceInner
 
 // HasControllers returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasControllers() bool {
-	if o != nil && !IsNil(o.Controllers) {
+	if o != nil && !isNil(o.Controllers) {
 		return true
 	}
 
@@ -2342,7 +2339,7 @@ func (o *EnclosuresResourceInner) SetControllers(v []ControllersResourceInner) {
 
 // GetPowerSupplies returns the PowerSupplies field value if set, zero value otherwise.
 func (o *EnclosuresResourceInner) GetPowerSupplies() []PowerSuppliesResourceInner {
-	if o == nil || IsNil(o.PowerSupplies) {
+	if o == nil || isNil(o.PowerSupplies) {
 		var ret []PowerSuppliesResourceInner
 		return ret
 	}
@@ -2352,7 +2349,7 @@ func (o *EnclosuresResourceInner) GetPowerSupplies() []PowerSuppliesResourceInne
 // GetPowerSuppliesOk returns a tuple with the PowerSupplies field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresResourceInner) GetPowerSuppliesOk() ([]PowerSuppliesResourceInner, bool) {
-	if o == nil || IsNil(o.PowerSupplies) {
+	if o == nil || isNil(o.PowerSupplies) {
 		return nil, false
 	}
 	return o.PowerSupplies, true
@@ -2360,7 +2357,7 @@ func (o *EnclosuresResourceInner) GetPowerSuppliesOk() ([]PowerSuppliesResourceI
 
 // HasPowerSupplies returns a boolean if a field has been set.
 func (o *EnclosuresResourceInner) HasPowerSupplies() bool {
-	if o != nil && !IsNil(o.PowerSupplies) {
+	if o != nil && !isNil(o.PowerSupplies) {
 		return true
 	}
 
@@ -2373,226 +2370,218 @@ func (o *EnclosuresResourceInner) SetPowerSupplies(v []PowerSuppliesResourceInne
 }
 
 func (o EnclosuresResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o EnclosuresResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.BoardModel) {
+	if !isNil(o.BoardModel) {
 		toSerialize["board-model"] = o.BoardModel
 	}
-	if !IsNil(o.BoardModelNumeric) {
+	if !isNil(o.BoardModelNumeric) {
 		toSerialize["board-model-numeric"] = o.BoardModelNumeric
 	}
-	if !IsNil(o.Columns) {
+	if !isNil(o.Columns) {
 		toSerialize["columns"] = o.Columns
 	}
-	if !IsNil(o.DashLevel) {
+	if !isNil(o.DashLevel) {
 		toSerialize["dash-level"] = o.DashLevel
 	}
-	if !IsNil(o.Description) {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if !IsNil(o.DriveOrientation) {
+	if !isNil(o.DriveOrientation) {
 		toSerialize["drive-orientation"] = o.DriveOrientation
 	}
-	if !IsNil(o.DriveOrientationNumeric) {
+	if !isNil(o.DriveOrientationNumeric) {
 		toSerialize["drive-orientation-numeric"] = o.DriveOrientationNumeric
 	}
-	if !IsNil(o.DurableId) {
+	if !isNil(o.DurableId) {
 		toSerialize["durable-id"] = o.DurableId
 	}
-	if !IsNil(o.EmpA) {
+	if !isNil(o.EmpA) {
 		toSerialize["emp-a"] = o.EmpA
 	}
-	if !IsNil(o.EmpABusid) {
+	if !isNil(o.EmpABusid) {
 		toSerialize["emp-a-busid"] = o.EmpABusid
 	}
-	if !IsNil(o.EmpAChIdRev) {
+	if !isNil(o.EmpAChIdRev) {
 		toSerialize["emp-a-ch-id-rev"] = o.EmpAChIdRev
 	}
-	if !IsNil(o.EmpARev) {
+	if !isNil(o.EmpARev) {
 		toSerialize["emp-a-rev"] = o.EmpARev
 	}
-	if !IsNil(o.EmpATargetid) {
+	if !isNil(o.EmpATargetid) {
 		toSerialize["emp-a-targetid"] = o.EmpATargetid
 	}
-	if !IsNil(o.EmpB) {
+	if !isNil(o.EmpB) {
 		toSerialize["emp-b"] = o.EmpB
 	}
-	if !IsNil(o.EmpBBusid) {
+	if !isNil(o.EmpBBusid) {
 		toSerialize["emp-b-busid"] = o.EmpBBusid
 	}
-	if !IsNil(o.EmpBChIdRev) {
+	if !isNil(o.EmpBChIdRev) {
 		toSerialize["emp-b-ch-id-rev"] = o.EmpBChIdRev
 	}
-	if !IsNil(o.EmpBRev) {
+	if !isNil(o.EmpBRev) {
 		toSerialize["emp-b-rev"] = o.EmpBRev
 	}
-	if !IsNil(o.EmpBTargetid) {
+	if !isNil(o.EmpBTargetid) {
 		toSerialize["emp-b-targetid"] = o.EmpBTargetid
 	}
-	if !IsNil(o.EnclosureArrangement) {
+	if !isNil(o.EnclosureArrangement) {
 		toSerialize["enclosure-arrangement"] = o.EnclosureArrangement
 	}
-	if !IsNil(o.EnclosureArrangementNumeric) {
+	if !isNil(o.EnclosureArrangementNumeric) {
 		toSerialize["enclosure-arrangement-numeric"] = o.EnclosureArrangementNumeric
 	}
-	if !IsNil(o.EnclosureId) {
+	if !isNil(o.EnclosureId) {
 		toSerialize["enclosure-id"] = o.EnclosureId
 	}
-	if !IsNil(o.EnclosurePower) {
+	if !isNil(o.EnclosurePower) {
 		toSerialize["enclosure-power"] = o.EnclosurePower
 	}
-	if !IsNil(o.EnclosureWwn) {
+	if !isNil(o.EnclosureWwn) {
 		toSerialize["enclosure-wwn"] = o.EnclosureWwn
 	}
-	if !IsNil(o.ExtendedStatus) {
+	if !isNil(o.ExtendedStatus) {
 		toSerialize["extended-status"] = o.ExtendedStatus
 	}
-	if !IsNil(o.FruLocation) {
+	if !isNil(o.FruLocation) {
 		toSerialize["fru-location"] = o.FruLocation
 	}
-	if !IsNil(o.FruShortname) {
+	if !isNil(o.FruShortname) {
 		toSerialize["fru-shortname"] = o.FruShortname
 	}
-	if !IsNil(o.FruTlapn) {
+	if !isNil(o.FruTlapn) {
 		toSerialize["fru-tlapn"] = o.FruTlapn
 	}
-	if !IsNil(o.GemVersionA) {
+	if !isNil(o.GemVersionA) {
 		toSerialize["gem-version-a"] = o.GemVersionA
 	}
-	if !IsNil(o.GemVersionB) {
+	if !isNil(o.GemVersionB) {
 		toSerialize["gem-version-b"] = o.GemVersionB
 	}
-	if !IsNil(o.Health) {
+	if !isNil(o.Health) {
 		toSerialize["health"] = o.Health
 	}
-	if !IsNil(o.HealthNumeric) {
+	if !isNil(o.HealthNumeric) {
 		toSerialize["health-numeric"] = o.HealthNumeric
 	}
-	if !IsNil(o.HealthReason) {
+	if !isNil(o.HealthReason) {
 		toSerialize["health-reason"] = o.HealthReason
 	}
-	if !IsNil(o.HealthRecommendation) {
+	if !isNil(o.HealthRecommendation) {
 		toSerialize["health-recommendation"] = o.HealthRecommendation
 	}
-	if !IsNil(o.IomType) {
+	if !isNil(o.IomType) {
 		toSerialize["iom-type"] = o.IomType
 	}
-	if !IsNil(o.IomTypeNumeric) {
+	if !isNil(o.IomTypeNumeric) {
 		toSerialize["iom-type-numeric"] = o.IomTypeNumeric
 	}
-	if !IsNil(o.Location) {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if !IsNil(o.LocatorLed) {
+	if !isNil(o.LocatorLed) {
 		toSerialize["locator-led"] = o.LocatorLed
 	}
-	if !IsNil(o.LocatorLedNumeric) {
+	if !isNil(o.LocatorLedNumeric) {
 		toSerialize["locator-led-numeric"] = o.LocatorLedNumeric
 	}
-	if !IsNil(o.MfgDate) {
+	if !isNil(o.MfgDate) {
 		toSerialize["mfg-date"] = o.MfgDate
 	}
-	if !IsNil(o.MfgDateNumeric) {
+	if !isNil(o.MfgDateNumeric) {
 		toSerialize["mfg-date-numeric"] = o.MfgDateNumeric
 	}
-	if !IsNil(o.MfgLocation) {
+	if !isNil(o.MfgLocation) {
 		toSerialize["mfg-location"] = o.MfgLocation
 	}
-	if !IsNil(o.MidplaneRev) {
+	if !isNil(o.MidplaneRev) {
 		toSerialize["midplane-rev"] = o.MidplaneRev
 	}
-	if !IsNil(o.MidplaneSerialNumber) {
+	if !isNil(o.MidplaneSerialNumber) {
 		toSerialize["midplane-serial-number"] = o.MidplaneSerialNumber
 	}
-	if !IsNil(o.MidplaneType) {
+	if !isNil(o.MidplaneType) {
 		toSerialize["midplane-type"] = o.MidplaneType
 	}
-	if !IsNil(o.MidplaneTypeNumeric) {
+	if !isNil(o.MidplaneTypeNumeric) {
 		toSerialize["midplane-type-numeric"] = o.MidplaneTypeNumeric
 	}
-	if !IsNil(o.Model) {
+	if !isNil(o.Model) {
 		toSerialize["model"] = o.Model
 	}
-	if !IsNil(o.Name) {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if !IsNil(o.NumberOfCoolingsElements) {
+	if !isNil(o.NumberOfCoolingsElements) {
 		toSerialize["number-of-coolings-elements"] = o.NumberOfCoolingsElements
 	}
-	if !IsNil(o.NumberOfDisks) {
+	if !isNil(o.NumberOfDisks) {
 		toSerialize["number-of-disks"] = o.NumberOfDisks
 	}
-	if !IsNil(o.NumberOfPowerSupplies) {
+	if !isNil(o.NumberOfPowerSupplies) {
 		toSerialize["number-of-power-supplies"] = o.NumberOfPowerSupplies
 	}
-	if !IsNil(o.PartNumber) {
+	if !isNil(o.PartNumber) {
 		toSerialize["part-number"] = o.PartNumber
 	}
-	if !IsNil(o.Pcie2Capable) {
+	if !isNil(o.Pcie2Capable) {
 		toSerialize["pcie2-capable"] = o.Pcie2Capable
 	}
-	if !IsNil(o.Pcie2CapableNumeric) {
+	if !isNil(o.Pcie2CapableNumeric) {
 		toSerialize["pcie2-capable-numeric"] = o.Pcie2CapableNumeric
 	}
-	if !IsNil(o.PlatformType) {
+	if !isNil(o.PlatformType) {
 		toSerialize["platform-type"] = o.PlatformType
 	}
-	if !IsNil(o.PlatformTypeNumeric) {
+	if !isNil(o.PlatformTypeNumeric) {
 		toSerialize["platform-type-numeric"] = o.PlatformTypeNumeric
 	}
-	if !IsNil(o.RackNumber) {
+	if !isNil(o.RackNumber) {
 		toSerialize["rack-number"] = o.RackNumber
 	}
-	if !IsNil(o.RackPosition) {
+	if !isNil(o.RackPosition) {
 		toSerialize["rack-position"] = o.RackPosition
 	}
-	if !IsNil(o.Revision) {
+	if !isNil(o.Revision) {
 		toSerialize["revision"] = o.Revision
 	}
-	if !IsNil(o.Rows) {
+	if !isNil(o.Rows) {
 		toSerialize["rows"] = o.Rows
 	}
-	if !IsNil(o.Slots) {
+	if !isNil(o.Slots) {
 		toSerialize["slots"] = o.Slots
 	}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.StatusNumeric) {
+	if !isNil(o.StatusNumeric) {
 		toSerialize["status-numeric"] = o.StatusNumeric
 	}
-	if !IsNil(o.Type) {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
-	if !IsNil(o.TypeNumeric) {
+	if !isNil(o.TypeNumeric) {
 		toSerialize["type-numeric"] = o.TypeNumeric
 	}
-	if !IsNil(o.Url) {
+	if !isNil(o.Url) {
 		toSerialize["url"] = o.Url
 	}
-	if !IsNil(o.Vendor) {
+	if !isNil(o.Vendor) {
 		toSerialize["vendor"] = o.Vendor
 	}
-	if !IsNil(o.Controllers) {
+	if !isNil(o.Controllers) {
 		toSerialize["controllers"] = o.Controllers
 	}
-	if !IsNil(o.PowerSupplies) {
+	if !isNil(o.PowerSupplies) {
 		toSerialize["power-supplies"] = o.PowerSupplies
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableEnclosuresResourceInner struct {

@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the InitiatorObject type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &InitiatorObject{}
-
 // InitiatorObject struct for InitiatorObject
 type InitiatorObject struct {
 	Status    []StatusResourceInner    `json:"status,omitempty"`
@@ -42,7 +39,7 @@ func NewInitiatorObjectWithDefaults() *InitiatorObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *InitiatorObject) GetStatus() []StatusResourceInner {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -52,7 +49,7 @@ func (o *InitiatorObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -60,7 +57,7 @@ func (o *InitiatorObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *InitiatorObject) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -74,7 +71,7 @@ func (o *InitiatorObject) SetStatus(v []StatusResourceInner) {
 
 // GetInitiator returns the Initiator field value if set, zero value otherwise.
 func (o *InitiatorObject) GetInitiator() []InitiatorResourceInner {
-	if o == nil || IsNil(o.Initiator) {
+	if o == nil || isNil(o.Initiator) {
 		var ret []InitiatorResourceInner
 		return ret
 	}
@@ -84,7 +81,7 @@ func (o *InitiatorObject) GetInitiator() []InitiatorResourceInner {
 // GetInitiatorOk returns a tuple with the Initiator field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InitiatorObject) GetInitiatorOk() ([]InitiatorResourceInner, bool) {
-	if o == nil || IsNil(o.Initiator) {
+	if o == nil || isNil(o.Initiator) {
 		return nil, false
 	}
 	return o.Initiator, true
@@ -92,7 +89,7 @@ func (o *InitiatorObject) GetInitiatorOk() ([]InitiatorResourceInner, bool) {
 
 // HasInitiator returns a boolean if a field has been set.
 func (o *InitiatorObject) HasInitiator() bool {
-	if o != nil && !IsNil(o.Initiator) {
+	if o != nil && !isNil(o.Initiator) {
 		return true
 	}
 
@@ -105,22 +102,14 @@ func (o *InitiatorObject) SetInitiator(v []InitiatorResourceInner) {
 }
 
 func (o InitiatorObject) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o InitiatorObject) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.Initiator) {
+	if !isNil(o.Initiator) {
 		toSerialize["initiator"] = o.Initiator
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableInitiatorObject struct {

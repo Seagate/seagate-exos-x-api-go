@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvancedSettingsTableResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvancedSettingsTableResourceInner{}
-
 // AdvancedSettingsTableResourceInner struct for AdvancedSettingsTableResourceInner
 type AdvancedSettingsTableResourceInner struct {
 	ObjectName     *string `json:"object-name,omitempty"`
@@ -142,7 +139,7 @@ func NewAdvancedSettingsTableResourceInnerWithDefaults() *AdvancedSettingsTableR
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -152,7 +149,7 @@ func (o *AdvancedSettingsTableResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -160,7 +157,7 @@ func (o *AdvancedSettingsTableResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -174,7 +171,7 @@ func (o *AdvancedSettingsTableResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -184,7 +181,7 @@ func (o *AdvancedSettingsTableResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -192,7 +189,7 @@ func (o *AdvancedSettingsTableResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -206,7 +203,7 @@ func (o *AdvancedSettingsTableResourceInner) SetMeta(v string) {
 
 // GetAutoMap returns the AutoMap field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetAutoMap() string {
-	if o == nil || IsNil(o.AutoMap) {
+	if o == nil || isNil(o.AutoMap) {
 		var ret string
 		return ret
 	}
@@ -216,7 +213,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoMap() string {
 // GetAutoMapOk returns a tuple with the AutoMap field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetAutoMapOk() (*string, bool) {
-	if o == nil || IsNil(o.AutoMap) {
+	if o == nil || isNil(o.AutoMap) {
 		return nil, false
 	}
 	return o.AutoMap, true
@@ -224,7 +221,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoMapOk() (*string, bool) {
 
 // HasAutoMap returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasAutoMap() bool {
-	if o != nil && !IsNil(o.AutoMap) {
+	if o != nil && !isNil(o.AutoMap) {
 		return true
 	}
 
@@ -238,7 +235,7 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoMap(v string) {
 
 // GetAutoMapNumeric returns the AutoMapNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumeric() int64 {
-	if o == nil || IsNil(o.AutoMapNumeric) {
+	if o == nil || isNil(o.AutoMapNumeric) {
 		var ret int64
 		return ret
 	}
@@ -248,7 +245,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumeric() int64 {
 // GetAutoMapNumericOk returns a tuple with the AutoMapNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.AutoMapNumeric) {
+	if o == nil || isNil(o.AutoMapNumeric) {
 		return nil, false
 	}
 	return o.AutoMapNumeric, true
@@ -256,7 +253,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoMapNumericOk() (*int64, bool
 
 // HasAutoMapNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasAutoMapNumeric() bool {
-	if o != nil && !IsNil(o.AutoMapNumeric) {
+	if o != nil && !isNil(o.AutoMapNumeric) {
 		return true
 	}
 
@@ -270,7 +267,7 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoMapNumeric(v int64) {
 
 // GetAutoStallRecovery returns the AutoStallRecovery field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecovery() string {
-	if o == nil || IsNil(o.AutoStallRecovery) {
+	if o == nil || isNil(o.AutoStallRecovery) {
 		var ret string
 		return ret
 	}
@@ -280,7 +277,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecovery() string {
 // GetAutoStallRecoveryOk returns a tuple with the AutoStallRecovery field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryOk() (*string, bool) {
-	if o == nil || IsNil(o.AutoStallRecovery) {
+	if o == nil || isNil(o.AutoStallRecovery) {
 		return nil, false
 	}
 	return o.AutoStallRecovery, true
@@ -288,7 +285,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryOk() (*string, 
 
 // HasAutoStallRecovery returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasAutoStallRecovery() bool {
-	if o != nil && !IsNil(o.AutoStallRecovery) {
+	if o != nil && !isNil(o.AutoStallRecovery) {
 		return true
 	}
 
@@ -302,7 +299,7 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoStallRecovery(v string) {
 
 // GetAutoStallRecoveryNumeric returns the AutoStallRecoveryNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumeric() int64 {
-	if o == nil || IsNil(o.AutoStallRecoveryNumeric) {
+	if o == nil || isNil(o.AutoStallRecoveryNumeric) {
 		var ret int64
 		return ret
 	}
@@ -312,7 +309,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumeric() int64
 // GetAutoStallRecoveryNumericOk returns a tuple with the AutoStallRecoveryNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.AutoStallRecoveryNumeric) {
+	if o == nil || isNil(o.AutoStallRecoveryNumeric) {
 		return nil, false
 	}
 	return o.AutoStallRecoveryNumeric, true
@@ -320,7 +317,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoStallRecoveryNumericOk() (*i
 
 // HasAutoStallRecoveryNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasAutoStallRecoveryNumeric() bool {
-	if o != nil && !IsNil(o.AutoStallRecoveryNumeric) {
+	if o != nil && !isNil(o.AutoStallRecoveryNumeric) {
 		return true
 	}
 
@@ -334,7 +331,7 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoStallRecoveryNumeric(v int64
 
 // GetAutoUnmap returns the AutoUnmap field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetAutoUnmap() string {
-	if o == nil || IsNil(o.AutoUnmap) {
+	if o == nil || isNil(o.AutoUnmap) {
 		var ret string
 		return ret
 	}
@@ -344,7 +341,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoUnmap() string {
 // GetAutoUnmapOk returns a tuple with the AutoUnmap field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapOk() (*string, bool) {
-	if o == nil || IsNil(o.AutoUnmap) {
+	if o == nil || isNil(o.AutoUnmap) {
 		return nil, false
 	}
 	return o.AutoUnmap, true
@@ -352,7 +349,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapOk() (*string, bool) {
 
 // HasAutoUnmap returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasAutoUnmap() bool {
-	if o != nil && !IsNil(o.AutoUnmap) {
+	if o != nil && !isNil(o.AutoUnmap) {
 		return true
 	}
 
@@ -366,7 +363,7 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoUnmap(v string) {
 
 // GetAutoUnmapNumeric returns the AutoUnmapNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumeric() int64 {
-	if o == nil || IsNil(o.AutoUnmapNumeric) {
+	if o == nil || isNil(o.AutoUnmapNumeric) {
 		var ret int64
 		return ret
 	}
@@ -376,7 +373,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumeric() int64 {
 // GetAutoUnmapNumericOk returns a tuple with the AutoUnmapNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.AutoUnmapNumeric) {
+	if o == nil || isNil(o.AutoUnmapNumeric) {
 		return nil, false
 	}
 	return o.AutoUnmapNumeric, true
@@ -384,7 +381,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoUnmapNumericOk() (*int64, bo
 
 // HasAutoUnmapNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasAutoUnmapNumeric() bool {
-	if o != nil && !IsNil(o.AutoUnmapNumeric) {
+	if o != nil && !isNil(o.AutoUnmapNumeric) {
 		return true
 	}
 
@@ -398,7 +395,7 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoUnmapNumeric(v int64) {
 
 // GetAutoWriteBack returns the AutoWriteBack field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBack() string {
-	if o == nil || IsNil(o.AutoWriteBack) {
+	if o == nil || isNil(o.AutoWriteBack) {
 		var ret string
 		return ret
 	}
@@ -408,7 +405,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBack() string {
 // GetAutoWriteBackOk returns a tuple with the AutoWriteBack field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackOk() (*string, bool) {
-	if o == nil || IsNil(o.AutoWriteBack) {
+	if o == nil || isNil(o.AutoWriteBack) {
 		return nil, false
 	}
 	return o.AutoWriteBack, true
@@ -416,7 +413,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackOk() (*string, bool
 
 // HasAutoWriteBack returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasAutoWriteBack() bool {
-	if o != nil && !IsNil(o.AutoWriteBack) {
+	if o != nil && !isNil(o.AutoWriteBack) {
 		return true
 	}
 
@@ -430,7 +427,7 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoWriteBack(v string) {
 
 // GetAutoWriteBackNumeric returns the AutoWriteBackNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumeric() int64 {
-	if o == nil || IsNil(o.AutoWriteBackNumeric) {
+	if o == nil || isNil(o.AutoWriteBackNumeric) {
 		var ret int64
 		return ret
 	}
@@ -440,7 +437,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumeric() int64 {
 // GetAutoWriteBackNumericOk returns a tuple with the AutoWriteBackNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.AutoWriteBackNumeric) {
+	if o == nil || isNil(o.AutoWriteBackNumeric) {
 		return nil, false
 	}
 	return o.AutoWriteBackNumeric, true
@@ -448,7 +445,7 @@ func (o *AdvancedSettingsTableResourceInner) GetAutoWriteBackNumericOk() (*int64
 
 // HasAutoWriteBackNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasAutoWriteBackNumeric() bool {
-	if o != nil && !IsNil(o.AutoWriteBackNumeric) {
+	if o != nil && !isNil(o.AutoWriteBackNumeric) {
 		return true
 	}
 
@@ -462,7 +459,7 @@ func (o *AdvancedSettingsTableResourceInner) SetAutoWriteBackNumeric(v int64) {
 
 // GetBackgroundScrub returns the BackgroundScrub field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrub() string {
-	if o == nil || IsNil(o.BackgroundScrub) {
+	if o == nil || isNil(o.BackgroundScrub) {
 		var ret string
 		return ret
 	}
@@ -472,7 +469,7 @@ func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrub() string {
 // GetBackgroundScrubOk returns a tuple with the BackgroundScrub field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubOk() (*string, bool) {
-	if o == nil || IsNil(o.BackgroundScrub) {
+	if o == nil || isNil(o.BackgroundScrub) {
 		return nil, false
 	}
 	return o.BackgroundScrub, true
@@ -480,7 +477,7 @@ func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubOk() (*string, bo
 
 // HasBackgroundScrub returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasBackgroundScrub() bool {
-	if o != nil && !IsNil(o.BackgroundScrub) {
+	if o != nil && !isNil(o.BackgroundScrub) {
 		return true
 	}
 
@@ -494,7 +491,7 @@ func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrub(v string) {
 
 // GetBackgroundScrubInterval returns the BackgroundScrubInterval field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubInterval() int64 {
-	if o == nil || IsNil(o.BackgroundScrubInterval) {
+	if o == nil || isNil(o.BackgroundScrubInterval) {
 		var ret int64
 		return ret
 	}
@@ -504,7 +501,7 @@ func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubInterval() int64 
 // GetBackgroundScrubIntervalOk returns a tuple with the BackgroundScrubInterval field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubIntervalOk() (*int64, bool) {
-	if o == nil || IsNil(o.BackgroundScrubInterval) {
+	if o == nil || isNil(o.BackgroundScrubInterval) {
 		return nil, false
 	}
 	return o.BackgroundScrubInterval, true
@@ -512,7 +509,7 @@ func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubIntervalOk() (*in
 
 // HasBackgroundScrubInterval returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasBackgroundScrubInterval() bool {
-	if o != nil && !IsNil(o.BackgroundScrubInterval) {
+	if o != nil && !isNil(o.BackgroundScrubInterval) {
 		return true
 	}
 
@@ -526,7 +523,7 @@ func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubInterval(v int64)
 
 // GetBackgroundScrubNumeric returns the BackgroundScrubNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumeric() int64 {
-	if o == nil || IsNil(o.BackgroundScrubNumeric) {
+	if o == nil || isNil(o.BackgroundScrubNumeric) {
 		var ret int64
 		return ret
 	}
@@ -536,7 +533,7 @@ func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumeric() int64 {
 // GetBackgroundScrubNumericOk returns a tuple with the BackgroundScrubNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.BackgroundScrubNumeric) {
+	if o == nil || isNil(o.BackgroundScrubNumeric) {
 		return nil, false
 	}
 	return o.BackgroundScrubNumeric, true
@@ -544,7 +541,7 @@ func (o *AdvancedSettingsTableResourceInner) GetBackgroundScrubNumericOk() (*int
 
 // HasBackgroundScrubNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasBackgroundScrubNumeric() bool {
-	if o != nil && !IsNil(o.BackgroundScrubNumeric) {
+	if o != nil && !isNil(o.BackgroundScrubNumeric) {
 		return true
 	}
 
@@ -558,7 +555,7 @@ func (o *AdvancedSettingsTableResourceInner) SetBackgroundScrubNumeric(v int64) 
 
 // GetCacheFlushTimeout returns the CacheFlushTimeout field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeout() string {
-	if o == nil || IsNil(o.CacheFlushTimeout) {
+	if o == nil || isNil(o.CacheFlushTimeout) {
 		var ret string
 		return ret
 	}
@@ -568,7 +565,7 @@ func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeout() string {
 // GetCacheFlushTimeoutOk returns a tuple with the CacheFlushTimeout field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutOk() (*string, bool) {
-	if o == nil || IsNil(o.CacheFlushTimeout) {
+	if o == nil || isNil(o.CacheFlushTimeout) {
 		return nil, false
 	}
 	return o.CacheFlushTimeout, true
@@ -576,7 +573,7 @@ func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutOk() (*string, 
 
 // HasCacheFlushTimeout returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasCacheFlushTimeout() bool {
-	if o != nil && !IsNil(o.CacheFlushTimeout) {
+	if o != nil && !isNil(o.CacheFlushTimeout) {
 		return true
 	}
 
@@ -590,7 +587,7 @@ func (o *AdvancedSettingsTableResourceInner) SetCacheFlushTimeout(v string) {
 
 // GetCacheFlushTimeoutNumeric returns the CacheFlushTimeoutNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumeric() int64 {
-	if o == nil || IsNil(o.CacheFlushTimeoutNumeric) {
+	if o == nil || isNil(o.CacheFlushTimeoutNumeric) {
 		var ret int64
 		return ret
 	}
@@ -600,7 +597,7 @@ func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumeric() int64
 // GetCacheFlushTimeoutNumericOk returns a tuple with the CacheFlushTimeoutNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.CacheFlushTimeoutNumeric) {
+	if o == nil || isNil(o.CacheFlushTimeoutNumeric) {
 		return nil, false
 	}
 	return o.CacheFlushTimeoutNumeric, true
@@ -608,7 +605,7 @@ func (o *AdvancedSettingsTableResourceInner) GetCacheFlushTimeoutNumericOk() (*i
 
 // HasCacheFlushTimeoutNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasCacheFlushTimeoutNumeric() bool {
-	if o != nil && !IsNil(o.CacheFlushTimeoutNumeric) {
+	if o != nil && !isNil(o.CacheFlushTimeoutNumeric) {
 		return true
 	}
 
@@ -622,7 +619,7 @@ func (o *AdvancedSettingsTableResourceInner) SetCacheFlushTimeoutNumeric(v int64
 
 // GetControllerFailure returns the ControllerFailure field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetControllerFailure() string {
-	if o == nil || IsNil(o.ControllerFailure) {
+	if o == nil || isNil(o.ControllerFailure) {
 		var ret string
 		return ret
 	}
@@ -632,7 +629,7 @@ func (o *AdvancedSettingsTableResourceInner) GetControllerFailure() string {
 // GetControllerFailureOk returns a tuple with the ControllerFailure field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetControllerFailureOk() (*string, bool) {
-	if o == nil || IsNil(o.ControllerFailure) {
+	if o == nil || isNil(o.ControllerFailure) {
 		return nil, false
 	}
 	return o.ControllerFailure, true
@@ -640,7 +637,7 @@ func (o *AdvancedSettingsTableResourceInner) GetControllerFailureOk() (*string, 
 
 // HasControllerFailure returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasControllerFailure() bool {
-	if o != nil && !IsNil(o.ControllerFailure) {
+	if o != nil && !isNil(o.ControllerFailure) {
 		return true
 	}
 
@@ -654,7 +651,7 @@ func (o *AdvancedSettingsTableResourceInner) SetControllerFailure(v string) {
 
 // GetControllerFailureNumeric returns the ControllerFailureNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumeric() int64 {
-	if o == nil || IsNil(o.ControllerFailureNumeric) {
+	if o == nil || isNil(o.ControllerFailureNumeric) {
 		var ret int64
 		return ret
 	}
@@ -664,7 +661,7 @@ func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumeric() int64
 // GetControllerFailureNumericOk returns a tuple with the ControllerFailureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ControllerFailureNumeric) {
+	if o == nil || isNil(o.ControllerFailureNumeric) {
 		return nil, false
 	}
 	return o.ControllerFailureNumeric, true
@@ -672,7 +669,7 @@ func (o *AdvancedSettingsTableResourceInner) GetControllerFailureNumericOk() (*i
 
 // HasControllerFailureNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasControllerFailureNumeric() bool {
-	if o != nil && !IsNil(o.ControllerFailureNumeric) {
+	if o != nil && !isNil(o.ControllerFailureNumeric) {
 		return true
 	}
 
@@ -686,7 +683,7 @@ func (o *AdvancedSettingsTableResourceInner) SetControllerFailureNumeric(v int64
 
 // GetDefaultMapping returns the DefaultMapping field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetDefaultMapping() string {
-	if o == nil || IsNil(o.DefaultMapping) {
+	if o == nil || isNil(o.DefaultMapping) {
 		var ret string
 		return ret
 	}
@@ -696,7 +693,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDefaultMapping() string {
 // GetDefaultMappingOk returns a tuple with the DefaultMapping field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingOk() (*string, bool) {
-	if o == nil || IsNil(o.DefaultMapping) {
+	if o == nil || isNil(o.DefaultMapping) {
 		return nil, false
 	}
 	return o.DefaultMapping, true
@@ -704,7 +701,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingOk() (*string, boo
 
 // HasDefaultMapping returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasDefaultMapping() bool {
-	if o != nil && !IsNil(o.DefaultMapping) {
+	if o != nil && !isNil(o.DefaultMapping) {
 		return true
 	}
 
@@ -718,7 +715,7 @@ func (o *AdvancedSettingsTableResourceInner) SetDefaultMapping(v string) {
 
 // GetDefaultMappingNumeric returns the DefaultMappingNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumeric() int64 {
-	if o == nil || IsNil(o.DefaultMappingNumeric) {
+	if o == nil || isNil(o.DefaultMappingNumeric) {
 		var ret int64
 		return ret
 	}
@@ -728,7 +725,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumeric() int64 {
 // GetDefaultMappingNumericOk returns a tuple with the DefaultMappingNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.DefaultMappingNumeric) {
+	if o == nil || isNil(o.DefaultMappingNumeric) {
 		return nil, false
 	}
 	return o.DefaultMappingNumeric, true
@@ -736,7 +733,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDefaultMappingNumericOk() (*int6
 
 // HasDefaultMappingNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasDefaultMappingNumeric() bool {
-	if o != nil && !IsNil(o.DefaultMappingNumeric) {
+	if o != nil && !isNil(o.DefaultMappingNumeric) {
 		return true
 	}
 
@@ -750,7 +747,7 @@ func (o *AdvancedSettingsTableResourceInner) SetDefaultMappingNumeric(v int64) {
 
 // GetDeleteOverride returns the DeleteOverride field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetDeleteOverride() string {
-	if o == nil || IsNil(o.DeleteOverride) {
+	if o == nil || isNil(o.DeleteOverride) {
 		var ret string
 		return ret
 	}
@@ -760,7 +757,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDeleteOverride() string {
 // GetDeleteOverrideOk returns a tuple with the DeleteOverride field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideOk() (*string, bool) {
-	if o == nil || IsNil(o.DeleteOverride) {
+	if o == nil || isNil(o.DeleteOverride) {
 		return nil, false
 	}
 	return o.DeleteOverride, true
@@ -768,7 +765,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideOk() (*string, boo
 
 // HasDeleteOverride returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasDeleteOverride() bool {
-	if o != nil && !IsNil(o.DeleteOverride) {
+	if o != nil && !isNil(o.DeleteOverride) {
 		return true
 	}
 
@@ -782,7 +779,7 @@ func (o *AdvancedSettingsTableResourceInner) SetDeleteOverride(v string) {
 
 // GetDeleteOverrideNumeric returns the DeleteOverrideNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumeric() int64 {
-	if o == nil || IsNil(o.DeleteOverrideNumeric) {
+	if o == nil || isNil(o.DeleteOverrideNumeric) {
 		var ret int64
 		return ret
 	}
@@ -792,7 +789,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumeric() int64 {
 // GetDeleteOverrideNumericOk returns a tuple with the DeleteOverrideNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.DeleteOverrideNumeric) {
+	if o == nil || isNil(o.DeleteOverrideNumeric) {
 		return nil, false
 	}
 	return o.DeleteOverrideNumeric, true
@@ -800,7 +797,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDeleteOverrideNumericOk() (*int6
 
 // HasDeleteOverrideNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasDeleteOverrideNumeric() bool {
-	if o != nil && !IsNil(o.DeleteOverrideNumeric) {
+	if o != nil && !isNil(o.DeleteOverrideNumeric) {
 		return true
 	}
 
@@ -814,7 +811,7 @@ func (o *AdvancedSettingsTableResourceInner) SetDeleteOverrideNumeric(v int64) {
 
 // GetDiskDsdDelay returns the DiskDsdDelay field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelay() int64 {
-	if o == nil || IsNil(o.DiskDsdDelay) {
+	if o == nil || isNil(o.DiskDsdDelay) {
 		var ret int64
 		return ret
 	}
@@ -824,7 +821,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelay() int64 {
 // GetDiskDsdDelayOk returns a tuple with the DiskDsdDelay field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelayOk() (*int64, bool) {
-	if o == nil || IsNil(o.DiskDsdDelay) {
+	if o == nil || isNil(o.DiskDsdDelay) {
 		return nil, false
 	}
 	return o.DiskDsdDelay, true
@@ -832,7 +829,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskDsdDelayOk() (*int64, bool) 
 
 // HasDiskDsdDelay returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasDiskDsdDelay() bool {
-	if o != nil && !IsNil(o.DiskDsdDelay) {
+	if o != nil && !isNil(o.DiskDsdDelay) {
 		return true
 	}
 
@@ -846,7 +843,7 @@ func (o *AdvancedSettingsTableResourceInner) SetDiskDsdDelay(v int64) {
 
 // GetDiskDsdEnable returns the DiskDsdEnable field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnable() string {
-	if o == nil || IsNil(o.DiskDsdEnable) {
+	if o == nil || isNil(o.DiskDsdEnable) {
 		var ret string
 		return ret
 	}
@@ -856,7 +853,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnable() string {
 // GetDiskDsdEnableOk returns a tuple with the DiskDsdEnable field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableOk() (*string, bool) {
-	if o == nil || IsNil(o.DiskDsdEnable) {
+	if o == nil || isNil(o.DiskDsdEnable) {
 		return nil, false
 	}
 	return o.DiskDsdEnable, true
@@ -864,7 +861,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableOk() (*string, bool
 
 // HasDiskDsdEnable returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasDiskDsdEnable() bool {
-	if o != nil && !IsNil(o.DiskDsdEnable) {
+	if o != nil && !isNil(o.DiskDsdEnable) {
 		return true
 	}
 
@@ -878,7 +875,7 @@ func (o *AdvancedSettingsTableResourceInner) SetDiskDsdEnable(v string) {
 
 // GetDiskDsdEnableNumeric returns the DiskDsdEnableNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumeric() int64 {
-	if o == nil || IsNil(o.DiskDsdEnableNumeric) {
+	if o == nil || isNil(o.DiskDsdEnableNumeric) {
 		var ret int64
 		return ret
 	}
@@ -888,7 +885,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumeric() int64 {
 // GetDiskDsdEnableNumericOk returns a tuple with the DiskDsdEnableNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.DiskDsdEnableNumeric) {
+	if o == nil || isNil(o.DiskDsdEnableNumeric) {
 		return nil, false
 	}
 	return o.DiskDsdEnableNumeric, true
@@ -896,7 +893,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskDsdEnableNumericOk() (*int64
 
 // HasDiskDsdEnableNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasDiskDsdEnableNumeric() bool {
-	if o != nil && !IsNil(o.DiskDsdEnableNumeric) {
+	if o != nil && !isNil(o.DiskDsdEnableNumeric) {
 		return true
 	}
 
@@ -910,7 +907,7 @@ func (o *AdvancedSettingsTableResourceInner) SetDiskDsdEnableNumeric(v int64) {
 
 // GetDiskFirmwareUpdate returns the DiskFirmwareUpdate field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdate() string {
-	if o == nil || IsNil(o.DiskFirmwareUpdate) {
+	if o == nil || isNil(o.DiskFirmwareUpdate) {
 		var ret string
 		return ret
 	}
@@ -920,7 +917,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdate() string {
 // GetDiskFirmwareUpdateOk returns a tuple with the DiskFirmwareUpdate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateOk() (*string, bool) {
-	if o == nil || IsNil(o.DiskFirmwareUpdate) {
+	if o == nil || isNil(o.DiskFirmwareUpdate) {
 		return nil, false
 	}
 	return o.DiskFirmwareUpdate, true
@@ -928,7 +925,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateOk() (*string,
 
 // HasDiskFirmwareUpdate returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasDiskFirmwareUpdate() bool {
-	if o != nil && !IsNil(o.DiskFirmwareUpdate) {
+	if o != nil && !isNil(o.DiskFirmwareUpdate) {
 		return true
 	}
 
@@ -942,7 +939,7 @@ func (o *AdvancedSettingsTableResourceInner) SetDiskFirmwareUpdate(v string) {
 
 // GetDiskFirmwareUpdateNumeric returns the DiskFirmwareUpdateNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumeric() int64 {
-	if o == nil || IsNil(o.DiskFirmwareUpdateNumeric) {
+	if o == nil || isNil(o.DiskFirmwareUpdateNumeric) {
 		var ret int64
 		return ret
 	}
@@ -952,7 +949,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumeric() int6
 // GetDiskFirmwareUpdateNumericOk returns a tuple with the DiskFirmwareUpdateNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.DiskFirmwareUpdateNumeric) {
+	if o == nil || isNil(o.DiskFirmwareUpdateNumeric) {
 		return nil, false
 	}
 	return o.DiskFirmwareUpdateNumeric, true
@@ -960,7 +957,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDiskFirmwareUpdateNumericOk() (*
 
 // HasDiskFirmwareUpdateNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasDiskFirmwareUpdateNumeric() bool {
-	if o != nil && !IsNil(o.DiskFirmwareUpdateNumeric) {
+	if o != nil && !isNil(o.DiskFirmwareUpdateNumeric) {
 		return true
 	}
 
@@ -974,7 +971,7 @@ func (o *AdvancedSettingsTableResourceInner) SetDiskFirmwareUpdateNumeric(v int6
 
 // GetDynamicSpares returns the DynamicSpares field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetDynamicSpares() string {
-	if o == nil || IsNil(o.DynamicSpares) {
+	if o == nil || isNil(o.DynamicSpares) {
 		var ret string
 		return ret
 	}
@@ -984,7 +981,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDynamicSpares() string {
 // GetDynamicSparesOk returns a tuple with the DynamicSpares field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetDynamicSparesOk() (*string, bool) {
-	if o == nil || IsNil(o.DynamicSpares) {
+	if o == nil || isNil(o.DynamicSpares) {
 		return nil, false
 	}
 	return o.DynamicSpares, true
@@ -992,7 +989,7 @@ func (o *AdvancedSettingsTableResourceInner) GetDynamicSparesOk() (*string, bool
 
 // HasDynamicSpares returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasDynamicSpares() bool {
-	if o != nil && !IsNil(o.DynamicSpares) {
+	if o != nil && !isNil(o.DynamicSpares) {
 		return true
 	}
 
@@ -1006,7 +1003,7 @@ func (o *AdvancedSettingsTableResourceInner) SetDynamicSpares(v string) {
 
 // GetEmpPollRate returns the EmpPollRate field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetEmpPollRate() string {
-	if o == nil || IsNil(o.EmpPollRate) {
+	if o == nil || isNil(o.EmpPollRate) {
 		var ret string
 		return ret
 	}
@@ -1016,7 +1013,7 @@ func (o *AdvancedSettingsTableResourceInner) GetEmpPollRate() string {
 // GetEmpPollRateOk returns a tuple with the EmpPollRate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetEmpPollRateOk() (*string, bool) {
-	if o == nil || IsNil(o.EmpPollRate) {
+	if o == nil || isNil(o.EmpPollRate) {
 		return nil, false
 	}
 	return o.EmpPollRate, true
@@ -1024,7 +1021,7 @@ func (o *AdvancedSettingsTableResourceInner) GetEmpPollRateOk() (*string, bool) 
 
 // HasEmpPollRate returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasEmpPollRate() bool {
-	if o != nil && !IsNil(o.EmpPollRate) {
+	if o != nil && !isNil(o.EmpPollRate) {
 		return true
 	}
 
@@ -1038,7 +1035,7 @@ func (o *AdvancedSettingsTableResourceInner) SetEmpPollRate(v string) {
 
 // GetFanFailure returns the FanFailure field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetFanFailure() string {
-	if o == nil || IsNil(o.FanFailure) {
+	if o == nil || isNil(o.FanFailure) {
 		var ret string
 		return ret
 	}
@@ -1048,7 +1045,7 @@ func (o *AdvancedSettingsTableResourceInner) GetFanFailure() string {
 // GetFanFailureOk returns a tuple with the FanFailure field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetFanFailureOk() (*string, bool) {
-	if o == nil || IsNil(o.FanFailure) {
+	if o == nil || isNil(o.FanFailure) {
 		return nil, false
 	}
 	return o.FanFailure, true
@@ -1056,7 +1053,7 @@ func (o *AdvancedSettingsTableResourceInner) GetFanFailureOk() (*string, bool) {
 
 // HasFanFailure returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasFanFailure() bool {
-	if o != nil && !IsNil(o.FanFailure) {
+	if o != nil && !isNil(o.FanFailure) {
 		return true
 	}
 
@@ -1070,7 +1067,7 @@ func (o *AdvancedSettingsTableResourceInner) SetFanFailure(v string) {
 
 // GetFanFailureNumeric returns the FanFailureNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumeric() int64 {
-	if o == nil || IsNil(o.FanFailureNumeric) {
+	if o == nil || isNil(o.FanFailureNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1080,7 +1077,7 @@ func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumeric() int64 {
 // GetFanFailureNumericOk returns a tuple with the FanFailureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.FanFailureNumeric) {
+	if o == nil || isNil(o.FanFailureNumeric) {
 		return nil, false
 	}
 	return o.FanFailureNumeric, true
@@ -1088,7 +1085,7 @@ func (o *AdvancedSettingsTableResourceInner) GetFanFailureNumericOk() (*int64, b
 
 // HasFanFailureNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasFanFailureNumeric() bool {
-	if o != nil && !IsNil(o.FanFailureNumeric) {
+	if o != nil && !isNil(o.FanFailureNumeric) {
 		return true
 	}
 
@@ -1102,7 +1099,7 @@ func (o *AdvancedSettingsTableResourceInner) SetFanFailureNumeric(v int64) {
 
 // GetHedgedReadsTimeout returns the HedgedReadsTimeout field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeout() string {
-	if o == nil || IsNil(o.HedgedReadsTimeout) {
+	if o == nil || isNil(o.HedgedReadsTimeout) {
 		var ret string
 		return ret
 	}
@@ -1112,7 +1109,7 @@ func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeout() string {
 // GetHedgedReadsTimeoutOk returns a tuple with the HedgedReadsTimeout field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutOk() (*string, bool) {
-	if o == nil || IsNil(o.HedgedReadsTimeout) {
+	if o == nil || isNil(o.HedgedReadsTimeout) {
 		return nil, false
 	}
 	return o.HedgedReadsTimeout, true
@@ -1120,7 +1117,7 @@ func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutOk() (*string,
 
 // HasHedgedReadsTimeout returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasHedgedReadsTimeout() bool {
-	if o != nil && !IsNil(o.HedgedReadsTimeout) {
+	if o != nil && !isNil(o.HedgedReadsTimeout) {
 		return true
 	}
 
@@ -1134,7 +1131,7 @@ func (o *AdvancedSettingsTableResourceInner) SetHedgedReadsTimeout(v string) {
 
 // GetHedgedReadsTimeoutNumeric returns the HedgedReadsTimeoutNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumeric() int64 {
-	if o == nil || IsNil(o.HedgedReadsTimeoutNumeric) {
+	if o == nil || isNil(o.HedgedReadsTimeoutNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1144,7 +1141,7 @@ func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumeric() int6
 // GetHedgedReadsTimeoutNumericOk returns a tuple with the HedgedReadsTimeoutNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.HedgedReadsTimeoutNumeric) {
+	if o == nil || isNil(o.HedgedReadsTimeoutNumeric) {
 		return nil, false
 	}
 	return o.HedgedReadsTimeoutNumeric, true
@@ -1152,7 +1149,7 @@ func (o *AdvancedSettingsTableResourceInner) GetHedgedReadsTimeoutNumericOk() (*
 
 // HasHedgedReadsTimeoutNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasHedgedReadsTimeoutNumeric() bool {
-	if o != nil && !IsNil(o.HedgedReadsTimeoutNumeric) {
+	if o != nil && !isNil(o.HedgedReadsTimeoutNumeric) {
 		return true
 	}
 
@@ -1166,7 +1163,7 @@ func (o *AdvancedSettingsTableResourceInner) SetHedgedReadsTimeoutNumeric(v int6
 
 // GetHostCacheControl returns the HostCacheControl field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetHostCacheControl() string {
-	if o == nil || IsNil(o.HostCacheControl) {
+	if o == nil || isNil(o.HostCacheControl) {
 		var ret string
 		return ret
 	}
@@ -1176,7 +1173,7 @@ func (o *AdvancedSettingsTableResourceInner) GetHostCacheControl() string {
 // GetHostCacheControlOk returns a tuple with the HostCacheControl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlOk() (*string, bool) {
-	if o == nil || IsNil(o.HostCacheControl) {
+	if o == nil || isNil(o.HostCacheControl) {
 		return nil, false
 	}
 	return o.HostCacheControl, true
@@ -1184,7 +1181,7 @@ func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlOk() (*string, b
 
 // HasHostCacheControl returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasHostCacheControl() bool {
-	if o != nil && !IsNil(o.HostCacheControl) {
+	if o != nil && !isNil(o.HostCacheControl) {
 		return true
 	}
 
@@ -1198,7 +1195,7 @@ func (o *AdvancedSettingsTableResourceInner) SetHostCacheControl(v string) {
 
 // GetHostCacheControlNumeric returns the HostCacheControlNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumeric() int64 {
-	if o == nil || IsNil(o.HostCacheControlNumeric) {
+	if o == nil || isNil(o.HostCacheControlNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1208,7 +1205,7 @@ func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumeric() int64 
 // GetHostCacheControlNumericOk returns a tuple with the HostCacheControlNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.HostCacheControlNumeric) {
+	if o == nil || isNil(o.HostCacheControlNumeric) {
 		return nil, false
 	}
 	return o.HostCacheControlNumeric, true
@@ -1216,7 +1213,7 @@ func (o *AdvancedSettingsTableResourceInner) GetHostCacheControlNumericOk() (*in
 
 // HasHostCacheControlNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasHostCacheControlNumeric() bool {
-	if o != nil && !IsNil(o.HostCacheControlNumeric) {
+	if o != nil && !isNil(o.HostCacheControlNumeric) {
 		return true
 	}
 
@@ -1230,7 +1227,7 @@ func (o *AdvancedSettingsTableResourceInner) SetHostCacheControlNumeric(v int64)
 
 // GetIndependentCache returns the IndependentCache field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetIndependentCache() string {
-	if o == nil || IsNil(o.IndependentCache) {
+	if o == nil || isNil(o.IndependentCache) {
 		var ret string
 		return ret
 	}
@@ -1240,7 +1237,7 @@ func (o *AdvancedSettingsTableResourceInner) GetIndependentCache() string {
 // GetIndependentCacheOk returns a tuple with the IndependentCache field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheOk() (*string, bool) {
-	if o == nil || IsNil(o.IndependentCache) {
+	if o == nil || isNil(o.IndependentCache) {
 		return nil, false
 	}
 	return o.IndependentCache, true
@@ -1248,7 +1245,7 @@ func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheOk() (*string, b
 
 // HasIndependentCache returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasIndependentCache() bool {
-	if o != nil && !IsNil(o.IndependentCache) {
+	if o != nil && !isNil(o.IndependentCache) {
 		return true
 	}
 
@@ -1262,7 +1259,7 @@ func (o *AdvancedSettingsTableResourceInner) SetIndependentCache(v string) {
 
 // GetIndependentCacheNumeric returns the IndependentCacheNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumeric() int64 {
-	if o == nil || IsNil(o.IndependentCacheNumeric) {
+	if o == nil || isNil(o.IndependentCacheNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1272,7 +1269,7 @@ func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumeric() int64 
 // GetIndependentCacheNumericOk returns a tuple with the IndependentCacheNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.IndependentCacheNumeric) {
+	if o == nil || isNil(o.IndependentCacheNumeric) {
 		return nil, false
 	}
 	return o.IndependentCacheNumeric, true
@@ -1280,7 +1277,7 @@ func (o *AdvancedSettingsTableResourceInner) GetIndependentCacheNumericOk() (*in
 
 // HasIndependentCacheNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasIndependentCacheNumeric() bool {
-	if o != nil && !IsNil(o.IndependentCacheNumeric) {
+	if o != nil && !isNil(o.IndependentCacheNumeric) {
 		return true
 	}
 
@@ -1294,7 +1291,7 @@ func (o *AdvancedSettingsTableResourceInner) SetIndependentCacheNumeric(v int64)
 
 // GetLargePools returns the LargePools field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetLargePools() string {
-	if o == nil || IsNil(o.LargePools) {
+	if o == nil || isNil(o.LargePools) {
 		var ret string
 		return ret
 	}
@@ -1304,7 +1301,7 @@ func (o *AdvancedSettingsTableResourceInner) GetLargePools() string {
 // GetLargePoolsOk returns a tuple with the LargePools field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetLargePoolsOk() (*string, bool) {
-	if o == nil || IsNil(o.LargePools) {
+	if o == nil || isNil(o.LargePools) {
 		return nil, false
 	}
 	return o.LargePools, true
@@ -1312,7 +1309,7 @@ func (o *AdvancedSettingsTableResourceInner) GetLargePoolsOk() (*string, bool) {
 
 // HasLargePools returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasLargePools() bool {
-	if o != nil && !IsNil(o.LargePools) {
+	if o != nil && !isNil(o.LargePools) {
 		return true
 	}
 
@@ -1326,7 +1323,7 @@ func (o *AdvancedSettingsTableResourceInner) SetLargePools(v string) {
 
 // GetLargePoolsNumeric returns the LargePoolsNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumeric() int64 {
-	if o == nil || IsNil(o.LargePoolsNumeric) {
+	if o == nil || isNil(o.LargePoolsNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1336,7 +1333,7 @@ func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumeric() int64 {
 // GetLargePoolsNumericOk returns a tuple with the LargePoolsNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.LargePoolsNumeric) {
+	if o == nil || isNil(o.LargePoolsNumeric) {
 		return nil, false
 	}
 	return o.LargePoolsNumeric, true
@@ -1344,7 +1341,7 @@ func (o *AdvancedSettingsTableResourceInner) GetLargePoolsNumericOk() (*int64, b
 
 // HasLargePoolsNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasLargePoolsNumeric() bool {
-	if o != nil && !IsNil(o.LargePoolsNumeric) {
+	if o != nil && !isNil(o.LargePoolsNumeric) {
 		return true
 	}
 
@@ -1358,7 +1355,7 @@ func (o *AdvancedSettingsTableResourceInner) SetLargePoolsNumeric(v int64) {
 
 // GetManagedLogs returns the ManagedLogs field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetManagedLogs() string {
-	if o == nil || IsNil(o.ManagedLogs) {
+	if o == nil || isNil(o.ManagedLogs) {
 		var ret string
 		return ret
 	}
@@ -1368,7 +1365,7 @@ func (o *AdvancedSettingsTableResourceInner) GetManagedLogs() string {
 // GetManagedLogsOk returns a tuple with the ManagedLogs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetManagedLogsOk() (*string, bool) {
-	if o == nil || IsNil(o.ManagedLogs) {
+	if o == nil || isNil(o.ManagedLogs) {
 		return nil, false
 	}
 	return o.ManagedLogs, true
@@ -1376,7 +1373,7 @@ func (o *AdvancedSettingsTableResourceInner) GetManagedLogsOk() (*string, bool) 
 
 // HasManagedLogs returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasManagedLogs() bool {
-	if o != nil && !IsNil(o.ManagedLogs) {
+	if o != nil && !isNil(o.ManagedLogs) {
 		return true
 	}
 
@@ -1390,7 +1387,7 @@ func (o *AdvancedSettingsTableResourceInner) SetManagedLogs(v string) {
 
 // GetManagedLogsNumeric returns the ManagedLogsNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumeric() int64 {
-	if o == nil || IsNil(o.ManagedLogsNumeric) {
+	if o == nil || isNil(o.ManagedLogsNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1400,7 +1397,7 @@ func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumeric() int64 {
 // GetManagedLogsNumericOk returns a tuple with the ManagedLogsNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ManagedLogsNumeric) {
+	if o == nil || isNil(o.ManagedLogsNumeric) {
 		return nil, false
 	}
 	return o.ManagedLogsNumeric, true
@@ -1408,7 +1405,7 @@ func (o *AdvancedSettingsTableResourceInner) GetManagedLogsNumericOk() (*int64, 
 
 // HasManagedLogsNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasManagedLogsNumeric() bool {
-	if o != nil && !IsNil(o.ManagedLogsNumeric) {
+	if o != nil && !isNil(o.ManagedLogsNumeric) {
 		return true
 	}
 
@@ -1422,7 +1419,7 @@ func (o *AdvancedSettingsTableResourceInner) SetManagedLogsNumeric(v int64) {
 
 // GetMemoryCardFailure returns the MemoryCardFailure field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailure() string {
-	if o == nil || IsNil(o.MemoryCardFailure) {
+	if o == nil || isNil(o.MemoryCardFailure) {
 		var ret string
 		return ret
 	}
@@ -1432,7 +1429,7 @@ func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailure() string {
 // GetMemoryCardFailureOk returns a tuple with the MemoryCardFailure field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureOk() (*string, bool) {
-	if o == nil || IsNil(o.MemoryCardFailure) {
+	if o == nil || isNil(o.MemoryCardFailure) {
 		return nil, false
 	}
 	return o.MemoryCardFailure, true
@@ -1440,7 +1437,7 @@ func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureOk() (*string, 
 
 // HasMemoryCardFailure returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasMemoryCardFailure() bool {
-	if o != nil && !IsNil(o.MemoryCardFailure) {
+	if o != nil && !isNil(o.MemoryCardFailure) {
 		return true
 	}
 
@@ -1454,7 +1451,7 @@ func (o *AdvancedSettingsTableResourceInner) SetMemoryCardFailure(v string) {
 
 // GetMemoryCardFailureNumeric returns the MemoryCardFailureNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumeric() int64 {
-	if o == nil || IsNil(o.MemoryCardFailureNumeric) {
+	if o == nil || isNil(o.MemoryCardFailureNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1464,7 +1461,7 @@ func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumeric() int64
 // GetMemoryCardFailureNumericOk returns a tuple with the MemoryCardFailureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.MemoryCardFailureNumeric) {
+	if o == nil || isNil(o.MemoryCardFailureNumeric) {
 		return nil, false
 	}
 	return o.MemoryCardFailureNumeric, true
@@ -1472,7 +1469,7 @@ func (o *AdvancedSettingsTableResourceInner) GetMemoryCardFailureNumericOk() (*i
 
 // HasMemoryCardFailureNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasMemoryCardFailureNumeric() bool {
-	if o != nil && !IsNil(o.MemoryCardFailureNumeric) {
+	if o != nil && !isNil(o.MemoryCardFailureNumeric) {
 		return true
 	}
 
@@ -1486,7 +1483,7 @@ func (o *AdvancedSettingsTableResourceInner) SetMemoryCardFailureNumeric(v int64
 
 // GetMissingLunResponse returns the MissingLunResponse field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponse() string {
-	if o == nil || IsNil(o.MissingLunResponse) {
+	if o == nil || isNil(o.MissingLunResponse) {
 		var ret string
 		return ret
 	}
@@ -1496,7 +1493,7 @@ func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponse() string {
 // GetMissingLunResponseOk returns a tuple with the MissingLunResponse field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseOk() (*string, bool) {
-	if o == nil || IsNil(o.MissingLunResponse) {
+	if o == nil || isNil(o.MissingLunResponse) {
 		return nil, false
 	}
 	return o.MissingLunResponse, true
@@ -1504,7 +1501,7 @@ func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseOk() (*string,
 
 // HasMissingLunResponse returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasMissingLunResponse() bool {
-	if o != nil && !IsNil(o.MissingLunResponse) {
+	if o != nil && !isNil(o.MissingLunResponse) {
 		return true
 	}
 
@@ -1518,7 +1515,7 @@ func (o *AdvancedSettingsTableResourceInner) SetMissingLunResponse(v string) {
 
 // GetMissingLunResponseNumeric returns the MissingLunResponseNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumeric() int64 {
-	if o == nil || IsNil(o.MissingLunResponseNumeric) {
+	if o == nil || isNil(o.MissingLunResponseNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1528,7 +1525,7 @@ func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumeric() int6
 // GetMissingLunResponseNumericOk returns a tuple with the MissingLunResponseNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.MissingLunResponseNumeric) {
+	if o == nil || isNil(o.MissingLunResponseNumeric) {
 		return nil, false
 	}
 	return o.MissingLunResponseNumeric, true
@@ -1536,7 +1533,7 @@ func (o *AdvancedSettingsTableResourceInner) GetMissingLunResponseNumericOk() (*
 
 // HasMissingLunResponseNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasMissingLunResponseNumeric() bool {
-	if o != nil && !IsNil(o.MissingLunResponseNumeric) {
+	if o != nil && !isNil(o.MissingLunResponseNumeric) {
 		return true
 	}
 
@@ -1550,7 +1547,7 @@ func (o *AdvancedSettingsTableResourceInner) SetMissingLunResponseNumeric(v int6
 
 // GetPartnerFirmwareUpgrade returns the PartnerFirmwareUpgrade field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgrade() string {
-	if o == nil || IsNil(o.PartnerFirmwareUpgrade) {
+	if o == nil || isNil(o.PartnerFirmwareUpgrade) {
 		var ret string
 		return ret
 	}
@@ -1560,7 +1557,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgrade() string 
 // GetPartnerFirmwareUpgradeOk returns a tuple with the PartnerFirmwareUpgrade field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeOk() (*string, bool) {
-	if o == nil || IsNil(o.PartnerFirmwareUpgrade) {
+	if o == nil || isNil(o.PartnerFirmwareUpgrade) {
 		return nil, false
 	}
 	return o.PartnerFirmwareUpgrade, true
@@ -1568,7 +1565,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeOk() (*str
 
 // HasPartnerFirmwareUpgrade returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasPartnerFirmwareUpgrade() bool {
-	if o != nil && !IsNil(o.PartnerFirmwareUpgrade) {
+	if o != nil && !isNil(o.PartnerFirmwareUpgrade) {
 		return true
 	}
 
@@ -1582,7 +1579,7 @@ func (o *AdvancedSettingsTableResourceInner) SetPartnerFirmwareUpgrade(v string)
 
 // GetPartnerFirmwareUpgradeNumeric returns the PartnerFirmwareUpgradeNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumeric() int64 {
-	if o == nil || IsNil(o.PartnerFirmwareUpgradeNumeric) {
+	if o == nil || isNil(o.PartnerFirmwareUpgradeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1592,7 +1589,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumeric() 
 // GetPartnerFirmwareUpgradeNumericOk returns a tuple with the PartnerFirmwareUpgradeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PartnerFirmwareUpgradeNumeric) {
+	if o == nil || isNil(o.PartnerFirmwareUpgradeNumeric) {
 		return nil, false
 	}
 	return o.PartnerFirmwareUpgradeNumeric, true
@@ -1600,7 +1597,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPartnerFirmwareUpgradeNumericOk(
 
 // HasPartnerFirmwareUpgradeNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasPartnerFirmwareUpgradeNumeric() bool {
-	if o != nil && !IsNil(o.PartnerFirmwareUpgradeNumeric) {
+	if o != nil && !isNil(o.PartnerFirmwareUpgradeNumeric) {
 		return true
 	}
 
@@ -1614,7 +1611,7 @@ func (o *AdvancedSettingsTableResourceInner) SetPartnerFirmwareUpgradeNumeric(v 
 
 // GetPartnerNotify returns the PartnerNotify field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetPartnerNotify() string {
-	if o == nil || IsNil(o.PartnerNotify) {
+	if o == nil || isNil(o.PartnerNotify) {
 		var ret string
 		return ret
 	}
@@ -1624,7 +1621,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPartnerNotify() string {
 // GetPartnerNotifyOk returns a tuple with the PartnerNotify field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyOk() (*string, bool) {
-	if o == nil || IsNil(o.PartnerNotify) {
+	if o == nil || isNil(o.PartnerNotify) {
 		return nil, false
 	}
 	return o.PartnerNotify, true
@@ -1632,7 +1629,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyOk() (*string, bool
 
 // HasPartnerNotify returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasPartnerNotify() bool {
-	if o != nil && !IsNil(o.PartnerNotify) {
+	if o != nil && !isNil(o.PartnerNotify) {
 		return true
 	}
 
@@ -1646,7 +1643,7 @@ func (o *AdvancedSettingsTableResourceInner) SetPartnerNotify(v string) {
 
 // GetPartnerNotifyNumeric returns the PartnerNotifyNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumeric() int64 {
-	if o == nil || IsNil(o.PartnerNotifyNumeric) {
+	if o == nil || isNil(o.PartnerNotifyNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1656,7 +1653,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumeric() int64 {
 // GetPartnerNotifyNumericOk returns a tuple with the PartnerNotifyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PartnerNotifyNumeric) {
+	if o == nil || isNil(o.PartnerNotifyNumeric) {
 		return nil, false
 	}
 	return o.PartnerNotifyNumeric, true
@@ -1664,7 +1661,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPartnerNotifyNumericOk() (*int64
 
 // HasPartnerNotifyNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasPartnerNotifyNumeric() bool {
-	if o != nil && !IsNil(o.PartnerNotifyNumeric) {
+	if o != nil && !isNil(o.PartnerNotifyNumeric) {
 		return true
 	}
 
@@ -1678,7 +1675,7 @@ func (o *AdvancedSettingsTableResourceInner) SetPartnerNotifyNumeric(v int64) {
 
 // GetPcieHotplug returns the PcieHotplug field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetPcieHotplug() string {
-	if o == nil || IsNil(o.PcieHotplug) {
+	if o == nil || isNil(o.PcieHotplug) {
 		var ret string
 		return ret
 	}
@@ -1688,7 +1685,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPcieHotplug() string {
 // GetPcieHotplugOk returns a tuple with the PcieHotplug field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugOk() (*string, bool) {
-	if o == nil || IsNil(o.PcieHotplug) {
+	if o == nil || isNil(o.PcieHotplug) {
 		return nil, false
 	}
 	return o.PcieHotplug, true
@@ -1696,7 +1693,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugOk() (*string, bool) 
 
 // HasPcieHotplug returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasPcieHotplug() bool {
-	if o != nil && !IsNil(o.PcieHotplug) {
+	if o != nil && !isNil(o.PcieHotplug) {
 		return true
 	}
 
@@ -1710,7 +1707,7 @@ func (o *AdvancedSettingsTableResourceInner) SetPcieHotplug(v string) {
 
 // GetPcieHotplugNumeric returns the PcieHotplugNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumeric() int64 {
-	if o == nil || IsNil(o.PcieHotplugNumeric) {
+	if o == nil || isNil(o.PcieHotplugNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1720,7 +1717,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumeric() int64 {
 // GetPcieHotplugNumericOk returns a tuple with the PcieHotplugNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PcieHotplugNumeric) {
+	if o == nil || isNil(o.PcieHotplugNumeric) {
 		return nil, false
 	}
 	return o.PcieHotplugNumeric, true
@@ -1728,7 +1725,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPcieHotplugNumericOk() (*int64, 
 
 // HasPcieHotplugNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasPcieHotplugNumeric() bool {
-	if o != nil && !IsNil(o.PcieHotplugNumeric) {
+	if o != nil && !isNil(o.PcieHotplugNumeric) {
 		return true
 	}
 
@@ -1742,7 +1739,7 @@ func (o *AdvancedSettingsTableResourceInner) SetPcieHotplugNumeric(v int64) {
 
 // GetPowerSupplyFailure returns the PowerSupplyFailure field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailure() string {
-	if o == nil || IsNil(o.PowerSupplyFailure) {
+	if o == nil || isNil(o.PowerSupplyFailure) {
 		var ret string
 		return ret
 	}
@@ -1752,7 +1749,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailure() string {
 // GetPowerSupplyFailureOk returns a tuple with the PowerSupplyFailure field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureOk() (*string, bool) {
-	if o == nil || IsNil(o.PowerSupplyFailure) {
+	if o == nil || isNil(o.PowerSupplyFailure) {
 		return nil, false
 	}
 	return o.PowerSupplyFailure, true
@@ -1760,7 +1757,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureOk() (*string,
 
 // HasPowerSupplyFailure returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasPowerSupplyFailure() bool {
-	if o != nil && !IsNil(o.PowerSupplyFailure) {
+	if o != nil && !isNil(o.PowerSupplyFailure) {
 		return true
 	}
 
@@ -1774,7 +1771,7 @@ func (o *AdvancedSettingsTableResourceInner) SetPowerSupplyFailure(v string) {
 
 // GetPowerSupplyFailureNumeric returns the PowerSupplyFailureNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumeric() int64 {
-	if o == nil || IsNil(o.PowerSupplyFailureNumeric) {
+	if o == nil || isNil(o.PowerSupplyFailureNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1784,7 +1781,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumeric() int6
 // GetPowerSupplyFailureNumericOk returns a tuple with the PowerSupplyFailureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PowerSupplyFailureNumeric) {
+	if o == nil || isNil(o.PowerSupplyFailureNumeric) {
 		return nil, false
 	}
 	return o.PowerSupplyFailureNumeric, true
@@ -1792,7 +1789,7 @@ func (o *AdvancedSettingsTableResourceInner) GetPowerSupplyFailureNumericOk() (*
 
 // HasPowerSupplyFailureNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasPowerSupplyFailureNumeric() bool {
-	if o != nil && !IsNil(o.PowerSupplyFailureNumeric) {
+	if o != nil && !isNil(o.PowerSupplyFailureNumeric) {
 		return true
 	}
 
@@ -1806,7 +1803,7 @@ func (o *AdvancedSettingsTableResourceInner) SetPowerSupplyFailureNumeric(v int6
 
 // GetRandomIoPerformanceOptimization returns the RandomIoPerformanceOptimization field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimization() string {
-	if o == nil || IsNil(o.RandomIoPerformanceOptimization) {
+	if o == nil || isNil(o.RandomIoPerformanceOptimization) {
 		var ret string
 		return ret
 	}
@@ -1816,7 +1813,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimization(
 // GetRandomIoPerformanceOptimizationOk returns a tuple with the RandomIoPerformanceOptimization field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationOk() (*string, bool) {
-	if o == nil || IsNil(o.RandomIoPerformanceOptimization) {
+	if o == nil || isNil(o.RandomIoPerformanceOptimization) {
 		return nil, false
 	}
 	return o.RandomIoPerformanceOptimization, true
@@ -1824,7 +1821,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationO
 
 // HasRandomIoPerformanceOptimization returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasRandomIoPerformanceOptimization() bool {
-	if o != nil && !IsNil(o.RandomIoPerformanceOptimization) {
+	if o != nil && !isNil(o.RandomIoPerformanceOptimization) {
 		return true
 	}
 
@@ -1838,7 +1835,7 @@ func (o *AdvancedSettingsTableResourceInner) SetRandomIoPerformanceOptimization(
 
 // GetRandomIoPerformanceOptimizationNumeric returns the RandomIoPerformanceOptimizationNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumeric() int64 {
-	if o == nil || IsNil(o.RandomIoPerformanceOptimizationNumeric) {
+	if o == nil || isNil(o.RandomIoPerformanceOptimizationNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1848,7 +1845,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationN
 // GetRandomIoPerformanceOptimizationNumericOk returns a tuple with the RandomIoPerformanceOptimizationNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.RandomIoPerformanceOptimizationNumeric) {
+	if o == nil || isNil(o.RandomIoPerformanceOptimizationNumeric) {
 		return nil, false
 	}
 	return o.RandomIoPerformanceOptimizationNumeric, true
@@ -1856,7 +1853,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRandomIoPerformanceOptimizationN
 
 // HasRandomIoPerformanceOptimizationNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasRandomIoPerformanceOptimizationNumeric() bool {
-	if o != nil && !IsNil(o.RandomIoPerformanceOptimizationNumeric) {
+	if o != nil && !isNil(o.RandomIoPerformanceOptimizationNumeric) {
 		return true
 	}
 
@@ -1870,7 +1867,7 @@ func (o *AdvancedSettingsTableResourceInner) SetRandomIoPerformanceOptimizationN
 
 // GetRemanufacture returns the Remanufacture field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetRemanufacture() string {
-	if o == nil || IsNil(o.Remanufacture) {
+	if o == nil || isNil(o.Remanufacture) {
 		var ret string
 		return ret
 	}
@@ -1880,7 +1877,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRemanufacture() string {
 // GetRemanufactureOk returns a tuple with the Remanufacture field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetRemanufactureOk() (*string, bool) {
-	if o == nil || IsNil(o.Remanufacture) {
+	if o == nil || isNil(o.Remanufacture) {
 		return nil, false
 	}
 	return o.Remanufacture, true
@@ -1888,7 +1885,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRemanufactureOk() (*string, bool
 
 // HasRemanufacture returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasRemanufacture() bool {
-	if o != nil && !IsNil(o.Remanufacture) {
+	if o != nil && !isNil(o.Remanufacture) {
 		return true
 	}
 
@@ -1902,7 +1899,7 @@ func (o *AdvancedSettingsTableResourceInner) SetRemanufacture(v string) {
 
 // GetRemanufactureNumeric returns the RemanufactureNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumeric() int64 {
-	if o == nil || IsNil(o.RemanufactureNumeric) {
+	if o == nil || isNil(o.RemanufactureNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1912,7 +1909,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumeric() int64 {
 // GetRemanufactureNumericOk returns a tuple with the RemanufactureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.RemanufactureNumeric) {
+	if o == nil || isNil(o.RemanufactureNumeric) {
 		return nil, false
 	}
 	return o.RemanufactureNumeric, true
@@ -1920,7 +1917,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRemanufactureNumericOk() (*int64
 
 // HasRemanufactureNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasRemanufactureNumeric() bool {
-	if o != nil && !IsNil(o.RemanufactureNumeric) {
+	if o != nil && !isNil(o.RemanufactureNumeric) {
 		return true
 	}
 
@@ -1934,7 +1931,7 @@ func (o *AdvancedSettingsTableResourceInner) SetRemanufactureNumeric(v int64) {
 
 // GetRestartOnCapiFail returns the RestartOnCapiFail field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFail() string {
-	if o == nil || IsNil(o.RestartOnCapiFail) {
+	if o == nil || isNil(o.RestartOnCapiFail) {
 		var ret string
 		return ret
 	}
@@ -1944,7 +1941,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFail() string {
 // GetRestartOnCapiFailOk returns a tuple with the RestartOnCapiFail field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailOk() (*string, bool) {
-	if o == nil || IsNil(o.RestartOnCapiFail) {
+	if o == nil || isNil(o.RestartOnCapiFail) {
 		return nil, false
 	}
 	return o.RestartOnCapiFail, true
@@ -1952,7 +1949,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailOk() (*string, 
 
 // HasRestartOnCapiFail returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasRestartOnCapiFail() bool {
-	if o != nil && !IsNil(o.RestartOnCapiFail) {
+	if o != nil && !isNil(o.RestartOnCapiFail) {
 		return true
 	}
 
@@ -1966,7 +1963,7 @@ func (o *AdvancedSettingsTableResourceInner) SetRestartOnCapiFail(v string) {
 
 // GetRestartOnCapiFailNumeric returns the RestartOnCapiFailNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumeric() int64 {
-	if o == nil || IsNil(o.RestartOnCapiFailNumeric) {
+	if o == nil || isNil(o.RestartOnCapiFailNumeric) {
 		var ret int64
 		return ret
 	}
@@ -1976,7 +1973,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumeric() int64
 // GetRestartOnCapiFailNumericOk returns a tuple with the RestartOnCapiFailNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.RestartOnCapiFailNumeric) {
+	if o == nil || isNil(o.RestartOnCapiFailNumeric) {
 		return nil, false
 	}
 	return o.RestartOnCapiFailNumeric, true
@@ -1984,7 +1981,7 @@ func (o *AdvancedSettingsTableResourceInner) GetRestartOnCapiFailNumericOk() (*i
 
 // HasRestartOnCapiFailNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasRestartOnCapiFailNumeric() bool {
-	if o != nil && !IsNil(o.RestartOnCapiFailNumeric) {
+	if o != nil && !isNil(o.RestartOnCapiFailNumeric) {
 		return true
 	}
 
@@ -1998,7 +1995,7 @@ func (o *AdvancedSettingsTableResourceInner) SetRestartOnCapiFailNumeric(v int64
 
 // GetScrubSchedule returns the ScrubSchedule field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetScrubSchedule() string {
-	if o == nil || IsNil(o.ScrubSchedule) {
+	if o == nil || isNil(o.ScrubSchedule) {
 		var ret string
 		return ret
 	}
@@ -2008,7 +2005,7 @@ func (o *AdvancedSettingsTableResourceInner) GetScrubSchedule() string {
 // GetScrubScheduleOk returns a tuple with the ScrubSchedule field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleOk() (*string, bool) {
-	if o == nil || IsNil(o.ScrubSchedule) {
+	if o == nil || isNil(o.ScrubSchedule) {
 		return nil, false
 	}
 	return o.ScrubSchedule, true
@@ -2016,7 +2013,7 @@ func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleOk() (*string, bool
 
 // HasScrubSchedule returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasScrubSchedule() bool {
-	if o != nil && !IsNil(o.ScrubSchedule) {
+	if o != nil && !isNil(o.ScrubSchedule) {
 		return true
 	}
 
@@ -2030,7 +2027,7 @@ func (o *AdvancedSettingsTableResourceInner) SetScrubSchedule(v string) {
 
 // GetScrubScheduleNumeric returns the ScrubScheduleNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumeric() int64 {
-	if o == nil || IsNil(o.ScrubScheduleNumeric) {
+	if o == nil || isNil(o.ScrubScheduleNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2040,7 +2037,7 @@ func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumeric() int64 {
 // GetScrubScheduleNumericOk returns a tuple with the ScrubScheduleNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ScrubScheduleNumeric) {
+	if o == nil || isNil(o.ScrubScheduleNumeric) {
 		return nil, false
 	}
 	return o.ScrubScheduleNumeric, true
@@ -2048,7 +2045,7 @@ func (o *AdvancedSettingsTableResourceInner) GetScrubScheduleNumericOk() (*int64
 
 // HasScrubScheduleNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasScrubScheduleNumeric() bool {
-	if o != nil && !IsNil(o.ScrubScheduleNumeric) {
+	if o != nil && !isNil(o.ScrubScheduleNumeric) {
 		return true
 	}
 
@@ -2062,7 +2059,7 @@ func (o *AdvancedSettingsTableResourceInner) SetScrubScheduleNumeric(v int64) {
 
 // GetSingleController returns the SingleController field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSingleController() string {
-	if o == nil || IsNil(o.SingleController) {
+	if o == nil || isNil(o.SingleController) {
 		var ret string
 		return ret
 	}
@@ -2072,7 +2069,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSingleController() string {
 // GetSingleControllerOk returns a tuple with the SingleController field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSingleControllerOk() (*string, bool) {
-	if o == nil || IsNil(o.SingleController) {
+	if o == nil || isNil(o.SingleController) {
 		return nil, false
 	}
 	return o.SingleController, true
@@ -2080,7 +2077,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSingleControllerOk() (*string, b
 
 // HasSingleController returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSingleController() bool {
-	if o != nil && !IsNil(o.SingleController) {
+	if o != nil && !isNil(o.SingleController) {
 		return true
 	}
 
@@ -2094,7 +2091,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSingleController(v string) {
 
 // GetSingleControllerNumeric returns the SingleControllerNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumeric() int64 {
-	if o == nil || IsNil(o.SingleControllerNumeric) {
+	if o == nil || isNil(o.SingleControllerNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2104,7 +2101,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumeric() int64 
 // GetSingleControllerNumericOk returns a tuple with the SingleControllerNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SingleControllerNumeric) {
+	if o == nil || isNil(o.SingleControllerNumeric) {
 		return nil, false
 	}
 	return o.SingleControllerNumeric, true
@@ -2112,7 +2109,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSingleControllerNumericOk() (*in
 
 // HasSingleControllerNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSingleControllerNumeric() bool {
-	if o != nil && !IsNil(o.SingleControllerNumeric) {
+	if o != nil && !isNil(o.SingleControllerNumeric) {
 		return true
 	}
 
@@ -2126,7 +2123,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSingleControllerNumeric(v int64)
 
 // GetSlotAffinity returns the SlotAffinity field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSlotAffinity() string {
-	if o == nil || IsNil(o.SlotAffinity) {
+	if o == nil || isNil(o.SlotAffinity) {
 		var ret string
 		return ret
 	}
@@ -2136,7 +2133,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSlotAffinity() string {
 // GetSlotAffinityOk returns a tuple with the SlotAffinity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityOk() (*string, bool) {
-	if o == nil || IsNil(o.SlotAffinity) {
+	if o == nil || isNil(o.SlotAffinity) {
 		return nil, false
 	}
 	return o.SlotAffinity, true
@@ -2144,7 +2141,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityOk() (*string, bool)
 
 // HasSlotAffinity returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSlotAffinity() bool {
-	if o != nil && !IsNil(o.SlotAffinity) {
+	if o != nil && !isNil(o.SlotAffinity) {
 		return true
 	}
 
@@ -2158,7 +2155,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSlotAffinity(v string) {
 
 // GetSlotAffinityNumeric returns the SlotAffinityNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumeric() int64 {
-	if o == nil || IsNil(o.SlotAffinityNumeric) {
+	if o == nil || isNil(o.SlotAffinityNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2168,7 +2165,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumeric() int64 {
 // GetSlotAffinityNumericOk returns a tuple with the SlotAffinityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SlotAffinityNumeric) {
+	if o == nil || isNil(o.SlotAffinityNumeric) {
 		return nil, false
 	}
 	return o.SlotAffinityNumeric, true
@@ -2176,7 +2173,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSlotAffinityNumericOk() (*int64,
 
 // HasSlotAffinityNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSlotAffinityNumeric() bool {
-	if o != nil && !IsNil(o.SlotAffinityNumeric) {
+	if o != nil && !isNil(o.SlotAffinityNumeric) {
 		return true
 	}
 
@@ -2190,7 +2187,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSlotAffinityNumeric(v int64) {
 
 // GetSlowDiskDetection returns the SlowDiskDetection field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetection() string {
-	if o == nil || IsNil(o.SlowDiskDetection) {
+	if o == nil || isNil(o.SlowDiskDetection) {
 		var ret string
 		return ret
 	}
@@ -2200,7 +2197,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetection() string {
 // GetSlowDiskDetectionOk returns a tuple with the SlowDiskDetection field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionOk() (*string, bool) {
-	if o == nil || IsNil(o.SlowDiskDetection) {
+	if o == nil || isNil(o.SlowDiskDetection) {
 		return nil, false
 	}
 	return o.SlowDiskDetection, true
@@ -2208,7 +2205,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionOk() (*string, 
 
 // HasSlowDiskDetection returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSlowDiskDetection() bool {
-	if o != nil && !IsNil(o.SlowDiskDetection) {
+	if o != nil && !isNil(o.SlowDiskDetection) {
 		return true
 	}
 
@@ -2222,7 +2219,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSlowDiskDetection(v string) {
 
 // GetSlowDiskDetectionNumeric returns the SlowDiskDetectionNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumeric() int64 {
-	if o == nil || IsNil(o.SlowDiskDetectionNumeric) {
+	if o == nil || isNil(o.SlowDiskDetectionNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2232,7 +2229,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumeric() int64
 // GetSlowDiskDetectionNumericOk returns a tuple with the SlowDiskDetectionNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SlowDiskDetectionNumeric) {
+	if o == nil || isNil(o.SlowDiskDetectionNumeric) {
 		return nil, false
 	}
 	return o.SlowDiskDetectionNumeric, true
@@ -2240,7 +2237,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSlowDiskDetectionNumericOk() (*i
 
 // HasSlowDiskDetectionNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSlowDiskDetectionNumeric() bool {
-	if o != nil && !IsNil(o.SlowDiskDetectionNumeric) {
+	if o != nil && !isNil(o.SlowDiskDetectionNumeric) {
 		return true
 	}
 
@@ -2254,7 +2251,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSlowDiskDetectionNumeric(v int64
 
 // GetSmart returns the Smart field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSmart() string {
-	if o == nil || IsNil(o.Smart) {
+	if o == nil || isNil(o.Smart) {
 		var ret string
 		return ret
 	}
@@ -2264,7 +2261,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSmart() string {
 // GetSmartOk returns a tuple with the Smart field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSmartOk() (*string, bool) {
-	if o == nil || IsNil(o.Smart) {
+	if o == nil || isNil(o.Smart) {
 		return nil, false
 	}
 	return o.Smart, true
@@ -2272,7 +2269,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSmartOk() (*string, bool) {
 
 // HasSmart returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSmart() bool {
-	if o != nil && !IsNil(o.Smart) {
+	if o != nil && !isNil(o.Smart) {
 		return true
 	}
 
@@ -2286,7 +2283,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSmart(v string) {
 
 // GetSmartNumeric returns the SmartNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSmartNumeric() int64 {
-	if o == nil || IsNil(o.SmartNumeric) {
+	if o == nil || isNil(o.SmartNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2296,7 +2293,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSmartNumeric() int64 {
 // GetSmartNumericOk returns a tuple with the SmartNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSmartNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SmartNumeric) {
+	if o == nil || isNil(o.SmartNumeric) {
 		return nil, false
 	}
 	return o.SmartNumeric, true
@@ -2304,7 +2301,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSmartNumericOk() (*int64, bool) 
 
 // HasSmartNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSmartNumeric() bool {
-	if o != nil && !IsNil(o.SmartNumeric) {
+	if o != nil && !isNil(o.SmartNumeric) {
 		return true
 	}
 
@@ -2318,7 +2315,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSmartNumeric(v int64) {
 
 // GetSsdConcurrentAccess returns the SsdConcurrentAccess field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccess() string {
-	if o == nil || IsNil(o.SsdConcurrentAccess) {
+	if o == nil || isNil(o.SsdConcurrentAccess) {
 		var ret string
 		return ret
 	}
@@ -2328,7 +2325,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccess() string {
 // GetSsdConcurrentAccessOk returns a tuple with the SsdConcurrentAccess field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessOk() (*string, bool) {
-	if o == nil || IsNil(o.SsdConcurrentAccess) {
+	if o == nil || isNil(o.SsdConcurrentAccess) {
 		return nil, false
 	}
 	return o.SsdConcurrentAccess, true
@@ -2336,7 +2333,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessOk() (*string
 
 // HasSsdConcurrentAccess returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSsdConcurrentAccess() bool {
-	if o != nil && !IsNil(o.SsdConcurrentAccess) {
+	if o != nil && !isNil(o.SsdConcurrentAccess) {
 		return true
 	}
 
@@ -2350,7 +2347,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSsdConcurrentAccess(v string) {
 
 // GetSsdConcurrentAccessNumeric returns the SsdConcurrentAccessNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumeric() int64 {
-	if o == nil || IsNil(o.SsdConcurrentAccessNumeric) {
+	if o == nil || isNil(o.SsdConcurrentAccessNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2360,7 +2357,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumeric() int
 // GetSsdConcurrentAccessNumericOk returns a tuple with the SsdConcurrentAccessNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SsdConcurrentAccessNumeric) {
+	if o == nil || isNil(o.SsdConcurrentAccessNumeric) {
 		return nil, false
 	}
 	return o.SsdConcurrentAccessNumeric, true
@@ -2368,7 +2365,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSsdConcurrentAccessNumericOk() (
 
 // HasSsdConcurrentAccessNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSsdConcurrentAccessNumeric() bool {
-	if o != nil && !IsNil(o.SsdConcurrentAccessNumeric) {
+	if o != nil && !isNil(o.SsdConcurrentAccessNumeric) {
 		return true
 	}
 
@@ -2382,7 +2379,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSsdConcurrentAccessNumeric(v int
 
 // GetSuperCapFailure returns the SuperCapFailure field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailure() string {
-	if o == nil || IsNil(o.SuperCapFailure) {
+	if o == nil || isNil(o.SuperCapFailure) {
 		var ret string
 		return ret
 	}
@@ -2392,7 +2389,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailure() string {
 // GetSuperCapFailureOk returns a tuple with the SuperCapFailure field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureOk() (*string, bool) {
-	if o == nil || IsNil(o.SuperCapFailure) {
+	if o == nil || isNil(o.SuperCapFailure) {
 		return nil, false
 	}
 	return o.SuperCapFailure, true
@@ -2400,7 +2397,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureOk() (*string, bo
 
 // HasSuperCapFailure returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSuperCapFailure() bool {
-	if o != nil && !IsNil(o.SuperCapFailure) {
+	if o != nil && !isNil(o.SuperCapFailure) {
 		return true
 	}
 
@@ -2414,7 +2411,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSuperCapFailure(v string) {
 
 // GetSuperCapFailureNumeric returns the SuperCapFailureNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumeric() int64 {
-	if o == nil || IsNil(o.SuperCapFailureNumeric) {
+	if o == nil || isNil(o.SuperCapFailureNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2424,7 +2421,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumeric() int64 {
 // GetSuperCapFailureNumericOk returns a tuple with the SuperCapFailureNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SuperCapFailureNumeric) {
+	if o == nil || isNil(o.SuperCapFailureNumeric) {
 		return nil, false
 	}
 	return o.SuperCapFailureNumeric, true
@@ -2432,7 +2429,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSuperCapFailureNumericOk() (*int
 
 // HasSuperCapFailureNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSuperCapFailureNumeric() bool {
-	if o != nil && !IsNil(o.SuperCapFailureNumeric) {
+	if o != nil && !isNil(o.SuperCapFailureNumeric) {
 		return true
 	}
 
@@ -2446,7 +2443,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSuperCapFailureNumeric(v int64) 
 
 // GetSyncCacheMode returns the SyncCacheMode field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSyncCacheMode() string {
-	if o == nil || IsNil(o.SyncCacheMode) {
+	if o == nil || isNil(o.SyncCacheMode) {
 		var ret string
 		return ret
 	}
@@ -2456,7 +2453,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSyncCacheMode() string {
 // GetSyncCacheModeOk returns a tuple with the SyncCacheMode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeOk() (*string, bool) {
-	if o == nil || IsNil(o.SyncCacheMode) {
+	if o == nil || isNil(o.SyncCacheMode) {
 		return nil, false
 	}
 	return o.SyncCacheMode, true
@@ -2464,7 +2461,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeOk() (*string, bool
 
 // HasSyncCacheMode returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSyncCacheMode() bool {
-	if o != nil && !IsNil(o.SyncCacheMode) {
+	if o != nil && !isNil(o.SyncCacheMode) {
 		return true
 	}
 
@@ -2478,7 +2475,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSyncCacheMode(v string) {
 
 // GetSyncCacheModeNumeric returns the SyncCacheModeNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumeric() int64 {
-	if o == nil || IsNil(o.SyncCacheModeNumeric) {
+	if o == nil || isNil(o.SyncCacheModeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2488,7 +2485,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumeric() int64 {
 // GetSyncCacheModeNumericOk returns a tuple with the SyncCacheModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SyncCacheModeNumeric) {
+	if o == nil || isNil(o.SyncCacheModeNumeric) {
 		return nil, false
 	}
 	return o.SyncCacheModeNumeric, true
@@ -2496,7 +2493,7 @@ func (o *AdvancedSettingsTableResourceInner) GetSyncCacheModeNumericOk() (*int64
 
 // HasSyncCacheModeNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasSyncCacheModeNumeric() bool {
-	if o != nil && !IsNil(o.SyncCacheModeNumeric) {
+	if o != nil && !isNil(o.SyncCacheModeNumeric) {
 		return true
 	}
 
@@ -2510,7 +2507,7 @@ func (o *AdvancedSettingsTableResourceInner) SetSyncCacheModeNumeric(v int64) {
 
 // GetTemperatureExceeded returns the TemperatureExceeded field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceeded() string {
-	if o == nil || IsNil(o.TemperatureExceeded) {
+	if o == nil || isNil(o.TemperatureExceeded) {
 		var ret string
 		return ret
 	}
@@ -2520,7 +2517,7 @@ func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceeded() string {
 // GetTemperatureExceededOk returns a tuple with the TemperatureExceeded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededOk() (*string, bool) {
-	if o == nil || IsNil(o.TemperatureExceeded) {
+	if o == nil || isNil(o.TemperatureExceeded) {
 		return nil, false
 	}
 	return o.TemperatureExceeded, true
@@ -2528,7 +2525,7 @@ func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededOk() (*string
 
 // HasTemperatureExceeded returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasTemperatureExceeded() bool {
-	if o != nil && !IsNil(o.TemperatureExceeded) {
+	if o != nil && !isNil(o.TemperatureExceeded) {
 		return true
 	}
 
@@ -2542,7 +2539,7 @@ func (o *AdvancedSettingsTableResourceInner) SetTemperatureExceeded(v string) {
 
 // GetTemperatureExceededNumeric returns the TemperatureExceededNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumeric() int64 {
-	if o == nil || IsNil(o.TemperatureExceededNumeric) {
+	if o == nil || isNil(o.TemperatureExceededNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2552,7 +2549,7 @@ func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumeric() int
 // GetTemperatureExceededNumericOk returns a tuple with the TemperatureExceededNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.TemperatureExceededNumeric) {
+	if o == nil || isNil(o.TemperatureExceededNumeric) {
 		return nil, false
 	}
 	return o.TemperatureExceededNumeric, true
@@ -2560,7 +2557,7 @@ func (o *AdvancedSettingsTableResourceInner) GetTemperatureExceededNumericOk() (
 
 // HasTemperatureExceededNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasTemperatureExceededNumeric() bool {
-	if o != nil && !IsNil(o.TemperatureExceededNumeric) {
+	if o != nil && !isNil(o.TemperatureExceededNumeric) {
 		return true
 	}
 
@@ -2574,7 +2571,7 @@ func (o *AdvancedSettingsTableResourceInner) SetTemperatureExceededNumeric(v int
 
 // GetUtilityPriority returns the UtilityPriority field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetUtilityPriority() string {
-	if o == nil || IsNil(o.UtilityPriority) {
+	if o == nil || isNil(o.UtilityPriority) {
 		var ret string
 		return ret
 	}
@@ -2584,7 +2581,7 @@ func (o *AdvancedSettingsTableResourceInner) GetUtilityPriority() string {
 // GetUtilityPriorityOk returns a tuple with the UtilityPriority field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityOk() (*string, bool) {
-	if o == nil || IsNil(o.UtilityPriority) {
+	if o == nil || isNil(o.UtilityPriority) {
 		return nil, false
 	}
 	return o.UtilityPriority, true
@@ -2592,7 +2589,7 @@ func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityOk() (*string, bo
 
 // HasUtilityPriority returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasUtilityPriority() bool {
-	if o != nil && !IsNil(o.UtilityPriority) {
+	if o != nil && !isNil(o.UtilityPriority) {
 		return true
 	}
 
@@ -2606,7 +2603,7 @@ func (o *AdvancedSettingsTableResourceInner) SetUtilityPriority(v string) {
 
 // GetUtilityPriorityNumeric returns the UtilityPriorityNumeric field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumeric() int64 {
-	if o == nil || IsNil(o.UtilityPriorityNumeric) {
+	if o == nil || isNil(o.UtilityPriorityNumeric) {
 		var ret int64
 		return ret
 	}
@@ -2616,7 +2613,7 @@ func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumeric() int64 {
 // GetUtilityPriorityNumericOk returns a tuple with the UtilityPriorityNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.UtilityPriorityNumeric) {
+	if o == nil || isNil(o.UtilityPriorityNumeric) {
 		return nil, false
 	}
 	return o.UtilityPriorityNumeric, true
@@ -2624,7 +2621,7 @@ func (o *AdvancedSettingsTableResourceInner) GetUtilityPriorityNumericOk() (*int
 
 // HasUtilityPriorityNumeric returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableResourceInner) HasUtilityPriorityNumeric() bool {
-	if o != nil && !IsNil(o.UtilityPriorityNumeric) {
+	if o != nil && !isNil(o.UtilityPriorityNumeric) {
 		return true
 	}
 
@@ -2637,250 +2634,242 @@ func (o *AdvancedSettingsTableResourceInner) SetUtilityPriorityNumeric(v int64) 
 }
 
 func (o AdvancedSettingsTableResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o AdvancedSettingsTableResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.AutoMap) {
+	if !isNil(o.AutoMap) {
 		toSerialize["auto-map"] = o.AutoMap
 	}
-	if !IsNil(o.AutoMapNumeric) {
+	if !isNil(o.AutoMapNumeric) {
 		toSerialize["auto-map-numeric"] = o.AutoMapNumeric
 	}
-	if !IsNil(o.AutoStallRecovery) {
+	if !isNil(o.AutoStallRecovery) {
 		toSerialize["auto-stall-recovery"] = o.AutoStallRecovery
 	}
-	if !IsNil(o.AutoStallRecoveryNumeric) {
+	if !isNil(o.AutoStallRecoveryNumeric) {
 		toSerialize["auto-stall-recovery-numeric"] = o.AutoStallRecoveryNumeric
 	}
-	if !IsNil(o.AutoUnmap) {
+	if !isNil(o.AutoUnmap) {
 		toSerialize["auto-unmap"] = o.AutoUnmap
 	}
-	if !IsNil(o.AutoUnmapNumeric) {
+	if !isNil(o.AutoUnmapNumeric) {
 		toSerialize["auto-unmap-numeric"] = o.AutoUnmapNumeric
 	}
-	if !IsNil(o.AutoWriteBack) {
+	if !isNil(o.AutoWriteBack) {
 		toSerialize["auto-write-back"] = o.AutoWriteBack
 	}
-	if !IsNil(o.AutoWriteBackNumeric) {
+	if !isNil(o.AutoWriteBackNumeric) {
 		toSerialize["auto-write-back-numeric"] = o.AutoWriteBackNumeric
 	}
-	if !IsNil(o.BackgroundScrub) {
+	if !isNil(o.BackgroundScrub) {
 		toSerialize["background-scrub"] = o.BackgroundScrub
 	}
-	if !IsNil(o.BackgroundScrubInterval) {
+	if !isNil(o.BackgroundScrubInterval) {
 		toSerialize["background-scrub-interval"] = o.BackgroundScrubInterval
 	}
-	if !IsNil(o.BackgroundScrubNumeric) {
+	if !isNil(o.BackgroundScrubNumeric) {
 		toSerialize["background-scrub-numeric"] = o.BackgroundScrubNumeric
 	}
-	if !IsNil(o.CacheFlushTimeout) {
+	if !isNil(o.CacheFlushTimeout) {
 		toSerialize["cache-flush-timeout"] = o.CacheFlushTimeout
 	}
-	if !IsNil(o.CacheFlushTimeoutNumeric) {
+	if !isNil(o.CacheFlushTimeoutNumeric) {
 		toSerialize["cache-flush-timeout-numeric"] = o.CacheFlushTimeoutNumeric
 	}
-	if !IsNil(o.ControllerFailure) {
+	if !isNil(o.ControllerFailure) {
 		toSerialize["controller-failure"] = o.ControllerFailure
 	}
-	if !IsNil(o.ControllerFailureNumeric) {
+	if !isNil(o.ControllerFailureNumeric) {
 		toSerialize["controller-failure-numeric"] = o.ControllerFailureNumeric
 	}
-	if !IsNil(o.DefaultMapping) {
+	if !isNil(o.DefaultMapping) {
 		toSerialize["default-mapping"] = o.DefaultMapping
 	}
-	if !IsNil(o.DefaultMappingNumeric) {
+	if !isNil(o.DefaultMappingNumeric) {
 		toSerialize["default-mapping-numeric"] = o.DefaultMappingNumeric
 	}
-	if !IsNil(o.DeleteOverride) {
+	if !isNil(o.DeleteOverride) {
 		toSerialize["delete-override"] = o.DeleteOverride
 	}
-	if !IsNil(o.DeleteOverrideNumeric) {
+	if !isNil(o.DeleteOverrideNumeric) {
 		toSerialize["delete-override-numeric"] = o.DeleteOverrideNumeric
 	}
-	if !IsNil(o.DiskDsdDelay) {
+	if !isNil(o.DiskDsdDelay) {
 		toSerialize["disk-dsd-delay"] = o.DiskDsdDelay
 	}
-	if !IsNil(o.DiskDsdEnable) {
+	if !isNil(o.DiskDsdEnable) {
 		toSerialize["disk-dsd-enable"] = o.DiskDsdEnable
 	}
-	if !IsNil(o.DiskDsdEnableNumeric) {
+	if !isNil(o.DiskDsdEnableNumeric) {
 		toSerialize["disk-dsd-enable-numeric"] = o.DiskDsdEnableNumeric
 	}
-	if !IsNil(o.DiskFirmwareUpdate) {
+	if !isNil(o.DiskFirmwareUpdate) {
 		toSerialize["disk-firmware-update"] = o.DiskFirmwareUpdate
 	}
-	if !IsNil(o.DiskFirmwareUpdateNumeric) {
+	if !isNil(o.DiskFirmwareUpdateNumeric) {
 		toSerialize["disk-firmware-update-numeric"] = o.DiskFirmwareUpdateNumeric
 	}
-	if !IsNil(o.DynamicSpares) {
+	if !isNil(o.DynamicSpares) {
 		toSerialize["dynamic-spares"] = o.DynamicSpares
 	}
-	if !IsNil(o.EmpPollRate) {
+	if !isNil(o.EmpPollRate) {
 		toSerialize["emp-poll-rate"] = o.EmpPollRate
 	}
-	if !IsNil(o.FanFailure) {
+	if !isNil(o.FanFailure) {
 		toSerialize["fan-failure"] = o.FanFailure
 	}
-	if !IsNil(o.FanFailureNumeric) {
+	if !isNil(o.FanFailureNumeric) {
 		toSerialize["fan-failure-numeric"] = o.FanFailureNumeric
 	}
-	if !IsNil(o.HedgedReadsTimeout) {
+	if !isNil(o.HedgedReadsTimeout) {
 		toSerialize["hedged-reads-timeout"] = o.HedgedReadsTimeout
 	}
-	if !IsNil(o.HedgedReadsTimeoutNumeric) {
+	if !isNil(o.HedgedReadsTimeoutNumeric) {
 		toSerialize["hedged-reads-timeout-numeric"] = o.HedgedReadsTimeoutNumeric
 	}
-	if !IsNil(o.HostCacheControl) {
+	if !isNil(o.HostCacheControl) {
 		toSerialize["host-cache-control"] = o.HostCacheControl
 	}
-	if !IsNil(o.HostCacheControlNumeric) {
+	if !isNil(o.HostCacheControlNumeric) {
 		toSerialize["host-cache-control-numeric"] = o.HostCacheControlNumeric
 	}
-	if !IsNil(o.IndependentCache) {
+	if !isNil(o.IndependentCache) {
 		toSerialize["independent-cache"] = o.IndependentCache
 	}
-	if !IsNil(o.IndependentCacheNumeric) {
+	if !isNil(o.IndependentCacheNumeric) {
 		toSerialize["independent-cache-numeric"] = o.IndependentCacheNumeric
 	}
-	if !IsNil(o.LargePools) {
+	if !isNil(o.LargePools) {
 		toSerialize["large-pools"] = o.LargePools
 	}
-	if !IsNil(o.LargePoolsNumeric) {
+	if !isNil(o.LargePoolsNumeric) {
 		toSerialize["large-pools-numeric"] = o.LargePoolsNumeric
 	}
-	if !IsNil(o.ManagedLogs) {
+	if !isNil(o.ManagedLogs) {
 		toSerialize["managed-logs"] = o.ManagedLogs
 	}
-	if !IsNil(o.ManagedLogsNumeric) {
+	if !isNil(o.ManagedLogsNumeric) {
 		toSerialize["managed-logs-numeric"] = o.ManagedLogsNumeric
 	}
-	if !IsNil(o.MemoryCardFailure) {
+	if !isNil(o.MemoryCardFailure) {
 		toSerialize["memory-card-failure"] = o.MemoryCardFailure
 	}
-	if !IsNil(o.MemoryCardFailureNumeric) {
+	if !isNil(o.MemoryCardFailureNumeric) {
 		toSerialize["memory-card-failure-numeric"] = o.MemoryCardFailureNumeric
 	}
-	if !IsNil(o.MissingLunResponse) {
+	if !isNil(o.MissingLunResponse) {
 		toSerialize["missing-lun-response"] = o.MissingLunResponse
 	}
-	if !IsNil(o.MissingLunResponseNumeric) {
+	if !isNil(o.MissingLunResponseNumeric) {
 		toSerialize["missing-lun-response-numeric"] = o.MissingLunResponseNumeric
 	}
-	if !IsNil(o.PartnerFirmwareUpgrade) {
+	if !isNil(o.PartnerFirmwareUpgrade) {
 		toSerialize["partner-firmware-upgrade"] = o.PartnerFirmwareUpgrade
 	}
-	if !IsNil(o.PartnerFirmwareUpgradeNumeric) {
+	if !isNil(o.PartnerFirmwareUpgradeNumeric) {
 		toSerialize["partner-firmware-upgrade-numeric"] = o.PartnerFirmwareUpgradeNumeric
 	}
-	if !IsNil(o.PartnerNotify) {
+	if !isNil(o.PartnerNotify) {
 		toSerialize["partner-notify"] = o.PartnerNotify
 	}
-	if !IsNil(o.PartnerNotifyNumeric) {
+	if !isNil(o.PartnerNotifyNumeric) {
 		toSerialize["partner-notify-numeric"] = o.PartnerNotifyNumeric
 	}
-	if !IsNil(o.PcieHotplug) {
+	if !isNil(o.PcieHotplug) {
 		toSerialize["pcie-hotplug"] = o.PcieHotplug
 	}
-	if !IsNil(o.PcieHotplugNumeric) {
+	if !isNil(o.PcieHotplugNumeric) {
 		toSerialize["pcie-hotplug-numeric"] = o.PcieHotplugNumeric
 	}
-	if !IsNil(o.PowerSupplyFailure) {
+	if !isNil(o.PowerSupplyFailure) {
 		toSerialize["power-supply-failure"] = o.PowerSupplyFailure
 	}
-	if !IsNil(o.PowerSupplyFailureNumeric) {
+	if !isNil(o.PowerSupplyFailureNumeric) {
 		toSerialize["power-supply-failure-numeric"] = o.PowerSupplyFailureNumeric
 	}
-	if !IsNil(o.RandomIoPerformanceOptimization) {
+	if !isNil(o.RandomIoPerformanceOptimization) {
 		toSerialize["random-io-performance-optimization"] = o.RandomIoPerformanceOptimization
 	}
-	if !IsNil(o.RandomIoPerformanceOptimizationNumeric) {
+	if !isNil(o.RandomIoPerformanceOptimizationNumeric) {
 		toSerialize["random-io-performance-optimization-numeric"] = o.RandomIoPerformanceOptimizationNumeric
 	}
-	if !IsNil(o.Remanufacture) {
+	if !isNil(o.Remanufacture) {
 		toSerialize["remanufacture"] = o.Remanufacture
 	}
-	if !IsNil(o.RemanufactureNumeric) {
+	if !isNil(o.RemanufactureNumeric) {
 		toSerialize["remanufacture-numeric"] = o.RemanufactureNumeric
 	}
-	if !IsNil(o.RestartOnCapiFail) {
+	if !isNil(o.RestartOnCapiFail) {
 		toSerialize["restart-on-capi-fail"] = o.RestartOnCapiFail
 	}
-	if !IsNil(o.RestartOnCapiFailNumeric) {
+	if !isNil(o.RestartOnCapiFailNumeric) {
 		toSerialize["restart-on-capi-fail-numeric"] = o.RestartOnCapiFailNumeric
 	}
-	if !IsNil(o.ScrubSchedule) {
+	if !isNil(o.ScrubSchedule) {
 		toSerialize["scrub-schedule"] = o.ScrubSchedule
 	}
-	if !IsNil(o.ScrubScheduleNumeric) {
+	if !isNil(o.ScrubScheduleNumeric) {
 		toSerialize["scrub-schedule-numeric"] = o.ScrubScheduleNumeric
 	}
-	if !IsNil(o.SingleController) {
+	if !isNil(o.SingleController) {
 		toSerialize["single-controller"] = o.SingleController
 	}
-	if !IsNil(o.SingleControllerNumeric) {
+	if !isNil(o.SingleControllerNumeric) {
 		toSerialize["single-controller-numeric"] = o.SingleControllerNumeric
 	}
-	if !IsNil(o.SlotAffinity) {
+	if !isNil(o.SlotAffinity) {
 		toSerialize["slot-affinity"] = o.SlotAffinity
 	}
-	if !IsNil(o.SlotAffinityNumeric) {
+	if !isNil(o.SlotAffinityNumeric) {
 		toSerialize["slot-affinity-numeric"] = o.SlotAffinityNumeric
 	}
-	if !IsNil(o.SlowDiskDetection) {
+	if !isNil(o.SlowDiskDetection) {
 		toSerialize["slow-disk-detection"] = o.SlowDiskDetection
 	}
-	if !IsNil(o.SlowDiskDetectionNumeric) {
+	if !isNil(o.SlowDiskDetectionNumeric) {
 		toSerialize["slow-disk-detection-numeric"] = o.SlowDiskDetectionNumeric
 	}
-	if !IsNil(o.Smart) {
+	if !isNil(o.Smart) {
 		toSerialize["smart"] = o.Smart
 	}
-	if !IsNil(o.SmartNumeric) {
+	if !isNil(o.SmartNumeric) {
 		toSerialize["smart-numeric"] = o.SmartNumeric
 	}
-	if !IsNil(o.SsdConcurrentAccess) {
+	if !isNil(o.SsdConcurrentAccess) {
 		toSerialize["ssd-concurrent-access"] = o.SsdConcurrentAccess
 	}
-	if !IsNil(o.SsdConcurrentAccessNumeric) {
+	if !isNil(o.SsdConcurrentAccessNumeric) {
 		toSerialize["ssd-concurrent-access-numeric"] = o.SsdConcurrentAccessNumeric
 	}
-	if !IsNil(o.SuperCapFailure) {
+	if !isNil(o.SuperCapFailure) {
 		toSerialize["super-cap-failure"] = o.SuperCapFailure
 	}
-	if !IsNil(o.SuperCapFailureNumeric) {
+	if !isNil(o.SuperCapFailureNumeric) {
 		toSerialize["super-cap-failure-numeric"] = o.SuperCapFailureNumeric
 	}
-	if !IsNil(o.SyncCacheMode) {
+	if !isNil(o.SyncCacheMode) {
 		toSerialize["sync-cache-mode"] = o.SyncCacheMode
 	}
-	if !IsNil(o.SyncCacheModeNumeric) {
+	if !isNil(o.SyncCacheModeNumeric) {
 		toSerialize["sync-cache-mode-numeric"] = o.SyncCacheModeNumeric
 	}
-	if !IsNil(o.TemperatureExceeded) {
+	if !isNil(o.TemperatureExceeded) {
 		toSerialize["temperature-exceeded"] = o.TemperatureExceeded
 	}
-	if !IsNil(o.TemperatureExceededNumeric) {
+	if !isNil(o.TemperatureExceededNumeric) {
 		toSerialize["temperature-exceeded-numeric"] = o.TemperatureExceededNumeric
 	}
-	if !IsNil(o.UtilityPriority) {
+	if !isNil(o.UtilityPriority) {
 		toSerialize["utility-priority"] = o.UtilityPriority
 	}
-	if !IsNil(o.UtilityPriorityNumeric) {
+	if !isNil(o.UtilityPriorityNumeric) {
 		toSerialize["utility-priority-numeric"] = o.UtilityPriorityNumeric
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableAdvancedSettingsTableResourceInner struct {

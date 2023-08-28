@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the FcPortResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &FcPortResourceInner{}
-
 // FcPortResourceInner struct for FcPortResourceInner
 type FcPortResourceInner struct {
 	ObjectName                *string `json:"object-name,omitempty"`
@@ -55,7 +52,7 @@ func NewFcPortResourceInnerWithDefaults() *FcPortResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -65,7 +62,7 @@ func (o *FcPortResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -73,7 +70,7 @@ func (o *FcPortResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -87,7 +84,7 @@ func (o *FcPortResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -97,7 +94,7 @@ func (o *FcPortResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -105,7 +102,7 @@ func (o *FcPortResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -119,7 +116,7 @@ func (o *FcPortResourceInner) SetMeta(v string) {
 
 // GetConfiguredTopology returns the ConfiguredTopology field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetConfiguredTopology() string {
-	if o == nil || IsNil(o.ConfiguredTopology) {
+	if o == nil || isNil(o.ConfiguredTopology) {
 		var ret string
 		return ret
 	}
@@ -129,7 +126,7 @@ func (o *FcPortResourceInner) GetConfiguredTopology() string {
 // GetConfiguredTopologyOk returns a tuple with the ConfiguredTopology field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetConfiguredTopologyOk() (*string, bool) {
-	if o == nil || IsNil(o.ConfiguredTopology) {
+	if o == nil || isNil(o.ConfiguredTopology) {
 		return nil, false
 	}
 	return o.ConfiguredTopology, true
@@ -137,7 +134,7 @@ func (o *FcPortResourceInner) GetConfiguredTopologyOk() (*string, bool) {
 
 // HasConfiguredTopology returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasConfiguredTopology() bool {
-	if o != nil && !IsNil(o.ConfiguredTopology) {
+	if o != nil && !isNil(o.ConfiguredTopology) {
 		return true
 	}
 
@@ -151,7 +148,7 @@ func (o *FcPortResourceInner) SetConfiguredTopology(v string) {
 
 // GetConfiguredTopologyNumeric returns the ConfiguredTopologyNumeric field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetConfiguredTopologyNumeric() int64 {
-	if o == nil || IsNil(o.ConfiguredTopologyNumeric) {
+	if o == nil || isNil(o.ConfiguredTopologyNumeric) {
 		var ret int64
 		return ret
 	}
@@ -161,7 +158,7 @@ func (o *FcPortResourceInner) GetConfiguredTopologyNumeric() int64 {
 // GetConfiguredTopologyNumericOk returns a tuple with the ConfiguredTopologyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetConfiguredTopologyNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ConfiguredTopologyNumeric) {
+	if o == nil || isNil(o.ConfiguredTopologyNumeric) {
 		return nil, false
 	}
 	return o.ConfiguredTopologyNumeric, true
@@ -169,7 +166,7 @@ func (o *FcPortResourceInner) GetConfiguredTopologyNumericOk() (*int64, bool) {
 
 // HasConfiguredTopologyNumeric returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasConfiguredTopologyNumeric() bool {
-	if o != nil && !IsNil(o.ConfiguredTopologyNumeric) {
+	if o != nil && !isNil(o.ConfiguredTopologyNumeric) {
 		return true
 	}
 
@@ -183,7 +180,7 @@ func (o *FcPortResourceInner) SetConfiguredTopologyNumeric(v int64) {
 
 // GetPrimaryLoopId returns the PrimaryLoopId field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetPrimaryLoopId() string {
-	if o == nil || IsNil(o.PrimaryLoopId) {
+	if o == nil || isNil(o.PrimaryLoopId) {
 		var ret string
 		return ret
 	}
@@ -193,7 +190,7 @@ func (o *FcPortResourceInner) GetPrimaryLoopId() string {
 // GetPrimaryLoopIdOk returns a tuple with the PrimaryLoopId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetPrimaryLoopIdOk() (*string, bool) {
-	if o == nil || IsNil(o.PrimaryLoopId) {
+	if o == nil || isNil(o.PrimaryLoopId) {
 		return nil, false
 	}
 	return o.PrimaryLoopId, true
@@ -201,7 +198,7 @@ func (o *FcPortResourceInner) GetPrimaryLoopIdOk() (*string, bool) {
 
 // HasPrimaryLoopId returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasPrimaryLoopId() bool {
-	if o != nil && !IsNil(o.PrimaryLoopId) {
+	if o != nil && !isNil(o.PrimaryLoopId) {
 		return true
 	}
 
@@ -215,7 +212,7 @@ func (o *FcPortResourceInner) SetPrimaryLoopId(v string) {
 
 // GetSfpPartNumber returns the SfpPartNumber field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetSfpPartNumber() string {
-	if o == nil || IsNil(o.SfpPartNumber) {
+	if o == nil || isNil(o.SfpPartNumber) {
 		var ret string
 		return ret
 	}
@@ -225,7 +222,7 @@ func (o *FcPortResourceInner) GetSfpPartNumber() string {
 // GetSfpPartNumberOk returns a tuple with the SfpPartNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetSfpPartNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.SfpPartNumber) {
+	if o == nil || isNil(o.SfpPartNumber) {
 		return nil, false
 	}
 	return o.SfpPartNumber, true
@@ -233,7 +230,7 @@ func (o *FcPortResourceInner) GetSfpPartNumberOk() (*string, bool) {
 
 // HasSfpPartNumber returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasSfpPartNumber() bool {
-	if o != nil && !IsNil(o.SfpPartNumber) {
+	if o != nil && !isNil(o.SfpPartNumber) {
 		return true
 	}
 
@@ -247,7 +244,7 @@ func (o *FcPortResourceInner) SetSfpPartNumber(v string) {
 
 // GetSfpPresent returns the SfpPresent field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetSfpPresent() string {
-	if o == nil || IsNil(o.SfpPresent) {
+	if o == nil || isNil(o.SfpPresent) {
 		var ret string
 		return ret
 	}
@@ -257,7 +254,7 @@ func (o *FcPortResourceInner) GetSfpPresent() string {
 // GetSfpPresentOk returns a tuple with the SfpPresent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetSfpPresentOk() (*string, bool) {
-	if o == nil || IsNil(o.SfpPresent) {
+	if o == nil || isNil(o.SfpPresent) {
 		return nil, false
 	}
 	return o.SfpPresent, true
@@ -265,7 +262,7 @@ func (o *FcPortResourceInner) GetSfpPresentOk() (*string, bool) {
 
 // HasSfpPresent returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasSfpPresent() bool {
-	if o != nil && !IsNil(o.SfpPresent) {
+	if o != nil && !isNil(o.SfpPresent) {
 		return true
 	}
 
@@ -279,7 +276,7 @@ func (o *FcPortResourceInner) SetSfpPresent(v string) {
 
 // GetSfpPresentNumeric returns the SfpPresentNumeric field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetSfpPresentNumeric() int64 {
-	if o == nil || IsNil(o.SfpPresentNumeric) {
+	if o == nil || isNil(o.SfpPresentNumeric) {
 		var ret int64
 		return ret
 	}
@@ -289,7 +286,7 @@ func (o *FcPortResourceInner) GetSfpPresentNumeric() int64 {
 // GetSfpPresentNumericOk returns a tuple with the SfpPresentNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetSfpPresentNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SfpPresentNumeric) {
+	if o == nil || isNil(o.SfpPresentNumeric) {
 		return nil, false
 	}
 	return o.SfpPresentNumeric, true
@@ -297,7 +294,7 @@ func (o *FcPortResourceInner) GetSfpPresentNumericOk() (*int64, bool) {
 
 // HasSfpPresentNumeric returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasSfpPresentNumeric() bool {
-	if o != nil && !IsNil(o.SfpPresentNumeric) {
+	if o != nil && !isNil(o.SfpPresentNumeric) {
 		return true
 	}
 
@@ -311,7 +308,7 @@ func (o *FcPortResourceInner) SetSfpPresentNumeric(v int64) {
 
 // GetSfpRevision returns the SfpRevision field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetSfpRevision() string {
-	if o == nil || IsNil(o.SfpRevision) {
+	if o == nil || isNil(o.SfpRevision) {
 		var ret string
 		return ret
 	}
@@ -321,7 +318,7 @@ func (o *FcPortResourceInner) GetSfpRevision() string {
 // GetSfpRevisionOk returns a tuple with the SfpRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetSfpRevisionOk() (*string, bool) {
-	if o == nil || IsNil(o.SfpRevision) {
+	if o == nil || isNil(o.SfpRevision) {
 		return nil, false
 	}
 	return o.SfpRevision, true
@@ -329,7 +326,7 @@ func (o *FcPortResourceInner) GetSfpRevisionOk() (*string, bool) {
 
 // HasSfpRevision returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasSfpRevision() bool {
-	if o != nil && !IsNil(o.SfpRevision) {
+	if o != nil && !isNil(o.SfpRevision) {
 		return true
 	}
 
@@ -343,7 +340,7 @@ func (o *FcPortResourceInner) SetSfpRevision(v string) {
 
 // GetSfpStatus returns the SfpStatus field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetSfpStatus() string {
-	if o == nil || IsNil(o.SfpStatus) {
+	if o == nil || isNil(o.SfpStatus) {
 		var ret string
 		return ret
 	}
@@ -353,7 +350,7 @@ func (o *FcPortResourceInner) GetSfpStatus() string {
 // GetSfpStatusOk returns a tuple with the SfpStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetSfpStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.SfpStatus) {
+	if o == nil || isNil(o.SfpStatus) {
 		return nil, false
 	}
 	return o.SfpStatus, true
@@ -361,7 +358,7 @@ func (o *FcPortResourceInner) GetSfpStatusOk() (*string, bool) {
 
 // HasSfpStatus returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasSfpStatus() bool {
-	if o != nil && !IsNil(o.SfpStatus) {
+	if o != nil && !isNil(o.SfpStatus) {
 		return true
 	}
 
@@ -375,7 +372,7 @@ func (o *FcPortResourceInner) SetSfpStatus(v string) {
 
 // GetSfpStatusNumeric returns the SfpStatusNumeric field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetSfpStatusNumeric() int64 {
-	if o == nil || IsNil(o.SfpStatusNumeric) {
+	if o == nil || isNil(o.SfpStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -385,7 +382,7 @@ func (o *FcPortResourceInner) GetSfpStatusNumeric() int64 {
 // GetSfpStatusNumericOk returns a tuple with the SfpStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetSfpStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SfpStatusNumeric) {
+	if o == nil || isNil(o.SfpStatusNumeric) {
 		return nil, false
 	}
 	return o.SfpStatusNumeric, true
@@ -393,7 +390,7 @@ func (o *FcPortResourceInner) GetSfpStatusNumericOk() (*int64, bool) {
 
 // HasSfpStatusNumeric returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasSfpStatusNumeric() bool {
-	if o != nil && !IsNil(o.SfpStatusNumeric) {
+	if o != nil && !isNil(o.SfpStatusNumeric) {
 		return true
 	}
 
@@ -407,7 +404,7 @@ func (o *FcPortResourceInner) SetSfpStatusNumeric(v int64) {
 
 // GetSfpSupportedSpeeds returns the SfpSupportedSpeeds field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetSfpSupportedSpeeds() string {
-	if o == nil || IsNil(o.SfpSupportedSpeeds) {
+	if o == nil || isNil(o.SfpSupportedSpeeds) {
 		var ret string
 		return ret
 	}
@@ -417,7 +414,7 @@ func (o *FcPortResourceInner) GetSfpSupportedSpeeds() string {
 // GetSfpSupportedSpeedsOk returns a tuple with the SfpSupportedSpeeds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetSfpSupportedSpeedsOk() (*string, bool) {
-	if o == nil || IsNil(o.SfpSupportedSpeeds) {
+	if o == nil || isNil(o.SfpSupportedSpeeds) {
 		return nil, false
 	}
 	return o.SfpSupportedSpeeds, true
@@ -425,7 +422,7 @@ func (o *FcPortResourceInner) GetSfpSupportedSpeedsOk() (*string, bool) {
 
 // HasSfpSupportedSpeeds returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasSfpSupportedSpeeds() bool {
-	if o != nil && !IsNil(o.SfpSupportedSpeeds) {
+	if o != nil && !isNil(o.SfpSupportedSpeeds) {
 		return true
 	}
 
@@ -439,7 +436,7 @@ func (o *FcPortResourceInner) SetSfpSupportedSpeeds(v string) {
 
 // GetSfpSupportedSpeedsNumeric returns the SfpSupportedSpeedsNumeric field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetSfpSupportedSpeedsNumeric() int64 {
-	if o == nil || IsNil(o.SfpSupportedSpeedsNumeric) {
+	if o == nil || isNil(o.SfpSupportedSpeedsNumeric) {
 		var ret int64
 		return ret
 	}
@@ -449,7 +446,7 @@ func (o *FcPortResourceInner) GetSfpSupportedSpeedsNumeric() int64 {
 // GetSfpSupportedSpeedsNumericOk returns a tuple with the SfpSupportedSpeedsNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetSfpSupportedSpeedsNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SfpSupportedSpeedsNumeric) {
+	if o == nil || isNil(o.SfpSupportedSpeedsNumeric) {
 		return nil, false
 	}
 	return o.SfpSupportedSpeedsNumeric, true
@@ -457,7 +454,7 @@ func (o *FcPortResourceInner) GetSfpSupportedSpeedsNumericOk() (*int64, bool) {
 
 // HasSfpSupportedSpeedsNumeric returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasSfpSupportedSpeedsNumeric() bool {
-	if o != nil && !IsNil(o.SfpSupportedSpeedsNumeric) {
+	if o != nil && !isNil(o.SfpSupportedSpeedsNumeric) {
 		return true
 	}
 
@@ -471,7 +468,7 @@ func (o *FcPortResourceInner) SetSfpSupportedSpeedsNumeric(v int64) {
 
 // GetSfpVendor returns the SfpVendor field value if set, zero value otherwise.
 func (o *FcPortResourceInner) GetSfpVendor() string {
-	if o == nil || IsNil(o.SfpVendor) {
+	if o == nil || isNil(o.SfpVendor) {
 		var ret string
 		return ret
 	}
@@ -481,7 +478,7 @@ func (o *FcPortResourceInner) GetSfpVendor() string {
 // GetSfpVendorOk returns a tuple with the SfpVendor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FcPortResourceInner) GetSfpVendorOk() (*string, bool) {
-	if o == nil || IsNil(o.SfpVendor) {
+	if o == nil || isNil(o.SfpVendor) {
 		return nil, false
 	}
 	return o.SfpVendor, true
@@ -489,7 +486,7 @@ func (o *FcPortResourceInner) GetSfpVendorOk() (*string, bool) {
 
 // HasSfpVendor returns a boolean if a field has been set.
 func (o *FcPortResourceInner) HasSfpVendor() bool {
-	if o != nil && !IsNil(o.SfpVendor) {
+	if o != nil && !isNil(o.SfpVendor) {
 		return true
 	}
 
@@ -502,58 +499,50 @@ func (o *FcPortResourceInner) SetSfpVendor(v string) {
 }
 
 func (o FcPortResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o FcPortResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.ConfiguredTopology) {
+	if !isNil(o.ConfiguredTopology) {
 		toSerialize["configured-topology"] = o.ConfiguredTopology
 	}
-	if !IsNil(o.ConfiguredTopologyNumeric) {
+	if !isNil(o.ConfiguredTopologyNumeric) {
 		toSerialize["configured-topology-numeric"] = o.ConfiguredTopologyNumeric
 	}
-	if !IsNil(o.PrimaryLoopId) {
+	if !isNil(o.PrimaryLoopId) {
 		toSerialize["primary-loop-id"] = o.PrimaryLoopId
 	}
-	if !IsNil(o.SfpPartNumber) {
+	if !isNil(o.SfpPartNumber) {
 		toSerialize["sfp-part-number"] = o.SfpPartNumber
 	}
-	if !IsNil(o.SfpPresent) {
+	if !isNil(o.SfpPresent) {
 		toSerialize["sfp-present"] = o.SfpPresent
 	}
-	if !IsNil(o.SfpPresentNumeric) {
+	if !isNil(o.SfpPresentNumeric) {
 		toSerialize["sfp-present-numeric"] = o.SfpPresentNumeric
 	}
-	if !IsNil(o.SfpRevision) {
+	if !isNil(o.SfpRevision) {
 		toSerialize["sfp-revision"] = o.SfpRevision
 	}
-	if !IsNil(o.SfpStatus) {
+	if !isNil(o.SfpStatus) {
 		toSerialize["sfp-status"] = o.SfpStatus
 	}
-	if !IsNil(o.SfpStatusNumeric) {
+	if !isNil(o.SfpStatusNumeric) {
 		toSerialize["sfp-status-numeric"] = o.SfpStatusNumeric
 	}
-	if !IsNil(o.SfpSupportedSpeeds) {
+	if !isNil(o.SfpSupportedSpeeds) {
 		toSerialize["sfp-supported-speeds"] = o.SfpSupportedSpeeds
 	}
-	if !IsNil(o.SfpSupportedSpeedsNumeric) {
+	if !isNil(o.SfpSupportedSpeedsNumeric) {
 		toSerialize["sfp-supported-speeds-numeric"] = o.SfpSupportedSpeedsNumeric
 	}
-	if !IsNil(o.SfpVendor) {
+	if !isNil(o.SfpVendor) {
 		toSerialize["sfp-vendor"] = o.SfpVendor
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableFcPortResourceInner struct {

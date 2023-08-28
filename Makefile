@@ -4,9 +4,10 @@
 
 VALIDATOR_APP := validator
 GENERATOR_APP := generator
-OPENAPI_YAML := api/mc-openapi.yaml
+OPENAPI_YAML := /local/api/mc-openapi.yaml
 GOFMT_OPTS := gofmt -w .
 REGRESSION_APP := api-regression
+GENERATE_USER := $(shell id -u ${USER}):$(shell id -g ${USER})
 
 help:
 	@echo ""
@@ -49,12 +50,13 @@ rung: generator
 
 validate:
 	@echo "Validating $(OPENAPI_YAML) using openapi-generator-cli"
-	openapi-generator-cli version
-	openapi-generator-cli validate -i $(OPENAPI_YAML)
+	docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli:v6.2.1 version
+	docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli:v6.2.1 validate -i $(OPENAPI_YAML)
 
 generate:
 	@echo "Generating $(OPENAPI_YAML) using openapi-generator-cli"
-	openapi-generator-cli generate -i $(OPENAPI_YAML) -g go -o pkg/client --package-name client --ignore-file-override .openapi-generator-ignore
+	rm -rf pkg/client
+	docker run -u $(GENERATE_USER) --rm -v ${PWD}:/local openapitools/openapi-generator-cli:v6.2.1 generate -i $(OPENAPI_YAML) -g go -o /local/pkg/client --package-name client --ignore-file-override=/local/.openapi-generator-ignore
 	@echo "Format files after generation to conform to project standard"
 	$(GOFMT_OPTS)
 

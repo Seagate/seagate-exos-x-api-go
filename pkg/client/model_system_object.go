@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the SystemObject type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &SystemObject{}
-
 // SystemObject struct for SystemObject
 type SystemObject struct {
 	Status []StatusResourceInner `json:"status,omitempty"`
@@ -42,7 +39,7 @@ func NewSystemObjectWithDefaults() *SystemObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *SystemObject) GetStatus() []StatusResourceInner {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -52,7 +49,7 @@ func (o *SystemObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -60,7 +57,7 @@ func (o *SystemObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *SystemObject) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -74,7 +71,7 @@ func (o *SystemObject) SetStatus(v []StatusResourceInner) {
 
 // GetSystem returns the System field value if set, zero value otherwise.
 func (o *SystemObject) GetSystem() []SystemResourceInner {
-	if o == nil || IsNil(o.System) {
+	if o == nil || isNil(o.System) {
 		var ret []SystemResourceInner
 		return ret
 	}
@@ -84,7 +81,7 @@ func (o *SystemObject) GetSystem() []SystemResourceInner {
 // GetSystemOk returns a tuple with the System field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SystemObject) GetSystemOk() ([]SystemResourceInner, bool) {
-	if o == nil || IsNil(o.System) {
+	if o == nil || isNil(o.System) {
 		return nil, false
 	}
 	return o.System, true
@@ -92,7 +89,7 @@ func (o *SystemObject) GetSystemOk() ([]SystemResourceInner, bool) {
 
 // HasSystem returns a boolean if a field has been set.
 func (o *SystemObject) HasSystem() bool {
-	if o != nil && !IsNil(o.System) {
+	if o != nil && !isNil(o.System) {
 		return true
 	}
 
@@ -105,22 +102,14 @@ func (o *SystemObject) SetSystem(v []SystemResourceInner) {
 }
 
 func (o SystemObject) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o SystemObject) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.System) {
+	if !isNil(o.System) {
 		toSerialize["system"] = o.System
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableSystemObject struct {

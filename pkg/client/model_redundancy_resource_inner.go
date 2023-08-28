@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the RedundancyResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &RedundancyResourceInner{}
-
 // RedundancyResourceInner struct for RedundancyResourceInner
 type RedundancyResourceInner struct {
 	ObjectName               *string `json:"object-name,omitempty"`
@@ -68,7 +65,7 @@ func NewRedundancyResourceInnerWithDefaults() *RedundancyResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -78,7 +75,7 @@ func (o *RedundancyResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -86,7 +83,7 @@ func (o *RedundancyResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -100,7 +97,7 @@ func (o *RedundancyResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -110,7 +107,7 @@ func (o *RedundancyResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -118,7 +115,7 @@ func (o *RedundancyResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -132,7 +129,7 @@ func (o *RedundancyResourceInner) SetMeta(v string) {
 
 // GetControllerASerialNumber returns the ControllerASerialNumber field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetControllerASerialNumber() string {
-	if o == nil || IsNil(o.ControllerASerialNumber) {
+	if o == nil || isNil(o.ControllerASerialNumber) {
 		var ret string
 		return ret
 	}
@@ -142,7 +139,7 @@ func (o *RedundancyResourceInner) GetControllerASerialNumber() string {
 // GetControllerASerialNumberOk returns a tuple with the ControllerASerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetControllerASerialNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.ControllerASerialNumber) {
+	if o == nil || isNil(o.ControllerASerialNumber) {
 		return nil, false
 	}
 	return o.ControllerASerialNumber, true
@@ -150,7 +147,7 @@ func (o *RedundancyResourceInner) GetControllerASerialNumberOk() (*string, bool)
 
 // HasControllerASerialNumber returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasControllerASerialNumber() bool {
-	if o != nil && !IsNil(o.ControllerASerialNumber) {
+	if o != nil && !isNil(o.ControllerASerialNumber) {
 		return true
 	}
 
@@ -164,7 +161,7 @@ func (o *RedundancyResourceInner) SetControllerASerialNumber(v string) {
 
 // GetControllerAStatus returns the ControllerAStatus field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetControllerAStatus() string {
-	if o == nil || IsNil(o.ControllerAStatus) {
+	if o == nil || isNil(o.ControllerAStatus) {
 		var ret string
 		return ret
 	}
@@ -174,7 +171,7 @@ func (o *RedundancyResourceInner) GetControllerAStatus() string {
 // GetControllerAStatusOk returns a tuple with the ControllerAStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetControllerAStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.ControllerAStatus) {
+	if o == nil || isNil(o.ControllerAStatus) {
 		return nil, false
 	}
 	return o.ControllerAStatus, true
@@ -182,7 +179,7 @@ func (o *RedundancyResourceInner) GetControllerAStatusOk() (*string, bool) {
 
 // HasControllerAStatus returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasControllerAStatus() bool {
-	if o != nil && !IsNil(o.ControllerAStatus) {
+	if o != nil && !isNil(o.ControllerAStatus) {
 		return true
 	}
 
@@ -196,7 +193,7 @@ func (o *RedundancyResourceInner) SetControllerAStatus(v string) {
 
 // GetControllerAStatusNumeric returns the ControllerAStatusNumeric field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetControllerAStatusNumeric() int64 {
-	if o == nil || IsNil(o.ControllerAStatusNumeric) {
+	if o == nil || isNil(o.ControllerAStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -206,7 +203,7 @@ func (o *RedundancyResourceInner) GetControllerAStatusNumeric() int64 {
 // GetControllerAStatusNumericOk returns a tuple with the ControllerAStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetControllerAStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ControllerAStatusNumeric) {
+	if o == nil || isNil(o.ControllerAStatusNumeric) {
 		return nil, false
 	}
 	return o.ControllerAStatusNumeric, true
@@ -214,7 +211,7 @@ func (o *RedundancyResourceInner) GetControllerAStatusNumericOk() (*int64, bool)
 
 // HasControllerAStatusNumeric returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasControllerAStatusNumeric() bool {
-	if o != nil && !IsNil(o.ControllerAStatusNumeric) {
+	if o != nil && !isNil(o.ControllerAStatusNumeric) {
 		return true
 	}
 
@@ -228,7 +225,7 @@ func (o *RedundancyResourceInner) SetControllerAStatusNumeric(v int64) {
 
 // GetControllerBSerialNumber returns the ControllerBSerialNumber field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetControllerBSerialNumber() string {
-	if o == nil || IsNil(o.ControllerBSerialNumber) {
+	if o == nil || isNil(o.ControllerBSerialNumber) {
 		var ret string
 		return ret
 	}
@@ -238,7 +235,7 @@ func (o *RedundancyResourceInner) GetControllerBSerialNumber() string {
 // GetControllerBSerialNumberOk returns a tuple with the ControllerBSerialNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetControllerBSerialNumberOk() (*string, bool) {
-	if o == nil || IsNil(o.ControllerBSerialNumber) {
+	if o == nil || isNil(o.ControllerBSerialNumber) {
 		return nil, false
 	}
 	return o.ControllerBSerialNumber, true
@@ -246,7 +243,7 @@ func (o *RedundancyResourceInner) GetControllerBSerialNumberOk() (*string, bool)
 
 // HasControllerBSerialNumber returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasControllerBSerialNumber() bool {
-	if o != nil && !IsNil(o.ControllerBSerialNumber) {
+	if o != nil && !isNil(o.ControllerBSerialNumber) {
 		return true
 	}
 
@@ -260,7 +257,7 @@ func (o *RedundancyResourceInner) SetControllerBSerialNumber(v string) {
 
 // GetControllerBStatus returns the ControllerBStatus field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetControllerBStatus() string {
-	if o == nil || IsNil(o.ControllerBStatus) {
+	if o == nil || isNil(o.ControllerBStatus) {
 		var ret string
 		return ret
 	}
@@ -270,7 +267,7 @@ func (o *RedundancyResourceInner) GetControllerBStatus() string {
 // GetControllerBStatusOk returns a tuple with the ControllerBStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetControllerBStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.ControllerBStatus) {
+	if o == nil || isNil(o.ControllerBStatus) {
 		return nil, false
 	}
 	return o.ControllerBStatus, true
@@ -278,7 +275,7 @@ func (o *RedundancyResourceInner) GetControllerBStatusOk() (*string, bool) {
 
 // HasControllerBStatus returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasControllerBStatus() bool {
-	if o != nil && !IsNil(o.ControllerBStatus) {
+	if o != nil && !isNil(o.ControllerBStatus) {
 		return true
 	}
 
@@ -292,7 +289,7 @@ func (o *RedundancyResourceInner) SetControllerBStatus(v string) {
 
 // GetControllerBStatusNumeric returns the ControllerBStatusNumeric field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetControllerBStatusNumeric() int64 {
-	if o == nil || IsNil(o.ControllerBStatusNumeric) {
+	if o == nil || isNil(o.ControllerBStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -302,7 +299,7 @@ func (o *RedundancyResourceInner) GetControllerBStatusNumeric() int64 {
 // GetControllerBStatusNumericOk returns a tuple with the ControllerBStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetControllerBStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ControllerBStatusNumeric) {
+	if o == nil || isNil(o.ControllerBStatusNumeric) {
 		return nil, false
 	}
 	return o.ControllerBStatusNumeric, true
@@ -310,7 +307,7 @@ func (o *RedundancyResourceInner) GetControllerBStatusNumericOk() (*int64, bool)
 
 // HasControllerBStatusNumeric returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasControllerBStatusNumeric() bool {
-	if o != nil && !IsNil(o.ControllerBStatusNumeric) {
+	if o != nil && !isNil(o.ControllerBStatusNumeric) {
 		return true
 	}
 
@@ -324,7 +321,7 @@ func (o *RedundancyResourceInner) SetControllerBStatusNumeric(v int64) {
 
 // GetLocalReady returns the LocalReady field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetLocalReady() string {
-	if o == nil || IsNil(o.LocalReady) {
+	if o == nil || isNil(o.LocalReady) {
 		var ret string
 		return ret
 	}
@@ -334,7 +331,7 @@ func (o *RedundancyResourceInner) GetLocalReady() string {
 // GetLocalReadyOk returns a tuple with the LocalReady field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetLocalReadyOk() (*string, bool) {
-	if o == nil || IsNil(o.LocalReady) {
+	if o == nil || isNil(o.LocalReady) {
 		return nil, false
 	}
 	return o.LocalReady, true
@@ -342,7 +339,7 @@ func (o *RedundancyResourceInner) GetLocalReadyOk() (*string, bool) {
 
 // HasLocalReady returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasLocalReady() bool {
-	if o != nil && !IsNil(o.LocalReady) {
+	if o != nil && !isNil(o.LocalReady) {
 		return true
 	}
 
@@ -356,7 +353,7 @@ func (o *RedundancyResourceInner) SetLocalReady(v string) {
 
 // GetLocalReadyNumeric returns the LocalReadyNumeric field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetLocalReadyNumeric() int64 {
-	if o == nil || IsNil(o.LocalReadyNumeric) {
+	if o == nil || isNil(o.LocalReadyNumeric) {
 		var ret int64
 		return ret
 	}
@@ -366,7 +363,7 @@ func (o *RedundancyResourceInner) GetLocalReadyNumeric() int64 {
 // GetLocalReadyNumericOk returns a tuple with the LocalReadyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetLocalReadyNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.LocalReadyNumeric) {
+	if o == nil || isNil(o.LocalReadyNumeric) {
 		return nil, false
 	}
 	return o.LocalReadyNumeric, true
@@ -374,7 +371,7 @@ func (o *RedundancyResourceInner) GetLocalReadyNumericOk() (*int64, bool) {
 
 // HasLocalReadyNumeric returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasLocalReadyNumeric() bool {
-	if o != nil && !IsNil(o.LocalReadyNumeric) {
+	if o != nil && !isNil(o.LocalReadyNumeric) {
 		return true
 	}
 
@@ -388,7 +385,7 @@ func (o *RedundancyResourceInner) SetLocalReadyNumeric(v int64) {
 
 // GetLocalReason returns the LocalReason field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetLocalReason() string {
-	if o == nil || IsNil(o.LocalReason) {
+	if o == nil || isNil(o.LocalReason) {
 		var ret string
 		return ret
 	}
@@ -398,7 +395,7 @@ func (o *RedundancyResourceInner) GetLocalReason() string {
 // GetLocalReasonOk returns a tuple with the LocalReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetLocalReasonOk() (*string, bool) {
-	if o == nil || IsNil(o.LocalReason) {
+	if o == nil || isNil(o.LocalReason) {
 		return nil, false
 	}
 	return o.LocalReason, true
@@ -406,7 +403,7 @@ func (o *RedundancyResourceInner) GetLocalReasonOk() (*string, bool) {
 
 // HasLocalReason returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasLocalReason() bool {
-	if o != nil && !IsNil(o.LocalReason) {
+	if o != nil && !isNil(o.LocalReason) {
 		return true
 	}
 
@@ -420,7 +417,7 @@ func (o *RedundancyResourceInner) SetLocalReason(v string) {
 
 // GetOtherMCStatus returns the OtherMCStatus field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetOtherMCStatus() string {
-	if o == nil || IsNil(o.OtherMCStatus) {
+	if o == nil || isNil(o.OtherMCStatus) {
 		var ret string
 		return ret
 	}
@@ -430,7 +427,7 @@ func (o *RedundancyResourceInner) GetOtherMCStatus() string {
 // GetOtherMCStatusOk returns a tuple with the OtherMCStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetOtherMCStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.OtherMCStatus) {
+	if o == nil || isNil(o.OtherMCStatus) {
 		return nil, false
 	}
 	return o.OtherMCStatus, true
@@ -438,7 +435,7 @@ func (o *RedundancyResourceInner) GetOtherMCStatusOk() (*string, bool) {
 
 // HasOtherMCStatus returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasOtherMCStatus() bool {
-	if o != nil && !IsNil(o.OtherMCStatus) {
+	if o != nil && !isNil(o.OtherMCStatus) {
 		return true
 	}
 
@@ -452,7 +449,7 @@ func (o *RedundancyResourceInner) SetOtherMCStatus(v string) {
 
 // GetOtherMCStatusNumeric returns the OtherMCStatusNumeric field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetOtherMCStatusNumeric() int64 {
-	if o == nil || IsNil(o.OtherMCStatusNumeric) {
+	if o == nil || isNil(o.OtherMCStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -462,7 +459,7 @@ func (o *RedundancyResourceInner) GetOtherMCStatusNumeric() int64 {
 // GetOtherMCStatusNumericOk returns a tuple with the OtherMCStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetOtherMCStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.OtherMCStatusNumeric) {
+	if o == nil || isNil(o.OtherMCStatusNumeric) {
 		return nil, false
 	}
 	return o.OtherMCStatusNumeric, true
@@ -470,7 +467,7 @@ func (o *RedundancyResourceInner) GetOtherMCStatusNumericOk() (*int64, bool) {
 
 // HasOtherMCStatusNumeric returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasOtherMCStatusNumeric() bool {
-	if o != nil && !IsNil(o.OtherMCStatusNumeric) {
+	if o != nil && !isNil(o.OtherMCStatusNumeric) {
 		return true
 	}
 
@@ -484,7 +481,7 @@ func (o *RedundancyResourceInner) SetOtherMCStatusNumeric(v int64) {
 
 // GetOtherReady returns the OtherReady field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetOtherReady() string {
-	if o == nil || IsNil(o.OtherReady) {
+	if o == nil || isNil(o.OtherReady) {
 		var ret string
 		return ret
 	}
@@ -494,7 +491,7 @@ func (o *RedundancyResourceInner) GetOtherReady() string {
 // GetOtherReadyOk returns a tuple with the OtherReady field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetOtherReadyOk() (*string, bool) {
-	if o == nil || IsNil(o.OtherReady) {
+	if o == nil || isNil(o.OtherReady) {
 		return nil, false
 	}
 	return o.OtherReady, true
@@ -502,7 +499,7 @@ func (o *RedundancyResourceInner) GetOtherReadyOk() (*string, bool) {
 
 // HasOtherReady returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasOtherReady() bool {
-	if o != nil && !IsNil(o.OtherReady) {
+	if o != nil && !isNil(o.OtherReady) {
 		return true
 	}
 
@@ -516,7 +513,7 @@ func (o *RedundancyResourceInner) SetOtherReady(v string) {
 
 // GetOtherReadyNumeric returns the OtherReadyNumeric field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetOtherReadyNumeric() int64 {
-	if o == nil || IsNil(o.OtherReadyNumeric) {
+	if o == nil || isNil(o.OtherReadyNumeric) {
 		var ret int64
 		return ret
 	}
@@ -526,7 +523,7 @@ func (o *RedundancyResourceInner) GetOtherReadyNumeric() int64 {
 // GetOtherReadyNumericOk returns a tuple with the OtherReadyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetOtherReadyNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.OtherReadyNumeric) {
+	if o == nil || isNil(o.OtherReadyNumeric) {
 		return nil, false
 	}
 	return o.OtherReadyNumeric, true
@@ -534,7 +531,7 @@ func (o *RedundancyResourceInner) GetOtherReadyNumericOk() (*int64, bool) {
 
 // HasOtherReadyNumeric returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasOtherReadyNumeric() bool {
-	if o != nil && !IsNil(o.OtherReadyNumeric) {
+	if o != nil && !isNil(o.OtherReadyNumeric) {
 		return true
 	}
 
@@ -548,7 +545,7 @@ func (o *RedundancyResourceInner) SetOtherReadyNumeric(v int64) {
 
 // GetOtherReason returns the OtherReason field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetOtherReason() string {
-	if o == nil || IsNil(o.OtherReason) {
+	if o == nil || isNil(o.OtherReason) {
 		var ret string
 		return ret
 	}
@@ -558,7 +555,7 @@ func (o *RedundancyResourceInner) GetOtherReason() string {
 // GetOtherReasonOk returns a tuple with the OtherReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetOtherReasonOk() (*string, bool) {
-	if o == nil || IsNil(o.OtherReason) {
+	if o == nil || isNil(o.OtherReason) {
 		return nil, false
 	}
 	return o.OtherReason, true
@@ -566,7 +563,7 @@ func (o *RedundancyResourceInner) GetOtherReasonOk() (*string, bool) {
 
 // HasOtherReason returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasOtherReason() bool {
-	if o != nil && !IsNil(o.OtherReason) {
+	if o != nil && !isNil(o.OtherReason) {
 		return true
 	}
 
@@ -580,7 +577,7 @@ func (o *RedundancyResourceInner) SetOtherReason(v string) {
 
 // GetRedundancyMode returns the RedundancyMode field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetRedundancyMode() string {
-	if o == nil || IsNil(o.RedundancyMode) {
+	if o == nil || isNil(o.RedundancyMode) {
 		var ret string
 		return ret
 	}
@@ -590,7 +587,7 @@ func (o *RedundancyResourceInner) GetRedundancyMode() string {
 // GetRedundancyModeOk returns a tuple with the RedundancyMode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetRedundancyModeOk() (*string, bool) {
-	if o == nil || IsNil(o.RedundancyMode) {
+	if o == nil || isNil(o.RedundancyMode) {
 		return nil, false
 	}
 	return o.RedundancyMode, true
@@ -598,7 +595,7 @@ func (o *RedundancyResourceInner) GetRedundancyModeOk() (*string, bool) {
 
 // HasRedundancyMode returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasRedundancyMode() bool {
-	if o != nil && !IsNil(o.RedundancyMode) {
+	if o != nil && !isNil(o.RedundancyMode) {
 		return true
 	}
 
@@ -612,7 +609,7 @@ func (o *RedundancyResourceInner) SetRedundancyMode(v string) {
 
 // GetRedundancyModeNumeric returns the RedundancyModeNumeric field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetRedundancyModeNumeric() int64 {
-	if o == nil || IsNil(o.RedundancyModeNumeric) {
+	if o == nil || isNil(o.RedundancyModeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -622,7 +619,7 @@ func (o *RedundancyResourceInner) GetRedundancyModeNumeric() int64 {
 // GetRedundancyModeNumericOk returns a tuple with the RedundancyModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetRedundancyModeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.RedundancyModeNumeric) {
+	if o == nil || isNil(o.RedundancyModeNumeric) {
 		return nil, false
 	}
 	return o.RedundancyModeNumeric, true
@@ -630,7 +627,7 @@ func (o *RedundancyResourceInner) GetRedundancyModeNumericOk() (*int64, bool) {
 
 // HasRedundancyModeNumeric returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasRedundancyModeNumeric() bool {
-	if o != nil && !IsNil(o.RedundancyModeNumeric) {
+	if o != nil && !isNil(o.RedundancyModeNumeric) {
 		return true
 	}
 
@@ -644,7 +641,7 @@ func (o *RedundancyResourceInner) SetRedundancyModeNumeric(v int64) {
 
 // GetRedundancyStatus returns the RedundancyStatus field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetRedundancyStatus() string {
-	if o == nil || IsNil(o.RedundancyStatus) {
+	if o == nil || isNil(o.RedundancyStatus) {
 		var ret string
 		return ret
 	}
@@ -654,7 +651,7 @@ func (o *RedundancyResourceInner) GetRedundancyStatus() string {
 // GetRedundancyStatusOk returns a tuple with the RedundancyStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetRedundancyStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.RedundancyStatus) {
+	if o == nil || isNil(o.RedundancyStatus) {
 		return nil, false
 	}
 	return o.RedundancyStatus, true
@@ -662,7 +659,7 @@ func (o *RedundancyResourceInner) GetRedundancyStatusOk() (*string, bool) {
 
 // HasRedundancyStatus returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasRedundancyStatus() bool {
-	if o != nil && !IsNil(o.RedundancyStatus) {
+	if o != nil && !isNil(o.RedundancyStatus) {
 		return true
 	}
 
@@ -676,7 +673,7 @@ func (o *RedundancyResourceInner) SetRedundancyStatus(v string) {
 
 // GetRedundancyStatusNumeric returns the RedundancyStatusNumeric field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetRedundancyStatusNumeric() int64 {
-	if o == nil || IsNil(o.RedundancyStatusNumeric) {
+	if o == nil || isNil(o.RedundancyStatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -686,7 +683,7 @@ func (o *RedundancyResourceInner) GetRedundancyStatusNumeric() int64 {
 // GetRedundancyStatusNumericOk returns a tuple with the RedundancyStatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetRedundancyStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.RedundancyStatusNumeric) {
+	if o == nil || isNil(o.RedundancyStatusNumeric) {
 		return nil, false
 	}
 	return o.RedundancyStatusNumeric, true
@@ -694,7 +691,7 @@ func (o *RedundancyResourceInner) GetRedundancyStatusNumericOk() (*int64, bool) 
 
 // HasRedundancyStatusNumeric returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasRedundancyStatusNumeric() bool {
-	if o != nil && !IsNil(o.RedundancyStatusNumeric) {
+	if o != nil && !isNil(o.RedundancyStatusNumeric) {
 		return true
 	}
 
@@ -708,7 +705,7 @@ func (o *RedundancyResourceInner) SetRedundancyStatusNumeric(v int64) {
 
 // GetSystemReady returns the SystemReady field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetSystemReady() string {
-	if o == nil || IsNil(o.SystemReady) {
+	if o == nil || isNil(o.SystemReady) {
 		var ret string
 		return ret
 	}
@@ -718,7 +715,7 @@ func (o *RedundancyResourceInner) GetSystemReady() string {
 // GetSystemReadyOk returns a tuple with the SystemReady field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetSystemReadyOk() (*string, bool) {
-	if o == nil || IsNil(o.SystemReady) {
+	if o == nil || isNil(o.SystemReady) {
 		return nil, false
 	}
 	return o.SystemReady, true
@@ -726,7 +723,7 @@ func (o *RedundancyResourceInner) GetSystemReadyOk() (*string, bool) {
 
 // HasSystemReady returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasSystemReady() bool {
-	if o != nil && !IsNil(o.SystemReady) {
+	if o != nil && !isNil(o.SystemReady) {
 		return true
 	}
 
@@ -740,7 +737,7 @@ func (o *RedundancyResourceInner) SetSystemReady(v string) {
 
 // GetSystemReadyNumeric returns the SystemReadyNumeric field value if set, zero value otherwise.
 func (o *RedundancyResourceInner) GetSystemReadyNumeric() int64 {
-	if o == nil || IsNil(o.SystemReadyNumeric) {
+	if o == nil || isNil(o.SystemReadyNumeric) {
 		var ret int64
 		return ret
 	}
@@ -750,7 +747,7 @@ func (o *RedundancyResourceInner) GetSystemReadyNumeric() int64 {
 // GetSystemReadyNumericOk returns a tuple with the SystemReadyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *RedundancyResourceInner) GetSystemReadyNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.SystemReadyNumeric) {
+	if o == nil || isNil(o.SystemReadyNumeric) {
 		return nil, false
 	}
 	return o.SystemReadyNumeric, true
@@ -758,7 +755,7 @@ func (o *RedundancyResourceInner) GetSystemReadyNumericOk() (*int64, bool) {
 
 // HasSystemReadyNumeric returns a boolean if a field has been set.
 func (o *RedundancyResourceInner) HasSystemReadyNumeric() bool {
-	if o != nil && !IsNil(o.SystemReadyNumeric) {
+	if o != nil && !isNil(o.SystemReadyNumeric) {
 		return true
 	}
 
@@ -771,82 +768,74 @@ func (o *RedundancyResourceInner) SetSystemReadyNumeric(v int64) {
 }
 
 func (o RedundancyResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o RedundancyResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.ControllerASerialNumber) {
+	if !isNil(o.ControllerASerialNumber) {
 		toSerialize["controller-a-serial-number"] = o.ControllerASerialNumber
 	}
-	if !IsNil(o.ControllerAStatus) {
+	if !isNil(o.ControllerAStatus) {
 		toSerialize["controller-a-status"] = o.ControllerAStatus
 	}
-	if !IsNil(o.ControllerAStatusNumeric) {
+	if !isNil(o.ControllerAStatusNumeric) {
 		toSerialize["controller-a-status-numeric"] = o.ControllerAStatusNumeric
 	}
-	if !IsNil(o.ControllerBSerialNumber) {
+	if !isNil(o.ControllerBSerialNumber) {
 		toSerialize["controller-b-serial-number"] = o.ControllerBSerialNumber
 	}
-	if !IsNil(o.ControllerBStatus) {
+	if !isNil(o.ControllerBStatus) {
 		toSerialize["controller-b-status"] = o.ControllerBStatus
 	}
-	if !IsNil(o.ControllerBStatusNumeric) {
+	if !isNil(o.ControllerBStatusNumeric) {
 		toSerialize["controller-b-status-numeric"] = o.ControllerBStatusNumeric
 	}
-	if !IsNil(o.LocalReady) {
+	if !isNil(o.LocalReady) {
 		toSerialize["local-ready"] = o.LocalReady
 	}
-	if !IsNil(o.LocalReadyNumeric) {
+	if !isNil(o.LocalReadyNumeric) {
 		toSerialize["local-ready-numeric"] = o.LocalReadyNumeric
 	}
-	if !IsNil(o.LocalReason) {
+	if !isNil(o.LocalReason) {
 		toSerialize["local-reason"] = o.LocalReason
 	}
-	if !IsNil(o.OtherMCStatus) {
+	if !isNil(o.OtherMCStatus) {
 		toSerialize["other-MC-status"] = o.OtherMCStatus
 	}
-	if !IsNil(o.OtherMCStatusNumeric) {
+	if !isNil(o.OtherMCStatusNumeric) {
 		toSerialize["other-MC-status-numeric"] = o.OtherMCStatusNumeric
 	}
-	if !IsNil(o.OtherReady) {
+	if !isNil(o.OtherReady) {
 		toSerialize["other-ready"] = o.OtherReady
 	}
-	if !IsNil(o.OtherReadyNumeric) {
+	if !isNil(o.OtherReadyNumeric) {
 		toSerialize["other-ready-numeric"] = o.OtherReadyNumeric
 	}
-	if !IsNil(o.OtherReason) {
+	if !isNil(o.OtherReason) {
 		toSerialize["other-reason"] = o.OtherReason
 	}
-	if !IsNil(o.RedundancyMode) {
+	if !isNil(o.RedundancyMode) {
 		toSerialize["redundancy-mode"] = o.RedundancyMode
 	}
-	if !IsNil(o.RedundancyModeNumeric) {
+	if !isNil(o.RedundancyModeNumeric) {
 		toSerialize["redundancy-mode-numeric"] = o.RedundancyModeNumeric
 	}
-	if !IsNil(o.RedundancyStatus) {
+	if !isNil(o.RedundancyStatus) {
 		toSerialize["redundancy-status"] = o.RedundancyStatus
 	}
-	if !IsNil(o.RedundancyStatusNumeric) {
+	if !isNil(o.RedundancyStatusNumeric) {
 		toSerialize["redundancy-status-numeric"] = o.RedundancyStatusNumeric
 	}
-	if !IsNil(o.SystemReady) {
+	if !isNil(o.SystemReady) {
 		toSerialize["system-ready"] = o.SystemReady
 	}
-	if !IsNil(o.SystemReadyNumeric) {
+	if !isNil(o.SystemReadyNumeric) {
 		toSerialize["system-ready-numeric"] = o.SystemReadyNumeric
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableRedundancyResourceInner struct {

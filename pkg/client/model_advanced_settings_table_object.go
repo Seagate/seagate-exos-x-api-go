@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the AdvancedSettingsTableObject type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &AdvancedSettingsTableObject{}
-
 // AdvancedSettingsTableObject struct for AdvancedSettingsTableObject
 type AdvancedSettingsTableObject struct {
 	Status                []StatusResourceInner                `json:"status,omitempty"`
@@ -42,7 +39,7 @@ func NewAdvancedSettingsTableObjectWithDefaults() *AdvancedSettingsTableObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableObject) GetStatus() []StatusResourceInner {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -52,7 +49,7 @@ func (o *AdvancedSettingsTableObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -60,7 +57,7 @@ func (o *AdvancedSettingsTableObject) GetStatusOk() ([]StatusResourceInner, bool
 
 // HasStatus returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableObject) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -74,7 +71,7 @@ func (o *AdvancedSettingsTableObject) SetStatus(v []StatusResourceInner) {
 
 // GetAdvancedSettingsTable returns the AdvancedSettingsTable field value if set, zero value otherwise.
 func (o *AdvancedSettingsTableObject) GetAdvancedSettingsTable() []AdvancedSettingsTableResourceInner {
-	if o == nil || IsNil(o.AdvancedSettingsTable) {
+	if o == nil || isNil(o.AdvancedSettingsTable) {
 		var ret []AdvancedSettingsTableResourceInner
 		return ret
 	}
@@ -84,7 +81,7 @@ func (o *AdvancedSettingsTableObject) GetAdvancedSettingsTable() []AdvancedSetti
 // GetAdvancedSettingsTableOk returns a tuple with the AdvancedSettingsTable field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AdvancedSettingsTableObject) GetAdvancedSettingsTableOk() ([]AdvancedSettingsTableResourceInner, bool) {
-	if o == nil || IsNil(o.AdvancedSettingsTable) {
+	if o == nil || isNil(o.AdvancedSettingsTable) {
 		return nil, false
 	}
 	return o.AdvancedSettingsTable, true
@@ -92,7 +89,7 @@ func (o *AdvancedSettingsTableObject) GetAdvancedSettingsTableOk() ([]AdvancedSe
 
 // HasAdvancedSettingsTable returns a boolean if a field has been set.
 func (o *AdvancedSettingsTableObject) HasAdvancedSettingsTable() bool {
-	if o != nil && !IsNil(o.AdvancedSettingsTable) {
+	if o != nil && !isNil(o.AdvancedSettingsTable) {
 		return true
 	}
 
@@ -105,22 +102,14 @@ func (o *AdvancedSettingsTableObject) SetAdvancedSettingsTable(v []AdvancedSetti
 }
 
 func (o AdvancedSettingsTableObject) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o AdvancedSettingsTableObject) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.AdvancedSettingsTable) {
+	if !isNil(o.AdvancedSettingsTable) {
 		toSerialize["advanced-settings-table"] = o.AdvancedSettingsTable
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableAdvancedSettingsTableObject struct {

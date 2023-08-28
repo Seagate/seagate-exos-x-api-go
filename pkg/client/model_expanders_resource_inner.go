@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the ExpandersResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &ExpandersResourceInner{}
-
 // ExpandersResourceInner struct for ExpandersResourceInner
 type ExpandersResourceInner struct {
 	ObjectName  *string `json:"object-name,omitempty"`
@@ -60,7 +57,7 @@ func NewExpandersResourceInnerWithDefaults() *ExpandersResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -70,7 +67,7 @@ func (o *ExpandersResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -78,7 +75,7 @@ func (o *ExpandersResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -92,7 +89,7 @@ func (o *ExpandersResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -102,7 +99,7 @@ func (o *ExpandersResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -110,7 +107,7 @@ func (o *ExpandersResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -124,7 +121,7 @@ func (o *ExpandersResourceInner) SetMeta(v string) {
 
 // GetDomId returns the DomId field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetDomId() int64 {
-	if o == nil || IsNil(o.DomId) {
+	if o == nil || isNil(o.DomId) {
 		var ret int64
 		return ret
 	}
@@ -134,7 +131,7 @@ func (o *ExpandersResourceInner) GetDomId() int64 {
 // GetDomIdOk returns a tuple with the DomId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetDomIdOk() (*int64, bool) {
-	if o == nil || IsNil(o.DomId) {
+	if o == nil || isNil(o.DomId) {
 		return nil, false
 	}
 	return o.DomId, true
@@ -142,7 +139,7 @@ func (o *ExpandersResourceInner) GetDomIdOk() (*int64, bool) {
 
 // HasDomId returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasDomId() bool {
-	if o != nil && !IsNil(o.DomId) {
+	if o != nil && !isNil(o.DomId) {
 		return true
 	}
 
@@ -156,7 +153,7 @@ func (o *ExpandersResourceInner) SetDomId(v int64) {
 
 // GetDrawerId returns the DrawerId field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetDrawerId() int64 {
-	if o == nil || IsNil(o.DrawerId) {
+	if o == nil || isNil(o.DrawerId) {
 		var ret int64
 		return ret
 	}
@@ -166,7 +163,7 @@ func (o *ExpandersResourceInner) GetDrawerId() int64 {
 // GetDrawerIdOk returns a tuple with the DrawerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetDrawerIdOk() (*int64, bool) {
-	if o == nil || IsNil(o.DrawerId) {
+	if o == nil || isNil(o.DrawerId) {
 		return nil, false
 	}
 	return o.DrawerId, true
@@ -174,7 +171,7 @@ func (o *ExpandersResourceInner) GetDrawerIdOk() (*int64, bool) {
 
 // HasDrawerId returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasDrawerId() bool {
-	if o != nil && !IsNil(o.DrawerId) {
+	if o != nil && !isNil(o.DrawerId) {
 		return true
 	}
 
@@ -188,7 +185,7 @@ func (o *ExpandersResourceInner) SetDrawerId(v int64) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetDurableId() string {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -198,7 +195,7 @@ func (o *ExpandersResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -206,7 +203,7 @@ func (o *ExpandersResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasDurableId() bool {
-	if o != nil && !IsNil(o.DurableId) {
+	if o != nil && !isNil(o.DurableId) {
 		return true
 	}
 
@@ -220,7 +217,7 @@ func (o *ExpandersResourceInner) SetDurableId(v string) {
 
 // GetEnclosureId returns the EnclosureId field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetEnclosureId() int64 {
-	if o == nil || IsNil(o.EnclosureId) {
+	if o == nil || isNil(o.EnclosureId) {
 		var ret int64
 		return ret
 	}
@@ -230,7 +227,7 @@ func (o *ExpandersResourceInner) GetEnclosureId() int64 {
 // GetEnclosureIdOk returns a tuple with the EnclosureId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetEnclosureIdOk() (*int64, bool) {
-	if o == nil || IsNil(o.EnclosureId) {
+	if o == nil || isNil(o.EnclosureId) {
 		return nil, false
 	}
 	return o.EnclosureId, true
@@ -238,7 +235,7 @@ func (o *ExpandersResourceInner) GetEnclosureIdOk() (*int64, bool) {
 
 // HasEnclosureId returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasEnclosureId() bool {
-	if o != nil && !IsNil(o.EnclosureId) {
+	if o != nil && !isNil(o.EnclosureId) {
 		return true
 	}
 
@@ -252,7 +249,7 @@ func (o *ExpandersResourceInner) SetEnclosureId(v int64) {
 
 // GetExtendedStatus returns the ExtendedStatus field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetExtendedStatus() string {
-	if o == nil || IsNil(o.ExtendedStatus) {
+	if o == nil || isNil(o.ExtendedStatus) {
 		var ret string
 		return ret
 	}
@@ -262,7 +259,7 @@ func (o *ExpandersResourceInner) GetExtendedStatus() string {
 // GetExtendedStatusOk returns a tuple with the ExtendedStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetExtendedStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.ExtendedStatus) {
+	if o == nil || isNil(o.ExtendedStatus) {
 		return nil, false
 	}
 	return o.ExtendedStatus, true
@@ -270,7 +267,7 @@ func (o *ExpandersResourceInner) GetExtendedStatusOk() (*string, bool) {
 
 // HasExtendedStatus returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasExtendedStatus() bool {
-	if o != nil && !IsNil(o.ExtendedStatus) {
+	if o != nil && !isNil(o.ExtendedStatus) {
 		return true
 	}
 
@@ -284,7 +281,7 @@ func (o *ExpandersResourceInner) SetExtendedStatus(v string) {
 
 // GetFwRevision returns the FwRevision field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetFwRevision() string {
-	if o == nil || IsNil(o.FwRevision) {
+	if o == nil || isNil(o.FwRevision) {
 		var ret string
 		return ret
 	}
@@ -294,7 +291,7 @@ func (o *ExpandersResourceInner) GetFwRevision() string {
 // GetFwRevisionOk returns a tuple with the FwRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetFwRevisionOk() (*string, bool) {
-	if o == nil || IsNil(o.FwRevision) {
+	if o == nil || isNil(o.FwRevision) {
 		return nil, false
 	}
 	return o.FwRevision, true
@@ -302,7 +299,7 @@ func (o *ExpandersResourceInner) GetFwRevisionOk() (*string, bool) {
 
 // HasFwRevision returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasFwRevision() bool {
-	if o != nil && !IsNil(o.FwRevision) {
+	if o != nil && !isNil(o.FwRevision) {
 		return true
 	}
 
@@ -316,7 +313,7 @@ func (o *ExpandersResourceInner) SetFwRevision(v string) {
 
 // GetHealth returns the Health field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetHealth() string {
-	if o == nil || IsNil(o.Health) {
+	if o == nil || isNil(o.Health) {
 		var ret string
 		return ret
 	}
@@ -326,7 +323,7 @@ func (o *ExpandersResourceInner) GetHealth() string {
 // GetHealthOk returns a tuple with the Health field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetHealthOk() (*string, bool) {
-	if o == nil || IsNil(o.Health) {
+	if o == nil || isNil(o.Health) {
 		return nil, false
 	}
 	return o.Health, true
@@ -334,7 +331,7 @@ func (o *ExpandersResourceInner) GetHealthOk() (*string, bool) {
 
 // HasHealth returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasHealth() bool {
-	if o != nil && !IsNil(o.Health) {
+	if o != nil && !isNil(o.Health) {
 		return true
 	}
 
@@ -348,7 +345,7 @@ func (o *ExpandersResourceInner) SetHealth(v string) {
 
 // GetHealthNumeric returns the HealthNumeric field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetHealthNumeric() int64 {
-	if o == nil || IsNil(o.HealthNumeric) {
+	if o == nil || isNil(o.HealthNumeric) {
 		var ret int64
 		return ret
 	}
@@ -358,7 +355,7 @@ func (o *ExpandersResourceInner) GetHealthNumeric() int64 {
 // GetHealthNumericOk returns a tuple with the HealthNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetHealthNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.HealthNumeric) {
+	if o == nil || isNil(o.HealthNumeric) {
 		return nil, false
 	}
 	return o.HealthNumeric, true
@@ -366,7 +363,7 @@ func (o *ExpandersResourceInner) GetHealthNumericOk() (*int64, bool) {
 
 // HasHealthNumeric returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasHealthNumeric() bool {
-	if o != nil && !IsNil(o.HealthNumeric) {
+	if o != nil && !isNil(o.HealthNumeric) {
 		return true
 	}
 
@@ -380,7 +377,7 @@ func (o *ExpandersResourceInner) SetHealthNumeric(v int64) {
 
 // GetHealthReason returns the HealthReason field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetHealthReason() string {
-	if o == nil || IsNil(o.HealthReason) {
+	if o == nil || isNil(o.HealthReason) {
 		var ret string
 		return ret
 	}
@@ -390,7 +387,7 @@ func (o *ExpandersResourceInner) GetHealthReason() string {
 // GetHealthReasonOk returns a tuple with the HealthReason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetHealthReasonOk() (*string, bool) {
-	if o == nil || IsNil(o.HealthReason) {
+	if o == nil || isNil(o.HealthReason) {
 		return nil, false
 	}
 	return o.HealthReason, true
@@ -398,7 +395,7 @@ func (o *ExpandersResourceInner) GetHealthReasonOk() (*string, bool) {
 
 // HasHealthReason returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasHealthReason() bool {
-	if o != nil && !IsNil(o.HealthReason) {
+	if o != nil && !isNil(o.HealthReason) {
 		return true
 	}
 
@@ -412,7 +409,7 @@ func (o *ExpandersResourceInner) SetHealthReason(v string) {
 
 // GetHealthRecommendation returns the HealthRecommendation field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetHealthRecommendation() string {
-	if o == nil || IsNil(o.HealthRecommendation) {
+	if o == nil || isNil(o.HealthRecommendation) {
 		var ret string
 		return ret
 	}
@@ -422,7 +419,7 @@ func (o *ExpandersResourceInner) GetHealthRecommendation() string {
 // GetHealthRecommendationOk returns a tuple with the HealthRecommendation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetHealthRecommendationOk() (*string, bool) {
-	if o == nil || IsNil(o.HealthRecommendation) {
+	if o == nil || isNil(o.HealthRecommendation) {
 		return nil, false
 	}
 	return o.HealthRecommendation, true
@@ -430,7 +427,7 @@ func (o *ExpandersResourceInner) GetHealthRecommendationOk() (*string, bool) {
 
 // HasHealthRecommendation returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasHealthRecommendation() bool {
-	if o != nil && !IsNil(o.HealthRecommendation) {
+	if o != nil && !isNil(o.HealthRecommendation) {
 		return true
 	}
 
@@ -444,7 +441,7 @@ func (o *ExpandersResourceInner) SetHealthRecommendation(v string) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetLocation() string {
-	if o == nil || IsNil(o.Location) {
+	if o == nil || isNil(o.Location) {
 		var ret string
 		return ret
 	}
@@ -454,7 +451,7 @@ func (o *ExpandersResourceInner) GetLocation() string {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetLocationOk() (*string, bool) {
-	if o == nil || IsNil(o.Location) {
+	if o == nil || isNil(o.Location) {
 		return nil, false
 	}
 	return o.Location, true
@@ -462,7 +459,7 @@ func (o *ExpandersResourceInner) GetLocationOk() (*string, bool) {
 
 // HasLocation returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasLocation() bool {
-	if o != nil && !IsNil(o.Location) {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -476,7 +473,7 @@ func (o *ExpandersResourceInner) SetLocation(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetName() string {
-	if o == nil || IsNil(o.Name) {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -486,7 +483,7 @@ func (o *ExpandersResourceInner) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetNameOk() (*string, bool) {
-	if o == nil || IsNil(o.Name) {
+	if o == nil || isNil(o.Name) {
 		return nil, false
 	}
 	return o.Name, true
@@ -494,7 +491,7 @@ func (o *ExpandersResourceInner) GetNameOk() (*string, bool) {
 
 // HasName returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasName() bool {
-	if o != nil && !IsNil(o.Name) {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -508,7 +505,7 @@ func (o *ExpandersResourceInner) SetName(v string) {
 
 // GetPathId returns the PathId field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetPathId() string {
-	if o == nil || IsNil(o.PathId) {
+	if o == nil || isNil(o.PathId) {
 		var ret string
 		return ret
 	}
@@ -518,7 +515,7 @@ func (o *ExpandersResourceInner) GetPathId() string {
 // GetPathIdOk returns a tuple with the PathId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetPathIdOk() (*string, bool) {
-	if o == nil || IsNil(o.PathId) {
+	if o == nil || isNil(o.PathId) {
 		return nil, false
 	}
 	return o.PathId, true
@@ -526,7 +523,7 @@ func (o *ExpandersResourceInner) GetPathIdOk() (*string, bool) {
 
 // HasPathId returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasPathId() bool {
-	if o != nil && !IsNil(o.PathId) {
+	if o != nil && !isNil(o.PathId) {
 		return true
 	}
 
@@ -540,7 +537,7 @@ func (o *ExpandersResourceInner) SetPathId(v string) {
 
 // GetPathIdNumeric returns the PathIdNumeric field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetPathIdNumeric() int64 {
-	if o == nil || IsNil(o.PathIdNumeric) {
+	if o == nil || isNil(o.PathIdNumeric) {
 		var ret int64
 		return ret
 	}
@@ -550,7 +547,7 @@ func (o *ExpandersResourceInner) GetPathIdNumeric() int64 {
 // GetPathIdNumericOk returns a tuple with the PathIdNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetPathIdNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PathIdNumeric) {
+	if o == nil || isNil(o.PathIdNumeric) {
 		return nil, false
 	}
 	return o.PathIdNumeric, true
@@ -558,7 +555,7 @@ func (o *ExpandersResourceInner) GetPathIdNumericOk() (*int64, bool) {
 
 // HasPathIdNumeric returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasPathIdNumeric() bool {
-	if o != nil && !IsNil(o.PathIdNumeric) {
+	if o != nil && !isNil(o.PathIdNumeric) {
 		return true
 	}
 
@@ -572,7 +569,7 @@ func (o *ExpandersResourceInner) SetPathIdNumeric(v int64) {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetStatus() string {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret string
 		return ret
 	}
@@ -582,7 +579,7 @@ func (o *ExpandersResourceInner) GetStatus() string {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetStatusOk() (*string, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -590,7 +587,7 @@ func (o *ExpandersResourceInner) GetStatusOk() (*string, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -604,7 +601,7 @@ func (o *ExpandersResourceInner) SetStatus(v string) {
 
 // GetStatusNumeric returns the StatusNumeric field value if set, zero value otherwise.
 func (o *ExpandersResourceInner) GetStatusNumeric() int64 {
-	if o == nil || IsNil(o.StatusNumeric) {
+	if o == nil || isNil(o.StatusNumeric) {
 		var ret int64
 		return ret
 	}
@@ -614,7 +611,7 @@ func (o *ExpandersResourceInner) GetStatusNumeric() int64 {
 // GetStatusNumericOk returns a tuple with the StatusNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExpandersResourceInner) GetStatusNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.StatusNumeric) {
+	if o == nil || isNil(o.StatusNumeric) {
 		return nil, false
 	}
 	return o.StatusNumeric, true
@@ -622,7 +619,7 @@ func (o *ExpandersResourceInner) GetStatusNumericOk() (*int64, bool) {
 
 // HasStatusNumeric returns a boolean if a field has been set.
 func (o *ExpandersResourceInner) HasStatusNumeric() bool {
-	if o != nil && !IsNil(o.StatusNumeric) {
+	if o != nil && !isNil(o.StatusNumeric) {
 		return true
 	}
 
@@ -635,70 +632,62 @@ func (o *ExpandersResourceInner) SetStatusNumeric(v int64) {
 }
 
 func (o ExpandersResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o ExpandersResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.DomId) {
+	if !isNil(o.DomId) {
 		toSerialize["dom-id"] = o.DomId
 	}
-	if !IsNil(o.DrawerId) {
+	if !isNil(o.DrawerId) {
 		toSerialize["drawer-id"] = o.DrawerId
 	}
-	if !IsNil(o.DurableId) {
+	if !isNil(o.DurableId) {
 		toSerialize["durable-id"] = o.DurableId
 	}
-	if !IsNil(o.EnclosureId) {
+	if !isNil(o.EnclosureId) {
 		toSerialize["enclosure-id"] = o.EnclosureId
 	}
-	if !IsNil(o.ExtendedStatus) {
+	if !isNil(o.ExtendedStatus) {
 		toSerialize["extended-status"] = o.ExtendedStatus
 	}
-	if !IsNil(o.FwRevision) {
+	if !isNil(o.FwRevision) {
 		toSerialize["fw-revision"] = o.FwRevision
 	}
-	if !IsNil(o.Health) {
+	if !isNil(o.Health) {
 		toSerialize["health"] = o.Health
 	}
-	if !IsNil(o.HealthNumeric) {
+	if !isNil(o.HealthNumeric) {
 		toSerialize["health-numeric"] = o.HealthNumeric
 	}
-	if !IsNil(o.HealthReason) {
+	if !isNil(o.HealthReason) {
 		toSerialize["health-reason"] = o.HealthReason
 	}
-	if !IsNil(o.HealthRecommendation) {
+	if !isNil(o.HealthRecommendation) {
 		toSerialize["health-recommendation"] = o.HealthRecommendation
 	}
-	if !IsNil(o.Location) {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if !IsNil(o.Name) {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if !IsNil(o.PathId) {
+	if !isNil(o.PathId) {
 		toSerialize["path-id"] = o.PathId
 	}
-	if !IsNil(o.PathIdNumeric) {
+	if !isNil(o.PathIdNumeric) {
 		toSerialize["path-id-numeric"] = o.PathIdNumeric
 	}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.StatusNumeric) {
+	if !isNil(o.StatusNumeric) {
 		toSerialize["status-numeric"] = o.StatusNumeric
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableExpandersResourceInner struct {

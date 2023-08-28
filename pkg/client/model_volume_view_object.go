@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the VolumeViewObject type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &VolumeViewObject{}
-
 // VolumeViewObject struct for VolumeViewObject
 type VolumeViewObject struct {
 	Status          []StatusResourceInner          `json:"status,omitempty"`
@@ -43,7 +40,7 @@ func NewVolumeViewObjectWithDefaults() *VolumeViewObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *VolumeViewObject) GetStatus() []StatusResourceInner {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -53,7 +50,7 @@ func (o *VolumeViewObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -61,7 +58,7 @@ func (o *VolumeViewObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *VolumeViewObject) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -75,7 +72,7 @@ func (o *VolumeViewObject) SetStatus(v []StatusResourceInner) {
 
 // GetVolumeGroupView returns the VolumeGroupView field value if set, zero value otherwise.
 func (o *VolumeViewObject) GetVolumeGroupView() []VolumeGroupViewResourceInner {
-	if o == nil || IsNil(o.VolumeGroupView) {
+	if o == nil || isNil(o.VolumeGroupView) {
 		var ret []VolumeGroupViewResourceInner
 		return ret
 	}
@@ -85,7 +82,7 @@ func (o *VolumeViewObject) GetVolumeGroupView() []VolumeGroupViewResourceInner {
 // GetVolumeGroupViewOk returns a tuple with the VolumeGroupView field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewObject) GetVolumeGroupViewOk() ([]VolumeGroupViewResourceInner, bool) {
-	if o == nil || IsNil(o.VolumeGroupView) {
+	if o == nil || isNil(o.VolumeGroupView) {
 		return nil, false
 	}
 	return o.VolumeGroupView, true
@@ -93,7 +90,7 @@ func (o *VolumeViewObject) GetVolumeGroupViewOk() ([]VolumeGroupViewResourceInne
 
 // HasVolumeGroupView returns a boolean if a field has been set.
 func (o *VolumeViewObject) HasVolumeGroupView() bool {
-	if o != nil && !IsNil(o.VolumeGroupView) {
+	if o != nil && !isNil(o.VolumeGroupView) {
 		return true
 	}
 
@@ -107,7 +104,7 @@ func (o *VolumeViewObject) SetVolumeGroupView(v []VolumeGroupViewResourceInner) 
 
 // GetVolumeView returns the VolumeView field value if set, zero value otherwise.
 func (o *VolumeViewObject) GetVolumeView() []VolumeViewResourceInner {
-	if o == nil || IsNil(o.VolumeView) {
+	if o == nil || isNil(o.VolumeView) {
 		var ret []VolumeViewResourceInner
 		return ret
 	}
@@ -117,7 +114,7 @@ func (o *VolumeViewObject) GetVolumeView() []VolumeViewResourceInner {
 // GetVolumeViewOk returns a tuple with the VolumeView field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewObject) GetVolumeViewOk() ([]VolumeViewResourceInner, bool) {
-	if o == nil || IsNil(o.VolumeView) {
+	if o == nil || isNil(o.VolumeView) {
 		return nil, false
 	}
 	return o.VolumeView, true
@@ -125,7 +122,7 @@ func (o *VolumeViewObject) GetVolumeViewOk() ([]VolumeViewResourceInner, bool) {
 
 // HasVolumeView returns a boolean if a field has been set.
 func (o *VolumeViewObject) HasVolumeView() bool {
-	if o != nil && !IsNil(o.VolumeView) {
+	if o != nil && !isNil(o.VolumeView) {
 		return true
 	}
 
@@ -138,25 +135,17 @@ func (o *VolumeViewObject) SetVolumeView(v []VolumeViewResourceInner) {
 }
 
 func (o VolumeViewObject) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o VolumeViewObject) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.VolumeGroupView) {
+	if !isNil(o.VolumeGroupView) {
 		toSerialize["volume-group-view"] = o.VolumeGroupView
 	}
-	if !IsNil(o.VolumeView) {
+	if !isNil(o.VolumeView) {
 		toSerialize["volume-view"] = o.VolumeView
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableVolumeViewObject struct {

@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the PoolsObject type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &PoolsObject{}
-
 // PoolsObject struct for PoolsObject
 type PoolsObject struct {
 	Status []StatusResourceInner `json:"status,omitempty"`
@@ -42,7 +39,7 @@ func NewPoolsObjectWithDefaults() *PoolsObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *PoolsObject) GetStatus() []StatusResourceInner {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -52,7 +49,7 @@ func (o *PoolsObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -60,7 +57,7 @@ func (o *PoolsObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *PoolsObject) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -74,7 +71,7 @@ func (o *PoolsObject) SetStatus(v []StatusResourceInner) {
 
 // GetPools returns the Pools field value if set, zero value otherwise.
 func (o *PoolsObject) GetPools() []PoolsResourceInner {
-	if o == nil || IsNil(o.Pools) {
+	if o == nil || isNil(o.Pools) {
 		var ret []PoolsResourceInner
 		return ret
 	}
@@ -84,7 +81,7 @@ func (o *PoolsObject) GetPools() []PoolsResourceInner {
 // GetPoolsOk returns a tuple with the Pools field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PoolsObject) GetPoolsOk() ([]PoolsResourceInner, bool) {
-	if o == nil || IsNil(o.Pools) {
+	if o == nil || isNil(o.Pools) {
 		return nil, false
 	}
 	return o.Pools, true
@@ -92,7 +89,7 @@ func (o *PoolsObject) GetPoolsOk() ([]PoolsResourceInner, bool) {
 
 // HasPools returns a boolean if a field has been set.
 func (o *PoolsObject) HasPools() bool {
-	if o != nil && !IsNil(o.Pools) {
+	if o != nil && !isNil(o.Pools) {
 		return true
 	}
 
@@ -105,22 +102,14 @@ func (o *PoolsObject) SetPools(v []PoolsResourceInner) {
 }
 
 func (o PoolsObject) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o PoolsObject) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.Pools) {
+	if !isNil(o.Pools) {
 		toSerialize["pools"] = o.Pools
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullablePoolsObject struct {

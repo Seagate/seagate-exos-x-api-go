@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the SasPortResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &SasPortResourceInner{}
-
 // SasPortResourceInner struct for SasPortResourceInner
 type SasPortResourceInner struct {
 	ObjectName                *string `json:"object-name,omitempty"`
@@ -52,7 +49,7 @@ func NewSasPortResourceInnerWithDefaults() *SasPortResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *SasPortResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -62,7 +59,7 @@ func (o *SasPortResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SasPortResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -70,7 +67,7 @@ func (o *SasPortResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *SasPortResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -84,7 +81,7 @@ func (o *SasPortResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *SasPortResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -94,7 +91,7 @@ func (o *SasPortResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SasPortResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -102,7 +99,7 @@ func (o *SasPortResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *SasPortResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -116,7 +113,7 @@ func (o *SasPortResourceInner) SetMeta(v string) {
 
 // GetConfiguredTopology returns the ConfiguredTopology field value if set, zero value otherwise.
 func (o *SasPortResourceInner) GetConfiguredTopology() string {
-	if o == nil || IsNil(o.ConfiguredTopology) {
+	if o == nil || isNil(o.ConfiguredTopology) {
 		var ret string
 		return ret
 	}
@@ -126,7 +123,7 @@ func (o *SasPortResourceInner) GetConfiguredTopology() string {
 // GetConfiguredTopologyOk returns a tuple with the ConfiguredTopology field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SasPortResourceInner) GetConfiguredTopologyOk() (*string, bool) {
-	if o == nil || IsNil(o.ConfiguredTopology) {
+	if o == nil || isNil(o.ConfiguredTopology) {
 		return nil, false
 	}
 	return o.ConfiguredTopology, true
@@ -134,7 +131,7 @@ func (o *SasPortResourceInner) GetConfiguredTopologyOk() (*string, bool) {
 
 // HasConfiguredTopology returns a boolean if a field has been set.
 func (o *SasPortResourceInner) HasConfiguredTopology() bool {
-	if o != nil && !IsNil(o.ConfiguredTopology) {
+	if o != nil && !isNil(o.ConfiguredTopology) {
 		return true
 	}
 
@@ -148,7 +145,7 @@ func (o *SasPortResourceInner) SetConfiguredTopology(v string) {
 
 // GetConfiguredTopologyNumeric returns the ConfiguredTopologyNumeric field value if set, zero value otherwise.
 func (o *SasPortResourceInner) GetConfiguredTopologyNumeric() int64 {
-	if o == nil || IsNil(o.ConfiguredTopologyNumeric) {
+	if o == nil || isNil(o.ConfiguredTopologyNumeric) {
 		var ret int64
 		return ret
 	}
@@ -158,7 +155,7 @@ func (o *SasPortResourceInner) GetConfiguredTopologyNumeric() int64 {
 // GetConfiguredTopologyNumericOk returns a tuple with the ConfiguredTopologyNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SasPortResourceInner) GetConfiguredTopologyNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.ConfiguredTopologyNumeric) {
+	if o == nil || isNil(o.ConfiguredTopologyNumeric) {
 		return nil, false
 	}
 	return o.ConfiguredTopologyNumeric, true
@@ -166,7 +163,7 @@ func (o *SasPortResourceInner) GetConfiguredTopologyNumericOk() (*int64, bool) {
 
 // HasConfiguredTopologyNumeric returns a boolean if a field has been set.
 func (o *SasPortResourceInner) HasConfiguredTopologyNumeric() bool {
-	if o != nil && !IsNil(o.ConfiguredTopologyNumeric) {
+	if o != nil && !isNil(o.ConfiguredTopologyNumeric) {
 		return true
 	}
 
@@ -180,7 +177,7 @@ func (o *SasPortResourceInner) SetConfiguredTopologyNumeric(v int64) {
 
 // GetSasActiveLanes returns the SasActiveLanes field value if set, zero value otherwise.
 func (o *SasPortResourceInner) GetSasActiveLanes() int64 {
-	if o == nil || IsNil(o.SasActiveLanes) {
+	if o == nil || isNil(o.SasActiveLanes) {
 		var ret int64
 		return ret
 	}
@@ -190,7 +187,7 @@ func (o *SasPortResourceInner) GetSasActiveLanes() int64 {
 // GetSasActiveLanesOk returns a tuple with the SasActiveLanes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SasPortResourceInner) GetSasActiveLanesOk() (*int64, bool) {
-	if o == nil || IsNil(o.SasActiveLanes) {
+	if o == nil || isNil(o.SasActiveLanes) {
 		return nil, false
 	}
 	return o.SasActiveLanes, true
@@ -198,7 +195,7 @@ func (o *SasPortResourceInner) GetSasActiveLanesOk() (*int64, bool) {
 
 // HasSasActiveLanes returns a boolean if a field has been set.
 func (o *SasPortResourceInner) HasSasActiveLanes() bool {
-	if o != nil && !IsNil(o.SasActiveLanes) {
+	if o != nil && !isNil(o.SasActiveLanes) {
 		return true
 	}
 
@@ -212,7 +209,7 @@ func (o *SasPortResourceInner) SetSasActiveLanes(v int64) {
 
 // GetSasDisabledLanes returns the SasDisabledLanes field value if set, zero value otherwise.
 func (o *SasPortResourceInner) GetSasDisabledLanes() int64 {
-	if o == nil || IsNil(o.SasDisabledLanes) {
+	if o == nil || isNil(o.SasDisabledLanes) {
 		var ret int64
 		return ret
 	}
@@ -222,7 +219,7 @@ func (o *SasPortResourceInner) GetSasDisabledLanes() int64 {
 // GetSasDisabledLanesOk returns a tuple with the SasDisabledLanes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SasPortResourceInner) GetSasDisabledLanesOk() (*int64, bool) {
-	if o == nil || IsNil(o.SasDisabledLanes) {
+	if o == nil || isNil(o.SasDisabledLanes) {
 		return nil, false
 	}
 	return o.SasDisabledLanes, true
@@ -230,7 +227,7 @@ func (o *SasPortResourceInner) GetSasDisabledLanesOk() (*int64, bool) {
 
 // HasSasDisabledLanes returns a boolean if a field has been set.
 func (o *SasPortResourceInner) HasSasDisabledLanes() bool {
-	if o != nil && !IsNil(o.SasDisabledLanes) {
+	if o != nil && !isNil(o.SasDisabledLanes) {
 		return true
 	}
 
@@ -244,7 +241,7 @@ func (o *SasPortResourceInner) SetSasDisabledLanes(v int64) {
 
 // GetSasLanesExpected returns the SasLanesExpected field value if set, zero value otherwise.
 func (o *SasPortResourceInner) GetSasLanesExpected() int64 {
-	if o == nil || IsNil(o.SasLanesExpected) {
+	if o == nil || isNil(o.SasLanesExpected) {
 		var ret int64
 		return ret
 	}
@@ -254,7 +251,7 @@ func (o *SasPortResourceInner) GetSasLanesExpected() int64 {
 // GetSasLanesExpectedOk returns a tuple with the SasLanesExpected field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SasPortResourceInner) GetSasLanesExpectedOk() (*int64, bool) {
-	if o == nil || IsNil(o.SasLanesExpected) {
+	if o == nil || isNil(o.SasLanesExpected) {
 		return nil, false
 	}
 	return o.SasLanesExpected, true
@@ -262,7 +259,7 @@ func (o *SasPortResourceInner) GetSasLanesExpectedOk() (*int64, bool) {
 
 // HasSasLanesExpected returns a boolean if a field has been set.
 func (o *SasPortResourceInner) HasSasLanesExpected() bool {
-	if o != nil && !IsNil(o.SasLanesExpected) {
+	if o != nil && !isNil(o.SasLanesExpected) {
 		return true
 	}
 
@@ -276,7 +273,7 @@ func (o *SasPortResourceInner) SetSasLanesExpected(v int64) {
 
 // GetWidth returns the Width field value if set, zero value otherwise.
 func (o *SasPortResourceInner) GetWidth() int64 {
-	if o == nil || IsNil(o.Width) {
+	if o == nil || isNil(o.Width) {
 		var ret int64
 		return ret
 	}
@@ -286,7 +283,7 @@ func (o *SasPortResourceInner) GetWidth() int64 {
 // GetWidthOk returns a tuple with the Width field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SasPortResourceInner) GetWidthOk() (*int64, bool) {
-	if o == nil || IsNil(o.Width) {
+	if o == nil || isNil(o.Width) {
 		return nil, false
 	}
 	return o.Width, true
@@ -294,7 +291,7 @@ func (o *SasPortResourceInner) GetWidthOk() (*int64, bool) {
 
 // HasWidth returns a boolean if a field has been set.
 func (o *SasPortResourceInner) HasWidth() bool {
-	if o != nil && !IsNil(o.Width) {
+	if o != nil && !isNil(o.Width) {
 		return true
 	}
 
@@ -307,40 +304,32 @@ func (o *SasPortResourceInner) SetWidth(v int64) {
 }
 
 func (o SasPortResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o SasPortResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.ConfiguredTopology) {
+	if !isNil(o.ConfiguredTopology) {
 		toSerialize["configured-topology"] = o.ConfiguredTopology
 	}
-	if !IsNil(o.ConfiguredTopologyNumeric) {
+	if !isNil(o.ConfiguredTopologyNumeric) {
 		toSerialize["configured-topology-numeric"] = o.ConfiguredTopologyNumeric
 	}
-	if !IsNil(o.SasActiveLanes) {
+	if !isNil(o.SasActiveLanes) {
 		toSerialize["sas-active-lanes"] = o.SasActiveLanes
 	}
-	if !IsNil(o.SasDisabledLanes) {
+	if !isNil(o.SasDisabledLanes) {
 		toSerialize["sas-disabled-lanes"] = o.SasDisabledLanes
 	}
-	if !IsNil(o.SasLanesExpected) {
+	if !isNil(o.SasLanesExpected) {
 		toSerialize["sas-lanes-expected"] = o.SasLanesExpected
 	}
-	if !IsNil(o.Width) {
+	if !isNil(o.Width) {
 		toSerialize["width"] = o.Width
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableSasPortResourceInner struct {

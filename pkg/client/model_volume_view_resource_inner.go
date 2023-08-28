@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the VolumeViewResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &VolumeViewResourceInner{}
-
 // VolumeViewResourceInner struct for VolumeViewResourceInner
 type VolumeViewResourceInner struct {
 	ObjectName *string `json:"object-name,omitempty"`
@@ -52,7 +49,7 @@ func NewVolumeViewResourceInnerWithDefaults() *VolumeViewResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *VolumeViewResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -62,7 +59,7 @@ func (o *VolumeViewResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -70,7 +67,7 @@ func (o *VolumeViewResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *VolumeViewResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -84,7 +81,7 @@ func (o *VolumeViewResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *VolumeViewResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -94,7 +91,7 @@ func (o *VolumeViewResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -102,7 +99,7 @@ func (o *VolumeViewResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *VolumeViewResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -116,7 +113,7 @@ func (o *VolumeViewResourceInner) SetMeta(v string) {
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
 func (o *VolumeViewResourceInner) GetDurableId() string {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		var ret string
 		return ret
 	}
@@ -126,7 +123,7 @@ func (o *VolumeViewResourceInner) GetDurableId() string {
 // GetDurableIdOk returns a tuple with the DurableId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewResourceInner) GetDurableIdOk() (*string, bool) {
-	if o == nil || IsNil(o.DurableId) {
+	if o == nil || isNil(o.DurableId) {
 		return nil, false
 	}
 	return o.DurableId, true
@@ -134,7 +131,7 @@ func (o *VolumeViewResourceInner) GetDurableIdOk() (*string, bool) {
 
 // HasDurableId returns a boolean if a field has been set.
 func (o *VolumeViewResourceInner) HasDurableId() bool {
-	if o != nil && !IsNil(o.DurableId) {
+	if o != nil && !isNil(o.DurableId) {
 		return true
 	}
 
@@ -148,7 +145,7 @@ func (o *VolumeViewResourceInner) SetDurableId(v string) {
 
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *VolumeViewResourceInner) GetUrl() string {
-	if o == nil || IsNil(o.Url) {
+	if o == nil || isNil(o.Url) {
 		var ret string
 		return ret
 	}
@@ -158,7 +155,7 @@ func (o *VolumeViewResourceInner) GetUrl() string {
 // GetUrlOk returns a tuple with the Url field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewResourceInner) GetUrlOk() (*string, bool) {
-	if o == nil || IsNil(o.Url) {
+	if o == nil || isNil(o.Url) {
 		return nil, false
 	}
 	return o.Url, true
@@ -166,7 +163,7 @@ func (o *VolumeViewResourceInner) GetUrlOk() (*string, bool) {
 
 // HasUrl returns a boolean if a field has been set.
 func (o *VolumeViewResourceInner) HasUrl() bool {
-	if o != nil && !IsNil(o.Url) {
+	if o != nil && !isNil(o.Url) {
 		return true
 	}
 
@@ -180,7 +177,7 @@ func (o *VolumeViewResourceInner) SetUrl(v string) {
 
 // GetVolumeName returns the VolumeName field value if set, zero value otherwise.
 func (o *VolumeViewResourceInner) GetVolumeName() string {
-	if o == nil || IsNil(o.VolumeName) {
+	if o == nil || isNil(o.VolumeName) {
 		var ret string
 		return ret
 	}
@@ -190,7 +187,7 @@ func (o *VolumeViewResourceInner) GetVolumeName() string {
 // GetVolumeNameOk returns a tuple with the VolumeName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewResourceInner) GetVolumeNameOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumeName) {
+	if o == nil || isNil(o.VolumeName) {
 		return nil, false
 	}
 	return o.VolumeName, true
@@ -198,7 +195,7 @@ func (o *VolumeViewResourceInner) GetVolumeNameOk() (*string, bool) {
 
 // HasVolumeName returns a boolean if a field has been set.
 func (o *VolumeViewResourceInner) HasVolumeName() bool {
-	if o != nil && !IsNil(o.VolumeName) {
+	if o != nil && !isNil(o.VolumeName) {
 		return true
 	}
 
@@ -212,7 +209,7 @@ func (o *VolumeViewResourceInner) SetVolumeName(v string) {
 
 // GetVolumeSerial returns the VolumeSerial field value if set, zero value otherwise.
 func (o *VolumeViewResourceInner) GetVolumeSerial() string {
-	if o == nil || IsNil(o.VolumeSerial) {
+	if o == nil || isNil(o.VolumeSerial) {
 		var ret string
 		return ret
 	}
@@ -222,7 +219,7 @@ func (o *VolumeViewResourceInner) GetVolumeSerial() string {
 // GetVolumeSerialOk returns a tuple with the VolumeSerial field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewResourceInner) GetVolumeSerialOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumeSerial) {
+	if o == nil || isNil(o.VolumeSerial) {
 		return nil, false
 	}
 	return o.VolumeSerial, true
@@ -230,7 +227,7 @@ func (o *VolumeViewResourceInner) GetVolumeSerialOk() (*string, bool) {
 
 // HasVolumeSerial returns a boolean if a field has been set.
 func (o *VolumeViewResourceInner) HasVolumeSerial() bool {
-	if o != nil && !IsNil(o.VolumeSerial) {
+	if o != nil && !isNil(o.VolumeSerial) {
 		return true
 	}
 
@@ -244,7 +241,7 @@ func (o *VolumeViewResourceInner) SetVolumeSerial(v string) {
 
 // GetVolumesUrl returns the VolumesUrl field value if set, zero value otherwise.
 func (o *VolumeViewResourceInner) GetVolumesUrl() string {
-	if o == nil || IsNil(o.VolumesUrl) {
+	if o == nil || isNil(o.VolumesUrl) {
 		var ret string
 		return ret
 	}
@@ -254,7 +251,7 @@ func (o *VolumeViewResourceInner) GetVolumesUrl() string {
 // GetVolumesUrlOk returns a tuple with the VolumesUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewResourceInner) GetVolumesUrlOk() (*string, bool) {
-	if o == nil || IsNil(o.VolumesUrl) {
+	if o == nil || isNil(o.VolumesUrl) {
 		return nil, false
 	}
 	return o.VolumesUrl, true
@@ -262,7 +259,7 @@ func (o *VolumeViewResourceInner) GetVolumesUrlOk() (*string, bool) {
 
 // HasVolumesUrl returns a boolean if a field has been set.
 func (o *VolumeViewResourceInner) HasVolumesUrl() bool {
-	if o != nil && !IsNil(o.VolumesUrl) {
+	if o != nil && !isNil(o.VolumesUrl) {
 		return true
 	}
 
@@ -276,7 +273,7 @@ func (o *VolumeViewResourceInner) SetVolumesUrl(v string) {
 
 // GetVolumeViewMappings returns the VolumeViewMappings field value if set, zero value otherwise.
 func (o *VolumeViewResourceInner) GetVolumeViewMappings() []VolumeViewMappingsResourceInner {
-	if o == nil || IsNil(o.VolumeViewMappings) {
+	if o == nil || isNil(o.VolumeViewMappings) {
 		var ret []VolumeViewMappingsResourceInner
 		return ret
 	}
@@ -286,7 +283,7 @@ func (o *VolumeViewResourceInner) GetVolumeViewMappings() []VolumeViewMappingsRe
 // GetVolumeViewMappingsOk returns a tuple with the VolumeViewMappings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumeViewResourceInner) GetVolumeViewMappingsOk() ([]VolumeViewMappingsResourceInner, bool) {
-	if o == nil || IsNil(o.VolumeViewMappings) {
+	if o == nil || isNil(o.VolumeViewMappings) {
 		return nil, false
 	}
 	return o.VolumeViewMappings, true
@@ -294,7 +291,7 @@ func (o *VolumeViewResourceInner) GetVolumeViewMappingsOk() ([]VolumeViewMapping
 
 // HasVolumeViewMappings returns a boolean if a field has been set.
 func (o *VolumeViewResourceInner) HasVolumeViewMappings() bool {
-	if o != nil && !IsNil(o.VolumeViewMappings) {
+	if o != nil && !isNil(o.VolumeViewMappings) {
 		return true
 	}
 
@@ -307,40 +304,32 @@ func (o *VolumeViewResourceInner) SetVolumeViewMappings(v []VolumeViewMappingsRe
 }
 
 func (o VolumeViewResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o VolumeViewResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.DurableId) {
+	if !isNil(o.DurableId) {
 		toSerialize["durable-id"] = o.DurableId
 	}
-	if !IsNil(o.Url) {
+	if !isNil(o.Url) {
 		toSerialize["url"] = o.Url
 	}
-	if !IsNil(o.VolumeName) {
+	if !isNil(o.VolumeName) {
 		toSerialize["volume-name"] = o.VolumeName
 	}
-	if !IsNil(o.VolumeSerial) {
+	if !isNil(o.VolumeSerial) {
 		toSerialize["volume-serial"] = o.VolumeSerial
 	}
-	if !IsNil(o.VolumesUrl) {
+	if !isNil(o.VolumesUrl) {
 		toSerialize["volumes-url"] = o.VolumesUrl
 	}
-	if !IsNil(o.VolumeViewMappings) {
+	if !isNil(o.VolumeViewMappings) {
 		toSerialize["volume-view-mappings"] = o.VolumeViewMappings
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableVolumeViewResourceInner struct {

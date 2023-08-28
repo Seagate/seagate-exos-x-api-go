@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the VolumesObject type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &VolumesObject{}
-
 // VolumesObject struct for VolumesObject
 type VolumesObject struct {
 	Status  []StatusResourceInner  `json:"status,omitempty"`
@@ -42,7 +39,7 @@ func NewVolumesObjectWithDefaults() *VolumesObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *VolumesObject) GetStatus() []StatusResourceInner {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -52,7 +49,7 @@ func (o *VolumesObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -60,7 +57,7 @@ func (o *VolumesObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *VolumesObject) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -74,7 +71,7 @@ func (o *VolumesObject) SetStatus(v []StatusResourceInner) {
 
 // GetVolumes returns the Volumes field value if set, zero value otherwise.
 func (o *VolumesObject) GetVolumes() []VolumesResourceInner {
-	if o == nil || IsNil(o.Volumes) {
+	if o == nil || isNil(o.Volumes) {
 		var ret []VolumesResourceInner
 		return ret
 	}
@@ -84,7 +81,7 @@ func (o *VolumesObject) GetVolumes() []VolumesResourceInner {
 // GetVolumesOk returns a tuple with the Volumes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *VolumesObject) GetVolumesOk() ([]VolumesResourceInner, bool) {
-	if o == nil || IsNil(o.Volumes) {
+	if o == nil || isNil(o.Volumes) {
 		return nil, false
 	}
 	return o.Volumes, true
@@ -92,7 +89,7 @@ func (o *VolumesObject) GetVolumesOk() ([]VolumesResourceInner, bool) {
 
 // HasVolumes returns a boolean if a field has been set.
 func (o *VolumesObject) HasVolumes() bool {
-	if o != nil && !IsNil(o.Volumes) {
+	if o != nil && !isNil(o.Volumes) {
 		return true
 	}
 
@@ -105,22 +102,14 @@ func (o *VolumesObject) SetVolumes(v []VolumesResourceInner) {
 }
 
 func (o VolumesObject) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o VolumesObject) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.Volumes) {
+	if !isNil(o.Volumes) {
 		toSerialize["volumes"] = o.Volumes
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableVolumesObject struct {

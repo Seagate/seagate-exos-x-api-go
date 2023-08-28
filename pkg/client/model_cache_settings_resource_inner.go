@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the CacheSettingsResourceInner type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &CacheSettingsResourceInner{}
-
 // CacheSettingsResourceInner struct for CacheSettingsResourceInner
 type CacheSettingsResourceInner struct {
 	ObjectName     *string `json:"object-name,omitempty"`
@@ -52,7 +49,7 @@ func NewCacheSettingsResourceInnerWithDefaults() *CacheSettingsResourceInner {
 
 // GetObjectName returns the ObjectName field value if set, zero value otherwise.
 func (o *CacheSettingsResourceInner) GetObjectName() string {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		var ret string
 		return ret
 	}
@@ -62,7 +59,7 @@ func (o *CacheSettingsResourceInner) GetObjectName() string {
 // GetObjectNameOk returns a tuple with the ObjectName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CacheSettingsResourceInner) GetObjectNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ObjectName) {
+	if o == nil || isNil(o.ObjectName) {
 		return nil, false
 	}
 	return o.ObjectName, true
@@ -70,7 +67,7 @@ func (o *CacheSettingsResourceInner) GetObjectNameOk() (*string, bool) {
 
 // HasObjectName returns a boolean if a field has been set.
 func (o *CacheSettingsResourceInner) HasObjectName() bool {
-	if o != nil && !IsNil(o.ObjectName) {
+	if o != nil && !isNil(o.ObjectName) {
 		return true
 	}
 
@@ -84,7 +81,7 @@ func (o *CacheSettingsResourceInner) SetObjectName(v string) {
 
 // GetMeta returns the Meta field value if set, zero value otherwise.
 func (o *CacheSettingsResourceInner) GetMeta() string {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		var ret string
 		return ret
 	}
@@ -94,7 +91,7 @@ func (o *CacheSettingsResourceInner) GetMeta() string {
 // GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CacheSettingsResourceInner) GetMetaOk() (*string, bool) {
-	if o == nil || IsNil(o.Meta) {
+	if o == nil || isNil(o.Meta) {
 		return nil, false
 	}
 	return o.Meta, true
@@ -102,7 +99,7 @@ func (o *CacheSettingsResourceInner) GetMetaOk() (*string, bool) {
 
 // HasMeta returns a boolean if a field has been set.
 func (o *CacheSettingsResourceInner) HasMeta() bool {
-	if o != nil && !IsNil(o.Meta) {
+	if o != nil && !isNil(o.Meta) {
 		return true
 	}
 
@@ -116,7 +113,7 @@ func (o *CacheSettingsResourceInner) SetMeta(v string) {
 
 // GetCacheBlockSize returns the CacheBlockSize field value if set, zero value otherwise.
 func (o *CacheSettingsResourceInner) GetCacheBlockSize() int64 {
-	if o == nil || IsNil(o.CacheBlockSize) {
+	if o == nil || isNil(o.CacheBlockSize) {
 		var ret int64
 		return ret
 	}
@@ -126,7 +123,7 @@ func (o *CacheSettingsResourceInner) GetCacheBlockSize() int64 {
 // GetCacheBlockSizeOk returns a tuple with the CacheBlockSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CacheSettingsResourceInner) GetCacheBlockSizeOk() (*int64, bool) {
-	if o == nil || IsNil(o.CacheBlockSize) {
+	if o == nil || isNil(o.CacheBlockSize) {
 		return nil, false
 	}
 	return o.CacheBlockSize, true
@@ -134,7 +131,7 @@ func (o *CacheSettingsResourceInner) GetCacheBlockSizeOk() (*int64, bool) {
 
 // HasCacheBlockSize returns a boolean if a field has been set.
 func (o *CacheSettingsResourceInner) HasCacheBlockSize() bool {
-	if o != nil && !IsNil(o.CacheBlockSize) {
+	if o != nil && !isNil(o.CacheBlockSize) {
 		return true
 	}
 
@@ -148,7 +145,7 @@ func (o *CacheSettingsResourceInner) SetCacheBlockSize(v int64) {
 
 // GetOperationMode returns the OperationMode field value if set, zero value otherwise.
 func (o *CacheSettingsResourceInner) GetOperationMode() string {
-	if o == nil || IsNil(o.OperationMode) {
+	if o == nil || isNil(o.OperationMode) {
 		var ret string
 		return ret
 	}
@@ -158,7 +155,7 @@ func (o *CacheSettingsResourceInner) GetOperationMode() string {
 // GetOperationModeOk returns a tuple with the OperationMode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CacheSettingsResourceInner) GetOperationModeOk() (*string, bool) {
-	if o == nil || IsNil(o.OperationMode) {
+	if o == nil || isNil(o.OperationMode) {
 		return nil, false
 	}
 	return o.OperationMode, true
@@ -166,7 +163,7 @@ func (o *CacheSettingsResourceInner) GetOperationModeOk() (*string, bool) {
 
 // HasOperationMode returns a boolean if a field has been set.
 func (o *CacheSettingsResourceInner) HasOperationMode() bool {
-	if o != nil && !IsNil(o.OperationMode) {
+	if o != nil && !isNil(o.OperationMode) {
 		return true
 	}
 
@@ -180,7 +177,7 @@ func (o *CacheSettingsResourceInner) SetOperationMode(v string) {
 
 // GetOperationModeNumeric returns the OperationModeNumeric field value if set, zero value otherwise.
 func (o *CacheSettingsResourceInner) GetOperationModeNumeric() int64 {
-	if o == nil || IsNil(o.OperationModeNumeric) {
+	if o == nil || isNil(o.OperationModeNumeric) {
 		var ret int64
 		return ret
 	}
@@ -190,7 +187,7 @@ func (o *CacheSettingsResourceInner) GetOperationModeNumeric() int64 {
 // GetOperationModeNumericOk returns a tuple with the OperationModeNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CacheSettingsResourceInner) GetOperationModeNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.OperationModeNumeric) {
+	if o == nil || isNil(o.OperationModeNumeric) {
 		return nil, false
 	}
 	return o.OperationModeNumeric, true
@@ -198,7 +195,7 @@ func (o *CacheSettingsResourceInner) GetOperationModeNumericOk() (*int64, bool) 
 
 // HasOperationModeNumeric returns a boolean if a field has been set.
 func (o *CacheSettingsResourceInner) HasOperationModeNumeric() bool {
-	if o != nil && !IsNil(o.OperationModeNumeric) {
+	if o != nil && !isNil(o.OperationModeNumeric) {
 		return true
 	}
 
@@ -212,7 +209,7 @@ func (o *CacheSettingsResourceInner) SetOperationModeNumeric(v int64) {
 
 // GetPiFormat returns the PiFormat field value if set, zero value otherwise.
 func (o *CacheSettingsResourceInner) GetPiFormat() string {
-	if o == nil || IsNil(o.PiFormat) {
+	if o == nil || isNil(o.PiFormat) {
 		var ret string
 		return ret
 	}
@@ -222,7 +219,7 @@ func (o *CacheSettingsResourceInner) GetPiFormat() string {
 // GetPiFormatOk returns a tuple with the PiFormat field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CacheSettingsResourceInner) GetPiFormatOk() (*string, bool) {
-	if o == nil || IsNil(o.PiFormat) {
+	if o == nil || isNil(o.PiFormat) {
 		return nil, false
 	}
 	return o.PiFormat, true
@@ -230,7 +227,7 @@ func (o *CacheSettingsResourceInner) GetPiFormatOk() (*string, bool) {
 
 // HasPiFormat returns a boolean if a field has been set.
 func (o *CacheSettingsResourceInner) HasPiFormat() bool {
-	if o != nil && !IsNil(o.PiFormat) {
+	if o != nil && !isNil(o.PiFormat) {
 		return true
 	}
 
@@ -244,7 +241,7 @@ func (o *CacheSettingsResourceInner) SetPiFormat(v string) {
 
 // GetPiFormatNumeric returns the PiFormatNumeric field value if set, zero value otherwise.
 func (o *CacheSettingsResourceInner) GetPiFormatNumeric() int64 {
-	if o == nil || IsNil(o.PiFormatNumeric) {
+	if o == nil || isNil(o.PiFormatNumeric) {
 		var ret int64
 		return ret
 	}
@@ -254,7 +251,7 @@ func (o *CacheSettingsResourceInner) GetPiFormatNumeric() int64 {
 // GetPiFormatNumericOk returns a tuple with the PiFormatNumeric field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CacheSettingsResourceInner) GetPiFormatNumericOk() (*int64, bool) {
-	if o == nil || IsNil(o.PiFormatNumeric) {
+	if o == nil || isNil(o.PiFormatNumeric) {
 		return nil, false
 	}
 	return o.PiFormatNumeric, true
@@ -262,7 +259,7 @@ func (o *CacheSettingsResourceInner) GetPiFormatNumericOk() (*int64, bool) {
 
 // HasPiFormatNumeric returns a boolean if a field has been set.
 func (o *CacheSettingsResourceInner) HasPiFormatNumeric() bool {
-	if o != nil && !IsNil(o.PiFormatNumeric) {
+	if o != nil && !isNil(o.PiFormatNumeric) {
 		return true
 	}
 
@@ -276,7 +273,7 @@ func (o *CacheSettingsResourceInner) SetPiFormatNumeric(v int64) {
 
 // GetControllerCacheParameters returns the ControllerCacheParameters field value if set, zero value otherwise.
 func (o *CacheSettingsResourceInner) GetControllerCacheParameters() []ControllerCacheParametersResourceInner {
-	if o == nil || IsNil(o.ControllerCacheParameters) {
+	if o == nil || isNil(o.ControllerCacheParameters) {
 		var ret []ControllerCacheParametersResourceInner
 		return ret
 	}
@@ -286,7 +283,7 @@ func (o *CacheSettingsResourceInner) GetControllerCacheParameters() []Controller
 // GetControllerCacheParametersOk returns a tuple with the ControllerCacheParameters field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CacheSettingsResourceInner) GetControllerCacheParametersOk() ([]ControllerCacheParametersResourceInner, bool) {
-	if o == nil || IsNil(o.ControllerCacheParameters) {
+	if o == nil || isNil(o.ControllerCacheParameters) {
 		return nil, false
 	}
 	return o.ControllerCacheParameters, true
@@ -294,7 +291,7 @@ func (o *CacheSettingsResourceInner) GetControllerCacheParametersOk() ([]Control
 
 // HasControllerCacheParameters returns a boolean if a field has been set.
 func (o *CacheSettingsResourceInner) HasControllerCacheParameters() bool {
-	if o != nil && !IsNil(o.ControllerCacheParameters) {
+	if o != nil && !isNil(o.ControllerCacheParameters) {
 		return true
 	}
 
@@ -307,40 +304,32 @@ func (o *CacheSettingsResourceInner) SetControllerCacheParameters(v []Controller
 }
 
 func (o CacheSettingsResourceInner) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o CacheSettingsResourceInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ObjectName) {
+	if !isNil(o.ObjectName) {
 		toSerialize["object-name"] = o.ObjectName
 	}
-	if !IsNil(o.Meta) {
+	if !isNil(o.Meta) {
 		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.CacheBlockSize) {
+	if !isNil(o.CacheBlockSize) {
 		toSerialize["cache-block-size"] = o.CacheBlockSize
 	}
-	if !IsNil(o.OperationMode) {
+	if !isNil(o.OperationMode) {
 		toSerialize["operation-mode"] = o.OperationMode
 	}
-	if !IsNil(o.OperationModeNumeric) {
+	if !isNil(o.OperationModeNumeric) {
 		toSerialize["operation-mode-numeric"] = o.OperationModeNumeric
 	}
-	if !IsNil(o.PiFormat) {
+	if !isNil(o.PiFormat) {
 		toSerialize["pi-format"] = o.PiFormat
 	}
-	if !IsNil(o.PiFormatNumeric) {
+	if !isNil(o.PiFormatNumeric) {
 		toSerialize["pi-format-numeric"] = o.PiFormatNumeric
 	}
-	if !IsNil(o.ControllerCacheParameters) {
+	if !isNil(o.ControllerCacheParameters) {
 		toSerialize["controller-cache-parameters"] = o.ControllerCacheParameters
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableCacheSettingsResourceInner struct {

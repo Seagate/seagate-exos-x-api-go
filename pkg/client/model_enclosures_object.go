@@ -14,9 +14,6 @@ import (
 	"encoding/json"
 )
 
-// checks if the EnclosuresObject type satisfies the MappedNullable interface at compile time
-var _ MappedNullable = &EnclosuresObject{}
-
 // EnclosuresObject struct for EnclosuresObject
 type EnclosuresObject struct {
 	Status     []StatusResourceInner     `json:"status,omitempty"`
@@ -42,7 +39,7 @@ func NewEnclosuresObjectWithDefaults() *EnclosuresObject {
 
 // GetStatus returns the Status field value if set, zero value otherwise.
 func (o *EnclosuresObject) GetStatus() []StatusResourceInner {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		var ret []StatusResourceInner
 		return ret
 	}
@@ -52,7 +49,7 @@ func (o *EnclosuresObject) GetStatus() []StatusResourceInner {
 // GetStatusOk returns a tuple with the Status field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresObject) GetStatusOk() ([]StatusResourceInner, bool) {
-	if o == nil || IsNil(o.Status) {
+	if o == nil || isNil(o.Status) {
 		return nil, false
 	}
 	return o.Status, true
@@ -60,7 +57,7 @@ func (o *EnclosuresObject) GetStatusOk() ([]StatusResourceInner, bool) {
 
 // HasStatus returns a boolean if a field has been set.
 func (o *EnclosuresObject) HasStatus() bool {
-	if o != nil && !IsNil(o.Status) {
+	if o != nil && !isNil(o.Status) {
 		return true
 	}
 
@@ -74,7 +71,7 @@ func (o *EnclosuresObject) SetStatus(v []StatusResourceInner) {
 
 // GetEnclosures returns the Enclosures field value if set, zero value otherwise.
 func (o *EnclosuresObject) GetEnclosures() []EnclosuresResourceInner {
-	if o == nil || IsNil(o.Enclosures) {
+	if o == nil || isNil(o.Enclosures) {
 		var ret []EnclosuresResourceInner
 		return ret
 	}
@@ -84,7 +81,7 @@ func (o *EnclosuresObject) GetEnclosures() []EnclosuresResourceInner {
 // GetEnclosuresOk returns a tuple with the Enclosures field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnclosuresObject) GetEnclosuresOk() ([]EnclosuresResourceInner, bool) {
-	if o == nil || IsNil(o.Enclosures) {
+	if o == nil || isNil(o.Enclosures) {
 		return nil, false
 	}
 	return o.Enclosures, true
@@ -92,7 +89,7 @@ func (o *EnclosuresObject) GetEnclosuresOk() ([]EnclosuresResourceInner, bool) {
 
 // HasEnclosures returns a boolean if a field has been set.
 func (o *EnclosuresObject) HasEnclosures() bool {
-	if o != nil && !IsNil(o.Enclosures) {
+	if o != nil && !isNil(o.Enclosures) {
 		return true
 	}
 
@@ -105,22 +102,14 @@ func (o *EnclosuresObject) SetEnclosures(v []EnclosuresResourceInner) {
 }
 
 func (o EnclosuresObject) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
-
-func (o EnclosuresObject) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Status) {
+	if !isNil(o.Status) {
 		toSerialize["status"] = o.Status
 	}
-	if !IsNil(o.Enclosures) {
+	if !isNil(o.Enclosures) {
 		toSerialize["enclosures"] = o.Enclosures
 	}
-	return toSerialize, nil
+	return json.Marshal(toSerialize)
 }
 
 type NullableEnclosuresObject struct {
