@@ -7,8 +7,12 @@ GENERATOR_APP := generator
 OPENAPI_YAML := /local/api/mc-openapi.yaml
 GOFMT_OPTS := gofmt -w .
 REGRESSION_APP := api-regression
-GENERATE_USER := $(shell id -u ${USER}):$(shell id -g ${USER})
 GENERATOR_VERSION := v6.5.0
+
+# For docker, set uid and gid to match the current user
+GENERATE_USER_ARGS := -u $(shell id -u ${USER}):$(shell id -g ${USER})
+# For podman, do not set this value
+#GENERATE_USER_ARGS:=
 
 help:
 	@echo ""
@@ -57,7 +61,7 @@ validate:
 generate:
 	@echo "Generating $(OPENAPI_YAML) using openapi-generator-cli"
 	rm -rf pkg/client
-	docker run -u $(GENERATE_USER) --rm -v ${PWD}:/local openapitools/openapi-generator-cli:$(GENERATOR_VERSION) generate -i $(OPENAPI_YAML) -g go -o /local/pkg/client --package-name client --ignore-file-override=/local/.openapi-generator-ignore
+	docker run $(GENERATE_USER_ARGS) --rm -v ${PWD}:/local openapitools/openapi-generator-cli:$(GENERATOR_VERSION) generate -i $(OPENAPI_YAML) -g go -t /local/templates/go -o /local/pkg/client --package-name client --ignore-file-override=/local/.openapi-generator-ignore
 	@echo "Format files after generation to conform to project standard"
 	$(GOFMT_OPTS)
 
