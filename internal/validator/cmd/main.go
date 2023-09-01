@@ -45,6 +45,7 @@ func main() {
 	logger.V(0).Info("")
 
 	apiClient, err := common.Login(ctx, config)
+	logger.V(4).Info("Login", "apiClient", apiClient, "err", err)
 
 	if err != nil || apiClient == nil {
 		logger.Error(err, "++ login FAILURE")

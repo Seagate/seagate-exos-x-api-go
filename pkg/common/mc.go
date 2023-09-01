@@ -107,11 +107,12 @@ func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 			logger.V(0).Info("++ MC Login SUCCESS", "ipaddress", config.MCIpAddress, "protocol", config.MCProtocol)
 			sessionKey = *resp1.Status[0].Response
 		} else {
-			logger.V(0).Info("++ MC Login FAILURE", "response", *resp1.Status[0].Response)
-			return nil, fmt.Errorf("++ MC Login FAILURE", "response", *resp1.Status[0].Response)
+			logger.V(2).Info("++ MC Login FAILURE", "response", *resp1.Status[0].Response)
+			return nil, fmt.Errorf("++ MC Login FAILURE, response=%v", *resp1.Status[0].Response)
 		}
 	} else {
-		logger.V(0).Info("-- LoginGet", "status", httpRes.Status, "err", err, "body", httpRes.Body)
+		logger.V(2).Info("-- LoginGet", "httpRes", httpRes, "err", err)
+		return nil, fmt.Errorf("++ MC Login FAILURE, err=%v", err)
 	}
 	logger.V(3).Info("================================================================================")
 

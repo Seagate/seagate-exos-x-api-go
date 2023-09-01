@@ -11,10 +11,11 @@ package client
 
 import (
 	"context"
+	"testing"
+
 	openapiclient "github.com/Seagate/seagate-exos-x-api-go/pkg/v2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func Test_client_DefaultApiService(t *testing.T) {
@@ -249,6 +250,18 @@ func Test_client_DefaultApiService(t *testing.T) {
 
 	})
 
+	t.Run("Test DefaultApiService ShowDiskGroupsGet", func(t *testing.T) {
+
+		t.Skip("skip test") // remove to run test
+
+		resp, httpRes, err := apiClient.DefaultApi.ShowDiskGroupsGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test DefaultApiService ShowDisksGet", func(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
@@ -323,6 +336,18 @@ func Test_client_DefaultApiService(t *testing.T) {
 
 	})
 
+	t.Run("Test DefaultApiService ShowMapsAllGet", func(t *testing.T) {
+
+		t.Skip("skip test") // remove to run test
+
+		resp, httpRes, err := apiClient.DefaultApi.ShowMapsAllGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test DefaultApiService ShowMapsGet", func(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
@@ -335,11 +360,13 @@ func Test_client_DefaultApiService(t *testing.T) {
 
 	})
 
-	t.Run("Test DefaultApiService ShowMapsInitiatorGet", func(t *testing.T) {
+	t.Run("Test DefaultApiService ShowMapsInitiatorNamesGet", func(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		resp, httpRes, err := apiClient.DefaultApi.ShowMapsInitiatorGet(context.Background()).Execute()
+		var namesOption string
+
+		resp, httpRes, err := apiClient.DefaultApi.ShowMapsInitiatorNamesGet(context.Background(), namesOption).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
