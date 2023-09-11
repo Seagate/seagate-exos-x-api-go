@@ -457,6 +457,9 @@ func (c *APIClient) decode(v interface{}, b []byte, contentType string) (err err
 
 	// TODO: Hack for a bug where we sometimes get contentType XML back even though the content is actually JSON
 	// the content is always JSON in this version of the API client
+	if c.cfg.Debug {
+		log.Printf("Forcing response contentType from %s to %s", contentType, "application/json")
+	}
 	contentType = "application/json"
 
 	if xmlCheck.MatchString(contentType) {
