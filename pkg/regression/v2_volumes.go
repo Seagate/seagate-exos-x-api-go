@@ -131,17 +131,17 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 			status, err := client.DeleteVolume(volname1)
 			logger.V(3).Info("delete volume", "name", volname1, "mc-response", status.ResponseTypeNumeric, "err", err)
 			Expect(err).To(BeNil())
-			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiVolumeDeleted))
+			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
 
 			status, err = client.DeleteVolume(volname2)
 			logger.V(3).Info("delete volume", "name", volname2, "mc-response", status.ResponseTypeNumeric, "err", err)
 			Expect(err).To(BeNil())
-			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiVolumeDeleted))
+			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
 
 			// Show volumes
 			response, status, err := client.ShowVolumes("volname1")
 			Expect(err).To(BeNil())
-			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiVolumeDoesNotExist))
+			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiError))
 			ShowVolumes(logger, response)
 		})
 	})

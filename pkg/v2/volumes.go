@@ -17,11 +17,12 @@ import (
 )
 
 const (
-	ApiMaximumLUN         = 255
-	ApiTierAffinity       = "no-affinity"
-	ApiSuccess            = 0
-	ApiVolumeDoesNotExist = 1
-	ApiVolumeDeleted      = 2
+	ApiMaximumLUN   = 255
+	ApiTierAffinity = "no-affinity"
+	ApiSuccess      = 0
+	ApiError        = 1
+	ApiInfo         = 2
+	ApiWarning      = 3
 )
 
 // Volume : volume-view representation

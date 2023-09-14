@@ -135,7 +135,7 @@ func CreateCommonStatus(logger logr.Logger, response *[]client.StatusResourceInn
 		for _, s := range *response {
 
 			if *s.ResponseType == "Info" {
-				logger.V(1).Info("create common status info",
+				logger.V(2).Info("create common status (info)",
 					"ResponseType", *s.ResponseType,
 					"ResponseTypeNumeric", *s.ResponseTypeNumeric,
 					"Response", *s.Response,
@@ -150,6 +150,11 @@ func CreateCommonStatus(logger logr.Logger, response *[]client.StatusResourceInn
 						"ReturnCode", *s.ReturnCode,
 					)
 				}
+				logger.V(2).Info("create common status",
+					"ResponseType", *s.ResponseType,
+					"ResponseTypeNumeric", *s.ResponseTypeNumeric,
+					"Response", *s.Response,
+				)
 				found = true
 				status.ResponseType = s.GetResponseType()
 				status.ResponseTypeNumeric = int(s.GetResponseTypeNumeric())
