@@ -19,7 +19,7 @@ func (client *Client) CreateSnapshot(volumeName string, snapshotName string) (*c
 	response, httpRes, err := client.apiClient.DefaultApi.CreateSnapshotsVolumesNamesGet(client.Ctx, volumeName, snapshotName).Execute()
 	logger.V(2).Info("create snapshot", "volume", volumeName, "snapshot", snapshotName, "http", httpRes.Status)
 
-	status := CreateCommonStatusFromStatus(logger, &response.Status)
+	status := CreateCommonStatus(logger, &response.Status)
 
 	return status, err
 }

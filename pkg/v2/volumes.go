@@ -69,7 +69,7 @@ func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.V
 
 	status := &common.ResponseStatus{}
 	if response != nil && len(response.GetStatus()) > 0 {
-		status = CreateCommonStatusFromStatus(logger, &response.Status)
+		status = CreateCommonStatus(logger, &response.Status)
 	}
 
 	volume := common.VolumeObject{}
@@ -152,7 +152,7 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 	logger.V(4).Info("================================================================================")
 
 	returnVolumes := []common.VolumeObject{}
-	status := CreateCommonStatusFromStatus(logger, &response.Status)
+	status := CreateCommonStatus(logger, &response.Status)
 
 	if response != nil {
 		for _, v := range response.Volumes {
@@ -202,7 +202,7 @@ func (client *Client) GetVolumeMapsHostNames(name string) ([]string, *common.Res
 	logger.V(2).Info("get volume maps host names", "volume", name)
 	response, httpRes, err := client.apiClient.DefaultApi.ShowMapsNamesGet(client.Ctx, name).Execute()
 
-	status := CreateCommonStatusFromStatus(logger, &response.Status)
+	status := CreateCommonStatus(logger, &response.Status)
 
 	if err != nil {
 		return []string{}, status, err
@@ -237,7 +237,7 @@ func (client *Client) ShowHostMaps(host string) ([]Volume, *common.ResponseStatu
 	logger.Info("++ ShowHostMaps", "host", host)
 
 	response, _, err := client.apiClient.DefaultApi.ShowMapsInitiatorNamesGet(client.Ctx, "").Execute()
-	status := CreateCommonStatusFromStatus(logger, &response.Status)
+	status := CreateCommonStatus(logger, &response.Status)
 
 	if err != nil {
 		return nil, status, err
