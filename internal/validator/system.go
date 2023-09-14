@@ -4,6 +4,7 @@ package validator
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
@@ -44,6 +45,20 @@ func parseJsonArray(logger logr.Logger, level int, anArray []interface{}) {
 	}
 }
 
+// DisplayStatusResource: Display all the relevant status resource information
+func DisplayStatusResource(logger logr.Logger, Status []client.StatusResourceInner) {
+
+	// Extract Status resource information
+	for i, s := range Status {
+		logger.V(0).Info(
+			fmt.Sprintf("++ SystemGet.Status[%d]", i),
+			"Response", *s.Response,
+			"ResponseTypeNumeric", *s.ResponseTypeNumeric,
+			"ReturnCode", *s.ReturnCode,
+		)
+	}
+}
+
 // Meta: Execute a meta command and display the JSON map
 func Meta(ctx context.Context, apiClient *client.APIClient, resource string) error {
 
@@ -81,11 +96,7 @@ func ShowSystems(ctx context.Context, apiClient *client.APIClient) error {
 		logger.V(5).Info("++ SystemGet", "resp", response)
 		logger.V(5).Info("++ SystemGet", "SystemResource", response.System[0])
 
-		// Extract Status resource information
-		logger.V(0).Info("++ SystemGet.Status[0]",
-			"Response", *response.Status[0].Response,
-			"ReturnCode", *response.Status[0].ReturnCode,
-		)
+		DisplayStatusResource(logger, response.Status)
 
 		// Extract System resource information
 		logger.V(0).Info("++ SystemGet.System[0]",
@@ -130,11 +141,7 @@ func ShowVersionsDetail(ctx context.Context, apiClient *client.APIClient) error 
 	if httpRes.StatusCode == http.StatusOK {
 		logger.V(5).Info("++ ShowVersionsDetailGet", "resp", response)
 
-		// Extract Status resource information
-		logger.V(0).Info("++ ShowVersionsDetailGet.Status[0]",
-			"Response", *response.Status[0].Response,
-			"ReturnCode", *response.Status[0].ReturnCode,
-		)
+		DisplayStatusResource(logger, response.Status)
 
 		for i, version := range response.Versions {
 			// Extract version information
@@ -167,11 +174,7 @@ func ShowHostGroups(ctx context.Context, apiClient *client.APIClient) error {
 	response, httpRes, err := apiClient.DefaultApi.ShowHostGroupsGet(ctx).Execute()
 	if httpRes.StatusCode == http.StatusOK {
 
-		// Extract Status resource information
-		logger.V(0).Info("++ HostGroupGet.Status[0]",
-			"Response", *response.Status[0].Response,
-			"ReturnCode", *response.Status[0].ReturnCode,
-		)
+		DisplayStatusResource(logger, response.Status)
 
 		// Extract System resource information
 		logger.V(0).Info("++ HostGroupGet.HostGroup[0]",
@@ -212,11 +215,7 @@ func ShowVolumes(ctx context.Context, apiClient *client.APIClient, names string)
 	response, httpRes, err := apiClient.DefaultApi.ShowVolumesNamesGet(ctx, names).Execute()
 	if httpRes.StatusCode == http.StatusOK {
 
-		// Extract Status resource information
-		logger.V(0).Info("++ ShowVolumesNamesGet.Status[0]",
-			"Response", *response.Status[0].Response,
-			"ReturnCode", *response.Status[0].ReturnCode,
-		)
+		DisplayStatusResource(logger, response.Status)
 
 		for i, volume := range response.Volumes {
 			logger.V(0).Info("-- volumes",
@@ -248,12 +247,7 @@ func CreateVolume(ctx context.Context, apiClient *client.APIClient, pool string,
 	response, httpRes, err := apiClient.DefaultApi.CreateVolumePoolSizeTierAffinityNameGet(ctx, pool, size, tierAffinity, name).Execute()
 
 	if httpRes.StatusCode == http.StatusOK {
-
-		// Extract Status resource information
-		logger.V(0).Info("++ CreateVolumeGet.Status[0]",
-			"Response", *response.Status[0].Response,
-			"ReturnCode", *response.Status[0].ReturnCode,
-		)
+		DisplayStatusResource(logger, response.Status)
 	} else {
 		logger.V(0).Info("-- CreateVolumeGet", "status", httpRes.Status, "err", err, "body", httpRes.Body)
 	}
@@ -278,11 +272,7 @@ func DeleteVolumes(ctx context.Context, apiClient *client.APIClient, names strin
 	logger.V(0).Info("-- DeleteVolumesNamesGet", "http status", httpRes.Status, "err", err)
 
 	if httpRes.StatusCode == http.StatusOK {
-		// Extract Status resource information
-		logger.V(0).Info("++ DeleteVolumesNamesGet.Status[0]",
-			"Response", *response.Status[0].Response,
-			"ReturnCode", *response.Status[0].ReturnCode,
-		)
+		DisplayStatusResource(logger, response.Status)
 	}
 	logger.V(0).Info("================================================================================")
 
