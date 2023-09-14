@@ -23,9 +23,9 @@ type StatusResourceInner struct {
 	Meta        *string `json:"meta,omitempty"`
 	ComponentId *string `json:"component-id,omitempty"`
 	Response    *string `json:"response,omitempty"`
-	// Indicates whether the command returned a success, failure, or informational message
+	// Indicates whether the command returned a Success, Error, Info, or Warning message
 	ResponseType *string `json:"response-type,omitempty"`
-	// Indicates whether the command returned a success, failure, or informational message( In numeric form )
+	// Indicates whether the command returned a Success (0), Error (1), Info (2), or Warning (3) message (numeric form)
 	ResponseTypeNumeric *int32 `json:"response-type-numeric,omitempty"`
 	// Numeric return code for the command
 	ReturnCode *int32 `json:"return-code,omitempty"`

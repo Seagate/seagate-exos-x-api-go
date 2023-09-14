@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **DiskFirmwareUpdate** | Pointer to **string** |  | [optional] 
 **DiskFirmwareUpdateNumeric** | Pointer to **int64** |  | [optional] 
 **DynamicSpares** | Pointer to **string** | If enabled, replaces failed disks in a degraded vdisk with properly sized available disks | [optional] 
+**DynamicSparesNumeric** | Pointer to **int64** | If enabled, replaces failed disks in a degraded vdisk with properly sized available disks( In numeric form ) | [optional] 
 **EmpPollRate** | Pointer to **string** |  | [optional] 
 **FanFailure** | Pointer to **string** |  | [optional] 
 **FanFailureNumeric** | Pointer to **int64** |  | [optional] 
@@ -776,6 +777,31 @@ SetDynamicSpares sets DynamicSpares field to given value.
 `func (o *AdvancedSettingsTableResourceInner) HasDynamicSpares() bool`
 
 HasDynamicSpares returns a boolean if a field has been set.
+
+### GetDynamicSparesNumeric
+
+`func (o *AdvancedSettingsTableResourceInner) GetDynamicSparesNumeric() int64`
+
+GetDynamicSparesNumeric returns the DynamicSparesNumeric field if non-nil, zero value otherwise.
+
+### GetDynamicSparesNumericOk
+
+`func (o *AdvancedSettingsTableResourceInner) GetDynamicSparesNumericOk() (*int64, bool)`
+
+GetDynamicSparesNumericOk returns a tuple with the DynamicSparesNumeric field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDynamicSparesNumeric
+
+`func (o *AdvancedSettingsTableResourceInner) SetDynamicSparesNumeric(v int64)`
+
+SetDynamicSparesNumeric sets DynamicSparesNumeric field to given value.
+
+### HasDynamicSparesNumeric
+
+`func (o *AdvancedSettingsTableResourceInner) HasDynamicSparesNumeric() bool`
+
+HasDynamicSparesNumeric returns a boolean if a field has been set.
 
 ### GetEmpPollRate
 
