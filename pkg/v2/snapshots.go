@@ -19,7 +19,7 @@ func (client *Client) CreateSnapshot(volumeName string, snapshotName string) (*c
 	response, httpRes, err := client.apiClient.DefaultApi.CreateSnapshotsVolumesNamesGet(client.Ctx, volumeName, snapshotName).Execute()
 	logger.V(2).Info("create snapshot", "volume", volumeName, "snapshot", snapshotName, "http", httpRes.Status)
 
-	status := CreateCommonStatusFromStatus(logger, &response.Status[0])
+	status := CreateCommonStatusFromStatus(logger, &response.Status)
 
 	return status, err
 }
@@ -85,5 +85,5 @@ func (client *Client) DeleteSnapshot(name string) (*common.ResponseStatus, error
 	logger := klog.FromContext(client.Ctx)
 	response, httpRes, err := client.apiClient.DefaultApi.DeleteSnapshotNamesGet(client.Ctx, name).Execute()
 	logger.V(2).Info("delete snapshot", "name", name, "http", httpRes.Status)
-	return CreateCommonStatus(response), err
+	return CreateCommonStatus(logger, &response.Status), err
 }
