@@ -17,11 +17,12 @@ import (
 )
 
 const (
-	ApiMaximumLUN         = 255
-	ApiTierAffinity       = "no-affinity"
-	ApiSuccess            = 0
-	ApiVolumeDoesNotExist = 1
-	ApiVolumeDeleted      = 2
+	ApiMaximumLUN   = 255
+	ApiTierAffinity = "no-affinity"
+	ApiSuccess      = 0
+	ApiError        = 1
+	ApiInfo         = 2
+	ApiWarning      = 3
 )
 
 // Volume : volume-view representation
@@ -68,7 +69,7 @@ func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.V
 
 	status := &common.ResponseStatus{}
 	if response != nil && len(response.GetStatus()) > 0 {
-		status = CreateCommonStatusFromStatus(logger, &response.Status[0])
+		status = CreateCommonStatus(logger, &response.Status)
 	}
 
 	volume := common.VolumeObject{}
@@ -151,7 +152,7 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 	logger.V(4).Info("================================================================================")
 
 	returnVolumes := []common.VolumeObject{}
-	status := CreateCommonStatusFromStatus(logger, &response.Status[0])
+	status := CreateCommonStatus(logger, &response.Status)
 
 	if response != nil {
 		for _, v := range response.Volumes {
@@ -201,7 +202,7 @@ func (client *Client) GetVolumeMapsHostNames(name string) ([]string, *common.Res
 	logger.V(2).Info("get volume maps host names", "volume", name)
 	response, httpRes, err := client.apiClient.DefaultApi.ShowMapsNamesGet(client.Ctx, name).Execute()
 
-	status := CreateCommonStatusFromStatus(logger, &response.Status[0])
+	status := CreateCommonStatus(logger, &response.Status)
 
 	if err != nil {
 		return []string{}, status, err
@@ -236,7 +237,7 @@ func (client *Client) ShowHostMaps(host string) ([]Volume, *common.ResponseStatu
 	logger.Info("++ ShowHostMaps", "host", host)
 
 	response, _, err := client.apiClient.DefaultApi.ShowMapsInitiatorNamesGet(client.Ctx, "").Execute()
-	status := CreateCommonStatusFromStatus(logger, &response.Status[0])
+	status := CreateCommonStatus(logger, &response.Status)
 
 	if err != nil {
 		return nil, status, err
@@ -320,7 +321,7 @@ func (client *Client) MapVolume(name, initiator, access string, lun int) (*commo
 	logger := klog.FromContext(client.Ctx)
 	response, httpRes, err := client.apiClient.DefaultApi.MapVolumeAccessLunInitiatorNamesGet(client.Ctx, access, strconv.Itoa(lun), initiator, name).Execute()
 	logger.V(2).Info("map volume", "name", name, "lun", lun, "initiator", initiator, "http", httpRes.Status)
-	return CreateCommonStatus(response), err
+	return CreateCommonStatus(logger, &response.Status), err
 }
 
 // CreateNickname : Create a nickname for an initiator. The Storage API policy is to prohibit mapping of initiators which are not either
@@ -330,7 +331,7 @@ func (client *Client) CreateNickname(name, iqn string) (*common.ResponseStatus, 
 	logger := klog.FromContext(client.Ctx)
 	response, httpRes, err := client.apiClient.DefaultApi.SetInitiatorIdNicknameGet(client.Ctx, iqn, name).Execute()
 	logger.V(2).Info("create nickname", "name", name, "nickname", iqn, "http", httpRes.Status)
-	return CreateCommonStatus(response), err
+	return CreateCommonStatus(logger, &response.Status), err
 }
 
 // mapVolumeProcess: Map a volume to an initiator and create a nickname when required by the storage array
@@ -380,12 +381,12 @@ func (client *Client) UnmapVolume(name, initiator string) (*common.ResponseStatu
 	if initiator == "" {
 		response, httpRes, err := client.apiClient.DefaultApi.UnmapVolumeNamesGet(client.Ctx, name).Execute()
 		logger.V(2).Info("unmap volume", "name", name, "initiator", initiator, "http", httpRes.Status)
-		return CreateCommonStatus(response), err
+		return CreateCommonStatus(logger, &response.Status), err
 	}
 
 	response, httpRes, err := client.apiClient.DefaultApi.UnmapVolumeInitiatorNamesGet(client.Ctx, initiator, name).Execute()
 	logger.V(2).Info("unmap volume", "name", name, "initiator", initiator, "http", httpRes.Status)
-	return CreateCommonStatus(response), err
+	return CreateCommonStatus(logger, &response.Status), err
 }
 
 // ExpandVolume : extend a volume if there is enough space in the disk group
@@ -394,7 +395,7 @@ func (client *Client) ExpandVolume(name, size string) (*common.ResponseStatus, e
 	logger := klog.FromContext(client.Ctx)
 	response, httpRes, err := client.apiClient.DefaultApi.ExpandVolumeSizeNameGet(client.Ctx, size, name).Execute()
 	logger.V(2).Info("expand volume", "name", name, "size", size, "http", httpRes.Status)
-	return CreateCommonStatus(response), err
+	return CreateCommonStatus(logger, &response.Status), err
 }
 
 // CopyVolume : create an new volume by copying another one or a snapshot
@@ -403,7 +404,7 @@ func (client *Client) CopyVolume(sourceName string, destinationName string, pool
 	logger := klog.FromContext(client.Ctx)
 	response, httpRes, err := client.apiClient.DefaultApi.CopyVolumeDestinationPoolNameSourceGet(client.Ctx, pool, destinationName, sourceName).Execute()
 	logger.V(2).Info("copy volume", "destination", destinationName, "source", sourceName, "pool", pool, "http", httpRes.Status)
-	return CreateCommonStatus(response), err
+	return CreateCommonStatus(logger, &response.Status), err
 }
 
 // DeleteVolume : deletes a volume
@@ -412,7 +413,7 @@ func (client *Client) DeleteVolume(name string) (*common.ResponseStatus, error) 
 	logger := klog.FromContext(client.Ctx)
 	response, httpRes, err := client.apiClient.DefaultApi.DeleteVolumesNamesGet(client.Ctx, name).Execute()
 	logger.V(2).Info("delete volume", "name", name, "http", httpRes.Status)
-	return CreateCommonStatus(response), err
+	return CreateCommonStatus(logger, &response.Status), err
 }
 
 // PublishVolume: Attach a volume to an initiator

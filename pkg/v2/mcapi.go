@@ -10,7 +10,6 @@ import (
 	"time"
 
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
-	openapiclient "github.com/Seagate/seagate-exos-x-api-go/pkg/client"
 	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
 	"github.com/go-logr/logr"
 	"k8s.io/klog/v2"
@@ -122,39 +121,46 @@ func (client *Client) InitSystemInfo() error {
 }
 
 // CreateCommonStatus : create a common API status object based on the OpenAPI client response
-func CreateCommonStatus(response *client.StatusObject) *common.ResponseStatus {
+func CreateCommonStatus(logger logr.Logger, response *[]client.StatusResourceInner) *common.ResponseStatus {
 
 	status := common.ResponseStatus{}
 
-	if response != nil {
-		status.ResponseType = response.Status[0].GetResponseType()
-		status.ResponseTypeNumeric = int(response.Status[0].GetResponseTypeNumeric())
-		status.Response = response.Status[0].GetResponse()
-		status.ReturnCode = int(response.Status[0].GetReturnCode())
-		status.Time = time.Unix(int64(response.Status[0].GetTimeStampNumeric()), 0)
-	}
-
-	return &status
-}
-
-// CreateCommonStatusFromStatus : create a common API status object based on the OpenAPI client response
-func CreateCommonStatusFromStatus(logger logr.Logger, response *openapiclient.StatusResourceInner) *common.ResponseStatus {
-
-	status := common.ResponseStatus{}
+	// Track if this status contains one or more non-info response types
+	found := false
 
 	if response != nil {
-		status.ResponseType = response.GetResponseType()
-		status.ResponseTypeNumeric = int(response.GetResponseTypeNumeric())
-		status.Response = response.GetResponse()
-		status.ReturnCode = int(response.GetReturnCode())
-		status.Time = time.Unix(int64(response.GetTimeStampNumeric()), 0)
-		if status.ReturnCode != 0 {
-			logger.V(1).Info("status",
-				"ResponseType", status.ResponseType,
-				"ResponseTypeNumeric", status.ResponseTypeNumeric,
-				"Response", status.Response,
-				"ReturnCode", status.ReturnCode,
-			)
+
+		// The status response may contain multiple entries, so skip over an "Info" types
+		for _, s := range *response {
+
+			if *s.ResponseType == "Info" {
+				logger.V(2).Info("create common status (info)",
+					"ResponseType", *s.ResponseType,
+					"ResponseTypeNumeric", *s.ResponseTypeNumeric,
+					"Response", *s.Response,
+				)
+			} else {
+				if found {
+					// print warning since there are multiple non-info messages
+					logger.V(0).Info("create common status multiple non-info responses",
+						"ResponseType", *s.ResponseType,
+						"ResponseTypeNumeric", *s.ResponseTypeNumeric,
+						"Response", *s.Response,
+						"ReturnCode", *s.ReturnCode,
+					)
+				}
+				logger.V(2).Info("create common status",
+					"ResponseType", *s.ResponseType,
+					"ResponseTypeNumeric", *s.ResponseTypeNumeric,
+					"Response", *s.Response,
+				)
+				found = true
+				status.ResponseType = s.GetResponseType()
+				status.ResponseTypeNumeric = int(s.GetResponseTypeNumeric())
+				status.Response = s.GetResponse()
+				status.ReturnCode = int(s.GetReturnCode())
+				status.Time = time.Unix(int64(s.GetTimeStampNumeric()), 0)
+			}
 		}
 	}
 

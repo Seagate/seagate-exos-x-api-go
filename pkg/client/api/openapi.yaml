@@ -1031,7 +1031,7 @@ components:
     statusResource:
       items:
         $ref: '#/components/schemas/statusResource_inner'
-      maxItems: 1
+      maxItems: 1024
       minItems: 1
       type: array
     redundancyResource:
@@ -1236,13 +1236,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
       type: object
@@ -1974,13 +2010,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         system:
@@ -2121,13 +2193,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         fan:
@@ -2608,13 +2716,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         volumes:
@@ -3425,13 +3569,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         power-supplies:
@@ -3497,13 +3677,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         certificate-status:
@@ -6754,13 +6970,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         pools:
@@ -7386,13 +7638,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         drives:
@@ -7405,11 +7693,11 @@ components:
     advanced-settings-tableObject:
       example:
         advanced-settings-table:
-        - utility-priority-numeric: 0
+        - utility-priority-numeric: 7
           independent-cache: independent-cache
-          hedged-reads-timeout-numeric: 1
-          host-cache-control-numeric: 6
-          slow-disk-detection-numeric: 6
+          hedged-reads-timeout-numeric: 6
+          host-cache-control-numeric: 7
+          slow-disk-detection-numeric: 5
           power-supply-failure: power-supply-failure
           scrub-schedule: scrub-schedule
           auto-unmap-numeric: 1
@@ -7421,14 +7709,15 @@ components:
           emp-poll-rate: emp-poll-rate
           fan-failure-numeric: 1
           auto-write-back: auto-write-back
+          dynamic-spares-numeric: 1
           large-pools: large-pools
           managed-logs: managed-logs
-          pcie-hotplug-numeric: 8
+          pcie-hotplug-numeric: 9
           background-scrub: background-scrub
           delete-override-numeric: 2
-          large-pools-numeric: 1
+          large-pools-numeric: 4
           disk-dsd-enable: disk-dsd-enable
-          power-supply-failure-numeric: 9
+          power-supply-failure-numeric: 6
           controller-failure: controller-failure
           default-mapping-numeric: 3
           auto-write-back-numeric: 5
@@ -7436,22 +7725,22 @@ components:
           super-cap-failure: super-cap-failure
           temperature-exceeded: temperature-exceeded
           controller-failure-numeric: 9
-          sync-cache-mode-numeric: 3
+          sync-cache-mode-numeric: 7
           auto-stall-recovery: auto-stall-recovery
           meta: meta
           pcie-hotplug: pcie-hotplug
           super-cap-failure-numeric: 3
           partner-firmware-upgrade: partner-firmware-upgrade
-          ssd-concurrent-access-numeric: 6
+          ssd-concurrent-access-numeric: 3
           restart-on-capi-fail: restart-on-capi-fail
-          smart-numeric: 5
+          smart-numeric: 6
           memory-card-failure: memory-card-failure
-          single-controller-numeric: 2
+          single-controller-numeric: 6
           disk-dsd-delay: 4
           object-name: object-name
           host-cache-control: host-cache-control
           ssd-concurrent-access: ssd-concurrent-access
-          remanufacture-numeric: 3
+          remanufacture-numeric: 6
           slot-affinity: slot-affinity
           dynamic-spares: dynamic-spares
           smart: smart
@@ -7461,33 +7750,33 @@ components:
           missing-lun-response-numeric: 9
           missing-lun-response: missing-lun-response
           disk-dsd-enable-numeric: 7
-          memory-card-failure-numeric: 5
+          memory-card-failure-numeric: 9
           background-scrub-numeric: 2
-          restart-on-capi-fail-numeric: 6
+          restart-on-capi-fail-numeric: 1
           auto-unmap: auto-unmap
           delete-override: delete-override
-          independent-cache-numeric: 7
+          independent-cache-numeric: 1
           cache-flush-timeout: cache-flush-timeout
-          random-io-performance-optimization-numeric: 6
+          random-io-performance-optimization-numeric: 3
           slot-affinity-numeric: 6
           auto-map-numeric: 0
-          temperature-exceeded-numeric: 7
+          temperature-exceeded-numeric: 0
           remanufacture: remanufacture
-          managed-logs-numeric: 4
+          managed-logs-numeric: 5
           single-controller: single-controller
-          partner-firmware-upgrade-numeric: 9
+          partner-firmware-upgrade-numeric: 6
           cache-flush-timeout-numeric: 7
           disk-firmware-update: disk-firmware-update
           fan-failure: fan-failure
-          scrub-schedule-numeric: 1
+          scrub-schedule-numeric: 2
           utility-priority: utility-priority
           default-mapping: default-mapping
-          partner-notify-numeric: 6
-        - utility-priority-numeric: 0
+          partner-notify-numeric: 8
+        - utility-priority-numeric: 7
           independent-cache: independent-cache
-          hedged-reads-timeout-numeric: 1
-          host-cache-control-numeric: 6
-          slow-disk-detection-numeric: 6
+          hedged-reads-timeout-numeric: 6
+          host-cache-control-numeric: 7
+          slow-disk-detection-numeric: 5
           power-supply-failure: power-supply-failure
           scrub-schedule: scrub-schedule
           auto-unmap-numeric: 1
@@ -7499,14 +7788,15 @@ components:
           emp-poll-rate: emp-poll-rate
           fan-failure-numeric: 1
           auto-write-back: auto-write-back
+          dynamic-spares-numeric: 1
           large-pools: large-pools
           managed-logs: managed-logs
-          pcie-hotplug-numeric: 8
+          pcie-hotplug-numeric: 9
           background-scrub: background-scrub
           delete-override-numeric: 2
-          large-pools-numeric: 1
+          large-pools-numeric: 4
           disk-dsd-enable: disk-dsd-enable
-          power-supply-failure-numeric: 9
+          power-supply-failure-numeric: 6
           controller-failure: controller-failure
           default-mapping-numeric: 3
           auto-write-back-numeric: 5
@@ -7514,22 +7804,22 @@ components:
           super-cap-failure: super-cap-failure
           temperature-exceeded: temperature-exceeded
           controller-failure-numeric: 9
-          sync-cache-mode-numeric: 3
+          sync-cache-mode-numeric: 7
           auto-stall-recovery: auto-stall-recovery
           meta: meta
           pcie-hotplug: pcie-hotplug
           super-cap-failure-numeric: 3
           partner-firmware-upgrade: partner-firmware-upgrade
-          ssd-concurrent-access-numeric: 6
+          ssd-concurrent-access-numeric: 3
           restart-on-capi-fail: restart-on-capi-fail
-          smart-numeric: 5
+          smart-numeric: 6
           memory-card-failure: memory-card-failure
-          single-controller-numeric: 2
+          single-controller-numeric: 6
           disk-dsd-delay: 4
           object-name: object-name
           host-cache-control: host-cache-control
           ssd-concurrent-access: ssd-concurrent-access
-          remanufacture-numeric: 3
+          remanufacture-numeric: 6
           slot-affinity: slot-affinity
           dynamic-spares: dynamic-spares
           smart: smart
@@ -7539,33 +7829,33 @@ components:
           missing-lun-response-numeric: 9
           missing-lun-response: missing-lun-response
           disk-dsd-enable-numeric: 7
-          memory-card-failure-numeric: 5
+          memory-card-failure-numeric: 9
           background-scrub-numeric: 2
-          restart-on-capi-fail-numeric: 6
+          restart-on-capi-fail-numeric: 1
           auto-unmap: auto-unmap
           delete-override: delete-override
-          independent-cache-numeric: 7
+          independent-cache-numeric: 1
           cache-flush-timeout: cache-flush-timeout
-          random-io-performance-optimization-numeric: 6
+          random-io-performance-optimization-numeric: 3
           slot-affinity-numeric: 6
           auto-map-numeric: 0
-          temperature-exceeded-numeric: 7
+          temperature-exceeded-numeric: 0
           remanufacture: remanufacture
-          managed-logs-numeric: 4
+          managed-logs-numeric: 5
           single-controller: single-controller
-          partner-firmware-upgrade-numeric: 9
+          partner-firmware-upgrade-numeric: 6
           cache-flush-timeout-numeric: 7
           disk-firmware-update: disk-firmware-update
           fan-failure: fan-failure
-          scrub-schedule-numeric: 1
+          scrub-schedule-numeric: 2
           utility-priority: utility-priority
           default-mapping: default-mapping
-          partner-notify-numeric: 6
-        - utility-priority-numeric: 0
+          partner-notify-numeric: 8
+        - utility-priority-numeric: 7
           independent-cache: independent-cache
-          hedged-reads-timeout-numeric: 1
-          host-cache-control-numeric: 6
-          slow-disk-detection-numeric: 6
+          hedged-reads-timeout-numeric: 6
+          host-cache-control-numeric: 7
+          slow-disk-detection-numeric: 5
           power-supply-failure: power-supply-failure
           scrub-schedule: scrub-schedule
           auto-unmap-numeric: 1
@@ -7577,14 +7867,15 @@ components:
           emp-poll-rate: emp-poll-rate
           fan-failure-numeric: 1
           auto-write-back: auto-write-back
+          dynamic-spares-numeric: 1
           large-pools: large-pools
           managed-logs: managed-logs
-          pcie-hotplug-numeric: 8
+          pcie-hotplug-numeric: 9
           background-scrub: background-scrub
           delete-override-numeric: 2
-          large-pools-numeric: 1
+          large-pools-numeric: 4
           disk-dsd-enable: disk-dsd-enable
-          power-supply-failure-numeric: 9
+          power-supply-failure-numeric: 6
           controller-failure: controller-failure
           default-mapping-numeric: 3
           auto-write-back-numeric: 5
@@ -7592,22 +7883,22 @@ components:
           super-cap-failure: super-cap-failure
           temperature-exceeded: temperature-exceeded
           controller-failure-numeric: 9
-          sync-cache-mode-numeric: 3
+          sync-cache-mode-numeric: 7
           auto-stall-recovery: auto-stall-recovery
           meta: meta
           pcie-hotplug: pcie-hotplug
           super-cap-failure-numeric: 3
           partner-firmware-upgrade: partner-firmware-upgrade
-          ssd-concurrent-access-numeric: 6
+          ssd-concurrent-access-numeric: 3
           restart-on-capi-fail: restart-on-capi-fail
-          smart-numeric: 5
+          smart-numeric: 6
           memory-card-failure: memory-card-failure
-          single-controller-numeric: 2
+          single-controller-numeric: 6
           disk-dsd-delay: 4
           object-name: object-name
           host-cache-control: host-cache-control
           ssd-concurrent-access: ssd-concurrent-access
-          remanufacture-numeric: 3
+          remanufacture-numeric: 6
           slot-affinity: slot-affinity
           dynamic-spares: dynamic-spares
           smart: smart
@@ -7617,33 +7908,33 @@ components:
           missing-lun-response-numeric: 9
           missing-lun-response: missing-lun-response
           disk-dsd-enable-numeric: 7
-          memory-card-failure-numeric: 5
+          memory-card-failure-numeric: 9
           background-scrub-numeric: 2
-          restart-on-capi-fail-numeric: 6
+          restart-on-capi-fail-numeric: 1
           auto-unmap: auto-unmap
           delete-override: delete-override
-          independent-cache-numeric: 7
+          independent-cache-numeric: 1
           cache-flush-timeout: cache-flush-timeout
-          random-io-performance-optimization-numeric: 6
+          random-io-performance-optimization-numeric: 3
           slot-affinity-numeric: 6
           auto-map-numeric: 0
-          temperature-exceeded-numeric: 7
+          temperature-exceeded-numeric: 0
           remanufacture: remanufacture
-          managed-logs-numeric: 4
+          managed-logs-numeric: 5
           single-controller: single-controller
-          partner-firmware-upgrade-numeric: 9
+          partner-firmware-upgrade-numeric: 6
           cache-flush-timeout-numeric: 7
           disk-firmware-update: disk-firmware-update
           fan-failure: fan-failure
-          scrub-schedule-numeric: 1
+          scrub-schedule-numeric: 2
           utility-priority: utility-priority
           default-mapping: default-mapping
-          partner-notify-numeric: 6
-        - utility-priority-numeric: 0
+          partner-notify-numeric: 8
+        - utility-priority-numeric: 7
           independent-cache: independent-cache
-          hedged-reads-timeout-numeric: 1
-          host-cache-control-numeric: 6
-          slow-disk-detection-numeric: 6
+          hedged-reads-timeout-numeric: 6
+          host-cache-control-numeric: 7
+          slow-disk-detection-numeric: 5
           power-supply-failure: power-supply-failure
           scrub-schedule: scrub-schedule
           auto-unmap-numeric: 1
@@ -7655,14 +7946,15 @@ components:
           emp-poll-rate: emp-poll-rate
           fan-failure-numeric: 1
           auto-write-back: auto-write-back
+          dynamic-spares-numeric: 1
           large-pools: large-pools
           managed-logs: managed-logs
-          pcie-hotplug-numeric: 8
+          pcie-hotplug-numeric: 9
           background-scrub: background-scrub
           delete-override-numeric: 2
-          large-pools-numeric: 1
+          large-pools-numeric: 4
           disk-dsd-enable: disk-dsd-enable
-          power-supply-failure-numeric: 9
+          power-supply-failure-numeric: 6
           controller-failure: controller-failure
           default-mapping-numeric: 3
           auto-write-back-numeric: 5
@@ -7670,22 +7962,22 @@ components:
           super-cap-failure: super-cap-failure
           temperature-exceeded: temperature-exceeded
           controller-failure-numeric: 9
-          sync-cache-mode-numeric: 3
+          sync-cache-mode-numeric: 7
           auto-stall-recovery: auto-stall-recovery
           meta: meta
           pcie-hotplug: pcie-hotplug
           super-cap-failure-numeric: 3
           partner-firmware-upgrade: partner-firmware-upgrade
-          ssd-concurrent-access-numeric: 6
+          ssd-concurrent-access-numeric: 3
           restart-on-capi-fail: restart-on-capi-fail
-          smart-numeric: 5
+          smart-numeric: 6
           memory-card-failure: memory-card-failure
-          single-controller-numeric: 2
+          single-controller-numeric: 6
           disk-dsd-delay: 4
           object-name: object-name
           host-cache-control: host-cache-control
           ssd-concurrent-access: ssd-concurrent-access
-          remanufacture-numeric: 3
+          remanufacture-numeric: 6
           slot-affinity: slot-affinity
           dynamic-spares: dynamic-spares
           smart: smart
@@ -7695,33 +7987,33 @@ components:
           missing-lun-response-numeric: 9
           missing-lun-response: missing-lun-response
           disk-dsd-enable-numeric: 7
-          memory-card-failure-numeric: 5
+          memory-card-failure-numeric: 9
           background-scrub-numeric: 2
-          restart-on-capi-fail-numeric: 6
+          restart-on-capi-fail-numeric: 1
           auto-unmap: auto-unmap
           delete-override: delete-override
-          independent-cache-numeric: 7
+          independent-cache-numeric: 1
           cache-flush-timeout: cache-flush-timeout
-          random-io-performance-optimization-numeric: 6
+          random-io-performance-optimization-numeric: 3
           slot-affinity-numeric: 6
           auto-map-numeric: 0
-          temperature-exceeded-numeric: 7
+          temperature-exceeded-numeric: 0
           remanufacture: remanufacture
-          managed-logs-numeric: 4
+          managed-logs-numeric: 5
           single-controller: single-controller
-          partner-firmware-upgrade-numeric: 9
+          partner-firmware-upgrade-numeric: 6
           cache-flush-timeout-numeric: 7
           disk-firmware-update: disk-firmware-update
           fan-failure: fan-failure
-          scrub-schedule-numeric: 1
+          scrub-schedule-numeric: 2
           utility-priority: utility-priority
           default-mapping: default-mapping
-          partner-notify-numeric: 6
-        - utility-priority-numeric: 0
+          partner-notify-numeric: 8
+        - utility-priority-numeric: 7
           independent-cache: independent-cache
-          hedged-reads-timeout-numeric: 1
-          host-cache-control-numeric: 6
-          slow-disk-detection-numeric: 6
+          hedged-reads-timeout-numeric: 6
+          host-cache-control-numeric: 7
+          slow-disk-detection-numeric: 5
           power-supply-failure: power-supply-failure
           scrub-schedule: scrub-schedule
           auto-unmap-numeric: 1
@@ -7733,14 +8025,15 @@ components:
           emp-poll-rate: emp-poll-rate
           fan-failure-numeric: 1
           auto-write-back: auto-write-back
+          dynamic-spares-numeric: 1
           large-pools: large-pools
           managed-logs: managed-logs
-          pcie-hotplug-numeric: 8
+          pcie-hotplug-numeric: 9
           background-scrub: background-scrub
           delete-override-numeric: 2
-          large-pools-numeric: 1
+          large-pools-numeric: 4
           disk-dsd-enable: disk-dsd-enable
-          power-supply-failure-numeric: 9
+          power-supply-failure-numeric: 6
           controller-failure: controller-failure
           default-mapping-numeric: 3
           auto-write-back-numeric: 5
@@ -7748,22 +8041,22 @@ components:
           super-cap-failure: super-cap-failure
           temperature-exceeded: temperature-exceeded
           controller-failure-numeric: 9
-          sync-cache-mode-numeric: 3
+          sync-cache-mode-numeric: 7
           auto-stall-recovery: auto-stall-recovery
           meta: meta
           pcie-hotplug: pcie-hotplug
           super-cap-failure-numeric: 3
           partner-firmware-upgrade: partner-firmware-upgrade
-          ssd-concurrent-access-numeric: 6
+          ssd-concurrent-access-numeric: 3
           restart-on-capi-fail: restart-on-capi-fail
-          smart-numeric: 5
+          smart-numeric: 6
           memory-card-failure: memory-card-failure
-          single-controller-numeric: 2
+          single-controller-numeric: 6
           disk-dsd-delay: 4
           object-name: object-name
           host-cache-control: host-cache-control
           ssd-concurrent-access: ssd-concurrent-access
-          remanufacture-numeric: 3
+          remanufacture-numeric: 6
           slot-affinity: slot-affinity
           dynamic-spares: dynamic-spares
           smart: smart
@@ -7773,28 +8066,28 @@ components:
           missing-lun-response-numeric: 9
           missing-lun-response: missing-lun-response
           disk-dsd-enable-numeric: 7
-          memory-card-failure-numeric: 5
+          memory-card-failure-numeric: 9
           background-scrub-numeric: 2
-          restart-on-capi-fail-numeric: 6
+          restart-on-capi-fail-numeric: 1
           auto-unmap: auto-unmap
           delete-override: delete-override
-          independent-cache-numeric: 7
+          independent-cache-numeric: 1
           cache-flush-timeout: cache-flush-timeout
-          random-io-performance-optimization-numeric: 6
+          random-io-performance-optimization-numeric: 3
           slot-affinity-numeric: 6
           auto-map-numeric: 0
-          temperature-exceeded-numeric: 7
+          temperature-exceeded-numeric: 0
           remanufacture: remanufacture
-          managed-logs-numeric: 4
+          managed-logs-numeric: 5
           single-controller: single-controller
-          partner-firmware-upgrade-numeric: 9
+          partner-firmware-upgrade-numeric: 6
           cache-flush-timeout-numeric: 7
           disk-firmware-update: disk-firmware-update
           fan-failure: fan-failure
-          scrub-schedule-numeric: 1
+          scrub-schedule-numeric: 2
           utility-priority: utility-priority
           default-mapping: default-mapping
-          partner-notify-numeric: 6
+          partner-notify-numeric: 8
         status:
         - time-stamp: time-stamp
           time-stamp-numeric: 1
@@ -7803,13 +8096,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         advanced-settings-table:
@@ -8220,13 +8549,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         cache-settings:
@@ -10512,13 +10877,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         host-group:
@@ -11024,13 +11425,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         disk-groups:
@@ -56126,13 +56563,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         enclosures:
@@ -64308,13 +64781,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         controllers:
@@ -64535,13 +65044,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         versions:
@@ -64983,13 +65528,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         volume-group-view:
@@ -65246,13 +65827,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         hosts-view:
@@ -65353,13 +65970,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         initiator:
@@ -65575,13 +66228,49 @@ components:
           response-type-numeric: 0
           meta: meta
           response: response
-          response-type: response-type
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
+          return-code: 6
+        - time-stamp: time-stamp
+          time-stamp-numeric: 1
+          component-id: component-id
+          object-name: object-name
+          response-type-numeric: 0
+          meta: meta
+          response: response
+          response-type: Success
           return-code: 6
       properties:
         status:
           items:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1
+          maxItems: 1024
           minItems: 1
           type: array
         snapshots:
@@ -65600,7 +66289,7 @@ components:
         response-type-numeric: 0
         meta: meta
         response: response
-        response-type: response-type
+        response-type: Success
         return-code: 6
       properties:
         object-name:
@@ -65612,12 +66301,17 @@ components:
         response:
           type: string
         response-type:
-          description: "Indicates whether the command returned a success, failure,\
-            \ or informational message"
+          description: "Indicates whether the command returned a Success, Error, Info,\
+            \ or Warning message"
+          enum:
+          - Success
+          - Error
+          - Info
+          - Warning
           type: string
         response-type-numeric:
-          description: "Indicates whether the command returned a success, failure,\
-            \ or informational message( In numeric form )"
+          description: "Indicates whether the command returned a Success (0), Error\
+            \ (1), Info (2), or Warning (3) message (numeric form)"
           type: integer
         return-code:
           description: Numeric return code for the command
@@ -68540,11 +69234,11 @@ components:
       type: object
     advanced_settings_tableResource_inner:
       example:
-        utility-priority-numeric: 0
+        utility-priority-numeric: 7
         independent-cache: independent-cache
-        hedged-reads-timeout-numeric: 1
-        host-cache-control-numeric: 6
-        slow-disk-detection-numeric: 6
+        hedged-reads-timeout-numeric: 6
+        host-cache-control-numeric: 7
+        slow-disk-detection-numeric: 5
         power-supply-failure: power-supply-failure
         scrub-schedule: scrub-schedule
         auto-unmap-numeric: 1
@@ -68556,14 +69250,15 @@ components:
         emp-poll-rate: emp-poll-rate
         fan-failure-numeric: 1
         auto-write-back: auto-write-back
+        dynamic-spares-numeric: 1
         large-pools: large-pools
         managed-logs: managed-logs
-        pcie-hotplug-numeric: 8
+        pcie-hotplug-numeric: 9
         background-scrub: background-scrub
         delete-override-numeric: 2
-        large-pools-numeric: 1
+        large-pools-numeric: 4
         disk-dsd-enable: disk-dsd-enable
-        power-supply-failure-numeric: 9
+        power-supply-failure-numeric: 6
         controller-failure: controller-failure
         default-mapping-numeric: 3
         auto-write-back-numeric: 5
@@ -68571,22 +69266,22 @@ components:
         super-cap-failure: super-cap-failure
         temperature-exceeded: temperature-exceeded
         controller-failure-numeric: 9
-        sync-cache-mode-numeric: 3
+        sync-cache-mode-numeric: 7
         auto-stall-recovery: auto-stall-recovery
         meta: meta
         pcie-hotplug: pcie-hotplug
         super-cap-failure-numeric: 3
         partner-firmware-upgrade: partner-firmware-upgrade
-        ssd-concurrent-access-numeric: 6
+        ssd-concurrent-access-numeric: 3
         restart-on-capi-fail: restart-on-capi-fail
-        smart-numeric: 5
+        smart-numeric: 6
         memory-card-failure: memory-card-failure
-        single-controller-numeric: 2
+        single-controller-numeric: 6
         disk-dsd-delay: 4
         object-name: object-name
         host-cache-control: host-cache-control
         ssd-concurrent-access: ssd-concurrent-access
-        remanufacture-numeric: 3
+        remanufacture-numeric: 6
         slot-affinity: slot-affinity
         dynamic-spares: dynamic-spares
         smart: smart
@@ -68596,28 +69291,28 @@ components:
         missing-lun-response-numeric: 9
         missing-lun-response: missing-lun-response
         disk-dsd-enable-numeric: 7
-        memory-card-failure-numeric: 5
+        memory-card-failure-numeric: 9
         background-scrub-numeric: 2
-        restart-on-capi-fail-numeric: 6
+        restart-on-capi-fail-numeric: 1
         auto-unmap: auto-unmap
         delete-override: delete-override
-        independent-cache-numeric: 7
+        independent-cache-numeric: 1
         cache-flush-timeout: cache-flush-timeout
-        random-io-performance-optimization-numeric: 6
+        random-io-performance-optimization-numeric: 3
         slot-affinity-numeric: 6
         auto-map-numeric: 0
-        temperature-exceeded-numeric: 7
+        temperature-exceeded-numeric: 0
         remanufacture: remanufacture
-        managed-logs-numeric: 4
+        managed-logs-numeric: 5
         single-controller: single-controller
-        partner-firmware-upgrade-numeric: 9
+        partner-firmware-upgrade-numeric: 6
         cache-flush-timeout-numeric: 7
         disk-firmware-update: disk-firmware-update
         fan-failure: fan-failure
-        scrub-schedule-numeric: 1
+        scrub-schedule-numeric: 2
         utility-priority: utility-priority
         default-mapping: default-mapping
-        partner-notify-numeric: 6
+        partner-notify-numeric: 8
       properties:
         object-name:
           type: string
@@ -68700,6 +69395,11 @@ components:
           description: "If enabled, replaces failed disks in a degraded vdisk with\
             \ properly sized available disks"
           type: string
+        dynamic-spares-numeric:
+          description: "If enabled, replaces failed disks in a degraded vdisk with\
+            \ properly sized available disks( In numeric form )"
+          format: int64
+          type: integer
         emp-poll-rate:
           type: string
         fan-failure:

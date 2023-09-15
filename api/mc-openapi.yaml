@@ -856,7 +856,7 @@ components:
     statusResource:
       type: array
       minItems: 1
-      maxItems: 1
+      maxItems: 1024
       items:
         type: object
         properties:
@@ -870,10 +870,11 @@ components:
             type: string
           response-type:
             type: string
-            description: Indicates whether the command returned a success, failure, or informational message
+            enum: [Success, Error, Info, Warning]
+            description: Indicates whether the command returned a Success, Error, Info, or Warning message
           response-type-numeric:
             type: integer
-            description: Indicates whether the command returned a success, failure, or informational message( In numeric form )
+            description: Indicates whether the command returned a Success (0), Error (1), Info (2), or Warning (3) message (numeric form)
           return-code:
             type: integer
             description: Numeric return code for the command
@@ -2527,6 +2528,10 @@ components:
           dynamic-spares:
             type: string
             description: If enabled, replaces failed disks in a degraded vdisk with properly sized available disks
+          dynamic-spares-numeric:
+            type: integer
+            format: int64
+            description: If enabled, replaces failed disks in a degraded vdisk with properly sized available disks( In numeric form )
           emp-poll-rate:
             type: string
           fan-failure:

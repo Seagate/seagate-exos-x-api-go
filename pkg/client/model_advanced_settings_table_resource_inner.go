@@ -55,7 +55,9 @@ type AdvancedSettingsTableResourceInner struct {
 	DiskFirmwareUpdate        *string `json:"disk-firmware-update,omitempty"`
 	DiskFirmwareUpdateNumeric *int64  `json:"disk-firmware-update-numeric,omitempty"`
 	// If enabled, replaces failed disks in a degraded vdisk with properly sized available disks
-	DynamicSpares             *string `json:"dynamic-spares,omitempty"`
+	DynamicSpares *string `json:"dynamic-spares,omitempty"`
+	// If enabled, replaces failed disks in a degraded vdisk with properly sized available disks( In numeric form )
+	DynamicSparesNumeric      *int64  `json:"dynamic-spares-numeric,omitempty"`
 	EmpPollRate               *string `json:"emp-poll-rate,omitempty"`
 	FanFailure                *string `json:"fan-failure,omitempty"`
 	FanFailureNumeric         *int64  `json:"fan-failure-numeric,omitempty"`
@@ -1002,6 +1004,38 @@ func (o *AdvancedSettingsTableResourceInner) HasDynamicSpares() bool {
 // SetDynamicSpares gets a reference to the given string and assigns it to the DynamicSpares field.
 func (o *AdvancedSettingsTableResourceInner) SetDynamicSpares(v string) {
 	o.DynamicSpares = &v
+}
+
+// GetDynamicSparesNumeric returns the DynamicSparesNumeric field value if set, zero value otherwise.
+func (o *AdvancedSettingsTableResourceInner) GetDynamicSparesNumeric() int64 {
+	if o == nil || IsNil(o.DynamicSparesNumeric) {
+		var ret int64
+		return ret
+	}
+	return *o.DynamicSparesNumeric
+}
+
+// GetDynamicSparesNumericOk returns a tuple with the DynamicSparesNumeric field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *AdvancedSettingsTableResourceInner) GetDynamicSparesNumericOk() (*int64, bool) {
+	if o == nil || IsNil(o.DynamicSparesNumeric) {
+		return nil, false
+	}
+	return o.DynamicSparesNumeric, true
+}
+
+// HasDynamicSparesNumeric returns a boolean if a field has been set.
+func (o *AdvancedSettingsTableResourceInner) HasDynamicSparesNumeric() bool {
+	if o != nil && !IsNil(o.DynamicSparesNumeric) {
+		return true
+	}
+
+	return false
+}
+
+// SetDynamicSparesNumeric gets a reference to the given int64 and assigns it to the DynamicSparesNumeric field.
+func (o *AdvancedSettingsTableResourceInner) SetDynamicSparesNumeric(v int64) {
+	o.DynamicSparesNumeric = &v
 }
 
 // GetEmpPollRate returns the EmpPollRate field value if set, zero value otherwise.
@@ -2726,6 +2760,9 @@ func (o AdvancedSettingsTableResourceInner) ToMap() (map[string]interface{}, err
 	}
 	if !IsNil(o.DynamicSpares) {
 		toSerialize["dynamic-spares"] = o.DynamicSpares
+	}
+	if !IsNil(o.DynamicSparesNumeric) {
+		toSerialize["dynamic-spares-numeric"] = o.DynamicSparesNumeric
 	}
 	if !IsNil(o.EmpPollRate) {
 		toSerialize["emp-poll-rate"] = o.EmpPollRate
