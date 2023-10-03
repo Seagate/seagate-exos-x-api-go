@@ -285,7 +285,7 @@ func (client *Client) ShowSnapshots(snapshotId string, sourceVolumeId string) ([
 	// Fill in Snapshot properties for all data objects returned
 	if err == nil && status.ResponseTypeNumeric == 0 {
 		for _, object := range data.Objects {
-			if object.Name == "snapshots" {
+			if object.Name == "snapshot" {
 				snapshot := common.SnapshotObject{}
 				snapshot.ObjectName = object.Name
 				snapshot.CreationTime, _ = common.CreationTimeFromString(object.PropertiesMap["creation-date-time-numeric"].Data)
