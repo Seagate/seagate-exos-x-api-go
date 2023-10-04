@@ -44,6 +44,7 @@ var _ = DescribeRegression("Snapshot Testing (v1)", func(tc *TestContext) {
 			response, status, err := client.ShowVolumes(volname1)
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(0))
+			Expect(len(response)).To(Equal(1))
 			ShowVolumes(logger, response)
 		})
 
@@ -60,6 +61,8 @@ var _ = DescribeRegression("Snapshot Testing (v1)", func(tc *TestContext) {
 			snapshots, status, err := client.ShowSnapshots(snap1, "")
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(0))
+			Expect(len(snapshots)).To(Equal(1))
+			Expect(snapshots[0].Name).To(Equal(snap1))
 			ShowSnapshots(logger, snapshots)
 
 			// Show volumes
@@ -79,10 +82,12 @@ var _ = DescribeRegression("Snapshot Testing (v1)", func(tc *TestContext) {
 			Expect(status.ResponseTypeNumeric).To(Equal(0))
 
 			// Show snapshots
-			snapshots, status, err := client.ShowSnapshots(snap1, "")
+			snapshots, status, err := client.ShowSnapshots(snap2, "")
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(0))
 			ShowSnapshots(logger, snapshots)
+			Expect(len(snapshots)).To(Equal(1))
+			Expect(snapshots[0].Name).To(Equal(snap2))
 
 			// Show volumes
 			volumes, status, err := client.ShowVolumes(volname1)
