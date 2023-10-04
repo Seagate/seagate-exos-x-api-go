@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<RESPONSE VERSION="L100">
-	<OBJECT basetype="status" name="status" oid="1">
-		<PROPERTY name="response-type" type="string" size="12" draw="false" sort="nosort" display-name="Response Type">
-			Success
-		</PROPERTY>

@@ -1,0 +1,4187 @@
+openapi: 3.0.0
+
+info:
+  title: Seagate Management Controller (MC) OpenAPI
+  description: |
+    This API allows users to interact through the MC API to provision and manage storage.
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+
+servers:
+- url: http://localhost:8080/api
+- url: https://localhost:8080/api
+
+paths:
+  # Login
+  /login:
+    get:
+      description: Log in to the storage array management controller
+      operationId: LoginGet
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # Meta
+  /meta/{schemaId}:
+    get:
+      description: Retrieve schema definition for a resource
+      operationId: SchemaGet
+      parameters:
+      - $ref: '#/components/parameters/schemaId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/metaObject'
+  # /show/system
+  /show/system:
+    get:
+      description: Execute /show/system command
+      operationId: ShowSystemGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/systemObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/fans
+  /show/fans:
+    get:
+      description: Execute /show/fans command
+      operationId: ShowFansGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/fanObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/volumes
+  /show/volumes/{namesOption}:
+    get:
+      description: Execute /show/volumes command
+      operationId: ShowVolumesNamesGet
+      parameters:
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/volumesObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/power-supplies
+  /show/power-supplies:
+    get:
+      description: Execute /show/power-supplies command
+      operationId: ShowPower-SuppliesGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/power-suppliesObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/certificate
+  /show/certificate:
+    get:
+      description: Execute /show/certificate command
+      operationId: ShowCertificateGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/certificate-statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/pools
+  /show/pools:
+    get:
+      description: Execute /show/pools command
+      operationId: ShowPoolsGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/poolsObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/disks
+  /show/disks:
+    get:
+      description: Execute /show/disks command
+      operationId: ShowDisksGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/drivesObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/advanced-settings
+  /show/advanced-settings:
+    get:
+      description: Execute /show/advanced-settings command
+      operationId: ShowAdvanced-SettingsGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/advanced-settings-tableObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/cache-parameters
+  /show/cache-parameters:
+    get:
+      description: Execute /show/cache-parameters command
+      operationId: ShowCache-ParametersGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cache-settingsObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/host-groups
+  /show/host-groups:
+    get:
+      description: Execute /show/host-groups command
+      operationId: ShowHost-GroupsGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/host-groupObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/disk-groups
+  /show/disk-groups:
+    get:
+      description: Execute /show/disk-groups command
+      operationId: ShowDisk-GroupsGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/disk-groupsObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/enclosures
+  /show/enclosures:
+    get:
+      description: Execute /show/enclosures command
+      operationId: ShowEnclosuresGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/enclosuresObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/controllers
+  /show/controllers:
+    get:
+      description: Execute /show/controllers command
+      operationId: ShowControllersGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/controllersObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/versions
+  /show/versions:
+    get:
+      description: Execute /show/versions command
+      operationId: ShowVersionsGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/versionsObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/versions/detail
+  /show/versions/detail:
+    get:
+      description: Execute /show/versions/detail command
+      operationId: ShowVersionsDetailGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/versionsObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/maps
+  /show/maps:
+    get:
+      description: Execute /show/maps command
+      operationId: ShowMapsGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/volume-viewObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/maps
+  /show/maps/{namesOption}:
+    get:
+      description: Execute /show/maps command
+      operationId: ShowMapsNamesGet
+      parameters:
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/volume-viewObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/maps/initiator
+  /show/maps/initiator/{namesOption}:
+    get:
+      description: Execute /show/maps/initiator command
+      operationId: ShowMapsInitiatorNamesGet
+      parameters:
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/hosts-viewObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/maps/all
+  /show/maps/all:
+    get:
+      description: Execute /show/maps/all command
+      operationId: ShowMapsAllGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/volume-viewObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/initiators
+  /show/initiators:
+    get:
+      description: Execute /show/initiators command
+      operationId: ShowInitiatorsGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/initiatorObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/initiator
+  /show/initiator/{namesOption}:
+    get:
+      description: Execute /show/initiator command
+      operationId: ShowInitiatorNamesGet
+      parameters:
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/initiatorObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/snapshots
+  /show/snapshots:
+    get:
+      description: Execute /show/snapshots command
+      operationId: ShowSnapshotsGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/snapshotsObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/snapshots
+  /show/snapshots/volume/{volumeOption}:
+    get:
+      description: Execute /show/snapshots command
+      operationId: ShowSnapshotsVolumeGet
+      parameters:
+        - $ref: '#/components/parameters/volumeOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/snapshotsObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/snapshots
+  /show/snapshots/pattern/{patternOption}:
+    get:
+      description: Execute /show/snapshots command
+      operationId: ShowSnapshotsPatternGet
+      parameters:
+        - $ref: '#/components/parameters/patternOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/snapshotsObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /create/volume
+  /create/volume/pool/{poolOption}/size/{sizeOption}/tier-affinity/{tier-affinityOption}/{nameOption}:
+    get:
+      description: Execute /create/volume command
+      operationId: CreateVolumePoolSizeTier-AffinityNameGet
+      parameters:
+        - $ref: '#/components/parameters/poolOption'
+        - $ref: '#/components/parameters/sizeOption'
+        - $ref: '#/components/parameters/tier-affinityOption'
+        - $ref: '#/components/parameters/nameOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/volumesObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /delete/volumes
+  /delete/volumes/{namesOption}:
+    get:
+      description: Execute /delete/volumes command
+      operationId: DeleteVolumesNamesGet
+      parameters:
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /create/snapshots
+  /create/snapshots/volumes/{volumesOption}/{namesOption}:
+    get:
+      description: Execute /create/snapshots command
+      operationId: CreateSnapshotsVolumesNamesGet
+      parameters:
+        - $ref: '#/components/parameters/volumesOption'
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /copy/volume
+  /copy/volume/destination-pool/{destination-poolOption}/name/{nameOption}/{sourceOption}:
+    get:
+      description: Execute /copy/volume command
+      operationId: CopyVolumeDestination-PoolNameSourceGet
+      parameters:
+        - $ref: '#/components/parameters/destination-poolOption'
+        - $ref: '#/components/parameters/nameOption'
+        - $ref: '#/components/parameters/sourceOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /delete/initiator-nickname
+  /delete/initiator-nickname/{nameOption}:
+    get:
+      description: Execute /delete/initiator-nickname command
+      operationId: DeleteInitiator-NicknameNameGet
+      parameters:
+        - $ref: '#/components/parameters/nameOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /delete/hosts
+  /delete/hosts/{namesOption}:
+    get:
+      description: Execute /delete/hosts command
+      operationId: DeleteHostsNamesGet
+      parameters:
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /delete/snapshot
+  /delete/snapshot/{namesOption}:
+    get:
+      description: Execute /delete/snapshot command
+      operationId: DeleteSnapshotNamesGet
+      parameters:
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /expand/volume
+  /expand/volume/size/{sizeOption}/{nameOption}:
+    get:
+      description: Execute /expand/volume command
+      operationId: ExpandVolumeSizeNameGet
+      parameters:
+        - $ref: '#/components/parameters/sizeOption'
+        - $ref: '#/components/parameters/nameOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /set/initiator
+  /set/initiator/id/{idOption}/nickname/{nicknameOption}:
+    get:
+      description: Execute /set/initiator command
+      operationId: SetInitiatorIdNicknameGet
+      parameters:
+        - $ref: '#/components/parameters/idOption'
+        - $ref: '#/components/parameters/nicknameOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /map/volume
+  /map/volume/access/{accessOption}/lun/{lunOption}/initiator/{initiatorOption}/{namesOption}:
+    get:
+      description: Execute /map/volume command
+      operationId: MapVolumeAccessLunInitiatorNamesGet
+      parameters:
+        - $ref: '#/components/parameters/accessOption'
+        - $ref: '#/components/parameters/lunOption'
+        - $ref: '#/components/parameters/initiatorOption'
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /unmap/volume
+  /unmap/volume/initiator/{initiatorOption}/{namesOption}:
+    get:
+      description: Execute /unmap/volume command
+      operationId: UnmapVolumeInitiatorNamesGet
+      parameters:
+        - $ref: '#/components/parameters/initiatorOption'
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /unmap/volume
+  /unmap/volume/{namesOption}:
+    get:
+      description: Execute /unmap/volume command
+      operationId: UnmapVolumeNamesGet
+      parameters:
+        - $ref: '#/components/parameters/namesOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+
+# Security, common parameters, and schemas used by this API
+security:
+- basicAuth: []
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+  parameters:
+    schemaId:
+      description: A string label for a resource
+      name: schemaId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'volumes'
+    namesOption:
+      name: namesOption
+      in: path
+      required: true
+      schema:
+        type: string
+    volumeOption:
+      name: volumeOption
+      in: path
+      required: true
+      schema:
+        type: string
+    patternOption:
+      name: patternOption
+      in: path
+      required: true
+      schema:
+        type: string
+    poolOption:
+      name: poolOption
+      in: path
+      required: true
+      schema:
+        type: string
+    sizeOption:
+      name: sizeOption
+      in: path
+      required: true
+      schema:
+        type: string
+    tier-affinityOption:
+      name: tier-affinityOption
+      in: path
+      required: true
+      schema:
+        type: string
+        enum:
+        - 'no-affinity'
+        - 'archive'
+        - 'performance'
+    nameOption:
+      name: nameOption
+      in: path
+      required: true
+      schema:
+        type: string
+    volumesOption:
+      name: volumesOption
+      in: path
+      required: true
+      schema:
+        type: string
+    destination-poolOption:
+      name: destination-poolOption
+      in: path
+      required: true
+      schema:
+        type: string
+    sourceOption:
+      name: sourceOption
+      in: path
+      required: true
+      schema:
+        type: string
+    idOption:
+      name: idOption
+      in: path
+      required: true
+      schema:
+        type: string
+    nicknameOption:
+      name: nicknameOption
+      in: path
+      required: true
+      schema:
+        type: string
+    accessOption:
+      name: accessOption
+      in: path
+      required: true
+      schema:
+        type: string
+    lunOption:
+      name: lunOption
+      in: path
+      required: true
+      schema:
+        type: string
+    initiatorOption:
+      name: initiatorOption
+      in: path
+      required: true
+      schema:
+        type: string
+
+  schemas:
+    statusResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          component-id:
+            type: string
+          response:
+            type: string
+          response-type:
+            type: string
+            enum: [Success, Error, Info, Warning]
+            description: Indicates whether the command returned a Success, Error, Info, or Warning message
+          response-type-numeric:
+            type: integer
+            description: Indicates whether the command returned a Success (0), Error (1), Info (2), or Warning (3) message (numeric form)
+          return-code:
+            type: integer
+            description: Numeric return code for the command
+          time-stamp:
+            type: string
+            description: Time at which this event was detected
+          time-stamp-numeric:
+            type: integer
+            description: Time at which this event was detected( In numeric form )
+    redundancyResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          controller-a-serial-number:
+            type: string
+          controller-a-status:
+            type: string
+          controller-a-status-numeric:
+            type: integer
+            format: int64
+          controller-b-serial-number:
+            type: string
+          controller-b-status:
+            type: string
+          controller-b-status-numeric:
+            type: integer
+            format: int64
+          local-ready:
+            type: string
+          local-ready-numeric:
+            type: integer
+            format: int64
+          local-reason:
+            type: string
+          other-MC-status:
+            type: string
+            description: Identifies the availability of the partner MC
+          other-MC-status-numeric:
+            type: integer
+            format: int64
+            description: Identifies the availability of the partner MC( In numeric form )
+          other-ready:
+            type: string
+          other-ready-numeric:
+            type: integer
+            format: int64
+          other-reason:
+            type: string
+          redundancy-mode:
+            type: string
+            description: Mode in which the controllers are operating
+          redundancy-mode-numeric:
+            type: integer
+            format: int64
+            description: Mode in which the controllers are operating( In numeric form )
+          redundancy-status:
+            type: string
+            description: Current operational state of the controllers
+          redundancy-status-numeric:
+            type: integer
+            format: int64
+            description: Current operational state of the controllers( In numeric form )
+          system-ready:
+            type: string
+          system-ready-numeric:
+            type: integer
+            format: int64
+    systemResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          configuration-selector:
+            type: string
+          current-node-wwn:
+            type: string
+          enclosure-count:
+            type: integer
+            format: int64
+          fde-security-status:
+            type: string
+          fde-security-status-numeric:
+            type: integer
+            format: int64
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          midplane-serial-number:
+            type: string
+            description: Serial number of the enclosure
+          other-MC-status:
+            type: string
+            description: Identifies the availability of the partner MC
+          other-MC-status-numeric:
+            type: integer
+            format: int64
+            description: Identifies the availability of the partner MC( In numeric form )
+          pfuStatus:
+            type: string
+          pfuStatus-numeric:
+            type: integer
+            format: int64
+          platform-brand:
+            type: string
+            description: HW Platform Brand
+          platform-brand-numeric:
+            type: integer
+            format: int64
+            description: HW Platform Brand( In numeric form )
+          platform-type:
+            type: string
+            description: HW Platform Type
+          platform-type-numeric:
+            type: integer
+            format: int64
+            description: HW Platform Type( In numeric form )
+          product-brand:
+            type: string
+          product-id:
+            type: string
+          scsi-product-id:
+            type: string
+            description: SCSI Product ID
+          scsi-vendor-id:
+            type: string
+            description: SCSI vendor name
+          security-system-management:
+            type: string
+          security-system-management-numeric:
+            type: integer
+            format: int64
+          supported-locales:
+            type: string
+          system-contact:
+            type: string
+            description: User-defined contact for this system
+          system-information:
+            type: string
+          system-location:
+            type: string
+            description: User-defined location of the system
+          system-name:
+            type: string
+            description: User-defined name for the system
+          url:
+            type: string
+            description: The resource URL
+          vendor-name:
+            type: string
+          redundancy:
+            $ref: '#/components/schemas/redundancyResource'
+    fanResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          durable-id:
+            type: string
+          extended-status:
+            type: string
+            description: Extended status (bits)
+          fw-revision:
+            type: string
+            description: Firmware version of the FRU
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-recommendation:
+            type: string
+          hw-revision:
+            type: string
+            description: Hardware version of the FRU
+          location:
+            type: string
+          locator-led:
+            type: string
+            description: Indicates whether the locator LED is on
+          locator-led-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether the locator LED is on( In numeric form )
+          name:
+            type: string
+          part-number:
+            type: string
+          position:
+            type: string
+            description: Position of the component in the enclosure
+          position-numeric:
+            type: integer
+            format: int64
+            description: Position of the component in the enclosure( In numeric form )
+          serial-number:
+            type: string
+          speed:
+            type: integer
+            format: int64
+          status:
+            type: string
+          status-numeric:
+            type: integer
+            format: int64
+          status-ses:
+            type: string
+            description: SES Common status
+          status-ses-numeric:
+            type: integer
+            format: int64
+            description: SES Common status( In numeric form )
+          url:
+            type: string
+            description: The resource URL
+    volumesResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          allocate-reserved-pages-first:
+            type: string
+            description: Allocate Reserved Pages First
+          allocate-reserved-pages-first-numeric:
+            type: integer
+            format: int64
+            description: Allocate Reserved Pages First( In numeric form )
+          allocated-size:
+            type: string
+          allocated-size-numeric:
+            type: integer
+            format: int64
+          allowed-storage-tiers:
+            type: string
+            description: Allowed Virtual Pool Tiers
+          allowed-storage-tiers-numeric:
+            type: integer
+            format: int64
+            description: Allowed Virtual Pool Tiers( In numeric form )
+          attributes:
+            type: string
+            description: Indicates if the disk is single-pathed
+          blocks:
+            type: integer
+            format: int64
+            description: The size in blocks
+          blocksize:
+            type: integer
+            format: int64
+          cache-optimization:
+            type: string
+            description: Whether cache is optimized for sequential and random reads, or sequential only
+          cache-optimization-numeric:
+            type: integer
+            format: int64
+            description: Whether cache is optimized for sequential and random reads, or sequential only( In numeric form )
+          capabilities:
+            type: string
+          compression:
+            type: string
+          compression-efficiency:
+            type: string
+          compression-numeric:
+            type: integer
+            format: int64
+          container-name:
+            type: string
+            description: Container Name
+          container-serial:
+            type: string
+            description: Container Serial Number
+          creation-date-time:
+            type: string
+          creation-date-time-numeric:
+            type: integer
+            format: int64
+          cs-copy-dest:
+            type: string
+          cs-copy-dest-numeric:
+            type: integer
+            format: int64
+          cs-copy-src:
+            type: string
+          cs-copy-src-numeric:
+            type: integer
+            format: int64
+          cs-primary:
+            type: string
+          cs-primary-numeric:
+            type: integer
+            format: int64
+          cs-replication-role:
+            type: string
+          cs-secondary:
+            type: string
+          cs-secondary-numeric:
+            type: integer
+            format: int64
+          durable-id:
+            type: string
+          group-key:
+            type: string
+            description: Durable ID of a Management Group
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-recommendation:
+            type: string
+          interleaved:
+            type: string
+          interleaved-numeric:
+            type: integer
+            format: int64
+          large-virtual-extents:
+            type: string
+            description: Sequentially optimize zone allocation for virtual volume
+          large-virtual-extents-numeric:
+            type: integer
+            format: int64
+            description: Sequentially optimize zone allocation for virtual volume( In numeric form )
+          metadata-in-use:
+            type: string
+            description: Pool Metadata currently being used by volume
+          metadata-in-use-numeric:
+            type: integer
+            format: int64
+            description: Pool Metadata currently being used by volume( In numeric form )
+          owner:
+            type: string
+            description: Controller owning the component
+          owner-numeric:
+            type: integer
+            format: int64
+            description: Controller owning the component( In numeric form )
+          pi-format:
+            type: string
+            description: Used to describe the Host Protection Information
+          pi-format-numeric:
+            type: integer
+            format: int64
+            description: Used to describe the Host Protection Information( In numeric form )
+          preferred-owner:
+            type: string
+            description: Configured owner
+          preferred-owner-numeric:
+            type: integer
+            format: int64
+            description: Configured owner( In numeric form )
+          progress:
+            type: string
+            description: Progress in percent for the volume-copy operation
+          progress-numeric:
+            type: integer
+            format: int64
+            description: Progress in percent for the volume-copy operation( In numeric form )
+          raidtype:
+            type: string
+            description: RAID level
+          raidtype-numeric:
+            type: integer
+            format: int64
+            description: RAID level( In numeric form )
+          read-ahead-size:
+            type: string
+            description: Read-ahead cache setting
+          read-ahead-size-numeric:
+            type: integer
+            format: int64
+            description: Read-ahead cache setting( In numeric form )
+          replication-set:
+            type: string
+          reserved-size-in-pages:
+            type: integer
+            format: int64
+            description: Reserved Size In Pages
+          serial-number:
+            type: string
+          size:
+            type: string
+            description: The size or capacity formatted with the current session base, precision, and units
+          size-numeric:
+            type: integer
+            format: int64
+            description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
+          snap-pool:
+            type: string
+            description: Snap pool associated with this volume
+          snapshot:
+            type: string
+          snapshot-retention-priority:
+            type: string
+            description: Retention priority of the snapshot
+          snapshot-retention-priority-numeric:
+            type: integer
+            format: int64
+            description: Retention priority of the snapshot( In numeric form )
+          storage-pool-name:
+            type: string
+            description: User-defined name for the pool
+          storage-pools-url:
+            type: string
+          storage-type:
+            type: string
+            description: Storage type
+          storage-type-numeric:
+            type: integer
+            format: int64
+            description: Storage type( In numeric form )
+          threshold-percent-of-pool:
+            type: string
+            description: Threshold Percent of Pool
+          tier-affinity:
+            type: string
+          tier-affinity-numeric:
+            type: integer
+            format: int64
+          total-size:
+            type: string
+            description: The total size formatted using the session settings for base, precision, and units
+          total-size-numeric:
+            type: integer
+            format: int64
+            description: The total size formatted using the session settings for base, precision, and units( In numeric form )
+          url:
+            type: string
+            description: The resource URL
+          virtual-disk-name:
+            type: string
+            description: The name of the pool that contains the volume
+          virtual-disk-serial:
+            type: string
+            description: Unique serial number for the disk group
+          volume-class:
+            type: string
+          volume-class-numeric:
+            type: integer
+            format: int64
+          volume-description:
+            type: string
+            description: Provides a user-defined volume identifier
+          volume-group:
+            type: string
+            description: Volume Group
+          volume-name:
+            type: string
+            description: User-defined name for the volume
+          volume-parent:
+            type: string
+            description: Serial number of the associated volume
+          volume-qualifier:
+            type: string
+          volume-qualifier-numeric:
+            type: integer
+            format: int64
+          volume-type:
+            type: string
+            description: Indicates whether the volume is being used for Snapshots
+          volume-type-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether the volume is being used for Snapshots( In numeric form )
+          volume-usage-type:
+            type: string
+            description: Indicates the usage of volume
+          volume-usage-type-numeric:
+            type: integer
+            format: int64
+            description: Indicates the usage of volume( In numeric form )
+          write-policy:
+            type: string
+            description: The write-back cache mode
+          write-policy-numeric:
+            type: integer
+            format: int64
+            description: The write-back cache mode( In numeric form )
+          wwn:
+            type: string
+            description: World Wide Name
+          zero-init-page-on-allocation:
+            type: string
+            description: Zero Init Page On Allocation
+          zero-init-page-on-allocation-numeric:
+            type: integer
+            format: int64
+            description: Zero Init Page On Allocation( In numeric form )
+    power-suppliesResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          configuration-serialnumber:
+            type: string
+          dash-level:
+            type: string
+          dc12i:
+            type: integer
+            format: int64
+          dc12v:
+            type: integer
+            format: int64
+          dc33v:
+            type: integer
+            format: int64
+          dc5i:
+            type: integer
+            format: int64
+          dc5v:
+            type: integer
+            format: int64
+          dctemp:
+            type: integer
+            format: int64
+          description:
+            type: string
+          dom-id:
+            type: integer
+            format: int64
+          durable-id:
+            type: string
+          enclosure-id:
+            type: integer
+            format: int64
+          enclosures-url:
+            type: string
+          fru-shortname:
+            type: string
+          fw-revision:
+            type: string
+            description: Firmware version of the FRU
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-recommendation:
+            type: string
+          location:
+            type: string
+          mfg-date:
+            type: string
+          mfg-date-numeric:
+            type: integer
+            format: int64
+          mfg-location:
+            type: string
+          mfg-vendor-id:
+            type: string
+          model:
+            type: string
+          name:
+            type: string
+          part-number:
+            type: string
+          position:
+            type: string
+            description: Position of the component in the enclosure
+          position-numeric:
+            type: integer
+            format: int64
+            description: Position of the component in the enclosure( In numeric form )
+          revision:
+            type: string
+            description: Current revision for this FRU
+          serial-number:
+            type: string
+          status:
+            type: string
+          status-numeric:
+            type: integer
+            format: int64
+          url:
+            type: string
+            description: The resource URL
+          vendor:
+            type: string
+          fan:
+            $ref: '#/components/schemas/fanResource'
+    certificate-statusResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          certificate-signature:
+            type: string
+          certificate-status:
+            type: string
+          certificate-status-numeric:
+            type: integer
+            format: int64
+          certificate-text:
+            type: string
+          certificate-time:
+            type: string
+          controller:
+            type: string
+          controller-numeric:
+            type: integer
+            format: int64
+    disk-groupsResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          actual-spare-capacity:
+            type: string
+          actual-spare-capacity-numeric:
+            type: integer
+            format: int64
+          allocated-pages:
+            type: integer
+            format: int64
+            description: Number of pages allocated
+          array-drive-type:
+            type: string
+            description: Disk interface type
+          array-drive-type-numeric:
+            type: integer
+            format: int64
+            description: Disk interface type( In numeric form )
+          available-pages:
+            type: integer
+            format: int64
+            description: Available pages
+          blocks:
+            type: integer
+            format: int64
+            description: The size in blocks
+          blocksize:
+            type: integer
+            format: int64
+          cache-flush-period:
+            type: integer
+            format: int64
+          cache-read-ahead:
+            type: string
+          cache-read-ahead-numeric:
+            type: integer
+            format: int64
+          chunksize:
+            type: string
+            description: Smallest block of usable space
+          create-date:
+            type: string
+          create-date-numeric:
+            type: integer
+            format: int64
+          critical-capacity:
+            type: string
+          critical-capacity-numeric:
+            type: integer
+            format: int64
+          current-job:
+            type: string
+          current-job-completion:
+            type: string
+          current-job-numeric:
+            type: integer
+            format: int64
+          degraded-capacity:
+            type: string
+          degraded-capacity-numeric:
+            type: integer
+            format: int64
+          disk-description:
+            type: string
+            description: Disk interface Description
+          disk-description-numeric:
+            type: integer
+            format: int64
+            description: Disk interface Description( In numeric form )
+          disk-dsd-delay-vdisk:
+            type: integer
+            format: int64
+          disk-dsd-enable-vdisk:
+            type: string
+          disk-dsd-enable-vdisk-numeric:
+            type: integer
+            format: int64
+          diskcount:
+            type: integer
+            format: int64
+            description: Number of disks
+          extended-status:
+            type: integer
+            format: int64
+            description: Extended status (bits)
+          freespace:
+            type: string
+            description: Amount of free space in the vdisk
+          freespace-numeric:
+            type: integer
+            format: int64
+            description: Amount of free space in the vdisk( In numeric form )
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-reason-numeric:
+            type: integer
+            format: int64
+          health-recommendation:
+            type: string
+          health-recommendation-numeric:
+            type: integer
+            format: int64
+          interleaved-volume-count:
+            type: integer
+            format: int64
+          is-job-auto-abortable:
+            type: string
+          is-job-auto-abortable-numeric:
+            type: integer
+            format: int64
+          job-running:
+            type: string
+          largest-free-partition-space:
+            type: string
+          largest-free-partition-space-numeric:
+            type: integer
+            format: int64
+          linear-volume-boundary:
+            type: integer
+            format: int64
+          lun:
+            type: integer
+            format: int64
+            description: Logical Unit Number
+          metadata-size:
+            type: string
+            description: Disk Group Metadata Capacity
+          metadata-size-numeric:
+            type: integer
+            format: int64
+            description: Disk Group Metadata Capacity( In numeric form )
+          min-drive-size:
+            type: string
+            description: Smallest disk size that can be used for this disk group
+          min-drive-size-numeric:
+            type: integer
+            format: int64
+            description: Smallest disk size that can be used for this disk group( In numeric form )
+          name:
+            type: string
+          new-partition-lba:
+            type: string
+            description: LBA used for the next volume that will be created
+          new-partition-lba-numeric:
+            type: integer
+            format: int64
+            description: LBA used for the next volume that will be created( In numeric form )
+          num-array-partitions:
+            type: integer
+            format: int64
+            description: Number of volumes in this vdisk
+          num-drives-per-low-level-array:
+            type: integer
+            format: int64
+            description: Number of disks in the RAID 10 or 50 subgroup
+          num-expansion-partitions:
+            type: integer
+            format: int64
+          num-partition-segments:
+            type: integer
+            format: int64
+          overhead:
+            type: string
+          overhead-numeric:
+            type: integer
+            format: int64
+          owner:
+            type: string
+            description: Controller owning the component
+          owner-numeric:
+            type: integer
+            format: int64
+            description: Controller owning the component( In numeric form )
+          performance-rank:
+            type: integer
+            format: int64
+            description: Disk group performance rank within the virtual pool
+          pool:
+            type: string
+            description: Pool
+          pool-percentage:
+            type: integer
+            format: int64
+            description: Portion of the virtual pool used by this disk group
+          pool-sector-format:
+            type: string
+            description: Pool Sector Format
+          pool-sector-format-numeric:
+            type: integer
+            format: int64
+            description: Pool Sector Format( In numeric form )
+          pool-serial-number:
+            type: string
+            description: Serial number of the pool
+          pools-url:
+            type: string
+            description: URL for associated Storage Pool
+          preferred-owner:
+            type: string
+            description: Configured owner
+          preferred-owner-numeric:
+            type: integer
+            format: int64
+            description: Configured owner( In numeric form )
+          raidtype:
+            type: string
+            description: RAID level
+          raidtype-numeric:
+            type: integer
+            format: int64
+            description: RAID level( In numeric form )
+          raw-size:
+            type: string
+          raw-size-numeric:
+            type: integer
+            format: int64
+          read-ahead-enabled:
+            type: string
+            description: Indicates whether read-ahead cache mode is enabled
+          read-ahead-enabled-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether read-ahead cache mode is enabled( In numeric form )
+          scrub-duration-goal:
+            type: integer
+            format: int64
+            description: Preferred duration for vdisk scrub utility
+          serial-number:
+            type: string
+          size:
+            type: string
+            description: The size or capacity formatted with the current session base, precision, and units
+          size-numeric:
+            type: integer
+            format: int64
+            description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
+          sparecount:
+            type: integer
+            format: int64
+            description: Number of spare disks currently configured
+          spear:
+            type: string
+          spear-numeric:
+            type: integer
+            format: int64
+          status:
+            type: string
+          status-numeric:
+            type: integer
+            format: int64
+          storage-tier:
+            type: string
+            description: Disk group tier assignment for tiered migration
+          storage-tier-numeric:
+            type: integer
+            format: int64
+            description: Disk group tier assignment for tiered migration( In numeric form )
+          storage-type:
+            type: string
+            description: Storage type
+          storage-type-numeric:
+            type: integer
+            format: int64
+            description: Storage type( In numeric form )
+          stripe-width:
+            type: string
+          stripe-width-numeric:
+            type: integer
+            format: int64
+          target-spare-capacity:
+            type: string
+          target-spare-capacity-numeric:
+            type: integer
+            format: int64
+          total-pages:
+            type: integer
+            format: int64
+          url:
+            type: string
+            description: The resource URL
+          write-back-enabled:
+            type: string
+            description: Indicates whether disk write-back cache is enabled
+          write-back-enabled-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether disk write-back cache is enabled( In numeric form )
+    tiersResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          affinity-size:
+            type: string
+          affinity-size-numeric:
+            type: integer
+            format: int64
+          allocated-size:
+            type: string
+          allocated-size-numeric:
+            type: integer
+            format: int64
+          available-size:
+            type: string
+          available-size-numeric:
+            type: integer
+            format: int64
+          diskcount:
+            type: integer
+            format: int64
+            description: Number of disks
+          pool:
+            type: string
+            description: Pool
+          pool-percentage:
+            type: integer
+            format: int64
+            description: Portion of the virtual pool used by this disk group
+          raw-size:
+            type: string
+          raw-size-numeric:
+            type: integer
+            format: int64
+          serial-number:
+            type: string
+          tier:
+            type: string
+          tier-numeric:
+            type: integer
+            format: int64
+          total-size:
+            type: string
+            description: The total size formatted using the session settings for base, precision, and units
+          total-size-numeric:
+            type: integer
+            format: int64
+            description: The total size formatted using the session settings for base, precision, and units( In numeric form )
+    poolsResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          allocated-pages:
+            type: integer
+            format: int64
+            description: Number of pages allocated
+          available-pages:
+            type: integer
+            format: int64
+            description: Available pages
+          available-rfc-size:
+            type: string
+          available-rfc-size-numeric:
+            type: integer
+            format: int64
+          blocksize:
+            type: integer
+            format: int64
+          compression-efficiency:
+            type: string
+          disk-groups-count:
+            type: integer
+            format: int64
+          extended-status:
+            type: integer
+            format: int64
+            description: Extended status (bits)
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-reason-numeric:
+            type: integer
+            format: int64
+          health-recommendation:
+            type: string
+          health-recommendation-numeric:
+            type: integer
+            format: int64
+          high-threshold:
+            type: string
+            description: High threshold percentage
+          idle-page-check:
+            type: string
+          idle-page-check-numeric:
+            type: integer
+            format: int64
+          low-threshold:
+            type: string
+            description: Low threshold percentage
+          metadata-allocated:
+            type: string
+            description: Pool Metadata currently in use
+          metadata-allocated-numeric:
+            type: integer
+            format: int64
+            description: Pool Metadata currently in use( In numeric form )
+          metadata-available:
+            type: string
+            description: Pool Metadata available capacity
+          metadata-available-numeric:
+            type: integer
+            format: int64
+            description: Pool Metadata available capacity( In numeric form )
+          metadata-total-size:
+            type: string
+            description: Disk Group Metadata Total Size
+          metadata-total-size-numeric:
+            type: integer
+            format: int64
+            description: Disk Group Metadata Total Size( In numeric form )
+          metadata-vol-size:
+            type: string
+            description: Size of the storage pool metadata volume
+          metadata-vol-size-numeric:
+            type: integer
+            format: int64
+            description: Size of the storage pool metadata volume( In numeric form )
+          middle-threshold:
+            type: string
+            description: Middle threshold percentage
+          migration:
+            type: string
+            description: Migration between tiers
+          migration-numeric:
+            type: integer
+            format: int64
+            description: Migration between tiers( In numeric form )
+          name:
+            type: string
+          over-committed:
+            type: string
+          over-committed-numeric:
+            type: integer
+            format: int64
+          overcommit:
+            type: string
+          overcommit-numeric:
+            type: integer
+            format: int64
+          owner:
+            type: string
+            description: Controller owning the component
+          owner-numeric:
+            type: integer
+            format: int64
+            description: Controller owning the component( In numeric form )
+          page-size:
+            type: string
+            description: Page size in blocks
+          page-size-numeric:
+            type: integer
+            format: int64
+            description: Page size in blocks( In numeric form )
+          pool-sector-format:
+            type: string
+            description: Pool Sector Format
+          pool-sector-format-numeric:
+            type: integer
+            format: int64
+            description: Pool Sector Format( In numeric form )
+          preferred-owner:
+            type: string
+            description: Configured owner
+          preferred-owner-numeric:
+            type: integer
+            format: int64
+            description: Configured owner( In numeric form )
+          read-flash-cache:
+            type: string
+          read-flash-cache-numeric:
+            type: integer
+            format: int64
+          rebalance:
+            type: string
+            description: Rebalance within the tier
+          rebalance-numeric:
+            type: integer
+            format: int64
+            description: Rebalance within the tier( In numeric form )
+          reserved-size:
+            type: string
+          reserved-size-numeric:
+            type: integer
+            format: int64
+          reserved-unalloc-size:
+            type: string
+          reserved-unalloc-size-numeric:
+            type: integer
+            format: int64
+          serial-number:
+            type: string
+          snap-size:
+            type: string
+          snap-size-numeric:
+            type: integer
+            format: int64
+          storage-type:
+            type: string
+            description: Storage type
+          storage-type-numeric:
+            type: integer
+            format: int64
+            description: Storage type( In numeric form )
+          total-avail:
+            type: string
+          total-avail-numeric:
+            type: integer
+            format: int64
+          total-rfc-size:
+            type: string
+          total-rfc-size-numeric:
+            type: integer
+            format: int64
+          total-size:
+            type: string
+            description: The total size formatted using the session settings for base, precision, and units
+          total-size-numeric:
+            type: integer
+            format: int64
+            description: The total size formatted using the session settings for base, precision, and units( In numeric form )
+          url:
+            type: string
+            description: The resource URL
+          utility-running:
+            type: string
+          utility-running-numeric:
+            type: integer
+            format: int64
+          volumes:
+            type: integer
+            format: int64
+          zero-scan:
+            type: string
+            description: Scan for zero-value pages
+          zero-scan-numeric:
+            type: integer
+            format: int64
+            description: Scan for zero-value pages( In numeric form )
+          disk-groups:
+            $ref: '#/components/schemas/disk-groupsResource'
+          tiers:
+            $ref: '#/components/schemas/tiersResource'
+    drivesResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          architecture:
+            type: string
+          architecture-numeric:
+            type: integer
+            format: int64
+          assurance-level:
+            type: string
+          assurance-level-numeric:
+            type: integer
+            format: int64
+          attributes:
+            type: string
+            description: Indicates if the disk is single-pathed
+          attributes-numeric:
+            type: integer
+            format: int64
+            description: Indicates if the disk is single-pathed( In numeric form )
+          avg-rsp-time:
+            type: integer
+            format: int64
+          blink:
+            type: integer
+            format: int64
+            description: Indicates whether the locator LED is on
+          blocks:
+            type: integer
+            format: int64
+            description: The size in blocks
+          blocksize:
+            type: integer
+            format: int64
+          container-index:
+            type: integer
+            format: int64
+          copyback-state:
+            type: string
+            description: Copyback State
+          copyback-state-numeric:
+            type: integer
+            format: int64
+            description: Copyback State( In numeric form )
+          current-job-completion:
+            type: string
+          description:
+            type: string
+          description-numeric:
+            type: integer
+            format: int64
+          disk-dsd-count:
+            type: integer
+            format: int64
+          disk-group:
+            type: string
+            description: Disk Group details
+          drawer-id:
+            type: integer
+            format: int64
+          drive-down-code:
+            type: integer
+            format: int64
+          dual-port:
+            type: integer
+            format: int64
+          durable-id:
+            type: string
+          enclosure-id:
+            type: integer
+            format: int64
+          enclosure-wwn:
+            type: string
+            description: Enclosure World Wide Name
+          enclosures-url:
+            type: string
+          error:
+            type: integer
+            format: int64
+          extended-status:
+            type: integer
+            format: int64
+            description: Extended status (bits)
+          fc-p1-channel:
+            type: integer
+            format: int64
+          fc-p1-device-id:
+            type: integer
+            format: int64
+          fc-p1-node-wwn:
+            type: string
+          fc-p1-port-wwn:
+            type: string
+          fc-p1-unit-number:
+            type: integer
+            format: int64
+          fc-p2-channel:
+            type: integer
+            format: int64
+          fc-p2-device-id:
+            type: integer
+            format: int64
+          fc-p2-node-wwn:
+            type: string
+          fc-p2-port-wwn:
+            type: string
+          fc-p2-unit-number:
+            type: integer
+            format: int64
+          fde-config-time:
+            type: string
+          fde-config-time-numeric:
+            type: integer
+            format: int64
+          fde-state:
+            type: string
+          fde-state-numeric:
+            type: integer
+            format: int64
+          fips-capable:
+            type: string
+          fips-capable-numeric:
+            type: integer
+            format: int64
+          firmware-update-status:
+            type: string
+          firmware-update-status-numeric:
+            type: integer
+            format: int64
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-reason-numeric:
+            type: integer
+            format: int64
+          health-recommendation:
+            type: string
+          health-recommendation-numeric:
+            type: integer
+            format: int64
+          import-lock-key-id:
+            type: string
+          index:
+            type: integer
+            format: int64
+          interface:
+            type: string
+          interface-numeric:
+            type: integer
+            format: int64
+          job-running:
+            type: string
+          job-running-numeric:
+            type: integer
+            format: int64
+          kmip-state:
+            type: string
+          kmip-state-numeric:
+            type: integer
+            format: int64
+          led-status:
+            type: string
+          led-status-numeric:
+            type: integer
+            format: int64
+          location:
+            type: string
+          locator-led:
+            type: string
+            description: Indicates whether the locator LED is on
+          locator-led-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether the locator LED is on( In numeric form )
+          lock-key-id:
+            type: string
+          member-index:
+            type: integer
+            format: int64
+            description: Index for this disk in the vdisk list
+          model:
+            type: string
+          num-depopped-heads:
+            type: integer
+            format: int64
+            description: Number of depopulated heads
+          number-of-ios:
+            type: integer
+            format: int64
+          owner:
+            type: string
+            description: Controller owning the component
+          owner-numeric:
+            type: integer
+            format: int64
+            description: Controller owning the component( In numeric form )
+          pi-formatted:
+            type: string
+            description: Used to describe the Disk Protection Information
+          pi-formatted-numeric:
+            type: integer
+            format: int64
+            description: Used to describe the Disk Protection Information( In numeric form )
+          port:
+            type: integer
+            format: int64
+          power-on-hours:
+            type: integer
+            format: int64
+          recon-state:
+            type: string
+            description: Reconstruction State
+          recon-state-numeric:
+            type: integer
+            format: int64
+            description: Reconstruction State( In numeric form )
+          remanufacture:
+            type: string
+          remanufacture-numeric:
+            type: integer
+            format: int64
+          revision:
+            type: string
+            description: Current revision for this FRU
+          rpm:
+            type: integer
+            format: int64
+            description: Vendor-specified disk speed in thousands of revolutions per minute
+          scsi-id:
+            type: integer
+            format: int64
+            description: SCSI ID assigned to this disk for the primary channel
+          secondary-channel:
+            type: integer
+            format: int64
+            description: SCSI ID assigned to this disk for the secondary channel
+          sector-format:
+            type: string
+          sector-format-numeric:
+            type: integer
+            format: int64
+          serial-number:
+            type: string
+          single-ported:
+            type: string
+          single-ported-numeric:
+            type: integer
+            format: int64
+          size:
+            type: string
+            description: The size or capacity formatted with the current session base, precision, and units
+          size-numeric:
+            type: integer
+            format: int64
+            description: The size or capacity formatted with the current session base, precision, and units( In numeric form )
+          slot:
+            type: integer
+            format: int64
+            description: The slot number where the disk is located
+          smart:
+            type: string
+          smart-numeric:
+            type: integer
+            format: int64
+          speed:
+            type: integer
+            format: int64
+          spun-down:
+            type: integer
+            format: int64
+            description: Indicates a drive is spun down
+          ssd-life-left:
+            type: string
+          ssd-life-left-numeric:
+            type: integer
+            format: int64
+          state:
+            type: string
+          status:
+            type: string
+          storage-pool-name:
+            type: string
+            description: User-defined name for the pool
+          storage-tier:
+            type: string
+            description: Disk group tier assignment for tiered migration
+          storage-tier-numeric:
+            type: integer
+            format: int64
+            description: Disk group tier assignment for tiered migration( In numeric form )
+          supports-unmap:
+            type: string
+          supports-unmap-numeric:
+            type: integer
+            format: int64
+          temperature:
+            type: string
+          temperature-numeric:
+            type: integer
+            format: int64
+          temperature-status:
+            type: string
+          temperature-status-numeric:
+            type: integer
+            format: int64
+          total-data-transferred:
+            type: string
+          total-data-transferred-numeric:
+            type: integer
+            format: int64
+          transfer-rate:
+            type: string
+            description: Transfer rate of the disk
+          transfer-rate-numeric:
+            type: integer
+            format: int64
+            description: Transfer rate of the disk( In numeric form )
+          type:
+            type: string
+            description: The type of disk
+          type-numeric:
+            type: integer
+            format: int64
+            description: The type of disk( In numeric form )
+          url:
+            type: string
+            description: The resource URL
+          usage:
+            type: string
+            description: Disk usage
+          usage-numeric:
+            type: integer
+            format: int64
+            description: Disk usage
+          vendor:
+            type: string
+          virtual-disk-serial:
+            type: string
+            description: Unique serial number for the disk group
+    advanced-settings-tableResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          auto-map:
+            type: string
+          auto-map-numeric:
+            type: integer
+            format: int64
+          auto-stall-recovery:
+            type: string
+            description: Provides detection of when hung controllers are preventing IO from completing
+          auto-stall-recovery-numeric:
+            type: integer
+            format: int64
+            description: Provides detection of when hung controllers are preventing IO from completing( In numeric form )
+          auto-unmap:
+            type: string
+          auto-unmap-numeric:
+            type: integer
+            format: int64
+          auto-write-back:
+            type: string
+            description: Data is cached to memory before being written to disk
+          auto-write-back-numeric:
+            type: integer
+            format: int64
+            description: Data is cached to memory before being written to disk( In numeric form )
+          background-scrub:
+            type: string
+            description: Low priority disk group scrub
+          background-scrub-interval:
+            type: integer
+            format: int64
+            description: Disk group scrub start interval
+          background-scrub-numeric:
+            type: integer
+            format: int64
+            description: Low priority disk group scrub( In numeric form )
+          cache-flush-timeout:
+            type: string
+          cache-flush-timeout-numeric:
+            type: integer
+            format: int64
+          controller-failure:
+            type: string
+          controller-failure-numeric:
+            type: integer
+            format: int64
+          default-mapping:
+            type: string
+          default-mapping-numeric:
+            type: integer
+            format: int64
+          delete-override:
+            type: string
+            description: Bypass checks when deleting a pool.
+          delete-override-numeric:
+            type: integer
+            format: int64
+            description: Bypass checks when deleting a pool.( In numeric form )
+          disk-dsd-delay:
+            type: integer
+            format: int64
+          disk-dsd-enable:
+            type: string
+          disk-dsd-enable-numeric:
+            type: integer
+            format: int64
+          disk-firmware-update:
+            type: string
+          disk-firmware-update-numeric:
+            type: integer
+            format: int64
+          dynamic-spares:
+            type: string
+            description: If enabled, replaces failed disks in a degraded vdisk with properly sized available disks
+          dynamic-spares-numeric:
+            type: integer
+            format: int64
+            description: If enabled, replaces failed disks in a degraded vdisk with properly sized available disks( In numeric form )
+          emp-poll-rate:
+            type: string
+          fan-failure:
+            type: string
+          fan-failure-numeric:
+            type: integer
+            format: int64
+          hedged-reads-timeout:
+            type: string
+          hedged-reads-timeout-numeric:
+            type: integer
+            format: int64
+          host-cache-control:
+            type: string
+            description: Whether hosts can change the system's write-back cache setting
+          host-cache-control-numeric:
+            type: integer
+            format: int64
+            description: Whether hosts can change the system's write-back cache setting( In numeric form )
+          independent-cache:
+            type: string
+          independent-cache-numeric:
+            type: integer
+            format: int64
+          large-pools:
+            type: string
+          large-pools-numeric:
+            type: integer
+            format: int64
+          managed-logs:
+            type: string
+          managed-logs-numeric:
+            type: integer
+            format: int64
+          memory-card-failure:
+            type: string
+          memory-card-failure-numeric:
+            type: integer
+            format: int64
+          missing-lun-response:
+            type: string
+          missing-lun-response-numeric:
+            type: integer
+            format: int64
+          partner-firmware-upgrade:
+            type: string
+            description: Indicates whether automated update of firmware of other controller is enabled
+          partner-firmware-upgrade-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether automated update of firmware of other controller is enabled( In numeric form )
+          partner-notify:
+            type: string
+            description: Indicates whether the write-through trigger is enabled
+          partner-notify-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether the write-through trigger is enabled( In numeric form )
+          pcie-hotplug:
+            type: string
+          pcie-hotplug-numeric:
+            type: integer
+            format: int64
+          power-supply-failure:
+            type: string
+            description: Indicates whether the write-through trigger is enabled
+          power-supply-failure-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether the write-through trigger is enabled( In numeric form )
+          random-io-performance-optimization:
+            type: string
+          random-io-performance-optimization-numeric:
+            type: integer
+            format: int64
+          remanufacture:
+            type: string
+          remanufacture-numeric:
+            type: integer
+            format: int64
+          restart-on-capi-fail:
+            type: string
+          restart-on-capi-fail-numeric:
+            type: integer
+            format: int64
+          scrub-schedule:
+            type: string
+          scrub-schedule-numeric:
+            type: integer
+            format: int64
+          single-controller:
+            type: string
+          single-controller-numeric:
+            type: integer
+            format: int64
+          slot-affinity:
+            type: string
+          slot-affinity-numeric:
+            type: integer
+            format: int64
+          slow-disk-detection:
+            type: string
+          slow-disk-detection-numeric:
+            type: integer
+            format: int64
+          smart:
+            type: string
+          smart-numeric:
+            type: integer
+            format: int64
+          ssd-concurrent-access:
+            type: string
+          ssd-concurrent-access-numeric:
+            type: integer
+            format: int64
+          super-cap-failure:
+            type: string
+            description: Indicates whether the write-through trigger is enabled
+          super-cap-failure-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether the write-through trigger is enabled( In numeric form )
+          sync-cache-mode:
+            type: string
+          sync-cache-mode-numeric:
+            type: integer
+            format: int64
+          temperature-exceeded:
+            type: string
+            description: Indicates whether the write-through trigger is enabled
+          temperature-exceeded-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether the write-through trigger is enabled( In numeric form )
+          utility-priority:
+            type: string
+            description: Configured processing priority for utilities
+          utility-priority-numeric:
+            type: integer
+            format: int64
+            description: Configured processing priority for utilities( In numeric form )
+    controller-cache-parametersResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          cache-flush:
+            type: string
+          cache-flush-numeric:
+            type: integer
+            format: int64
+          controller-id:
+            type: string
+          controller-id-numeric:
+            type: integer
+            format: int64
+          durable-id:
+            type: string
+          memory-card-health:
+            type: string
+          memory-card-health-numeric:
+            type: integer
+            format: int64
+          memory-card-status:
+            type: string
+          memory-card-status-numeric:
+            type: integer
+            format: int64
+          name:
+            type: string
+          write-back-status:
+            type: string
+            description: Indicates whether disk write-back cache is enabled
+          write-back-status-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether disk write-back cache is enabled( In numeric form )
+    cache-settingsResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          cache-block-size:
+            type: integer
+            format: int64
+          operation-mode:
+            type: string
+            description: Storage system operation mode (redundancy mode)
+          operation-mode-numeric:
+            type: integer
+            format: int64
+            description: Storage system operation mode (redundancy mode)( In numeric form )
+          pi-format:
+            type: string
+            description: Used to describe the Host Protection Information
+          pi-format-numeric:
+            type: integer
+            format: int64
+            description: Used to describe the Host Protection Information( In numeric form )
+          controller-cache-parameters:
+            $ref: '#/components/schemas/controller-cache-parametersResource'
+    initiatorResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          discovered:
+            type: string
+          durable-id:
+            type: string
+          host-bus-type:
+            type: string
+          host-bus-type-numeric:
+            type: integer
+            format: int64
+          host-id:
+            type: string
+          host-key:
+            type: string
+            description: Durable ID of a Host
+          host-port-bits-a:
+            type: integer
+            format: int64
+          host-port-bits-b:
+            type: integer
+            format: int64
+          id:
+            type: string
+          mapped:
+            type: string
+          nickname:
+            type: string
+            description: User-defined alias for the mapped host
+          profile:
+            type: string
+          profile-numeric:
+            type: integer
+            format: int64
+          url:
+            type: string
+            description: The resource URL
+    hostResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          durable-id:
+            type: string
+          group-key:
+            type: string
+            description: Durable ID of a Management Group
+          host-group:
+            type: string
+          member-count:
+            type: integer
+            format: int64
+            description: Number of members
+          name:
+            type: string
+          serial-number:
+            type: string
+          initiator:
+            $ref: '#/components/schemas/initiatorResource'
+    host-groupResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          durable-id:
+            type: string
+          member-count:
+            type: integer
+            format: int64
+            description: Number of members
+          name:
+            type: string
+          serial-number:
+            type: string
+          url:
+            type: string
+            description: The resource URL
+          host:
+            $ref: '#/components/schemas/hostResource'
+    network-parametersResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          active-version:
+            type: integer
+            format: int64
+            description: Currently assigned IP version
+          addressing-mode:
+            type: string
+            description: The way in which an IP address should be obtained
+          addressing-mode-numeric:
+            type: integer
+            format: int64
+            description: The way in which an IP address should be obtained( In numeric form )
+          auto-negotiation:
+            type: string
+          auto-negotiation-numeric:
+            type: integer
+            format: int64
+          duplex-mode:
+            type: string
+            description: Type of duplex mode that is specified
+          duplex-mode-numeric:
+            type: integer
+            format: int64
+            description: Type of duplex mode that is specified( In numeric form )
+          durable-id:
+            type: string
+          gateway:
+            type: string
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-recommendation:
+            type: string
+          ip-address:
+            type: string
+          link-speed:
+            type: string
+            description: Link speed associated with this ethernet port
+          link-speed-numeric:
+            type: integer
+            format: int64
+            description: Link speed associated with this ethernet port( In numeric form )
+          mac-address:
+            type: string
+            description: MAC address for the network port
+          ping-broadcast:
+            type: string
+          ping-broadcast-numeric:
+            type: integer
+            format: int64
+          subnet-mask:
+            type: string
+            description: Network port subnet mask
+    fc-portResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          configured-topology:
+            type: string
+          configured-topology-numeric:
+            type: integer
+            format: int64
+          primary-loop-id:
+            type: string
+            description: Primary loop ID for this port
+          sfp-part-number:
+            type: string
+          sfp-present:
+            type: string
+          sfp-present-numeric:
+            type: integer
+            format: int64
+          sfp-revision:
+            type: string
+          sfp-status:
+            type: string
+          sfp-status-numeric:
+            type: integer
+            format: int64
+          sfp-supported-speeds:
+            type: string
+          sfp-supported-speeds-numeric:
+            type: integer
+            format: int64
+          sfp-vendor:
+            type: string
+    iscsi-portResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          default-router:
+            type: string
+          gateway:
+            type: string
+          ip-address:
+            type: string
+          ip-version:
+            type: string
+          link-local-address:
+            type: string
+            description: IPv6 Link-Local Address
+          mac-address:
+            type: string
+            description: Primary MAC address for the port
+          netmask:
+            type: string
+            description: Netmask of the iSCSI IP address for this port
+          sfp-10G-compliance:
+            type: string
+          sfp-10G-compliance-numeric:
+            type: integer
+            format: int64
+          sfp-cable-length:
+            type: integer
+            format: int64
+          sfp-cable-technology:
+            type: string
+          sfp-cable-technology-numeric:
+            type: integer
+            format: int64
+          sfp-ethernet-compliance:
+            type: string
+          sfp-ethernet-compliance-numeric:
+            type: integer
+            format: int64
+          sfp-part-number:
+            type: string
+          sfp-present:
+            type: string
+          sfp-present-numeric:
+            type: integer
+            format: int64
+          sfp-revision:
+            type: string
+          sfp-status:
+            type: string
+          sfp-status-numeric:
+            type: integer
+            format: int64
+          sfp-vendor:
+            type: string
+    sas-portResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          configured-topology:
+            type: string
+          configured-topology-numeric:
+            type: integer
+            format: int64
+          sas-active-lanes:
+            type: integer
+            format: int64
+            description: Number of currently active PHY lanes for the SAS port
+          sas-disabled-lanes:
+            type: integer
+            format: int64
+            description: Number of disabled PHY lanes for the SAS port
+          sas-lanes-expected:
+            type: integer
+            format: int64
+            description: Expected number of active PHY lanes for the SAS port
+          width:
+            type: integer
+            format: int64
+            description: Number of PHY lanes for the SAS port
+    portResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          actual-speed:
+            type: string
+            description: Actual speed for this port
+          actual-speed-numeric:
+            type: integer
+            format: int64
+            description: Actual speed for this port( In numeric form )
+          configured-speed:
+            type: string
+          configured-speed-numeric:
+            type: integer
+            format: int64
+          controller:
+            type: string
+          controller-numeric:
+            type: integer
+            format: int64
+          durable-id:
+            type: string
+          fan-out:
+            type: integer
+            format: int64
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-recommendation:
+            type: string
+          media:
+            type: string
+            description: Type of connection media used for this port
+          port:
+            type: string
+          port-type:
+            type: string
+            description: Port Type (FC, iSCSI, SAS)
+          port-type-numeric:
+            type: integer
+            format: int64
+            description: Port Type (FC, iSCSI, SAS)( In numeric form )
+          status:
+            type: string
+          status-numeric:
+            type: integer
+            format: int64
+          target-id:
+            type: string
+            description: WWPN or IQN of the host port
+          url:
+            type: string
+            description: The resource URL
+          fc-port:
+            $ref: '#/components/schemas/fc-portResource'
+          iscsi-port:
+            $ref: '#/components/schemas/iscsi-portResource'
+          sas-port:
+            $ref: '#/components/schemas/sas-portResource'
+    expander-portsResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          controller:
+            type: string
+          controller-numeric:
+            type: integer
+            format: int64
+          durable-id:
+            type: string
+          enclosure-id:
+            type: integer
+            format: int64
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-recommendation:
+            type: string
+          name:
+            type: string
+          sas-port-index:
+            type: integer
+            format: int64
+            description: Port number for this SAS port
+          sas-port-type:
+            type: string
+            description: The type of SAS port
+          sas-port-type-numeric:
+            type: integer
+            format: int64
+            description: The type of SAS port( In numeric form )
+          status:
+            type: string
+          status-numeric:
+            type: integer
+            format: int64
+    expandersResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          dom-id:
+            type: integer
+            format: int64
+          drawer-id:
+            type: integer
+            format: int64
+          durable-id:
+            type: string
+          enclosure-id:
+            type: integer
+            format: int64
+          extended-status:
+            type: string
+            description: Extended status (bits)
+          fw-revision:
+            type: string
+            description: Firmware version of the FRU
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-recommendation:
+            type: string
+          location:
+            type: string
+          name:
+            type: string
+          path-id:
+            type: string
+          path-id-numeric:
+            type: integer
+            format: int64
+          status:
+            type: string
+          status-numeric:
+            type: integer
+            format: int64
+    controllersResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          autoconfig:
+            type: string
+            description: IPv6 Address autoconfiguration
+          autoconfig-numeric:
+            type: integer
+            format: int64
+            description: IPv6 Address autoconfiguration( In numeric form )
+          cache-lock:
+            type: string
+          cache-lock-numeric:
+            type: integer
+            format: int64
+          cache-memory-size:
+            type: integer
+            format: int64
+          controller-id:
+            type: string
+          controller-id-numeric:
+            type: integer
+            format: int64
+          cpld-version:
+            type: string
+            description: Complex Programmable Logic Device
+          dash-level:
+            type: string
+          description:
+            type: string
+          dhcpv6:
+            type: string
+          disks:
+            type: integer
+            format: int64
+          drive-bus-type:
+            type: string
+          drive-bus-type-numeric:
+            type: integer
+            format: int64
+          drive-channels:
+            type: integer
+            format: int64
+          durable-id:
+            type: string
+          fail-over-reason:
+            type: string
+          fail-over-reason-numeric:
+            type: integer
+            format: int64
+          failed-over:
+            type: string
+          failed-over-numeric:
+            type: integer
+            format: int64
+          fram-disabled-0:
+            type: string
+          fram-disabled-0-numeric:
+            type: integer
+            format: int64
+          fram-disabled-1:
+            type: string
+          fram-disabled-1-numeric:
+            type: integer
+            format: int64
+          fram-model-0:
+            type: string
+          fram-model-0-numeric:
+            type: integer
+            format: int64
+          fram-model-1:
+            type: string
+          fram-model-1-numeric:
+            type: integer
+            format: int64
+          fram-version-0:
+            type: integer
+            format: int64
+          fram-version-1:
+            type: integer
+            format: int64
+          fru-shortname:
+            type: string
+          hardware-version:
+            type: string
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-recommendation:
+            type: string
+          host-ports:
+            type: integer
+            format: int64
+          internal-serial-number:
+            type: string
+            description: Internal Controller Serial Number
+          ip-address:
+            type: string
+          ip-gateway:
+            type: string
+          ip-subnet-mask:
+            type: string
+          ip6-auto-address:
+            type: string
+          ip6-auto-address-source:
+            type: string
+          ip6-auto-address-source-numeric:
+            type: integer
+            format: int64
+          ip6-auto-gateway:
+            type: string
+          ip6-link-local-address:
+            type: string
+          ip6-link-local-gateway:
+            type: string
+          ip61-address:
+            type: string
+          ip61-gateway:
+            type: string
+          ip62-address:
+            type: string
+          ip62-gateway:
+            type: string
+          ip63-address:
+            type: string
+          ip63-gateway:
+            type: string
+          ip64-address:
+            type: string
+          ip64-gateway:
+            type: string
+          locator-led:
+            type: string
+            description: Indicates whether the locator LED is on
+          locator-led-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether the locator LED is on( In numeric form )
+          mac-address:
+            type: string
+            description: MAC address for the network port
+          mfg-date:
+            type: string
+          mfg-date-numeric:
+            type: integer
+            format: int64
+          mfg-location:
+            type: string
+          mfg-vendor-id:
+            type: string
+          model:
+            type: string
+          multicore:
+            type: string
+          multicore-numeric:
+            type: integer
+            format: int64
+          node-wwn:
+            type: string
+            description: World Wide Node Name of the system
+          number-of-storage-pools:
+            type: integer
+            format: int64
+            description: Number of Virtual Pools per Controller
+          part-number:
+            type: string
+          phy-isolation:
+            type: string
+          phy-isolation-numeric:
+            type: integer
+            format: int64
+          platform-type:
+            type: string
+            description: HW Platform Type
+          platform-type-numeric:
+            type: integer
+            format: int64
+            description: HW Platform Type( In numeric form )
+          position:
+            type: string
+            description: Position of the component in the enclosure
+          position-numeric:
+            type: integer
+            format: int64
+            description: Position of the component in the enclosure( In numeric form )
+          redundancy-mode:
+            type: string
+            description: Mode in which the controllers are operating
+          redundancy-mode-numeric:
+            type: integer
+            format: int64
+            description: Mode in which the controllers are operating( In numeric form )
+          redundancy-status:
+            type: string
+            description: Current operational state of the controllers
+          redundancy-status-numeric:
+            type: integer
+            format: int64
+            description: Current operational state of the controllers( In numeric form )
+          revision:
+            type: string
+            description: Current revision for this FRU
+          rotation:
+            type: string
+            description: FRU rotation
+          rotation-numeric:
+            type: integer
+            format: int64
+            description: FRU rotation( In numeric form )
+          sc-cpu-speed:
+            type: integer
+            format: int64
+            description: Storage Controller processor speed
+          sc-cpu-type:
+            type: string
+            description: The Storage Controller processor type
+          sc-fw:
+            type: string
+            description: The Storage Controller main ('app') firmware version
+          serial-number:
+            type: string
+          slaac-ip:
+            type: string
+          ssd-alt-path-io-count:
+            type: integer
+            format: int64
+            description: IO count before sending to alt ssd path
+          status:
+            type: string
+          status-numeric:
+            type: integer
+            format: int64
+          system-memory-size:
+            type: integer
+            format: int64
+          url:
+            type: string
+            description: The resource URL
+          vendor:
+            type: string
+          virtual-disks:
+            type: integer
+            format: int64
+          write-policy:
+            type: string
+            description: The write-back cache mode
+          write-policy-numeric:
+            type: integer
+            format: int64
+            description: The write-back cache mode( In numeric form )
+          network-parameters:
+            $ref: '#/components/schemas/network-parametersResource'
+          port:
+            $ref: '#/components/schemas/portResource'
+          expander-ports:
+            $ref: '#/components/schemas/expander-portsResource'
+          expanders:
+            $ref: '#/components/schemas/expandersResource'
+    enclosuresResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          board-model:
+            type: string
+            description: IOM Board model
+          board-model-numeric:
+            type: integer
+            format: int64
+            description: IOM Board model( In numeric form )
+          columns:
+            type: integer
+            format: int64
+          dash-level:
+            type: string
+          description:
+            type: string
+          drive-orientation:
+            type: string
+          drive-orientation-numeric:
+            type: integer
+            format: int64
+          durable-id:
+            type: string
+          emp-a:
+            type: string
+          emp-a-busid:
+            type: string
+          emp-a-ch-id-rev:
+            type: string
+          emp-a-rev:
+            type: string
+            description: Enclosure Management Processor
+          emp-a-targetid:
+            type: string
+          emp-b:
+            type: string
+          emp-b-busid:
+            type: string
+          emp-b-ch-id-rev:
+            type: string
+          emp-b-rev:
+            type: string
+            description: Enclosure Management Processor
+          emp-b-targetid:
+            type: string
+          enclosure-arrangement:
+            type: string
+          enclosure-arrangement-numeric:
+            type: integer
+            format: int64
+          enclosure-id:
+            type: integer
+            format: int64
+          enclosure-power:
+            type: string
+          enclosure-wwn:
+            type: string
+            description: Enclosure World Wide Name
+          extended-status:
+            type: string
+            description: Extended status (bits)
+          fru-location:
+            type: string
+          fru-shortname:
+            type: string
+          fru-tlapn:
+            type: string
+          gem-version-a:
+            type: string
+          gem-version-b:
+            type: string
+          health:
+            type: string
+          health-numeric:
+            type: integer
+            format: int64
+          health-reason:
+            type: string
+          health-recommendation:
+            type: string
+          iom-type:
+            type: string
+          iom-type-numeric:
+            type: integer
+            format: int64
+          location:
+            type: string
+          locator-led:
+            type: string
+            description: Indicates whether the locator LED is on
+          locator-led-numeric:
+            type: integer
+            format: int64
+            description: Indicates whether the locator LED is on( In numeric form )
+          mfg-date:
+            type: string
+          mfg-date-numeric:
+            type: integer
+            format: int64
+          mfg-location:
+            type: string
+          midplane-rev:
+            type: integer
+            format: int64
+            description: Revision level of midplane
+          midplane-serial-number:
+            type: string
+            description: Serial number of the enclosure
+          midplane-type:
+            type: string
+            description: Type of midplane
+          midplane-type-numeric:
+            type: integer
+            format: int64
+            description: Type of midplane( In numeric form )
+          model:
+            type: string
+          name:
+            type: string
+          number-of-coolings-elements:
+            type: integer
+            format: int64
+            description: Number of fans in the enclosure
+          number-of-disks:
+            type: integer
+            format: int64
+            description: Number of disks in the enclosure
+          number-of-power-supplies:
+            type: integer
+            format: int64
+            description: Number of power supplies in the enclosure
+          part-number:
+            type: string
+          pcie2-capable:
+            type: string
+            description: Enclosure is capable of using PCIe version 2
+          pcie2-capable-numeric:
+            type: integer
+            format: int64
+            description: Enclosure is capable of using PCIe version 2( In numeric form )
+          platform-type:
+            type: string
+            description: HW Platform Type
+          platform-type-numeric:
+            type: integer
+            format: int64
+            description: HW Platform Type( In numeric form )
+          rack-number:
+            type: integer
+            format: int64
+          rack-position:
+            type: integer
+            format: int64
+          revision:
+            type: string
+            description: Current revision for this FRU
+          rows:
+            type: integer
+            format: int64
+          slots:
+            type: integer
+            format: int64
+            description: The number of disk slots in this enclosure
+          status:
+            type: string
+          status-numeric:
+            type: integer
+            format: int64
+          type:
+            type: string
+            description: Type of component in this enclosure
+          type-numeric:
+            type: integer
+            format: int64
+            description: Type of component in this enclosure( In numeric form )
+          url:
+            type: string
+            description: The resource URL
+          vendor:
+            type: string
+          controllers:
+            $ref: '#/components/schemas/controllersResource'
+          power-supplies:
+            $ref: '#/components/schemas/power-suppliesResource'
+    versionsResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          backplane-type:
+            type: integer
+            format: int64
+          build-date:
+            type: string
+          bundle-base-version:
+            type: string
+          bundle-status:
+            type: string
+          bundle-status-numeric:
+            type: integer
+            format: int64
+          bundle-version:
+            type: string
+          bundle-version-only:
+            type: string
+          capi-version:
+            type: string
+          ctk-version:
+            type: string
+            description: Customization Toolkit (CTK) Version
+          disk-channel_revision:
+            type: integer
+            format: int64
+          ec-fw:
+            type: string
+            description: The Expander Controller firmware version
+          fw-default-platform-brand:
+            type: string
+            description: Default hardware platform brand of the firmware
+          fw-default-platform-brand-numeric:
+            type: integer
+            format: int64
+            description: Default hardware platform brand of the firmware( In numeric form )
+          gem-version:
+            type: string
+          him-model:
+            type: string
+          him-rev:
+            type: string
+          host-channel_revision:
+            type: integer
+            format: int64
+          hw-rev:
+            type: string
+            description: The main hardware version of the controller
+          mc-base-fw:
+            type: string
+            description: The Management Controller main ('app') baselevel firmware version
+          mc-fw:
+            type: string
+            description: The Management Controller main ('app') firmware version
+          mc-loader:
+            type: string
+            description: The Management Controller loader firmware version
+          mcos-version:
+            type: string
+            description: MC Operating System (OS) Version
+          mrc-version:
+            type: string
+            description: The SC Boot Memory Reference Code (MRC) version
+          pcie-switch-backend-configuration-version:
+            type: string
+          pcie-switch-backend-firmware-version:
+            type: string
+          pcie-switch-frontend-configuration-version:
+            type: string
+          pcie-switch-frontend-firmware-version:
+            type: string
+          pld-rev:
+            type: string
+            description: The CPLD code version
+          pm-cpld-version:
+            type: string
+          prm-version:
+            type: string
+            description: PRM CPLD code version
+          pubs-version:
+            type: string
+            description: CLI Help version
+          sc-baselevel:
+            type: string
+          sc-cpu-type:
+            type: string
+            description: The Storage Controller processor type
+          sc-fu-version:
+            type: string
+            description: ASIC Controller Version
+          sc-fw:
+            type: string
+            description: The Storage Controller main ('app') firmware version
+          sc-loader:
+            type: string
+            description: The Storage Controller loader firmware version
+          sc-memory:
+            type: string
+            description: The Storage Controller memory-controller FPGA code version
+          translation-version:
+            type: string
+    volume-group-viewResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          durable-id:
+            type: string
+          group-name:
+            type: string
+            description: Name of a Management Group
+          serial-number:
+            type: string
+          volume-group-url:
+            type: string
+            description: Volume Group URL
+    volume-view-mappingsResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          access:
+            type: string
+            description: Access rights for this volume
+          access-numeric:
+            type: integer
+            format: int64
+            description: Access rights for this volume( In numeric form )
+          durable-id:
+            type: string
+          host-profile:
+            type: string
+          host-profile-numeric:
+            type: integer
+            format: int64
+          identifier:
+            type: string
+            description: WWPN or IQN or Host Serial Number or Host Group Serial Number
+          initiators-url:
+            type: string
+          lun:
+            type: string
+            description: Logical Unit Number
+          mapped-id:
+            type: string
+          nickname:
+            type: string
+            description: User-defined alias for the mapped host
+          parent-id:
+            type: string
+          ports:
+            type: string
+    volume-viewResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          durable-id:
+            type: string
+          url:
+            type: string
+            description: The resource URL
+          volume-name:
+            type: string
+            description: User-defined name for the volume
+          volume-serial:
+            type: string
+            description: Unique serial number for the volume
+          volumes-url:
+            type: string
+            description: Volumes URL
+          volume-view-mappings:
+            $ref: '#/components/schemas/volume-view-mappingsResource'
+    host-view-mappingsResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          access:
+            type: string
+            description: Access rights for this host
+          access-numeric:
+            type: integer
+            format: int64
+            description: Access rights for this host( In numeric form )
+          lun:
+            type: string
+            description: Logical Unit Number
+          ports:
+            type: string
+          volume-name:
+            type: string
+            description: User-defined name for the volume
+          volume-serial:
+            type: string
+            description: Unique serial number for the volume
+    hosts-viewResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          durable-id:
+            type: string
+          host-name:
+            type: string
+          serial-number:
+            type: string
+          host-view-mappings:
+            $ref: '#/components/schemas/host-view-mappingsResource'
+    snapshotsResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          base-serial-number:
+            type: string
+            description: The root of the snapshot tree serial number
+          base-volume:
+            type: string
+            description: The root of the snapshot tree
+          base-volumes-url:
+            type: string
+            description: The resource URL of the root of the snapshot tree
+          creation-date-time:
+            type: string
+          creation-date-time-numeric:
+            type: integer
+            format: int64
+          durable-id:
+            type: string
+          master-volume-name:
+            type: string
+            description: Source volume for snapshots
+          name:
+            type: string
+          num-children:
+            type: integer
+            format: int64
+          num-snaps-tree:
+            type: integer
+            format: int64
+          priority-value:
+            type: string
+            description: Attribute priority
+          retention-priority:
+            type: string
+            description: Retention priority of the snapshot or children
+          retention-priority-numeric:
+            type: integer
+            format: int64
+            description: Retention priority of the snapshot or children( In numeric form )
+          serial-number:
+            type: string
+          shareddata:
+            type: string
+          shareddata-numeric:
+            type: integer
+            format: int64
+          snap-data:
+            type: string
+            description: Amount of snapshot data associated with this volume
+          snap-data-numeric:
+            type: integer
+            format: int64
+            description: Amount of snapshot data associated with this volume( In numeric form )
+          snap-pool-name:
+            type: string
+            description: User-defined name of the snap pool
+          snapshot-type:
+            type: string
+            description: Associated snapshot type
+          snapshot-type-numeric:
+            type: integer
+            format: int64
+            description: Associated snapshot type( In numeric form )
+          status:
+            type: string
+          status-numeric:
+            type: integer
+            format: int64
+          status-reason:
+            type: string
+            description: Probable cause for the current status
+          status-reason-numeric:
+            type: integer
+            format: int64
+            description: Probable cause for the current status( In numeric form )
+          storage-pool-name:
+            type: string
+            description: User-defined name for the pool
+          storage-pools-url:
+            type: string
+          storage-type:
+            type: string
+            description: Storage type
+          storage-type-numeric:
+            type: integer
+            format: int64
+            description: Storage type( In numeric form )
+          total-size:
+            type: string
+            description: The total size formatted using the session settings for base, precision, and units
+          total-size-numeric:
+            type: integer
+            format: int64
+            description: The total size formatted using the session settings for base, precision, and units( In numeric form )
+          uniquedata:
+            type: string
+            description: Amount of preserved and write data that is unique to the snapshot
+          uniquedata-numeric:
+            type: integer
+            format: int64
+            description: Amount of preserved and write data that is unique to the snapshot( In numeric form )
+          url:
+            type: string
+            description: The resource URL
+          user_priority-value:
+            type: string
+            description: User-assigned priority
+          virtual-disk-name:
+            type: string
+            description: The name of the pool that contains the volume
+          volume-parent:
+            type: string
+            description: Serial number of the associated volume
+
+    statusObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+    metaObject:
+      description: 'Can be anything: string, number, array, object, etc.'
+    systemObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        system:
+          $ref: '#/components/schemas/systemResource'
+    fanObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        fan:
+          $ref: '#/components/schemas/fanResource'
+    volumesObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        volumes:
+          $ref: '#/components/schemas/volumesResource'
+    power-suppliesObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        power-supplies:
+          $ref: '#/components/schemas/power-suppliesResource'
+    certificate-statusObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        certificate-status:
+          $ref: '#/components/schemas/certificate-statusResource'
+    poolsObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        pools:
+          $ref: '#/components/schemas/poolsResource'
+    drivesObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        drives:
+          $ref: '#/components/schemas/drivesResource'
+    advanced-settings-tableObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        advanced-settings-table:
+          $ref: '#/components/schemas/advanced-settings-tableResource'
+    cache-settingsObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        cache-settings:
+          $ref: '#/components/schemas/cache-settingsResource'
+    host-groupObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        host-group:
+          $ref: '#/components/schemas/host-groupResource'
+    disk-groupsObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        disk-groups:
+          $ref: '#/components/schemas/disk-groupsResource'
+    enclosuresObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        enclosures:
+          $ref: '#/components/schemas/enclosuresResource'
+    controllersObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        controllers:
+          $ref: '#/components/schemas/controllersResource'
+    versionsObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        versions:
+          $ref: '#/components/schemas/versionsResource'
+    volume-viewObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        volume-group-view:
+          $ref: '#/components/schemas/volume-group-viewResource'
+        volume-view:
+          $ref: '#/components/schemas/volume-viewResource'
+    hosts-viewObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        hosts-view:
+          $ref: '#/components/schemas/hosts-viewResource'
+    initiatorObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        initiator:
+          $ref: '#/components/schemas/initiatorResource'
+    snapshotsObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        snapshots:
+          $ref: '#/components/schemas/snapshotsResource'

@@ -1,0 +1,394 @@
+---
+mc-commands: 1.0.0
+
+info:
+  title: Seagate Management Controller (MC) API Relationships
+  description: This file defines the MC API commands to be processed and added to
+    the MC OpenAPI specification, along with nested and included resources
+
+exceptions:
+  - resource: pools
+    type: rename
+    old-property: disk-groups
+    new-property: disk-groups-count
+
+commands:
+  - command: /show/system
+    meta: system
+    include:
+    - status
+    nested:
+    - name: redundancy
+
+  - command: /show/fans
+    meta: fan
+    include:
+    - status
+
+  - command: /show/volumes
+    meta: volumes
+    include:
+    - status
+    options:
+    - flag: names
+      type: string
+      required: false
+      keyword-required: false
+      description: Optional. A comma-separated list of the names or serial numbers of volumes for which to show information. A name that includes a space must be enclosed in double quotes.
+
+  - command: /show/power-supplies
+    meta: power-supplies
+    include:
+    - status
+    nested:
+    - name: fan
+
+  - command: /show/certificate
+    meta: certificate-status
+    include:
+    - status
+
+  - command: /show/pools
+    meta: pools
+    include:
+    - status
+    nested:
+    - name: disk-groups
+    - name: tiers
+
+  - command: /show/disks
+    meta: drives
+    include:
+    - status
+
+  - command: /show/advanced-settings
+    meta: advanced-settings-table
+    include:
+    - status
+
+  - command: /show/cache-parameters
+    meta: cache-settings
+    include:
+    - status
+    nested:
+    - name: controller-cache-parameters
+
+  - command: /show/host-groups
+    meta: host-group
+    include:
+    - status
+    nested:
+    - name: host
+      nested:
+      - name: initiator
+
+  - command: /show/disk-groups
+    meta: disk-groups
+    include:
+    - status
+
+  - command: /show/enclosures
+    meta: enclosures
+    include:
+    - status
+    nested:
+    - name: controllers
+      nested:
+        - name: network-parameters
+        - name: port
+          nested:
+          - name: fc-port
+          - name: iscsi-port
+          - name: sas-port
+        - name: expander-ports
+          nested:
+          -name: health-conditions
+        - name: expanders
+    - name: power-supplies
+      nested:
+      - name: fan
+
+  - command: /show/controllers
+    meta: controllers
+    include:
+    - status
+    nested:
+    - name: network-parameters
+    - name: port
+      nested:
+      - name: fc-port
+      - name: iscsi-port
+      - name: sas-port
+    - name: expander-ports
+      nested:
+      - name: health-conditions
+    - name : expanders
+
+  - command: /show/versions
+    meta: versions
+    include:
+    - status
+
+  - command: /show/versions/detail
+    meta: versions
+    include:
+    - status
+
+  - command: /show/maps
+    meta: volume-view
+    include:
+    - status
+    - volume-group-view
+    nested:
+    - name: volume-view-mappings
+
+  - command: /show/maps
+    meta: volume-view
+    include:
+    - status
+    - volume-group-view
+    nested:
+    - name: volume-view-mappings
+    options:
+    - flag: names
+      type: string
+      required: false
+      keyword-required: false
+      description: A comma-separated list of the names or serial numbers of the volumes. A name that includes a space must be enclosed in double quotes.
+
+  - command: /show/maps/initiator
+    meta: hosts-view
+    include:
+    - status
+    nested:
+    - name: host-view-mappings
+    options:
+    - flag: names
+      type: string
+      required: false
+      keyword-required: false
+      description: Optional. A comma-separated list of the names or serial numbers of host-type items (initiators, hosts, and host groups) or volume-type items (volumes and volume groups) for which to show mappings.
+
+  - command: /show/maps/all
+    meta: volume-view
+    include:
+    - status
+    nested:
+    - name: volume-view-mappings
+
+  - command: /show/initiators
+    meta: initiator
+    include:
+    - status
+
+  - command: /show/initiator
+    meta: initiator
+    include:
+    - status
+    options:
+    - flag: names
+      type: string
+      required: false
+      keyword-required: false
+      description: Optional. A comma-separated list of the names of initiators for which to show information. If this parameter is omitted, information is shown for all initiators.
+
+  - command: /show/snapshots
+    meta: snapshots
+    include:
+    - status
+
+  - command: /show/snapshots
+    meta: snapshots
+    include:
+    - status
+    options:
+    - flag: volume
+      type: string
+      required: false
+      keyword-required: true
+      description: Shows snapshots associated with the specified volume name or serial number. A name that includes a space must be enclosed in double quotes.
+
+  - command: /show/snapshots
+    meta: snapshots
+    include:
+    - status
+    options:
+    - flag: pattern
+      type: string
+      required: false
+      keyword-required: true
+      description: Shows snapshots whose names contain the specified string. The string can include the following wildcards, singly or in combination. (*, ?, [], [xy123])
+
+  - command: /create/volume
+    meta: volumes
+    include:
+    - status
+    options:
+    - flag: pool
+      type: string
+      keyword-required: true
+      description: Optional for linear volumes. Required for virtual volumes. The name or serial number of the pool in which to create the volume
+    - flag: size
+      type: string
+      keyword-required: true
+      description: size size[B|KB|MB|GB|TB|KiB|MiB|GiB|TiB]. Sets the volume size. The unit is optional (B represents bytes). If base 2 is in use, whether you specify a base-2 or base-10 unit, the resulting size will be in base 2. If no unit is specified, the default is 512-byte blocks
+    - flag: tier-affinity
+      type: enum
+      values: no-affinity,archive,performance
+      keyword-required: true
+      description: For virtual storage, this specifies how to tune the tier-migration algorithm for the volume
+    - flag: name
+      type: string
+      required: true
+      keyword-required: false
+      description: A name for the new volume. The name must be unique system-wide. Input rules are case sensitive, maximum of 32 bytes, printable UTF-8 characters but " , < \, use double quotes when name has spaces
+
+  - command: /delete/volumes
+    meta: status
+    include:
+    - status
+    options:
+    - flag: names
+      type: string
+      required: false
+      keyword-required: false
+      description: A comma-separated list of the names or serial numbers of the volumes to delete. A name that includes a space must be enclosed in double quotes.
+
+  - command: /create/snapshots
+    meta: status
+    include:
+    - status
+    options:
+    - flag: volumes
+      type: string
+      keyword-required: true
+      description: A comma-separated list of the names or serial numbers of 1 to 16 source volumes of which to create snapshots.
+    - flag: names
+      type: string
+      required: true
+      keyword-required: false
+      description: A comma-separated list of names for the resulting snapshots. Snapshot names must be unique system-wide. I
+
+  - command: /copy/volume
+    meta: status
+    include:
+    - status
+    options:
+    - flag: destination-pool
+      type: string
+      keyword-required: true
+      description: The name or serial number of the virtual pool in which to create the destination volume. This must be the pool that contains the source volume.
+    - flag: name
+      type: string
+      keyword-required: true
+      description: A name for the volume to create in the destination pool.
+    - flag: source
+      type: string
+      required: true
+      keyword-required: false
+      description: The name or serial number of the source volume to copy.
+
+  - command: /delete/initiator-nickname
+    meta: status
+    include:
+    - status
+    options:
+    - flag: name
+      type: string
+      required: true
+      keyword-required: false
+      description: The nickname or ID of the initiator to delete. A value of 'all' deletes all manually created initiators and nicknames of discovered initiators.
+
+  - command: /delete/hosts
+    meta: status
+    include:
+    - status
+    options:
+    - flag: names
+      type: string
+      keyword-required: false
+      description: A comma-separated list of the names of hosts to delete. A name that includes a space must be enclosed in double quotes. 'all' Deletes all hosts.
+
+  - command: /delete/snapshot
+    meta: status
+    include:
+    - status
+    options:
+    - flag: names
+      type: string
+      keyword-required: false
+      description: A comma-separated list of the names or serial numbers of the snapshots to delete.
+
+  - command: /expand/volume
+    meta: status
+    include:
+    - status
+    options:
+    - flag: size
+      type: string
+      keyword-required: true
+      description: size size[B|KB|MB|GB|TB|KiB|MiB|GiB|TiB] | max
+    - flag: name
+      type: string
+      keyword-required: false
+      description: The name or serial number of the volume to expand.
+
+  - command: /set/initiator
+    meta: status
+    include:
+    - status
+    options:
+    - flag: id
+      type: string
+      keyword-required: true
+      description: The ID of the initiator. For FC, the ID is a WWPN. For SAS, the ID is a WWPN. For iSCSI, the ID is an IQN.
+    - flag: nickname
+      type: string
+      keyword-required: true
+      description: Sets the name of the initiator to the specified name.
+
+  - command: /map/volume
+    meta: status
+    include:
+    - status
+    options:
+    - flag: access
+      type: string
+      keyword-required: true
+      description: The access permission to use for the mapping, read-write|rw|read-only|ro|no-access
+    - flag: lun
+      type: string
+      keyword-required: true
+      description: The LUN to use for the mapping
+    - flag: initiator
+      type: string
+      keyword-required: true
+      description: A comma-separated list of initiators, hosts, or host groups to which to map the volumes.
+    - flag: names
+      type: string
+      keyword-required: false
+      description: A comma-separated list of the names or serial numbers of the volumes or volume groups to map.
+
+  - command: /unmap/volume
+    meta: status
+    include:
+    - status
+    options:
+    - flag: initiator
+      type: string
+      keyword-required: true
+      description: A comma-separated list of initiators, hosts, or host groups for which to delete explicit mappings.
+    - flag: names
+      type: string
+      keyword-required: false
+      description: A comma-separated list of volumes or volume groups to unmap.
+
+  - command: /unmap/volume
+    meta: status
+    include:
+    - status
+    options:
+    - flag: names
+      type: string
+      keyword-required: false
+      description: A comma-separated list of volumes or volume groups to unmap.
