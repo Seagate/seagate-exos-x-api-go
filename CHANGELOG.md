@@ -1,3 +1,44 @@
+## [1.0.18](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.17...v1.0.18) (2023-10-04)
+
+### Bug Fixes
+
+- Add a workaround in the client.go template for XML/JSON content-type header bug ([96e9faf](https://github.com/Seagate/seagate-exos-x-api-go/commit/96e9faf91bd1f2419d5e8fd25b40a2e9a7ccceaf))
+- include client.go with json/xml templated fix ([ad41c18](https://github.com/Seagate/seagate-exos-x-api-go/commit/ad41c182ec891594527dce85b7c61d416c77a876))
+- use 'snapshot' instead of 'snapshots' for object.Name (#44) ([2ce9dce](https://github.com/Seagate/seagate-exos-x-api-go/commit/2ce9dce108216b9b9f47b30a7dd6ab8a2191804e)), closes [#44](https://github.com/Seagate/seagate-exos-x-api-go/issues/44)
+
+### Chores
+
+- add debug logging for forced json contentType ([6b48ee3](https://github.com/Seagate/seagate-exos-x-api-go/commit/6b48ee3ad24b7d407d9cf9a9607b62d9ff744d54))
+- **deps:** bump github.com/prometheus/client_golang ([ae4da77](https://github.com/Seagate/seagate-exos-x-api-go/commit/ae4da77b4ac62a2846e7168f6113a63d4f009e7a))
+- **deps:** bump google.golang.org/grpc from 1.26.0 to 1.53.0 ([6d18737](https://github.com/Seagate/seagate-exos-x-api-go/commit/6d1873767cbfbcc96cfbf0cef47d409d0448b8f2))
+
+### Other
+
+- Merge pull request #45 from Seagate/feat/final-apiv2 ([3376cdd](https://github.com/Seagate/seagate-exos-x-api-go/commit/3376cdd7e9716d09f003c2a1eb8ff4da4c4b8241)), closes [#45](https://github.com/Seagate/seagate-exos-x-api-go/issues/45)
+- feat!: MC API v2 using OpenAPI Specification ([d53b770](https://github.com/Seagate/seagate-exos-x-api-go/commit/d53b77000486b2eeac03e8840f85e4b02a37108d))
+- Merge pull request #38 from Seagate/dependabot/go_modules/google.golang.org/grpc-1.53.0 ([e8c4f8c](https://github.com/Seagate/seagate-exos-x-api-go/commit/e8c4f8c48af15d717fd6317eec3b2d87eddee67c)), closes [#38](https://github.com/Seagate/seagate-exos-x-api-go/issues/38)
+- Merge branch 'main' into dependabot/go_modules/google.golang.org/grpc-1.53.0 ([e1d170f](https://github.com/Seagate/seagate-exos-x-api-go/commit/e1d170f64d399cc7bfa936b0685cc63e6dc09cfe))
+- Resolved merge conflict by updating google.golang.org/grpc v1.53.0 ([2a2678f](https://github.com/Seagate/seagate-exos-x-api-go/commit/2a2678fd9688d9559b8a2c037da89f82f7d04c58))
+- Merge pull request #39 from Seagate/dependabot/go_modules/github.com/prometheus/client_golang-1.11.1 ([e56bf7e](https://github.com/Seagate/seagate-exos-x-api-go/commit/e56bf7e479dd12d36896a837bf1b637fe26eef3a)), closes [#39](https://github.com/Seagate/seagate-exos-x-api-go/issues/39)
+- Merge pull request #43 from Seagate/bug/correct-status-handling-for-info ([410c4c9](https://github.com/Seagate/seagate-exos-x-api-go/commit/410c4c9b14dca75e4d10120efd5fe4721a5f4f0d)), closes [#43](https://github.com/Seagate/seagate-exos-x-api-go/issues/43)
+- remove redundant CreateCommonStatusFromStatus function ([585d5fd](https://github.com/Seagate/seagate-exos-x-api-go/commit/585d5fdb7ab6884238a8e2bb183bd4647d5fe122))
+- correct regression test suite based on corrected status responses ([c2d9797](https://github.com/Seagate/seagate-exos-x-api-go/commit/c2d9797b6a199b7cac5ec179ead939ab2eead52f))
+- update api v2 to handle status array ([f6ca79c](https://github.com/Seagate/seagate-exos-x-api-go/commit/f6ca79caca3f4a5fb7b7b97a3af5734914b5ccd2))
+- generated new openapi client library ([a0b490c](https://github.com/Seagate/seagate-exos-x-api-go/commit/a0b490c633217a4caccadea122bbc80899c568fa))
+- update validator to display all status responses ([6b266e3](https://github.com/Seagate/seagate-exos-x-api-go/commit/6b266e31e7c31cb1585735b1e30de0f3f0a91e9c))
+- update spec generator and yaml to correct statusResource ([201d011](https://github.com/Seagate/seagate-exos-x-api-go/commit/201d011fc6b879f7c8981d22d1ce8d8a0091dcdf))
+- Merge pull request #40 from Seagate/feat/docker-run-generate ([edc62ea](https://github.com/Seagate/seagate-exos-x-api-go/commit/edc62eae29fea168b24f7db2109479b04424b4b5)), closes [#40](https://github.com/Seagate/seagate-exos-x-api-go/issues/40)
+- use GENERATOR_VERSION := v6.5.0 ([dafe034](https://github.com/Seagate/seagate-exos-x-api-go/commit/dafe0345e82f7a42810ea9ba465eeb88b08be918))
+- use docker image 6.5.0 for openapi-generator-cli ([99a982f](https://github.com/Seagate/seagate-exos-x-api-go/commit/99a982faad0c92c4046b12fc74ca4f752342cd17))
+- use docker run openapi-generator-cli:v6.2.1 ([6950b94](https://github.com/Seagate/seagate-exos-x-api-go/commit/6950b9491a4c103b2e7a922edc47036acd54a17c))
+- Merge pull request #37 from Seagate/feat/mcapiv2 ([576d4eb](https://github.com/Seagate/seagate-exos-x-api-go/commit/576d4ebd5f505a026d78adc9eb0d00d434f2b44b)), closes [#37](https://github.com/Seagate/seagate-exos-x-api-go/issues/37)
+- force Wwn to lowercase in CreateVolume ([f078a6b](https://github.com/Seagate/seagate-exos-x-api-go/commit/f078a6b78650d3357316cd2eab058e44124f428b))
+- allow for ip address, protocol, and hostname variations ([f58b70e](https://github.com/Seagate/seagate-exos-x-api-go/commit/f58b70e901c5ca41ae8ccc7f6c3d868579ac2e60))
+- accept protocol+ipaddress ([24a0769](https://github.com/Seagate/seagate-exos-x-api-go/commit/24a0769c04610bbcba21f5f482314d1dc3d8192b))
+- correct CreateVolume for Linear ([f815102](https://github.com/Seagate/seagate-exos-x-api-go/commit/f815102536de6e845b548f19da3a64b8165e35ca))
+- review changes for PR 37 ([ea9d97c](https://github.com/Seagate/seagate-exos-x-api-go/commit/ea9d97c8e914b7aa2db26b926808979a21a7f7be))
+- apiv2 with openapi spec, generator, regression, sdk ([5b7fa5c](https://github.com/Seagate/seagate-exos-x-api-go/commit/5b7fa5c0a68439949341e89b6b97a4e57a37ba0f))
+
 ## [1.0.17](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.16...v1.0.17) (2023-06-06)
 
 ### Chores
