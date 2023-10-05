@@ -1,3 +1,14 @@
+# [2.0.0](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.18...v2.0.0) (2023-10-05)
+
+### Other
+
+- Merge pull request #46 from Seagate/feat/new-apiv2 ([7629499](https://github.com/Seagate/seagate-exos-x-api-go/commit/76294997a1616a7fe0e7590538c1181d04215d5f)), closes [#46](https://github.com/Seagate/seagate-exos-x-api-go/issues/46)
+- feat!(apiv2): MC API v2 using OpenAPI Specification ([7141b6b](https://github.com/Seagate/seagate-exos-x-api-go/commit/7141b6b1f6932d7bf26511933197f27fac7c9741))
+
+### BREAKING CHANGE
+
+- Requires changes to all clients to use v1 or v2 of this library.
+
 ## [1.0.18](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.17...v1.0.18) (2023-10-04)
 
 ### Bug Fixes
