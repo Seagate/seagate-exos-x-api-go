@@ -4,7 +4,7 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/Seagate/seagate-exos-x-api-go.svg)](https://pkg.go.dev/github.com/Seagate/seagate-exos-x-api-go)
 
 
-# MC API Client 2.0
+# MC API Client v2.0.0
 
 This is a Go language library for interfacing with Seagate's Management Controller (MC) CLI/API. This library is used to generate an MC OpenAPI specification and then use that specification to generate a Go CLient API library. The OpenAPI specification is generated using an input yaml file and then gathering `meta` data from the MC API to create the OpenAPI specification. This library leverages an HTTP interface to communicate with the Management Controller of a live Seagate RAID Storage System. In addition, a higher-level API layer is used by clients such as the CSI Driver, and that higher layer relies on the auto-generated Go Client library.
 
