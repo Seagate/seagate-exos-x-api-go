@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/common"
 	"k8s.io/klog/v2"
 )
 
@@ -201,6 +201,11 @@ func GetTargetId(system *common.SystemInfo, portType string) (string, error) {
 	return "", fmt.Errorf("TargetId was not found for system (%s) with (%d) ports", system.IPAddress, len(system.Ports))
 }
 
+// GetPortals: Return a list of portals for the storage system
+func (client *Client) GetPortals() (string, error) {
+	return GetPortals(client.Info)
+}
+
 // GetPortals: Return a list of iSCSI portals for the storage system
 func GetPortals(system *common.SystemInfo) (string, error) {
 	if system == nil {
@@ -224,5 +229,5 @@ func GetPortals(system *common.SystemInfo) (string, error) {
 		return portals, nil
 	}
 
-	return "", fmt.Errorf("No portals found for system (%s) with (%d) ports", system.IPAddress, len(system.Ports))
+	return "", fmt.Errorf("no portals found for system (%s) with (%d) ports", system.IPAddress, len(system.Ports))
 }

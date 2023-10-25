@@ -3,7 +3,7 @@
 package regression
 
 import (
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/common"
 	"github.com/go-logr/logr"
 )
 

@@ -11,7 +11,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/common"
 
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"

@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/regression"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/regression"
 
 	"github.com/onsi/ginkgo/v2"
 	"k8s.io/klog/v2"
