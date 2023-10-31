@@ -1,3 +1,9 @@
+## [2.0.1](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.0.0...v2.0.1) (2023-10-31)
+
+### Code Refactoring
+
+- Restructure the v2 library to match go module import requirements (#48) ([e6f3143](https://github.com/Seagate/seagate-exos-x-api-go/commit/e6f314399243a65f4a7472e891ed20da361c198f)), closes [#48](https://github.com/Seagate/seagate-exos-x-api-go/issues/48)
+
 # [2.0.0](https://github.com/Seagate/seagate-exos-x-api-go/compare/v1.0.18...v2.0.0) (2023-10-05)
 
 ### Other
