@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Seagate/seagate-exos-x-api-go/internal/generator"
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/internal/generator"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/client"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/common"
 
 	"k8s.io/klog/v2"
 )

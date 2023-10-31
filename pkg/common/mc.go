@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/client"
 
 	"k8s.io/klog/v2"
 )

@@ -4,12 +4,12 @@ package regression
 
 import (
 	"context"
-	"io/ioutil"
+	"os"
 
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/client"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/common"
 	"github.com/go-logr/logr"
-	"gopkg.in/yaml.v2"
+	"gopkg.in/yaml.v3"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -46,7 +46,7 @@ func ReadConfigurationYaml(filename string) (*ConfigurationYaml, error) {
 	// If it is not possible to extract the configuration.yaml from the tar file, use defaults
 	var yamlc = ConfigurationYaml{}
 
-	yamlFile, err := ioutil.ReadFile(filename)
+	yamlFile, err := os.ReadFile(filename)
 	if err != nil {
 		return &yamlc, err
 	}

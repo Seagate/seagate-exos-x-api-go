@@ -13,7 +13,7 @@ import (
 	"context"
 	"testing"
 
-	openapiclient "github.com/Seagate/seagate-exos-x-api-go/pkg/v2"
+	openapiclient "github.com/Seagate/seagate-exos-x-api-go/v2/pkg/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -142,19 +142,19 @@ func Test_client_DefaultApiService(t *testing.T) {
 
 	})
 
-	t.Run("Test DefaultApiService LoginGetByHash", func(t *testing.T) {
+	// t.Run("Test DefaultApiService LoginGetByHash", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+	// 	t.Skip("skip test") // remove to run test
 
-		var loginHash string
+	// 	var loginHash string
 
-		resp, httpRes, err := apiClient.DefaultApi.LoginGetByHash(context.Background(), loginHash).Execute()
+	// 	resp, httpRes, err := apiClient.DefaultApi.LoginGetByHash(context.Background(), loginHash).Execute()
 
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
+	// 	require.Nil(t, err)
+	// 	require.NotNil(t, resp)
+	// 	assert.Equal(t, 200, httpRes.StatusCode)
 
-	})
+	// })
 
 	t.Run("Test DefaultApiService MapVolumeAccessLunInitiatorNamesGet", func(t *testing.T) {
 

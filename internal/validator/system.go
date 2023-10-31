@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/client"
 
 	"github.com/go-logr/logr"
 	"k8s.io/klog/v2"

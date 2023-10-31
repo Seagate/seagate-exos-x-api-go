@@ -3,7 +3,7 @@
 package regression
 
 import (
-	storageapi "github.com/Seagate/seagate-exos-x-api-go/pkg/v2"
+	storageapi "github.com/Seagate/seagate-exos-x-api-go/v2/pkg/api"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 	"k8s.io/klog/v2"

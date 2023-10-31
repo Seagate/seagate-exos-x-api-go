@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/client"
-	"github.com/Seagate/seagate-exos-x-api-go/pkg/common"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/client"
+	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/common"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"k8s.io/klog/v2"
