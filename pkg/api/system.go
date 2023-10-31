@@ -169,6 +169,11 @@ func Log(system *common.SystemInfo) error {
 	return nil
 }
 
+// GetPoolType: Return the pool type of the storage system
+func (client *Client) GetPoolType(pool string) (string, error) {
+	return GetPoolType(client.Info, pool)
+}
+
 // GetPoolType: Return the pool type for a given pool
 func GetPoolType(system *common.SystemInfo, pool string) (string, error) {
 	if system == nil {
