@@ -6,7 +6,6 @@ import (
 	"context"
 	"os"
 
-	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/client"
 	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/common"
 	"github.com/go-logr/logr"
 	"gopkg.in/yaml.v3"
@@ -17,7 +16,9 @@ import (
 
 // ConfigurationYaml provides configuration credentials for a specific storage controller.
 type ConfigurationYaml struct {
-	Ip        string   `yaml:"ip"`        // The IP Address in dot notation of the storage controller, for example 10.1.2.3
+	MCA_IP    string   `yaml:"mc-a-ip"` // The IP Address in dot notation of the storage controller, for example 10.1.2.3
+	MCB_IP    string   `yaml:"mc-b-ip"` // The IP Address in dot notation of the storage controller, for example 10.1.2.3
+	Addrs     []string `yaml:"mc-ip-addrs"`
 	Protocol  string   `yaml:"protocol"`  // The IP protocol to use, such as http or https
 	Username  string   `yaml:"username"`  // The username used to log into the storage controller
 	Password  string   `yaml:"password"`  // The password used to log into the storage controller
@@ -64,11 +65,6 @@ func NewTestConfig(filename string) (*TestConfig, error) {
 		return nil, err
 	}
 
-	ctx := context.WithValue(context.Background(), client.ContextBasicAuth, client.BasicAuth{
-		UserName: config.Username,
-		Password: config.Password,
-	})
-
 	// Use https as default protocol
 	if config.Protocol == "" {
 		config.Protocol = common.DefaultProtocol
@@ -76,14 +72,16 @@ func NewTestConfig(filename string) (*TestConfig, error) {
 
 	return &TestConfig{
 		StorageController: ConfigurationYaml{
-			Ip:        config.Ip,
+			MCA_IP:    config.MCA_IP,
+			MCB_IP:    config.MCB_IP,
+			Addrs:     config.Addrs,
 			Protocol:  config.Protocol,
 			Username:  config.Username,
 			Password:  config.Password,
 			Initiator: config.Initiator,
 			Pool:      config.Pool,
 		},
-		Ctx: ctx,
+		Ctx: context.Background(),
 	}, nil
 }
 

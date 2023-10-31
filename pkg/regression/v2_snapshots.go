@@ -18,15 +18,22 @@ var _ = DescribeRegression("Snapshot Testing (v2)", func(tc *TestContext) {
 		snap2                       = "snap2"
 	)
 
-	BeforeEach(func() {
+	BeforeAll(func() {
 		By("setup client for testing")
 
 		logger := klog.FromContext(tc.Config.Ctx)
 		client = storageapi.NewClient()
-		client.StoreCredentials(tc.Config.StorageController.Ip, tc.Config.StorageController.Protocol, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
+		client.StoreCredentials(tc.Config.StorageController.Addrs, tc.Config.StorageController.Protocol, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
 		err := client.Login(tc.Config.Ctx)
-		client.InitSystemInfo()
-		logger.V(3).Info("Login", "ipaddress", client.Addr, "username", client.Username, "err", err)
+		Expect(err).To(BeNil())
+		logger.V(3).Info("Login", "ipaddress", client.CurrentAddr, "username", client.Username, "err", err)
+	})
+
+	AfterAll(func() {
+		By("logout testing client")
+		err := client.Logout()
+		logger := klog.FromContext(tc.Config.Ctx)
+		logger.V(3).Info("Logout", "ip", client.CurrentAddr, "username", client.Username, "err", err)
 		Expect(err).To(BeNil())
 	})
 

@@ -379,7 +379,7 @@ Use the `./api-regression -config <filename>` option to specify your configurati
 # api-regression configuration
 #
 # Properties:
-#   'ip' is required and is the IP Address of the storage controller used for testing
+#   'mc-ip-addrs:' is required and is the IP Addresses of the storage controller(s) used for testing. At least one address must be specified
 #   'protocol" specifies http or https
 #   'username' is required and is the login credentials for the storage controller
 #   'password' is required and is the login credentials for the storage controller
@@ -393,7 +393,7 @@ Use the `./api-regression -config <filename>` option to specify your configurati
 api-regression: 1.0.0
 
 # Example Controller
-ip: "<ipaddress>"
+mc-ip-addrs: ["<ipaddress-a>", "<ipaddress-b>"]
 protocol: "https"
 username: "<username>"
 password: "<password>"

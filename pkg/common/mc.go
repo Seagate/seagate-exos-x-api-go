@@ -107,10 +107,10 @@ func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 			return nil, fmt.Errorf("++ MC Login FAILURE, response=%v", *resp1.Status[0].Response)
 		}
 	} else {
-		logger.V(2).Info("-- LoginGet", "httpRes", httpRes, "err", err)
+		logger.V(3).Info("-- LoginGet", "httpRes", httpRes, "err", err)
 		return nil, fmt.Errorf("++ MC Login FAILURE, err=%v", err)
 	}
-	logger.V(3).Info("================================================================================")
+	logger.Info("================================================================================")
 
 	// Store the 'sessionKey' in the default header
 	configuration.DefaultHeader["sessionKey"] = sessionKey

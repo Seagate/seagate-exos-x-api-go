@@ -20,29 +20,33 @@ var _ = DescribeRegression("Login Testing (v2)", func(tc *TestContext) {
 
 		It("should be able to log into storage controller", func() {
 			client = storageapi.NewClient()
-			client.StoreCredentials(tc.Config.StorageController.Ip, tc.Config.StorageController.Protocol, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
+			client.StoreCredentials(tc.Config.StorageController.Addrs, tc.Config.StorageController.Protocol, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
 			err := client.Login(tc.Config.Ctx)
 			logger := klog.FromContext(tc.Config.Ctx)
-			logger.V(3).Info("Login", "ip", client.Addr, "username", client.Username, "err", err)
+			logger.V(3).Info("Login", "ip", client.CurrentAddr, "username", client.Username, "err", err)
 			Expect(err).To(BeNil())
 		})
 
 		It("should be a valid session", func() {
-			valid := client.SessionValid(client.Addr, client.Username)
-			Expect(valid).To(Equal(true))
+			Expect(client.SessionKey).ToNot(Equal(""))
 		})
 
 		It("should be able to log out of the storage controller", func() {
 			err := client.Logout()
 			logger := klog.FromContext(tc.Config.Ctx)
-			logger.V(3).Info("Logout", "ip", client.Addr, "username", client.Username, "err", err)
+			logger.V(3).Info("Logout", "ip", client.CurrentAddr, "username", client.Username, "err", err)
 			Expect(err).To(BeNil())
 		})
 
 		It("should be an invalid session", func() {
-			valid := client.SessionValid(client.Addr, client.Username)
-			Expect(valid).To(Equal(false))
+			Expect(client.SessionKey).To(Equal(""))
 		})
 
+		It("shouldn't work", func() {
+			logger := klog.FromContext(tc.Config.Ctx)
+			_, status, err := client.ShowHostMaps("irrelevant value")
+			logger.V(3).Info("Show Host Maps after logout", "status", status, "err", err)
+			Expect(err).To(Not(BeNil()))
+		})
 	})
 })

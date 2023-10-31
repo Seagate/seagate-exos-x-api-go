@@ -64,13 +64,8 @@ func UpdateVolumeObject(target *common.VolumeObject, source *client.VolumesResou
 func (client *Client) CreateVolume(name, size, pool string) (*common.VolumeObject, *common.ResponseStatus, error) {
 
 	logger := klog.FromContext(client.Ctx)
-	response, httpRes, err := client.apiClient.DefaultApi.CreateVolumePoolSizeNameGet(client.Ctx, pool, size, name).Execute()
-	logger.V(4).Info("create volume", "name", name, "http", httpRes.Status, "response", response)
-
-	status := &common.ResponseStatus{}
-	if response != nil && len(response.GetStatus()) > 0 {
-		status = CreateCommonStatus(logger, &response.Status)
-	}
+	response, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.CreateVolumePoolSizeTierAffinityNameGet(client.Ctx, pool, size, ApiTierAffinity, name).Execute, client)
+	logger.V(2).Info("create volume", "name", name, "http", httpRes.Status)
 
 	volume := common.VolumeObject{}
 	if response != nil && len(response.GetVolumes()) > 0 {
@@ -126,24 +121,25 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 	logger.V(4).Info("================================================================================")
 	logger.V(4).Info(">> ShowVolumesNamesGet")
 
-	response, httpRes, err := client.apiClient.DefaultApi.ShowVolumesNamesGet(client.Ctx, volume).Execute()
+	response, responseStatus, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.ShowVolumesNamesGet(client.Ctx, volume).Execute, client)
 
 	if httpRes.StatusCode == http.StatusOK && response != nil && err == nil {
-
-		// Extract Status resource information
-		logger.V(4).Info("++ ShowVolumesNamesGet.Status[0]",
-			"Response", *response.Status[0].Response,
-			"ReturnCode", *response.Status[0].ReturnCode,
-		)
-
-		for i, volume := range response.Volumes {
-			logger.V(4).Info("-- volumes",
-				"index", i,
-				"VolumeName", *volume.VolumeName,
-				"TotalSize", *volume.TotalSize,
-				"StoragePoolName", *volume.StoragePoolName,
-				"SerialNumber", *volume.SerialNumber,
+		if logger.V(4).Enabled() {
+			// Extract Status resource information
+			logger.V(4).Info("++ ShowVolumesNamesGet.Status[0]",
+				"Response", responseStatus.Response,
+				"ReturnCode", responseStatus.ReturnCode,
 			)
+
+			for i, volume := range response.Volumes {
+				logger.V(4).Info("-- volumes",
+					"index", i,
+					"VolumeName", *volume.VolumeName,
+					"TotalSize", *volume.TotalSize,
+					"StoragePoolName", *volume.StoragePoolName,
+					"SerialNumber", *volume.SerialNumber,
+				)
+			}
 		}
 	} else {
 		logger.V(4).Info("-- ShowVolumesNamesGet", "status", httpRes.Status, "err", err, "body", httpRes.Body)
@@ -152,9 +148,8 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 
 	logger.V(4).Info("================================================================================")
 
-	status := CreateCommonStatus(logger, &response.Status)
-
 	returnVolumes := []common.VolumeObject{}
+
 	for _, v := range response.Volumes {
 		volume := common.VolumeObject{}
 		volume.ObjectName = v.GetObjectName()
@@ -173,7 +168,7 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 		returnVolumes = append(returnVolumes, volume)
 	}
 
-	return returnVolumes, status, err
+	return returnVolumes, responseStatus, err
 }
 
 // GetVolumeWwn: Retrieve the WWN for a volume, very useful for host operating system device mapping
@@ -199,9 +194,8 @@ func (client *Client) GetVolumeMapsHostNames(name string) ([]string, *common.Res
 	logger := klog.FromContext(client.Ctx)
 
 	logger.V(2).Info("get volume maps host names", "volume", name)
-	response, httpRes, err := client.apiClient.DefaultApi.ShowMapsNamesGet(client.Ctx, name).Execute()
 
-	status := CreateCommonStatus(logger, &response.Status)
+	response, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.ShowMapsNamesGet(client.Ctx, name).Execute, client)
 
 	if err != nil {
 		return []string{}, status, err
@@ -235,8 +229,7 @@ func (client *Client) ShowHostMaps(host string) ([]Volume, *common.ResponseStatu
 	// be returned. Instead we get all initiator mappings and filter by initiator
 	logger.Info("++ ShowHostMaps", "host", host)
 
-	response, _, err := client.apiClient.DefaultApi.ShowMapsInitiatorNamesGet(client.Ctx, "").Execute()
-	status := CreateCommonStatus(logger, &response.Status)
+	response, status, _, err := ExecuteWithFailover(client.apiClient.DefaultApi.ShowMapsInitiatorNamesGet(client.Ctx, "").Execute, client)
 
 	if err != nil {
 		return nil, status, err
@@ -319,9 +312,9 @@ func (client *Client) chooseLUN(initiators []string) (int, error) {
 func (client *Client) MapVolume(name, initiator, access string, lun int) (*common.ResponseStatus, error) {
 
 	logger := klog.FromContext(client.Ctx)
-	response, httpRes, err := client.apiClient.DefaultApi.MapVolumeAccessLunInitiatorNamesGet(client.Ctx, access, strconv.Itoa(lun), initiator, name).Execute()
+	_, respStatus, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.MapVolumeAccessLunInitiatorNamesGet(client.Ctx, access, strconv.Itoa(lun), initiator, name).Execute, client)
 	logger.V(2).Info("map volume", "name", name, "lun", lun, "initiator", initiator, "http", httpRes.Status)
-	return CreateCommonStatus(logger, &response.Status), err
+	return respStatus, err
 }
 
 // CreateNickname : Create a nickname for an initiator. The Storage API policy is to prohibit mapping of initiators which are not either
@@ -329,9 +322,9 @@ func (client *Client) MapVolume(name, initiator, access string, lun int) (*commo
 func (client *Client) CreateNickname(name, iqn string) (*common.ResponseStatus, error) {
 
 	logger := klog.FromContext(client.Ctx)
-	response, httpRes, err := client.apiClient.DefaultApi.SetInitiatorIdNicknameGet(client.Ctx, iqn, name).Execute()
+	_, response, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.SetInitiatorIdNicknameGet(client.Ctx, iqn, name).Execute, client)
 	logger.V(2).Info("create nickname", "name", name, "nickname", iqn, "http", httpRes.Status)
-	return CreateCommonStatus(logger, &response.Status), err
+	return response, err
 }
 
 // mapVolumeProcess: Map a volume to an initiator and create a nickname when required by the storage array
@@ -381,41 +374,41 @@ func (client *Client) UnmapVolume(name, initiator string) (*common.ResponseStatu
 	logger := klog.FromContext(client.Ctx)
 
 	if initiator == "" {
-		response, httpRes, err := client.apiClient.DefaultApi.UnmapVolumeNamesGet(client.Ctx, name).Execute()
+		_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.UnmapVolumeNamesGet(client.Ctx, name).Execute, client)
 		logger.V(2).Info("unmap volume", "name", name, "initiator", initiator, "http", httpRes.Status)
-		return CreateCommonStatus(logger, &response.Status), err
+		return status, err
 	}
 
-	response, httpRes, err := client.apiClient.DefaultApi.UnmapVolumeInitiatorNamesGet(client.Ctx, initiator, name).Execute()
+	_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.UnmapVolumeInitiatorNamesGet(client.Ctx, initiator, name).Execute, client)
 	logger.V(2).Info("unmap volume", "name", name, "initiator", initiator, "http", httpRes.Status)
-	return CreateCommonStatus(logger, &response.Status), err
+	return status, err
 }
 
 // ExpandVolume : extend a volume if there is enough space in the disk group
 func (client *Client) ExpandVolume(name, size string) (*common.ResponseStatus, error) {
 
 	logger := klog.FromContext(client.Ctx)
-	response, httpRes, err := client.apiClient.DefaultApi.ExpandVolumeSizeNameGet(client.Ctx, size, name).Execute()
+	_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.ExpandVolumeSizeNameGet(client.Ctx, size, name).Execute, client)
 	logger.V(2).Info("expand volume", "name", name, "size", size, "http", httpRes.Status)
-	return CreateCommonStatus(logger, &response.Status), err
+	return status, err
 }
 
 // CopyVolume : create an new volume by copying another one or a snapshot
 func (client *Client) CopyVolume(sourceName string, destinationName string, pool string) (*common.ResponseStatus, error) {
 
 	logger := klog.FromContext(client.Ctx)
-	response, httpRes, err := client.apiClient.DefaultApi.CopyVolumeDestinationPoolNameSourceGet(client.Ctx, pool, destinationName, sourceName).Execute()
+	_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.CopyVolumeDestinationPoolNameSourceGet(client.Ctx, pool, destinationName, sourceName).Execute, client)
 	logger.V(2).Info("copy volume", "destination", destinationName, "source", sourceName, "pool", pool, "http", httpRes.Status)
-	return CreateCommonStatus(logger, &response.Status), err
+	return status, err
 }
 
 // DeleteVolume : deletes a volume
 func (client *Client) DeleteVolume(name string) (*common.ResponseStatus, error) {
 
 	logger := klog.FromContext(client.Ctx)
-	response, httpRes, err := client.apiClient.DefaultApi.DeleteVolumesNamesGet(client.Ctx, name).Execute()
+	_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.DeleteVolumesNamesGet(client.Ctx, name).Execute, client)
 	logger.V(2).Info("delete volume", "name", name, "http", httpRes.Status)
-	return CreateCommonStatus(logger, &response.Status), err
+	return status, err
 }
 
 // PublishVolume: Attach a volume to an initiator

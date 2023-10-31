@@ -18,6 +18,7 @@ const (
 	InvalidArgumentErrorCode              = -10058
 	HostMapDoesNotExistsErrorCode         = -10074
 	VolumeNotFoundErrorCode               = -10075
+	UserNotRecognized                     = -10027
 	VolumeHasSnapshot                     = -10183
 	SnapshotAlreadyExists                 = -10186
 	InitiatorNicknameOrIdentifierNotFound = -10386

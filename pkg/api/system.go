@@ -46,7 +46,7 @@ func AddSystem(url string, client *Client) error {
 	s.Ports = nil
 
 	// Extract and store controller data, including ports
-	response, httpRes, err := client.apiClient.DefaultApi.ShowControllersGet(client.Ctx).Execute()
+	response, _, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.ShowControllersGet(client.Ctx).Execute, client)
 
 	if err == nil && httpRes.StatusCode == http.StatusOK && response != nil {
 
@@ -78,10 +78,13 @@ func AddSystem(url string, client *Client) error {
 				s.Ports = append(s.Ports, p)
 			}
 		}
+	} else {
+		klog.V(2).ErrorS(err, "Error when running show controllers")
+		return err
 	}
 
 	// Extract and store controller firmware versions
-	versions, httpRes, err := client.apiClient.DefaultApi.ShowVersionsDetailGet(client.Ctx).Execute()
+	versions, _, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.ShowVersionsDetailGet(client.Ctx).Execute, client)
 	if err == nil && httpRes.StatusCode == http.StatusOK {
 		for _, version := range versions.GetVersions() {
 			if strings.EqualFold("A", s.Controller) && version.GetObjectName() == "controller-a-versions" {
@@ -97,7 +100,7 @@ func AddSystem(url string, client *Client) error {
 
 	// Extract and store pool data
 	s.Pools = nil
-	diskgroups, httpRes, err := client.apiClient.DefaultApi.ShowDiskGroupsGet(client.Ctx).Execute()
+	diskgroups, _, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.ShowDiskGroupsGet(client.Ctx).Execute, client)
 
 	if err != nil {
 		klog.ErrorS(err, "show disk-groups")

@@ -28,7 +28,7 @@ func DescribeRegression(text string, body func(*TestContext)) bool {
 func registerTestsInGinkgo(sc *TestContext) {
 	for _, test := range tests {
 		test := test
-		Describe(test.text, func() {
+		Describe(test.text, Ordered, ContinueOnFailure, func() {
 			BeforeEach(func() {
 				sc.Setup()
 			})
