@@ -169,6 +169,11 @@ func Log(system *common.SystemInfo) error {
 	return nil
 }
 
+// GetPoolType: Return the pool type of the storage system
+func (client *Client) GetPoolType(pool string) (string, error) {
+	return GetPoolType(client.Info, pool)
+}
+
 // GetPoolType: Return the pool type for a given pool
 func GetPoolType(system *common.SystemInfo, pool string) (string, error) {
 	if system == nil {
@@ -204,11 +209,6 @@ func GetTargetId(system *common.SystemInfo, portType string) (string, error) {
 // GetPortals: Return a list of portals for the storage system
 func (client *Client) GetPortals() (string, error) {
 	return GetPortals(client.Info)
-}
-
-// GetPoolType: Return the pool type of the storage system
-func (client *Client) GetPoolType(pool string) (string, error) {
-	return GetPoolType(client.Info, pool)
 }
 
 // GetPortals: Return a list of iSCSI portals for the storage system
