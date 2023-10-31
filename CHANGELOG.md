@@ -1,3 +1,9 @@
+## [2.0.2](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.0.1...v2.0.2) (2023-10-31)
+
+### Bug Fixes
+
+- restore convenience function for GetPoolType (#50) ([a8a8078](https://github.com/Seagate/seagate-exos-x-api-go/commit/a8a8078e808a438c4665edc8f6cffefdd6a57a73)), closes [#50](https://github.com/Seagate/seagate-exos-x-api-go/issues/50)
+
 ## [2.0.1](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.0.0...v2.0.1) (2023-10-31)
 
 ### Code Refactoring
