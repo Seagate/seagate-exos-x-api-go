@@ -3,11 +3,10 @@
 package common
 
 import (
-	"strconv"
 	"time"
 
-	"github.com/golang/protobuf/ptypes"
 	"github.com/golang/protobuf/ptypes/timestamp"
+	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
 // Exos X Storage API Error Codes
@@ -64,10 +63,10 @@ type SnapshotObject struct {
 }
 
 func CreationTimeFromString(creationTime string) (*timestamp.Timestamp, error) {
-	creationTimestamp, err := strconv.ParseInt(creationTime, 10, 64)
+	creationTimestamp, err := time.Parse(time.DateTime, creationTime)
 	if err != nil {
 		return nil, err
 	}
 
-	return ptypes.TimestampProto(time.Unix(creationTimestamp, 0))
+	return timestamppb.New(creationTimestamp), nil
 }
