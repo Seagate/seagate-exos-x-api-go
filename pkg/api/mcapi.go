@@ -62,10 +62,7 @@ func (client *Client) StoreCredentials(addr string, protocol string, username st
 
 // Login: Called to log into the storage controller API
 func (client *Client) Login(ctx context.Context) error {
-
-	if client.Ctx == nil {
-		client.Ctx = ctx
-	}
+	client.Ctx = ctx
 
 	config := &common.Config{
 		MCIpAddress: client.Addr,
@@ -86,7 +83,9 @@ func (client *Client) Login(ctx context.Context) error {
 
 // SessionValid : Determine if a session is valid, if not a login is required
 func (client *Client) SessionValid(addr, username string) bool {
-
+	if client.Ctx == nil {
+		return false
+	}
 	logger := klog.FromContext(client.Ctx)
 
 	// addr may include protocol and ip address or hostname, or only ip address
