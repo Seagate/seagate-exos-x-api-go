@@ -70,10 +70,6 @@ func GetAddressAndProtocol(addr string, protocol string) (string, string) {
 // Login: Perform the needed steps to configure a connection and login to the MC
 func Login(ctx context.Context, config *Config) (*client.APIClient, error) {
 
-	if apiClient != nil {
-		return apiClient, nil
-	}
-
 	logger := klog.FromContext(ctx)
 
 	configuration := &client.Configuration{
