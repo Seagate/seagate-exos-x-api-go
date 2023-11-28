@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.0.2...v2.0.3) (2023-11-28)
+
+### Bug Fixes
+
+- Allow Login method to overwrite previous Login calls ([3af0156](https://github.com/Seagate/seagate-exos-x-api-go/commit/3af0156137933f200471555050fabb595fd6b893))
+- Update timestamp creation for snapshot objects ([32b209f](https://github.com/Seagate/seagate-exos-x-api-go/commit/32b209fbf89855fb35d58d8afd6cf2faf90f44f4))
+
 ## [2.0.2](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.0.1...v2.0.2) (2023-10-31)
 
 ### Bug Fixes
