@@ -179,14 +179,29 @@ func (s *Specification) GenerateHeader(ctx context.Context) error {
 	return nil
 }
 
-// GenerateLogin: Add all required lines for MC login path
-func (s *Specification) GenerateLogin(ctx context.Context) error {
+// GenerateLoginLogout: Add all required lines for MC login and logout paths
+func (s *Specification) GenerateLoginLogout(ctx context.Context) error {
 
 	s.Paths(1, "# Login")
 	s.Paths(1, "/login:")
 	s.Paths(2, "get:")
 	s.Paths(3, "description: Log in to the storage array management controller")
 	s.Paths(3, "operationId: LoginGet")
+	s.Paths(3, "security:")
+	s.Paths(3, "- basicAuth: []")
+	s.Paths(3, "responses:")
+	s.Paths(4, "'200':")
+	s.Paths(5, "description: OK")
+	s.Paths(5, "content:")
+	s.Paths(6, "application/json:")
+	s.Paths(7, "schema:")
+	s.Paths(8, "$ref: '#/components/schemas/statusObject'")
+
+	s.Paths(1, "# Logout")
+	s.Paths(1, "/logout:")
+	s.Paths(2, "get:")
+	s.Paths(3, "description: Log out of the storage array management controller")
+	s.Paths(3, "operationId: LogoutGet")
 	s.Paths(3, "security:")
 	s.Paths(3, "- basicAuth: []")
 	s.Paths(3, "responses:")

@@ -147,12 +147,16 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 		}
 	} else {
 		logger.V(4).Info("-- ShowVolumesNamesGet", "status", httpRes.Status, "err", err, "body", httpRes.Body)
+		return nil, &common.ResponseStatus{}, err
 	}
 
 	logger.V(4).Info("================================================================================")
 
 	returnVolumes := []common.VolumeObject{}
-	status := CreateCommonStatus(logger, &response.Status)
+	status := &common.ResponseStatus{}
+	if response.Status != nil {
+		status = CreateCommonStatus(logger, &response.Status)
+	}
 
 	if response != nil {
 		for _, v := range response.Volumes {

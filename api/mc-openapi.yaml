@@ -28,6 +28,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/statusObject'
+  # Logout
+  /logout:
+    get:
+      description: Log out of the storage array management controller
+      operationId: LogoutGet
+      security:
+      - basicAuth: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
   # Meta
   /meta/{schemaId}:
     get:
