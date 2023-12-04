@@ -105,11 +105,11 @@ func (client *Client) SessionValid(addr, username string) bool {
 			logger.V(2).Info("session invalid", "sessionkey", client.SessionKey)
 			return false
 		}
-		logger.V(2).Info("client is configured", "ipaddress", addr)
-		return true
 	}
 
-	return false
+	//run an API call to test that the session is still valid
+	_, _, err := client.apiClient.DefaultApi.ShowSystemGet(client.Ctx).Execute()
+	return err == nil
 }
 
 // InitSystemInfo: Retrieve and store system information for this client
