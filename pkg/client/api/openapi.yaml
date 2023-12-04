@@ -26,6 +26,19 @@ paths:
           description: OK
       security:
       - basicAuth: []
+  /logout:
+    get:
+      description: Log out of the storage array management controller
+      operationId: LogoutGet
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+          description: OK
+      security:
+      - basicAuth: []
   /meta/{schemaId}:
     get:
       description: Retrieve schema definition for a resource

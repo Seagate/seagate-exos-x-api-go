@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**DeleteVolumesNamesGet**](DefaultApi.md#DeleteVolumesNamesGet) | **Get** /delete/volumes/{namesOption} | 
 [**ExpandVolumeSizeNameGet**](DefaultApi.md#ExpandVolumeSizeNameGet) | **Get** /expand/volume/size/{sizeOption}/{nameOption} | 
 [**LoginGet**](DefaultApi.md#LoginGet) | **Get** /login | 
+[**LogoutGet**](DefaultApi.md#LogoutGet) | **Get** /logout | 
 [**MapVolumeAccessLunInitiatorNamesGet**](DefaultApi.md#MapVolumeAccessLunInitiatorNamesGet) | **Get** /map/volume/access/{accessOption}/lun/{lunOption}/initiator/{initiatorOption}/{namesOption} | 
 [**SchemaGet**](DefaultApi.md#SchemaGet) | **Get** /meta/{schemaId} | 
 [**SetInitiatorIdNicknameGet**](DefaultApi.md#SetInitiatorIdNicknameGet) | **Get** /set/initiator/id/{idOption}/nickname/{nicknameOption} | 
@@ -667,6 +668,67 @@ This endpoint does not need any parameter.
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiLoginGetRequest struct via the builder pattern
+
+
+### Return type
+
+[**StatusObject**](StatusObject.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## LogoutGet
+
+> StatusObject LogoutGet(ctx).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.LogoutGet(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.LogoutGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `LogoutGet`: StatusObject
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.LogoutGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiLogoutGetRequest struct via the builder pattern
 
 
 ### Return type

@@ -87,6 +87,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteVolumesNamesGet**](docs/DefaultApi.md#deletevolumesnamesget) | **Get** /delete/volumes/{namesOption} | 
 *DefaultApi* | [**ExpandVolumeSizeNameGet**](docs/DefaultApi.md#expandvolumesizenameget) | **Get** /expand/volume/size/{sizeOption}/{nameOption} | 
 *DefaultApi* | [**LoginGet**](docs/DefaultApi.md#loginget) | **Get** /login | 
+*DefaultApi* | [**LogoutGet**](docs/DefaultApi.md#logoutget) | **Get** /logout | 
 *DefaultApi* | [**MapVolumeAccessLunInitiatorNamesGet**](docs/DefaultApi.md#mapvolumeaccessluninitiatornamesget) | **Get** /map/volume/access/{accessOption}/lun/{lunOption}/initiator/{initiatorOption}/{namesOption} | 
 *DefaultApi* | [**SchemaGet**](docs/DefaultApi.md#schemaget) | **Get** /meta/{schemaId} | 
 *DefaultApi* | [**SetInitiatorIdNicknameGet**](docs/DefaultApi.md#setinitiatoridnicknameget) | **Get** /set/initiator/id/{idOption}/nickname/{nicknameOption} | 

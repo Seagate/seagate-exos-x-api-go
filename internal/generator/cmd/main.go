@@ -57,7 +57,7 @@ func main() {
 	s := &generator.Specification{}
 	s.Reset()
 	s.GenerateHeader(ctx)
-	s.GenerateLogin(ctx)
+	s.GenerateLoginLogout(ctx)
 	s.GenerateMetaSchema(ctx)
 
 	logger.V(0).Info(">> generate openapi spec...", "commands", len(yamlc.Commands), "exceptions", len(yamlc.Exceptions))

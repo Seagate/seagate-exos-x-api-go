@@ -81,6 +81,15 @@ func (client *Client) Login(ctx context.Context) error {
 	return err
 }
 
+// Login: Called to log into the storage controller API
+func (client *Client) Logout() error {
+	if client.Ctx == nil {
+		client.Ctx = context.Background()
+	}
+	_, _, err := client.apiClient.DefaultApi.LogoutGet(client.Ctx).Execute()
+	return err
+}
+
 // SessionValid : Determine if a session is valid, if not a login is required
 func (client *Client) SessionValid(addr, username string) bool {
 	if client.Ctx == nil {

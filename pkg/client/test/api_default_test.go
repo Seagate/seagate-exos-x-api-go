@@ -11,11 +11,10 @@ package client
 
 import (
 	"context"
-	"testing"
-
-	openapiclient "github.com/Seagate/seagate-exos-x-api-go/v2/pkg/client"
+	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"testing"
 )
 
 func Test_client_DefaultApiService(t *testing.T) {
@@ -142,19 +141,29 @@ func Test_client_DefaultApiService(t *testing.T) {
 
 	})
 
-	// t.Run("Test DefaultApiService LoginGetByHash", func(t *testing.T) {
+	t.Run("Test DefaultApiService LoginGet", func(t *testing.T) {
 
-	// 	t.Skip("skip test") // remove to run test
+		t.Skip("skip test") // remove to run test
 
-	// 	var loginHash string
+		resp, httpRes, err := apiClient.DefaultApi.LoginGet(context.Background()).Execute()
 
-	// 	resp, httpRes, err := apiClient.DefaultApi.LoginGetByHash(context.Background(), loginHash).Execute()
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
 
-	// 	require.Nil(t, err)
-	// 	require.NotNil(t, resp)
-	// 	assert.Equal(t, 200, httpRes.StatusCode)
+	})
 
-	// })
+	t.Run("Test DefaultApiService LogoutGet", func(t *testing.T) {
+
+		t.Skip("skip test") // remove to run test
+
+		resp, httpRes, err := apiClient.DefaultApi.LogoutGet(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
 
 	t.Run("Test DefaultApiService MapVolumeAccessLunInitiatorNamesGet", func(t *testing.T) {
 
