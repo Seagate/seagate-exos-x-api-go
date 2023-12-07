@@ -207,7 +207,7 @@ The following table provides a list of all possible MC API commands and which on
 | `show ciphers` |  | not supported |
 | `show cli-parameters` |  | not supported |
 | `show configuration` |  | not supported |
-| `show controller-date` |  | not supported |
+| `show controller-date` |  | supported |
 | `show controller-statistics` |  | not supported |
 | `show controllers` | supported |  |
 | `show debug-log-parameters` |  | not supported |
