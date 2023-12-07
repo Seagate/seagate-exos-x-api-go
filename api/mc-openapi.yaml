@@ -92,6 +92,24 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/statusObject'
+  # /show/controller-date
+  /show/controller-date:
+    get:
+      description: Execute /show/controller-date command
+      operationId: ShowController-DateGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
   # /show/volumes
   /show/volumes/{namesOption}:
     get:

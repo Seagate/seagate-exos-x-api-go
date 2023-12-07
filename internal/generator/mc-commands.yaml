@@ -24,6 +24,11 @@ commands:
     meta: fan
     include:
     - status
+  
+  - command: /show/controller-date
+    meta: status
+    include:
+    - status
 
   - command: /show/volumes
     meta: volumes

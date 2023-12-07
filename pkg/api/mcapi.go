@@ -91,6 +91,9 @@ func (client *Client) Logout() error {
 }
 
 // SessionValid : Determine if a session is valid, if not a login is required
+// Makes the 'show controller-date' API call to validate the session is still valid
+//
+// Deprecated: This function will be made redundant by retry logic in a future update
 func (client *Client) SessionValid(addr, username string) bool {
 	if client.Ctx == nil {
 		return false
@@ -108,7 +111,7 @@ func (client *Client) SessionValid(addr, username string) bool {
 	}
 
 	//run an API call to test that the session is still valid
-	_, _, err := client.apiClient.DefaultApi.ShowSystemGet(client.Ctx).Execute()
+	_, _, err := client.apiClient.DefaultApi.ShowControllerDateGet(client.Ctx).Execute()
 	return err == nil
 }
 

@@ -35,7 +35,7 @@ var _ = DescribeRegression("Login Testing (v2)", func(tc *TestContext) {
 		It("should be able to log out of the storage controller", func() {
 			err := client.Logout()
 			logger := klog.FromContext(tc.Config.Ctx)
-			logger.V(3).Info("Login", "ip", client.Addr, "username", client.Username, "err", err)
+			logger.V(3).Info("Logout", "ip", client.Addr, "username", client.Username, "err", err)
 			Expect(err).To(BeNil())
 		})
 

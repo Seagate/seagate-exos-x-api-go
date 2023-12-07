@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ShowAdvancedSettingsGet**](docs/DefaultApi.md#showadvancedsettingsget) | **Get** /show/advanced-settings | 
 *DefaultApi* | [**ShowCacheParametersGet**](docs/DefaultApi.md#showcacheparametersget) | **Get** /show/cache-parameters | 
 *DefaultApi* | [**ShowCertificateGet**](docs/DefaultApi.md#showcertificateget) | **Get** /show/certificate | 
+*DefaultApi* | [**ShowControllerDateGet**](docs/DefaultApi.md#showcontrollerdateget) | **Get** /show/controller-date | 
 *DefaultApi* | [**ShowControllersGet**](docs/DefaultApi.md#showcontrollersget) | **Get** /show/controllers | 
 *DefaultApi* | [**ShowDiskGroupsGet**](docs/DefaultApi.md#showdiskgroupsget) | **Get** /show/disk-groups | 
 *DefaultApi* | [**ShowDisksGet**](docs/DefaultApi.md#showdisksget) | **Get** /show/disks | 
