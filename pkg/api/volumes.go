@@ -128,7 +128,7 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 
 	response, httpRes, err := client.apiClient.DefaultApi.ShowVolumesNamesGet(client.Ctx, volume).Execute()
 
-	if httpRes.StatusCode == http.StatusOK && response != nil {
+	if httpRes.StatusCode == http.StatusOK && response != nil && err == nil {
 
 		// Extract Status resource information
 		logger.V(4).Info("++ ShowVolumesNamesGet.Status[0]",
@@ -152,30 +152,25 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 
 	logger.V(4).Info("================================================================================")
 
+	status := CreateCommonStatus(logger, &response.Status)
+
 	returnVolumes := []common.VolumeObject{}
-	status := &common.ResponseStatus{}
-	if response.Status != nil {
-		status = CreateCommonStatus(logger, &response.Status)
-	}
+	for _, v := range response.Volumes {
+		volume := common.VolumeObject{}
+		volume.ObjectName = v.GetObjectName()
+		volume.Blocks = v.GetBlocks()
+		volume.BlockSize = v.GetBlocksize()
+		volume.Health = v.GetHealth()
+		volume.SizeNumeric = v.GetSizeNumeric()
+		volume.StoragePoolName = v.GetStoragePoolName()
+		volume.StorageType = v.GetStorageType()
+		volume.TierAffinity = v.GetTierAffinity()
+		volume.TotalSize = v.GetTotalSize()
+		volume.VolumeName = v.GetVolumeName()
+		volume.VolumeType = v.GetVolumeType()
+		volume.Wwn = strings.ToLower(v.GetWwn())
 
-	if response != nil {
-		for _, v := range response.Volumes {
-			volume := common.VolumeObject{}
-			volume.ObjectName = v.GetObjectName()
-			volume.Blocks = v.GetBlocks()
-			volume.BlockSize = v.GetBlocksize()
-			volume.Health = v.GetHealth()
-			volume.SizeNumeric = v.GetSizeNumeric()
-			volume.StoragePoolName = v.GetStoragePoolName()
-			volume.StorageType = v.GetStorageType()
-			volume.TierAffinity = v.GetTierAffinity()
-			volume.TotalSize = v.GetTotalSize()
-			volume.VolumeName = v.GetVolumeName()
-			volume.VolumeType = v.GetVolumeType()
-			volume.Wwn = strings.ToLower(v.GetWwn())
-
-			returnVolumes = append(returnVolumes, volume)
-		}
+		returnVolumes = append(returnVolumes, volume)
 	}
 
 	return returnVolumes, status, err
