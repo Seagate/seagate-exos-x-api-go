@@ -157,7 +157,7 @@ commands:
       description: A comma-separated list of the names or serial numbers of the volumes. A name that includes a space must be enclosed in double quotes.
 
   - command: /show/maps/initiator
-    meta: hosts-view
+    meta: initiator-view
     include:
     - status
     nested:

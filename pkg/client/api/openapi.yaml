@@ -369,7 +369,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/hosts-viewObject'
+                $ref: '#/components/schemas/initiator-viewObject'
           description: OK
         "401":
           content:
@@ -1214,9 +1214,9 @@ components:
       maxItems: 1024
       minItems: 1
       type: array
-    hosts-viewResource:
+    initiator-viewResource:
       items:
-        $ref: '#/components/schemas/hosts_viewResource_inner'
+        $ref: '#/components/schemas/initiator_viewResource_inner'
       maxItems: 1024
       minItems: 1
       type: array
@@ -65586,12 +65586,12 @@ components:
           minItems: 1
           type: array
       type: object
-    hosts-viewObject:
+    initiator-viewObject:
       example:
-        hosts-view:
+        initiator-view:
         - host-view-mappings:
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65599,7 +65599,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65607,7 +65607,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65615,7 +65615,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65623,21 +65623,22 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
             volume-serial: volume-serial
             ports: ports
+          host-profile-numeric: 0
           object-name: object-name
-          serial-number: serial-number
           meta: meta
-          durable-id: durable-id
-          host-name: host-name
+          id: id
+          host-profile: host-profile
+          hba-nickname: hba-nickname
         - host-view-mappings:
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65645,7 +65646,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65653,7 +65654,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65661,7 +65662,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65669,21 +65670,22 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
             volume-serial: volume-serial
             ports: ports
+          host-profile-numeric: 0
           object-name: object-name
-          serial-number: serial-number
           meta: meta
-          durable-id: durable-id
-          host-name: host-name
+          id: id
+          host-profile: host-profile
+          hba-nickname: hba-nickname
         - host-view-mappings:
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65691,7 +65693,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65699,7 +65701,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65707,7 +65709,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65715,21 +65717,22 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
             volume-serial: volume-serial
             ports: ports
+          host-profile-numeric: 0
           object-name: object-name
-          serial-number: serial-number
           meta: meta
-          durable-id: durable-id
-          host-name: host-name
+          id: id
+          host-profile: host-profile
+          hba-nickname: hba-nickname
         - host-view-mappings:
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65737,7 +65740,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65745,7 +65748,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65753,7 +65756,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65761,21 +65764,22 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
             volume-serial: volume-serial
             ports: ports
+          host-profile-numeric: 0
           object-name: object-name
-          serial-number: serial-number
           meta: meta
-          durable-id: durable-id
-          host-name: host-name
+          id: id
+          host-profile: host-profile
+          hba-nickname: hba-nickname
         - host-view-mappings:
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65783,7 +65787,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65791,7 +65795,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65799,7 +65803,7 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
@@ -65807,18 +65811,19 @@ components:
             volume-serial: volume-serial
             ports: ports
           - access: access
-            access-numeric: 0
+            access-numeric: 6
             lun: lun
             object-name: object-name
             meta: meta
             volume-name: volume-name
             volume-serial: volume-serial
             ports: ports
+          host-profile-numeric: 0
           object-name: object-name
-          serial-number: serial-number
           meta: meta
-          durable-id: durable-id
-          host-name: host-name
+          id: id
+          host-profile: host-profile
+          hba-nickname: hba-nickname
         status:
         - time-stamp: time-stamp
           time-stamp-numeric: 1
@@ -65867,14 +65872,14 @@ components:
           return-code: 6
       properties:
         status:
-          items:
+        initiator-view:
             $ref: '#/components/schemas/statusResource_inner'
-          maxItems: 1024
+            $ref: '#/components/schemas/initiator_viewResource_inner'
           minItems: 1
           type: array
-        hosts-view:
+        initiator-view:
           items:
-            $ref: '#/components/schemas/hosts_viewResource_inner'
+            $ref: '#/components/schemas/initiator_viewResource_inner'
           maxItems: 1024
           minItems: 1
           type: array
@@ -82583,11 +82588,11 @@ components:
           description: Unique serial number for the volume
           type: string
       type: object
-    hosts_viewResource_inner:
+    initiator_viewResource_inner:
       example:
         host-view-mappings:
         - access: access
-          access-numeric: 0
+          access-numeric: 6
           lun: lun
           object-name: object-name
           meta: meta
@@ -82595,7 +82600,7 @@ components:
           volume-serial: volume-serial
           ports: ports
         - access: access
-          access-numeric: 0
+          access-numeric: 6
           lun: lun
           object-name: object-name
           meta: meta
@@ -82603,7 +82608,7 @@ components:
           volume-serial: volume-serial
           ports: ports
         - access: access
-          access-numeric: 0
+          access-numeric: 6
           lun: lun
           object-name: object-name
           meta: meta
@@ -82611,7 +82616,7 @@ components:
           volume-serial: volume-serial
           ports: ports
         - access: access
-          access-numeric: 0
+          access-numeric: 6
           lun: lun
           object-name: object-name
           meta: meta
@@ -82619,28 +82624,32 @@ components:
           volume-serial: volume-serial
           ports: ports
         - access: access
-          access-numeric: 0
+          access-numeric: 6
           lun: lun
           object-name: object-name
           meta: meta
           volume-name: volume-name
           volume-serial: volume-serial
           ports: ports
+        host-profile-numeric: 0
         object-name: object-name
-        serial-number: serial-number
         meta: meta
-        durable-id: durable-id
-        host-name: host-name
+        id: id
+        host-profile: host-profile
+        hba-nickname: hba-nickname
       properties:
         object-name:
           type: string
         meta:
           type: string
-        durable-id:
+        hba-nickname:
           type: string
-        host-name:
+        host-profile:
           type: string
-        serial-number:
+        host-profile-numeric:
+          format: int64
+          type: integer
+        id:
           type: string
         host-view-mappings:
           items:

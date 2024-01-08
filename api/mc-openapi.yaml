@@ -365,7 +365,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/hosts-viewObject'
+                $ref: '#/components/schemas/initiator-viewObject'
         '401':
           description: Unauthorized
           content:
@@ -3908,7 +3908,7 @@ components:
           volume-serial:
             type: string
             description: Unique serial number for the volume
-    hosts-viewResource:
+    initiator-viewResource:
       type: array
       minItems: 1
       maxItems: 1024
@@ -3919,11 +3919,14 @@ components:
             type: string
           meta:
             type: string
-          durable-id:
+          hba-nickname:
             type: string
-          host-name:
+          host-profile:
             type: string
-          serial-number:
+          host-profile-numeric:
+            type: integer
+            format: int64
+          id:
             type: string
           host-view-mappings:
             $ref: '#/components/schemas/host-view-mappingsResource'
@@ -4164,13 +4167,13 @@ components:
           $ref: '#/components/schemas/volume-group-viewResource'
         volume-view:
           $ref: '#/components/schemas/volume-viewResource'
-    hosts-viewObject:
+    initiator-viewObject:
       type: object
       properties:
         status:
           $ref: '#/components/schemas/statusResource'
-        hosts-view:
-          $ref: '#/components/schemas/hosts-viewResource'
+        initiator-view:
+          $ref: '#/components/schemas/initiator-viewResource'
     initiatorObject:
       type: object
       properties:

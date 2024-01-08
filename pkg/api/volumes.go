@@ -245,9 +245,9 @@ func (client *Client) ShowHostMaps(host string) ([]Volume, *common.ResponseStatu
 
 	mappings := make([]Volume, 0)
 
-	for _, hv := range response.GetHostsView() {
+	for _, hv := range response.GetInitiatorView() {
 		if host != "" {
-			if hv.GetHostName() != host {
+			if hv.GetHbaNickname() != host && hv.GetId() != host {
 				continue
 			}
 		}
@@ -273,6 +273,7 @@ func (client *Client) chooseLUN(initiators []string) (int, error) {
 
 	var allvolumes []Volume
 	for _, initiatorName := range initiators {
+		logger.V(5).Info("Searching for maps for initiator", "intitiatorName", initiatorName)
 		volumes, responseStatus, err := client.ShowHostMaps(initiatorName)
 		if err != nil {
 			logger.Error(err, "error looking for host maps", "initiator", initiatorName)
@@ -366,6 +367,8 @@ func (client *Client) mapVolumeProcess(volumeName, initiatorName string, lun int
 		}
 	} else if metadata.ReturnCode == common.VolumeNotFoundErrorCode {
 		return status.Errorf(codes.NotFound, "volume %s not found", volumeName)
+	} else if metadata.ReturnCode == common.LUNOverlapErrorCode {
+		return status.Errorf(codes.AlreadyExists, "lun overlap for lun: %d", lun)
 	} else if err != nil {
 		return status.Error(codes.Internal, err.Error())
 	}
@@ -422,6 +425,7 @@ func (client *Client) PublishVolume(volumeId string, initiators []string) (strin
 	logger := klog.FromContext(client.Ctx)
 
 	hostNames, apistatus, err := client.GetVolumeMapsHostNames(volumeId)
+	klog.InfoS("Get Volume Maps Host Names", "hostnames", hostNames, "apistatus", apistatus)
 	if err != nil {
 		if apistatus != nil && apistatus.ReturnCode == common.VolumeNotFoundErrorCode {
 			return "", status.Errorf(codes.NotFound, "The specified volume (%s) was not found.", volumeId)

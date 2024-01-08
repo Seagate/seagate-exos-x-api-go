@@ -31,10 +31,10 @@ docs/HostGroupObject.md
 docs/HostGroupResourceInner.md
 docs/HostResourceInner.md
 docs/HostViewMappingsResourceInner.md
-docs/HostsViewObject.md
-docs/HostsViewResourceInner.md
 docs/InitiatorObject.md
 docs/InitiatorResourceInner.md
+docs/InitiatorViewObject.md
+docs/InitiatorViewResourceInner.md
 docs/IscsiPortResourceInner.md
 docs/NetworkParametersResourceInner.md
 docs/PoolsObject.md
@@ -84,10 +84,10 @@ model_host_group_object.go
 model_host_group_resource_inner.go
 model_host_resource_inner.go
 model_host_view_mappings_resource_inner.go
-model_hosts_view_object.go
-model_hosts_view_resource_inner.go
 model_initiator_object.go
 model_initiator_resource_inner.go
+model_initiator_view_object.go
+model_initiator_view_resource_inner.go
 model_iscsi_port_resource_inner.go
 model_network_parameters_resource_inner.go
 model_pools_object.go

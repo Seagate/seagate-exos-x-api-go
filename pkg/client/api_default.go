@@ -2850,7 +2850,7 @@ type ApiShowMapsInitiatorNamesGetRequest struct {
 	namesOption string
 }
 
-func (r ApiShowMapsInitiatorNamesGetRequest) Execute() (*HostsViewObject, *http.Response, error) {
+func (r ApiShowMapsInitiatorNamesGetRequest) Execute() (*InitiatorViewObject, *http.Response, error) {
 	return r.ApiService.ShowMapsInitiatorNamesGetExecute(r)
 }
 
@@ -2873,13 +2873,13 @@ func (a *DefaultApiService) ShowMapsInitiatorNamesGet(ctx context.Context, names
 
 // Execute executes the request
 //
-//	@return HostsViewObject
-func (a *DefaultApiService) ShowMapsInitiatorNamesGetExecute(r ApiShowMapsInitiatorNamesGetRequest) (*HostsViewObject, *http.Response, error) {
+//	@return InitiatorViewObject
+func (a *DefaultApiService) ShowMapsInitiatorNamesGetExecute(r ApiShowMapsInitiatorNamesGetRequest) (*InitiatorViewObject, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *HostsViewObject
+		localVarReturnValue *InitiatorViewObject
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsInitiatorNamesGet")
