@@ -97,7 +97,7 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 			Expect(volume.Wwn).ShouldNot(BeEmpty())
 
 			// Dump volumes
-			response, status, err := client.ShowVolumes(volname1)
+			response, status, err := client.ShowVolumes(volname2)
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
 			ShowVolumes(logger, response)
@@ -107,7 +107,7 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 
 			logger := klog.FromContext(tc.Config.Ctx)
 			lun, err := client.PublishVolume(volname2, tc.Config.StorageController.Initiator)
-			logger.V(3).Info("PublishVolume", "name", volname1, "lun", lun)
+			logger.V(3).Info("PublishVolume", "name", volname2, "lun", lun)
 			Expect(err).To(BeNil())
 			Expect(lun).ToNot(Equal(0))
 		})
