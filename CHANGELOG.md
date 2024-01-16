@@ -1,3 +1,9 @@
+## [2.0.4](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.0.3...v2.0.4) (2024-01-16)
+
+### Bug Fixes
+
+- Update show maps to use an initiator view return object instead … (#53) ([906feb6](https://github.com/Seagate/seagate-exos-x-api-go/commit/906feb6ff0c56d962f0492264dec3a1022927f24)), closes [#53](https://github.com/Seagate/seagate-exos-x-api-go/issues/53)
+
 ## [2.0.3](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.0.2...v2.0.3) (2023-11-28)
 
 ### Bug Fixes
