@@ -11,13 +11,14 @@ import (
 
 var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 	var (
-		client     *storageapi.Client = nil
-		volname1                      = "apitest_1"
-		volname2                      = "apitest_2"
-		size                          = "1GiB"
-		expandSize                    = "1GiB"
-		poolType                      = "Virtual"
-		sizeValue  int64              = 1024 * 1024 * 1024
+		client      *storageapi.Client = nil
+		volname1                       = "apitest_1"
+		volnamecopy                    = "apitest_copy"
+		volname2                       = "apitest_2"
+		size                           = "1GiB"
+		expandSize                     = "1GiB"
+		poolType                       = "Virtual"
+		sizeValue   int64              = 1024 * 1024 * 1024
 	)
 
 	BeforeEach(func() {
@@ -85,11 +86,41 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 			Expect(lun).ToNot(Equal(0))
 		})
 
-		It("should be able to unmap volume", func() {
+		It("should successfully create a second volume", func() {
+
+			logger := klog.FromContext(tc.Config.Ctx)
+			volume, status, err := client.CreateVolume(volname2, size, tc.Config.StorageController.Pool, poolType)
+			logger.V(3).Info("CreateVolume", "name", volname2, "size", size, "wwn", volume.Wwn, "mc-response", status.ResponseTypeNumeric)
+
+			Expect(err).To(BeNil())
+			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
+			Expect(volume.Wwn).ShouldNot(BeEmpty())
+
+			// Dump volumes
+			response, status, err := client.ShowVolumes(volname2)
+			Expect(err).To(BeNil())
+			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
+			ShowVolumes(logger, response)
+		})
+
+		It("should be able to publish/map a second volume", func() {
+
+			logger := klog.FromContext(tc.Config.Ctx)
+			lun, err := client.PublishVolume(volname2, tc.Config.StorageController.Initiator)
+			logger.V(3).Info("PublishVolume", "name", volname2, "lun", lun)
+			Expect(err).To(BeNil())
+			Expect(lun).ToNot(Equal(0))
+		})
+
+		It("should be able to unmap volumes", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
 			status, err := client.UnmapVolume(volname1, tc.Config.StorageController.Initiator[0])
 			logger.V(3).Info("UnmapVolume", "name", volname1, "mc-response", status.ResponseTypeNumeric)
+			Expect(err).To(BeNil())
+			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
+			status, err = client.UnmapVolume(volname2, tc.Config.StorageController.Initiator[0])
+			logger.V(3).Info("UnmapVolume", "name", volname2, "mc-response", status.ResponseTypeNumeric)
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
 		})
@@ -112,24 +143,29 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 		It("should be able to copy the volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
-			status, err := client.CopyVolume(volname1, volname2, tc.Config.StorageController.Pool)
-			logger.V(3).Info("CopyVolume", "from", volname1, "to", volname2, "mc-response", status.ResponseTypeNumeric)
+			status, err := client.CopyVolume(volname1, volnamecopy, tc.Config.StorageController.Pool)
+			logger.V(3).Info("CopyVolume", "from", volname1, "to", volnamecopy, "mc-response", status.ResponseTypeNumeric)
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
 
 			// Show volumes
-			response, status, err := client.ShowVolumes(volname2)
+			response, status, err := client.ShowVolumes(volnamecopy)
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
 			ShowVolumes(logger, response)
 		})
 
-		It("should successfully delete both volumes", func() {
+		It("should successfully delete all volumes", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
 
 			status, err := client.DeleteVolume(volname1)
 			logger.V(3).Info("delete volume", "name", volname1, "mc-response", status.ResponseTypeNumeric, "err", err)
+			Expect(err).To(BeNil())
+			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
+
+			status, err = client.DeleteVolume(volnamecopy)
+			logger.V(3).Info("delete volume", "name", volnamecopy, "mc-response", status.ResponseTypeNumeric, "err", err)
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
 
@@ -142,7 +178,13 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 			response, status, err := client.ShowVolumes("volname1")
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiError))
+
+			response, status, err = client.ShowVolumes("volname2")
+			Expect(err).To(BeNil())
+			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiError))
+
 			ShowVolumes(logger, response)
+
 		})
 	})
 })

@@ -1713,7 +1713,7 @@ Other parameters are passed through a pointer to a apiShowMapsGetRequest struct 
 
 ## ShowMapsInitiatorNamesGet
 
-> HostsViewObject ShowMapsInitiatorNamesGet(ctx, namesOption).Execute()
+> InitiatorViewObject ShowMapsInitiatorNamesGet(ctx, namesOption).Execute()
 
 
 
@@ -1741,7 +1741,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsInitiatorNamesGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ShowMapsInitiatorNamesGet`: HostsViewObject
+    // response from `ShowMapsInitiatorNamesGet`: InitiatorViewObject
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsInitiatorNamesGet`: %v\n", resp)
 }
 ```
@@ -1765,7 +1765,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HostsViewObject**](HostsViewObject.md)
+[**InitiatorViewObject**](InitiatorViewObject.md)
 
 ### Authorization
 
