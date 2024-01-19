@@ -1,3 +1,18 @@
+# [2.1.0](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.0.4...v2.1.0) (2024-01-19)
+
+### Code Refactoring
+
+- remove extra nil check causing static analysis warning ([7f44170](https://github.com/Seagate/seagate-exos-x-api-go/commit/7f44170c78e96d16518e3dea6718c8f4a7cad2c2))
+
+### Features
+
+- Add support for 'show controller-date' and use it for session validation ([0a088ba](https://github.com/Seagate/seagate-exos-x-api-go/commit/0a088ba95013b3279c9f5929675439dcdc5101e6))
+- Make an API call (show system) to test API session validity ([37d0fcd](https://github.com/Seagate/seagate-exos-x-api-go/commit/37d0fcd6bac27bc725f9295ede8466156c35f3c3))
+
+### Other
+
+- Add Logout API Call ([fd3c437](https://github.com/Seagate/seagate-exos-x-api-go/commit/fd3c4378acd623ab1e4e3e1705c69cb3857a56d5))
+
 ## [2.0.4](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.0.3...v2.0.4) (2024-01-16)
 
 ### Bug Fixes
