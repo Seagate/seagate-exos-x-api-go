@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CopyVolumeDestinationPoolNameSourceGet**](DefaultApi.md#CopyVolumeDestinationPoolNameSourceGet) | **Get** /copy/volume/destination-pool/{destination-poolOption}/name/{nameOption}/{sourceOption} | 
 [**CreateSnapshotsVolumesNamesGet**](DefaultApi.md#CreateSnapshotsVolumesNamesGet) | **Get** /create/snapshots/volumes/{volumesOption}/{namesOption} | 
+[**CreateVolumePoolSizeNameGet**](DefaultApi.md#CreateVolumePoolSizeNameGet) | **Get** /create/volume/pool/{poolOption}/size/{sizeOption}/{nameOption} | 
 [**CreateVolumePoolSizeTierAffinityNameGet**](DefaultApi.md#CreateVolumePoolSizeTierAffinityNameGet) | **Get** /create/volume/pool/{poolOption}/size/{sizeOption}/tier-affinity/{tier-affinityOption}/{nameOption} | 
 [**DeleteHostsNamesGet**](DefaultApi.md#DeleteHostsNamesGet) | **Get** /delete/hosts/{namesOption} | 
 [**DeleteInitiatorNicknameNameGet**](DefaultApi.md#DeleteInitiatorNicknameNameGet) | **Get** /delete/initiator-nickname/{nameOption} | 
@@ -181,6 +182,82 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StatusObject**](StatusObject.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateVolumePoolSizeNameGet
+
+> VolumesObject CreateVolumePoolSizeNameGet(ctx, poolOption, sizeOption, nameOption).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+    poolOption := "poolOption_example" // string | 
+    sizeOption := "sizeOption_example" // string | 
+    nameOption := "nameOption_example" // string | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateVolumePoolSizeNameGet(context.Background(), poolOption, sizeOption, nameOption).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateVolumePoolSizeNameGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateVolumePoolSizeNameGet`: VolumesObject
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateVolumePoolSizeNameGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**poolOption** | **string** |  | 
+**sizeOption** | **string** |  | 
+**nameOption** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateVolumePoolSizeNameGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+
+### Return type
+
+[**VolumesObject**](VolumesObject.md)
 
 ### Authorization
 

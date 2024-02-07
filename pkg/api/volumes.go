@@ -61,11 +61,20 @@ func UpdateVolumeObject(target *common.VolumeObject, source *client.VolumesResou
 }
 
 // CreateVolume : creates a volume with the given name, capacity in the given pool
-func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.VolumeObject, *common.ResponseStatus, error) {
+func (myclient *Client) CreateVolume(name, size, pool, poolType string) (*common.VolumeObject, *common.ResponseStatus, error) {
 
-	logger := klog.FromContext(client.Ctx)
-	response, httpRes, err := client.apiClient.DefaultApi.CreateVolumePoolSizeTierAffinityNameGet(client.Ctx, pool, size, ApiTierAffinity, name).Execute()
-	logger.V(2).Info("create volume", "name", name, "http", httpRes.Status)
+	logger := klog.FromContext(myclient.Ctx)
+
+	var response *client.VolumesObject
+	var httpRes *http.Response
+	var err error
+	if poolType == "Linear" {
+		response, httpRes, err = myclient.apiClient.DefaultApi.CreateVolumePoolSizeNameGet(myclient.Ctx, pool, size, name).Execute()
+	} else if poolType == "Virtual" {
+		response, httpRes, err = myclient.apiClient.DefaultApi.CreateVolumePoolSizeTierAffinityNameGet(myclient.Ctx, pool, size, ApiTierAffinity, name).Execute()
+	}
+
+	logger.V(2).Info("create volume", "name", name, "http", httpRes.Status, "response", response)
 
 	status := &common.ResponseStatus{}
 	if response != nil && len(response.GetStatus()) > 0 {
@@ -79,7 +88,7 @@ func (client *Client) CreateVolume(name, size, pool, poolType string) (*common.V
 
 	// For API versions that do not return a representation of the volume object, use ShowVolumes to fill in the data
 	if err == nil && status.ResponseTypeNumeric == 0 && volume.Wwn == "" {
-		volumes, status, err := client.ShowVolumes(name)
+		volumes, status, err := myclient.ShowVolumes(name)
 		if err == nil && status.ResponseTypeNumeric == 0 {
 			if len(volumes) > 0 && volumes[0].ObjectName == "volume" {
 				volume = common.VolumeObject(volumes[0])

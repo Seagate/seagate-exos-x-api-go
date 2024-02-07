@@ -262,6 +262,128 @@ func (a *DefaultApiService) CreateSnapshotsVolumesNamesGetExecute(r ApiCreateSna
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCreateVolumePoolSizeNameGetRequest struct {
+	ctx        context.Context
+	ApiService *DefaultApiService
+	poolOption string
+	sizeOption string
+	nameOption string
+}
+
+func (r ApiCreateVolumePoolSizeNameGetRequest) Execute() (*VolumesObject, *http.Response, error) {
+	return r.ApiService.CreateVolumePoolSizeNameGetExecute(r)
+}
+
+/*
+CreateVolumePoolSizeNameGet Method for CreateVolumePoolSizeNameGet
+
+Execute /create/volume command
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param poolOption
+	@param sizeOption
+	@param nameOption
+	@return ApiCreateVolumePoolSizeNameGetRequest
+*/
+func (a *DefaultApiService) CreateVolumePoolSizeNameGet(ctx context.Context, poolOption string, sizeOption string, nameOption string) ApiCreateVolumePoolSizeNameGetRequest {
+	return ApiCreateVolumePoolSizeNameGetRequest{
+		ApiService: a,
+		ctx:        ctx,
+		poolOption: poolOption,
+		sizeOption: sizeOption,
+		nameOption: nameOption,
+	}
+}
+
+// Execute executes the request
+//
+//	@return VolumesObject
+func (a *DefaultApiService) CreateVolumePoolSizeNameGetExecute(r ApiCreateVolumePoolSizeNameGetRequest) (*VolumesObject, *http.Response, error) {
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *VolumesObject
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.CreateVolumePoolSizeNameGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/create/volume/pool/{poolOption}/size/{sizeOption}/{nameOption}"
+	localVarPath = strings.Replace(localVarPath, "{"+"poolOption"+"}", url.PathEscape(parameterValueToString(r.poolOption, "poolOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"sizeOption"+"}", url.PathEscape(parameterValueToString(r.sizeOption, "sizeOption")), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"nameOption"+"}", url.PathEscape(parameterValueToString(r.nameOption, "nameOption")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 401 {
+			var v StatusObject
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCreateVolumePoolSizeTierAffinityNameGetRequest struct {
 	ctx                context.Context
 	ApiService         *DefaultApiService
