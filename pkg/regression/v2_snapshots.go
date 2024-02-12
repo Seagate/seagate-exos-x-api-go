@@ -14,7 +14,6 @@ var _ = DescribeRegression("Snapshot Testing (v2)", func(tc *TestContext) {
 		client   *storageapi.Client = nil
 		volname1                    = "apitest_1"
 		size                        = "1GiB"
-		poolType                    = "Virtual"
 		snap1                       = "snap1"
 		snap2                       = "snap2"
 	)
@@ -26,6 +25,7 @@ var _ = DescribeRegression("Snapshot Testing (v2)", func(tc *TestContext) {
 		client = storageapi.NewClient()
 		client.StoreCredentials(tc.Config.StorageController.Ip, tc.Config.StorageController.Protocol, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
 		err := client.Login(tc.Config.Ctx)
+		client.InitSystemInfo()
 		logger.V(3).Info("Login", "ipaddress", client.Addr, "username", client.Username, "err", err)
 		Expect(err).To(BeNil())
 	})
@@ -34,7 +34,7 @@ var _ = DescribeRegression("Snapshot Testing (v2)", func(tc *TestContext) {
 		It("should successfully create the volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
-			volume, status, err := client.CreateVolume(volname1, size, tc.Config.StorageController.Pool, poolType)
+			volume, status, err := client.CreateVolume(volname1, size, tc.Config.StorageController.Pool)
 			logger.V(3).Info("CreateVolume", "name", volname1, "size", size, "wwn", volume.Wwn, "mc-response", status.ResponseTypeNumeric)
 
 			Expect(err).To(BeNil())
