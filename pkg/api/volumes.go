@@ -315,7 +315,7 @@ func (client *Client) chooseLUN(initiators []string) (int, error) {
 	return -1, status.Error(codes.ResourceExhausted, "no more available LUNs")
 }
 
-// MapVolume : map a volume to an inidftiator using a specified LUN
+// MapVolume : map a volume to an initiator using a specified LUN
 func (client *Client) MapVolume(name, initiator, access string, lun int) (*common.ResponseStatus, error) {
 
 	logger := klog.FromContext(client.Ctx)
