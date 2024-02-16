@@ -53,6 +53,22 @@ func Test_client_DefaultApiService(t *testing.T) {
 
 	})
 
+	t.Run("Test DefaultApiService CreateVolumePoolSizeNameGet", func(t *testing.T) {
+
+		t.Skip("skip test") // remove to run test
+
+		var poolOption string
+		var sizeOption string
+		var nameOption string
+
+		resp, httpRes, err := apiClient.DefaultApi.CreateVolumePoolSizeNameGet(context.Background(), poolOption, sizeOption, nameOption).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test DefaultApiService CreateVolumePoolSizeTierAffinityNameGet", func(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test

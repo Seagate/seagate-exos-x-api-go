@@ -17,7 +17,6 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 		volname2                       = "apitest_2"
 		size                           = "1GiB"
 		expandSize                     = "1GiB"
-		poolType                       = "Virtual"
 		sizeValue   int64              = 1024 * 1024 * 1024
 	)
 
@@ -30,13 +29,15 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 		err := client.Login(tc.Config.Ctx)
 		logger.V(3).Info("Login", "ipaddress", client.Addr, "username", client.Username, "err", err)
 		Expect(err).To(BeNil())
+		err = client.InitSystemInfo()
+		Expect(err).To(BeNil())
 	})
 
 	Describe("v2VolumeTest", func() {
 		It("should successfully create the volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
-			volume, status, err := client.CreateVolume(volname1, size, tc.Config.StorageController.Pool, poolType)
+			volume, status, err := client.CreateVolume(volname1, size, tc.Config.StorageController.Pool)
 			logger.V(3).Info("CreateVolume", "name", volname1, "size", size, "wwn", volume.Wwn, "mc-response", status.ResponseTypeNumeric)
 
 			Expect(err).To(BeNil())
@@ -89,7 +90,7 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 		It("should successfully create a second volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
-			volume, status, err := client.CreateVolume(volname2, size, tc.Config.StorageController.Pool, poolType)
+			volume, status, err := client.CreateVolume(volname2, size, tc.Config.StorageController.Pool)
 			logger.V(3).Info("CreateVolume", "name", volname2, "size", size, "wwn", volume.Wwn, "mc-response", status.ResponseTypeNumeric)
 
 			Expect(err).To(BeNil())

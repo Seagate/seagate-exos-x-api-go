@@ -80,6 +80,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**CopyVolumeDestinationPoolNameSourceGet**](docs/DefaultApi.md#copyvolumedestinationpoolnamesourceget) | **Get** /copy/volume/destination-pool/{destination-poolOption}/name/{nameOption}/{sourceOption} | 
 *DefaultApi* | [**CreateSnapshotsVolumesNamesGet**](docs/DefaultApi.md#createsnapshotsvolumesnamesget) | **Get** /create/snapshots/volumes/{volumesOption}/{namesOption} | 
+*DefaultApi* | [**CreateVolumePoolSizeNameGet**](docs/DefaultApi.md#createvolumepoolsizenameget) | **Get** /create/volume/pool/{poolOption}/size/{sizeOption}/{nameOption} | 
 *DefaultApi* | [**CreateVolumePoolSizeTierAffinityNameGet**](docs/DefaultApi.md#createvolumepoolsizetieraffinitynameget) | **Get** /create/volume/pool/{poolOption}/size/{sizeOption}/tier-affinity/{tier-affinityOption}/{nameOption} | 
 *DefaultApi* | [**DeleteHostsNamesGet**](docs/DefaultApi.md#deletehostsnamesget) | **Get** /delete/hosts/{namesOption} | 
 *DefaultApi* | [**DeleteInitiatorNicknameNameGet**](docs/DefaultApi.md#deleteinitiatornicknamenameget) | **Get** /delete/initiator-nickname/{nameOption} | 

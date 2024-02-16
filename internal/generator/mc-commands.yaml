@@ -237,9 +237,29 @@ commands:
       type: string
       keyword-required: true
       description: size size[B|KB|MB|GB|TB|KiB|MiB|GiB|TiB]. Sets the volume size. The unit is optional (B represents bytes). If base 2 is in use, whether you specify a base-2 or base-10 unit, the resulting size will be in base 2. If no unit is specified, the default is 512-byte blocks
+    - flag: name
+      type: string
+      required: true
+      keyword-required: false
+      description: A name for the new volume. The name must be unique system-wide. Input rules are case sensitive, maximum of 32 bytes, printable UTF-8 characters but " , < \, use double quotes when name has spaces
+
+  - command: /create/volume
+    meta: volumes
+    include:
+    - status
+    options:
+    - flag: pool
+      type: string
+      keyword-required: true
+      description: Optional for linear volumes. Required for virtual volumes. The name or serial number of the pool in which to create the volume
+    - flag: size
+      type: string
+      keyword-required: true
+      description: size size[B|KB|MB|GB|TB|KiB|MiB|GiB|TiB]. Sets the volume size. The unit is optional (B represents bytes). If base 2 is in use, whether you specify a base-2 or base-10 unit, the resulting size will be in base 2. If no unit is specified, the default is 512-byte blocks
     - flag: tier-affinity
       type: enum
       values: no-affinity,archive,performance
+      required: true
       keyword-required: true
       description: For virtual storage, this specifies how to tune the tier-migration algorithm for the volume
     - flag: name

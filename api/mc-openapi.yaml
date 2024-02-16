@@ -519,6 +519,28 @@ paths:
               schema:
                 $ref: '#/components/schemas/statusObject'
   # /create/volume
+  /create/volume/pool/{poolOption}/size/{sizeOption}/{nameOption}:
+    get:
+      description: Execute /create/volume command
+      operationId: CreateVolumePoolSizeNameGet
+      parameters:
+        - $ref: '#/components/parameters/poolOption'
+        - $ref: '#/components/parameters/sizeOption'
+        - $ref: '#/components/parameters/nameOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/volumesObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /create/volume
   /create/volume/pool/{poolOption}/size/{sizeOption}/tier-affinity/{tier-affinityOption}/{nameOption}:
     get:
       description: Execute /create/volume command
@@ -819,6 +841,12 @@ components:
       required: true
       schema:
         type: string
+    nameOption:
+      name: nameOption
+      in: path
+      required: true
+      schema:
+        type: string
     tier-affinityOption:
       name: tier-affinityOption
       in: path
@@ -829,12 +857,6 @@ components:
         - 'no-affinity'
         - 'archive'
         - 'performance'
-    nameOption:
-      name: nameOption
-      in: path
-      required: true
-      schema:
-        type: string
     volumesOption:
       name: volumesOption
       in: path
