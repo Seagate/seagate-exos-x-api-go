@@ -1,3 +1,9 @@
+# [2.2.0](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.1.0...v2.2.0) (2024-02-16)
+
+### Features
+
+- Create volume without tier-affinity for linear (#54) ([549b3a2](https://github.com/Seagate/seagate-exos-x-api-go/commit/549b3a2e355de05acee4f3cce6f2ade26cdf2966)), closes [#54](https://github.com/Seagate/seagate-exos-x-api-go/issues/54)
+
 # [2.1.0](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.0.4...v2.1.0) (2024-01-19)
 
 ### Code Refactoring
