@@ -97,7 +97,7 @@ func (myclient *Client) Login(ctx context.Context) (err error) {
 			UserName: myclient.Username,
 			Password: myclient.Password,
 		})
-		logger.V(4).Info("==============config=================", "config", config)
+		logger.V(4).Info("==============config=================", "IPAddr", config.MCIpAddress, "Username", config.MCUsername)
 		api_client, err = common.Login(myclient.Ctx, config)
 
 		if err == nil && api_client != nil {
