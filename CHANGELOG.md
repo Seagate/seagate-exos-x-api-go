@@ -1,3 +1,9 @@
+# [2.3.0](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.2.0...v2.3.0) (2024-06-20)
+
+### Features
+
+- Controller failover for API calls (#55) ([fef1ead](https://github.com/Seagate/seagate-exos-x-api-go/commit/fef1ead48cf9d96c567153ddc161b37b4949fa90)), closes [#55](https://github.com/Seagate/seagate-exos-x-api-go/issues/55)
+
 # [2.2.0](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.1.0...v2.2.0) (2024-02-16)
 
 ### Features
