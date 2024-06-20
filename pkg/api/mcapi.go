@@ -150,13 +150,25 @@ type ResponseType interface {
 // If the initial request fails, attempts to login on the secondary controller
 func ExecuteWithFailover[R ResponseType](executeFunc func() (R, *http.Response, error), client *Client) (R, *common.ResponseStatus, *http.Response, error) {
 	logger := klog.FromContext(client.Ctx)
-	logger.V(4).Info("Execute with retry...")
+	logger.V(4).Info("Execute with failover...")
 	response, httpRes, err := executeFunc()
 	if err == nil {
 		status := response.GetStatus()
 		commonStatus := CreateCommonStatus(logger, &status)
-		return response, commonStatus, httpRes, err
+		// retry if the return code from the controller is in the list of retryable return codes
+		retry := false
+		for _, rc := range common.RetryableErrorCodes {
+			if rc == commonStatus.ReturnCode {
+				logger.V(4).Info("Retrying with return code", "return code", rc)
+				retry = true
+				break
+			}
+		}
+		if !retry {
+			return response, commonStatus, httpRes, err
+		}
 	}
+	// If our first attempt resulted in an error or a retryable return code
 	if len(client.Addrs) > 1 {
 		client.NotResponding = client.CurrentAddr
 		logger.V(1).Info("Retrying...", "err", err, "response", response)
@@ -172,7 +184,7 @@ func ExecuteWithFailover[R ResponseType](executeFunc func() (R, *http.Response, 
 		}
 	} else {
 		logger.V(1).Info("Cannot failover as only 1 controller address Specified")
-		return response, nil, httpRes, err
+		return response, &common.ResponseStatus{}, httpRes, err
 	}
 }
 
