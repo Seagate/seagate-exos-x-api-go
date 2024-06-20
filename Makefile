@@ -10,9 +10,9 @@ REGRESSION_APP := api-regression
 GENERATOR_VERSION := v6.5.0
 
 # For docker, set uid and gid to match the current user
-GENERATE_USER_ARGS := -u $(shell id -u ${USER}):$(shell id -g ${USER})
+#GENERATE_USER_ARGS := -u $(shell id -u ${USER}):$(shell id -g ${USER})
 # For podman, do not set this value
-#GENERATE_USER_ARGS:=
+GENERATE_USER_ARGS:=
 
 help:
 	@echo ""

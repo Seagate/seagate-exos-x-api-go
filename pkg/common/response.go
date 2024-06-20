@@ -18,11 +18,29 @@ const (
 	InvalidArgumentErrorCode              = -10058
 	HostMapDoesNotExistsErrorCode         = -10074
 	VolumeNotFoundErrorCode               = -10075
+	UserNotRecognized                     = -10027
 	VolumeHasSnapshot                     = -10183
 	SnapshotAlreadyExists                 = -10186
 	InitiatorNicknameOrIdentifierNotFound = -10386
 	UnmapFailedErrorCode                  = -10509
 )
+
+var RetryableErrorCodes = []int{
+	2193, //"Communications error with the Storage Controller (code version mismatch between MC and SC).",
+	2194, //"Communications error with the Storage Controller (timeout).",
+	2195, //"Communications error with the Storage Controller.",
+	3046, //"No resources are available to complete the request.",
+	3047, //"The controller is not in the correct shutdown state.",
+	3060, //"Controller internal error.",
+	3108, //"Controller not online.",
+	3115, //"Timeout communicating to other controller.",
+	3122, //"Controller communication failed.",
+	1019, // "The Storage Controller has been shut down. The current operation is not possible.",
+	1043, // "The Storage Controller is unresponsive. The current operation is not possible.",
+	1046, // "An internal timeout has occurred.",
+	1048, // "An MC internal error has occurred.",
+	1069, // "Not enough rendering resources available. Too many concurrent user sessions may cause this issue.",
+}
 
 // ResponseStatus: Final representation of the "status" object in every API response
 type ResponseStatus struct {

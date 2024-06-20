@@ -17,18 +17,20 @@ import (
 
 // Client : Can be used to request the API
 type Client struct {
-	Ctx        context.Context
-	Username   string
-	Password   string
-	Addr       string
-	Protocol   string
-	HTTPClient http.Client
-	Collector  *common.Collector
-	SessionKey string
-	Initiator  []string
-	PoolName   string
-	Info       *common.SystemInfo
-	apiClient  *client.APIClient
+	Ctx           context.Context
+	Username      string
+	Password      string
+	Addrs         []string
+	CurrentAddr   string
+	NotResponding string
+	Protocol      string
+	HTTPClient    http.Client
+	Collector     *common.Collector
+	SessionKey    string
+	Initiator     []string
+	PoolName      string
+	Info          *common.SystemInfo
+	apiClient     *client.APIClient
 }
 
 // NewClient : Creates an API client by setting up its HTTP transport
@@ -48,87 +50,142 @@ func NewClient() *Client {
 }
 
 // StoreCredentials : Called to store ip address, username, and password for the client
-func (client *Client) StoreCredentials(addr string, protocol string, username string, password string) {
-
+func (client *Client) StoreCredentials(addrs []string, protocol string, username string, password string) {
 	// addr may include protocol and ip address or hostname, or only ip address
-	ipaddress, usingProtocol := common.GetAddressAndProtocol(addr, protocol)
+	ipaddress, usingProtocol := common.GetAddressAndProtocol(addrs[0], protocol)
 
 	// Store the login credentials in the Client object
 	client.Username = username
 	client.Password = password
-	client.Addr = ipaddress
+	client.CurrentAddr = ipaddress
 	client.Protocol = usingProtocol
+	client.Addrs = addrs
+}
+
+func (client *Client) MarkCurrentControllerDown() error {
+	if len(client.Addrs) < 2 {
+		return fmt.Errorf("cannot mark controller down with less than 2 controller IP addresses configured")
+	}
+	downController := client.CurrentAddr
+	for _, addr := range client.Addrs {
+		if addr != downController {
+			client.Addrs[0] = addr
+			client.Addrs[1] = downController
+			break
+		}
+	}
+	return nil
 }
 
 // Login: Called to log into the storage controller API
-func (client *Client) Login(ctx context.Context) error {
-	client.Ctx = ctx
+func (myclient *Client) Login(ctx context.Context) (err error) {
+	logger := klog.FromContext(ctx)
 
-	config := &common.Config{
-		MCIpAddress: client.Addr,
-		MCProtocol:  client.Protocol,
-		MCUsername:  client.Username,
-		MCPassword:  client.Password,
+	var api_client *client.APIClient
+	myclient.SessionKey = ""
+
+	for _, host := range myclient.Addrs {
+		myclient.CurrentAddr, _ = common.GetAddressAndProtocol(host, myclient.Protocol)
+		config := &common.Config{
+			MCIpAddress: myclient.CurrentAddr,
+			MCProtocol:  myclient.Protocol,
+			MCUsername:  myclient.Username,
+			MCPassword:  myclient.Password,
+		}
+
+		myclient.Ctx = context.WithValue(ctx, client.ContextBasicAuth, client.BasicAuth{
+			UserName: myclient.Username,
+			Password: myclient.Password,
+		})
+		logger.V(4).Info("==============config=================", "IPAddr", config.MCIpAddress, "Username", config.MCUsername)
+		api_client, err = common.Login(myclient.Ctx, config)
+
+		if err == nil && api_client != nil {
+			myclient.apiClient = api_client
+			configuration := api_client.GetConfig()
+			myclient.SessionKey = configuration.DefaultHeader["sessionKey"]
+		}
+		// if we have a new session key, login was successful and we can leave
+		// if not, try the next controller IP
+		if myclient.SessionKey != "" {
+			break
+		}
 	}
-
-	apiClient, err := common.Login(ctx, config)
-	if err == nil && apiClient != nil {
-		client.apiClient = apiClient
-		configuration := apiClient.GetConfig()
-		client.SessionKey = configuration.DefaultHeader["sessionKey"]
-	}
-
 	return err
 }
 
-// Login: Called to log into the storage controller API
+// Logout: Called to log out of the storage controller API
 func (client *Client) Logout() error {
 	if client.Ctx == nil {
 		client.Ctx = context.Background()
 	}
 	_, _, err := client.apiClient.DefaultApi.LogoutGet(client.Ctx).Execute()
+	if err == nil {
+		client.SessionKey = ""
+	}
 	return err
-}
-
-// SessionValid : Determine if a session is valid, if not a login is required
-// Makes the 'show controller-date' API call to validate the session is still valid
-//
-// Deprecated: This function will be made redundant by retry logic in a future update
-func (client *Client) SessionValid(addr, username string) bool {
-	if client.Ctx == nil {
-		return false
-	}
-	logger := klog.FromContext(client.Ctx)
-
-	// addr may include protocol and ip address or hostname, or only ip address
-	ipaddress := common.GetAddress(addr)
-
-	if client.Addr == ipaddress && client.Username == username {
-		if client.SessionKey == "" {
-			logger.V(2).Info("session invalid", "sessionkey", client.SessionKey)
-			return false
-		}
-	}
-
-	//run an API call to test that the session is still valid
-	_, _, err := client.apiClient.DefaultApi.ShowControllerDateGet(client.Ctx).Execute()
-	return err == nil
 }
 
 // InitSystemInfo: Retrieve and store system information for this client
 func (client *Client) InitSystemInfo() error {
 
-	err := AddSystem(client.Addr, client)
+	err := AddSystem(client.CurrentAddr, client)
 	if err != nil {
-		return fmt.Errorf("unable to add system info for ip (%s) ", client.Addr)
+		return fmt.Errorf("unable to add system info for ip (%s) ", client.CurrentAddr)
 	}
 
-	client.Info, err = GetSystem(client.Addr)
+	client.Info, err = GetSystem(client.CurrentAddr)
 	if err == nil {
 		_ = Log(client.Info)
 	}
 
 	return err
+}
+
+type ResponseType interface {
+	GetStatus() []client.StatusResourceInner
+}
+
+// ExecuteWithFailover: Retry wrapper for the Execute functions of the openapi generated client library
+// If the initial request fails, attempts to login on the secondary controller
+func ExecuteWithFailover[R ResponseType](executeFunc func() (R, *http.Response, error), client *Client) (R, *common.ResponseStatus, *http.Response, error) {
+	logger := klog.FromContext(client.Ctx)
+	logger.V(4).Info("Execute with failover...")
+	response, httpRes, err := executeFunc()
+	if err == nil {
+		status := response.GetStatus()
+		commonStatus := CreateCommonStatus(logger, &status)
+		// retry if the return code from the controller is in the list of retryable return codes
+		retry := false
+		for _, rc := range common.RetryableErrorCodes {
+			if rc == commonStatus.ReturnCode {
+				logger.V(4).Info("Retrying with return code", "return code", rc)
+				retry = true
+				break
+			}
+		}
+		if !retry {
+			return response, commonStatus, httpRes, err
+		}
+	}
+	// If our first attempt resulted in an error or a retryable return code
+	if len(client.Addrs) > 1 {
+		client.NotResponding = client.CurrentAddr
+		logger.V(1).Info("Retrying...", "err", err, "response", response)
+		client.MarkCurrentControllerDown()
+		client.Login(client.Ctx)
+		response, httpRes, err = executeFunc()
+		if err != nil {
+			return response, nil, httpRes, err
+		} else {
+			status := response.GetStatus()
+			commonStatus := CreateCommonStatus(logger, &status)
+			return response, commonStatus, httpRes, err
+		}
+	} else {
+		logger.V(1).Info("Cannot failover as only 1 controller address Specified")
+		return response, &common.ResponseStatus{}, httpRes, err
+	}
 }
 
 // CreateCommonStatus : create a common API status object based on the OpenAPI client response
@@ -164,6 +221,7 @@ func CreateCommonStatus(logger logr.Logger, response *[]client.StatusResourceInn
 					"ResponseType", *s.ResponseType,
 					"ResponseTypeNumeric", *s.ResponseTypeNumeric,
 					"Response", *s.Response,
+					"ResponseCode", s.GetReturnCode(),
 				)
 				found = true
 				status.ResponseType = s.GetResponseType()
