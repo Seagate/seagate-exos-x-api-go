@@ -1,6 +1,6 @@
 module github.com/Seagate/seagate-exos-x-api-go/v2
 
-go 1.20
+go 1.22
 
 require (
 	github.com/go-logr/logr v1.2.4

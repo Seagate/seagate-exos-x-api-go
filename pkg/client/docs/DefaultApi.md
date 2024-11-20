@@ -28,10 +28,13 @@ Method | HTTP request | Description
 [**ShowEnclosuresGet**](DefaultApi.md#ShowEnclosuresGet) | **Get** /show/enclosures | 
 [**ShowFansGet**](DefaultApi.md#ShowFansGet) | **Get** /show/fans | 
 [**ShowHostGroupsGet**](DefaultApi.md#ShowHostGroupsGet) | **Get** /show/host-groups | 
+[**ShowHostGroupsGroupsGet**](DefaultApi.md#ShowHostGroupsGroupsGet) | **Get** /show/host-groups/groups/{groupsOption} | 
+[**ShowHostGroupsHostsGet**](DefaultApi.md#ShowHostGroupsHostsGet) | **Get** /show/host-groups/hosts/{hostsOption} | 
 [**ShowInitiatorNamesGet**](DefaultApi.md#ShowInitiatorNamesGet) | **Get** /show/initiator/{namesOption} | 
 [**ShowInitiatorsGet**](DefaultApi.md#ShowInitiatorsGet) | **Get** /show/initiators | 
 [**ShowMapsAllGet**](DefaultApi.md#ShowMapsAllGet) | **Get** /show/maps/all | 
 [**ShowMapsGet**](DefaultApi.md#ShowMapsGet) | **Get** /show/maps | 
+[**ShowMapsInitiatorGet**](DefaultApi.md#ShowMapsInitiatorGet) | **Get** /show/maps/initiator | 
 [**ShowMapsInitiatorNamesGet**](DefaultApi.md#ShowMapsInitiatorNamesGet) | **Get** /show/maps/initiator/{namesOption} | 
 [**ShowMapsNamesGet**](DefaultApi.md#ShowMapsNamesGet) | **Get** /show/maps/{namesOption} | 
 [**ShowPoolsGet**](DefaultApi.md#ShowPoolsGet) | **Get** /show/pools | 
@@ -1659,6 +1662,146 @@ Other parameters are passed through a pointer to a apiShowHostGroupsGetRequest s
 [[Back to README]](../README.md)
 
 
+## ShowHostGroupsGroupsGet
+
+> HostGroupObject ShowHostGroupsGroupsGet(ctx, groupsOption).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+    groupsOption := "groupsOption_example" // string | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.ShowHostGroupsGroupsGet(context.Background(), groupsOption).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowHostGroupsGroupsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ShowHostGroupsGroupsGet`: HostGroupObject
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowHostGroupsGroupsGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**groupsOption** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiShowHostGroupsGroupsGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**HostGroupObject**](HostGroupObject.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ShowHostGroupsHostsGet
+
+> HostGroupObject ShowHostGroupsHostsGet(ctx, hostsOption).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+    hostsOption := "hostsOption_example" // string | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.ShowHostGroupsHostsGet(context.Background(), hostsOption).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowHostGroupsHostsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ShowHostGroupsHostsGet`: HostGroupObject
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowHostGroupsHostsGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**hostsOption** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiShowHostGroupsHostsGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**HostGroupObject**](HostGroupObject.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ShowInitiatorNamesGet
 
 > InitiatorObject ShowInitiatorNamesGet(ctx, namesOption).Execute()
@@ -1912,9 +2055,70 @@ Other parameters are passed through a pointer to a apiShowMapsGetRequest struct 
 [[Back to README]](../README.md)
 
 
+## ShowMapsInitiatorGet
+
+> ShowMapsInitiatorNamesGet200Response ShowMapsInitiatorGet(ctx).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.ShowMapsInitiatorGet(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsInitiatorGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ShowMapsInitiatorGet`: ShowMapsInitiatorNamesGet200Response
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsInitiatorGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiShowMapsInitiatorGetRequest struct via the builder pattern
+
+
+### Return type
+
+[**ShowMapsInitiatorNamesGet200Response**](ShowMapsInitiatorNamesGet200Response.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ShowMapsInitiatorNamesGet
 
-> InitiatorViewObject ShowMapsInitiatorNamesGet(ctx, namesOption).Execute()
+> ShowMapsInitiatorNamesGet200Response ShowMapsInitiatorNamesGet(ctx, namesOption).Execute()
 
 
 
@@ -1942,7 +2146,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ShowMapsInitiatorNamesGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ShowMapsInitiatorNamesGet`: InitiatorViewObject
+    // response from `ShowMapsInitiatorNamesGet`: ShowMapsInitiatorNamesGet200Response
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ShowMapsInitiatorNamesGet`: %v\n", resp)
 }
 ```
@@ -1966,7 +2170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InitiatorViewObject**](InitiatorViewObject.md)
+[**ShowMapsInitiatorNamesGet200Response**](ShowMapsInitiatorNamesGet200Response.md)
 
 ### Authorization
 

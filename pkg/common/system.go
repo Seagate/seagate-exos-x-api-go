@@ -23,6 +23,23 @@ type PortType struct {
 	Compliance string
 }
 
+type Initiator struct {
+	Id       string
+	Nickname string
+}
+
+type Host struct {
+	Name       string
+	Id         string
+	Initiators []*Initiator
+}
+
+type HostGroup struct {
+	Name  string
+	Id    string
+	Hosts map[string]*Host
+}
+
 // System: Information stored for a single storage array controller
 type SystemInfo struct {
 	IPAddress     string
@@ -36,6 +53,9 @@ type SystemInfo struct {
 	MCBaseVersion string
 	Pools         []PoolType
 	Ports         []PortType
+	//HostGroups    *client.HostGroupObject
+	HostGroups   map[string]*HostGroup
+	InitiatorMap map[string]*Host
 }
 
 // SystemsData: Information stored for multiple storage array controllers

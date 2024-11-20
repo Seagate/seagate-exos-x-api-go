@@ -20,6 +20,52 @@ import (
 // systems: Data object storing all system information for all added controllers
 var systems common.SystemsData
 
+func UpdateHostsAndInitiators(s *common.SystemInfo, client *Client) {
+	logger := klog.FromContext(client.Ctx)
+	// The show host groups API call, unlike the show host-groups CLI call, will return all initiators in the system even if there
+	// are no hosts/host-groups defined. Raw initiators will be returned in a host called -nohost-, id HU,
+	// This Host will be part of the host-group "UNGROUPEDHOSTS"
+	response, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.ShowHostGroupsGet(client.Ctx).Execute, client)
+	if err != nil {
+		logger.Error(err, "Error retrieving Hosts and Initiator info", "status", status, "httpRes", httpRes)
+		return
+	}
+	if httpRes.StatusCode == http.StatusOK && response != nil {
+		s.InitiatorMap = make(map[string]*common.Host, 32)
+		s.HostGroups = make(map[string]*common.HostGroup, 10)
+		for _, hg := range response.GetHostGroup() {
+			logger.V(4).Info("HostGroups", "Name", hg.GetName())
+			hostgroup := &common.HostGroup{
+				Name:  hg.GetName(),
+				Id:    hg.GetDurableId(),
+				Hosts: make(map[string]*common.Host, 16),
+			}
+			s.HostGroups[hostgroup.Id] = hostgroup
+
+			for _, host := range hg.GetHost() {
+				logger.V(4).Info("Host", "Name", host.GetName())
+				hoststruct := &common.Host{
+					Name:       host.GetName(),
+					Id:         host.GetDurableId(),
+					Initiators: []*common.Initiator{},
+				}
+				hostgroup.Hosts[host.GetName()] = hoststruct
+
+				for _, initiator := range host.GetInitiator() {
+					logger.V(4).Info("Initiator", "Nickname", initiator.GetNickname())
+					initStruct := &common.Initiator{
+						Id:       initiator.GetId(),
+						Nickname: initiator.GetNickname(),
+					}
+					hoststruct.Initiators = append(hoststruct.Initiators, initStruct)
+
+					s.InitiatorMap[initStruct.Id] = hoststruct
+				}
+			}
+		}
+	}
+}
+
 // AddSystem: Uses the client to query and store system data
 func AddSystem(url string, client *Client) error {
 
@@ -118,6 +164,8 @@ func AddSystem(url string, client *Client) error {
 				})
 		}
 	}
+
+	UpdateHostsAndInitiators(&s, client)
 
 	return nil
 }

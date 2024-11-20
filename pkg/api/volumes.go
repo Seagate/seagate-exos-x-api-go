@@ -17,17 +17,21 @@ import (
 )
 
 const (
-	ApiMaximumLUN   = 255
-	ApiTierAffinity = "no-affinity"
-	ApiSuccess      = 0
-	ApiError        = 1
-	ApiInfo         = 2
-	ApiWarning      = 3
+	ApiMaximumLUN            = 255
+	ApiTierAffinity          = "no-affinity"
+	ApiSuccess               = 0
+	ApiError                 = 1
+	ApiInfo                  = 2
+	ApiWarning               = 3
+	UngroupedHostsGroupID    = "HGU"
+	UngroupedInitiatorHostID = "HU"
 )
 
-// Volume : volume-view representation
+// Volume : a mapped volume
 type Volume struct {
-	LUN int
+	LUN       int
+	Name      string
+	Initiator string
 }
 
 type Volumes []Volume
@@ -188,90 +192,114 @@ func (client *Client) GetVolumeWwn(volumeName string) (string, error) {
 	return wwn, err
 }
 
-// GetVolumeMapsHostNames: Use /show/maps to retrieve host names
-func (client *Client) GetVolumeMapsHostNames(name string) ([]string, *common.ResponseStatus, error) {
-
-	logger := klog.FromContext(client.Ctx)
-
-	logger.V(2).Info("get volume maps host names", "volume", name)
-
-	response, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.ShowMapsNamesGet(client.Ctx, name).Execute, client)
-
+// Given an initiator ID or nickname, get associated host and hostgroups if they exist
+func (myclient *Client) GetInitiatorHostGroup(initiator string) (hostGroup string, host string, err error) {
+	response, _, httpRes, err := ExecuteWithFailover(myclient.apiClient.DefaultApi.ShowHostGroupsGet(myclient.Ctx).Execute, myclient)
 	if err != nil {
-		return []string{}, status, err
+		return
 	}
-
-	hostNames := []string{}
 	if httpRes.StatusCode == http.StatusOK && response != nil {
-		for _, vv := range response.GetVolumeView() {
-			for _, vvm := range vv.GetVolumeViewMappings() {
-				hostName := vvm.GetIdentifier()
-				if vvm.GetObjectName() == "host-view" && hostName != "all other initiators" {
-					logger.V(2).Info("++ host-view", "name", hostName)
-					hostNames = append(hostNames, hostName)
+		for _, hg := range response.GetHostGroup() {
+			for _, h := range hg.GetHost() {
+				for _, i := range h.GetInitiator() {
+					if i.GetId() == initiator || i.GetNickname() == initiator {
+						// return nil for host group if host is in the "ungrouped hosts" group, host group ID == "HGU"
+						if hg.GetDurableId() != UngroupedHostsGroupID {
+							hostGroup = hg.GetName()
+						}
+						// return nil for host if the initiator host id is the ungrouped initiators id == "HU"
+						if h.GetDurableId() != UngroupedInitiatorHostID {
+							host = h.GetName()
+						}
+						return
+					}
 				}
-
 			}
 		}
-
 	}
-
-	return hostNames, status, err
+	err = fmt.Errorf("initiator not found in show host groups (%s)", initiator)
+	return
 }
 
-// ShowHostMaps: list the volume mappings for given host. If host is an empty string, mapping for all hosts is shown
-func (client *Client) ShowHostMaps(host string) ([]Volume, *common.ResponseStatus, error) {
+// ShowHostMaps: list the volume mappings for given host
+func (myclient *Client) ShowHostMaps(initiator string) ([]Volume, *common.ResponseStatus, error) {
 
-	logger := klog.FromContext(client.Ctx)
+	logger := klog.FromContext(myclient.Ctx)
 
-	// We don't use "/show/maps/initiator/<host>" here because
-	// the maps for an initiator with a nickname or in a host group will not
-	// be returned. Instead we get all initiator mappings and filter by initiator
-	logger.Info("++ ShowHostMaps", "host", host)
+	logger.Info("++ ShowHostMaps", "initiator", initiator)
 
-	response, status, _, err := ExecuteWithFailover(client.apiClient.DefaultApi.ShowMapsInitiatorNamesGet(client.Ctx, "").Execute, client)
-
+	hostgroup, hostname, err := myclient.GetInitiatorHostGroup(initiator)
 	if err != nil {
-		return nil, status, err
+		return nil, nil, err
 	}
 
-	mappings := make([]Volume, 0)
+	//If an initiator is part of a host or host-group, show maps must be called with the Host or Host-Group name
+	var host string
+	if hostgroup != "" {
+		host = fmt.Sprintf("%s.*.*", hostgroup)
+	} else if hostname != "" {
+		host = fmt.Sprintf("%s.*", hostname)
+	} else {
+		host = initiator
+	}
+	rawResponse, apistatus, _, err := ExecuteWithFailover(myclient.apiClient.DefaultApi.ShowMapsInitiatorNamesGet(myclient.Ctx, host).Execute, myclient)
+	if err != nil {
+		return nil, apistatus, err
+	}
 
-	for _, hv := range response.GetInitiatorView() {
-		if host != "" {
-			if hv.GetHbaNickname() != host && hv.GetId() != host {
-				continue
-			}
-		}
+	response := rawResponse.GetActualInstance()
 
-		for _, hvm := range hv.GetHostViewMappings() {
+	// Get the HostViewMappings (present in all return types from ShowMapsInitiator)
+	// For each volume view in the HVM, append to the mappings list we will return
+	mappings := make([]Volume, 0, 32)
+	appendMappingsFn := func(viewObject interface {
+		GetHostViewMappings() []client.HostViewMappingsResourceInner
+	}) {
+		for _, hvm := range viewObject.GetHostViewMappings() {
 			if hvm.GetObjectName() == "volume-view" {
 				vol := Volume{}
 				vol.LUN, _ = strconv.Atoi(hvm.GetLun())
+				vol.Name = hvm.GetVolume()
+				// don't use the hvm initiator name/id here, keep the raw initiator ID passed in
+				vol.Initiator = initiator
 				logger.Info("++ volume", "volume", hvm.GetVolumeName(), "lun", vol.LUN)
 				mappings = append(mappings, vol)
 			}
 		}
 	}
 
-	return mappings, status, err
+	switch resp := response.(type) {
+	// No mappings on this system, so only a status was returned
+	case *client.StatusObject:
+		break
+	case *client.HostGroupViewObject:
+		for _, hgv := range resp.GetHostGroupView() {
+			appendMappingsFn(&hgv)
+		}
+	case *client.HostsViewObject:
+		for _, hv := range resp.GetHostsView() {
+			appendMappingsFn(&hv)
+		}
+	case *client.InitiatorViewObject:
+		for _, hv := range resp.GetInitiatorView() {
+			appendMappingsFn(&hv)
+		}
+	}
+	return mappings, apistatus, err
 }
 
-// chooseLUN: Choose the next available LUN for a given initiator
-func (client *Client) chooseLUN(initiators []string) (int, error) {
+// chooseLUN: Choose the next available LUN for a given initiator. Optional volumeID to look for existing LUNs for that volume
+func (client *Client) chooseLUN(initiators []string, volumeID string) (int, error) {
 
 	logger := klog.FromContext(client.Ctx)
 	logger.Info("listing all LUN mappings")
 
 	var allvolumes []Volume
-	for _, initiatorName := range initiators {
-		logger.V(5).Info("Searching for maps for initiator", "intitiatorName", initiatorName)
-		volumes, responseStatus, err := client.ShowHostMaps(initiatorName)
+	for _, initiator := range initiators {
+		logger.V(4).Info("Searching for maps for initiator", "initiatorName", initiator)
+		volumes, _, err := client.ShowHostMaps(initiator)
 		if err != nil {
-			logger.Error(err, "error looking for host maps", "initiator", initiatorName)
-		}
-		if responseStatus.ReturnCode == common.HostMapDoesNotExistsErrorCode {
-			logger.Info("initiator does not exist", "initiator", initiatorName)
+			logger.Error(err, "error looking for host maps", "initiator", initiator)
 		}
 		if volumes != nil {
 			allvolumes = append(allvolumes, volumes...)
@@ -279,6 +307,24 @@ func (client *Client) chooseLUN(initiators []string) (int, error) {
 	}
 
 	sort.Sort(Volumes(allvolumes))
+
+	if volumeID != "" {
+		lun := -1
+		for _, vol := range allvolumes {
+			if vol.Name == volumeID {
+				if lun < 1 {
+					lun = vol.LUN
+				} else if lun != vol.LUN {
+					return -1, fmt.Errorf("found multiple LUNs (%d, %d) for volume %s", lun, vol.LUN, volumeID)
+				}
+			}
+		}
+
+		if lun > 0 {
+			logger.V(5).Info("using LUN from existing mapping", "lun", lun)
+			return lun, nil
+		}
+	}
 
 	logger.V(5).Info("use LUN 1 when volumes slice is empty")
 	if len(allvolumes) == 0 {
@@ -338,29 +384,12 @@ func (client *Client) mapVolumeProcess(volumeName, initiatorName string, lun int
 	}
 
 	logger.Info("status", "ReturnCode", metadata.ReturnCode)
-	if metadata.ReturnCode == common.InitiatorNicknameOrIdentifierNotFound {
-		nodeIDParts := strings.Split(initiatorName, ":")
-		if len(nodeIDParts) < 2 {
-			return status.Error(codes.NotFound, "specified node ID is not a valid IQN")
-		}
-
-		nickname := strings.Join(nodeIDParts[1:], ":")
-		nickname = strings.ReplaceAll(nickname, ".", "-")
-
-		logger.Info("initiator does not exist, creating it", "nickname", nickname)
-		_, err = client.CreateNickname(nickname, initiatorName)
-		if err != nil {
-			return err
-		}
-		logger.Info("retrying to map volume")
-		_, err = client.MapVolume(volumeName, initiatorName, "rw", lun)
-		if err != nil {
-			return err
-		}
-	} else if metadata.ReturnCode == common.VolumeNotFoundErrorCode {
+	if metadata.ReturnCode == common.VolumeNotFoundErrorCode {
 		return status.Errorf(codes.NotFound, "volume %s not found", volumeName)
 	} else if metadata.ReturnCode == common.LUNOverlapErrorCode {
 		return status.Errorf(codes.AlreadyExists, "lun overlap for lun: %d", lun)
+	} else if metadata.ReturnCode == common.InitiatorNicknameOrIdentifierNotFound {
+		return status.Errorf(codes.AlreadyExists, "specified initiator for mapping not found: %s", initiatorName)
 	} else if err != nil {
 		return status.Error(codes.Internal, err.Error())
 	}
@@ -411,29 +440,12 @@ func (client *Client) DeleteVolume(name string) (*common.ResponseStatus, error) 
 	return status, err
 }
 
-// PublishVolume: Attach a volume to an initiator
+// PublishVolume: Attach a volume to an initiator, return mapped lun or error
 func (client *Client) PublishVolume(volumeId string, initiators []string) (string, error) {
 
 	logger := klog.FromContext(client.Ctx)
 
-	hostNames, apistatus, err := client.GetVolumeMapsHostNames(volumeId)
-	klog.InfoS("Get Volume Maps Host Names", "hostnames", hostNames, "apistatus", apistatus)
-	if err != nil {
-		if apistatus != nil && apistatus.ReturnCode == common.VolumeNotFoundErrorCode {
-			return "", status.Errorf(codes.NotFound, "The specified volume (%s) was not found.", volumeId)
-		} else {
-			return "", err
-		}
-	}
-	for _, hostName := range hostNames {
-		for _, initiator := range initiators {
-			if hostName == initiator {
-				logger.Info("volume is already mapped to initiator", "volume", volumeId, "initiator", initiators)
-			}
-		}
-	}
-
-	lun, err := client.chooseLUN(initiators)
+	lun, err := client.chooseLUN(initiators, volumeId)
 	if err != nil {
 		return "", err
 	}

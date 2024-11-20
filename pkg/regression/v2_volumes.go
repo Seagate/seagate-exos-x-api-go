@@ -3,6 +3,8 @@
 package regression
 
 import (
+	"time"
+
 	storageapi "github.com/Seagate/seagate-exos-x-api-go/v2/pkg/api"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -27,6 +29,7 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 		client = storageapi.NewClient()
 		client.StoreCredentials(tc.Config.StorageController.Addrs, tc.Config.StorageController.Protocol, tc.Config.StorageController.Username, tc.Config.StorageController.Password)
 		err := client.Login(tc.Config.Ctx)
+		client.InitSystemInfo()
 		Expect(err).To(BeNil())
 		logger.V(3).Info("Login", "ipaddress", client.CurrentAddr, "username", client.Username, "err", err)
 	})
@@ -110,6 +113,14 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 			ShowVolumes(logger, response)
 		})
 
+		It("should fail to publish/map a volume with a fake initiator name", func() {
+
+			logger := klog.FromContext(tc.Config.Ctx)
+			lun, err := client.PublishVolume(volname2, []string{"not-a-real-initiator-name"})
+			logger.V(3).Info("PublishVolume", "name", volname2, "lun", lun)
+			Expect(err).ToNot(BeNil())
+		})
+
 		It("should be able to publish/map a second volume", func() {
 
 			logger := klog.FromContext(tc.Config.Ctx)
@@ -117,6 +128,26 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 			logger.V(3).Info("PublishVolume", "name", volname2, "lun", lun)
 			Expect(err).To(BeNil())
 			Expect(lun).ToNot(Equal(0))
+		})
+
+		It("should succeed and return the same LUN for a duplicate publish volume call", func() {
+
+			logger := klog.FromContext(tc.Config.Ctx)
+			lun, err := client.PublishVolume(volname2, tc.Config.StorageController.Initiator)
+			logger.V(3).Info("PublishVolume", "name", volname2, "lun", lun)
+			lun2, err2 := client.PublishVolume(volname2, tc.Config.StorageController.Initiator)
+			logger.V(3).Info("PublishVolume call 2", "name", volname2, "lun", lun)
+			Expect(err).To(BeNil())
+			Expect(err2).To(BeNil())
+			Expect(lun).To(Equal(lun2))
+		})
+
+		It("shouldn't be able to publish/map a fake volume", func() {
+
+			logger := klog.FromContext(tc.Config.Ctx)
+			lun, err := client.PublishVolume("not-a-real-volume-probably", tc.Config.StorageController.Initiator)
+			logger.V(3).Info("PublishVolume", "name", "not-a-real-volume-probably", "lun", lun)
+			Expect(err).ToNot(BeNil())
 		})
 
 		It("should be able to unmap volumes", func() {
@@ -154,6 +185,9 @@ var _ = DescribeRegression("Volume Testing (v2)", func(tc *TestContext) {
 			logger.V(3).Info("CopyVolume", "from", volname1, "to", volnamecopy, "mc-response", status.Response, "mc-response-numeric", status.ResponseTypeNumeric)
 			Expect(err).To(BeNil())
 			Expect(status.ResponseTypeNumeric).To(Equal(storageapi.ApiSuccess))
+
+			//wait for the copy to complete
+			time.Sleep(2 * time.Second)
 
 			// Show volumes
 			response, status, err := client.ShowVolumes(volnamecopy)

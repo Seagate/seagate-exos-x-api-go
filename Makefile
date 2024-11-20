@@ -61,7 +61,7 @@ validate:
 generate:
 	@echo "Generating $(OPENAPI_YAML) using openapi-generator-cli"
 	rm -rf pkg/client
-	docker run $(GENERATE_USER_ARGS) --rm -v ${PWD}:/local openapitools/openapi-generator-cli:$(GENERATOR_VERSION) generate -i $(OPENAPI_YAML) -g go -t /local/templates/go -o /local/pkg/client --package-name client --ignore-file-override=/local/.openapi-generator-ignore
+	docker run $(GENERATE_USER_ARGS) --rm -v ${PWD}:/local openapitools/openapi-generator-cli:$(GENERATOR_VERSION) generate -i $(OPENAPI_YAML) -g go -t /local/templates/go -o /local/pkg/client --package-name client --ignore-file-override=/local/.openapi-generator-ignore --additional-properties=useOneOfDiscriminatorLookup=true
 	@echo "Format files after generation to conform to project standard"
 	$(GOFMT_OPTS)
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **HostProfile** | Pointer to **string** |  | [optional] 
 **HostProfileNumeric** | Pointer to **int64** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
+**Status** | Pointer to [**[]StatusResourceInner**](StatusResourceInner.md) |  | [optional] 
 **HostViewMappings** | Pointer to [**[]HostViewMappingsResourceInner**](HostViewMappingsResourceInner.md) |  | [optional] 
 
 ## Methods
@@ -180,6 +181,31 @@ SetId sets Id field to given value.
 `func (o *InitiatorViewResourceInner) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InitiatorViewResourceInner) GetStatus() []StatusResourceInner`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InitiatorViewResourceInner) GetStatusOk() (*[]StatusResourceInner, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InitiatorViewResourceInner) SetStatus(v []StatusResourceInner)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InitiatorViewResourceInner) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
 
 ### GetHostViewMappings
 
