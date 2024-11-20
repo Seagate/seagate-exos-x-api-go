@@ -25,6 +25,7 @@ type InitiatorViewResourceInner struct {
 	HostProfile        *string                         `json:"host-profile,omitempty"`
 	HostProfileNumeric *int64                          `json:"host-profile-numeric,omitempty"`
 	Id                 *string                         `json:"id,omitempty"`
+	Status             []StatusResourceInner           `json:"status,omitempty"`
 	HostViewMappings   []HostViewMappingsResourceInner `json:"host-view-mappings,omitempty"`
 }
 
@@ -237,6 +238,38 @@ func (o *InitiatorViewResourceInner) SetId(v string) {
 	o.Id = &v
 }
 
+// GetStatus returns the Status field value if set, zero value otherwise.
+func (o *InitiatorViewResourceInner) GetStatus() []StatusResourceInner {
+	if o == nil || IsNil(o.Status) {
+		var ret []StatusResourceInner
+		return ret
+	}
+	return o.Status
+}
+
+// GetStatusOk returns a tuple with the Status field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *InitiatorViewResourceInner) GetStatusOk() ([]StatusResourceInner, bool) {
+	if o == nil || IsNil(o.Status) {
+		return nil, false
+	}
+	return o.Status, true
+}
+
+// HasStatus returns a boolean if a field has been set.
+func (o *InitiatorViewResourceInner) HasStatus() bool {
+	if o != nil && !IsNil(o.Status) {
+		return true
+	}
+
+	return false
+}
+
+// SetStatus gets a reference to the given []StatusResourceInner and assigns it to the Status field.
+func (o *InitiatorViewResourceInner) SetStatus(v []StatusResourceInner) {
+	o.Status = v
+}
+
 // GetHostViewMappings returns the HostViewMappings field value if set, zero value otherwise.
 func (o *InitiatorViewResourceInner) GetHostViewMappings() []HostViewMappingsResourceInner {
 	if o == nil || IsNil(o.HostViewMappings) {
@@ -296,6 +329,9 @@ func (o InitiatorViewResourceInner) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Id) {
 		toSerialize["id"] = o.Id
+	}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
 	}
 	if !IsNil(o.HostViewMappings) {
 		toSerialize["host-view-mappings"] = o.HostViewMappings

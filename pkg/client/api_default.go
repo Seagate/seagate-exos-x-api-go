@@ -2732,6 +2732,234 @@ func (a *DefaultApiService) ShowHostGroupsGetExecute(r ApiShowHostGroupsGetReque
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiShowHostGroupsGroupsGetRequest struct {
+	ctx          context.Context
+	ApiService   *DefaultApiService
+	groupsOption string
+}
+
+func (r ApiShowHostGroupsGroupsGetRequest) Execute() (*HostGroupObject, *http.Response, error) {
+	return r.ApiService.ShowHostGroupsGroupsGetExecute(r)
+}
+
+/*
+ShowHostGroupsGroupsGet Method for ShowHostGroupsGroupsGet
+
+Execute /show/host-groups command
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param groupsOption
+	@return ApiShowHostGroupsGroupsGetRequest
+*/
+func (a *DefaultApiService) ShowHostGroupsGroupsGet(ctx context.Context, groupsOption string) ApiShowHostGroupsGroupsGetRequest {
+	return ApiShowHostGroupsGroupsGetRequest{
+		ApiService:   a,
+		ctx:          ctx,
+		groupsOption: groupsOption,
+	}
+}
+
+// Execute executes the request
+//
+//	@return HostGroupObject
+func (a *DefaultApiService) ShowHostGroupsGroupsGetExecute(r ApiShowHostGroupsGroupsGetRequest) (*HostGroupObject, *http.Response, error) {
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *HostGroupObject
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowHostGroupsGroupsGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/show/host-groups/groups/{groupsOption}"
+	localVarPath = strings.Replace(localVarPath, "{"+"groupsOption"+"}", url.PathEscape(parameterValueToString(r.groupsOption, "groupsOption")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 401 {
+			var v StatusObject
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiShowHostGroupsHostsGetRequest struct {
+	ctx         context.Context
+	ApiService  *DefaultApiService
+	hostsOption string
+}
+
+func (r ApiShowHostGroupsHostsGetRequest) Execute() (*HostGroupObject, *http.Response, error) {
+	return r.ApiService.ShowHostGroupsHostsGetExecute(r)
+}
+
+/*
+ShowHostGroupsHostsGet Method for ShowHostGroupsHostsGet
+
+Execute /show/host-groups command
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param hostsOption
+	@return ApiShowHostGroupsHostsGetRequest
+*/
+func (a *DefaultApiService) ShowHostGroupsHostsGet(ctx context.Context, hostsOption string) ApiShowHostGroupsHostsGetRequest {
+	return ApiShowHostGroupsHostsGetRequest{
+		ApiService:  a,
+		ctx:         ctx,
+		hostsOption: hostsOption,
+	}
+}
+
+// Execute executes the request
+//
+//	@return HostGroupObject
+func (a *DefaultApiService) ShowHostGroupsHostsGetExecute(r ApiShowHostGroupsHostsGetRequest) (*HostGroupObject, *http.Response, error) {
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *HostGroupObject
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowHostGroupsHostsGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/show/host-groups/hosts/{hostsOption}"
+	localVarPath = strings.Replace(localVarPath, "{"+"hostsOption"+"}", url.PathEscape(parameterValueToString(r.hostsOption, "hostsOption")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 401 {
+			var v StatusObject
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiShowInitiatorNamesGetRequest struct {
 	ctx         context.Context
 	ApiService  *DefaultApiService
@@ -3176,13 +3404,123 @@ func (a *DefaultApiService) ShowMapsGetExecute(r ApiShowMapsGetRequest) (*Volume
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiShowMapsInitiatorGetRequest struct {
+	ctx        context.Context
+	ApiService *DefaultApiService
+}
+
+func (r ApiShowMapsInitiatorGetRequest) Execute() (*ShowMapsInitiatorNamesGet200Response, *http.Response, error) {
+	return r.ApiService.ShowMapsInitiatorGetExecute(r)
+}
+
+/*
+ShowMapsInitiatorGet Method for ShowMapsInitiatorGet
+
+Execute /show/maps/initiator command
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiShowMapsInitiatorGetRequest
+*/
+func (a *DefaultApiService) ShowMapsInitiatorGet(ctx context.Context) ApiShowMapsInitiatorGetRequest {
+	return ApiShowMapsInitiatorGetRequest{
+		ApiService: a,
+		ctx:        ctx,
+	}
+}
+
+// Execute executes the request
+//
+//	@return ShowMapsInitiatorNamesGet200Response
+func (a *DefaultApiService) ShowMapsInitiatorGetExecute(r ApiShowMapsInitiatorGetRequest) (*ShowMapsInitiatorNamesGet200Response, *http.Response, error) {
+	var (
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *ShowMapsInitiatorNamesGet200Response
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsInitiatorGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/show/maps/initiator"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 401 {
+			var v StatusObject
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiShowMapsInitiatorNamesGetRequest struct {
 	ctx         context.Context
 	ApiService  *DefaultApiService
 	namesOption string
 }
 
-func (r ApiShowMapsInitiatorNamesGetRequest) Execute() (*InitiatorViewObject, *http.Response, error) {
+func (r ApiShowMapsInitiatorNamesGetRequest) Execute() (*ShowMapsInitiatorNamesGet200Response, *http.Response, error) {
 	return r.ApiService.ShowMapsInitiatorNamesGetExecute(r)
 }
 
@@ -3205,13 +3543,13 @@ func (a *DefaultApiService) ShowMapsInitiatorNamesGet(ctx context.Context, names
 
 // Execute executes the request
 //
-//	@return InitiatorViewObject
-func (a *DefaultApiService) ShowMapsInitiatorNamesGetExecute(r ApiShowMapsInitiatorNamesGetRequest) (*InitiatorViewObject, *http.Response, error) {
+//	@return ShowMapsInitiatorNamesGet200Response
+func (a *DefaultApiService) ShowMapsInitiatorNamesGetExecute(r ApiShowMapsInitiatorNamesGetRequest) (*ShowMapsInitiatorNamesGet200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod  = http.MethodGet
 		localVarPostBody    interface{}
 		formFiles           []formFile
-		localVarReturnValue *InitiatorViewObject
+		localVarReturnValue *ShowMapsInitiatorNamesGet200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ShowMapsInitiatorNamesGet")

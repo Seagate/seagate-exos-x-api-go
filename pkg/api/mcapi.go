@@ -146,14 +146,42 @@ type ResponseType interface {
 	GetStatus() []client.StatusResourceInner
 }
 
+type OneOfReturnResponse interface {
+	GetActualInstance() interface{}
+}
+
+// Extract "StatusResourceInner" from either an openAPI Object with GetStatus, or by first Retrieving
+// the real object with GetActualInstance, in the case of an OpenAPI call with multiple possible return types
+// Example: ShowMapsInitiatorGet200Response
+func GetStatus(response interface{}) (returnStatus []client.StatusResourceInner, err error) {
+	switch resp := response.(type) {
+	case ResponseType:
+		returnStatus = resp.GetStatus()
+	case OneOfReturnResponse:
+		rv := resp.GetActualInstance()
+		if r, ok := rv.(ResponseType); ok {
+			returnStatus = r.GetStatus()
+		} else {
+			err = fmt.Errorf("unable to extract status from response type")
+		}
+	default:
+		err = fmt.Errorf("unable to extract status from response type")
+	}
+	return
+}
+
 // ExecuteWithFailover: Retry wrapper for the Execute functions of the openapi generated client library
 // If the initial request fails, attempts to login on the secondary controller
-func ExecuteWithFailover[R ResponseType](executeFunc func() (R, *http.Response, error), client *Client) (R, *common.ResponseStatus, *http.Response, error) {
-	logger := klog.FromContext(client.Ctx)
+func ExecuteWithFailover[R interface{}](executeFunc func() (R, *http.Response, error), myclient *Client) (R, *common.ResponseStatus, *http.Response, error) {
+	logger := klog.FromContext(myclient.Ctx)
 	logger.V(4).Info("Execute with failover...")
 	response, httpRes, err := executeFunc()
 	if err == nil {
-		status := response.GetStatus()
+
+		status, err := GetStatus(response)
+		if err != nil {
+			return response, nil, httpRes, err
+		}
 		commonStatus := CreateCommonStatus(logger, &status)
 		// retry if the return code from the controller is in the list of retryable return codes
 		retry := false
@@ -169,16 +197,16 @@ func ExecuteWithFailover[R ResponseType](executeFunc func() (R, *http.Response, 
 		}
 	}
 	// If our first attempt resulted in an error or a retryable return code
-	if len(client.Addrs) > 1 {
-		client.NotResponding = client.CurrentAddr
+	if len(myclient.Addrs) > 1 {
+		myclient.NotResponding = myclient.CurrentAddr
 		logger.V(1).Info("Retrying...", "err", err, "response", response)
-		client.MarkCurrentControllerDown()
-		client.Login(client.Ctx)
+		myclient.MarkCurrentControllerDown()
+		myclient.Login(myclient.Ctx)
 		response, httpRes, err = executeFunc()
 		if err != nil {
 			return response, nil, httpRes, err
 		} else {
-			status := response.GetStatus()
+			status, err := GetStatus(response)
 			commonStatus := CreateCommonStatus(logger, &status)
 			return response, commonStatus, httpRes, err
 		}

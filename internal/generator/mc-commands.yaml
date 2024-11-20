@@ -87,6 +87,34 @@ commands:
       nested:
       - name: initiator
 
+  - command: /show/host-groups
+    meta: host-group
+    include:
+    - status
+    options:
+    - flag: hosts
+      type: string
+      required: false
+      keyword-required: true
+    nested:
+    - name: host
+      nested:
+      - name: initiator
+
+  - command: /show/host-groups
+    meta: host-group
+    include:
+    - status
+    options:
+    - flag: groups
+      type: string
+      required: false
+      keyword-required: true
+    nested:
+    - name: host
+      nested:
+      - name: initiator
+
   - command: /show/disk-groups
     meta: disk-groups
     include:
@@ -162,7 +190,27 @@ commands:
       description: A comma-separated list of the names or serial numbers of the volumes. A name that includes a space must be enclosed in double quotes.
 
   - command: /show/maps/initiator
-    meta: initiator-view
+    meta-set: 
+      metas:
+      - name: hosts-view
+        nested:
+        - name: host-view-mappings
+          nested:
+          - name: volume-view
+      - name: initiator-view
+        nested:
+        - name: status
+        - name: host-view-mappings
+          nested:
+          - name: volume-view
+      - name: host-group-view 
+        nested:
+        - name: status
+        - name: host-view-mappings
+          nested:
+          - name: volume-view
+      - name: status
+      set-option: oneOf
     include:
     - status
     nested:
@@ -173,6 +221,31 @@ commands:
       required: false
       keyword-required: false
       description: Optional. A comma-separated list of the names or serial numbers of host-type items (initiators, hosts, and host groups) or volume-type items (volumes and volume groups) for which to show mappings.
+
+  - command: /show/maps/initiator
+    meta-set:
+      metas:
+      - name: hosts-view
+        nested:
+        - name: host-view-mappings
+          nested:
+          - name: volume-view
+      - name: initiator-view
+        nested:
+        - name: status
+        - name: host-view-mappings
+          nested:
+          - name: volume-view
+      - name: host-group-view 
+        nested:
+        - name: status
+        - name: host-view-mappings
+          nested:
+          - name: volume-view
+      - name: status
+      set-option: oneOf
+    include:
+    - status
 
   - command: /show/maps/all
     meta: volume-view

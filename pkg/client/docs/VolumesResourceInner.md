@@ -34,6 +34,9 @@ Name | Type | Description | Notes
 **CsReplicationRole** | Pointer to **string** |  | [optional] 
 **CsSecondary** | Pointer to **string** |  | [optional] 
 **CsSecondaryNumeric** | Pointer to **int64** |  | [optional] 
+**CurrentJob** | Pointer to **string** |  | [optional] 
+**CurrentJobCompletion** | Pointer to **string** |  | [optional] 
+**CurrentJobNumeric** | Pointer to **int64** |  | [optional] 
 **DurableId** | Pointer to **string** |  | [optional] 
 **GroupKey** | Pointer to **string** | Durable ID of a Management Group | [optional] 
 **Health** | Pointer to **string** |  | [optional] 
@@ -865,6 +868,81 @@ SetCsSecondaryNumeric sets CsSecondaryNumeric field to given value.
 `func (o *VolumesResourceInner) HasCsSecondaryNumeric() bool`
 
 HasCsSecondaryNumeric returns a boolean if a field has been set.
+
+### GetCurrentJob
+
+`func (o *VolumesResourceInner) GetCurrentJob() string`
+
+GetCurrentJob returns the CurrentJob field if non-nil, zero value otherwise.
+
+### GetCurrentJobOk
+
+`func (o *VolumesResourceInner) GetCurrentJobOk() (*string, bool)`
+
+GetCurrentJobOk returns a tuple with the CurrentJob field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCurrentJob
+
+`func (o *VolumesResourceInner) SetCurrentJob(v string)`
+
+SetCurrentJob sets CurrentJob field to given value.
+
+### HasCurrentJob
+
+`func (o *VolumesResourceInner) HasCurrentJob() bool`
+
+HasCurrentJob returns a boolean if a field has been set.
+
+### GetCurrentJobCompletion
+
+`func (o *VolumesResourceInner) GetCurrentJobCompletion() string`
+
+GetCurrentJobCompletion returns the CurrentJobCompletion field if non-nil, zero value otherwise.
+
+### GetCurrentJobCompletionOk
+
+`func (o *VolumesResourceInner) GetCurrentJobCompletionOk() (*string, bool)`
+
+GetCurrentJobCompletionOk returns a tuple with the CurrentJobCompletion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCurrentJobCompletion
+
+`func (o *VolumesResourceInner) SetCurrentJobCompletion(v string)`
+
+SetCurrentJobCompletion sets CurrentJobCompletion field to given value.
+
+### HasCurrentJobCompletion
+
+`func (o *VolumesResourceInner) HasCurrentJobCompletion() bool`
+
+HasCurrentJobCompletion returns a boolean if a field has been set.
+
+### GetCurrentJobNumeric
+
+`func (o *VolumesResourceInner) GetCurrentJobNumeric() int64`
+
+GetCurrentJobNumeric returns the CurrentJobNumeric field if non-nil, zero value otherwise.
+
+### GetCurrentJobNumericOk
+
+`func (o *VolumesResourceInner) GetCurrentJobNumericOk() (*int64, bool)`
+
+GetCurrentJobNumericOk returns a tuple with the CurrentJobNumeric field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCurrentJobNumeric
+
+`func (o *VolumesResourceInner) SetCurrentJobNumeric(v int64)`
+
+SetCurrentJobNumeric sets CurrentJobNumeric field to given value.
+
+### HasCurrentJobNumeric
+
+`func (o *VolumesResourceInner) HasCurrentJobNumeric() bool`
+
+HasCurrentJobNumeric returns a boolean if a field has been set.
 
 ### GetDurableId
 

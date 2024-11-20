@@ -9,7 +9,6 @@ import (
 
 	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/regression"
 
-	"github.com/onsi/ginkgo/v2"
 	"k8s.io/klog/v2"
 )
 
@@ -39,6 +38,7 @@ func main() {
 	config := flag.String("config", "", "set the configuration file")
 
 	// Parse flags
+	//klog.InitFlags(nil)
 	flag.Parse()
 
 	if *version {
@@ -66,16 +66,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Logging
-	klog.EnableContextualLogging(true)
-	klog.SetOutput(ginkgo.GinkgoWriter)
-	logger := klog.FromContext(apiConfig.Ctx)
-
 	// Create testing object
 	t := testing{}
 
 	// Run regression tests
-	regression.Test(&t, apiConfig, logger)
+	regression.Test(&t, apiConfig, klog.FromContext(apiConfig.Ctx))
 
 	os.Exit(t.result)
 }

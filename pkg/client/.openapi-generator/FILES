@@ -29,8 +29,12 @@ docs/FanResourceInner.md
 docs/FcPortResourceInner.md
 docs/HostGroupObject.md
 docs/HostGroupResourceInner.md
+docs/HostGroupViewObject.md
+docs/HostGroupViewResourceInner.md
 docs/HostResourceInner.md
 docs/HostViewMappingsResourceInner.md
+docs/HostsViewObject.md
+docs/HostsViewResourceInner.md
 docs/InitiatorObject.md
 docs/InitiatorResourceInner.md
 docs/InitiatorViewObject.md
@@ -44,6 +48,7 @@ docs/PowerSuppliesObject.md
 docs/PowerSuppliesResourceInner.md
 docs/RedundancyResourceInner.md
 docs/SasPortResourceInner.md
+docs/ShowMapsInitiatorNamesGet200Response.md
 docs/SnapshotsObject.md
 docs/SnapshotsResourceInner.md
 docs/StatusObject.md
@@ -82,8 +87,12 @@ model_fan_resource_inner.go
 model_fc_port_resource_inner.go
 model_host_group_object.go
 model_host_group_resource_inner.go
+model_host_group_view_object.go
+model_host_group_view_resource_inner.go
 model_host_resource_inner.go
 model_host_view_mappings_resource_inner.go
+model_hosts_view_object.go
+model_hosts_view_resource_inner.go
 model_initiator_object.go
 model_initiator_resource_inner.go
 model_initiator_view_object.go
@@ -97,6 +106,7 @@ model_power_supplies_object.go
 model_power_supplies_resource_inner.go
 model_redundancy_resource_inner.go
 model_sas_port_resource_inner.go
+model_show_maps_initiator_names_get_200_response.go
 model_snapshots_object.go
 model_snapshots_resource_inner.go
 model_status_object.go

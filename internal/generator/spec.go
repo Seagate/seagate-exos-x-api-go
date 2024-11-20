@@ -322,6 +322,7 @@ func (s *Specification) AddMetaProperties(ctx context.Context, config *common.Co
 	}
 
 	// Run http get /api/meta/{metaId} and process the JSON response data
+	logger.V(2).Info("get /api/meta/", "metaId", meta)
 	response, httpRes, err := apiClient.DefaultApi.SchemaGet(ctx, meta).Execute()
 
 	if httpRes.StatusCode != http.StatusOK {
@@ -410,6 +411,14 @@ func (s *Specification) AddMetaProperties(ctx context.Context, config *common.Co
 	s.Resources(6, "type: string")
 	s.Resources(5, "meta:")
 	s.Resources(6, "type: string")
+
+	// host-view-mappings has incorrect meta data. Add the "volume" properties field manually
+	if meta == "host-view-mappings" {
+		properties["volume"] = map[string]interface{}{
+			"type":        "string",
+			"description": "User-defined name for the volume",
+		}
+	}
 
 	// Next export all the properties, but do so in a sorted manner
 	// The meta command does not produce the same property order every time, hence the desire to sort for consistency
@@ -520,7 +529,28 @@ func (s *Specification) AddCommand(ctx context.Context, config *common.Config, c
 	s.Paths(5, "content:")
 	s.Paths(6, "application/json:")
 	s.Paths(7, "schema:")
-	s.Paths(8, fmt.Sprintf("$ref: '#/components/schemas/%sObject'", command.Meta))
+
+	if command.Meta != "" {
+		s.Paths(8, fmt.Sprintf("$ref: '#/components/schemas/%sObject'", command.Meta))
+	} else {
+
+		// when unmarshaling json, if a field in the struct does not exist in the JSON data, the field will be set to its zero value.
+		// so we can assume command.MetaSet will exist and each field will be the 0 value for it's type
+		if command.MetaSet.SetOption == "" {
+			return fmt.Errorf("error generating command. No meta or metaset found")
+		}
+		s.Paths(8, "discriminator:")
+		s.Paths(9, "propertyName: object-name")
+		s.Paths(9, "mapping:")
+		for _, commandMeta := range command.MetaSet.Metas {
+
+			s.Paths(10, fmt.Sprintf("%s: '#/components/schemas/%sObject'", commandMeta.Name, commandMeta.Name))
+		}
+		s.Paths(8, fmt.Sprintf("%s:", command.MetaSet.SetOption))
+		for _, commandMeta := range command.MetaSet.Metas {
+			s.Paths(9, fmt.Sprintf("- $ref: '#/components/schemas/%sObject'", commandMeta.Name))
+		}
+	}
 	s.Paths(4, "'401':")
 	s.Paths(5, "description: Unauthorized")
 	s.Paths(5, "content:")
@@ -539,33 +569,73 @@ func (s *Specification) AddCommand(ctx context.Context, config *common.Config, c
 	}
 
 	// If specified in the input yaml, generate spec lines for the resource and add a reference link
-	err := s.AddMetaProperties(ctx, config, command.Meta, command.Nested, exceptions)
-	if err != nil {
-		return fmt.Errorf("unable to add meta (properties) from /meta command for (%s)", command.Meta)
+	if command.Meta != "" {
+		err := s.AddMetaProperties(ctx, config, command.Meta, command.Nested, exceptions)
+		if err != nil {
+			return fmt.Errorf("unable to add meta (properties) from /meta command for (%s)", command.Meta)
+		}
+	}
+
+	// If specified in the input yaml, generate spec lines for the resource and add a reference link
+	for _, commandMeta := range command.MetaSet.Metas {
+		err := s.AddMetaProperties(ctx, config, commandMeta.Name, commandMeta.Nested, exceptions)
+		if err != nil {
+			return fmt.Errorf("unable to add meta (properties) from /meta command for (%s)", command.Meta)
+		}
 	}
 
 	// Add the meta object, if not already generated
-	generated := s.generatedObjects[command.Meta]
-	if !generated {
-		s.generatedObjects[command.Meta] = true
+	// Currently "meta" and "include" are unique to the top level command, so no need to handle them
+	// in a metaset
+	if command.Meta != "" {
+		generated := s.generatedObjects[command.Meta]
+		if !generated {
+			s.generatedObjects[command.Meta] = true
 
-		logger.V(3).Info("add object", "name", fmt.Sprintf("%sObject", command.Meta))
-		s.Objects(2, fmt.Sprintf("%sObject:", command.Meta))
-		s.Objects(3, "type: object")
-		s.Objects(3, "properties:")
+			logger.V(3).Info("add object", "name", fmt.Sprintf("%sObject", command.Meta))
+			s.Objects(2, fmt.Sprintf("%sObject:", command.Meta))
+			s.Objects(3, "type: object")
+			s.Objects(3, "properties:")
 
-		// If specified in the input yaml, add a link to any included resource before defining this resource's object properties
-		if len(command.Include) > 0 {
-			for _, include := range command.Include {
-				logger.V(3).Info("add include ref", "name", fmt.Sprintf("%sResource:", include))
-				s.Objects(4, fmt.Sprintf("%s:", include))
-				s.Objects(5, fmt.Sprintf("$ref: '#/components/schemas/%sResource'", include))
+			// If specified in the input yaml, add a link to any included resource before defining this resource's object properties
+			if len(command.Include) > 0 {
+				for _, include := range command.Include {
+					logger.V(3).Info("add include ref", "name", fmt.Sprintf("%sResource:", include))
+					s.Objects(4, fmt.Sprintf("%s:", include))
+					s.Objects(5, fmt.Sprintf("$ref: '#/components/schemas/%sResource'", include))
+				}
+			}
+
+			// Add link to meta resource reference
+			s.Objects(4, fmt.Sprintf("%s:", command.Meta))
+			s.Objects(5, fmt.Sprintf("$ref: '#/components/schemas/%sResource'", command.Meta))
+		}
+	} else { // If there's no meta, there should be a metaset specified for multiple possible return types
+		for _, commandMeta := range command.MetaSet.Metas {
+			meta := commandMeta.Name
+			generated := s.generatedObjects[meta]
+			if !generated {
+				s.generatedObjects[meta] = true
+
+				logger.V(3).Info("add object", "name", fmt.Sprintf("%sObject", meta))
+				s.Objects(2, fmt.Sprintf("%sObject:", meta))
+				s.Objects(3, "type: object")
+				s.Objects(3, "properties:")
+
+				// If specified in the input yaml, add a link to any included resource before defining this resource's object properties
+				if len(command.Include) > 0 {
+					for _, include := range command.Include {
+						logger.V(3).Info("add include ref", "name", fmt.Sprintf("%sResource:", include))
+						s.Objects(4, fmt.Sprintf("%s:", include))
+						s.Objects(5, fmt.Sprintf("$ref: '#/components/schemas/%sResource'", include))
+					}
+				}
+
+				// Add link to meta resource reference
+				s.Objects(4, fmt.Sprintf("%s:", meta))
+				s.Objects(5, fmt.Sprintf("$ref: '#/components/schemas/%sResource'", meta))
 			}
 		}
-
-		// Add link to meta resource reference
-		s.Objects(4, fmt.Sprintf("%s:", command.Meta))
-		s.Objects(5, fmt.Sprintf("$ref: '#/components/schemas/%sResource'", command.Meta))
 	}
 
 	// Add all options as parameters

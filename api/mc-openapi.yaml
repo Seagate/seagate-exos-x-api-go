@@ -256,6 +256,46 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/statusObject'
+  # /show/host-groups
+  /show/host-groups/hosts/{hostsOption}:
+    get:
+      description: Execute /show/host-groups command
+      operationId: ShowHost-GroupsHostsGet
+      parameters:
+        - $ref: '#/components/parameters/hostsOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/host-groupObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/host-groups
+  /show/host-groups/groups/{groupsOption}:
+    get:
+      description: Execute /show/host-groups command
+      operationId: ShowHost-GroupsGroupsGet
+      parameters:
+        - $ref: '#/components/parameters/groupsOption'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/host-groupObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
   # /show/disk-groups
   /show/disk-groups:
     get:
@@ -397,7 +437,47 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/initiator-viewObject'
+                discriminator:
+                  propertyName: object-name
+                  mapping:
+                    hosts-view: '#/components/schemas/hosts-viewObject'
+                    initiator-view: '#/components/schemas/initiator-viewObject'
+                    host-group-view: '#/components/schemas/host-group-viewObject'
+                    status: '#/components/schemas/statusObject'
+                oneOf:
+                  - $ref: '#/components/schemas/hosts-viewObject'
+                  - $ref: '#/components/schemas/initiator-viewObject'
+                  - $ref: '#/components/schemas/host-group-viewObject'
+                  - $ref: '#/components/schemas/statusObject'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+  # /show/maps/initiator
+  /show/maps/initiator:
+    get:
+      description: Execute /show/maps/initiator command
+      operationId: ShowMapsInitiatorGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                discriminator:
+                  propertyName: object-name
+                  mapping:
+                    hosts-view: '#/components/schemas/hosts-viewObject'
+                    initiator-view: '#/components/schemas/initiator-viewObject'
+                    host-group-view: '#/components/schemas/host-group-viewObject'
+                    status: '#/components/schemas/statusObject'
+                oneOf:
+                  - $ref: '#/components/schemas/hosts-viewObject'
+                  - $ref: '#/components/schemas/initiator-viewObject'
+                  - $ref: '#/components/schemas/host-group-viewObject'
+                  - $ref: '#/components/schemas/statusObject'
         '401':
           description: Unauthorized
           content:
@@ -813,6 +893,18 @@ components:
         example: 'volumes'
     namesOption:
       name: namesOption
+      in: path
+      required: true
+      schema:
+        type: string
+    hostsOption:
+      name: hostsOption
+      in: path
+      required: true
+      schema:
+        type: string
+    groupsOption:
+      name: groupsOption
       in: path
       required: true
       schema:
@@ -1255,6 +1347,13 @@ components:
           cs-secondary:
             type: string
           cs-secondary-numeric:
+            type: integer
+            format: int64
+          current-job:
+            type: string
+          current-job-completion:
+            type: string
+          current-job-numeric:
             type: integer
             format: int64
           durable-id:
@@ -3771,6 +3870,8 @@ components:
           ec-fw:
             type: string
             description: The Expander Controller firmware version
+          ese-version:
+            type: string
           fw-default-platform-brand:
             type: string
             description: Default hardware platform brand of the firmware
@@ -3956,12 +4057,36 @@ components:
             description: Logical Unit Number
           ports:
             type: string
+          volume:
+            type: string
+            description: User-defined name for the volume
           volume-name:
             type: string
             description: User-defined name for the volume
           volume-serial:
             type: string
             description: Unique serial number for the volume
+          volume-view:
+            $ref: '#/components/schemas/volume-viewResource'
+    hosts-viewResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          durable-id:
+            type: string
+          host-name:
+            type: string
+          serial-number:
+            type: string
+          host-view-mappings:
+            $ref: '#/components/schemas/host-view-mappingsResource'
     initiator-viewResource:
       type: array
       minItems: 1
@@ -3982,6 +4107,30 @@ components:
             format: int64
           id:
             type: string
+          status:
+            $ref: '#/components/schemas/statusResource'
+          host-view-mappings:
+            $ref: '#/components/schemas/host-view-mappingsResource'
+    host-group-viewResource:
+      type: array
+      minItems: 1
+      maxItems: 1024
+      items:
+        type: object
+        properties:
+          object-name:
+            type: string
+          meta:
+            type: string
+          durable-id:
+            type: string
+          group-name:
+            type: string
+            description: Name of a Management Group
+          serial-number:
+            type: string
+          status:
+            $ref: '#/components/schemas/statusResource'
           host-view-mappings:
             $ref: '#/components/schemas/host-view-mappingsResource'
     snapshotsResource:
@@ -4221,6 +4370,13 @@ components:
           $ref: '#/components/schemas/volume-group-viewResource'
         volume-view:
           $ref: '#/components/schemas/volume-viewResource'
+    hosts-viewObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        hosts-view:
+          $ref: '#/components/schemas/hosts-viewResource'
     initiator-viewObject:
       type: object
       properties:
@@ -4228,6 +4384,13 @@ components:
           $ref: '#/components/schemas/statusResource'
         initiator-view:
           $ref: '#/components/schemas/initiator-viewResource'
+    host-group-viewObject:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/statusResource'
+        host-group-view:
+          $ref: '#/components/schemas/host-group-viewResource'
     initiatorObject:
       type: object
       properties:

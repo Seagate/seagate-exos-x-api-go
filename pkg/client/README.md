@@ -102,10 +102,13 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ShowEnclosuresGet**](docs/DefaultApi.md#showenclosuresget) | **Get** /show/enclosures | 
 *DefaultApi* | [**ShowFansGet**](docs/DefaultApi.md#showfansget) | **Get** /show/fans | 
 *DefaultApi* | [**ShowHostGroupsGet**](docs/DefaultApi.md#showhostgroupsget) | **Get** /show/host-groups | 
+*DefaultApi* | [**ShowHostGroupsGroupsGet**](docs/DefaultApi.md#showhostgroupsgroupsget) | **Get** /show/host-groups/groups/{groupsOption} | 
+*DefaultApi* | [**ShowHostGroupsHostsGet**](docs/DefaultApi.md#showhostgroupshostsget) | **Get** /show/host-groups/hosts/{hostsOption} | 
 *DefaultApi* | [**ShowInitiatorNamesGet**](docs/DefaultApi.md#showinitiatornamesget) | **Get** /show/initiator/{namesOption} | 
 *DefaultApi* | [**ShowInitiatorsGet**](docs/DefaultApi.md#showinitiatorsget) | **Get** /show/initiators | 
 *DefaultApi* | [**ShowMapsAllGet**](docs/DefaultApi.md#showmapsallget) | **Get** /show/maps/all | 
 *DefaultApi* | [**ShowMapsGet**](docs/DefaultApi.md#showmapsget) | **Get** /show/maps | 
+*DefaultApi* | [**ShowMapsInitiatorGet**](docs/DefaultApi.md#showmapsinitiatorget) | **Get** /show/maps/initiator | 
 *DefaultApi* | [**ShowMapsInitiatorNamesGet**](docs/DefaultApi.md#showmapsinitiatornamesget) | **Get** /show/maps/initiator/{namesOption} | 
 *DefaultApi* | [**ShowMapsNamesGet**](docs/DefaultApi.md#showmapsnamesget) | **Get** /show/maps/{namesOption} | 
 *DefaultApi* | [**ShowPoolsGet**](docs/DefaultApi.md#showpoolsget) | **Get** /show/pools | 
@@ -145,8 +148,12 @@ Class | Method | HTTP request | Description
  - [FcPortResourceInner](docs/FcPortResourceInner.md)
  - [HostGroupObject](docs/HostGroupObject.md)
  - [HostGroupResourceInner](docs/HostGroupResourceInner.md)
+ - [HostGroupViewObject](docs/HostGroupViewObject.md)
+ - [HostGroupViewResourceInner](docs/HostGroupViewResourceInner.md)
  - [HostResourceInner](docs/HostResourceInner.md)
  - [HostViewMappingsResourceInner](docs/HostViewMappingsResourceInner.md)
+ - [HostsViewObject](docs/HostsViewObject.md)
+ - [HostsViewResourceInner](docs/HostsViewResourceInner.md)
  - [InitiatorObject](docs/InitiatorObject.md)
  - [InitiatorResourceInner](docs/InitiatorResourceInner.md)
  - [InitiatorViewObject](docs/InitiatorViewObject.md)
@@ -160,6 +167,7 @@ Class | Method | HTTP request | Description
  - [PowerSuppliesResourceInner](docs/PowerSuppliesResourceInner.md)
  - [RedundancyResourceInner](docs/RedundancyResourceInner.md)
  - [SasPortResourceInner](docs/SasPortResourceInner.md)
+ - [ShowMapsInitiatorNamesGet200Response](docs/ShowMapsInitiatorNamesGet200Response.md)
  - [SnapshotsObject](docs/SnapshotsObject.md)
  - [SnapshotsResourceInner](docs/SnapshotsResourceInner.md)
  - [StatusObject](docs/StatusObject.md)

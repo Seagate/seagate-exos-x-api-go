@@ -255,6 +255,56 @@ paths:
               schema:
                 $ref: '#/components/schemas/statusObject'
           description: Unauthorized
+  /show/host-groups/hosts/{hostsOption}:
+    get:
+      description: Execute /show/host-groups command
+      operationId: ShowHost-GroupsHostsGet
+      parameters:
+      - explode: false
+        in: path
+        name: hostsOption
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/host-groupObject'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+          description: Unauthorized
+  /show/host-groups/groups/{groupsOption}:
+    get:
+      description: Execute /show/host-groups command
+      operationId: ShowHost-GroupsGroupsGet
+      parameters:
+      - explode: false
+        in: path
+        name: groupsOption
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/host-groupObject'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+          description: Unauthorized
   /show/disk-groups:
     get:
       description: Execute /show/disk-groups command
@@ -399,7 +449,24 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/initiator-viewObject'
+                $ref: '#/components/schemas/ShowMapsInitiatorNamesGet_200_response'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusObject'
+          description: Unauthorized
+  /show/maps/initiator:
+    get:
+      description: Execute /show/maps/initiator command
+      operationId: ShowMapsInitiatorGet
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShowMapsInitiatorNamesGet_200_response'
           description: OK
         "401":
           content:
@@ -980,6 +1047,22 @@ components:
       schema:
         type: string
       style: simple
+    hostsOption:
+      explode: false
+      in: path
+      name: hostsOption
+      required: true
+      schema:
+        type: string
+      style: simple
+    groupsOption:
+      explode: false
+      in: path
+      name: groupsOption
+      required: true
+      schema:
+        type: string
+      style: simple
     volumeOption:
       explode: false
       in: path
@@ -1283,9 +1366,21 @@ components:
       maxItems: 1024
       minItems: 1
       type: array
+    hosts-viewResource:
+      items:
+        $ref: '#/components/schemas/hosts_viewResource_inner'
+      maxItems: 1024
+      minItems: 1
+      type: array
     initiator-viewResource:
       items:
         $ref: '#/components/schemas/initiator_viewResource_inner'
+      maxItems: 1024
+      minItems: 1
+      type: array
+    host-group-viewResource:
+      items:
+        $ref: '#/components/schemas/host_group_viewResource_inner'
       maxItems: 1024
       minItems: 1
       type: array
@@ -2320,8 +2415,8 @@ components:
         - blocksize: 5
           volume-qualifier: volume-qualifier
           creation-date-time: creation-date-time
-          pi-format-numeric: 1
-          owner-numeric: 7
+          pi-format-numeric: 4
+          owner-numeric: 1
           cache-optimization-numeric: 2
           storage-pools-url: storage-pools-url
           allocate-reserved-pages-first-numeric: 0
@@ -2331,14 +2426,16 @@ components:
           wwn: wwn
           volume-type: volume-type
           cs-copy-dest: cs-copy-dest
-          write-policy-numeric: 5
+          write-policy-numeric: 6
           group-key: group-key
           durable-id: durable-id
           compression-efficiency: compression-efficiency
           cs-copy-dest-numeric: 3
+          current-job-numeric: 1
+          current-job-completion: current-job-completion
           allowed-storage-tiers: allowed-storage-tiers
           health-numeric: 1
-          total-size-numeric: 6
+          total-size-numeric: 1
           volume-usage-type: volume-usage-type
           volume-group: volume-group
           raidtype: raidtype
@@ -2346,8 +2443,9 @@ components:
           volume-parent: volume-parent
           write-policy: write-policy
           interleaved: interleaved
-          size-numeric: 8
-          volume-usage-type-numeric: 6
+          current-job: current-job
+          size-numeric: 9
+          volume-usage-type-numeric: 5
           allocate-reserved-pages-first: allocate-reserved-pages-first
           size: size
           allocated-size: allocated-size
@@ -2357,12 +2455,12 @@ components:
           storage-pool-name: storage-pool-name
           zero-init-page-on-allocation: zero-init-page-on-allocation
           compression: compression
-          preferred-owner-numeric: 4
-          volume-qualifier-numeric: 2
-          progress-numeric: 5
+          preferred-owner-numeric: 5
+          volume-qualifier-numeric: 6
+          progress-numeric: 9
           snapshot: snapshot
           replication-set: replication-set
-          zero-init-page-on-allocation-numeric: 6
+          zero-init-page-on-allocation-numeric: 3
           cs-replication-role: cs-replication-role
           object-name: object-name
           volume-name: volume-name
@@ -2370,9 +2468,9 @@ components:
           virtual-disk-name: virtual-disk-name
           cs-copy-src-numeric: 2
           allowed-storage-tiers-numeric: 1
-          tier-affinity-numeric: 3
+          tier-affinity-numeric: 6
           threshold-percent-of-pool: threshold-percent-of-pool
-          snapshot-retention-priority-numeric: 9
+          snapshot-retention-priority-numeric: 6
           cs-primary: cs-primary
           raidtype-numeric: 9
           read-ahead-size: read-ahead-size
@@ -2390,30 +2488,30 @@ components:
           volume-type-numeric: 6
           container-name: container-name
           cs-primary-numeric: 4
-          read-ahead-size-numeric: 9
-          volume-class-numeric: 1
+          read-ahead-size-numeric: 6
+          volume-class-numeric: 2
           allocated-size-numeric: 6
           url: url
           pi-format: pi-format
           snapshot-retention-priority: snapshot-retention-priority
           storage-type: storage-type
           cs-secondary-numeric: 7
-          large-virtual-extents-numeric: 1
+          large-virtual-extents-numeric: 6
           cs-copy-src: cs-copy-src
-          reserved-size-in-pages: 6
+          reserved-size-in-pages: 8
           volume-class: volume-class
-          storage-type-numeric: 6
+          storage-type-numeric: 3
           progress: progress
           attributes: attributes
           tier-affinity: tier-affinity
           health-reason: health-reason
-          metadata-in-use-numeric: 6
+          metadata-in-use-numeric: 7
           interleaved-numeric: 1
         - blocksize: 5
           volume-qualifier: volume-qualifier
           creation-date-time: creation-date-time
-          pi-format-numeric: 1
-          owner-numeric: 7
+          pi-format-numeric: 4
+          owner-numeric: 1
           cache-optimization-numeric: 2
           storage-pools-url: storage-pools-url
           allocate-reserved-pages-first-numeric: 0
@@ -2423,14 +2521,16 @@ components:
           wwn: wwn
           volume-type: volume-type
           cs-copy-dest: cs-copy-dest
-          write-policy-numeric: 5
+          write-policy-numeric: 6
           group-key: group-key
           durable-id: durable-id
           compression-efficiency: compression-efficiency
           cs-copy-dest-numeric: 3
+          current-job-numeric: 1
+          current-job-completion: current-job-completion
           allowed-storage-tiers: allowed-storage-tiers
           health-numeric: 1
-          total-size-numeric: 6
+          total-size-numeric: 1
           volume-usage-type: volume-usage-type
           volume-group: volume-group
           raidtype: raidtype
@@ -2438,8 +2538,9 @@ components:
           volume-parent: volume-parent
           write-policy: write-policy
           interleaved: interleaved
-          size-numeric: 8
-          volume-usage-type-numeric: 6
+          current-job: current-job
+          size-numeric: 9
+          volume-usage-type-numeric: 5
           allocate-reserved-pages-first: allocate-reserved-pages-first
           size: size
           allocated-size: allocated-size
@@ -2449,12 +2550,12 @@ components:
           storage-pool-name: storage-pool-name
           zero-init-page-on-allocation: zero-init-page-on-allocation
           compression: compression
-          preferred-owner-numeric: 4
-          volume-qualifier-numeric: 2
-          progress-numeric: 5
+          preferred-owner-numeric: 5
+          volume-qualifier-numeric: 6
+          progress-numeric: 9
           snapshot: snapshot
           replication-set: replication-set
-          zero-init-page-on-allocation-numeric: 6
+          zero-init-page-on-allocation-numeric: 3
           cs-replication-role: cs-replication-role
           object-name: object-name
           volume-name: volume-name
@@ -2462,9 +2563,9 @@ components:
           virtual-disk-name: virtual-disk-name
           cs-copy-src-numeric: 2
           allowed-storage-tiers-numeric: 1
-          tier-affinity-numeric: 3
+          tier-affinity-numeric: 6
           threshold-percent-of-pool: threshold-percent-of-pool
-          snapshot-retention-priority-numeric: 9
+          snapshot-retention-priority-numeric: 6
           cs-primary: cs-primary
           raidtype-numeric: 9
           read-ahead-size: read-ahead-size
@@ -2482,30 +2583,30 @@ components:
           volume-type-numeric: 6
           container-name: container-name
           cs-primary-numeric: 4
-          read-ahead-size-numeric: 9
-          volume-class-numeric: 1
+          read-ahead-size-numeric: 6
+          volume-class-numeric: 2
           allocated-size-numeric: 6
           url: url
           pi-format: pi-format
           snapshot-retention-priority: snapshot-retention-priority
           storage-type: storage-type
           cs-secondary-numeric: 7
-          large-virtual-extents-numeric: 1
+          large-virtual-extents-numeric: 6
           cs-copy-src: cs-copy-src
-          reserved-size-in-pages: 6
+          reserved-size-in-pages: 8
           volume-class: volume-class
-          storage-type-numeric: 6
+          storage-type-numeric: 3
           progress: progress
           attributes: attributes
           tier-affinity: tier-affinity
           health-reason: health-reason
-          metadata-in-use-numeric: 6
+          metadata-in-use-numeric: 7
           interleaved-numeric: 1
         - blocksize: 5
           volume-qualifier: volume-qualifier
           creation-date-time: creation-date-time
-          pi-format-numeric: 1
-          owner-numeric: 7
+          pi-format-numeric: 4
+          owner-numeric: 1
           cache-optimization-numeric: 2
           storage-pools-url: storage-pools-url
           allocate-reserved-pages-first-numeric: 0
@@ -2515,14 +2616,16 @@ components:
           wwn: wwn
           volume-type: volume-type
           cs-copy-dest: cs-copy-dest
-          write-policy-numeric: 5
+          write-policy-numeric: 6
           group-key: group-key
           durable-id: durable-id
           compression-efficiency: compression-efficiency
           cs-copy-dest-numeric: 3
+          current-job-numeric: 1
+          current-job-completion: current-job-completion
           allowed-storage-tiers: allowed-storage-tiers
           health-numeric: 1
-          total-size-numeric: 6
+          total-size-numeric: 1
           volume-usage-type: volume-usage-type
           volume-group: volume-group
           raidtype: raidtype
@@ -2530,8 +2633,9 @@ components:
           volume-parent: volume-parent
           write-policy: write-policy
           interleaved: interleaved
-          size-numeric: 8
-          volume-usage-type-numeric: 6
+          current-job: current-job
+          size-numeric: 9
+          volume-usage-type-numeric: 5
           allocate-reserved-pages-first: allocate-reserved-pages-first
           size: size
           allocated-size: allocated-size
@@ -2541,12 +2645,12 @@ components:
           storage-pool-name: storage-pool-name
           zero-init-page-on-allocation: zero-init-page-on-allocation
           compression: compression
-          preferred-owner-numeric: 4
-          volume-qualifier-numeric: 2
-          progress-numeric: 5
+          preferred-owner-numeric: 5
+          volume-qualifier-numeric: 6
+          progress-numeric: 9
           snapshot: snapshot
           replication-set: replication-set
-          zero-init-page-on-allocation-numeric: 6
+          zero-init-page-on-allocation-numeric: 3
           cs-replication-role: cs-replication-role
           object-name: object-name
           volume-name: volume-name
@@ -2554,9 +2658,9 @@ components:
           virtual-disk-name: virtual-disk-name
           cs-copy-src-numeric: 2
           allowed-storage-tiers-numeric: 1
-          tier-affinity-numeric: 3
+          tier-affinity-numeric: 6
           threshold-percent-of-pool: threshold-percent-of-pool
-          snapshot-retention-priority-numeric: 9
+          snapshot-retention-priority-numeric: 6
           cs-primary: cs-primary
           raidtype-numeric: 9
           read-ahead-size: read-ahead-size
@@ -2574,30 +2678,30 @@ components:
           volume-type-numeric: 6
           container-name: container-name
           cs-primary-numeric: 4
-          read-ahead-size-numeric: 9
-          volume-class-numeric: 1
+          read-ahead-size-numeric: 6
+          volume-class-numeric: 2
           allocated-size-numeric: 6
           url: url
           pi-format: pi-format
           snapshot-retention-priority: snapshot-retention-priority
           storage-type: storage-type
           cs-secondary-numeric: 7
-          large-virtual-extents-numeric: 1
+          large-virtual-extents-numeric: 6
           cs-copy-src: cs-copy-src
-          reserved-size-in-pages: 6
+          reserved-size-in-pages: 8
           volume-class: volume-class
-          storage-type-numeric: 6
+          storage-type-numeric: 3
           progress: progress
           attributes: attributes
           tier-affinity: tier-affinity
           health-reason: health-reason
-          metadata-in-use-numeric: 6
+          metadata-in-use-numeric: 7
           interleaved-numeric: 1
         - blocksize: 5
           volume-qualifier: volume-qualifier
           creation-date-time: creation-date-time
-          pi-format-numeric: 1
-          owner-numeric: 7
+          pi-format-numeric: 4
+          owner-numeric: 1
           cache-optimization-numeric: 2
           storage-pools-url: storage-pools-url
           allocate-reserved-pages-first-numeric: 0
@@ -2607,14 +2711,16 @@ components:
           wwn: wwn
           volume-type: volume-type
           cs-copy-dest: cs-copy-dest
-          write-policy-numeric: 5
+          write-policy-numeric: 6
           group-key: group-key
           durable-id: durable-id
           compression-efficiency: compression-efficiency
           cs-copy-dest-numeric: 3
+          current-job-numeric: 1
+          current-job-completion: current-job-completion
           allowed-storage-tiers: allowed-storage-tiers
           health-numeric: 1
-          total-size-numeric: 6
+          total-size-numeric: 1
           volume-usage-type: volume-usage-type
           volume-group: volume-group
           raidtype: raidtype
@@ -2622,8 +2728,9 @@ components:
           volume-parent: volume-parent
           write-policy: write-policy
           interleaved: interleaved
-          size-numeric: 8
-          volume-usage-type-numeric: 6
+          current-job: current-job
+          size-numeric: 9
+          volume-usage-type-numeric: 5
           allocate-reserved-pages-first: allocate-reserved-pages-first
           size: size
           allocated-size: allocated-size
@@ -2633,12 +2740,12 @@ components:
           storage-pool-name: storage-pool-name
           zero-init-page-on-allocation: zero-init-page-on-allocation
           compression: compression
-          preferred-owner-numeric: 4
-          volume-qualifier-numeric: 2
-          progress-numeric: 5
+          preferred-owner-numeric: 5
+          volume-qualifier-numeric: 6
+          progress-numeric: 9
           snapshot: snapshot
           replication-set: replication-set
-          zero-init-page-on-allocation-numeric: 6
+          zero-init-page-on-allocation-numeric: 3
           cs-replication-role: cs-replication-role
           object-name: object-name
           volume-name: volume-name
@@ -2646,9 +2753,9 @@ components:
           virtual-disk-name: virtual-disk-name
           cs-copy-src-numeric: 2
           allowed-storage-tiers-numeric: 1
-          tier-affinity-numeric: 3
+          tier-affinity-numeric: 6
           threshold-percent-of-pool: threshold-percent-of-pool
-          snapshot-retention-priority-numeric: 9
+          snapshot-retention-priority-numeric: 6
           cs-primary: cs-primary
           raidtype-numeric: 9
           read-ahead-size: read-ahead-size
@@ -2666,30 +2773,30 @@ components:
           volume-type-numeric: 6
           container-name: container-name
           cs-primary-numeric: 4
-          read-ahead-size-numeric: 9
-          volume-class-numeric: 1
+          read-ahead-size-numeric: 6
+          volume-class-numeric: 2
           allocated-size-numeric: 6
           url: url
           pi-format: pi-format
           snapshot-retention-priority: snapshot-retention-priority
           storage-type: storage-type
           cs-secondary-numeric: 7
-          large-virtual-extents-numeric: 1
+          large-virtual-extents-numeric: 6
           cs-copy-src: cs-copy-src
-          reserved-size-in-pages: 6
+          reserved-size-in-pages: 8
           volume-class: volume-class
-          storage-type-numeric: 6
+          storage-type-numeric: 3
           progress: progress
           attributes: attributes
           tier-affinity: tier-affinity
           health-reason: health-reason
-          metadata-in-use-numeric: 6
+          metadata-in-use-numeric: 7
           interleaved-numeric: 1
         - blocksize: 5
           volume-qualifier: volume-qualifier
           creation-date-time: creation-date-time
-          pi-format-numeric: 1
-          owner-numeric: 7
+          pi-format-numeric: 4
+          owner-numeric: 1
           cache-optimization-numeric: 2
           storage-pools-url: storage-pools-url
           allocate-reserved-pages-first-numeric: 0
@@ -2699,14 +2806,16 @@ components:
           wwn: wwn
           volume-type: volume-type
           cs-copy-dest: cs-copy-dest
-          write-policy-numeric: 5
+          write-policy-numeric: 6
           group-key: group-key
           durable-id: durable-id
           compression-efficiency: compression-efficiency
           cs-copy-dest-numeric: 3
+          current-job-numeric: 1
+          current-job-completion: current-job-completion
           allowed-storage-tiers: allowed-storage-tiers
           health-numeric: 1
-          total-size-numeric: 6
+          total-size-numeric: 1
           volume-usage-type: volume-usage-type
           volume-group: volume-group
           raidtype: raidtype
@@ -2714,8 +2823,9 @@ components:
           volume-parent: volume-parent
           write-policy: write-policy
           interleaved: interleaved
-          size-numeric: 8
-          volume-usage-type-numeric: 6
+          current-job: current-job
+          size-numeric: 9
+          volume-usage-type-numeric: 5
           allocate-reserved-pages-first: allocate-reserved-pages-first
           size: size
           allocated-size: allocated-size
@@ -2725,12 +2835,12 @@ components:
           storage-pool-name: storage-pool-name
           zero-init-page-on-allocation: zero-init-page-on-allocation
           compression: compression
-          preferred-owner-numeric: 4
-          volume-qualifier-numeric: 2
-          progress-numeric: 5
+          preferred-owner-numeric: 5
+          volume-qualifier-numeric: 6
+          progress-numeric: 9
           snapshot: snapshot
           replication-set: replication-set
-          zero-init-page-on-allocation-numeric: 6
+          zero-init-page-on-allocation-numeric: 3
           cs-replication-role: cs-replication-role
           object-name: object-name
           volume-name: volume-name
@@ -2738,9 +2848,9 @@ components:
           virtual-disk-name: virtual-disk-name
           cs-copy-src-numeric: 2
           allowed-storage-tiers-numeric: 1
-          tier-affinity-numeric: 3
+          tier-affinity-numeric: 6
           threshold-percent-of-pool: threshold-percent-of-pool
-          snapshot-retention-priority-numeric: 9
+          snapshot-retention-priority-numeric: 6
           cs-primary: cs-primary
           raidtype-numeric: 9
           read-ahead-size: read-ahead-size
@@ -2758,24 +2868,24 @@ components:
           volume-type-numeric: 6
           container-name: container-name
           cs-primary-numeric: 4
-          read-ahead-size-numeric: 9
-          volume-class-numeric: 1
+          read-ahead-size-numeric: 6
+          volume-class-numeric: 2
           allocated-size-numeric: 6
           url: url
           pi-format: pi-format
           snapshot-retention-priority: snapshot-retention-priority
           storage-type: storage-type
           cs-secondary-numeric: 7
-          large-virtual-extents-numeric: 1
+          large-virtual-extents-numeric: 6
           cs-copy-src: cs-copy-src
-          reserved-size-in-pages: 6
+          reserved-size-in-pages: 8
           volume-class: volume-class
-          storage-type-numeric: 6
+          storage-type-numeric: 3
           progress: progress
           attributes: attributes
           tier-affinity: tier-affinity
           health-reason: health-reason
-          metadata-in-use-numeric: 6
+          metadata-in-use-numeric: 7
           interleaved-numeric: 1
         status:
         - time-stamp: time-stamp
@@ -64906,6 +65016,7 @@ components:
       example:
         versions:
         - disk-channel_revision: 1
+          ese-version: ese-version
           pubs-version: pubs-version
           build-date: build-date
           object-name: object-name
@@ -64946,6 +65057,7 @@ components:
           mrc-version: mrc-version
           hw-rev: hw-rev
         - disk-channel_revision: 1
+          ese-version: ese-version
           pubs-version: pubs-version
           build-date: build-date
           object-name: object-name
@@ -64986,6 +65098,7 @@ components:
           mrc-version: mrc-version
           hw-rev: hw-rev
         - disk-channel_revision: 1
+          ese-version: ese-version
           pubs-version: pubs-version
           build-date: build-date
           object-name: object-name
@@ -65026,6 +65139,7 @@ components:
           mrc-version: mrc-version
           hw-rev: hw-rev
         - disk-channel_revision: 1
+          ese-version: ese-version
           pubs-version: pubs-version
           build-date: build-date
           object-name: object-name
@@ -65066,6 +65180,7 @@ components:
           mrc-version: mrc-version
           hw-rev: hw-rev
         - disk-channel_revision: 1
+          ese-version: ese-version
           pubs-version: pubs-version
           build-date: build-date
           object-name: object-name
@@ -65655,290 +65770,22 @@ components:
           minItems: 1
           type: array
       type: object
-    initiator-viewObject:
-      example:
-        initiator-view:
-        - host-view-mappings:
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          host-profile-numeric: 0
-          object-name: object-name
-          meta: meta
-          id: id
-          host-profile: host-profile
-          hba-nickname: hba-nickname
-        - host-view-mappings:
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          host-profile-numeric: 0
-          object-name: object-name
-          meta: meta
-          id: id
-          host-profile: host-profile
-          hba-nickname: hba-nickname
-        - host-view-mappings:
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          host-profile-numeric: 0
-          object-name: object-name
-          meta: meta
-          id: id
-          host-profile: host-profile
-          hba-nickname: hba-nickname
-        - host-view-mappings:
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          host-profile-numeric: 0
-          object-name: object-name
-          meta: meta
-          id: id
-          host-profile: host-profile
-          hba-nickname: hba-nickname
-        - host-view-mappings:
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          - access: access
-            access-numeric: 6
-            lun: lun
-            object-name: object-name
-            meta: meta
-            volume-name: volume-name
-            volume-serial: volume-serial
-            ports: ports
-          host-profile-numeric: 0
-          object-name: object-name
-          meta: meta
-          id: id
-          host-profile: host-profile
-          hba-nickname: hba-nickname
+    hosts-viewObject:
+      properties:
         status:
-        - time-stamp: time-stamp
-          time-stamp-numeric: 1
-          component-id: component-id
-          object-name: object-name
-          response-type-numeric: 0
-          meta: meta
-          response: response
-          response-type: Success
-          return-code: 6
-        - time-stamp: time-stamp
-          time-stamp-numeric: 1
-          component-id: component-id
-          object-name: object-name
-          response-type-numeric: 0
-          meta: meta
-          response: response
-          response-type: Success
-          return-code: 6
-        - time-stamp: time-stamp
-          time-stamp-numeric: 1
-          component-id: component-id
-          object-name: object-name
-          response-type-numeric: 0
-          meta: meta
-          response: response
-          response-type: Success
-          return-code: 6
-        - time-stamp: time-stamp
-          time-stamp-numeric: 1
-          component-id: component-id
-          object-name: object-name
-          response-type-numeric: 0
-          meta: meta
-          response: response
-          response-type: Success
-          return-code: 6
-        - time-stamp: time-stamp
-          time-stamp-numeric: 1
-          component-id: component-id
-          object-name: object-name
-          response-type-numeric: 0
-          meta: meta
-          response: response
-          response-type: Success
-          return-code: 6
+          items:
+            $ref: '#/components/schemas/statusResource_inner'
+          maxItems: 1024
+          minItems: 1
+          type: array
+        hosts-view:
+          items:
+            $ref: '#/components/schemas/hosts_viewResource_inner'
+          maxItems: 1024
+          minItems: 1
+          type: array
+      type: object
+    initiator-viewObject:
       properties:
         status:
           items:
@@ -65949,6 +65796,21 @@ components:
         initiator-view:
           items:
             $ref: '#/components/schemas/initiator_viewResource_inner'
+          maxItems: 1024
+          minItems: 1
+          type: array
+      type: object
+    host-group-viewObject:
+      properties:
+        status:
+          items:
+            $ref: '#/components/schemas/statusResource_inner'
+          maxItems: 1024
+          minItems: 1
+          type: array
+        host-group-view:
+          items:
+            $ref: '#/components/schemas/host_group_viewResource_inner'
           maxItems: 1024
           minItems: 1
           type: array
@@ -66354,6 +66216,19 @@ components:
           minItems: 1
           type: array
       type: object
+    ShowMapsInitiatorNamesGet_200_response:
+      discriminator:
+        mapping:
+          hosts-view: '#/components/schemas/hosts-viewObject'
+          initiator-view: '#/components/schemas/initiator-viewObject'
+          host-group-view: '#/components/schemas/host-group-viewObject'
+          status: '#/components/schemas/statusObject'
+        propertyName: object-name
+      oneOf:
+      - $ref: '#/components/schemas/hosts-viewObject'
+      - $ref: '#/components/schemas/initiator-viewObject'
+      - $ref: '#/components/schemas/host-group-viewObject'
+      - $ref: '#/components/schemas/statusObject'
     statusResource_inner:
       example:
         time-stamp: time-stamp
@@ -66821,8 +66696,8 @@ components:
         blocksize: 5
         volume-qualifier: volume-qualifier
         creation-date-time: creation-date-time
-        pi-format-numeric: 1
-        owner-numeric: 7
+        pi-format-numeric: 4
+        owner-numeric: 1
         cache-optimization-numeric: 2
         storage-pools-url: storage-pools-url
         allocate-reserved-pages-first-numeric: 0
@@ -66832,14 +66707,16 @@ components:
         wwn: wwn
         volume-type: volume-type
         cs-copy-dest: cs-copy-dest
-        write-policy-numeric: 5
+        write-policy-numeric: 6
         group-key: group-key
         durable-id: durable-id
         compression-efficiency: compression-efficiency
         cs-copy-dest-numeric: 3
+        current-job-numeric: 1
+        current-job-completion: current-job-completion
         allowed-storage-tiers: allowed-storage-tiers
         health-numeric: 1
-        total-size-numeric: 6
+        total-size-numeric: 1
         volume-usage-type: volume-usage-type
         volume-group: volume-group
         raidtype: raidtype
@@ -66847,8 +66724,9 @@ components:
         volume-parent: volume-parent
         write-policy: write-policy
         interleaved: interleaved
-        size-numeric: 8
-        volume-usage-type-numeric: 6
+        current-job: current-job
+        size-numeric: 9
+        volume-usage-type-numeric: 5
         allocate-reserved-pages-first: allocate-reserved-pages-first
         size: size
         allocated-size: allocated-size
@@ -66858,12 +66736,12 @@ components:
         storage-pool-name: storage-pool-name
         zero-init-page-on-allocation: zero-init-page-on-allocation
         compression: compression
-        preferred-owner-numeric: 4
-        volume-qualifier-numeric: 2
-        progress-numeric: 5
+        preferred-owner-numeric: 5
+        volume-qualifier-numeric: 6
+        progress-numeric: 9
         snapshot: snapshot
         replication-set: replication-set
-        zero-init-page-on-allocation-numeric: 6
+        zero-init-page-on-allocation-numeric: 3
         cs-replication-role: cs-replication-role
         object-name: object-name
         volume-name: volume-name
@@ -66871,9 +66749,9 @@ components:
         virtual-disk-name: virtual-disk-name
         cs-copy-src-numeric: 2
         allowed-storage-tiers-numeric: 1
-        tier-affinity-numeric: 3
+        tier-affinity-numeric: 6
         threshold-percent-of-pool: threshold-percent-of-pool
-        snapshot-retention-priority-numeric: 9
+        snapshot-retention-priority-numeric: 6
         cs-primary: cs-primary
         raidtype-numeric: 9
         read-ahead-size: read-ahead-size
@@ -66891,24 +66769,24 @@ components:
         volume-type-numeric: 6
         container-name: container-name
         cs-primary-numeric: 4
-        read-ahead-size-numeric: 9
-        volume-class-numeric: 1
+        read-ahead-size-numeric: 6
+        volume-class-numeric: 2
         allocated-size-numeric: 6
         url: url
         pi-format: pi-format
         snapshot-retention-priority: snapshot-retention-priority
         storage-type: storage-type
         cs-secondary-numeric: 7
-        large-virtual-extents-numeric: 1
+        large-virtual-extents-numeric: 6
         cs-copy-src: cs-copy-src
-        reserved-size-in-pages: 6
+        reserved-size-in-pages: 8
         volume-class: volume-class
-        storage-type-numeric: 6
+        storage-type-numeric: 3
         progress: progress
         attributes: attributes
         tier-affinity: tier-affinity
         health-reason: health-reason
-        metadata-in-use-numeric: 6
+        metadata-in-use-numeric: 7
         interleaved-numeric: 1
       properties:
         object-name:
@@ -66993,6 +66871,13 @@ components:
         cs-secondary:
           type: string
         cs-secondary-numeric:
+          format: int64
+          type: integer
+        current-job:
+          type: string
+        current-job-completion:
+          type: string
+        current-job-numeric:
           format: int64
           type: integer
         durable-id:
@@ -82295,6 +82180,7 @@ components:
     versionsResource_inner:
       example:
         disk-channel_revision: 1
+        ese-version: ese-version
         pubs-version: pubs-version
         build-date: build-date
         object-name: object-name
@@ -82365,6 +82251,8 @@ components:
           type: integer
         ec-fw:
           description: The Expander Controller firmware version
+          type: string
+        ese-version:
           type: string
         fw-default-platform-brand:
           description: Default hardware platform brand of the firmware
@@ -82624,15 +82512,6 @@ components:
           type: array
       type: object
     host_view_mappingsResource_inner:
-      example:
-        access: access
-        access-numeric: 6
-        lun: lun
-        object-name: object-name
-        meta: meta
-        volume-name: volume-name
-        volume-serial: volume-serial
-        ports: ports
       properties:
         object-name:
           type: string
@@ -82650,62 +82529,42 @@ components:
           type: string
         ports:
           type: string
+        volume:
+          description: User-defined name for the volume
+          type: string
         volume-name:
           description: User-defined name for the volume
           type: string
         volume-serial:
           description: Unique serial number for the volume
           type: string
+        volume-view:
+          items:
+            $ref: '#/components/schemas/volume_viewResource_inner'
+          maxItems: 1024
+          minItems: 1
+          type: array
+      type: object
+    hosts_viewResource_inner:
+      properties:
+        object-name:
+          type: string
+        meta:
+          type: string
+        durable-id:
+          type: string
+        host-name:
+          type: string
+        serial-number:
+          type: string
+        host-view-mappings:
+          items:
+            $ref: '#/components/schemas/host_view_mappingsResource_inner'
+          maxItems: 1024
+          minItems: 1
+          type: array
       type: object
     initiator_viewResource_inner:
-      example:
-        host-view-mappings:
-        - access: access
-          access-numeric: 6
-          lun: lun
-          object-name: object-name
-          meta: meta
-          volume-name: volume-name
-          volume-serial: volume-serial
-          ports: ports
-        - access: access
-          access-numeric: 6
-          lun: lun
-          object-name: object-name
-          meta: meta
-          volume-name: volume-name
-          volume-serial: volume-serial
-          ports: ports
-        - access: access
-          access-numeric: 6
-          lun: lun
-          object-name: object-name
-          meta: meta
-          volume-name: volume-name
-          volume-serial: volume-serial
-          ports: ports
-        - access: access
-          access-numeric: 6
-          lun: lun
-          object-name: object-name
-          meta: meta
-          volume-name: volume-name
-          volume-serial: volume-serial
-          ports: ports
-        - access: access
-          access-numeric: 6
-          lun: lun
-          object-name: object-name
-          meta: meta
-          volume-name: volume-name
-          volume-serial: volume-serial
-          ports: ports
-        host-profile-numeric: 0
-        object-name: object-name
-        meta: meta
-        id: id
-        host-profile: host-profile
-        hba-nickname: hba-nickname
       properties:
         object-name:
           type: string
@@ -82720,6 +82579,38 @@ components:
           type: integer
         id:
           type: string
+        status:
+          items:
+            $ref: '#/components/schemas/statusResource_inner'
+          maxItems: 1024
+          minItems: 1
+          type: array
+        host-view-mappings:
+          items:
+            $ref: '#/components/schemas/host_view_mappingsResource_inner'
+          maxItems: 1024
+          minItems: 1
+          type: array
+      type: object
+    host_group_viewResource_inner:
+      properties:
+        object-name:
+          type: string
+        meta:
+          type: string
+        durable-id:
+          type: string
+        group-name:
+          description: Name of a Management Group
+          type: string
+        serial-number:
+          type: string
+        status:
+          items:
+            $ref: '#/components/schemas/statusResource_inner'
+          maxItems: 1024
+          minItems: 1
+          type: array
         host-view-mappings:
           items:
             $ref: '#/components/schemas/host_view_mappingsResource_inner'

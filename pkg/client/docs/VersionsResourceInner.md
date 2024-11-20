@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **CtkVersion** | Pointer to **string** | Customization Toolkit (CTK) Version | [optional] 
 **DiskChannelRevision** | Pointer to **int64** |  | [optional] 
 **EcFw** | Pointer to **string** | The Expander Controller firmware version | [optional] 
+**EseVersion** | Pointer to **string** |  | [optional] 
 **FwDefaultPlatformBrand** | Pointer to **string** | Default hardware platform brand of the firmware | [optional] 
 **FwDefaultPlatformBrandNumeric** | Pointer to **int64** | Default hardware platform brand of the firmware( In numeric form ) | [optional] 
 **GemVersion** | Pointer to **string** |  | [optional] 
@@ -388,6 +389,31 @@ SetEcFw sets EcFw field to given value.
 `func (o *VersionsResourceInner) HasEcFw() bool`
 
 HasEcFw returns a boolean if a field has been set.
+
+### GetEseVersion
+
+`func (o *VersionsResourceInner) GetEseVersion() string`
+
+GetEseVersion returns the EseVersion field if non-nil, zero value otherwise.
+
+### GetEseVersionOk
+
+`func (o *VersionsResourceInner) GetEseVersionOk() (*string, bool)`
+
+GetEseVersionOk returns a tuple with the EseVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEseVersion
+
+`func (o *VersionsResourceInner) SetEseVersion(v string)`
+
+SetEseVersion sets EseVersion field to given value.
+
+### HasEseVersion
+
+`func (o *VersionsResourceInner) HasEseVersion() bool`
+
+HasEseVersion returns a boolean if a field has been set.
 
 ### GetFwDefaultPlatformBrand
 

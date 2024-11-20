@@ -20,6 +20,12 @@ type GeneralInformation struct {
 	Description string `yaml:"description"`
 }
 
+// When multiple response types that would normally be defined by "Meta" are used here.
+type MetaSet struct {
+	SetOption string       `yaml:"set-option"`
+	Metas     []NestedMeta `yaml:"metas"` // List of possibly nested meta response objects
+}
+
 type NestedMeta struct {
 	Name   string       `yaml:"name"`   // The name of the meta object, such as 'hosts-groups'
 	Nested []NestedMeta `yaml:"nested"` // When one or more response objects are nested into the main response object, such as 'redundancy' is nested under 'system'
@@ -37,6 +43,7 @@ type OptionInformation struct {
 type CommandInformation struct {
 	Command string              `yaml:"command"` // The command, such as '/show/system', or 'show system'
 	Meta    string              `yaml:"meta"`    // The meta resource, which may be different from the main command name, such as 'drives'
+	MetaSet MetaSet             `yaml:"meta-set"`
 	Include []string            `yaml:"include"` // When a response object includes other response types at the root level, such as 'status'
 	Nested  []NestedMeta        `yaml:"nested"`  // When one or more response objects are nested into the main response object, such as 'redundancy' is nested under 'system'
 	Options []OptionInformation `yaml:"options"` // One or more command line options
@@ -71,7 +78,7 @@ func ReadYamlConfigurationFile(ctx context.Context, filename string) (*Configura
 
 	err = yaml.Unmarshal(yamlFile, &yamlc)
 	if err != nil {
-		return nil, fmt.Errorf("unable to Unmarshal yaml configuration file (%s)", filename)
+		return nil, fmt.Errorf("unable to Unmarshal yaml configuration file (%s), %s", filename, err)
 	}
 
 	return &yamlc, nil

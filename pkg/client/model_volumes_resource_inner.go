@@ -59,6 +59,9 @@ type VolumesResourceInner struct {
 	CsReplicationRole       *string `json:"cs-replication-role,omitempty"`
 	CsSecondary             *string `json:"cs-secondary,omitempty"`
 	CsSecondaryNumeric      *int64  `json:"cs-secondary-numeric,omitempty"`
+	CurrentJob              *string `json:"current-job,omitempty"`
+	CurrentJobCompletion    *string `json:"current-job-completion,omitempty"`
+	CurrentJobNumeric       *int64  `json:"current-job-numeric,omitempty"`
 	DurableId               *string `json:"durable-id,omitempty"`
 	// Durable ID of a Management Group
 	GroupKey             *string `json:"group-key,omitempty"`
@@ -1143,6 +1146,102 @@ func (o *VolumesResourceInner) HasCsSecondaryNumeric() bool {
 // SetCsSecondaryNumeric gets a reference to the given int64 and assigns it to the CsSecondaryNumeric field.
 func (o *VolumesResourceInner) SetCsSecondaryNumeric(v int64) {
 	o.CsSecondaryNumeric = &v
+}
+
+// GetCurrentJob returns the CurrentJob field value if set, zero value otherwise.
+func (o *VolumesResourceInner) GetCurrentJob() string {
+	if o == nil || IsNil(o.CurrentJob) {
+		var ret string
+		return ret
+	}
+	return *o.CurrentJob
+}
+
+// GetCurrentJobOk returns a tuple with the CurrentJob field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VolumesResourceInner) GetCurrentJobOk() (*string, bool) {
+	if o == nil || IsNil(o.CurrentJob) {
+		return nil, false
+	}
+	return o.CurrentJob, true
+}
+
+// HasCurrentJob returns a boolean if a field has been set.
+func (o *VolumesResourceInner) HasCurrentJob() bool {
+	if o != nil && !IsNil(o.CurrentJob) {
+		return true
+	}
+
+	return false
+}
+
+// SetCurrentJob gets a reference to the given string and assigns it to the CurrentJob field.
+func (o *VolumesResourceInner) SetCurrentJob(v string) {
+	o.CurrentJob = &v
+}
+
+// GetCurrentJobCompletion returns the CurrentJobCompletion field value if set, zero value otherwise.
+func (o *VolumesResourceInner) GetCurrentJobCompletion() string {
+	if o == nil || IsNil(o.CurrentJobCompletion) {
+		var ret string
+		return ret
+	}
+	return *o.CurrentJobCompletion
+}
+
+// GetCurrentJobCompletionOk returns a tuple with the CurrentJobCompletion field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VolumesResourceInner) GetCurrentJobCompletionOk() (*string, bool) {
+	if o == nil || IsNil(o.CurrentJobCompletion) {
+		return nil, false
+	}
+	return o.CurrentJobCompletion, true
+}
+
+// HasCurrentJobCompletion returns a boolean if a field has been set.
+func (o *VolumesResourceInner) HasCurrentJobCompletion() bool {
+	if o != nil && !IsNil(o.CurrentJobCompletion) {
+		return true
+	}
+
+	return false
+}
+
+// SetCurrentJobCompletion gets a reference to the given string and assigns it to the CurrentJobCompletion field.
+func (o *VolumesResourceInner) SetCurrentJobCompletion(v string) {
+	o.CurrentJobCompletion = &v
+}
+
+// GetCurrentJobNumeric returns the CurrentJobNumeric field value if set, zero value otherwise.
+func (o *VolumesResourceInner) GetCurrentJobNumeric() int64 {
+	if o == nil || IsNil(o.CurrentJobNumeric) {
+		var ret int64
+		return ret
+	}
+	return *o.CurrentJobNumeric
+}
+
+// GetCurrentJobNumericOk returns a tuple with the CurrentJobNumeric field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VolumesResourceInner) GetCurrentJobNumericOk() (*int64, bool) {
+	if o == nil || IsNil(o.CurrentJobNumeric) {
+		return nil, false
+	}
+	return o.CurrentJobNumeric, true
+}
+
+// HasCurrentJobNumeric returns a boolean if a field has been set.
+func (o *VolumesResourceInner) HasCurrentJobNumeric() bool {
+	if o != nil && !IsNil(o.CurrentJobNumeric) {
+		return true
+	}
+
+	return false
+}
+
+// SetCurrentJobNumeric gets a reference to the given int64 and assigns it to the CurrentJobNumeric field.
+func (o *VolumesResourceInner) SetCurrentJobNumeric(v int64) {
+	o.CurrentJobNumeric = &v
 }
 
 // GetDurableId returns the DurableId field value if set, zero value otherwise.
@@ -3228,6 +3327,15 @@ func (o VolumesResourceInner) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.CsSecondaryNumeric) {
 		toSerialize["cs-secondary-numeric"] = o.CsSecondaryNumeric
+	}
+	if !IsNil(o.CurrentJob) {
+		toSerialize["current-job"] = o.CurrentJob
+	}
+	if !IsNil(o.CurrentJobCompletion) {
+		toSerialize["current-job-completion"] = o.CurrentJobCompletion
+	}
+	if !IsNil(o.CurrentJobNumeric) {
+		toSerialize["current-job-numeric"] = o.CurrentJobNumeric
 	}
 	if !IsNil(o.DurableId) {
 		toSerialize["durable-id"] = o.DurableId

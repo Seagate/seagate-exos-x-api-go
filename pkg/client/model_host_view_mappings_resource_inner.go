@@ -29,9 +29,12 @@ type HostViewMappingsResourceInner struct {
 	Lun   *string `json:"lun,omitempty"`
 	Ports *string `json:"ports,omitempty"`
 	// User-defined name for the volume
+	Volume *string `json:"volume,omitempty"`
+	// User-defined name for the volume
 	VolumeName *string `json:"volume-name,omitempty"`
 	// Unique serial number for the volume
-	VolumeSerial *string `json:"volume-serial,omitempty"`
+	VolumeSerial *string                   `json:"volume-serial,omitempty"`
+	VolumeView   []VolumeViewResourceInner `json:"volume-view,omitempty"`
 }
 
 // NewHostViewMappingsResourceInner instantiates a new HostViewMappingsResourceInner object
@@ -243,6 +246,38 @@ func (o *HostViewMappingsResourceInner) SetPorts(v string) {
 	o.Ports = &v
 }
 
+// GetVolume returns the Volume field value if set, zero value otherwise.
+func (o *HostViewMappingsResourceInner) GetVolume() string {
+	if o == nil || IsNil(o.Volume) {
+		var ret string
+		return ret
+	}
+	return *o.Volume
+}
+
+// GetVolumeOk returns a tuple with the Volume field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *HostViewMappingsResourceInner) GetVolumeOk() (*string, bool) {
+	if o == nil || IsNil(o.Volume) {
+		return nil, false
+	}
+	return o.Volume, true
+}
+
+// HasVolume returns a boolean if a field has been set.
+func (o *HostViewMappingsResourceInner) HasVolume() bool {
+	if o != nil && !IsNil(o.Volume) {
+		return true
+	}
+
+	return false
+}
+
+// SetVolume gets a reference to the given string and assigns it to the Volume field.
+func (o *HostViewMappingsResourceInner) SetVolume(v string) {
+	o.Volume = &v
+}
+
 // GetVolumeName returns the VolumeName field value if set, zero value otherwise.
 func (o *HostViewMappingsResourceInner) GetVolumeName() string {
 	if o == nil || IsNil(o.VolumeName) {
@@ -307,6 +342,38 @@ func (o *HostViewMappingsResourceInner) SetVolumeSerial(v string) {
 	o.VolumeSerial = &v
 }
 
+// GetVolumeView returns the VolumeView field value if set, zero value otherwise.
+func (o *HostViewMappingsResourceInner) GetVolumeView() []VolumeViewResourceInner {
+	if o == nil || IsNil(o.VolumeView) {
+		var ret []VolumeViewResourceInner
+		return ret
+	}
+	return o.VolumeView
+}
+
+// GetVolumeViewOk returns a tuple with the VolumeView field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *HostViewMappingsResourceInner) GetVolumeViewOk() ([]VolumeViewResourceInner, bool) {
+	if o == nil || IsNil(o.VolumeView) {
+		return nil, false
+	}
+	return o.VolumeView, true
+}
+
+// HasVolumeView returns a boolean if a field has been set.
+func (o *HostViewMappingsResourceInner) HasVolumeView() bool {
+	if o != nil && !IsNil(o.VolumeView) {
+		return true
+	}
+
+	return false
+}
+
+// SetVolumeView gets a reference to the given []VolumeViewResourceInner and assigns it to the VolumeView field.
+func (o *HostViewMappingsResourceInner) SetVolumeView(v []VolumeViewResourceInner) {
+	o.VolumeView = v
+}
+
 func (o HostViewMappingsResourceInner) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -335,11 +402,17 @@ func (o HostViewMappingsResourceInner) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Ports) {
 		toSerialize["ports"] = o.Ports
 	}
+	if !IsNil(o.Volume) {
+		toSerialize["volume"] = o.Volume
+	}
 	if !IsNil(o.VolumeName) {
 		toSerialize["volume-name"] = o.VolumeName
 	}
 	if !IsNil(o.VolumeSerial) {
 		toSerialize["volume-serial"] = o.VolumeSerial
+	}
+	if !IsNil(o.VolumeView) {
+		toSerialize["volume-view"] = o.VolumeView
 	}
 	return toSerialize, nil
 }

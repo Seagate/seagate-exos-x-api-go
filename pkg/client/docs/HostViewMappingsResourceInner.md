@@ -10,8 +10,10 @@ Name | Type | Description | Notes
 **AccessNumeric** | Pointer to **int64** | Access rights for this host( In numeric form ) | [optional] 
 **Lun** | Pointer to **string** | Logical Unit Number | [optional] 
 **Ports** | Pointer to **string** |  | [optional] 
+**Volume** | Pointer to **string** | User-defined name for the volume | [optional] 
 **VolumeName** | Pointer to **string** | User-defined name for the volume | [optional] 
 **VolumeSerial** | Pointer to **string** | Unique serial number for the volume | [optional] 
+**VolumeView** | Pointer to [**[]VolumeViewResourceInner**](VolumeViewResourceInner.md) |  | [optional] 
 
 ## Methods
 
@@ -182,6 +184,31 @@ SetPorts sets Ports field to given value.
 
 HasPorts returns a boolean if a field has been set.
 
+### GetVolume
+
+`func (o *HostViewMappingsResourceInner) GetVolume() string`
+
+GetVolume returns the Volume field if non-nil, zero value otherwise.
+
+### GetVolumeOk
+
+`func (o *HostViewMappingsResourceInner) GetVolumeOk() (*string, bool)`
+
+GetVolumeOk returns a tuple with the Volume field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVolume
+
+`func (o *HostViewMappingsResourceInner) SetVolume(v string)`
+
+SetVolume sets Volume field to given value.
+
+### HasVolume
+
+`func (o *HostViewMappingsResourceInner) HasVolume() bool`
+
+HasVolume returns a boolean if a field has been set.
+
 ### GetVolumeName
 
 `func (o *HostViewMappingsResourceInner) GetVolumeName() string`
@@ -231,6 +258,31 @@ SetVolumeSerial sets VolumeSerial field to given value.
 `func (o *HostViewMappingsResourceInner) HasVolumeSerial() bool`
 
 HasVolumeSerial returns a boolean if a field has been set.
+
+### GetVolumeView
+
+`func (o *HostViewMappingsResourceInner) GetVolumeView() []VolumeViewResourceInner`
+
+GetVolumeView returns the VolumeView field if non-nil, zero value otherwise.
+
+### GetVolumeViewOk
+
+`func (o *HostViewMappingsResourceInner) GetVolumeViewOk() (*[]VolumeViewResourceInner, bool)`
+
+GetVolumeViewOk returns a tuple with the VolumeView field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVolumeView
+
+`func (o *HostViewMappingsResourceInner) SetVolumeView(v []VolumeViewResourceInner)`
+
+SetVolumeView sets VolumeView field to given value.
+
+### HasVolumeView
+
+`func (o *HostViewMappingsResourceInner) HasVolumeView() bool`
+
+HasVolumeView returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

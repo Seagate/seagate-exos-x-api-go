@@ -33,7 +33,8 @@ type VersionsResourceInner struct {
 	CtkVersion          *string `json:"ctk-version,omitempty"`
 	DiskChannelRevision *int64  `json:"disk-channel_revision,omitempty"`
 	// The Expander Controller firmware version
-	EcFw *string `json:"ec-fw,omitempty"`
+	EcFw       *string `json:"ec-fw,omitempty"`
+	EseVersion *string `json:"ese-version,omitempty"`
 	// Default hardware platform brand of the firmware
 	FwDefaultPlatformBrand *string `json:"fw-default-platform-brand,omitempty"`
 	// Default hardware platform brand of the firmware( In numeric form )
@@ -510,6 +511,38 @@ func (o *VersionsResourceInner) HasEcFw() bool {
 // SetEcFw gets a reference to the given string and assigns it to the EcFw field.
 func (o *VersionsResourceInner) SetEcFw(v string) {
 	o.EcFw = &v
+}
+
+// GetEseVersion returns the EseVersion field value if set, zero value otherwise.
+func (o *VersionsResourceInner) GetEseVersion() string {
+	if o == nil || IsNil(o.EseVersion) {
+		var ret string
+		return ret
+	}
+	return *o.EseVersion
+}
+
+// GetEseVersionOk returns a tuple with the EseVersion field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VersionsResourceInner) GetEseVersionOk() (*string, bool) {
+	if o == nil || IsNil(o.EseVersion) {
+		return nil, false
+	}
+	return o.EseVersion, true
+}
+
+// HasEseVersion returns a boolean if a field has been set.
+func (o *VersionsResourceInner) HasEseVersion() bool {
+	if o != nil && !IsNil(o.EseVersion) {
+		return true
+	}
+
+	return false
+}
+
+// SetEseVersion gets a reference to the given string and assigns it to the EseVersion field.
+func (o *VersionsResourceInner) SetEseVersion(v string) {
+	o.EseVersion = &v
 }
 
 // GetFwDefaultPlatformBrand returns the FwDefaultPlatformBrand field value if set, zero value otherwise.
@@ -1424,6 +1457,9 @@ func (o VersionsResourceInner) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.EcFw) {
 		toSerialize["ec-fw"] = o.EcFw
+	}
+	if !IsNil(o.EseVersion) {
+		toSerialize["ese-version"] = o.EseVersion
 	}
 	if !IsNil(o.FwDefaultPlatformBrand) {
 		toSerialize["fw-default-platform-brand"] = o.FwDefaultPlatformBrand
