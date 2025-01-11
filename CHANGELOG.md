@@ -1,3 +1,13 @@
+# [2.4.0](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.3.0...v2.4.0) (2025-01-11)
+
+### Features
+
+- Make PublishVolume compatible with Hosts and Host Groups ([8a20de9](https://github.com/Seagate/seagate-exos-x-api-go/commit/8a20de9b70c571384f1c4374f5c89cf88c9466dc))
+
+### Other
+
+- Add .whitesource configuration file ([e2f9c90](https://github.com/Seagate/seagate-exos-x-api-go/commit/e2f9c90e76c5803b4f23065d2e0490d4e8855c82))
+
 # [2.3.0](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.2.0...v2.3.0) (2024-06-20)
 
 ### Features
