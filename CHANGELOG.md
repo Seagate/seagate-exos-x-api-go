@@ -1,3 +1,9 @@
+## [2.4.1](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.4.0...v2.4.1) (2025-01-12)
+
+### Bug Fixes
+
+- use create volume call with no tier affinity for compatibility with linear storage ([72511b2](https://github.com/Seagate/seagate-exos-x-api-go/commit/72511b2c3094098ddeba97fa977313e5784944fb))
+
 # [2.4.0](https://github.com/Seagate/seagate-exos-x-api-go/compare/v2.3.0...v2.4.0) (2025-01-11)
 
 ### Features
