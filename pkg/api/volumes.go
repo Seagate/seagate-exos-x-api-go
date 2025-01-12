@@ -68,7 +68,7 @@ func UpdateVolumeObject(target *common.VolumeObject, source *client.VolumesResou
 func (client *Client) CreateVolume(name, size, pool string) (*common.VolumeObject, *common.ResponseStatus, error) {
 
 	logger := klog.FromContext(client.Ctx)
-	response, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.CreateVolumePoolSizeTierAffinityNameGet(client.Ctx, pool, size, ApiTierAffinity, name).Execute, client)
+	response, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.CreateVolumePoolSizeNameGet(client.Ctx, pool, size, name).Execute, client)
 	logger.V(2).Info("create volume", "name", name, "http", httpRes.Status)
 
 	volume := common.VolumeObject{}
