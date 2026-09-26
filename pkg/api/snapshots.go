@@ -17,7 +17,7 @@ func (client *Client) CreateSnapshot(volumeName string, snapshotName string) (*c
 
 	createSnapCall := client.apiClient.DefaultApi.CreateSnapshotsVolumesNamesGet(client.Ctx, volumeName, snapshotName).Execute
 	_, commonStatus, httpRes, err := ExecuteWithFailover(createSnapCall, client)
-	logger.V(2).Info("create snapshot", "volume", volumeName, "snapshot", snapshotName, "http", httpRes.Status)
+	logger.V(2).Info("create snapshot", "volume", volumeName, "snapshot", snapshotName, "http", httpStatus(httpRes))
 
 	return commonStatus, err
 }
@@ -35,13 +35,13 @@ func (client *Client) ShowSnapshots(snapshotId string, sourceVolumeId string) ([
 	// Call the correct OpenAPI Client function
 	if sourceVolumeId != "" {
 		response, status, httpRes, err = ExecuteWithFailover(client.apiClient.DefaultApi.ShowSnapshotsVolumeGet(client.Ctx, sourceVolumeId).Execute, client)
-		logger.V(2).Info("show snapshots volume", "volume", sourceVolumeId, "snapshot", snapshotId, "http", httpRes.Status)
+		logger.V(2).Info("show snapshots volume", "volume", sourceVolumeId, "snapshot", snapshotId, "http", httpStatus(httpRes))
 	} else if snapshotId != "" {
 		response, status, httpRes, err = ExecuteWithFailover(client.apiClient.DefaultApi.ShowSnapshotsPatternGet(client.Ctx, snapshotId).Execute, client)
-		logger.V(2).Info("show snapshots pattern", "volume", sourceVolumeId, "snapshot", snapshotId, "http", httpRes.Status)
+		logger.V(2).Info("show snapshots pattern", "volume", sourceVolumeId, "snapshot", snapshotId, "http", httpStatus(httpRes))
 	} else {
 		response, status, httpRes, err = ExecuteWithFailover(client.apiClient.DefaultApi.ShowSnapshotsGet(client.Ctx).Execute, client)
-		logger.V(2).Info("show snapshots", "volume", sourceVolumeId, "snapshot", snapshotId, "http", httpRes.Status)
+		logger.V(2).Info("show snapshots", "volume", sourceVolumeId, "snapshot", snapshotId, "http", httpStatus(httpRes))
 	}
 
 	returnSnapshots := []common.SnapshotObject{}
@@ -72,6 +72,6 @@ func (client *Client) ShowSnapshots(snapshotId string, sourceVolumeId string) ([
 func (client *Client) DeleteSnapshot(name string) (*common.ResponseStatus, error) {
 	logger := klog.FromContext(client.Ctx)
 	_, responseStatus, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.DeleteSnapshotNamesGet(client.Ctx, name).Execute, client)
-	logger.V(2).Info("delete snapshot", "name", name, "http", httpRes.Status)
+	logger.V(2).Info("delete snapshot", "name", name, "http", httpStatus(httpRes))
 	return responseStatus, err
 }

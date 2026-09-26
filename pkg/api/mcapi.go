@@ -172,6 +172,15 @@ func GetStatus(response interface{}) (returnStatus []client.StatusResourceInner,
 
 // ExecuteWithFailover: Retry wrapper for the Execute functions of the openapi generated client library
 // If the initial request fails, attempts to login on the secondary controller
+// httpStatus returns the HTTP status line, tolerating the nil *http.Response
+// that ExecuteWithFailover yields when the request fails at the transport layer.
+func httpStatus(r *http.Response) string {
+	if r == nil {
+		return "<no response>"
+	}
+	return r.Status
+}
+
 func ExecuteWithFailover[R interface{}](executeFunc func() (R, *http.Response, error), myclient *Client) (R, *common.ResponseStatus, *http.Response, error) {
 	logger := klog.FromContext(myclient.Ctx)
 	logger.V(4).Info("Execute with failover...")

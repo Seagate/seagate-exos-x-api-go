@@ -8,6 +8,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/client"
 	"github.com/Seagate/seagate-exos-x-api-go/v2/pkg/common"
@@ -25,6 +26,26 @@ const (
 	ApiWarning               = 3
 	UngroupedHostsGroupID    = "HGU"
 	UngroupedInitiatorHostID = "HU"
+
+	// copyVolumeVisibilityTimeout bounds how long CopyVolume waits for the
+	// destination volume to appear in ShowVolumes with a populated WWN after
+	// the array has accepted /copy/volume. ME5-class firmware returns 200 OK
+	// from /copy/volume as soon as the copy is scheduled, but the destination
+	// is not yet addressable via /show/volumes/<name> — callers that use the
+	// returned WWN immediately (CSI CreateVolume → GetVolumeWwn) otherwise
+	// emit a volume ID with an empty WWN tail and NodeStageVolume later fails
+	// with DeadlineExceeded.
+	copyVolumeVisibilityTimeout = 30 * time.Second
+	copyVolumeVisibilityPoll    = 500 * time.Millisecond
+
+	// mapVolumeRetryTimeout bounds how long mapVolumeProcess retries when the
+	// array returns -3002 ("command is not supported") from /map/volume.
+	// Empirically, this code is emitted transiently for ~2–20s after a fresh
+	// volume create while controller-to-controller state is propagating; the
+	// identical call with the same headers and session succeeds once the
+	// window closes.
+	mapVolumeRetryTimeout = 30 * time.Second
+	mapVolumeRetryPoll    = 500 * time.Millisecond
 )
 
 // Volume : a mapped volume
@@ -69,7 +90,7 @@ func (client *Client) CreateVolume(name, size, pool string) (*common.VolumeObjec
 
 	logger := klog.FromContext(client.Ctx)
 	response, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.CreateVolumePoolSizeNameGet(client.Ctx, pool, size, name).Execute, client)
-	logger.V(2).Info("create volume", "name", name, "http", httpRes.Status)
+	logger.V(2).Info("create volume", "name", name, "http", httpStatus(httpRes))
 
 	volume := common.VolumeObject{}
 	if response != nil && len(response.GetVolumes()) > 0 {
@@ -127,7 +148,7 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 
 	response, responseStatus, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.ShowVolumesNamesGet(client.Ctx, volume).Execute, client)
 
-	if httpRes.StatusCode == http.StatusOK && response != nil && err == nil {
+	if err == nil && httpRes != nil && httpRes.StatusCode == http.StatusOK && response != nil {
 		if logger.V(4).Enabled() {
 			// Extract Status resource information
 			logger.V(4).Info("++ ShowVolumesNamesGet.Status[0]",
@@ -146,7 +167,7 @@ func (client *Client) ShowVolumes(volume string) ([]common.VolumeObject, *common
 			}
 		}
 	} else {
-		logger.V(4).Info("-- ShowVolumesNamesGet", "status", httpRes.Status, "err", err, "body", httpRes.Body)
+		logger.V(4).Info("-- ShowVolumesNamesGet", "status", httpStatus(httpRes), "err", err)
 		return nil, &common.ResponseStatus{}, err
 	}
 
@@ -359,7 +380,7 @@ func (client *Client) MapVolume(name, initiator, access string, lun int) (*commo
 
 	logger := klog.FromContext(client.Ctx)
 	_, respStatus, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.MapVolumeAccessLunInitiatorNamesGet(client.Ctx, access, strconv.Itoa(lun), initiator, name).Execute, client)
-	logger.V(2).Info("map volume", "name", name, "lun", lun, "initiator", initiator, "http", httpRes.Status)
+	logger.V(2).Info("map volume", "name", name, "lun", lun, "initiator", initiator, "http", httpStatus(httpRes))
 	return respStatus, err
 }
 
@@ -369,32 +390,66 @@ func (client *Client) CreateNickname(name, iqn string) (*common.ResponseStatus, 
 
 	logger := klog.FromContext(client.Ctx)
 	_, response, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.SetInitiatorIdNicknameGet(client.Ctx, iqn, name).Execute, client)
-	logger.V(2).Info("create nickname", "name", name, "nickname", iqn, "http", httpRes.Status)
+	logger.V(2).Info("create nickname", "name", name, "nickname", iqn, "http", httpStatus(httpRes))
 	return response, err
 }
 
-// mapVolumeProcess: Map a volume to an initiator and create a nickname when required by the storage array
+// mapVolumeProcess: Map a volume to an initiator and create a nickname when required by the storage array.
+// Retries transparently when the array returns -3002 "command is not supported"
+// (see CommandNotSupportedErrorCode) — that code is emitted for a short window
+// after a fresh CreateVolume/CopyVolume while controller-to-controller state
+// propagates, and the identical call succeeds once it closes. Any other
+// non-success ReturnCode (apart from the three already-handled well-known
+// codes) is returned as codes.Internal rather than silently swallowed.
 func (client *Client) mapVolumeProcess(volumeName, initiatorName string, lun int) error {
 
 	logger := klog.FromContext(client.Ctx)
 	logger.V(0).Info("trying to map volume", "volume", volumeName, "initiator", initiatorName, "lun", lun)
-	metadata, err := client.MapVolume(volumeName, initiatorName, "rw", lun)
-	if err != nil && metadata == nil {
-		return err
-	}
 
-	logger.Info("status", "ReturnCode", metadata.ReturnCode)
-	if metadata.ReturnCode == common.VolumeNotFoundErrorCode {
-		return status.Errorf(codes.NotFound, "volume %s not found", volumeName)
-	} else if metadata.ReturnCode == common.LUNOverlapErrorCode {
-		return status.Errorf(codes.AlreadyExists, "lun overlap for lun: %d", lun)
-	} else if metadata.ReturnCode == common.InitiatorNicknameOrIdentifierNotFound {
-		return status.Errorf(codes.AlreadyExists, "specified initiator for mapping not found: %s", initiatorName)
-	} else if err != nil {
-		return status.Error(codes.Internal, err.Error())
-	}
+	deadline := time.Now().Add(mapVolumeRetryTimeout)
+	attempt := 0
+	for {
+		attempt++
+		metadata, err := client.MapVolume(volumeName, initiatorName, "rw", lun)
+		if err != nil && metadata == nil {
+			return err
+		}
 
-	return nil
+		logger.Info("status", "ReturnCode", metadata.ReturnCode, "ResponseType", metadata.ResponseType, "attempt", attempt)
+
+		switch metadata.ReturnCode {
+		case ApiSuccess:
+			if err != nil {
+				return status.Error(codes.Internal, err.Error())
+			}
+			return nil
+		case common.VolumeNotFoundErrorCode:
+			return status.Errorf(codes.NotFound, "volume %s not found", volumeName)
+		case common.LUNOverlapErrorCode:
+			return status.Errorf(codes.AlreadyExists, "lun overlap for lun: %d", lun)
+		case common.InitiatorNicknameOrIdentifierNotFound:
+			return status.Errorf(codes.AlreadyExists, "specified initiator for mapping not found: %s", initiatorName)
+		case common.CommandNotSupportedErrorCode:
+			if time.Now().After(deadline) {
+				return status.Errorf(codes.DeadlineExceeded,
+					"map volume %s to %s lun %d still returning -3002 after %s (attempt %d); array likely rejected the mapping",
+					volumeName, initiatorName, lun, mapVolumeRetryTimeout, attempt)
+			}
+			logger.V(1).Info("map volume returned -3002, retrying", "volume", volumeName, "initiator", initiatorName, "lun", lun, "attempt", attempt)
+			time.Sleep(mapVolumeRetryPoll)
+			continue
+		default:
+			if metadata.ResponseTypeNumeric == ApiError {
+				return status.Errorf(codes.Internal,
+					"map volume %s to %s lun %d failed: ReturnCode=%d Response=%q",
+					volumeName, initiatorName, lun, metadata.ReturnCode, metadata.Response)
+			}
+			if err != nil {
+				return status.Error(codes.Internal, err.Error())
+			}
+			return nil
+		}
+	}
 }
 
 // UnmapVolume : unmap a volume from an initiator
@@ -404,13 +459,30 @@ func (client *Client) UnmapVolume(name, initiator string) (*common.ResponseStatu
 
 	if initiator == "" {
 		_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.UnmapVolumeNamesGet(client.Ctx, name).Execute, client)
-		logger.V(2).Info("unmap volume", "name", name, "initiator", initiator, "http", httpRes.Status)
+		logger.V(2).Info("unmap volume", "name", name, "initiator", initiator, "http", httpStatus(httpRes))
 		return status, err
 	}
 
-	_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.UnmapVolumeInitiatorNamesGet(client.Ctx, initiator, name).Execute, client)
-	logger.V(2).Info("unmap volume", "name", name, "initiator", initiator, "http", httpRes.Status)
+	target := client.resolveMapTarget(initiator)
+	_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.UnmapVolumeInitiatorNamesGet(client.Ctx, target, name).Execute, client)
+	logger.V(2).Info("unmap volume", "name", name, "initiator", initiator, "target", target, "http", httpStatus(httpRes))
 	return status, err
+}
+
+// resolveMapTarget returns the ME5024 identifier to use in the initiator slot
+// of /map/volume and /unmap/volume calls. When the initiator is a member of a
+// host record, the ME5024 silently no-ops map calls that reference the raw
+// IQN (the initiator is considered "owned" by the host). Passing the host's
+// name resolves to that host record and produces a working map entry with
+// identical LUN and access semantics. If the initiator is ungrouped, or the
+// lookup fails, the original initiator identifier is returned so the caller's
+// behavior matches pre-patch releases.
+func (client *Client) resolveMapTarget(initiator string) string {
+	_, host, err := client.GetInitiatorHostGroup(initiator)
+	if err != nil || host == "" {
+		return initiator
+	}
+	return host
 }
 
 // ExpandVolume : extend a volume if there is enough space in the disk group
@@ -418,17 +490,58 @@ func (client *Client) ExpandVolume(name, size string) (*common.ResponseStatus, e
 
 	logger := klog.FromContext(client.Ctx)
 	_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.ExpandVolumeSizeNameGet(client.Ctx, size, name).Execute, client)
-	logger.V(2).Info("expand volume", "name", name, "size", size, "http", httpRes.Status)
+	logger.V(2).Info("expand volume", "name", name, "size", size, "http", httpStatus(httpRes))
 	return status, err
 }
 
-// CopyVolume : create an new volume by copying another one or a snapshot
+// CopyVolume : create an new volume by copying another one or a snapshot.
+// On ApiSuccess, blocks until the destination volume is visible in
+// ShowVolumes with a populated WWN (see copyVolumeVisibilityTimeout). The
+// array accepts /copy/volume before the destination is addressable by name;
+// callers that read back the volume immediately (e.g. GetVolumeWwn) would
+// otherwise observe -10058 "volume does not exist" and silently propagate an
+// empty WWN.
 func (client *Client) CopyVolume(sourceName string, destinationName string, pool string) (*common.ResponseStatus, error) {
 
 	logger := klog.FromContext(client.Ctx)
-	_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.CopyVolumeDestinationPoolNameSourceGet(client.Ctx, pool, destinationName, sourceName).Execute, client)
-	logger.V(2).Info("copy volume", "destination", destinationName, "source", sourceName, "pool", pool, "http", httpRes.Status)
-	return status, err
+	_, respStatus, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.CopyVolumeDestinationPoolNameSourceGet(client.Ctx, pool, destinationName, sourceName).Execute, client)
+	logger.V(2).Info("copy volume", "destination", destinationName, "source", sourceName, "pool", pool, "http", httpStatus(httpRes))
+	if err != nil || respStatus == nil || respStatus.ResponseTypeNumeric != ApiSuccess {
+		return respStatus, err
+	}
+
+	if waitErr := client.waitForVolumeVisible(destinationName); waitErr != nil {
+		return respStatus, waitErr
+	}
+	return respStatus, nil
+}
+
+// waitForVolumeVisible polls ShowVolumes until the named volume is returned
+// with a non-empty WWN or copyVolumeVisibilityTimeout elapses. Used after
+// CopyVolume to close the post-create propagation window in which the array
+// reports "volume does not exist" for a volume it has already accepted.
+func (client *Client) waitForVolumeVisible(name string) error {
+	logger := klog.FromContext(client.Ctx)
+	deadline := time.Now().Add(copyVolumeVisibilityTimeout)
+	attempt := 0
+	for {
+		attempt++
+		vols, _, err := client.ShowVolumes(name)
+		if err == nil {
+			for _, v := range vols {
+				if v.VolumeName == name && v.Wwn != "" {
+					logger.V(2).Info("volume visible after copy", "volume", name, "attempt", attempt, "wwn", v.Wwn)
+					return nil
+				}
+			}
+		} else {
+			logger.V(4).Info("volume not yet visible after copy", "volume", name, "attempt", attempt, "err", err)
+		}
+		if time.Now().After(deadline) {
+			return status.Errorf(codes.DeadlineExceeded, "volume %s not visible after copy within %s (last err: %v)", name, copyVolumeVisibilityTimeout, err)
+		}
+		time.Sleep(copyVolumeVisibilityPoll)
+	}
 }
 
 // DeleteVolume : deletes a volume
@@ -436,11 +549,18 @@ func (client *Client) DeleteVolume(name string) (*common.ResponseStatus, error) 
 
 	logger := klog.FromContext(client.Ctx)
 	_, status, httpRes, err := ExecuteWithFailover(client.apiClient.DefaultApi.DeleteVolumesNamesGet(client.Ctx, name).Execute, client)
-	logger.V(2).Info("delete volume", "name", name, "http", httpRes.Status)
+	logger.V(2).Info("delete volume", "name", name, "http", httpStatus(httpRes))
 	return status, err
 }
 
-// PublishVolume: Attach a volume to an initiator, return mapped lun or error
+// PublishVolume: Attach a volume to an initiator, return mapped lun or error.
+//
+// When an initiator belongs to a host record on the array, the map call is
+// issued against the host's name rather than the raw IQN — the ME5024
+// silently no-ops initiator-level map requests for initiators that are
+// already owned by a host (see resolveMapTarget). Multiple initiators on the
+// same host therefore produce a single host-level map entry instead of a
+// duplicate per-initiator attempt.
 func (client *Client) PublishVolume(volumeId string, initiators []string) (string, error) {
 
 	logger := klog.FromContext(client.Ctx)
@@ -452,19 +572,29 @@ func (client *Client) PublishVolume(volumeId string, initiators []string) (strin
 
 	logger.Info("using LUN", "lun", lun)
 
-	mappingSuccessful := false
+	seen := make(map[string]struct{}, len(initiators))
+	targets := make([]string, 0, len(initiators))
 	for _, initiator := range initiators {
-		if err = client.mapVolumeProcess(volumeId, initiator, lun); err != nil {
-			logger.Error(err, "mapping error", "volume", volumeId, "initiator", initiator, "LUN", lun)
+		t := client.resolveMapTarget(initiator)
+		if _, dup := seen[t]; dup {
+			continue
+		}
+		seen[t] = struct{}{}
+		targets = append(targets, t)
+	}
+
+	mappingSuccessful := false
+	for _, target := range targets {
+		if err = client.mapVolumeProcess(volumeId, target, lun); err != nil {
+			logger.Error(err, "mapping error", "volume", volumeId, "target", target, "LUN", lun)
 		} else {
 			mappingSuccessful = true
-			logger.Info("successfully mapped", "volume", volumeId, "initiator", initiators, "lun", lun)
+			logger.Info("successfully mapped", "volume", volumeId, "target", target, "lun", lun)
 		}
 	}
 
 	if mappingSuccessful {
 		return strconv.Itoa(lun), nil
-	} else {
-		return "", fmt.Errorf("error mapping volume (%s), no initiators were mapped successfully", volumeId)
 	}
+	return "", fmt.Errorf("error mapping volume (%s), no targets were mapped successfully", volumeId)
 }

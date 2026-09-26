@@ -11,7 +11,12 @@ import (
 
 // Exos X Storage API Error Codes
 const (
-	InvalidSessionKey                     = 2
+	InvalidSessionKey = 2
+	// CommandNotSupportedErrorCode is returned transiently by map/volume when the
+	// target volume was created too recently for controller-to-controller state
+	// to have propagated. Retrying after a brief backoff clears it; the array
+	// does not distinguish this transient case from a permanent refusal.
+	CommandNotSupportedErrorCode          = -3002
 	LUNOverlapErrorCode                   = -3177
 	SnapshotNotFoundErrorCode             = -10050
 	BadInputParam                         = -10058
